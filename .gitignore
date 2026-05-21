@@ -1,0 +1,16 @@
+# macOS 잡파일
+.DS_Store
+
+# Obsidian 개인 화면 상태 — 사람마다 달라 충돌의 주범
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Obsidian 휴지통
+.trash/
+
+# 비밀 키가 들어있는 플러그인 설정
+.obsidian/plugins/obsidian-local-rest-api/data.json
+.obsidian/plugins/realclaudian/data.json
+
+# 에이전트 도구 임시 상태
+.superpowers/
