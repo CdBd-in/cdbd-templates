@@ -1,0 +1,15 @@
+{
+  "idx": 17,
+  "category": "홍보 · 카탈로그",
+  "tagline": "화보 감성 그대로, 제품 탐색부터 쿠폰까지",
+  "detail_url": "https://www.cdbd.in/templates/catalog/online_lookbook",
+  "editor_id": "4843",
+  "pages": [
+    {"page": 1, "cards": ["메인 이미지","2026 SUMMER COLLECTION"], "cardCount": 2},
+    {"page": 2, "cards": ["로고","브랜드 설명","슬로건"], "cardCount": 3},
+    {"page": 3, "cards": ["로고","모델컷","제품컷","제품설명","2026 SUMMER COLLECTION"], "cardCount": 5},
+    {"page": 4, "cards": ["로고","promotion","special coupon","구분선","10%","쿠폰 설명","쿠폰 설명","기간","쿠폰 유의사항","SNS"], "cardCount": 10}
+  ],
+  "totalPages": 4,
+  "totalCards": 20
+}

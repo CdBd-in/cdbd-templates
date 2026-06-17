@@ -1,0 +1,15 @@
+{
+  "idx": 15,
+  "category": "홍보 · 카탈로그",
+  "tagline": "시즌 컬렉션과 매장 정보 감각적으로 전달하기",
+  "detail_url": "https://www.cdbd.in/templates/catalog/lookbook",
+  "editor_id": "4841",
+  "pages": [
+    {"page": 1, "cards": ["로고 이미지","커버 이미지","컬렉션 제목"], "cardCount": 3},
+    {"page": 2, "cards": ["컬렉션 제목","컬렉션 이미지","컬렉션 소개"], "cardCount": 3},
+    {"page": 3, "cards": ["로고 이미지","화보 이미지","제품 정보"], "cardCount": 3},
+    {"page": 4, "cards": ["로고 이미지","제목","전화 연결 버튼","전화 연결 버튼","전화 연결 버튼","전화 연결 버튼","브랜드 카피","공식몰 버튼"], "cardCount": 8}
+  ],
+  "totalPages": 4,
+  "totalCards": 17
+}
