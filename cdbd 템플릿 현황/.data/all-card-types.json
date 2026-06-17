@@ -1,0 +1,4261 @@
+{
+  "1": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "기업 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 2,
+        "label": "프로필 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 3,
+        "label": "이름",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "소속",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "전화번호",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "이메일",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "연락처 저장 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 8,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 9,
+        "label": "제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "번호",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "카드형 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 13,
+        "label": "번호",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "카드형 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 16,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 17,
+        "label": "제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "상담 신청서",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 20,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 21,
+        "label": "기업 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      }
+    ],
+    "cardCount": 22,
+    "typeCount": {
+      "이미지": 3,
+      "텍스트": 13,
+      "버튼": 3,
+      "구분선": 2,
+      "Q&A": 1
+    },
+    "pinnedCount": 0
+  },
+  "2": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "직업적 역량",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 1,
+        "label": "프로필",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 2,
+        "label": "메인 타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "서브 타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "메인 홍보버튼 01",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 5,
+        "label": "메인 홍보버튼 02",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 6,
+        "label": "메인 홍보버튼 03",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 7,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 8,
+        "label": "신청 -  세미나",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 9,
+        "label": "타이틀 - 합격자료",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "본문 - 내용 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "템플릿 다운로드 01",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 12,
+        "label": "템플릿 다운로드 02",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 13,
+        "label": "주의 문구",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "타이틀 - 유튜브",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "유튜브 01",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 16,
+        "label": "문의 -  기관/대학",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 17,
+        "label": "타이틀 - 후기",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "본문 - 내용 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "후기 사례 01",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "합격생 01",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 21,
+        "label": "후기 사례 02",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "합격생 02",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "후기 사례 03",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 24,
+        "label": "합격생 03",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 25,
+        "label": "자주 묻는 질문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 26,
+        "label": "질문 제목 01",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 27,
+        "label": "답변 내용 01",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 28,
+        "label": "질문 제목 02",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 29,
+        "label": "답변 내용 02",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 30,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 31,
+        "label": "하단 안내 타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 32,
+        "label": "하단 안내 본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 33,
+        "label": "하단 강조 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 34,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 35,
+    "typeCount": {
+      "텍스트": 22,
+      "프로필": 1,
+      "버튼": 6,
+      "구분선": 2,
+      "Q&A": 2,
+      "유튜브": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "3": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "초대장 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 2,
+        "label": "초대장 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "행사 일시",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "장소",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "지도",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 6,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 7,
+        "label": "주요 프로그램 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "진행  순서",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "번호 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 10,
+        "label": "진행 순서 1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 12,
+        "label": "번호 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 13,
+        "label": "진행 순서 2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 15,
+        "label": "번호 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 16,
+        "label": "진행 순서 3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 18,
+        "label": "참석자 정보 등록",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 19,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 20,
+        "label": "맺음말",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 21,
+        "label": "문의처",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "전화 문의 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 23,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 24,
+        "label": "상호명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      }
+    ],
+    "cardCount": 25,
+    "typeCount": {
+      "이미지": 5,
+      "텍스트": 12,
+      "위치 안내": 1,
+      "구분선": 5,
+      "Q&A": 1,
+      "버튼": 1
+    },
+    "pinnedCount": 0
+  },
+  "4": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "소속명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 1,
+        "label": "수신자명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 2,
+        "label": "초대장 본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 4,
+        "label": "발신자명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "초대장 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "초대장 본문",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 7,
+        "label": "행사 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "행사 주소",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 9,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 10,
+        "label": "행사 공간",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "행사 공간 이미지",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 12,
+        "label": "행사 관련 인물 프로필 1",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 13,
+        "label": "프로필 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "SNS 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 15,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 16,
+        "label": "행사 관련 인물 프로필 2",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 17,
+        "label": "프로필 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 19,
+        "label": "예약 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "예약버튼",
+        "typeKey": "M15.1667 6.1237H14.6667V5.45703H13.6667V",
+        "isPinned": false,
+        "type": "예약"
+      },
+      {
+        "idx": 21,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 22,
+        "label": "행사 서비스 제공 정보",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "행사 서비스 제공 설문",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 24,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 25,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 26,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 27,
+    "typeCount": {
+      "텍스트": 11,
+      "이미지": 2,
+      "구분선": 6,
+      "위치 안내": 1,
+      "갤러리": 1,
+      "프로필": 2,
+      "버튼": 1,
+      "예약": 1,
+      "Q&A": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "5": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 2,
+        "label": "프로필",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 3,
+        "label": "제목: CONTACT",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "OFFICE",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "MOBILE",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "EMAIL",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "HOMEPAGE",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "HOMEPAGE",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "위치 안내",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 10,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 11,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 12,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "유튜브",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 16,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 17,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 18,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      },
+      {
+        "idx": 19,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      }
+    ],
+    "cardCount": 20,
+    "typeCount": {
+      "이미지": 3,
+      "프로필": 1,
+      "텍스트": 10,
+      "위치 안내": 1,
+      "버튼": 1,
+      "구분선": 2,
+      "유튜브": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "6": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "여백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 2,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 3,
+        "label": "여백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 5,
+        "label": "행사 부제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "행사명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 8,
+        "label": "행사 시간",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "행사 시간 정보",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "행사 장소",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "행사 장소 정보",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "행사 장소 추가정보",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "행사 정보 지도",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 14,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 15,
+        "label": "초대장 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 16,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 17,
+        "label": "초대장 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 19,
+        "label": "행사 컨텐츠 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 21,
+        "label": "행사 컨텐츠 사진 목록",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 22,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 23,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 24,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 25,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 26,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 27,
+        "label": "경력사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 28,
+        "label": "SNS 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 29,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 30,
+        "label": "행사 일정 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 31,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 32,
+        "label": "행사 시간 1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 33,
+        "label": "행사 일정 1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 34,
+        "label": "행사 시간 2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 35,
+        "label": "행사 일정 2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 36,
+        "label": "여백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 37,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 38,
+        "label": "여백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 39,
+        "label": "문의하기 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 40,
+        "label": "문의하기 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 41,
+        "label": "담당자 & 연락처",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 42,
+        "label": "문의하기 버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 43,
+        "label": "모양",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 44,
+        "label": "설문 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 45,
+        "label": "설문 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 46,
+        "label": "설문지 제목",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 47,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 48,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      },
+      {
+        "idx": 49,
+        "label": "여백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      }
+    ],
+    "cardCount": 50,
+    "typeCount": {
+      "이미지": 10,
+      "텍스트": 27,
+      "구분선": 6,
+      "위치 안내": 1,
+      "갤러리": 1,
+      "버튼": 3,
+      "Q&A": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "7": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 2,
+        "label": "행사명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "초대장 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "초대 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "초대장 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "초대 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 8,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 9,
+        "label": "이벤트 정보명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "이벤트 정보 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "이벤트명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "이벤트 일시",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "이벤트 장소",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "이벤트 위치 안내",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 15,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 16,
+        "label": "이벤트 혜택 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "혜택 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "혜택 1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "혜택 1 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "혜택 2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 21,
+        "label": "혜택 2 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "혜택 3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "혜택 3 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 24,
+        "label": "문의사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 25,
+        "label": "문의사항 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 26,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 27,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 28,
+        "label": "개인화 QR 이름",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 29,
+        "label": "QR관련 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 30,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 31,
+        "label": "개인화 QR 관련 유의사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 32,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 33,
+        "label": "고객 정보 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 34,
+        "label": "고객정보 내용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 35,
+        "label": "고객정보 설문",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 36,
+        "label": "로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 37,
+        "label": "SNS",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 38,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 39,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      }
+    ],
+    "cardCount": 40,
+    "typeCount": {
+      "이미지": 5,
+      "텍스트": 26,
+      "구분선": 5,
+      "위치 안내": 1,
+      "버튼": 2,
+      "Q&A": 1
+    },
+    "pinnedCount": 0
+  },
+  "8": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "병원 전경",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 1,
+        "label": "병원 프로필",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 2,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 3,
+        "label": "치과 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "병원 영문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 6,
+        "label": "타이틀 - 진료 일정",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "본문 - 진료 스케쥴",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 9,
+        "label": "타이틀 - 프로모션",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "갤러리 - 프로모션 이미지",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 11,
+        "label": "버튼 - 이벤트 상담",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 12,
+        "label": "주의 문구",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 14,
+        "label": "타이틀 - 인기 치료",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "상품 01 - 치아미백",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 16,
+        "label": "본문 01 - 치료 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "유튜브 01",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 18,
+        "label": "상품 02 - 치아교정",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "본문 02 - 치료 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "유튜브 02",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 21,
+        "label": "상품 03 - 라미네이트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "본문 03 - 치료 소개",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "유튜브 03",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 24,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 25,
+        "label": "서브 타이틀 - 치료전/후",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 26,
+        "label": "치료 전/후 이미지",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 27,
+        "label": "예약 - 방문 상담",
+        "typeKey": "M15.1667 6.1237H14.6667V5.45703H13.6667V",
+        "isPinned": false,
+        "type": "예약"
+      },
+      {
+        "idx": 28,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 29,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 30,
+        "label": "타이틀 - 의료진",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 31,
+        "label": "서브 타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 32,
+        "label": "프로필 - 의료진1",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 33,
+        "label": "프로필 - 의료진2",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 34,
+        "label": "프로필 - 의료진3",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 35,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 36,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 37,
+        "label": "타이틀 - 외국인 고객",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 38,
+        "label": "서브 타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 39,
+        "label": "설명 01",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 40,
+        "label": "설명 02",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 41,
+        "label": "설명 03",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 42,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 43,
+        "label": "질문과 답변",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 44,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 45,
+        "label": "타이틀 - 진료 비용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 46,
+        "label": "본문 - 진료 비용",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 47,
+        "label": "참고사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 48,
+        "label": "주의 문구",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 49,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 50,
+        "label": "위치 안내",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 51,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 52,
+    "typeCount": {
+      "갤러리": 3,
+      "프로필": 4,
+      "구분선": 12,
+      "텍스트": 22,
+      "버튼": 4,
+      "유튜브": 3,
+      "예약": 1,
+      "Q&A": 1,
+      "위치 안내": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "9": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 2,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 3,
+        "label": "스크롤 화살표",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 4,
+        "label": "이름",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "소개 텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "버튼: 연락처 저장",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 7,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 8,
+        "label": "제목: 연락처",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "휴대폰",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "이메일",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "인스타그램",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 13,
+        "label": "버튼: 전화",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 14,
+        "label": "버튼: 이메일",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 15,
+        "label": "버튼: 외부링크",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 16,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 17,
+        "label": "제목: 상담 문의",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "상담 문의",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 20,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 21,
+        "label": "제목: 포트폴리오",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "갤러리",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 23,
+        "label": "버튼: 전화",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 24,
+        "label": "버튼: 전화",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 25,
+        "label": "버튼: 전화",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 26,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      }
+    ],
+    "cardCount": 27,
+    "typeCount": {
+      "이미지": 2,
+      "구분선": 7,
+      "텍스트": 9,
+      "버튼": 7,
+      "Q&A": 1,
+      "갤러리": 1
+    },
+    "pinnedCount": 0
+  },
+  "10": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 1,
+        "label": "갤러리",
+        "typeKey": "M16.8555 10.431H11.5221V5.09766H16.0221C",
+        "isPinned": false,
+        "type": "갤러리"
+      },
+      {
+        "idx": 2,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "위치 안내",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 8,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 9,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 10,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 13,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 14,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 15,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 16,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 19,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 20,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 21,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 23,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 24,
+    "typeCount": {
+      "이미지": 2,
+      "갤러리": 1,
+      "텍스트": 11,
+      "위치 안내": 1,
+      "버튼": 5,
+      "구분선": 3,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "11": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "창업문의 홍보",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 1,
+        "label": "프로필",
+        "typeKey": "M14.3359 8.62435C14.3359 10.4653 12.8436",
+        "isPinned": false,
+        "type": "프로필"
+      },
+      {
+        "idx": 2,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 5,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 6,
+        "label": "아이콘 이미지1",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 7,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "카드박스 타이틀1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "박스 본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 10,
+        "label": "박스 본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "박스 본문3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "화살표 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 13,
+        "label": "카드박스 타이틀2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "박스 본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "박스 본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 16,
+        "label": "박스 본문3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 18,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "박스 본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 21,
+        "label": "세부사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 23,
+        "label": "아이콘 이미지2",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 24,
+        "label": "본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 25,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 26,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 27,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 28,
+        "label": "질문과 답변 - 정보일치",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 29,
+        "label": "구분선 - 여백 ",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 30,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 31,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 32,
+        "label": "서명 안내글",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 33,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 34,
+        "label": "구분선 - 여백 ",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 35,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 36,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 37,
+        "label": "마지막 인사말",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 38,
+        "label": "상생지원정책",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 39,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 40,
+        "label": "버튼",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 41,
+        "label": "구분선 - 여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      }
+    ],
+    "cardCount": 42,
+    "typeCount": {
+      "텍스트": 22,
+      "프로필": 1,
+      "이미지": 6,
+      "구분선": 10,
+      "Q&A": 1,
+      "버튼": 2
+    },
+    "pinnedCount": 0
+  },
+  "12": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "상단 슬로건",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 1,
+        "label": "회사 로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 2,
+        "label": "사원의 한마디",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "사원 사진",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 4,
+        "label": "이름",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "직책 ㅣ 팀명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "휴대전화 | 링크(전화)",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "이메일 | 링크(이메일)",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 9,
+        "label": "연락처 저장하기",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 10,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 11,
+        "label": "타이틀1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 12,
+        "label": "본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 14,
+        "label": "본문3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 15,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 16,
+        "label": "타이틀2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 17,
+        "label": "본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 19,
+        "label": "본문3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 21,
+        "label": "타이틀3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 22,
+        "label": "본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 24,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 25,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 26,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 27,
+        "label": "본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 28,
+        "label": "사업 이미지1",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 29,
+        "label": "사업 타이틀1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 30,
+        "label": "사업 본문1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 31,
+        "label": "사업 이미지2",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 32,
+        "label": "사업 타이틀2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 33,
+        "label": "사업 본문2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 34,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 35,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 36,
+        "label": "타이틀",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 37,
+        "label": "본문",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 38,
+        "label": "질문과 답변",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 39,
+        "label": "구분선-여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 40,
+        "label": "버튼 ㅣ 웹페이지",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 41,
+        "label": "회사 로고",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 42,
+        "label": "푸터",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      }
+    ],
+    "cardCount": 43,
+    "typeCount": {
+      "텍스트": 26,
+      "이미지": 5,
+      "구분선": 9,
+      "버튼": 2,
+      "Q&A": 1
+    },
+    "pinnedCount": 0
+  },
+  "13": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 1,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 2,
+        "label": "텍스트",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 3,
+        "label": "메인 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 4,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 5,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 6,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 7,
+        "label": "타이틀1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 8,
+        "label": "제목+설명1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 10,
+        "label": "제목+설명2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 12,
+        "label": "제목+설명3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 14,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 15,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 16,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 17,
+        "label": "타이틀2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 18,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 19,
+        "label": "제목1",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 20,
+        "label": "버튼1",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 21,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 22,
+        "label": "제목2",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 23,
+        "label": "버튼2",
+        "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+        "isPinned": false,
+        "type": "버튼"
+      },
+      {
+        "idx": 24,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 25,
+        "label": "제목3",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 26,
+        "label": "유튜브",
+        "typeKey": "M5.5 7.73828C5.5 6.90985 6.17157 6.23828",
+        "isPinned": false,
+        "type": "유튜브"
+      },
+      {
+        "idx": 27,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 28,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 29,
+        "label": "견적 상담 ",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 30,
+        "label": "상담 설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 31,
+        "label": "질문과 답변",
+        "typeKey": "M6.77214 6.44141H12.6055C13.4892 6.44141",
+        "isPinned": false,
+        "type": "Q&A"
+      },
+      {
+        "idx": 32,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 33,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 34,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 35,
+        "label": "배송 및 설치 안내",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 36,
+        "label": "설명",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 37,
+        "label": "여백",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 38,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 39,
+    "typeCount": {
+      "구분선": 18,
+      "이미지": 2,
+      "텍스트": 14,
+      "버튼": 2,
+      "유튜브": 1,
+      "Q&A": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "14": {
+    "multipage": false,
+    "cards": [
+      {
+        "idx": 0,
+        "label": "행사 제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 1,
+        "label": "초대의 글",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 2,
+        "label": "메인 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 3,
+        "label": "로고 이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 4,
+        "label": "설명글",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 5,
+        "label": "운영 기간",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 6,
+        "label": "유의사항",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 7,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 8,
+        "label": "제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 9,
+        "label": "이미지",
+        "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+        "isPinned": false,
+        "type": "이미지"
+      },
+      {
+        "idx": 10,
+        "label": "설명글",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 11,
+        "label": "구분선",
+        "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+        "isPinned": false,
+        "type": "구분선"
+      },
+      {
+        "idx": 12,
+        "label": "제목",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 13,
+        "label": "예약 버튼",
+        "typeKey": "M15.1667 6.1237H14.6667V5.45703H13.6667V",
+        "isPinned": false,
+        "type": "예약"
+      },
+      {
+        "idx": 14,
+        "label": "위치 안내",
+        "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+        "isPinned": false,
+        "type": "위치 안내"
+      },
+      {
+        "idx": 15,
+        "label": "설명글",
+        "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+        "isPinned": false,
+        "type": "텍스트"
+      },
+      {
+        "idx": 16,
+        "label": "SNS",
+        "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+        "isPinned": false,
+        "type": "SNS"
+      }
+    ],
+    "cardCount": 17,
+    "typeCount": {
+      "텍스트": 9,
+      "이미지": 3,
+      "구분선": 2,
+      "예약": 1,
+      "위치 안내": 1,
+      "SNS": 1
+    },
+    "pinnedCount": 0
+  },
+  "15": {
+    "multipage": true,
+    "pages": [
+      {
+        "page": 1,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "커버 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 2,
+            "label": "컬렉션 제목",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 3,
+        "typeCount": {
+          "이미지": 2,
+          "텍스트": 1
+        },
+        "pinnedCount": 0
+      },
+      {
+        "page": 2,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "컬렉션 제목",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 1,
+            "label": "컬렉션 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 2,
+            "label": "컬렉션 소개",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 3,
+        "typeCount": {
+          "텍스트": 2,
+          "이미지": 1
+        },
+        "pinnedCount": 0
+      },
+      {
+        "page": 3,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "화보 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 2,
+            "label": "제품 정보",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 3,
+        "typeCount": {
+          "이미지": 2,
+          "텍스트": 1
+        },
+        "pinnedCount": 0
+      },
+      {
+        "page": 4,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "제목",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "전화 연결 버튼",
+            "typeKey": "M4.5 6.99961C4.5 6.50255 4.90294 6.09961",
+            "isPinned": false,
+            "type": "메뉴"
+          },
+          {
+            "idx": 3,
+            "label": "전화 연결 버튼",
+            "typeKey": "M4.5 6.99961C4.5 6.50255 4.90294 6.09961",
+            "isPinned": false,
+            "type": "메뉴"
+          },
+          {
+            "idx": 4,
+            "label": "전화 연결 버튼",
+            "typeKey": "M4.5 6.99961C4.5 6.50255 4.90294 6.09961",
+            "isPinned": false,
+            "type": "메뉴"
+          },
+          {
+            "idx": 5,
+            "label": "전화 연결 버튼",
+            "typeKey": "M4.5 6.99961C4.5 6.50255 4.90294 6.09961",
+            "isPinned": false,
+            "type": "메뉴"
+          },
+          {
+            "idx": 6,
+            "label": "브랜드 카피",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 7,
+            "label": "공식몰 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          }
+        ],
+        "cardCount": 8,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 2,
+          "메뉴": 4,
+          "버튼": 1
+        },
+        "pinnedCount": 0
+      }
+    ]
+  },
+  "16": {
+    "multipage": true,
+    "pages": [
+      {
+        "page": 1,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "제목",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 2,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 1
+        },
+        "pinnedCount": 0
+      },
+      {
+        "page": 2,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": true,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "신제품 소개",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 3,
+            "label": "New",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 4,
+            "label": "제품명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 5,
+            "label": "제품 썸네일",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 6,
+            "label": "가격 구성",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 7,
+            "label": "구매 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          },
+          {
+            "idx": 8,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 9,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 10,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 11,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 12,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 13,
+            "label": "New",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 14,
+            "label": "제품명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 15,
+            "label": "제품 썸네일",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 16,
+            "label": "가격 구성",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 17,
+            "label": "구매 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          },
+          {
+            "idx": 18,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 19,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 20,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 21,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 22,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 23,
+            "label": "New",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 24,
+            "label": "제품명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 25,
+            "label": "제품 썸네일",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 26,
+            "label": "가격 구성",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 27,
+            "label": "구매 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          },
+          {
+            "idx": 28,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 29,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 30,
+            "label": "제품 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 31,
+            "label": "제품 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 32,
+        "typeCount": {
+          "이미지": 10,
+          "텍스트": 16,
+          "구분선": 3,
+          "버튼": 3
+        },
+        "pinnedCount": 1
+      },
+      {
+        "page": 3,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": true,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "프로모션 안내",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 3,
+            "label": "숫자",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 4,
+            "label": "프로모션명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 5,
+            "label": "이미지 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          },
+          {
+            "idx": 6,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 7,
+            "label": "숫자",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 8,
+            "label": "프로모션명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 9,
+            "label": "이미지 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          },
+          {
+            "idx": 10,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 11,
+            "label": "숫자",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 12,
+            "label": "프로모션명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 13,
+            "label": "이미지 버튼",
+            "typeKey": "M8.00046 7.42969C5.86667 7.42969 4.13379",
+            "isPinned": false,
+            "type": "버튼"
+          }
+        ],
+        "cardCount": 14,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 7,
+          "구분선": 3,
+          "버튼": 3
+        },
+        "pinnedCount": 1
+      },
+      {
+        "page": 4,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": true,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "제목",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "매장명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 3,
+            "label": "매장 위치 안내",
+            "typeKey": "M10.2997 4.55469C7.62693 4.55469 5.45117",
+            "isPinned": false,
+            "type": "위치 안내"
+          },
+          {
+            "idx": 4,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 5,
+            "label": "매장 세부 정보",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 6,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 3,
+          "위치 안내": 1,
+          "구분선": 1
+        },
+        "pinnedCount": 1
+      }
+    ]
+  },
+  "17": {
+    "multipage": true,
+    "pages": [
+      {
+        "page": 1,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "메인 이미지",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": true,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "2026 SUMMER COLLECTION",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": true,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 2,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 1
+        },
+        "pinnedCount": 2
+      },
+      {
+        "page": 2,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "브랜드 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "슬로건",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": true,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 3,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 2
+        },
+        "pinnedCount": 1
+      },
+      {
+        "page": 3,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "모델컷",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 2,
+            "label": "제품컷",
+            "typeKey": "M1.45833 21H9.33333V0H1.45833C0.653333 0",
+            "isPinned": false,
+            "type": "2단 카드"
+          },
+          {
+            "idx": 3,
+            "label": "제품설명",
+            "typeKey": "M1.45833 21H9.33333V0H1.45833C0.653333 0",
+            "isPinned": false,
+            "type": "2단 카드"
+          },
+          {
+            "idx": 4,
+            "label": "2026 SUMMER COLLECTION",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          }
+        ],
+        "cardCount": 5,
+        "typeCount": {
+          "이미지": 2,
+          "2단 카드": 2,
+          "텍스트": 1
+        },
+        "pinnedCount": 0
+      },
+      {
+        "page": 4,
+        "cards": [
+          {
+            "idx": 0,
+            "label": "로고",
+            "typeKey": "M6.83333 5.33398H15.1667C16.1767 5.33398",
+            "isPinned": false,
+            "type": "이미지"
+          },
+          {
+            "idx": 1,
+            "label": "promotion",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 2,
+            "label": "special coupon",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 3,
+            "label": "구분선",
+            "typeKey": "M14.3846 4.5H7.61538C7.27552 4.5 7 4.755",
+            "isPinned": false,
+            "type": "구분선"
+          },
+          {
+            "idx": 4,
+            "label": "10%",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 5,
+            "label": "쿠폰 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 6,
+            "label": "쿠폰 설명",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 7,
+            "label": "기간",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 8,
+            "label": "쿠폰 유의사항",
+            "typeKey": "M5.33203 6.33398C5.33203 5.7817 5.77975 ",
+            "isPinned": false,
+            "type": "텍스트"
+          },
+          {
+            "idx": 9,
+            "label": "SNS",
+            "typeKey": "M14.1038 5.55273C12.9768 5.55273 12.0579",
+            "isPinned": false,
+            "type": "SNS"
+          }
+        ],
+        "cardCount": 10,
+        "typeCount": {
+          "이미지": 1,
+          "텍스트": 7,
+          "구분선": 1,
+          "SNS": 1
+        },
+        "pinnedCount": 0
+      }
+    ]
+  }
+}
