@@ -17,6 +17,9 @@
 
 .claudian/
 
+# 로그인 자격증명 (절대 git에 올리지 않음)
+.env
+
 .obsidian/plugins/*/main.js
 .obsidian/plugins/*/manifest.json
 .obsidian/plugins/*/styles.css
