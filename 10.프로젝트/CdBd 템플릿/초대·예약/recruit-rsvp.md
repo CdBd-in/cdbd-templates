@@ -163,18 +163,23 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 
 ### 작업 내역
 
-- 기존 섹션 [node 235:10917](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=235-10917) 복제 → 페이지 "템플릿 등록" 의 (7930, 7455) 위치에 배치
-- 15개 텍스트 교체 (카테고리·제목·부제목·본문·추천 대상 2개·주요기능 제목·설명 2개·템플릿명·슬러그·에디터 ID·미리보기 URL)
-- `10회 사용 / ★4.9` 배지 삭제 (Frame 427323220)
-- 프로필/썸네일/대표 이미지 4개 슬롯 → ABC COMPANY 로고 카드 이미지 (다크 바탕 + 퍼플 A 모노그램)로 교체
-- 카드 배지 아이콘 swap:
-  - feature1-icon → `Type=QnA` (Block Icon set, key `fa59b983…`) · white 글리프 + 배경 투명
-  - feature2-icon → `Type=Reservation` (Block Icon set, key `a411918e…`) · white 글리프 + 배경 투명
-- 설명 이미지 360×300 × 2:
-  - feature1 → T01 시안의 **직군 선택 블록 (node 308:37)** 클로즈업 (다크 배경 합성 export)
-  - feature2 → T01 시안의 **출석 등록 섹션 (node 304:23)** 클로즈업 (다크 배경 합성 export)
-- 모바일 프리뷰 (380×2173) → 채택 시안 [node 298:24](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24) 전체 export 이미지 부착
+**기본 구조**
+- 기존 섹션 [node 235:10917](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=235-10917) 복제 → 페이지 "템플릿 등록" 의 (7930, 7455) 위치
+- `10회 사용 / ★4.9` 배지 삭제
 - 멀티페이지 패션룩북 프레임 3개 삭제 (T01은 원페이지)
+
+**텍스트 (구어체 review style)**
+- 15개 슬롯 교체. 사용 성과·본문·추천 대상은 기호(·) 대신 자연어로 풀어쓴 리뷰 톤
+
+**이미지 슬롯**
+- 프로필 2개 (134×134 원형, 200×200 보드) → **회색 placeholder + Flow 실사 필요 라벨**
+- 썸네일 (342×300) → **모던/시크 다크 배경 + 중앙 단일 모바일 목업 placeholder 1개** (단일 페이지 패턴)
+- 주요기능 메인 이미지 2개 (360×300) → **회색 dashed placeholder + 디자인 가이드 라벨**
+- 모바일 프리뷰 (380×2173) → 채택 시안 [node 298:24](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24) 전체 export 이미지 부착 (4단계에 라이브 캡처로 교체)
+
+**아이콘**
+- feature1-icon → `Block Icon Type=QnA` (34:99, key `fa59b983…`) · 다크 컨테이너 + white 글리프
+- feature2-icon → `Icon/General/QR Code` (key `44dcc3e6…`, design system file에서 import) · 다크 컨테이너 + white 글리프
 
 ---
 
