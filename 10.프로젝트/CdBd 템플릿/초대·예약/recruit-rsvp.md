@@ -80,7 +80,7 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 | 설명 | 성함·전화번호·지원 직군(복수 선택)·관심 분야를 **질문과 답변 카드 하나**에 묶었습니다. 외부 폼 2개와 엑셀을 따로 돌리지 않아도, 한 번의 응답으로 RSVP·세션·관심사가 동시에 집계됩니다. |
 | 표시 순서 | 1 |
 | 아이콘 이미지 (38×38) | **Block Icon `Type=QnA`** (key `fa59b983…`) · 다크 라운드 컨테이너 + **WHITE 글리프** override. 컨테이너 dark `rgb(0.12,0.12,0.13)` 유지 |
-| 설명 이미지 (360×300) | **placeholder** (dashed border, 라벨 "주요기능-1 메인 이미지 / 사전 참석 신청서 — 핵심 기능 하이라이트 / (직군 복수 선택 + 응답 통합 집계 어노테이션)"). **신규 디자인 필요** — 단순 캡처 ❌, 다른 템플릿 패턴([주요기능-1 sample](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=235-10965))처럼 mockup + 콜아웃/하이라이트 박스/오버레이 카드 조합 |
+| 설명 이미지 (360×300) | 모바일 mockup(Q&A form 직군 선택부) + 좌측 흰색 콜아웃("응답 통합 집계" + RSVP/지원 직군/관심 분야 bullet) + **BLUE (`#59A7FF`) dashed highlight** + connector. 360×300 유지 |
 
 ### 주요기능-2 — 출석 등록 + QR 패스 SMS
 | 필드 | 카피 |
@@ -89,7 +89,7 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 | 설명 | 출석 등록 안내 카드에서 시간대를 선택하고 휴대폰 본인 인증을 마치면, 도착 인증 패스 QR이 SMS로 발송됩니다. 행사 당일 입구 줄·수기 명단 체크 없이 QR 한 번으로 출석이 끝납니다. |
 | 표시 순서 | 2 |
 | 아이콘 이미지 (38×38) | **`Icon/General/QR Code`** ([node 14159:12537](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=14159-12537), key `44dcc3e6…`) · 다크 라운드 컨테이너 + **WHITE 글리프** override. QR 인증 핵심 메시지에 정합 |
-| 설명 이미지 (360×300) | **placeholder** (dashed border, 라벨 "주요기능-2 메인 이미지 / QR 출석 등록 + SMS 발송 흐름 / (출석 버튼 + QR SMS 알림 콜아웃)"). **신규 디자인 필요** — mockup + SMS 알림 카드 오버레이 + QR 영역 하이라이트 박스 조합 |
+| 설명 이미지 (360×**132**) | 모바일 mockup(출석 등록 카드) + 좌측 SMS 알림 콜아웃("도착 인증 QR이 도착했어요…") + **BLUE (`#59A7FF`) dashed pill highlight** (출석 등록하기 버튼) + connector. **부모 프레임 height = 132 (캡처 자식에 맞게 줄임)** — 출석 등록 source 340×196이 phone 180-width에 fit하면 자연 높이 104 → 패딩 14T/14B = 132 |
 
 ---
 
