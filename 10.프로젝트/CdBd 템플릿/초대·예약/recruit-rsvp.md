@@ -89,7 +89,7 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 | 설명 | 출석 등록 안내 카드에서 시간대를 선택하고 휴대폰 본인 인증을 마치면, 도착 인증 패스 QR이 SMS로 발송됩니다. 행사 당일 입구 줄·수기 명단 체크 없이 QR 한 번으로 출석이 끝납니다. |
 | 표시 순서 | 2 |
 | 아이콘 이미지 (38×38) | **`Icon/General/QR Code`** ([node 14159:12537](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=14159-12537), key `44dcc3e6…`) · 다크 라운드 컨테이너 + **WHITE 글리프** override. QR 인증 핵심 메시지에 정합 |
-| 설명 이미지 (360×**132**) | 모바일 mockup(출석 등록 카드) + 좌측 SMS 알림 콜아웃("도착 인증 QR이 도착했어요…") + **BLUE (`#59A7FF`) dashed pill highlight** (출석 등록하기 버튼) + connector. **부모 프레임 height = 132 (캡처 자식에 맞게 줄임)** — 출석 등록 source 340×196이 phone 180-width에 fit하면 자연 높이 104 → 패딩 14T/14B = 132 |
+| 설명 이미지 (360×300) | **재구성 (사용자 직접 편집)**: 콜아웃 TOP-RIGHT (170×148 카카오톡 알림톡 스타일) + 캡처 BOTTOM-LEFT (228×145, dark base `#16161A` + image 레이어) + 캡처 내부 **QR 아이콘** (35×35, blue `#59A7FF` + white 글리프) + 마커 pill (출석 등록하기 버튼 강조) + **수직 dashed connector** (QR 아이콘에서 콜아웃으로 위로). <br><br>**카카오톡 알림톡 콜아웃** 내용 = 노란 헤더 `알림톡 도착` / `출석 등록 완료` / 행사명 `2026 채용설명회` / 일시 `2026.07.12.(토) 14:00` / 문의 전화번호 (밑줄·블루) / 회색 버튼 `도착 인증 QR 보기` — 실제 [예약 완료 카톡 알림](https://www.cdbd.in/templates/recruit-rsvp) 패턴 정합 |
 
 ---
 
