@@ -88,8 +88,8 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 | 제목 | **출석 등록까지 페이지 안에서, QR 패스는 SMS로 자동 발송** |
 | 설명 | 출석 등록 안내 카드에서 시간대를 선택하고 휴대폰 본인 인증을 마치면, 도착 인증 패스 QR이 SMS로 발송됩니다. 행사 당일 입구 줄·수기 명단 체크 없이 QR 한 번으로 출석이 끝납니다. |
 | 표시 순서 | 2 |
-| 아이콘 이미지 (38×38) | **디자인 시스템 카드 배지 — `Icon/Special/Badge/Reservation`** ([node 13220:36080](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=13220-36080)) · 색상 override **WHITE**. 출석 등록(예약 기능)을 대표 |
-| 설명 이미지 (360×300) | 시안 7~8번 카드 클로즈업 — `출석 등록` 안내 텍스트 + 보라 `출석 등록하기` 버튼 + (오버레이) SMS 도착 인증 화면 |
+| 아이콘 이미지 (38×38) | **`Icon/General/QR Code`** ([node 14159:12537](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=14159-12537), key `44dcc3e6…`) · 다크 라운드 컨테이너 + **WHITE 글리프** override. QR 인증 핵심 메시지에 정합 |
+| 설명 이미지 (360×300) | **placeholder** (dashed border, 라벨 "주요기능-2 메인 이미지 / QR 출석 등록 + SMS 발송 흐름 / (출석 버튼 + QR SMS 알림 콜아웃)"). **신규 디자인 필요** — mockup + SMS 알림 카드 오버레이 + QR 영역 하이라이트 박스 조합 |
 
 ---
 
@@ -115,26 +115,28 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 
 ## F. 아이콘 소스 정책 (확정)
 
-> 모든 아이콘은 **흰색(white)으로 override**. 무드 🌑 모던/시크 다크 배경 정합.
+> 모든 아이콘은 **다크 라운드 컨테이너 (≈ rgb 0.12) + 흰색(white) 글리프** 조합. 기존 템플릿(예: 신제품 소개 235:10965)과 동일 스타일.
 
 ### 우선순위
-1. **1순위 — 카드 배지 아이콘** ([Design System node 13271:33703](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=13271-33703)) — 22종(Profile/Image/QnA/Video/Map/Phone/Email/SNS/Gallery/Columns/Group/Star/Link/Code/Date/Reservation/Divider/Text/Text Title/Product/List/Image Title). 본 템플릿은 두 슬롯 모두 이 라이브러리에서 해결.
-2. **2순위 — 시스템 일반 아이콘** ([Design System node 13271:33651](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=13271-33651)) — 카드 배지로 표현하기 어려울 때.
+1. **1순위 — 카드 배지 아이콘 (Block Icon)** ([Design System node 13271:33703](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=13271-33703)) — 22종(Profile/Image/QnA/Video/Map/Phone/Email/SNS/Gallery/Columns/Group/Star/Link/Code/Date/Reservation/Divider/Text/Text Title/Product/List/Image Title). 카드 타입에 정확히 1:1 대응될 때.
+2. **2순위 — Icon/General 셋** ([Design System node 13271:33651](https://www.figma.com/design/9GM1FagjqiyrQHyHLBGoFj/CdBd-Design-System?node-id=13271-33651)) — QR Code, Lock, Bell, Calendar, Click, Graph 등 행동·개념 아이콘. 카드 배지로 표현 어려울 때.
 3. **3순위 — 외부 무료 라이브러리** — OG 이미지의 심볼 로고 아이콘 규칙에 따라 검색·다운로드. 위 1·2순위에 없을 때만.
 
 ### 본 템플릿 매핑 (확정)
 | 슬롯 | 아이콘 | Figma node | 색상 |
 |---|---|---|---|
-| 주요기능-1 (사전 참석 신청서) | `Icon/Special/Badge/QnA` | 13220:36068 | white override |
-| 주요기능-2 (출석 등록 + QR 패스 SMS) | `Icon/Special/Badge/Reservation` | 13220:36080 | white override |
+| 주요기능-1 (사전 참석 신청서) | `Block Icon Type=QnA` | 34:99 (key `fa59b983…`) | 컨테이너 dark + 글리프 white |
+| 주요기능-2 (QR 출석 등록) | `Icon/General/QR Code` | 14159:12537 (key `44dcc3e6…`) | 컨테이너 dark + 글리프 white |
 
 ---
 
-## G. 미정 / 사용자 확인 필요
+## G. 미정 / 후속 작업 필요
 
+- 🖼️ **프로필 실사 이미지 (Flow)** — `image 55` (134×134), `프로필` (200×200) 2개 슬롯. 채용 담당자 페르소나 인물 컷, [[1-3. 이미지#📦 소스 ②: Google Labs Flow (실사 이미지)|Flow 가이드]] 준수
+- 🖼️ **썸네일 모바일 캡처** — 4단계 라이브 페이지 구현 후 단일 페이지 모바일 프리뷰 캡처해서 dashed placeholder 자리에 삽입
+- 🎨 **주요기능 메인 이미지 2개** — 단순 캡처 ❌. mockup + 콜아웃/하이라이트 박스/오버레이 카드 조합 디자인 필요
 - ❓ **부제목 라벨 카피** — `사용 성과`로 기본 선택. 인사팀 톤에 맞춰 `도입 결과`·`주요 효과`로 교체 가능
-- ❓ **추천 대상 2개 표현** — PDF 페르소나 4종 중 2개로 압축했음. 사용자가 다른 조합 선호 시 교체
-- ❓ **본문 중 "8시간 → 30분"** — 채택 가능한 수치인지 확인 (PDF는 "좌석 배정 시간 80%↓"만 기재, "30분"은 본 문서가 환산)
+- ❓ **본문 수치 "1.5배", "8시간 → 30분"** — review 톤으로 환산. 실측 데이터 확보 시 교체
 - 🔁 **에디터 ID `0000`** — 더미. 4단계 라이브 페이지 구현 후 실제 ID로 교체
 
 ---
