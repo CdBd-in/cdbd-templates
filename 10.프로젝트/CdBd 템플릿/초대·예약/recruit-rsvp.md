@@ -155,19 +155,44 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 
 ## H'. 썸네일 배경색 산정 룰
 
-**썸네일(thumb)의 배경색은 페이지의 포인트 색상(보통 = 버튼색)에 dim 15%를 더해 만든다.** Dim 방향은 베이스 색상의 명도에 따라 결정:
+**썸네일(thumb)의 배경색은 페이지의 포인트 색상(보통 = 버튼색)에 dim 15%를 별도 색상 레이어로 얹어 만든다.** Dim 방향은 베이스 색상의 명도에 따라 결정:
 
 | 베이스 색상 HSL Lightness | Dim 방향 |
 |---|---|
-| **L ≥ 50** (밝음) | **Black dim 15%** (overlay 15% opacity 검정) → 약간 어둡게 |
-| **L < 50** (어두움) | **White dim 15%** (overlay 15% opacity 흰색) → 약간 밝게 |
+| **L ≥ 50** (밝음) | **Black dim 15%** (별도 SOLID 레이어, opacity 15%) → 약간 어둡게 |
+| **L < 50** (어두움) | **White dim 15%** (별도 SOLID 레이어, opacity 15%) → 약간 밝게 |
 
-**공식**: `final = base × 0.85 + overlay × 0.15`
+**구현 (Figma)**:
+```
+thumb.fills = [
+  { type: 'SOLID', color: BASE },                                  // 베이스 (페이지 버튼색)
+  { type: 'SOLID', color: { r: 0, g: 0, b: 0 }, opacity: 0.15 },   // dim 오버레이 (밝은 베이스면 black, 어두우면 white)
+]
+```
+
+⚠️ **단일 SOLID로 pre-multiplied 값을 박지 말 것** — Figma 인스펙터에서 dim 레이어 존재가 보여야 함 (사용자가 dim 적용 여부를 시각으로 검수 가능).
 
 **T01 적용**:
 - 페이지 버튼색 = `#7F5AF0` (rgb 127, 90, 240) — 퍼플
 - HSL: H=255°, S=87%, **L=65%** → L > 50 → **Black dim 15%**
-- 최종: `(127, 90, 240) × 0.85 + (0, 0, 0) × 0.15` = `(108, 77, 204)` = `#6C4DCC`
+- thumb.fills = [SOLID `#7F5AF0`, SOLID `#000000` @ opacity 0.15]
+
+---
+
+## H''. 단일 페이지 mockup 기준 spec (T01 확정값)
+
+> 사용자가 직접 수치 조정. **앞으로 이 값을 단일 페이지 thumb mockup의 기준으로 사용.**
+
+| 속성 | 값 |
+|---|---|
+| 크기 (W×H) | **154 × 275** |
+| 위치 (x, y) | x=94, y=25 (thumb 342×300 기준) |
+| Corner Radius | **top-left/right = 12, bottom-left/right = 0** (=상단만 라운드, 하단 카드 밖으로 빠진 듯 보임) |
+| Drop Shadow | color `#000000` @ 25%, offset `(0, 3.0036)`, blur 12, spread 0, Normal blend mode (참조 [104:1515](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=104-1515)) |
+| Placeholder fill | 회색 `rgb(0.95, 0.95, 0.97)` (라이브 캡처 들어가기 전까지) |
+| Stroke | 1px dashed `rgb(0.5, 0.5, 0.55)` @ 50% opacity (placeholder 상태에서만) |
+
+> 멀티페이지 mockup 기준 spec은 멀티페이지 템플릿 작업 시 정착.
 
 ---
 
