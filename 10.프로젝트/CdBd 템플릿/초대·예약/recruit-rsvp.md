@@ -5,8 +5,9 @@ slug: recruit-rsvp
 category: 초대·예약
 mood: 🌑 모던/시크
 figma_skeleton: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24
+figma_detail_section: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=311-506
 spec_source: "[디자인명세] 템플릿To-be_10건_260618.pdf §2-01"
-status: draft (5단계 — 상세 페이지 콘텐츠)
+status: 5단계 완료 (피그마 상세 페이지 슬롯 채움) — 4단계 라이브 페이지 구현 대기
 related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1-1. 색상 팔레트 라이브러리]]"
 ---
 
@@ -150,13 +151,33 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1
 
 ---
 
+## I. 5단계 산출물 — 피그마 상세 페이지 섹션
+
+✅ **Figma 섹션**: [`템플릿 등록 문서_기업 채용설명회 초대장 (T01)` — node 311:506](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=311-506)
+
+5단계 산출물 미리보기:
+
+![[recruit-rsvp-figma-preview.png]]
+
+### 작업 내역
+
+- 기존 섹션 [node 235:10917](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=235-10917) 복제 → 페이지 "템플릿 등록" 의 (7930, 7455) 위치에 배치
+- 15개 텍스트 교체 (카테고리·제목·부제목·본문·추천 대상 2개·주요기능 제목·설명 2개·템플릿명·슬러그·에디터 ID·미리보기 URL)
+- `10회 사용 / ★4.9` 배지 삭제 (Frame 427323220)
+- 프로필/썸네일/대표 이미지 4개 슬롯 → ABC COMPANY 로고 카드 이미지 (다크 바탕 + 퍼플 A 모노그램)로 교체
+- 카드 배지 아이콘 swap:
+  - feature1-icon → `Type=QnA` (Block Icon set, key `fa59b983…`) · white 글리프 + 배경 투명
+  - feature2-icon → `Type=Reservation` (Block Icon set, key `a411918e…`) · white 글리프 + 배경 투명
+- 설명 이미지 360×300 × 2:
+  - feature1 → T01 시안의 **직군 선택 블록 (node 308:37)** 클로즈업 (다크 배경 합성 export)
+  - feature2 → T01 시안의 **출석 등록 섹션 (node 304:23)** 클로즈업 (다크 배경 합성 export)
+- 모바일 프리뷰 (380×2173) → 채택 시안 [node 298:24](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24) 전체 export 이미지 부착
+- 멀티페이지 패션룩북 프레임 3개 삭제 (T01은 원페이지)
+
+---
+
 ## 🔗 다음 단계
 
-1. **사용자 피드백 게이트** — 본 콘텐츠 카피·구조 컨펌
-2. **5단계 피그마 슬롯 채우기**
-   - 기존 섹션([node 235-10917](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=235-10917)) 복제 → 본 문서 카피로 교체
-   - 아이콘 38×38 × 2 = 카드 배지 (`QnA`·`Reservation`) **white override**로 인스턴스 배치
-   - `10회 사용 / ★4.9` 배지 삭제
-   - 설명 이미지 360×300 × 2 = 시안 카드 클로즈업 캡처
-3. **4단계 라이브 페이지 구현** → 실제 에디터 ID 확보 → `0000` 교체 → 모바일 스크린샷 캡처 → 피그마에 붙임
-4. **6단계 어드민 등록** — 매핑표(섹션 H) 기준 입력
+1. **사용자 피드백 게이트** — 5단계 피그마 결과(섹션 311:506) 컨펌
+2. **4단계 라이브 페이지 구현** → 실제 에디터 ID 확보 → 피그마 텍스트 `0000` 교체 → 라이브 모바일 프리뷰 스크린샷으로 모바일 프리뷰 이미지 교체
+3. **6단계 어드민 등록** — 매핑표(섹션 H) 기준 입력
