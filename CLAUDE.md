@@ -230,6 +230,36 @@
 | INSTANCE 자식의 x/y/size 변경 시 `set_x: This property cannot be overridden in an instance` | instance descendants는 position·size override 차단됨. **`instance.detachInstance()` 으로 분리 후 수정** — 또는 instance 자체를 resize, 또는 wrapper frame으로 padding 추가 |
 | Flow `/generate-flow-image` 연속 호출 시 throttle → "에이전트에 과부하" | help@cdbd.in = 무료 등급. 4컷·2컷 모두 0회수. **10분+ cooldown** 후 1컷씩 단독 재시도. 빈번하면 사용자 수동 Flow UI 생성 → ~/Downloads 저장 후 figma 업로드 |
 
+### 🚨 CdBd 에디터 자동화 — 4단계 작업 시 함정 (2026-06-18 박제)
+
+> 풀버전 13가지 함정: [[1-4. 에디터 페이지#🤖 CdBd 에디터 자동화 함정]] · 사례: [[컨텍스트: 이선호/2026-06-18 T-NEW1 출석체크 풀패키지 템플릿 제작·CdBd 에디터 자동화 시행착오]]
+
+| 함정 | 해결 |
+|---|---|
+| **"last contenteditable" focus = 인사팀 버튼 텍스트** (mobile preview 최하단) | y로 sort한 last는 페이지 최하단 카드 = 인사팀 버튼. 결과: 의도치 않게 버튼 텍스트 덮어쓰기. **카드 보드에서 새 카드 명시 클릭 → 우측 패널에서 입력** (mobile preview 의존 ❌) |
+| **카드 라벨 ✏️ pencil 우발 활성화 → 라벨 오염** | 카드 보드 행 클릭 시 라벨 영역(span x=702 부근) 회피. T-NEW1 사례: "이미지" → "2026 ABC 컴퍼니 채용..." 오염 |
+| **카드 추가 모달 누적 오픈 + ESC 안 먹음** | X 닫기 버튼은 button 아님 → `div.absolute.right-\\[24px\\].top-\\[30px\\]` click |
+| **React form state(react-hook-form) — native input setter로 갱신 X** | 모달 input에 native setter + dispatchEvent('input')만 쓰면 "값 입력해주세요" 빨간 에러. **`$B fill` 사용 권장** (Playwright fill = keyboard 시뮬레이션 → form state까지 반영) |
+| **Reload 시 일부 값 손실 (예: mailto 링크)** | 자동저장이 blur 트리거 기반 가설 → input 변경 후 `dispatchEvent(new Event('blur', {bubbles:true}))` 강제. 또는 `$B fill` 사용 |
+| **Korean character CSS selector 오류** (Figma `node.query`) | `findAll(n => n.name.includes('시안'))` predicate 사용 |
+| **MUI X DatePicker 캘린더 화살표 위치 추정 ❌** | `button[aria-label="Next month"]` / `"Previous month"` 직접 사용 |
+| **$B click "x,y" 좌표 문법 ❌** (CSS selector 파싱 오류) | 좌표 클릭은 `document.elementFromPoint(x, y).click()` JS로. $B click 은 selector만 |
+| **$B viewport 1440 1024 ❌** | `$B viewport 1440x1024 --scale 1` 형식 |
+| **Q&A 질문 유형 변경 in-place 불가** | kebab 메뉴는 복제/삭제만. **삭제 후 객관식 신규 추가** 다단계 필요. 신규는 마지막 배치 → reorder 수동 (드래그 자동화 어려움) |
+| **Q&A 복수선택 토글 = 사용자정의 div (MUI Switch 아님)** | 24×15 div, 활성 시 `bg: var(--color-information)` + inner `transform: translateX(9px)`. 좌표 직접 click |
+| **카드 추가 직후 mobile preview에 즉시 마운트 X** | 카드 추가 → 카드 보드 명시 클릭 후 작업 |
+| `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
+| 멀티페이지 에디터 열고 바로 추출 | 마지막에 본 페이지가 열림 → **명시적으로 페이지 1 클릭 후 추출** |
+| 핀 카드 SVG 인덱스 기준 추출 | drag handle 사라져 인덱스 어긋남 → `rect[rx="4"]` 찾기 방식 |
+| 카드 보드 모달 열린 상태로 추출 | 폼 필드 섞임 → 모달 닫고 추출 |
+| 로그인 버튼 multiple match | `document.querySelectorAll('button')[3].click()` |
+
+### 🛡 4단계 자동화 작업 원칙
+1. **카드는 위→아래 순서로 "추가만"** — 사용자 인사이트 "왜 드래그앤드롭? 위부터 순서대로 추가만 하면 되는데". 드래그앤드롭 회피.
+2. **카드 단위로 작업 → 매 단계 스크린샷 검증 → 다음 단계** — 한꺼번에 다단계 진행 ❌
+3. **자동화 가능 영역**: 카드 추가/순서, Lexical 텍스트 콘텐츠 변경, 우측 패널 토글(Bold/사이즈/정렬), 모달 input(`$B fill`), 캘린더, Q&A 옵션
+4. **수동 위임 권장**: 카드 디자인 세부값(배경/패딩/모서리), 카드 reorder(드래그), 카드 라벨 inline edit(✏️), 이미지 업로드(파일 시스템)
+
 ### 모바일 프리뷰 셀렉터
 - `.max-w-1\/2.transform.origin-top` — 라이브 템플릿 페이지의 모바일 프리뷰
 
