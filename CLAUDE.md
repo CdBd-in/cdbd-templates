@@ -37,6 +37,8 @@
   ```
 - **로그인 URL**: https://www.cdbd.in/login
 - **라이브 템플릿 URL**: `https://www.cdbd.in/templates/{slug}` (slug는 각 노트 frontmatter)
+- **어드민 URL**: https://cdbd-admin.vercel.app/login (동일 계정 로그인)
+  - 신규 템플릿 등록: **템플릿 → 템플릿 관리 → 템플릿 추가**
 - **브라우저 자동화**: gstack `browse` (headless Chromium)
 - **참조 디자인 시스템**: `/Users/designer/Documents/GitHub/design/cdbd-design-system/디자인 시스템/`
 
