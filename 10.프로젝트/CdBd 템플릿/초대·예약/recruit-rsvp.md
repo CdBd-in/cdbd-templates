@@ -96,8 +96,15 @@ related: "[[1-5. 템플릿 상세 페이지]], [[1-4-1. 에디터 페이지]], [
 ## D. 모바일 페이지 스크린샷 (피그마 보드 우측)
 
 - **원페이지 템플릿** → 스크린샷 1장.
-- 캡처 대상: 채택 시안 [node 298:24](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24) **전체 (380×2173)**.
-- 4단계 CdBd 라이브 페이지 구현 완료 후, `.max-w-1\/2.transform.origin-top` 셀렉터로 모바일 프리뷰 캡처해서 시안 화면과 교체.
+- 캡처 대상: 에디터 4856 모바일 프리뷰 (CdBd 라이브 페이지 구현 완료 후 캡처)
+- 셀렉터: 좌측 패널의 다크 배경 컨테이너 (`bg-#16161A` 인 380×N DIV)
+- 캡처 방법: inner scroll(`overflow-y-scroll`) 임시 `overflow: visible` + 부모 height = scrollHeight 확장 후 element 캡처
+
+**4단계 캡처 결과** (2026-06-19, CdBd 라이브 구현 완료):
+
+![[recruit-rsvp-mobile-preview.png]]
+
+크기: 760×4164 (2배수, 실제 380×2082)
 
 ---
 
