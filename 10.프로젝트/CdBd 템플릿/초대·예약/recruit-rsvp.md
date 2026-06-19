@@ -8,7 +8,7 @@ figma_skeleton: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%
 figma_detail_section: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=311-506
 spec_source: "[디자인명세] 템플릿To-be_10건_260618.pdf §2-01"
 status: 5단계 완료 (피그마 상세 페이지 슬롯 채움) — 4단계 라이브 페이지 구현 대기
-related: "[[1-5. 템플릿 상세 페이지]], [[1-4. 에디터 페이지]], [[1-1. 색상 팔레트 라이브러리]]"
+related: "[[1-5. 템플릿 상세 페이지]], [[1-4-1. 에디터 페이지]], [[1-1. 색상 팔레트 라이브러리]]"
 ---
 
 # T01 — 기업 채용설명회 초대장 (상세 페이지 콘텐츠)
