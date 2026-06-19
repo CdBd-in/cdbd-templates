@@ -319,6 +319,7 @@
 | **$B viewport 1440 1024 ❌** | `$B viewport 1440x1024 --scale 1` 형식 |
 | **Q&A 질문 유형 변경 in-place 불가** | kebab 메뉴는 복제/삭제만. **삭제 후 객관식 신규 추가** 다단계 필요. 신규는 마지막 배치 → reorder는 **dnd-kit `onDragEnd` 직접 호출**로 자동화 (아래 dnd-kit 항목 참조) |
 | **🥇 dnd-kit 드래그앤드롭 자동화** (카드 순서·Q&A 순서·갤러리·메뉴 등 모든 sortable) | React fiber에서 `onDragEnd` 직접 호출. **mouse/keyboard 이벤트는 모두 실패**. 풀패턴: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]] |
+| **🥇 파일 업로드 자동화** (OG·썸네일·이미지 카드·로고 등) | transient `<input type=file>` 후킹 ❌ → **React `onDrop` 핸들러 직접 호출**. Bash base64 → `$B js` inject → File → `dropzone.onDrop({preventDefault, stopPropagation, dataTransfer: dt, target, currentTarget})` 직접 호출. dt = `new DataTransfer(); dt.items.add(file)`. 적용/저장 버튼은 `props.onClick` 동일 패턴. 풀패턴: [[1-4-1. 에디터 페이지#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]] |
 | **Q&A 복수선택 토글 = 사용자정의 div (MUI Switch 아님)** | 24×15 div, 활성 시 `bg: var(--color-information)` + inner `transform: translateX(9px)`. 좌표 직접 click |
 | **카드 추가 직후 mobile preview에 즉시 마운트 X** | 카드 추가 → 카드 보드 명시 클릭 후 작업 |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
@@ -331,7 +332,7 @@
 1. **카드 추가는 위→아래 순서** + **순서 변경은 dnd-kit `onDragEnd` 직접 호출** (2026-06-19 기록) — 드래그 이벤트 시뮬레이션 ❌, React fiber 통한 콜백 호출 ✅
 2. **카드 단위로 작업 → 매 단계 스크린샷 검증 → 다음 단계** — 한꺼번에 다단계 진행 ❌
 3. **자동화 가능 영역**: 카드 추가, **카드/Q&A/갤러리 순서 변경(dnd-kit)**, Lexical 텍스트 콘텐츠, 우측 패널 토글(Bold/사이즈/정렬), 모달 input(`$B fill`), 캘린더, Q&A 옵션
-4. **수동 위임 권장**: 카드 라벨 inline edit(✏️ 우발 활성화 위험), 이미지 업로드(파일 시스템)
+4. **수동 위임 권장**: 카드 라벨 inline edit(✏️ 우발 활성화 위험) — **이미지 업로드는 함정 23 패턴으로 자동화 가능** (React onDrop 직접 호출)
 5. **시도해볼 영역** (아직 미검증): 카드 디자인 세부값(배경/패딩/모서리) — 우측 패널 슬라이더는 native setter + input/change 이벤트로 가능. 색상은 픽커 dialog의 hex input fill
 
 ### 모바일 프리뷰 셀렉터
