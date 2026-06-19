@@ -221,12 +221,14 @@ thumb.fills = [
 
 **텍스트 (구어체 review style)**
 - 15개 슬롯 교체. 사용 성과·본문·추천 대상은 기호(·) 대신 자연어로 풀어쓴 리뷰 톤
+- 에디터 ID `0000` → **`4856` 라이브 반영 (2026-06-19)**
 
-**이미지 슬롯**
-- 프로필 2개 (134×134 원형, 200×200 보드) → **회색 placeholder + Flow 실사 필요 라벨**
-- 썸네일 (342×300) → **모던/시크 다크 배경 + 중앙 단일 모바일 목업 placeholder 1개** (단일 페이지 패턴)
-- 주요기능 메인 이미지 2개 (360×300) → **회색 dashed placeholder + 디자인 가이드 라벨**
-- 모바일 프리뷰 (380×2173) → 채택 시안 [node 298:24](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24) 전체 export 이미지 부착 (4단계에 라이브 캡처로 교체)
+**이미지 슬롯 (라이브 반영 — 2026-06-19)**
+- 프로필 2개 (134×134 원형, 200×200 보드) → **회색 placeholder + Flow 실사 필요 라벨** (대기)
+- ✅ **썸네일 (342×300) — mockup 154×275**: `recruit-rsvp-viewer-sharp.png` 상단 380×680 crop 부착 (Python PIL로 사전 crop 후 figma upload) · scaleMode FILL
+- 주요기능 메인 이미지 2개 (360×300) → **회색 dashed placeholder + 디자인 가이드 라벨** (대기)
+- ✅ **모바일 프리뷰 (380×2173 → 380×2082 resize)**: `recruit-rsvp-mobile-preview.png` 라이브 캡처 부착 · scaleMode FILL
+- 🚧 **OG 이미지 (800×400 JPG)**: 별도 디자인 (figma node 464:512) + JPG export `og.jpg`. **에디터 업로드 수동 대기**
 
 **아이콘**
 - feature1-icon → `Block Icon Type=QnA` (34:99, key `fa59b983…`) · 다크 컨테이너 + white 글리프
