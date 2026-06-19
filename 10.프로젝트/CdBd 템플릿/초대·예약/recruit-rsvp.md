@@ -170,7 +170,7 @@ thumb.fills = [
 ]
 ```
 
-⚠️ **단일 SOLID로 pre-multiplied 값을 박지 말 것** — Figma 인스펙터에서 dim 레이어 존재가 보여야 함 (사용자가 dim 적용 여부를 시각으로 검수 가능).
+⚠️ **단일 SOLID로 pre-multiplied 값을 적지 말 것** — Figma 인스펙터에서 dim 레이어 존재가 보여야 함 (사용자가 dim 적용 여부를 시각으로 검수 가능).
 
 **T01 적용**:
 - 페이지 버튼색 = `#7F5AF0` (rgb 127, 90, 240) — 퍼플
