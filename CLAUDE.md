@@ -240,7 +240,7 @@
 | 카드 보드 모달 열린 상태로 추출 | 폼 필드 섞임 → 모달 닫고 추출 |
 | 로그인 버튼 multiple match | `document.querySelectorAll('button')[3].click()` |
 | **Figma `use_figma` 이미지 hash가 다음 호출에서 무효화** | `createImage(bytes)` 한 호출 안에서 만든 hash는 **같은 호출 안에서 fill로 적용해야 영속됨**. 호출 A에서 만들고 호출 B에서 사용 ❌ → fill이 조용히 빈 배열로 리셋됨. 패턴: 한 use_figma 안에서 setCurrentPageAsync(source) → exportAsync → createImage → fill 적용까지 일괄 |
-| Figma 이미지 fill `scaleMode FILL`인데 transparent 영역 보임 | source 노드가 transparent(부모 페이지 fill에 의존)일 때 발생. 임시로 노드 자체에 SOLID 박고 export → 원래 fills로 복원 |
+| Figma 이미지 fill `scaleMode FILL`인데 transparent 영역 보임 | source 노드가 transparent(부모 페이지 fill에 의존)일 때 발생. 임시로 노드 자체에 SOLID 지정 후 export → 원래 fills로 복원 |
 | Block Icon에 `paintAll(node)` (재귀 white) 적용 → 빈 흰 사각형 | 컨테이너+글리프 모두 white로 덮음. **글리프만 타게팅** (VECTOR/BOOLEAN_OPERATION/ELLIPSE 등) 하고 컨테이너 fill은 보존 |
 | INSTANCE 자식의 x/y/size 변경 시 `set_x: This property cannot be overridden in an instance` | instance descendants는 position·size override 차단됨. **`instance.detachInstance()` 으로 분리 후 수정** — 또는 instance 자체를 resize, 또는 wrapper frame으로 padding 추가 |
 | Flow `/generate-flow-image` 연속 호출 시 throttle → "에이전트에 과부하" | help@cdbd.in = 무료 등급. 4컷·2컷 모두 0회수. **10분+ cooldown** 후 1컷씩 단독 재시도. 빈번하면 사용자 수동 Flow UI 생성 → ~/Downloads 저장 후 figma 업로드 |
