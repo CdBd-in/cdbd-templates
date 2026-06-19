@@ -252,7 +252,8 @@
 | **MUI X DatePicker 캘린더 화살표 위치 추정 ❌** | `button[aria-label="Next month"]` / `"Previous month"` 직접 사용 |
 | **$B click "x,y" 좌표 문법 ❌** (CSS selector 파싱 오류) | 좌표 클릭은 `document.elementFromPoint(x, y).click()` JS로. $B click 은 selector만 |
 | **$B viewport 1440 1024 ❌** | `$B viewport 1440x1024 --scale 1` 형식 |
-| **Q&A 질문 유형 변경 in-place 불가** | kebab 메뉴는 복제/삭제만. **삭제 후 객관식 신규 추가** 다단계 필요. 신규는 마지막 배치 → reorder 수동 (드래그 자동화 어려움) |
+| **Q&A 질문 유형 변경 in-place 불가** | kebab 메뉴는 복제/삭제만. **삭제 후 객관식 신규 추가** 다단계 필요. 신규는 마지막 배치 → reorder는 **dnd-kit `onDragEnd` 직접 호출**로 자동화 (아래 dnd-kit 항목 참조) |
+| **🥇 dnd-kit 드래그앤드롭 자동화** (카드 순서·Q&A 순서·갤러리·메뉴 등 모든 sortable) | React fiber에서 `onDragEnd` 직접 호출. **mouse/keyboard 이벤트는 모두 실패**. 풀패턴: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 박제) — 카드 순서 변경]] |
 | **Q&A 복수선택 토글 = 사용자정의 div (MUI Switch 아님)** | 24×15 div, 활성 시 `bg: var(--color-information)` + inner `transform: translateX(9px)`. 좌표 직접 click |
 | **카드 추가 직후 mobile preview에 즉시 마운트 X** | 카드 추가 → 카드 보드 명시 클릭 후 작업 |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
@@ -262,10 +263,11 @@
 | 로그인 버튼 multiple match | `document.querySelectorAll('button')[3].click()` |
 
 ### 🛡 4단계 자동화 작업 원칙
-1. **카드는 위→아래 순서로 "추가만"** — 사용자 인사이트 "왜 드래그앤드롭? 위부터 순서대로 추가만 하면 되는데". 드래그앤드롭 회피.
+1. **카드 추가는 위→아래 순서** + **순서 변경은 dnd-kit `onDragEnd` 직접 호출** (2026-06-19 박제) — 드래그 이벤트 시뮬레이션 ❌, React fiber 통한 콜백 호출 ✅
 2. **카드 단위로 작업 → 매 단계 스크린샷 검증 → 다음 단계** — 한꺼번에 다단계 진행 ❌
-3. **자동화 가능 영역**: 카드 추가/순서, Lexical 텍스트 콘텐츠 변경, 우측 패널 토글(Bold/사이즈/정렬), 모달 input(`$B fill`), 캘린더, Q&A 옵션
-4. **수동 위임 권장**: 카드 디자인 세부값(배경/패딩/모서리), 카드 reorder(드래그), 카드 라벨 inline edit(✏️), 이미지 업로드(파일 시스템)
+3. **자동화 가능 영역**: 카드 추가, **카드/Q&A/갤러리 순서 변경(dnd-kit)**, Lexical 텍스트 콘텐츠, 우측 패널 토글(Bold/사이즈/정렬), 모달 input(`$B fill`), 캘린더, Q&A 옵션
+4. **수동 위임 권장**: 카드 라벨 inline edit(✏️ 우발 활성화 위험), 이미지 업로드(파일 시스템)
+5. **시도해볼 영역** (아직 미검증): 카드 디자인 세부값(배경/패딩/모서리) — 우측 패널 슬라이더는 native setter + input/change 이벤트로 가능. 색상은 픽커 dialog의 hex input fill
 
 ### 모바일 프리뷰 셀렉터
 - `.max-w-1\/2.transform.origin-top` — 라이브 템플릿 페이지의 모바일 프리뷰
