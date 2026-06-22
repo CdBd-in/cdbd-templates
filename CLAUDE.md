@@ -239,6 +239,7 @@
 - 카드별 옵션 풀버전: [[00. 작업 가이드/06. 신규 템플릿 기획 워크플로우#🃏 카드 디자인 옵션은 CdBd 제공값 범위 내에서 조정]] · 카드 정의 원본: `/Users/leesunho/Documents/GitHub/design/cdbd-design-system/디자인 시스템/4. 카드 기능 정의/`
 
 **피그마 파일**: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1-746
+- 📍 **모든 스켈레톤·시안은 「사례 기획」 페이지(node `1:746`)에 생성** (사용자 지정, 2026-06-22). 기존 스켈레톤(`wedding-invite` 352:23, `class-enroll` 505:606)과 같은 페이지에 모음. `use_figma`는 호출마다 currentPage가 첫 페이지(Cover)로 리셋되므로 **생성 전 `await figma.setCurrentPageAsync(<1:746>)` 명시** → 끝나면 이름(`findOne(n=>n.name.includes(...))`)으로 위치·ID 재확인.
 - **CdBd 사용 가능 카드 속성만** 사용 (15종 카드 타입 내)
 - 5대 원칙 준수 (범용성·텍스트 카드 분리·투명도·테마 변수·장식 그래픽 배제)
 - → **사용자 스켈레톤 피드백 게이트** (구조·카드 구성·옵션 조정 평가)
@@ -305,6 +306,7 @@
 | **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-3. 이미지#🅳️ 생성 모드]] |
 | **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-3. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
 | **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-3. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
+| **`use_figma` 생성 후 반환 node ID가 재매핑됨** (2026-06-22) | `figma.createSection()`/createFrame 등으로 만든 노드의 return ID(예: `501:23`)가 이후 호출에서 **다른 ID(예: `505:606`)로 최종 확정** → `getNodeByIdAsync(옛 ID)` = null. **같은 호출 안에서는 변수 참조로 안전**하나, 다음 호출에서 참조하려면 **이름으로 재탐색** (`pg.findOne(n=>n.name===...)` 또는 children name 매칭) 후 새 ID 사용. 문서에 figma 링크 적을 땐 이름 재탐색으로 확정한 ID를 사용. (이 문서는 `loadAllPagesAsync` 미지원 = 클래식 모드) |
 
 ### 🚨 CdBd 에디터 자동화 — 4단계 작업 시 함정 (2026-06-18 기록)
 
