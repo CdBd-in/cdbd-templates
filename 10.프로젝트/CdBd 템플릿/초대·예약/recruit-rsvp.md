@@ -7,7 +7,9 @@ mood: 🌑 모던/시크
 figma_skeleton: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=298-24
 figma_detail_section: https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=311-506
 spec_source: "[디자인명세] 템플릿To-be_10건_260618.pdf §2-01"
-status: 5단계 완료 (라이브 캡처 부착·에디터 ID 반영) — OG 업로드 수동 대기 → 6단계 어드민 등록
+status: ✅ 6단계 완료 (어드민 등록 + 라이브 게시) — admin uuid 50fc2d6d-04fa-4017-96f5-30ac40998658 · slug recruit-rsvp · 에디터 4856 · 프로필 화사한 버전 교체 · 자산 투명 배경 재export 완료
+admin_url: https://cdbd-admin.vercel.app/template/templates/50fc2d6d-04fa-4017-96f5-30ac40998658/edit
+live_url: https://www.cdbd.in/templates/recruit-rsvp
 related: "[[1-5. 템플릿 상세 페이지]], [[1-4-1. 에디터 페이지]], [[1-1. 색상 팔레트 라이브러리]]"
 ---
 
