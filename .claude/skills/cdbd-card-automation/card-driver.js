@@ -205,6 +205,10 @@
       }
     }
     if (!row) return null;
+    // 현재 고정 여부는 핸들러 소스로 알 수 없음(소스엔 항상 unpinTitle 포함) →
+    // block.fixedPosition(top/bottom/null)으로 판별.
+    const blk = blockOfRow(row);
+    const pinned = !!(blk && blk.fixedPosition);
     for (const b of row.querySelectorAll("button")) {
       let n = fiberOf(b);
       for (let i = 0; i < 3 && n; i++) {
@@ -212,7 +216,7 @@
         if (p && typeof p.onClick === "function") {
           const s = p.onClick.toString();
           if (/unpinTitle|K\(e\.currentTarget\)/.test(s))
-            return { btn: b, fn: p.onClick, pinned: /unpinTitle/.test(s) };
+            return { btn: b, fn: p.onClick, pinned, fixedPosition: blk && blk.fixedPosition };
         }
         n = n.return;
       }
