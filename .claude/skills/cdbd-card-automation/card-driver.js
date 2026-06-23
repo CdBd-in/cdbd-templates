@@ -93,9 +93,10 @@
   //           '유튜브' 'Q&A' '예약' / 2열: '텍스트 + 텍스트' 등
   //    ⚠️ '텍스트' 단일은 포커스(선택된 카드) 의존이라 불안정 → duplicateFirst({type:'text'}) 사용 권장
   //    ⚠️ '예약'은 별도 크레딧 확인 다이얼로그가 한 번 더 뜸 (confirmReservation 참고)
-  // 추가 핸들러 시그니처: t({...}) / t(builder(...)) / n((0,..insert..)) / 메뉴 a((0,..))
-  // 잘못된 래퍼(예: 탭/컨테이너) onClick을 피하려고 소스로 매칭한다.
-  const ADD_SIG = /(\bt\(|\bn\(\(0,|\ba\(\(0,)/;
+  // 추가 핸들러는 모달의 "카드 항목 컴포넌트"에 달려 있다. 이 컴포넌트는
+  // memoizedProps에 Icon/title/description 를 갖는다(예: {Icon,onClick,title,description}).
+  // 이걸로 매칭하면 잘못된 래퍼(탭/컨테이너) onClick을 피하고, t()든 다이얼로그형(예약)이든
+  // 모든 타입의 진짜 항목 핸들러를 잡는다.
   const pickCardType = (label) => {
     const items = [...document.querySelectorAll("div")].filter((el) => {
       const r = el.getBoundingClientRect();
@@ -104,10 +105,18 @@
       );
     });
     for (const it of items) {
-      const fn = onClickOf(it, 5, ADD_SIG);
-      if (fn) {
-        fn();
-        return `picked:${label}`;
+      let n = fiberOf(it);
+      for (let i = 0; i < 6 && n; i++) {
+        const p = n.memoizedProps;
+        if (
+          p &&
+          typeof p.onClick === "function" &&
+          ("Icon" in p || "title" in p || "description" in p)
+        ) {
+          p.onClick();
+          return `picked:${label}`;
+        }
+        n = n.return;
       }
     }
     return `not-found:${label}(모달이 열려있는지/라벨이 보이는지/단일'텍스트'는 불안정인지 확인)`;
