@@ -122,7 +122,9 @@
     return `not-found:${label}(모달이 열려있는지/라벨이 보이는지/단일'텍스트'는 불안정인지 확인)`;
   };
 
-  // 예약 카드 전용: pickCardType('예약') 후 뜨는 "카드 추가하기" 확인 버튼
+  // 예약 카드 전용: pickCardType('예약') 후 뜨는 "카드 추가하기" 확인 버튼.
+  // ⚠️ 이 버튼(MuiLoadingButton)은 DB 예약레코드 생성 네트워크 요청을 띄운다 →
+  //    크레딧 잔액이 충분해야 최종 추가 완료. 0-크레딧이면 로딩 상태로 멈춤(취소: '취소하기').
   const confirmReservation = () => {
     const btn = [...document.querySelectorAll("button")].find(
       (b) =>

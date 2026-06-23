@@ -88,11 +88,11 @@ $B js "window.__cdbd.menuClick('카드 복제하기')";   sleep 1.2
 
 | 증상 | 원인·해결 |
 |---|---|
-| `pickCardType` 했는데 모달 안 닫힘 | 잘못된 래퍼 onClick을 잡음. 드라이버는 `ADD_SIG` 정규식으로 추가 핸들러만 매칭 — 모달이 완전히 렌더된 뒤(>1s) 호출했는지 확인 |
+| `pickCardType` 했는데 모달 안 닫힘 | 잘못된 래퍼 onClick을 잡음. 드라이버는 **항목 컴포넌트(Icon/title/description prop 보유)** 의 onClick만 매칭해 회피 — 모달이 완전히 렌더된 뒤(>1s) 호출했는지 확인 |
 | 단일 '텍스트' 추가가 안 됨 | 정상. 텍스트는 포커스(selected_block_id) 의존 → **복제**로 추가 |
 | `count()`가 안 변함 | 가상화로 새 카드가 화면 밖 미마운트. 정상. 스크린샷/모달닫힘으로 판정 |
 | `openKebab` "no-kebab-button" | kebab은 hover시 보이지만 DOM엔 존재. 행 매칭 실패가 흔함 → matcher 타입/인덱스 확인. 보드 행 필터는 `x>540 && width>280 && 40<h<90` |
-| 예약 카드만 누락 | `confirmReservation()` 안 부름. 다른 카드와 달리 확인 버튼 1회 더 |
+| 예약 카드만 누락 | `confirmReservation()` 안 부름(확인 1회 더). 또는 크레딧 부족으로 LoadingButton 멈춤 — 크레딧 있는 계정에서 실행 |
 | 삭제했는데 안 지워짐 | `confirmSwal()` 누락. 삭제는 항상 SweetAlert 확인 필요 |
 | 페이지가 대시보드로 튕김 | 모달 X버튼 셀렉터 오타로 다른 요소 클릭됨. 모달 닫기는 추가 성공 시 자동(`i(!1)`). 강제로 닫지 말 것 |
 
