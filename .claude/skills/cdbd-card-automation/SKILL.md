@@ -1,13 +1,13 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, duplicating, or reordering cards, uploading images, OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images through React fiber handlers (onClick·onChange·onDragEnd·onDrop), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경, 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
+description: Use when adding, deleting, duplicating, reordering, or pinning cards, uploading images, OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images through React fiber handlers (onClick·onChange·onDragEnd·onDrop), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀), 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)
 
 ## Overview
 
-CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·이미지 업로드·페이지 색상**을 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록·테마는 React 상태이고, **모달/메뉴 항목의 fiber 콜백(`onClick`·`onChange`·`onDragEnd`·`onDrop`)을 JS로 직접 호출**하면 클릭한 것과 동일하게 동작한다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI·OS 파일 다이얼로그에 영향받지 않는다.
+CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)·이미지 업로드·페이지 색상**을 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록·테마는 React 상태이고, **모달/메뉴 항목의 fiber 콜백(`onClick`·`onChange`·`onDragEnd`·`onDrop`)을 JS로 직접 호출**하면 클릭한 것과 동일하게 동작한다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI·OS 파일 다이얼로그에 영향받지 않는다.
 
 ## When to use
 
@@ -27,6 +27,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·이미지 �
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
 | **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 없음 |
+| **고정 (핀)** | 핀 버튼 onClick → 위치 메뉴(상단/하단) / 해제는 확인창 | 해제 시 "고정 해제하기" |
 | **이미지 업로드/적용** | dropzone `onDrop` 직접 호출 → 라이브러리 선택 → 적용하기 | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 
@@ -94,6 +95,25 @@ $B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 변경 확�
 - `cardOrder()` = 보드 표시 순서 `[{id,type}]` (dnd-kit `items` prop 기준). `reorderCard(from,to)` = from 인덱스 카드를 to 위치로.
 - 연속 이동 시 **매번 cardOrder()로 인덱스 재확인** (한 번 옮기면 인덱스 전부 밀림).
 - 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]]
+
+## 카드 고정 (핀) — 상단/하단 고정·해제
+
+핀 버튼(드래그 핸들 옆)을 fiber `onClick`(`currentTarget` 필요)으로 호출. (editor 4903 검증)
+
+```bash
+# 고정: 핀 버튼 → 위치 메뉴 → 상단/하단 선택
+$B js "window.__cdbd.openPin({type:'button'})"; sleep 1.2   # 미고정 → '상단/하단에 고정하기' 메뉴
+$B js "window.__cdbd.pinTo('top')"; sleep 1.5               # 'top' | 'bottom'
+
+# 해제: (고정 카드)핀 버튼 → SweetAlert 확인
+$B js "window.__cdbd.openPin({type:'button'})"; sleep 1.2   # 고정 → '카드 고정 해제하기' 확인창
+$B js "window.__cdbd.confirmSwal()"; sleep 1.5
+```
+
+- matcher = `{type}` | `{id}` | `{index}` (openKebab과 동일).
+- ⚠️ **고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로 이동** → 위치(x)로 찾으면 실패. 드라이버는 onClick 시그니처(`unpinTitle`/`K(e.currentTarget)`)로 핀 버튼을 식별.
+- 고정 여부는 핸들러 소스로 알 수 없음(항상 `unpinTitle` 포함) → **`block.fixedPosition`**(`"top"`/`"bottom"`/`null`)으로 판별. `openPin`이 자동 처리(미고정→메뉴, 고정→확인창).
+- 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
 
