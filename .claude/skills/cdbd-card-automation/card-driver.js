@@ -187,6 +187,92 @@
     return "swal-confirmed";
   };
 
+  // ── 이미지 업로드/적용 (React onDrop·onClick 직접 호출) ────────────────
+  // CdBd 업로드는 transient <input type=file>(동적 생성·제거) → $B upload/setInputFiles ❌,
+  // 실제 클릭은 OS 파일 다이얼로그 timeout. 해결: react-dropzone의 onDrop을 직접 호출.
+  // 흐름: openImageUpload → uploadImage(파일은 window.__cdbdImg base64) → applyImage.
+
+  // N번째 이미지 카드의 "이미지 업로드하기" 트리거 클릭 → "이미지 추가하기" 라이브러리 모달
+  const openImageUpload = (index = 0) => {
+    const b = [...document.querySelectorAll("button")].filter(
+      (e) => e.textContent.trim() === "이미지 업로드하기"
+    )[index];
+    if (!b) return `no-trigger[${index}]`;
+    const fn = onClickOf(b, 3);
+    if (!fn) return "no-trigger-onClick";
+    fn();
+    return "upload-modal-opening";
+  };
+
+  // 라이브러리 모달의 dropzone에 파일 주입(onDrop 직접 호출).
+  // 사전: window.__cdbdImg = "<base64>" (Bash: base64 -i img.png), mime/filename 인자.
+  const uploadImage = (filename, mime = "image/png") => {
+    if (!window.__cdbdImg) return "no-window.__cdbdImg(base64 먼저 주입)";
+    const bin = atob(window.__cdbdImg);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const file = new File([new Blob([bytes], { type: mime })], filename, { type: mime });
+    const propsOf = (el) => {
+      const k = Object.keys(el).find((k) => k.startsWith("__reactProps"));
+      return k ? el[k] : null;
+    };
+    const dz = [...document.querySelectorAll("*")].find((el) => {
+      const p = propsOf(el);
+      return p && typeof p.onDrop === "function";
+    });
+    if (!dz) return "no-dropzone(라이브러리 모달 열렸는지 확인)";
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    propsOf(dz).onDrop({
+      preventDefault: () => {},
+      stopPropagation: () => {},
+      dataTransfer: dt,
+      target: dz,
+      currentTarget: dz,
+    });
+    return `onDrop:${filename}`;
+  };
+
+  // 라이브러리에서 filename(alt/src 부분일치) 이미지 선택 → 그 셀의 "적용하기" 클릭.
+  // ⚠️ "적용하기"는 모든 이미지 셀에 있으므로 반드시 해당 이미지 셀 범위 안에서 찾는다.
+  const applyImage = (filenameMatch) => {
+    const propsOf = (el) => {
+      const k = Object.keys(el).find((k) => k.startsWith("__reactProps"));
+      return k ? el[k] : null;
+    };
+    const img = [...document.querySelectorAll("img")].find((i) =>
+      new RegExp(filenameMatch).test(i.alt || i.src)
+    );
+    if (!img) return `no-img:${filenameMatch}`;
+    // 1) 선택: 이미지 셀 컨테이너의 onClick
+    let el = img;
+    for (let i = 0; i < 6 && el; i++) {
+      const p = propsOf(el);
+      if (p && typeof p.onClick === "function") {
+        p.onClick({ preventDefault: () => {}, stopPropagation: () => {} });
+        break;
+      }
+      el = el.parentElement;
+    }
+    // 2) 적용: 같은 셀 안의 "적용하기"
+    let cell = img;
+    for (let i = 0; i < 6; i++) {
+      cell = cell.parentElement;
+      if (!cell) break;
+      const btn = [...cell.querySelectorAll("button,div")].find(
+        (e) => e.textContent.trim() === "적용하기"
+      );
+      if (btn) {
+        const p = propsOf(btn);
+        if (p && typeof p.onClick === "function")
+          p.onClick({ preventDefault: () => {}, stopPropagation: () => {} });
+        else btn.click();
+        return `applied:${filenameMatch}`;
+      }
+    }
+    return "selected-but-no-적용하기";
+  };
+
   // ── 카드 순서 변경 (dnd-kit onDragEnd 직접 호출) ───────────────────────
   // 마우스/키보드 이벤트는 dnd-kit이 무시 → DndContext의 onDragEnd 콜백을 fiber에서
   // 찾아 {active, over}로 직접 호출하면 arrayMove reorder가 즉시 동작.
@@ -352,6 +438,9 @@
     openKebab,
     menuClick,
     confirmSwal,
+    openImageUpload,
+    uploadImage,
+    applyImage,
     cardOrder,
     reorderCard,
     openColorPicker,
