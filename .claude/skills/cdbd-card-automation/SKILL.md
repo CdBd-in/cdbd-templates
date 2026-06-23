@@ -7,9 +7,9 @@ description: Use when adding, deleting, or duplicating cards OR setting page the
 
 ## Overview
 
-CdBd 에디터에서 카드 **추가·삭제·복제**를 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록은 React store 상태이고, **모달/메뉴 항목의 fiber `onClick` 핸들러를 JS로 직접 호출**하면 클릭한 것과 동일하게 카드가 추가/삭제/복제된다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI에 영향받지 않는다.
+CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·페이지 색상**을 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록·테마는 React 상태이고, **모달/메뉴 항목의 fiber 콜백(`onClick`·`onChange`·`onDragEnd`)을 JS로 직접 호출**하면 클릭한 것과 동일하게 동작한다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI에 영향받지 않는다.
 
-[[1-4-1. 에디터 페이지]]의 dnd-kit 순서변경·파일업로드 자동화와 같은 계열(React fiber 콜백 직접 호출). 카드 **순서 변경**은 그 문서의 `onDragEnd` 직접 호출 방식을 쓴다(본 skill 범위 밖).
+[[1-4-1. 에디터 페이지]]의 파일업로드(`onDrop` 직접 호출) 자동화와 같은 계열.
 
 ## When to use
 
@@ -28,6 +28,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제**를 마우스 좌표 클�
 | 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 다이얼로그** 1회 더 | "예약 카드 추가하기" (⚠️ 확정은 크레딧 필요) |
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
+| **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 
 ## Setup
@@ -84,6 +85,16 @@ $B js "window.__cdbd.menuClick('카드 복제하기')";   sleep 1.2
 ```
 
 **일괄 작업:** 삭제/복제 후 행이 다시 정렬되므로 **매번 openKebab을 다시** 호출한다(이전 행 참조 무효). 추가도 매번 openAddModal부터.
+
+**카드 순서 변경** (dnd-kit `onDragEnd` 직접 호출 — 마우스/키보드 드래그 시뮬레이션은 모두 실패):
+```bash
+$B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 현재 순서 확인 (인덱스 파악)
+$B js "window.__cdbd.reorderCard(8,0)"; sleep 1.2                  # 8번 카드를 0번 위치로 이동
+$B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 변경 확인
+```
+- `cardOrder()` = 보드 표시 순서 `[{id,type}]` (dnd-kit `items` prop 기준). `reorderCard(from,to)` = from 인덱스 카드를 to 위치로.
+- 연속 이동 시 **매번 cardOrder()로 인덱스 재확인** (한 번 옮기면 인덱스 전부 밀림).
+- 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]]
 
 ## 페이지 색상 (배경·텍스트·버튼 hex) — swatch 클릭 없이
 
