@@ -187,11 +187,95 @@
     return "swal-confirmed";
   };
 
+  // ── 페이지 색상 (테마) ────────────────────────────────────────────────
+  // swatch 클릭·SketchPicker·hex input 전부 없이, 각 색 슬롯의 React onChange("#hex")를
+  // fiber로 직접 호출해 색을 설정한다. 실제 클릭 0번.
+
+  // "색상 더보기" → "페이지 색상 선택하기" 모달 열기 (페이지 테마 패널이 열린 상태에서)
+  const openColorPicker = () => {
+    const el = [...document.querySelectorAll("*")].find(
+      (e) => e.textContent.trim() === "색상 더보기" && e.getBoundingClientRect().width > 100
+    );
+    if (!el) return "no-색상더보기(페이지 테마 패널 먼저 열기)";
+    el.click();
+    return "picker-opening";
+  };
+
+  // 슬롯 식별 = onChange 소스 시그니처 (위치 인덱스 ❌ — 배경 행 이미지 아이콘 때문에 어긋남)
+  //   배경 = base:{…background:} · 텍스트 = base:{…color:} · 버튼 = button:{…background:}
+  const _colorHandler = (slotWanted) => {
+    for (const el of document.querySelectorAll("div")) {
+      const r = el.getBoundingClientRect();
+      if (!(r.x > 560 && r.x < 860 && r.width < 60 && r.width > 20)) continue;
+      let n = fiberOf(el);
+      for (let i = 0; i < 5 && n; i++) {
+        const mp = n.memoizedProps;
+        if (
+          mp &&
+          typeof mp.onChange === "function" &&
+          typeof mp.value === "string" &&
+          mp.value[0] === "#"
+        ) {
+          const src = mp.onChange.toString();
+          let slot = null;
+          if (/button:\{/.test(src)) slot = "버튼";
+          else if (/base:\{[^}]*background:/.test(src)) slot = "배경";
+          else if (/base:\{[^}]*color:/.test(src)) slot = "텍스트";
+          if (slot === slotWanted) return mp;
+        }
+        n = n.return;
+      }
+    }
+    return null;
+  };
+
+  // 색 1개 설정. slot: '배경' | '텍스트' | '버튼', hex: "#RRGGBB"
+  // ⚠️ 여러 색은 한 번에 ❌ — 한 색씩 별도 호출 + 사이 ~1.2s 대기 + 배경을 마지막에.
+  //    (각 onChange가 렌더 시점 stale state를 캡처해 앞 변경을 덮어쓰므로)
+  const setThemeColor = (slot, hex) => {
+    const mp = _colorHandler(slot);
+    if (!mp) return `slot-not-found:${slot}(픽커 열렸는지 확인)`;
+    const was = mp.value;
+    mp.onChange(hex);
+    return `${slot}=${hex}(was ${was})`;
+  };
+
+  // 현재 3색 값 읽기 (검증용)
+  const themeColors = () => ({
+    배경: _colorHandler("배경") && _colorHandler("배경").value,
+    텍스트: _colorHandler("텍스트") && _colorHandler("텍스트").value,
+    버튼: _colorHandler("버튼") && _colorHandler("버튼").value,
+  });
+
+  // "변경사항 저장하기"(fiber onClick) → 경고 모달은 confirmThemeWarning()로 확정
+  const saveTheme = () => {
+    const b = [...document.querySelectorAll("button")].find(
+      (b) => b.textContent.trim() === "변경사항 저장하기"
+    );
+    if (!b) return "no-save-btn";
+    const fn = onClickOf(b, 3);
+    if (!fn) return "no-save-onClick";
+    fn();
+    return "save-fired";
+  };
+
+  // "페이지 테마 변경하기" 경고 모달의 "변경하기" 확정
+  const confirmThemeWarning = () => {
+    const b = [...document.querySelectorAll("button")].find(
+      (b) => b.textContent.trim() === "변경하기"
+    );
+    if (!b) return "no-변경하기";
+    b.click();
+    return "theme-confirmed";
+  };
+
   // ── 고수준 헬퍼 (단계 사이 대기가 필요 없는 동기 조합만) ───────────────
   // 텍스트 카드 추가 = 기존 텍스트 카드 복제 (단일 '텍스트' 모달 추가는 불안정하므로)
   // 1) openKebab({type:'text'}) → (sleep) → 2) menuClick('카드 복제하기')
   // delete = openKebab(matcher) → (sleep) → menuClick('카드 삭제하기') → (sleep) → confirmSwal()
   // duplicate = openKebab(matcher) → (sleep) → menuClick('카드 복제하기')
+  // 색상 = openColorPicker → (sleep) → setThemeColor('텍스트'/'버튼'/'배경' 순, 한 색씩 sleep)
+  //        → saveTheme → (sleep) → confirmThemeWarning
 
   window.__cdbd = {
     fiberOf,
@@ -206,6 +290,11 @@
     openKebab,
     menuClick,
     confirmSwal,
+    openColorPicker,
+    setThemeColor,
+    themeColors,
+    saveTheme,
+    confirmThemeWarning,
   };
   return "installed";
 })();
