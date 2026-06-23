@@ -1,6 +1,6 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, or duplicating cards in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards through React fiber onClick handlers (JS), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제, the text-card focus gotcha, and the 예약 카드 credit dialog.
+description: Use when adding, deleting, or duplicating cards OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors through React fiber onClick·onChange handlers (JS), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)

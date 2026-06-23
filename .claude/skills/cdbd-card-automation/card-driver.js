@@ -230,8 +230,11 @@
   };
 
   // 색 1개 설정. slot: '배경' | '텍스트' | '버튼', hex: "#RRGGBB"
-  // ⚠️ 여러 색은 한 번에 ❌ — 한 색씩 별도 호출 + 사이 ~1.2s 대기 + 배경을 마지막에.
-  //    (각 onChange가 렌더 시점 stale state를 캡처해 앞 변경을 덮어쓰므로)
+  // ⚠️ 슬롯당 핸들러 2개(행+미리보기)·이중 setter(배경=m / 텍스트·버튼=l)가 각자
+  //    stale state를 rebuild → 여러 색을 무조건 연속 설정하면 마지막이 앞을 덮어씀.
+  //    ✅ 멀티컬러는 "재조정 루프": 한 색씩 설정 → themeColors()로 확인 →
+  //       **되돌아간(불일치) 슬롯만** 다시 setThemeColor → 일치할 때까지(보통 2패스) 반복.
+  //       (이미 맞는 슬롯은 건드리지 말 것 — 건드리면 재충돌). SKILL.md 레시피 참고.
   const setThemeColor = (slot, hex) => {
     const mp = _colorHandler(slot);
     if (!mp) return `slot-not-found:${slot}(픽커 열렸는지 확인)`;
@@ -274,8 +277,8 @@
   // 1) openKebab({type:'text'}) → (sleep) → 2) menuClick('카드 복제하기')
   // delete = openKebab(matcher) → (sleep) → menuClick('카드 삭제하기') → (sleep) → confirmSwal()
   // duplicate = openKebab(matcher) → (sleep) → menuClick('카드 복제하기')
-  // 색상 = openColorPicker → (sleep) → setThemeColor('텍스트'/'버튼'/'배경' 순, 한 색씩 sleep)
-  //        → saveTheme → (sleep) → confirmThemeWarning
+  // 색상 = openColorPicker → (sleep) → [재조정 루프: setThemeColor 한 색씩 → themeColors() 확인
+  //        → 불일치 슬롯만 재설정, 수렴까지 반복] → saveTheme → (sleep) → confirmThemeWarning
 
   window.__cdbd = {
     fiberOf,
