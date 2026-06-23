@@ -1,6 +1,6 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, duplicating, or reordering cards OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors through React fiber handlers (onClick·onChange·onDragEnd), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
+description: Use when adding, deleting, duplicating, or reordering cards, uploading images, OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images through React fiber handlers (onClick·onChange·onDragEnd·onDrop), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경, 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)
@@ -29,6 +29,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·페이지 �
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
 | **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 없음 |
+| **이미지 업로드/적용** | dropzone `onDrop` 직접 호출 → 라이브러리 선택 → 적용하기 | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 
 ## Setup
@@ -95,6 +96,28 @@ $B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 변경 확�
 - `cardOrder()` = 보드 표시 순서 `[{id,type}]` (dnd-kit `items` prop 기준). `reorderCard(from,to)` = from 인덱스 카드를 to 위치로.
 - 연속 이동 시 **매번 cardOrder()로 인덱스 재확인** (한 번 옮기면 인덱스 전부 밀림).
 - 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]]
+
+## 이미지 카드 업로드/적용 — React onDrop·onClick
+
+CdBd 업로드는 transient `<input type=file>`(동적 생성·제거) 패턴이라 `$B upload`/Playwright `setInputFiles()` ❌, 실제 클릭은 OS 파일 다이얼로그 timeout. → **react-dropzone의 `onDrop`을 직접 호출**한다. (editor 4903, 이미지 카드 검증 — 기존 OG/썸네일만 검증이던 것을 이미지 카드까지 확정)
+
+```bash
+# 1) 파일을 base64로 window에 주입 (10MB 이하)
+B64=$(base64 -i /tmp/img.png | tr -d '\n')
+$B js "window.__cdbdImg='$B64'"
+# 2) N번째 이미지 카드의 업로드 모달 열기 (0-based)
+$B js "window.__cdbd.openImageUpload(0)"; sleep 1.5
+# 3) dropzone에 onDrop으로 업로드 → 라이브러리에 추가
+$B js "window.__cdbd.uploadImage('img.png')"; sleep 3
+# 4) 라이브러리에서 그 이미지 선택 + 적용하기 (filename 부분일치)
+$B js "window.__cdbd.applyImage('img')"; sleep 2
+# 성공 = 모달 닫힘 + 카드에 이미지 표시 (자동저장)
+```
+
+- `uploadImage`는 `window.__cdbdImg`(base64)를 읽어 `File` → `new DataTransfer()` → dropzone `onDrop({…,dataTransfer})` 직접 호출. OS 다이얼로그 우회.
+- `applyImage(filenameMatch)`: 라이브러리 이미지(alt/src 부분일치) 셀의 onClick으로 선택 → **같은 셀 안의** "적용하기" 클릭. ⚠️ "적용하기"는 모든 이미지 셀에 있으므로 셀 범위로 좁혀야 함.
+- OG 이미지·페이지 썸네일도 같은 패턴(트리거만 다름). 풀 원리: [[1-4-1. 에디터 페이지#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]]
+- 이미지 **생성·준비**(Thiings·OpenAI gpt-image-1·Flow·투명 PNG export)는 [[1-3. 이미지]] — 별개 단계.
 
 ## 페이지 색상 (배경·텍스트·버튼 hex) — swatch 클릭 없이
 
