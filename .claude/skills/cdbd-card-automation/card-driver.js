@@ -18,12 +18,15 @@
     return k ? el[k] : null;
   };
 
-  // fiber 조상(최대 depth)에서 onClick 함수를 찾아 반환
-  const onClickOf = (el, depth = 5) => {
+  // fiber 조상(최대 depth)에서 onClick 함수를 찾아 반환.
+  // sig(정규식) 지정 시: 소스가 sig에 매칭되는 onClick만 반환(잘못된 래퍼 onClick 회피).
+  const onClickOf = (el, depth = 5, sig = null) => {
     let n = fiberOf(el);
     for (let i = 0; i < depth && n; i++) {
       const p = n.memoizedProps;
-      if (p && typeof p.onClick === "function") return p.onClick;
+      if (p && typeof p.onClick === "function") {
+        if (!sig || sig.test(p.onClick.toString())) return p.onClick;
+      }
       n = n.return;
     }
     return null;
@@ -90,6 +93,9 @@
   //           '유튜브' 'Q&A' '예약' / 2열: '텍스트 + 텍스트' 등
   //    ⚠️ '텍스트' 단일은 포커스(선택된 카드) 의존이라 불안정 → duplicateFirst({type:'text'}) 사용 권장
   //    ⚠️ '예약'은 별도 크레딧 확인 다이얼로그가 한 번 더 뜸 (confirmReservation 참고)
+  // 추가 핸들러 시그니처: t({...}) / t(builder(...)) / n((0,..insert..)) / 메뉴 a((0,..))
+  // 잘못된 래퍼(예: 탭/컨테이너) onClick을 피하려고 소스로 매칭한다.
+  const ADD_SIG = /(\bt\(|\bn\(\(0,|\ba\(\(0,)/;
   const pickCardType = (label) => {
     const items = [...document.querySelectorAll("div")].filter((el) => {
       const r = el.getBoundingClientRect();
@@ -98,13 +104,13 @@
       );
     });
     for (const it of items) {
-      const fn = onClickOf(it, 4);
+      const fn = onClickOf(it, 5, ADD_SIG);
       if (fn) {
         fn();
         return `picked:${label}`;
       }
     }
-    return `not-found:${label}(모달이 열려있는지/라벨이 보이는지 확인)`;
+    return `not-found:${label}(모달이 열려있는지/라벨이 보이는지/단일'텍스트'는 불안정인지 확인)`;
   };
 
   // 예약 카드 전용: pickCardType('예약') 후 뜨는 "카드 추가하기" 확인 버튼
