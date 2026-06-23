@@ -28,6 +28,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제**를 마우스 좌표 클�
 | 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 다이얼로그** 1회 더 | "예약 카드 추가하기" (⚠️ 확정은 크레딧 필요) |
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
+| **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 
 ## Setup
 
@@ -83,6 +84,39 @@ $B js "window.__cdbd.menuClick('카드 복제하기')";   sleep 1.2
 ```
 
 **일괄 작업:** 삭제/복제 후 행이 다시 정렬되므로 **매번 openKebab을 다시** 호출한다(이전 행 참조 무효). 추가도 매번 openAddModal부터.
+
+## 페이지 색상 (배경·텍스트·버튼 hex) — swatch 클릭 없이
+
+각 색 슬롯의 React `onChange("#hex")`를 fiber로 직접 호출한다. **swatch(색 원) 클릭·SketchPicker·hex input 필드 전부 불필요, 실제 클릭 0번.** (editor 4903 검증)
+
+슬롯 식별은 **onChange 소스 시그니처**로 한다(위치 인덱스 ❌ — 배경 행 이미지 아이콘 때문에 어긋남): 배경=`base.background` · 텍스트=`base.color` · 버튼=`theme.button.background`. 드라이버 `setThemeColor`가 이 매칭을 처리.
+
+```bash
+# 1) 페이지 테마 패널 열기 (헤더 팔레트 아이콘) → 색상 더보기
+$B js "[...document.querySelectorAll('button')].filter(b=>{const r=b.getBoundingClientRect();return r.y<90&&r.x>1000&&r.x<1030})[0]?.click()"; sleep 1
+$B js "window.__cdbd.openColorPicker()"; sleep 1.2
+
+# 2) 한 색씩 설정
+$B js "window.__cdbd.setThemeColor('텍스트','#F5F1E6')"; sleep 1.2
+$B js "window.__cdbd.setThemeColor('버튼','#C9A227')";   sleep 1.2
+$B js "window.__cdbd.setThemeColor('배경','#0B3D2E')";   sleep 1.2
+
+# 3) 🔁 재조정 루프 (필수) — 되돌아간 슬롯만 다시 설정, 수렴까지 (보통 2패스)
+for pass in 1 2 3 4; do
+  $B js "window.__cdbd.themeColors().배경!=='#0B3D2E'?window.__cdbd.setThemeColor('배경','#0B3D2E'):'ok'"; sleep 1
+  $B js "window.__cdbd.themeColors().텍스트!=='#F5F1E6'?window.__cdbd.setThemeColor('텍스트','#F5F1E6'):'ok'"; sleep 1
+  $B js "window.__cdbd.themeColors().버튼!=='#C9A227'?window.__cdbd.setThemeColor('버튼','#C9A227'):'ok'"; sleep 1
+done
+$B js "JSON.stringify(window.__cdbd.themeColors())"   # 3색 모두 일치 확인
+
+# 4) 저장
+$B js "window.__cdbd.saveTheme()";          sleep 1.5   # 변경사항 저장하기
+$B js "window.__cdbd.confirmThemeWarning()"; sleep 1.2   # "페이지 테마 변경하기" 경고 → 변경하기
+```
+
+**⚠️ 왜 재조정 루프인가:** 슬롯당 핸들러가 2개(행+미리보기)이고, 배경은 setter `m`·텍스트/버튼은 setter `l`로 **서로 다른 theme 복사본**을 각자 stale 상태에서 rebuild한다. 그래서 여러 색을 무조건 연속 설정하면 마지막 호출이 앞 색을 덮어쓴다. **이미 맞는 슬롯은 건드리지 말고 불일치 슬롯만** 재설정하면 2패스 내 수렴(건드리면 재충돌). 단일 색 1개만 바꿀 땐 `setThemeColor` 1회로 충분(루프 불필요).
+
+> 구방식(fallback): onChange가 안 통하는 픽커는 [[CLAUDE.md]] "페이지 색상 — SketchPicker 실제클릭" 항목(색 원 `$B click` + hex `$B fill`). per-card 디자인 보드 색상도 동일 onChange 구조 추정(미검증).
 
 ## Common mistakes
 
