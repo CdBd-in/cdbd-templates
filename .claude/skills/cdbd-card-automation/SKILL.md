@@ -1,6 +1,6 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, or duplicating cards OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors through React fiber onClick·onChange handlers (JS), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
+description: Use when adding, deleting, duplicating, or reordering cards OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors through React fiber handlers (onClick·onChange·onDragEnd), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)
@@ -17,7 +17,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·페이지 �
 - 이전 세션 잔존 카드 일괄 삭제
 - 같은 카드(텍스트·버튼 등) 반복 복제
 
-**When NOT:** 카드 라벨 inline edit, 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴. 순서 변경 — dnd-kit `onDragEnd`.
+**When NOT:** 카드 라벨 inline edit, 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴(미통합).
 
 ## Quick reference (검증: editor 4903)
 
