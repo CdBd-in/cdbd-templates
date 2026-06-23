@@ -7,9 +7,7 @@ description: Use when adding, deleting, duplicating, or reordering cards, upload
 
 ## Overview
 
-CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·페이지 색상**을 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록·테마는 React 상태이고, **모달/메뉴 항목의 fiber 콜백(`onClick`·`onChange`·`onDragEnd`)을 JS로 직접 호출**하면 클릭한 것과 동일하게 동작한다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI에 영향받지 않는다.
-
-[[1-4-1. 에디터 페이지]]의 파일업로드(`onDrop` 직접 호출) 자동화와 같은 계열.
+CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·이미지 업로드·페이지 색상**을 마우스 좌표 클릭 없이 자동화한다. 핵심 원리: CdBd 에디터의 카드 목록·테마는 React 상태이고, **모달/메뉴 항목의 fiber 콜백(`onClick`·`onChange`·`onDragEnd`·`onDrop`)을 JS로 직접 호출**하면 클릭한 것과 동일하게 동작한다. 좌표 클릭보다 빠르고, 가상화(스크롤)·hover 의존 UI·OS 파일 다이얼로그에 영향받지 않는다.
 
 ## When to use
 
