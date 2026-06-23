@@ -187,6 +187,65 @@
     return "swal-confirmed";
   };
 
+  // ── 카드 순서 변경 (dnd-kit onDragEnd 직접 호출) ───────────────────────
+  // 마우스/키보드 이벤트는 dnd-kit이 무시 → DndContext의 onDragEnd 콜백을 fiber에서
+  // 찾아 {active, over}로 직접 호출하면 arrayMove reorder가 즉시 동작.
+  const _sortableCtx = () => {
+    const s = document.querySelector("[aria-roledescription=sortable]");
+    if (!s) return null;
+    const fk = Object.keys(s).find((k) => k.startsWith("__reactFiber"));
+    let fiber = s[fk],
+      items = null,
+      onDragEnd = null;
+    for (let i = 0; i < 60 && fiber; i++) {
+      const p = fiber.memoizedProps;
+      if (p && p.items && !items) items = p.items;
+      if (p && typeof p.onDragEnd === "function" && !onDragEnd) onDragEnd = p.onDragEnd;
+      fiber = fiber.return;
+    }
+    return items && onDragEnd ? { items, onDragEnd } : null;
+  };
+
+  // 현재 카드 순서 [{id,type}] (sortable items 기준 = 보드 표시 순서)
+  const cardOrder = () => {
+    const ctx = _sortableCtx();
+    if (!ctx) return [];
+    const idType = {};
+    for (const el of document.querySelectorAll("div")) {
+      let n = fiberOf(el),
+        d = 0;
+      while (n && d < 2) {
+        const b = n.memoizedProps && n.memoizedProps.block;
+        if (b && b.id) idType[b.id] = b.type;
+        n = n.return;
+        d++;
+      }
+    }
+    return ctx.items.map((it) => {
+      const id = typeof it === "object" ? it.id : it;
+      return { id, type: idType[id] || "?" };
+    });
+  };
+
+  // 카드 이동: fromIdx(현재 위치) → toIdx(도착 위치). cardOrder() 인덱스 기준.
+  const reorderCard = (fromIdx, toIdx) => {
+    const ctx = _sortableCtx();
+    if (!ctx) return "no-sortable-ctx";
+    const items = ctx.items;
+    if (fromIdx < 0 || fromIdx >= items.length || toIdx < 0 || toIdx >= items.length)
+      return `out-of-range(len=${items.length})`;
+    const aid = typeof items[fromIdx] === "object" ? items[fromIdx].id : items[fromIdx];
+    const oid = typeof items[toIdx] === "object" ? items[toIdx].id : items[toIdx];
+    ctx.onDragEnd({
+      active: { id: aid, data: { current: undefined } },
+      over: { id: oid, data: { current: undefined } },
+      delta: { x: 0, y: 0 },
+      collisions: null,
+      activatorEvent: null,
+    });
+    return `moved ${fromIdx}->${toIdx}`;
+  };
+
   // ── 페이지 색상 (테마) ────────────────────────────────────────────────
   // swatch 클릭·SketchPicker·hex input 전부 없이, 각 색 슬롯의 React onChange("#hex")를
   // fiber로 직접 호출해 색을 설정한다. 실제 클릭 0번.
@@ -293,6 +352,8 @@
     openKebab,
     menuClick,
     confirmSwal,
+    cardOrder,
+    reorderCard,
     openColorPicker,
     setThemeColor,
     themeColors,
