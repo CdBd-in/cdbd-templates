@@ -25,7 +25,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제**를 마우스 좌표 클�
 |---|---|---|
 | 추가 (이미지·버튼·프로필·갤러리·위치·구분선·SNS·메뉴·상품·유튜브·Q&A·2열) | 모달 열기 → 타입 항목 onClick | 없음 (모달 자동 닫힘=성공) |
 | 추가 (**텍스트**) | 기존 텍스트 카드 **복제** (단일 '텍스트' 모달추가는 불안정) | 없음 |
-| 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 버튼** 1회 더 | "예약 카드 추가하기" |
+| 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 다이얼로그** 1회 더 | "예약 카드 추가하기" (⚠️ 확정은 크레딧 필요) |
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
 
@@ -64,9 +64,10 @@ $B js "window.__cdbd.menuClick('카드 복제하기')"; sleep 1.2
 **예약 카드 추가** (크레딧 확인 1회 더):
 ```bash
 $B js "window.__cdbd.openAddModal()";        sleep 1.2
-$B js "window.__cdbd.pickCardType('예약')";   sleep 1.2
-$B js "window.__cdbd.confirmReservation()";  sleep 1.2   # "카드 추가하기"(contained) 버튼
+$B js "window.__cdbd.pickCardType('예약')";   sleep 1.2   # 크레딧 확인 다이얼로그 뜸(검증됨)
+$B js "window.__cdbd.confirmReservation()";  sleep 1.2   # "카드 추가하기"(MuiLoadingButton)
 ```
+⚠️ 확인 버튼은 **DB 예약레코드 생성 네트워크 요청**을 띄우는 LoadingButton이라, **크레딧 잔액이 충분해야** 최종 추가가 완료된다. 0-크레딧 계정에선 버튼이 로딩 상태로 멈춤(다이얼로그까지는 정상 동작 검증). 취소는 `취소하기` 버튼 클릭.
 
 **카드 삭제** (matcher: `{type:'image'}` | `{id:'...'}` | `{index:N}`):
 ```bash
