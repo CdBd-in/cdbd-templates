@@ -187,6 +187,62 @@
     return "swal-confirmed";
   };
 
+  // ── 카드 고정 (핀) ────────────────────────────────────────────────────
+  // 핀 버튼은 드래그 핸들 옆. ⚠️ 고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로
+  // 이동하므로 위치(x)로 찾으면 안 됨 → onClick 소스 시그니처로 식별.
+  //   미고정 핀 클릭 = K(e.currentTarget) → "상단/하단에 고정하기" 메뉴
+  //   고정 핀 클릭 = unpin 확인(SweetAlert) → ep(...,null)
+  const _pinButton = (matcher = {}) => {
+    const rows = boardRows();
+    let row = null;
+    if (matcher.index != null) row = rows[matcher.index];
+    else {
+      for (const el of rows) {
+        const b = blockOfRow(el);
+        if (!b) continue;
+        if (matcher.id && b.id === matcher.id) { row = el; break; }
+        if (matcher.type && b.type === matcher.type) { row = el; break; }
+      }
+    }
+    if (!row) return null;
+    for (const b of row.querySelectorAll("button")) {
+      let n = fiberOf(b);
+      for (let i = 0; i < 3 && n; i++) {
+        const p = n.memoizedProps;
+        if (p && typeof p.onClick === "function") {
+          const s = p.onClick.toString();
+          if (/unpinTitle|K\(e\.currentTarget\)/.test(s))
+            return { btn: b, fn: p.onClick, pinned: /unpinTitle/.test(s) };
+        }
+        n = n.return;
+      }
+    }
+    return null;
+  };
+
+  // 핀 버튼 클릭. 미고정 → 위치 메뉴 열림(다음 pinTo) / 고정 → unpin 확인창(다음 confirmSwal)
+  const openPin = (matcher = {}) => {
+    const pb = _pinButton(matcher);
+    if (!pb) return "no-pin-button";
+    pb.fn({ stopPropagation: () => {}, preventDefault: () => {}, currentTarget: pb.btn });
+    return pb.pinned ? "unpin-confirm-opened" : "pin-menu-opened";
+  };
+
+  // 위치 메뉴에서 고정 위치 선택. position: 'top'(상단) | 'bottom'(하단)
+  const pinTo = (position = "top") => {
+    const label = position === "bottom" ? "하단에 고정하기" : "상단에 고정하기";
+    const it = [...document.querySelectorAll(".MuiMenuItem-root,[role=menuitem],li")].find(
+      (e) => e.textContent.trim() === label
+    );
+    if (!it) return `no-menu-item:${label}`;
+    const fn = onClickOf(it, 4);
+    if (!fn) return `no-handler:${label}`;
+    fn({ stopPropagation: () => {}, preventDefault: () => {} });
+    return `pinned:${position}`;
+  };
+  // 고정: openPin(matcher) → (sleep) → pinTo('top'/'bottom')
+  // 해제: openPin(matcher) → (sleep) → confirmSwal()
+
   // ── 이미지 업로드/적용 (React onDrop·onClick 직접 호출) ────────────────
   // CdBd 업로드는 transient <input type=file>(동적 생성·제거) → $B upload/setInputFiles ❌,
   // 실제 클릭은 OS 파일 다이얼로그 timeout. 해결: react-dropzone의 onDrop을 직접 호출.
@@ -438,6 +494,8 @@
     openKebab,
     menuClick,
     confirmSwal,
+    openPin,
+    pinTo,
     openImageUpload,
     uploadImage,
     applyImage,
