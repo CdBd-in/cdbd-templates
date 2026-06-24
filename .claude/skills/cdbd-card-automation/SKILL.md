@@ -190,42 +190,49 @@ $B js "window.__cdbd.confirmThemeWarning()"; sleep 1.2   # "페이지 테마 변
 
 **🔑 핵심 함정 — 방문 체크 가능 시간(종료 일시)이 필수.** 안 채우면 "변경사항 저장하기"가 빨간 에러("종료 날짜/시간을 선택해 주세요.")로 막혀 모달이 안 닫힘. (이전 세션 예약 저장 유실의 진짜 원인.) **시작 일시는 첫 옵션 날짜로 자동 채워지고, 종료 일시만 수동 입력** 필요.
 
+**⚡ 속도 (editor 4904 실측 2026-06-24): 옵션 1개 추가 ≈ 5.0초**(아래 단축 sleep). 예약 카드 1개(옵션 2개 + 방문체크 종료) ≈ 15~18초, 3개 ≈ 45~55초. 기존(넉넉한 sleep)대비 **~40% 단축**, 신뢰성 유지.
+
 레시피 (한 예약 카드):
 ```bash
-# 1) 카드 선택 (위 fiber onClick 방식, 보드 스크롤 ❌) → 우측 패널 "예약 정보 관리" 버튼 등장
-$B js "(function(){var d=[...document.querySelectorAll('div')].filter(e=>e.textContent.trim()==='예약 정보 관리'&&e.className.includes('bg-informati'))[0];d.id='res-manage-btn';return 't';})()"
-$B click "#res-manage-btn"; sleep 2          # 관리 버튼은 fiber onClick 없음 → 실제 $B click 필요(우측 패널이라 스크롤 불필요, 안전)
+# 1) 카드 선택 (위 fiber onClick 방식, 보드 스크롤 ❌) → "예약 정보 관리" 버튼의 fiber onClick은 ()=>P(!0)
+#    ⚠️ 관리 버튼은 $B click이 자주 타임아웃(actionable 대기) → JS로 onClick 직접 호출이 빠르고 안정.
+$B js "(function(){var d=[...document.querySelectorAll('*')].filter(e=>e.textContent.trim()==='예약 정보 관리'&&e.children.length<=2&&e.getBoundingClientRect().x<1000)[0];var node=d;var depth=0;while(node&&depth<6){var f=window.__cdbd.fiberOf(node);var fd=0;while(f&&fd<6){if(f.memoizedProps&&typeof f.memoizedProps.onClick==='function'){f.memoizedProps.onClick();return 'opened';}f=f.return;fd++;}node=node.parentElement;depth++;}return 'nf';})()"; sleep 1
 
 # 2) 기본정보 ($B fill 정상 작동 — 제목 포함)
 #    제목=placeholder '제목을 입력해 주세요.' / 장소='주소 혹은 장소명을 입력해 주세요.' / 호스트='호스트 이름을 입력해 주세요.' / 연락처='호스트 연락처를 입력해 주세요.'
 $B fill "#res-title" "심화반 수강 신청"   # 각 input에 id 부여 후 $B fill
 
-# 3) 예약 옵션 추가 (반복) — 모달 내부는 JS .click()만! ($B click은 about:blank 크래시)
-$B js "[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='옵션 추가').click()"; sleep 1.5
-#   날짜: 날짜 input의 형제 button(캘린더 아이콘) JS .click() → MuiPickersDay 중 텍스트=일자 클릭
-$B js "(function(){var di=[...document.querySelectorAll('input')].find(e=>e.placeholder==='날짜를 선택해 주세요');var w=di.closest('.MuiTextField-root')||di.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 1.2
-$B js "[...document.querySelectorAll('button.MuiPickersDay-root')].filter(b=>b.textContent.trim()==='25'&&!b.disabled)[0].click()"; sleep 0.8
-#   시간: 시간 input의 형제 button → [role=option] aria-label '19 hours' / '0 minutes' 클릭 (scrollIntoView는 리스트 내부라 안전)
-$B js "(function(){var ti=[...document.querySelectorAll('input')].find(e=>e.placeholder==='시간을 선택해 주세요');var w=ti.closest('.MuiTextField-root')||ti.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 1
-$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='19 hours');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.6
-$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='0 minutes');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.6
-$B fill "#res-count" "5"                     # 인원 input(placeholder '인원을 입력해 주세요')
-$B js "[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='설정하기').click()"; sleep 1.5
+# 3) 예약 옵션 추가 (반복) — 모달 내부는 JS .click()만! ($B click은 about:blank 크래시) · sleep 단축
+$B js "[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='옵션 추가').click()"; sleep 0.6
+#   날짜: 날짜 input의 형제 button(캘린더 아이콘) JS .click() → MuiPickersDay 중 텍스트=일자 클릭 (캘린더 기본=현재월, 다른 달이면 next/prev 화살표 필요)
+$B js "(function(){var di=[...document.querySelectorAll('input')].find(e=>e.placeholder==='날짜를 선택해 주세요');var w=di.closest('.MuiTextField-root')||di.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 0.5
+$B js "[...document.querySelectorAll('button.MuiPickersDay-root')].filter(b=>b.textContent.trim()==='25'&&!b.disabled)[0].click()"; sleep 0.3
+#   시간: 시간 input의 형제 button → [role=option] aria-label '19 hours' / '0 minutes' 연속 클릭 (팝업 열린 후 리스트 즉시 렌더)
+$B js "(function(){var ti=[...document.querySelectorAll('input')].find(e=>e.placeholder==='시간을 선택해 주세요');var w=ti.closest('.MuiTextField-root')||ti.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 0.5
+$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='19 hours');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.25
+$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='0 minutes');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.25
+$B fill "#res-count" "5"                     # 인원 input(placeholder '인원을 입력해 주세요'); sleep 0.2
+$B js "[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='설정하기').click()"; sleep 0.7
 
 # 4) 방문 체크 가능 시간 — 종료 일시 필수! (시작은 자동) — placeholder '날짜'/'시간', value==='' 인 것이 종료
-$B js "(function(){var end=[...document.querySelectorAll('input')].filter(e=>e.placeholder==='날짜').find(e=>e.value==='');var w=end.closest('.MuiTextField-root')||end.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 1.2
-$B js "[...document.querySelectorAll('button.MuiPickersDay-root')].filter(b=>b.textContent.trim()==='27'&&!b.disabled)[0].click()"; sleep 0.8
-$B js "(function(){var end=[...document.querySelectorAll('input')].filter(e=>e.placeholder==='시간').find(e=>e.value==='');var w=end.closest('.MuiTextField-root')||end.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 1
-$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='18 hours');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.6
-$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='0 minutes');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.6
+$B js "(function(){var end=[...document.querySelectorAll('input')].filter(e=>e.placeholder==='날짜').find(e=>e.value==='');var w=end.closest('.MuiTextField-root')||end.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 0.5
+$B js "[...document.querySelectorAll('button.MuiPickersDay-root')].filter(b=>b.textContent.trim()==='27'&&!b.disabled)[0].click()"; sleep 0.3
+$B js "(function(){var end=[...document.querySelectorAll('input')].filter(e=>e.placeholder==='시간').find(e=>e.value==='');var w=end.closest('.MuiTextField-root')||end.parentElement.parentElement;w.querySelector('button').click();})()"; sleep 0.5
+$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='18 hours');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.25
+$B js "(function(){var o=[...document.querySelectorAll('[role=option]')].find(e=>e.getAttribute('aria-label')==='0 minutes');o.scrollIntoView({block:'center'});o.click();})()"; sleep 0.25
 
-# 5) 저장 — 모달이 닫히면 성공(서버 저장). 종료 일시 누락이면 빨간 에러로 안 닫힘.
-$B js "(function(){var b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='변경사항 저장하기');b.id='res-save';return 't';})()"
-$B click "#res-save"; sleep 3
+# 5) 저장 — "변경사항 저장하기"도 fiber onClick으로(또는 $B click). 모달이 닫히면 성공(서버 저장). 종료 일시 누락이면 빨간 에러로 안 닫힘.
+$B js "[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='변경사항 저장하기').click()"; sleep 2.5
 $B js "![...document.querySelectorAll('input')].find(e=>e.placeholder==='제목을 입력해 주세요.')?'SAVED(모달닫힘)':'OPEN(에러확인)'"
 ```
 - **검증/식별**: 저장 성공 시 우측 패널 "예약 정보"에 제목 표시 + 프리뷰 placeholder("오른쪽에서 예약 정보를…")가 **"예약하기" 버튼**으로 바뀜. 빈 카드 판별 = 모달 열어 제목 input value==='' 확인.
 - 여러 예약 카드는 **매번 fiber onClick으로 정확히 선택**(라벨/위치로 추정 ❌ — 같은 'reservation' 타입이라 헷갈림).
+- **모달 취소(저장 폐기)**: 스테이징된 변경이 있으면 "저장 없이 나가기" 확인 다이얼로그 → **"나가기"** 클릭. (테스트로 임시 옵션 추가 후 서버 데이터 보존하며 빠져나올 때 유용.)
+
+### ⚡ 더 빠른 방법 시도 결과 (2026-06-24 조사 — 비추천)
+- **날짜/시간 필드 직접 타이핑** (`$B type "20260625"`/`"1900"`): 작동하나 **weekday 섹션 `(EEEE)` 미해결·시간 섹션 갱신 불안정** → 신뢰성 낮아 비추천. 픽커 클릭이 안전.
+- **dayjs 값 onChange 직접 주입**: `window.dayjs` 없음 + MUI X 어댑터 값 타입 구성 어려움 → 불가.
+- **결론**: 픽커 클릭 유지하되 **sleep 단축(위) + 모달은 fiber onClick으로 열기**가 가장 견고한 ~40% 단축. 옵션당 ~5초가 현실적 하한(렌더 사이 끊어야 해서 JS round-trip×8 + 최소 sleep).
 
 ## 버튼 링크 — 2단카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
 
