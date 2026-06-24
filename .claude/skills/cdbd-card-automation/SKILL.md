@@ -1,6 +1,6 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, duplicating, reordering, or pinning cards, uploading images, OR setting page theme colors in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images through React fiber handlers (onClick·onChange·onDragEnd·onDrop), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀), 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), the text-card focus gotcha, and the 예약 카드 credit dialog.
+description: Use when adding, deleting, duplicating, reordering, or pinning cards, uploading images, setting page theme colors, configuring reservation date/time/capacity, OR setting button links in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images/reservations/links through React fiber handlers (onClick·onChange·onDragEnd·onDrop·onUpdateItem), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀), 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), 예약 정보 모달(날짜·시간·정원·방문체크 필수), 버튼 링크(multiCard onUpdateItem), the text-card focus gotcha, the 예약 카드 credit dialog, AND the board-scroll-causes-page-drift gotcha (select cards via fiber onClick, never scroll the board).
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)
