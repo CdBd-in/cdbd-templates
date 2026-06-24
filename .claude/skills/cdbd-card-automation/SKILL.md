@@ -15,7 +15,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 - 이전 세션 잔존 카드 일괄 삭제
 - 같은 카드(텍스트·버튼 등) 반복 복제
 
-**When NOT:** 카드 라벨 inline edit, 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴(미통합).
+**When NOT:** 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴(미통합). (카드 라벨 변경은 이제 지원 — 아래 "카드 라벨(이름) 변경" 참조.)
 
 ## Quick reference (검증: editor 4903)
 
@@ -33,6 +33,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 | **예약 정보 설정** (날짜·시간·정원) | "예약 정보 관리" 모달 → 옵션 추가(JS click) + **방문 체크 종료 일시 필수** | 없음 (모달 닫힘=저장) |
 | **버튼 링크** (2단카드) | 패널 fiber `onUpdateItem(itemId,{linkButton})` 직접 호출 (UI는 크래시) | 없음 |
 | **카드 선택** (스크롤 없이) | board row 자식 div fiber `onClick`(`D(m.id)`) 직접 호출 — **보드 스크롤 ❌ 드리프트** | 없음 |
+| **카드 라벨(이름) 변경** | row의 title 입력(상시 존재)에 native setter+`input`+`blur()` — **한 번에 하나씩 + settle + 수렴 루프** (배치는 +1 시프트) | 없음 |
 
 ## Setup
 
@@ -98,6 +99,34 @@ $B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 변경 확�
 - `cardOrder()` = 보드 표시 순서 `[{id,type}]` (dnd-kit `items` prop 기준). `reorderCard(from,to)` = from 인덱스 카드를 to 위치로.
 - 연속 이동 시 **매번 cardOrder()로 인덱스 재확인** (한 번 옮기면 인덱스 전부 밀림).
 - 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]]
+
+## 카드 라벨(이름) 변경 — title 입력 native setter (editor 4904 검증 2026-06-24)
+
+카드 라벨 = `block.title`(보드 행에 표시되는 이름). **모든 카드 행에 title 입력(placeholder `제목을 입력하세요`)이 상시 렌더**돼 있어 **✏️ pencil 클릭조차 불필요**. 입력의 onChange가 `e=>{ s(t), l(t) }`로 `e.target.value`를 직접 읽어 커밋(`l(t)`)하므로, **native setter + `input` 이벤트 + `blur()`** 로 스크롤·좌표 없이 변경 + 자동저장.
+
+```bash
+# 헬퍼 주입 (pencil 불필요)
+$B js "window.__setTitle=function(i,title){var r=window.__cdbd.boardRows();var inp=[...r[i].querySelectorAll('input')].find(e=>e.type==='text');if(!inp)return 'no-input';var set=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;set.call(inp,title);inp.dispatchEvent(new Event('input',{bubbles:true}));inp.blur();return window.__cdbd.blockOfRow(r[i]).title;};'ok'"
+# 단일 변경
+$B js "window.__setTitle(30,'창업반 작품 제목')"; sleep 0.7
+```
+
+⚠️ **배치(연속 set)는 +1 시프트** — 커밋 `l(t)`이 비동기(debounce)라 빠르게 연속 호출하면 앞 커밋이 다음 활성 카드에 늦게 안착해 **카드 i가 labels[i-1]을 갖게 됨**(카드 0은 빈 값). 루프 중 즉시 검증은 통과해도 settle 후 다시 읽으면 어긋남. **단일 isolated set은 항상 정확.**
+
+✅ **해결 = 한 번에 하나씩 수렴 루프** (전체 재스캔 → 첫 불일치 1개만 수정 → settle → 반복). 44개도 ~45회로 수렴.
+```bash
+# 원하는 라벨 배열 + 첫 불일치 인덱스 반환기 주입
+$B js "window.__want=['강사 프로필','구분선','페이지 제목', /* ...idx 순서대로... */];window.__firstBad=function(){var r=window.__cdbd.boardRows();for(var i=0;i<window.__want.length;i++){if(window.__cdbd.blockOfRow(r[i]).title!==window.__want[i])return i;}return -1;};window.__want.length"
+# 수렴 루프 (bash)
+for n in $(seq 1 70); do
+  bad=$($B js "window.__firstBad()")
+  [ "$bad" = "-1" ] && { echo "ALL CLEAN"; break; }
+  $B js "window.__setTitle($bad, window.__want[$bad])" >/dev/null; sleep 0.7
+done
+# 검증: 리로드(goto editor; sleep 7; eval driver) 후 firstBad()===-1 확인 → 자동저장 영속
+```
+- 라벨링 컨벤션(목적 위주)은 [[../CLAUDE.md]] 4단계 🏷 카드 라벨 + [[1-5-1. CdBd 에디터#7. 카드 라벨 = 목적·내용 이름]]. 참고 예시: editor 4856(채용설명회) — "회사명/슬로건/여백/초대 메시지/위치 안내/출석 등록 예약" 등.
+- 텍스트 카드 본문은 `block.content`(JSON **문자열**) → `JSON.parse` 후 root 재귀로 text 추출해 목적 판단. previewText는 보통 빈 값.
 
 ## 카드 고정 (핀) — 상단/하단 고정·해제
 
