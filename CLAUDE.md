@@ -51,12 +51,12 @@
 
 | 경로 | 역할 |
 |---|---|
-| [[1-5. 템플릿 상세 페이지]] | 카탈로그 메타데이터(카테고리·제목·썸네일·성과·타겟·주요 기능) 작성 가이드 |
-| [[1-4-1. CdBd 에디터]] | 에디터 3-column 구조, 페이지 테마, OG 이미지 규칙, 자동화 함정, 작업 원칙, 페이지 구조 패턴, 작업 흐름 |
-| [[1-4-2. CdBd 카드 기능]] | 15종 카드 종류, **콘텐츠 의도→카드 타입 룩업**, 라벨 패턴 사전, 카드 사용 정책, 둥근 모서리·Outlined 버튼 같은 카드 디자인 패턴 |
-| [[1-1. 색상 팔레트 라이브러리]] | WCAG 검증 70개 팔레트 + 9개 무드 분류 |
-| [[1-3. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Google Flow 실사) 및 관리 규칙 |
-| [[1-2. 폰트 라이브러리]] | 한글 26 + 영문 18 = 44종, 9개 무드 + 3-Tier 분류 |
+| [[1-6. 템플릿 상세 페이지]] | 카탈로그 메타데이터(카테고리·제목·썸네일·성과·타겟·주요 기능) 작성 가이드 |
+| [[1-5-1. CdBd 에디터]] | 에디터 3-column 구조, 페이지 테마, OG 이미지 규칙, 자동화 함정, 작업 원칙, 페이지 구조 패턴, 작업 흐름 |
+| [[1-5-2. CdBd 카드 기능]] | 15종 카드 종류, **콘텐츠 의도→카드 타입 룩업**, 라벨 패턴 사전, 카드 사용 정책, 둥근 모서리·Outlined 버튼 같은 카드 디자인 패턴 |
+| [[1-2. 색상 팔레트]] | WCAG 검증 70개 팔레트 + 9개 무드 분류 |
+| [[1-4. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Google Flow 실사) 및 관리 규칙 |
+| [[1-3. 폰트]] | 한글 26 + 영문 18 = 44종, 9개 무드 + 3-Tier 분류 |
 | [[2-0. 디자인 특성 분석 절차]] | 기존 템플릿 분석 시 필수 검증 절차 |
 | [[00. 작업 가이드/06. 신규 템플릿 기획 워크플로우]] | 신규 템플릿 6단계 워크플로우 (본 파일 워크플로우 섹션의 풀버전) |
 | [[2-0. 전체 템플릿 개요]] | 17개 매트릭스 + 시그니처 매핑 |
@@ -79,7 +79,7 @@
 
 🌿 내추럴/오가닉 · 🌸 페미닌/로맨틱 · ✨ 럭셔리/엘레강스 · 💼 프로페셔널/비즈니스 · 🌑 모던/시크 · 🔥 비비드/대담한 · 🎨 빈티지/노스탤직 · 🎉 펀/플레이풀 · 🌙 드리미/감성적
 
-**[[1-1. 색상 팔레트 라이브러리]]와 [[1-2. 폰트 라이브러리]]가 동일 9개 무드** — 무드 결정 시 색·폰트 동시 선정 가능.
+**[[1-2. 색상 팔레트]]와 [[1-3. 폰트]]가 동일 9개 무드** — 무드 결정 시 색·폰트 동시 선정 가능.
 
 ### 팔레트 역할 매핑 (색상 순서 = 역할)
 - **2색**: 색1 = `{배경색}`, 색2 = `{텍스트색}` + `{버튼색}` (동일)
@@ -264,16 +264,16 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 - **1단계에서 결정한 무드 색·폰트를 디폴트 테마(fafafa/292929/프리텐다드)에 덮어쓰기**
   - 팔레트 역할 매핑(2색/3색)에 따라 `{배경색}·{텍스트색}·{버튼색}` 적용, WCAG 3.6:1 재검증
   - 폰트 1~2개 사용 원칙, 국문 본문 = 한글 폰트 의무
-- 이미지 소스: [[1-3. 이미지]] 규칙 — Thiings 3D · **OpenAI gpt-image-1 (현재 권장 생성 모드, ~$0.042/장)** · Google Flow 실사 (스킬 설치 시) · Unsplash (fallback). 동일 bytes는 Figma 서버 dedup → 1회 업로드로 N개 시안 RECTANGLE 일괄 fill 가능
+- 이미지 소스: [[1-4. 이미지]] 규칙 — Thiings 3D · **OpenAI gpt-image-1 (현재 권장 생성 모드, ~$0.042/장)** · Google Flow 실사 (스킬 설치 시) · Unsplash (fallback). 동일 bytes는 Figma 서버 dedup → 1회 업로드로 N개 시안 RECTANGLE 일괄 fill 가능
 - → **사용자 피그마 완성본 피드백 게이트** (이미지·색·폰트 모두 평가)
 
 ### 4단계: CdBd 에디터 구현
 - 피그마 최종 화면을 **CdBd 라이브 에디터에서 구현**
 - 카드 구성뿐 아니라 **OG 이미지·페이지 제목**까지 설정
-- 에디터 작업: [[1-4-1. CdBd 에디터]] 가이드 준수
-- 🏷 **카드 라벨 = 목적·내용 이름 (필수, 2026-06-22)** — 카드 라벨을 기본 타입명("텍스트/이미지/구분선") 그대로 두지 말고 시안 카드 이름에 맞춰 **목적·내용을 드러내는 간결한 이름**으로 지정(예: 회사명·슬로건·여백·위치 안내·사전 참석 신청서). 목적: 사용자가 **카드 보드에서 카드를 빠르게 찾고 목적을 즉시 인지**. 풀 원칙·자동화 팁: [[1-4-1. CdBd 에디터#7. 카드 라벨 = 목적·내용 이름 (카드 보드 가독성) (2026-06-22)]]
+- 에디터 작업: [[1-5-1. CdBd 에디터]] 가이드 준수
+- 🏷 **카드 라벨 = 목적·내용 이름 (필수, 2026-06-22)** — 카드 라벨을 기본 타입명("텍스트/이미지/구분선") 그대로 두지 말고 시안 카드 이름에 맞춰 **목적·내용을 드러내는 간결한 이름**으로 지정(예: 회사명·슬로건·여백·위치 안내·사전 참석 신청서). 목적: 사용자가 **카드 보드에서 카드를 빠르게 찾고 목적을 즉시 인지**. 풀 원칙·자동화 팁: [[1-5-1. CdBd 에디터#7. 카드 라벨 = 목적·내용 이름 (카드 보드 가독성) (2026-06-22)]]
 - 🎨 **페이지 테마 변경 규칙 (필수)** — 페이지 테마(색·폰트 등)를 처음 변경할 때 "기존 설정을 덮어씁니다" 경고 모달이 뜬다. **「이 페이지에서 앞으로 경고 보지 않기」 체크박스 무조건 ON → 변경 진행**. 다음 변경부터 모달이 사라져 작업 흐름 안 끊김. 매 페이지 작업 시작 시 첫 테마 변경에서 1회 실행.
-- ⚡ **4단계 속도 최적화 5규칙 (2026-06-22)** — 실행 순서: ①피그마 → 카드 매니페스트 JSON 추출 → ②테마 먼저(카드 전) → ③이미지 `/tmp/{label}.png` 일괄 export → ④카드 일괄 생성(드라이버 스크립트, 업로드 후 rm) → ⑤종단 1회 diff 검증(카드별 루프 ❌). 풀 가이드: [[1-0. 템플릿 기획 워크플로우#⚡ 4단계 속도 최적화 — 5가지 규칙]]
+- ⚡ **4단계 속도 최적화 5규칙 (2026-06-22)** — 실행 순서: ①피그마 → 카드 매니페스트 JSON 추출 → ②테마 먼저(카드 전) → ③이미지 `/tmp/{label}.png` 일괄 export → ④카드 일괄 생성(드라이버 스크립트, 업로드 후 rm) → ⑤종단 1회 diff 검증(카드별 루프 ❌). 풀 가이드: [[1-1. 워크플로우#⚡ 4단계 속도 최적화 — 5가지 규칙]]
 - 🃏 **카드 추가·삭제·복제·순서변경·고정·이미지업로드·페이지색상 JS 자동화 (2026-06-23)** — 좌표 클릭 없이 React fiber 콜백(`onClick`·`onChange`·`onDragEnd`·`onDrop`) 직접 호출. 드라이버(`window.__cdbd`) + 레시피는 skill **`cdbd-card-automation`** (`.claude/skills/cdbd-card-automation/`). 텍스트 추가=기존 텍스트 카드 복제, 삭제=SweetAlert 확인, 예약=크레딧 확인 다이얼로그(확정은 snapshot ref 실제클릭 `$B click @eN`·크레딧 필요), 순서변경=dnd-kit `reorderCard(from,to)`, 고정=`openPin→pinTo('top'/'bottom')`, 이미지=`openImageUpload→uploadImage(onDrop)→applyImage`(소스 JPEG 리사이즈 base64 주입), 페이지 색상=swatch 클릭 없이 `onChange("#hex")`+재조정 루프. 메뉴 카드는 자동 상단핀(`fixedPosition`) 부작용 → 푸터 2버튼은 `버튼+버튼`(multiCard) 사용.
 - 🎯 **카드 스타일·디테일 = `block.style`/`block.{type}` 직접 변경 + 트리거 (2026-06-23, 핵심)** — MUI 패널 컨트롤(슬라이더·input·color picker)은 합성·실제 입력 모두 거부 → ❌. **해결: board row fiber `memoizedProps.block`의 `block.style`(plain 객체) 직접 변경 → 텍스트는 정렬버튼 실제 `.click()`, 비텍스트는 다른 패널 변경(정렬 center↔left 등)으로 store updateBlock 유발** → `{...b}`로 참조 유지돼 렌더+autosave 반영. 키: `block.style`(fontSize px·color hex/`rgba(35,35,35,0.N)`·textAlign·lineHeight·padding "Tpx 20px Bpx 20px" 비대칭OK·background 반섹션`rgba(7,128,128,0.08)`) / `block.divider`(shape `dots`·strokeWidth·strokeColor) / `block.gallery.imageOption.style.borderRadius`·`gridTypeOption.column`/`rowGap`/`columnGap` / `block.innerStyle.width`(프로필 이미지 %) / `block.profile.nameStyle`·`descriptionStyle`.
 - ☑️ **4단계 Figma↔CdBd 디테일 대조 체크리스트 (필수, 2026-06-23)** — 텍스트 채운 뒤 아래를 Figma 실측값으로 **엄격 대조·적용**: ①**텍스트** 크기·색·정렬·웨이트(고운돋움류는 Bold없음=Regular)·줄간격 ②**카드 여백**(상하 패딩 Figma frame 그대로·외부여백=0/gap0) ③**구분선** 두께(strokeWidth)·모양·색 ④**프로필 이미지 크기**(Figma px → `innerStyle.width %`, 예 96/380≈25%) ⑤**갤러리 이미지 둥글기**(borderRadius, 예 16px) ⑥**갤러리 그리드 단 수**(`gridTypeOption.column`, 예 2)·간격 ⑦**버튼 높이**(py·CdBd 기본 ~58px). Figma값은 `get_design_context`로 실측(추정 ❌). 적용은 위 `block.*` 직접 변경 방식.
@@ -293,14 +293,14 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
   - **소개 섹션**: 제목 · 성과 · 리뷰 형식 설명글 · 추천 타겟
   - **주요 기능 N가지**
   - **모바일 페이지 스크린샷** (4단계 캡처물 — 멀티페이지면 모든 페이지)
-- 가이드 + 어드민 매핑표: [[1-5. 템플릿 상세 페이지]]
+- 가이드 + 어드민 매핑표: [[1-6. 템플릿 상세 페이지]]
 - → **사용자 상세 페이지 피드백 게이트**
 
 ### 6단계: CdBd 어드민 등록
 - 피드백 반영된 상세 페이지 콘텐츠 확정 후
 - **어드민**: https://cdbd-admin.vercel.app/login (CdBd와 동일 계정)
 - 경로: **템플릿 → 템플릿 관리 → 템플릿 추가**
-- **피그마 슬롯 ↔ 어드민 폼 매핑표**: [[1-5. 템플릿 상세 페이지#🔁 어드민 폼 ↔ 피그마 슬롯 매핑]]
+- **피그마 슬롯 ↔ 어드민 폼 매핑표**: [[1-6. 템플릿 상세 페이지#🔁 어드민 폼 ↔ 피그마 슬롯 매핑]]
 - 어드민 폼 구조 요약:
   - **좌측**: 언어 · 템플릿명 · 제목 · 슬러그 · **썸네일 이미지** · 에디터 ID · 카테고리(5종 체크) · 활성화
   - **우측 상단 "상세 정보"** = 피그마 **소개** 박스 → 상세 이미지(=대표 프로필) · 부제목 라벨 · 부제목 설명 · 본문 · 항목(추천 대상 반복)
@@ -332,15 +332,15 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 | Block Icon에 `paintAll(node)` (재귀 white) 적용 → 빈 흰 사각형 | 컨테이너+글리프 모두 white로 덮음. **글리프만 타게팅** (VECTOR/BOOLEAN_OPERATION/ELLIPSE 등) 하고 컨테이너 fill은 보존 |
 | INSTANCE 자식의 x/y/size 변경 시 `set_x: This property cannot be overridden in an instance` | instance descendants는 position·size override 차단됨. **`instance.detachInstance()` 으로 분리 후 수정** — 또는 instance 자체를 resize, 또는 wrapper frame으로 padding 추가 |
 | Flow `/generate-flow-image` 연속 호출 시 throttle → "에이전트에 과부하" | help@cdbd.in = 무료 등급. 4컷·2컷 모두 0회수. **10분+ cooldown** 후 1컷씩 단독 재시도. 빈번하면 사용자 수동 Flow UI 생성 → ~/Downloads 저장 후 figma 업로드 |
-| **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-3. 이미지#🅳️ 생성 모드]] |
-| **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-3. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
-| **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-3. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
+| **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-4. 이미지#🅳️ 생성 모드]] |
+| **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-4. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
+| **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-4. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
 | **`use_figma` 생성 후 반환 node ID가 재매핑됨** (2026-06-22) | `figma.createSection()`/createFrame 등으로 만든 노드의 return ID(예: `501:23`)가 이후 호출에서 **다른 ID(예: `505:606`)로 최종 확정** → `getNodeByIdAsync(옛 ID)` = null. **같은 호출 안에서는 변수 참조로 안전**하나, 다음 호출에서 참조하려면 **이름으로 재탐색** (`pg.findOne(n=>n.name===...)` 또는 children name 매칭) 후 새 ID 사용. 문서에 figma 링크 적을 땐 이름 재탐색으로 확정한 ID를 사용. (이 문서는 `loadAllPagesAsync` 미지원 = 클래식 모드) |
 | **SECTION 자식 노드의 x/y는 섹션-상대 좌표** (2026-06-23) | `figma.createSection()` 안에 `appendChild`한 노드의 `.x`/`.y`는 **페이지 절대좌표가 아니라 섹션 원점 기준 상대좌표**. 섹션을 abs (20800,-2200)에 두고 자식 `fr.x = 20840`(절대 의도)로 설정하면 실제 렌더는 abs **41640**(=섹션x+20840)으로 섹션 박스 밖으로 튕겨나가고, 섹션 screenshot 경계가 비정상 확장됨(빈 영역). **해결: 섹션 자식은 섹션-상대 좌표로 설정** (첫 카드 x=40 등). 잘못 넣었으면 일괄 보정 `c.x -= sec.x; c.y -= sec.y`. (page-level 직계 자식은 절대좌표라 혼동 주의) |
 
 ### 🚨 CdBd 에디터 자동화 — 4단계 작업 시 함정 (2026-06-18 기록)
 
-> 풀버전 13가지 함정: [[1-4-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정]] · 사례: [[컨텍스트: 이선호/2026-06-18 색상·폰트·카드·이미지 라이브러리 정립 + T01 채용설명회 템플릿 제작#7부 — T01(=T-NEW1) 채용설명회 출석체크 초대장 템플릿 제작 (1~5단계)]]
+> 풀버전 13가지 함정: [[1-5-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정]] · 사례: [[컨텍스트: 이선호/2026-06-18 색상·폰트·카드·이미지 라이브러리 정립 + T01 채용설명회 템플릿 제작#7부 — T01(=T-NEW1) 채용설명회 출석체크 초대장 템플릿 제작 (1~5단계)]]
 
 | 함정 | 해결 |
 |---|---|
@@ -358,8 +358,8 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 | **🥇 예약 카드 추가 = 확인 다이얼로그 1단계 더 (2026-06-22)** — 카드 타입 모달에서 "예약" 클릭하면 바로 안 들어가고 **"예약 카드 추가하기" 확인 다이얼로그**("예약 완료 1건당 1크레딧 차감")가 뜸. 이 다이얼로그의 **"카드 추가하기"(MuiButton-contained) 버튼을 한 번 더 클릭**해야 실제 추가됨. 안 누르면 카드 누락. 다른 14종 카드는 모달 클릭=즉시 추가라 이 차이를 놓치면 예약 카드만 N개 빠짐(시퀀스 밀림). | 예약 클릭 후 `[...btns].filter(b=>b.textContent.trim()==="카드 추가하기").find(b=>b.className.includes("MuiButton-contained")).click()`. (취소는 "취소하기" 버튼) (4897 class-enroll에서 예약 3개 누락으로 발견) |
 | **🥇 카드 일괄 삭제 = 좌표 기반 kebab 클릭 (2026-06-22)** — 카드 행의 `•••` kebab 버튼은 hover 시에만 보이고 `querySelector`로 직접 못 잡음. **`h-[52px]`만 필터하면 갤러리(120px)·위치(120px)·프로필·여백(24/77px) 카드가 안 잡혀 삭제 누락**(이전 세션 잔존 카드 원인). | 카드 행 `getBoundingClientRect()`로 `rect.right-18, rect.top+h/2` 좌표 → `document.elementFromPoint(x,y).closest("button").click()` → `.MuiMenuItem-root` 중 "카드 삭제하기" → 확인 "삭제하기". **카드 보드 행 필터는 높이 무관 `x>500 && width>200`(모바일 프리뷰 제외)으로**. async eval ❌ → bash `sleep` 0.4 간격 개별 `$B js` 호출 |
 | **Q&A 질문 유형 변경 in-place 불가** | kebab 메뉴는 복제/삭제만. **삭제 후 객관식 신규 추가** 다단계 필요. 신규는 마지막 배치 → reorder는 **dnd-kit `onDragEnd` 직접 호출**로 자동화 (아래 dnd-kit 항목 참조) |
-| **🥇 dnd-kit 드래그앤드롭 자동화** (카드 순서·Q&A 순서·갤러리·메뉴 등 모든 sortable) | React fiber에서 `onDragEnd` 직접 호출. **mouse/keyboard 이벤트는 모두 실패**. 풀패턴: [[1-4-1. CdBd 에디터#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]] |
-| **🥇 파일 업로드 자동화** (OG·썸네일·이미지 카드·로고 등) | transient `<input type=file>` 후킹 ❌ → **React `onDrop` 핸들러 직접 호출**. Bash base64 → `$B js` inject → File → `dropzone.onDrop({preventDefault, stopPropagation, dataTransfer: dt, target, currentTarget})` 직접 호출. dt = `new DataTransfer(); dt.items.add(file)`. 적용/저장 버튼은 `props.onClick` 동일 패턴. 풀패턴: [[1-4-1. CdBd 에디터#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]] |
+| **🥇 dnd-kit 드래그앤드롭 자동화** (카드 순서·Q&A 순서·갤러리·메뉴 등 모든 sortable) | React fiber에서 `onDragEnd` 직접 호출. **mouse/keyboard 이벤트는 모두 실패**. 풀패턴: [[1-5-1. CdBd 에디터#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]] |
+| **🥇 파일 업로드 자동화** (OG·썸네일·이미지 카드·로고 등) | transient `<input type=file>` 후킹 ❌ → **React `onDrop` 핸들러 직접 호출**. Bash base64 → `$B js` inject → File → `dropzone.onDrop({preventDefault, stopPropagation, dataTransfer: dt, target, currentTarget})` 직접 호출. dt = `new DataTransfer(); dt.items.add(file)`. 적용/저장 버튼은 `props.onClick` 동일 패턴. 풀패턴: [[1-5-1. CdBd 에디터#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]] |
 | **Q&A 복수선택 토글 = 사용자정의 div (MUI Switch 아님)** | 24×15 div, 활성 시 `bg: var(--color-information)` + inner `transform: translateX(9px)`. 좌표 직접 click |
 | **카드 추가 직후 mobile preview에 즉시 마운트 X** | 카드 추가 → 카드 보드 명시 클릭 후 작업 |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
