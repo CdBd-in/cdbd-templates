@@ -1,6 +1,6 @@
 ---
 name: cdbd-card-automation
-description: Use when adding, deleting, duplicating, reordering, or pinning cards, uploading images, setting page theme colors, configuring reservation date/time/capacity, OR setting button links in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images/reservations/links through React fiber handlers (onClick·onChange·onDragEnd·onDrop·onUpdateItem), not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀), 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), 예약 정보 모달(날짜·시간·정원·방문체크 필수), 버튼 링크(multiCard onUpdateItem), the text-card focus gotcha, the 예약 카드 credit dialog, AND the board-scroll-causes-page-drift gotcha (select cards via fiber onClick, never scroll the board).
+description: Use when adding, deleting, duplicating, reordering, pinning, OR renaming (label) cards, uploading images, setting page theme colors, configuring reservation date/time/capacity, setting button links, or configuring a location card's map address in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images/reservations/links through React fiber handlers (onClick·onChange·onDragEnd·onDrop·onUpdateItem) and native input setters, not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀)/라벨변경, 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), 예약 정보 모달(날짜·시간·정원·방문체크 필수), 버튼 링크(multiCard onUpdateItem; 전화=type 'call'), 위치 카드 주소 지오코딩(검색 선택 필수), the text-card focus gotcha, the 예약 카드 credit dialog, the card-label +1-shift gotcha (one-at-a-time converger), AND the board-scroll-causes-page-drift gotcha (select cards via fiber onClick, never scroll the board).
 ---
 
 # CdBd 카드 자동화 (JS, 좌표 클릭 없음)
@@ -276,15 +276,28 @@ $B js "(function(){
   var r=window.__cdbd.boardRows();var blk=null;
   for(var i=0;i<r.length;i++){var b=window.__cdbd.blockOfRow(r[i]);if(b&&b.id&&b.id.indexOf('<multiCard-id8>')===0){blk=b;break;}}
   var items=blk.multiCard.items;  // items[].content 의 Lexical text로 어느 버튼인지 식별
-  oui(items[0].id,{linkButton:{link:{href:'tel:010-2345-6789',openNewTab:false},text:'버튼',type:'url'}});   // 전화: tel: href + type 'url'
+  oui(items[0].id,{linkButton:{link:{href:'tel:010-2345-6789',openNewTab:false},text:'버튼',type:'call'}});   // 전화: type 'call'(전화하기) — UI 필드엔 번호만, href는 tel: 유지
   oui(items[1].id,{linkButton:{link:{href:'https://pf.kakao.com/_xxxx',openNewTab:true},text:'버튼',type:'url'}}); // 외부링크
   return 'done';
 })()"
-# 검증: 리로드(goto editor; sleep 7; eval driver) 후 blockOfRow(...).multiCard.items[].linkButton.link.href 확인 → 자동저장 영속
+# 검증: 리로드(goto editor; sleep 7; eval driver) 후 blockOfRow(...).multiCard.items[].linkButton.type/.link.href 확인 → 자동저장 영속
 ```
 - `onUpdateItem` 소스 = `(e,t)=>{ J({...Y, items: q.map(l=> l.id!==e? l : {...l,...t}) }) }` — 특정 item만 patch, J가 블록 commit.
-- **위치(location) 카드의 "지도로 이동" 버튼은 `block.location.address` 기반 빌트인** — 별도 링크 불필요(naver type이 주소로 지도 오픈).
-- linkButton.type: `url`(tel:·http 포함) / `page`(페이지 이동, href `pageId=...`) 등.
+- **🔑 전화 버튼 = `type:'call'`(전화하기), `type:'url'`+`tel:` 아님** (editor 4904 검증 2026-06-24). 디자인 탭 "링크 연결" 드롭다운을 **"전화하기"** 로 바꾸고 필드엔 **번호만**(`010-2345-6789`) 입력 → 내부 href는 `tel:번호` 유지·type `call`. (UI 드롭다운: `URL 열기` 버튼 클릭 → 메뉴 버튼 중 "전화하기" `.click()` → 필드 `$B fill` 번호. 또는 위 onUpdateItem로 `type:'call'` 직접 지정.)
+- **linkButton.type 6종**: `url`(URL 열기, http·tel·임의) / `call`(전화하기, 번호) / `message`(문자 보내기) / `email`(이메일 보내기) / `kakao`(카카오톡 공유하기) / `contact`(연락처 저장하기). 드롭다운 라벨↔type 매칭은 위 6개 순서.
+- **위치(location) 카드 "지도로 이동" 버튼 = 빌트인**, 단 **주소를 검색 드롭다운에서 선택(지오코딩)해야 동작** (아래 "위치 카드 주소" 참조).
+
+## 위치 카드 주소 — 검색 선택(지오코딩) 필수 (editor 4904 검증 2026-06-24)
+
+위치 안내 카드의 "지도 보기" 버튼은 `block.location`에 **`lat`·`lng`·`naverMapsUrl`이 있어야 이동**한다. 주소를 **직접 타이핑만 하면**(`address`/`inputValue`만 채워짐) 좌표가 없어 **버튼이 동작 안 함**(흔한 "지도 안 열림" 원인). **반드시 주소 검색 드롭다운에서 결과를 클릭해 선택** → 그 순간 `lat`/`lng`/`naverMapsUrl` 생성 + 자동저장.
+
+```bash
+# 위치 카드 선택(fiber onClick) 후 주소 입력 포커스 → 드롭다운 후보 클릭
+$B js "(function(){var el=[...document.querySelectorAll('*')].filter(e=>e.getBoundingClientRect().x>940&&e.textContent.trim()==='<지오코딩 후보 주소 정확일치>'&&e.children.length<=1)[0];if(!el)return 'nf';var r=el.getBoundingClientRect();document.elementFromPoint(r.x+r.width/2,r.y+r.height/2).click();return 'sel';})()"; sleep 2
+$B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location;JSON.stringify({lat:l.lat,lng:l.lng,hasUrl:!!l.naverMapsUrl,button:l.button})"
+```
+- ⚠️ 선택 시 표시 주소가 **지오코더 POI명**으로 바뀜(예: "와우산로 94" → "…와우산로 94 학교법인홍익학원"). 텍스트를 다시 손으로 고치면 좌표가 또 날아감 → 라벨 바꾸려면 **검색해서 다른 결과 선택**으로.
+- `button:true`(지도 보기 버튼 표시) + `label:true`(주소 표시)는 카드 구성 토글. 지도 버튼은 **위치 카드 빌트인 컴포넌트**(별도 버튼 카드 ❌).
 
 ## OG 썸네일 — 자동화 불가 (수동, editor 4904 확인 2026-06-24)
 
