@@ -1,6 +1,6 @@
 ---
 name: cdbd-daily-orchestrator
-description: Use when running the unattended daily CdBd template build (launchd 20:00 entrypoint, or manual trigger). Acts as the thin MANAGER that picks one topic from the queue, dispatches per-stage worker subagents (1~5단계) sequentially, runs a critic subagent gate after each stage (retry ≤2), handles partial-completion + report, self-diagnoses logins, avoids recent moods, cleans up, and writes the morning report note. Honors CDBD_ORCH_DRYRUN for safe skeleton testing. 설계 정본 [[1-1. 워크플로우]] 무인 자동 제작 파이프라인 섹션.
+description: Use when running the unattended daily CdBd template build (launchd 20:00 entrypoint, or manual trigger). Acts as the thin MANAGER that picks one topic from the queue, dispatches per-stage worker subagents (1~5단계) sequentially, runs a critic subagent gate after each stage (retry ≤2), handles partial-completion + report, self-diagnoses logins, avoids recent moods, cleans up, and writes the morning report note. Honors CDBD_ORCH_DRYRUN for safe skeleton testing. 설계 정본: [[1-1. 워크플로우]] 무인 자동 제작 파이프라인 섹션.
 ---
 
 # CdBd 무인 일일 제작 — 매니저
