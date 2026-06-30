@@ -56,7 +56,7 @@
 | [[1-5-1. CdBd 에디터]] | 에디터 3-column 구조, 페이지 테마, OG 이미지 규칙, 자동화 함정, 작업 원칙, 페이지 구조 패턴, 작업 흐름 |
 | [[1-5-2. CdBd 카드 기능]] | 15종 카드 종류, **콘텐츠 의도→카드 타입 룩업**, 라벨 패턴 사전, 카드 사용 정책, 카드 디자인 패턴, **카드 default 기능 재현 ❌ + 편집 불가 장식 배제 기준** |
 | [[1-2. 색상 팔레트]] | WCAG 검증 70개 팔레트 + 9개 무드 분류 |
-| [[1-4. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Google Flow 실사) 및 관리 규칙 |
+| [[1-4. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Unsplash 폴백 · ~~Google Flow 제외 2026-06-30~~) 및 관리 규칙 |
 | [[1-3. 폰트]] | 한글 26 + 영문 18 = 44종, 9개 무드 + 3-Tier 분류 |
 | [[00. 작업 가이드/06. 신규 템플릿 기획 워크플로우]] | 신규 템플릿 6단계 워크플로우 (본 파일 워크플로우 섹션의 풀버전) |
 | [[2-0. 전체 템플릿 개요]] | 17개 매트릭스 + 시그니처 매핑 |
@@ -261,7 +261,7 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 - **1단계에서 결정한 무드 색·폰트를 디폴트 테마(fafafa/292929/프리텐다드)에 덮어쓰기**
   - 팔레트 역할 매핑(2색/3색)에 따라 `{배경색}·{텍스트색}·{버튼색}` 적용, WCAG 3.6:1 재검증
   - 폰트 1~2개 사용 원칙, 국문 본문 = 한글 폰트 의무
-- 이미지 소스: [[1-4. 이미지]] 규칙 — Thiings 3D · **OpenAI gpt-image-1 (현재 권장 생성 모드, ~$0.042/장)** · Google Flow 실사 (스킬 설치 시) · Unsplash (fallback). 동일 bytes는 Figma 서버 dedup → 1회 업로드로 N개 시안 RECTANGLE 일괄 fill 가능
+- 이미지 소스: [[1-4. 이미지]] 규칙 — Thiings 3D · **OpenAI gpt-image-1 (현재 권장 생성 모드, ~$0.042/장)** · Unsplash (fallback). 🚫 **Google Flow 제외(2026-06-30)** — 무인 갱신 불가·throttle. 동일 bytes는 Figma 서버 dedup → 1회 업로드로 N개 시안 RECTANGLE 일괄 fill 가능
 - 📁 **파일 관리 = `~/Desktop/{템플릿명}/` 폴더 (2026-06-24, 필수)** — 신규 템플릿 제작 시 **데스크탑에 템플릿명 폴더를 만들어 산출물 이미지(OG·썸네일·갤러리·로고 등)를 영구 보관**. `/tmp`는 휘발성이라 작업용으로만 쓰고 **최종 산출물은 `/tmp`에 두지 말 것**. 파일명: OG는 `og.jpg`(1-5-1 규칙) + 고해상도 `og@2x.jpg`, 그 외는 `{용도}.jpg`. (기존 `~/Downloads/cdbd-{name}/`는 구방식 → Desktop으로 통일)
 - → **사용자 피그마 완성본 피드백 게이트** (이미지·색·폰트 모두 평가)
 
@@ -331,7 +331,7 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 | Figma FRAME에 IMAGE fill 설정했는데 화면에 안 보임 (회색 placeholder 그대로) | **자식 RECTANGLE(흔히 `편집_Image_fx N` 류)이 frame fill을 덮고 있음**. FRAME 자체 fill만 변경하면 무효 → **자식 RECTANGLE의 fills에 IMAGE 적용**해야 함. 검증: `frame.children`에 placeholder RECTANGLE이 있으면 그 노드 ID로 다시 적용 (2026-06-19 T01 프로필 200×200 사례) |
 | Block Icon에 `paintAll(node)` (재귀 white) 적용 → 빈 흰 사각형 | 컨테이너+글리프 모두 white로 덮음. **글리프만 타게팅** (VECTOR/BOOLEAN_OPERATION/ELLIPSE 등) 하고 컨테이너 fill은 보존 |
 | INSTANCE 자식의 x/y/size 변경 시 `set_x: This property cannot be overridden in an instance` | instance descendants는 position·size override 차단됨. **`instance.detachInstance()` 으로 분리 후 수정** — 또는 instance 자체를 resize, 또는 wrapper frame으로 padding 추가 |
-| Flow `/generate-flow-image` 연속 호출 시 throttle → "에이전트에 과부하" | help@cdbd.in = 무료 등급. 4컷·2컷 모두 0회수. **10분+ cooldown** 후 1컷씩 단독 재시도. 빈번하면 사용자 수동 Flow UI 생성 → ~/Downloads 저장 후 figma 업로드 |
+| ~~Flow `/generate-flow-image` throttle~~ 🚫 **Flow 제외(2026-06-30)** | Flow는 이미지 표준에서 완전 제외 — 무인 갱신 불가(구글 2FA·기기확인)·throttle. 실사는 **OpenAI gpt-image-1 / Unsplash** 사용. (이 행은 역사적 기록) |
 | **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-4. 이미지#🅳️ 생성 모드]] |
 | **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-4. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
 | **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-4. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
