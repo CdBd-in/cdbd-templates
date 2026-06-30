@@ -13,7 +13,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 - VAULT: `/Users/designer/Documents/GitHub/design/cdbd-templates` (cwd)
 - STATE: `~/.config/cdbd/automation/state.json`
 - 드라이런 여부: `echo $CDBD_ORCH_DRYRUN` (=1이면 드라이런)
-- 참조: `.claude/skills/cdbd-daily-orchestrator/references/critic-checklists.md`, `.../report-template.md`
+- 참조: `.claude/skills/cdbd-daily-orchestrator/references/critic-checklists.md`, `.claude/skills/cdbd-daily-orchestrator/references/report-template.md`
 
 ## 1. 시작 게이트 (라이브 자가진단 + 적체/정지)
 
@@ -28,7 +28,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 ## 2. 주제 + 무드 선택
 
 - slug = `retry_queue`가 비어있지 않으면 그 첫 항목, 아니면 `queue` 첫 항목. 둘 다 비면 → 리포트에 "큐 소진" + `notify.sh` 후 종료.
-- 무드 = 9개 무드 중 `recent_moods`(최근 5개)에 **없는** 것에서 선택(콘텐츠 주제 적합성 우선). 색·폰트는 무드에 따라 [[1-2. 색상 팔레트]]·[[1-3. 폰트]]에서.
+- 무드 = 9개 무드 중 `recent_moods`(최근 `params.recent_moods_window`개)에 **없는** 것에서 선택(콘텐츠 주제 적합성 우선). 색·폰트는 무드에 따라 [[1-2. 색상 팔레트]]·[[1-3. 폰트]]에서.
 
 ## 3. 단계 실행 (1→5 순차, 각 단계 후 검수)
 
@@ -49,8 +49,8 @@ description: Use when running the unattended daily CdBd template build (launchd 
 
 ## 5. 리포트 + 상태 갱신
 
-- `report-template.md`를 채워 `컨텍스트: 이선호/{오늘날짜} 자동제작 — {slug}.md` 작성. 링크 2개(Figma node, CdBd editor) 필수. 검수 로그(취향 판단 필요=⭐), CLAUDE.md 후보 규칙, 경고(큐 잔량 ≤3, 적체, 누적 에디터) 포함.
-- STATE 갱신: slug를 queue/retry_queue에서 제거(부분실패면 retry_queue로 이동) → completed에 `{slug,date,result,mood}` append → recent_moods 앞에 무드 추가 후 5개로 자르기 → last_run=오늘. 파일 저장.
+- `report-template.md`를 채워 `컨텍스트: 이선호/{오늘날짜} 자동제작 — {slug}.md` 작성. 링크 2개(Figma node, CdBd editor) 필수. 검수 로그(취향 판단 필요=⭐), CLAUDE.md 후보 규칙, 경고(큐 잔량 ≤ `params.queue_low_threshold`, 적체, 누적 에디터) 포함.
+- STATE 갱신: slug를 queue/retry_queue에서 제거(부분실패면 retry_queue로 이동) → completed에 `{slug,date,result,mood}` append → recent_moods 앞에 무드 추가 후 `params.recent_moods_window`개로 자르기 → last_run=오늘. 파일 저장.
 - 종료. (오류 전파 방지: 한 단계 실패가 리포트·상태 갱신을 막지 않도록 try/마무리 보장.)
 
 ## 절대 규칙
