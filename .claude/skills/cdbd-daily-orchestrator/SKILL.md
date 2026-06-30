@@ -34,7 +34,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 
 각 단계 i에 대해:
 
-- **담당자 위임**: Agent 도구로 서브에이전트 1개 dispatch. 프롬프트에 ① 이 단계의 정본 절차(1-1 해당 단계) ② 입력(이전 단계 인수인계: slug·무드·색·폰트·Figma node ID·에디터 ID·산출물 경로) ③ "끝나면 결과물 위치·node ID·에디터 ID·스크린샷 경로를 구조화해 반환" 을 명시. 단계는 **반드시 한 번에 하나** (Figma 파일·CdBd 에디터·브라우저 공유 → 병렬 금지).
+- **담당자 위임**: Agent 도구로 서브에이전트 1개 dispatch. 프롬프트에 ① 이 단계의 정본 절차(1-1 해당 단계) **+ `critic-checklists.md`의 해당 단계 항목 + 공통 5항목을 "준수 목표"로 함께 전달**(처음부터 맞게 만들도록) ② 입력(이전 단계 인수인계: slug·무드·색·폰트·Figma node ID·에디터 ID·산출물 경로) ③ "끝나면 결과물 위치·node ID·에디터 ID·스크린샷 경로를 구조화해 반환" 을 명시. 단계는 **반드시 한 번에 하나** (Figma 파일·CdBd 에디터·브라우저 공유 → 병렬 금지).
 - **검수자 위임**: Agent 도구로 검수 서브에이전트 dispatch. 프롬프트에 `critic-checklists.md`의 해당 단계 체크리스트 + 담당자 산출물 위치를 주고 "통과 / 항목별 미준수 목록"을 반환받음.
 - **재시도 루프**: 미준수가 있으면 담당자에게 그 목록만 주고 수정 위임 → 재검수. 최대 `params.retry_limit`(2)회. 통과하면 다음 단계.
 - **부분 완성 처리**: 2회 후에도 미준수거나 단계가 기술적으로 실패하면 → 거기까지 산출물 저장, "단계 i 미해결: <사유>" 기록, slug를 `retry_queue`에 추가, **이후 단계 중단**하고 4장(정리)로.
@@ -49,6 +49,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 
 ## 5. 리포트 + 상태 갱신
 
+- **최종 종합 검수 (필수, 리포트 직전 1회)**: 완성된 템플릿을 모바일 프리뷰로 통째 훑으며 `critic-checklists.md`의 **공통 5항목**(정렬 통일·줄간격 명시·어색한 줄바꿈·이미지 중복·로고/이미지 실제 적용)을 재확인. 걸리는 게 있으면 해당 단계로 되돌려 수정(재시도 한도 내), 미해결은 리포트에 ⭐로.
 - `report-template.md`를 채워 `컨텍스트: 이선호/{오늘날짜} 자동제작 — {slug}.md` 작성. 링크 2개(Figma node, CdBd editor) 필수. 검수 로그(취향 판단 필요=⭐), CLAUDE.md 후보 규칙, 경고(큐 잔량 ≤ `params.queue_low_threshold`, 적체, 누적 에디터) 포함.
 - STATE 갱신: slug를 queue/retry_queue에서 제거(부분실패면 retry_queue로 이동) → completed에 `{slug,date,result,mood}` append → recent_moods 앞에 무드 추가 후 `params.recent_moods_window`개로 자르기 → last_run=오늘. 파일 저장.
 - 종료. (오류 전파 방지: 한 단계 실패가 리포트·상태 갱신을 막지 않도록 try/마무리 보장.)
