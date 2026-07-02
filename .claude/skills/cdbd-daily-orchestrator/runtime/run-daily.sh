@@ -9,14 +9,14 @@ exec >>"$LOG" 2>&1
 
 echo "=== run $(date '+%F %T') dryrun=${CDBD_ORCH_DRYRUN:-0} ==="
 
+# 작업 동안(최대 6시간) 맥이 잠들지 않게 — preflight 네트워크 재시도 대기 중에도 잠들지 않도록 먼저 시작
+/usr/bin/caffeinate -i -t 21600 &
+CAF=$!
+
 if ! "$DIR/preflight.sh"; then
   "$DIR/notify.sh" "자가진단 실패 — 오늘 제작 중단. 로그: $LOG"
-  echo "preflight failed; abort"; exit 1
+  echo "preflight failed; abort"; kill $CAF 2>/dev/null; exit 1
 fi
-
-# 작업 동안(최대 3시간) 맥이 잠들지 않게
-/usr/bin/caffeinate -i -t 10800 &
-CAF=$!
 
 cd "$VAULT" || { echo "vault cd 실패"; kill $CAF 2>/dev/null; exit 1; }
 PROMPT="당신은 CdBd 일일 템플릿 매니저입니다. cdbd-daily-orchestrator 스킬을 호출해 오늘의 무인 제작을 1회 실행하세요. 환경변수 CDBD_ORCH_DRYRUN 을 존중하세요(=1이면 드라이런)."

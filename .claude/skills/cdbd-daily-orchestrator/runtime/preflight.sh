@@ -10,7 +10,14 @@ fail() { echo "PREFLIGHT FAIL: $1"; exit 1; }
 ENV_CONTENT="$(<"$VAULT/.env")" || fail ".env 읽기 실패 (전체 디스크 접근 권한 확인)"
 [[ "$ENV_CONTENT" == *CDBD_EMAIL* ]]    || fail ".env에 CDBD_EMAIL 없음"
 [[ "$ENV_CONTENT" == *CDBD_PASSWORD* ]] || fail ".env에 CDBD_PASSWORD 없음"
-/usr/bin/curl -sf -o /dev/null --max-time 15 "https://www.cdbd.in/login" || fail "cdbd.in 도달 불가(네트워크)"
+# 네트워크: 깨어난 직후 재연결 지연·일시 blip 대비 재시도 (최대 5회, 15초 간격 = 최대 ~75초)
+NET_OK=0
+for attempt in 1 2 3 4 5; do
+  /usr/bin/curl -sf -o /dev/null --max-time 15 "https://www.cdbd.in/login" && { NET_OK=1; break; }
+  echo "  네트워크 시도 $attempt/5 실패, 15초 후 재시도"
+  /bin/sleep 15
+done
+[ "$NET_OK" = 1 ] || fail "cdbd.in 도달 불가(네트워크) — 5회 재시도 후에도 실패"
 
 echo "PREFLIGHT OK"
 exit 0
