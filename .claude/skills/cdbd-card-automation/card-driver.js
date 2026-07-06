@@ -485,6 +485,42 @@
   // 색상 = openColorPicker → (sleep) → [재조정 루프: setThemeColor 한 색씩 → themeColors() 확인
   //        → 불일치 슬롯만 재설정, 수렴까지 반복] → saveTheme → (sleep) → confirmThemeWarning
 
+  // ── 전체 스냅샷 (파이프라인 검증용) ───────────────────────────────────
+  // blocks()는 id→type Map이라 style/content가 없음. dumpState는 모든(마운트된) 카드의
+  // full block 객체를 수집(전 div 스캔 → boardRows 높이필터가 놓치는 tall 카드도 포함)하고,
+  // sortable items 순서로 정렬한다. 검증 에이전트(V1~V5)·수정(F1)의 입력 스냅샷.
+  // ⚠️ 가상화로 화면 밖 카드는 미마운트일 수 있음(보드 스크롤 금지) → missing[]에 id 표시.
+  const safeTheme = () => {
+    try {
+      const t = themeColors();
+      return t && (t.배경 || t.텍스트 || t.버튼) ? t : null; // 테마 패널 닫혀있으면 null
+    } catch (e) {
+      return null;
+    }
+  };
+  const dumpState = () => {
+    const map = new Map();
+    for (const el of document.querySelectorAll("div")) {
+      let n = fiberOf(el),
+        d = 0;
+      while (n && d < 2) {
+        const b = n.memoizedProps && n.memoizedProps.block;
+        if (b && b.id && b.type) map.set(b.id, b);
+        n = n.return;
+        d++;
+      }
+    }
+    const ctx = _sortableCtx();
+    if (ctx && ctx.items && ctx.items.length) {
+      const order = ctx.items.map((it) => (typeof it === "object" ? it.id : it));
+      const ordered = order.map((id) => map.get(id)).filter(Boolean);
+      const missing = order.filter((id) => !map.has(id));
+      return { blocks: ordered, total: order.length, captured: ordered.length, missing, theme: safeTheme() };
+    }
+    const ordered = [...map.values()];
+    return { blocks: ordered, total: ordered.length, captured: ordered.length, missing: [], theme: safeTheme() };
+  };
+
   window.__cdbd = {
     fiberOf,
     onClickOf,
@@ -492,6 +528,7 @@
     blockOfRow,
     blocks,
     count,
+    dumpState,
     openAddModal,
     pickCardType,
     confirmReservation,
