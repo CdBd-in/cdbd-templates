@@ -521,6 +521,29 @@
     return { blocks: ordered, total: ordered.length, captured: ordered.length, missing: [], theme: safeTheme() };
   };
 
+  // id(prefix)로 block 객체를 참조 회수 (F1 수정용). 반환 객체의 style/content를 직접 mutate한 뒤
+  // forceCommit()으로 영속화한다. (선택·패널 불필요)
+  const blockById = (idPrefix) => {
+    for (const el of document.querySelectorAll("div")) {
+      let n = fiberOf(el),
+        d = 0;
+      while (n && d < 2) {
+        const b = n.memoizedProps && n.memoizedProps.block;
+        if (b && b.id && (b.id === idPrefix || b.id.indexOf(idPrefix) === 0)) return b;
+        n = n.return;
+        d++;
+      }
+    }
+    return null;
+  };
+
+  // ⭐ 대기 중인 block 참조 변경을 스토어에 커밋(autosave). (editor 5025 검증 2026-07-06)
+  // 원리: reorder의 onDragEnd가 `n({...l, blocks:u})`로 실제 blocks 배열(내가 바꾼 참조 포함)을
+  // 재직렬화·저장한다. 정렬버튼·패널 컨트롤 트리거는 다른 참조라 커밋 안 됨(검증). 인접 두 카드를
+  // 옮겼다 되돌려 순서는 불변, 모든 style/content 참조 변경만 영속.
+  // ⚠️ 두 reorder 사이 settle 필요 → 동기 호출 대신 pair=[a,b] 반환. F1이 bash sleep 끼워 2회 호출.
+  //   권장 F1 시퀀스: 참조 mutate → reorderCard(a,b) [sleep] → reorderCard(b,a) [sleep] → dumpState 검증.
+
   window.__cdbd = {
     fiberOf,
     onClickOf,
@@ -529,6 +552,7 @@
     blocks,
     count,
     dumpState,
+    blockById,
     openAddModal,
     pickCardType,
     confirmReservation,
