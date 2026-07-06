@@ -86,7 +86,7 @@ git commit -m "feat(cdbd): add dumpState() for full-block snapshot"
 모든 에이전트가 참조할 공통 계약을 확정한다. diff 스키마는 워크플로에 상수로, 에이전트 공통 본문은 템플릿 파일로 둔다.
 
 **Files:**
-- Create: `.claude/agents/_cdbd-edit-shared.md` (에이전트 공통 지침 — 에이전트 아님, 각 에이전트가 "먼저 읽기"로 참조하는 레퍼런스)
+- Create: `.claude/cdbd-edit-shared.md` (에이전트 공통 지침 — `agents/` 밖에 둬서 에이전트 로더가 파싱하지 않게. 각 에이전트가 "먼저 읽기"로 참조)
 - Create: `.claude/workflows/cdbd-editor-pipeline.js` (지금은 `meta` + `DIFF_SCHEMA` 상수까지만; 오케스트레이션은 Task 15)
 
 **Interfaces:**
@@ -94,7 +94,7 @@ git commit -m "feat(cdbd): add dumpState() for full-block snapshot"
 
 - [ ] **Step 1: 공통 레퍼런스 작성**
 
-`.claude/agents/_cdbd-edit-shared.md`:
+`.claude/cdbd-edit-shared.md`:
 ```markdown
 # cdbd-edit 공통 지침 (모든 스코프 에이전트가 먼저 읽는다)
 
@@ -138,7 +138,7 @@ Expected: 에러 없이 `{ stub: true }` 반환 (meta 파싱 OK).
 - [ ] **Step 4: Commit (사용자 커밋 정책에 따름)**
 
 ```bash
-git add ".claude/agents/_cdbd-edit-shared.md" ".claude/workflows/cdbd-editor-pipeline.js"
+git add ".claude/cdbd-edit-shared.md" ".claude/workflows/cdbd-editor-pipeline.js"
 git commit -m "feat(cdbd): add diff schema + shared agent reference"
 ```
 
@@ -164,7 +164,7 @@ git commit -m "feat(cdbd): add diff schema + shared agent reference"
 name: cdbd-edit-v1-textdesign
 description: CdBd 파이프라인 V1 — 스냅샷 파일과 Figma 스펙을 비교해 텍스트 "디자인"(폰트·사이즈·웨이트·색·줄간격·정렬) 불일치를 diff로 산출. 읽기 전용, 브라우저 접근 금지. 줄바꿈(위치)은 S3 소관이라 제외.
 ---
-먼저 `.claude/agents/_cdbd-edit-shared.md`를 읽는다.
+먼저 `.claude/cdbd-edit-shared.md`를 읽는다.
 
 역할: 입력으로 받은 스냅샷 JSON 파일 경로(CdBd blocks + Figma spec)를 열어, 텍스트가 있는 모든 카드의 **디자인 속성만** 비교한다:
 - 폰트(서체), 사이즈(px), 웨이트(Bold on/off), 색(hex/rgba), 줄간격(lineHeight 1.2~2.0), 정렬(left/center/right).
@@ -183,7 +183,7 @@ howToFix 예: "block.style.fontSize=24 후 정렬버튼 .click()로 트리거".
 name: cdbd-edit-f1-fix
 description: CdBd 파이프라인 F1 — 한 카드(cardId)에 대한 diff 배열을 받아 CdBd 에디터에서 실제 수정. 카드 1회 선택 후 그 카드의 모든 diff를 적용하고 재확인.
 ---
-먼저 `.claude/agents/_cdbd-edit-shared.md`를 읽는다.
+먼저 `.claude/cdbd-edit-shared.md`를 읽는다.
 
 입력: editorId, cardId, 그 카드의 diff 배열(각 diff의 field/expected/howToFix 포함).
 절차:
