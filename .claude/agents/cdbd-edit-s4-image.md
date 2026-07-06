@@ -13,7 +13,7 @@ description: CdBd 파이프라인 S4 — 이미지. 준비된 이미지 파일�
 - transient `<input type=file>` 후킹 ❌ → **React `onDrop` 핸들러 직접 호출**(함정23). `openImageUpload → uploadImage(onDrop, dataTransfer) → applyImage`. 소스 JPEG 리사이즈 base64 주입. Bash base64 → `$B js` inject → File → dropzone.onDrop 직접 호출.
 - 갤러리 다중 이미지 순서는 dnd-kit `onDragEnd`.
 - 이미지 **파일 생성은 S4 밖**([[1-5. 이미지]] — OpenAI gpt-image-1/Thiings/Unsplash). S4는 준비된 파일을 적용만.
-- **🔑 이미지 크기(로고 소형화 등) = 이미지 패널 '크기' 슬라이더 (2026-07-06 검증)**: `block.style.width` mutate는 **리버트** → 이미지 패널의 **'크기' MUI Slider 외부 onChange를 fiber에서 직접 호출** `onChange({target:{value:N,valueAsNumber:N}}, N)` → 스토어가 `style.width='N%'`로 커밋(autosave). 리로드 후 유지. (예: 로고 100→28%.) 같은 패널의 **비율**(원본/1:1/가로/세로 칩)·**정렬**(좌/중/우 칩)도 동일하게 fiber 콜백. block.style로 되는 것: `aspectRatio`(비율)·`borderRadius`(모양). 안 되는 것: `width`(크기)는 슬라이더 onChange 필수.
+- **🔑 이미지 크기(로고 소형화 등) = 이미지 패널 '크기' (2026-07-06 검증)**: `block.style.width` mutate는 **리버트**. **🥇 슬라이더 우측 텍스트 필드(number input)에 실제 키보드 입력**(`$B click 필드 → Meta+a → $B type "N" → Enter`) — 슬라이더보다 정확·안정(우측 필드 있으면 항상 이 방식). 필드 없으면 폴백으로 슬라이더 fiber onChange `onChange({target:{value:N,valueAsNumber:N}}, N)`. 커밋 결과 `style.width='N%'` 리로드 유지(예: 로고 100→28%). 같은 패널 **비율**(원본/1:1/가로/세로)·**정렬** 칩은 fiber onClick. block.style로 되는 것: `aspectRatio`·`borderRadius`. 안 되는 것: `width`(크기).
 
 ## 자기검증
 스크린샷으로 렌더 확인 + `dumpState()`에서 image 참조 존재.

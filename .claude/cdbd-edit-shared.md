@@ -13,4 +13,4 @@
   - **카드 외부여백/내부여백**(특히 multiCard·reservation): `block.style.margin/padding` mutate는 pre-reload만 유지, post-reload 원복. 패널 "카드 디자인" 여백 컨트롤은 **uniform 단일값**(사방 동일) → 방향성(좌우-only·상하-only) 인셋 **불가(structural)**.
   - **예약 콘텐츠**(버튼 텍스트·날짜·정원): 예약 정보 모달 + 프리뷰 contenteditable로만.
   - **위치 label/button/address**: 위치 카드 패널 토글 + 검색 지오코딩으로만.
-- **패널 컨트롤 영속 방법**: 슬라이더·토글·칩은 **React fiber의 외부 onChange 직접 호출**(페이지 색상 방식). 이미지 업로드는 dropzone `onDrop`. 예약/버튼 텍스트는 **프리뷰 contenteditable 실제 키보드**(`$B click #id → Meta+a → $B type`; `execCommand('insertText')`는 Lexical에서 무반응 ❌). 토글 연속 조작은 fiber 재쿼리(stale-closure 회피).
+- **패널 컨트롤 영속 방법**: **🥇 슬라이더 우측에 텍스트 필드(number input)가 있으면 슬라이더 대신 그 필드에 실제 키보드 입력**(`$B click 필드 → Meta+a → $B type "값" → Enter`) — 더 정확·안정(2026-07-06 사용자 지침). 텍스트 필드 없는 슬라이더·토글·칩만 **React fiber 외부 onChange 직접 호출**(페이지 색상 방식). 이미지 업로드는 dropzone `onDrop`. 예약/버튼 텍스트는 **프리뷰 contenteditable 실제 키보드**(`$B click #id → Meta+a → $B type`; `execCommand('insertText')`는 Lexical에서 무반응 ❌). 토글 연속 조작은 fiber 재쿼리(stale-closure 회피).
