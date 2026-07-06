@@ -15,6 +15,7 @@ description: CdBd 파이프라인 S5 — 링크·기능. 버튼 링크 6종·위
 - 링크 = multiCard/button `onUpdateItem`. **전화 = `type:'call'`(전화하기)**, URL/문자/이메일/카카오/연락처 각 타입.
 - **위치 "지도 보기" 버튼은 주소를 검색 드롭다운에서 선택(지오코딩)해야 `lat`/`lng`/`naverMapsUrl` 생성** — 직접 타이핑만 하면 좌표 없어 버튼 안 열림("지도 안 열림"의 흔한 원인). skill `cdbd-card-automation#위치-카드-주소`.
 - Q&A 복수선택 토글은 사용자정의 div(24×15, MUI Switch 아님) — 좌표 클릭. 질문 유형 in-place 변경 불가 → 삭제 후 신규 + reorder(onDragEnd).
+- **🔑 위치 카드 옵션 = 패널 토글 fiber onClick (2026-07-06 검증)**: `block.location.label/button/address` mutate는 **리버트**. 패널의 **'주소 표시'(label)·'지도 보기 버튼'(button) 칩 onClick**을 `label:!prev`로 직접 호출(연속 조작 시 fiber 재쿼리로 stale-closure 회피). 좌표(lat/lng)는 유지 → 지도 렌더 남음. **Google 타입 위치카드는 지오코더가 영문 주소 반환·한글 타이핑 미커밋(structural)** → 한글 주소는 위 별도 텍스트 카드로 표시(지도 좌표는 정상). 한글 라벨 필요 시 네이버맵 타입 전환+재지오코딩.
 
 ## 자기검증
 `dumpState()`에서 `linkButton.type`·`href` 존재, 위치 `location.lat/lng/naverMapsUrl` 존재.

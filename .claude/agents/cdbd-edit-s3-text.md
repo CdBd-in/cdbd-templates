@@ -14,6 +14,7 @@ description: CdBd 파이프라인 S3 — 텍스트 내용. 모든 카드의 텍�
 - 텍스트 입력 = 카드 보드에서 카드 **명시 클릭**(fiber onClick) → 우측 패널 Lexical contenteditable 입력. 모바일 프리뷰 last-focus 함정(최하단 버튼 텍스트 덮어쓰기) 회피.
 - 개행 = Lexical linebreak 노드. multiCard/profile 하위 텍스트도 요소별로.
 - 카드 라벨 ✏️ pencil 우발 활성화 회피(라벨 오염).
+- **🔑 예약·버튼 카드 텍스트 = 프리뷰 contenteditable 실제 키보드 (2026-07-06 검증)**: 예약 버튼/버튼 카드 텍스트는 `block.content` mutate가 **리버트**(카드 자체 저장 체계). → **미리보기 보드에서 해당 요소 직접 클릭 focus → `$B press Meta+a`(전체선택) → `$B type "..."`**. `execCommand('insertText')`는 Lexical에서 무반응 ❌. 정확한 요소 타게팅으로 최하단 버튼 focus 함정 회피.
 
 ## 자기검증
 `$B js "JSON.parse(window.__cdbd.dumpState().blocks.find(...).content)"` → 텍스트·linebreak 노드 위치가 Figma 줄 구조와 일치.
