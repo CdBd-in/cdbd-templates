@@ -8,7 +8,7 @@
 
 **Tech Stack:** Claude Code 서브에이전트(`.claude/agents`), Workflow 툴(JS), gstack `browse`(`$B`), `window.__cdbd` 드라이버(`.claude/skills/cdbd-card-automation/card-driver.js`), Figma MCP(`get_design_context`), skill `cdbd-card-automation`.
 
-**정본 스펙:** [[1-5-1. CdBd 에디터#🤖 4단계 서브에이전트 파이프라인 (생성→검증→수정 자동화)]] — 각 스코프 정의·매핑·완료기준의 출처.
+**정본 스펙:** [[1-6-1. CdBd 에디터#🤖 4단계 서브에이전트 파이프라인 (생성→검증→수정 자동화)]] — 각 스코프 정의·매핑·완료기준의 출처.
 
 ## Global Constraints
 
@@ -30,7 +30,7 @@
 - **T1 ✅** `dumpState()` 드라이버 추가 — 17/17 캡처·순서보존·읽기전용.
 - **T2 ✅** `.claude/cdbd-edit-shared.md` + `.claude/workflows/cdbd-editor-pipeline.js`(스텁+스키마).
 - **T3 ✅** `cdbd-edit-v1-textdesign` + `cdbd-edit-f1-fix` + 코어 루프(스냅샷→검증→수정→**영속화**) 증명.
-- **🔑 F1 영속화 정답**: block 참조 mutate → **`reorderCard` 라운드트립 commit**(autosave). 정렬버튼·패널 트리거는 커밋 안 됨(검증). `blockById` 드라이버 추가. 상세·부수발견(텍스트 디자인 2곳 저장): [[1-5-1. CdBd 에디터#🧪 파일럿 검증 (2026-07-06, editor 5025)]].
+- **🔑 F1 영속화 정답**: block 참조 mutate → **`reorderCard` 라운드트립 commit**(autosave). 정렬버튼·패널 트리거는 커밋 안 됨(검증). `blockById` 드라이버 추가. 상세·부수발견(텍스트 디자인 2곳 저장): [[1-6-1. CdBd 에디터#🧪 파일럿 검증 (2026-07-06, editor 5025)]].
 - **다음**: T4~T14(나머지 에이전트 — V는 V1 파일 템플릿·F는 F1 방식 재사용), T15 워크플로, T16 파일럿.
 
 ---
