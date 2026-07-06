@@ -34,3 +34,8 @@ description: CdBd 파이프라인 V5 — 스냅샷을 비교해 카드 디자인
 - `field` 예: `background`·`borderWidth`·`borderColor`·`borderRadius`·`padding`·`fillVsOutline`.
 - `cardId` = 해당 block의 `id`.
 - `severity`: 배경·채움/아웃라인=high, 테두리·모서리=medium, 여백 미세=low.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] 배경·채움/아웃라인·모서리·내부여백 비교.
+- [ ] ⚠️ **방향성 외부여백/패딩(좌우-only·상하-only)은 CdBd 여백 컨트롤이 uniform 단일값(사방 동일)이라 불가(structural)** — diff로 내되 "수정 불가(구조 제약)" 명시, 억지 우회 ❌. block.style.margin/padding mutate도 리버트.
+- [ ] 카드 여백은 uniform 값만 조정 가능(패널 여백 컨트롤).

@@ -22,3 +22,9 @@ description: CdBd 파이프라인 S5 — 링크·기능. 버튼 링크 6종·위
 
 ## 출력
 `{links:[...], geocoded:bool, forms:[...]}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] 위치 주소 = 검색 드롭다운 선택(지오코딩)으로 lat/lng 생성 — 직접 타이핑만 ❌("지도 안 열림" 원인).
+- [ ] 위치 옵션(주소 표시 label·지도 보기 버튼) 필요에 맞게 **패널 토글** on/off — block.location mutate는 리버트. 연속 토글은 fiber 재쿼리.
+- [ ] Google 위치카드 한글 주소는 지오코더 영문 반환(structural) → 한글은 **별도 텍스트카드**로 표시(좌표·지도는 정상).
+- [ ] 버튼 링크 6종 onUpdateItem(전화=`type:'call'`).

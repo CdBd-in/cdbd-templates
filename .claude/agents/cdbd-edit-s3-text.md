@@ -21,3 +21,9 @@ description: CdBd 파이프라인 S3 — 텍스트 내용. 모든 카드의 텍�
 
 ## 출력
 `{filled:[{cardId,text}...], lineBreaksOk:bool}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] 다줄 텍스트(헤드라인 등)는 Figma 줄 구조대로 **linebreak 삽입** — 1줄 방치 시 모바일서 단어 중간 깨짐(예: "…40주년 감/사 연합예배").
+- [ ] 모든 텍스트 정렬 = Figma(일반 텍스트 left, 예약/버튼 center)를 **content paragraph format**으로 설정.
+- [ ] **multiCard 내부 텍스트**(제목열·요약열)도 정렬 확인 — 기본 center로 남기 쉬움, Figma가 left면 left.
+- [ ] 예약/버튼 카드 텍스트는 **프리뷰 contenteditable 실제 키보드**로(block.content mutate는 리버트).

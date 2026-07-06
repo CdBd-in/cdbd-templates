@@ -31,3 +31,7 @@ CdBd 텍스트는 디자인이 **두 곳**에 저장된다:
 - `field` 예: `fontSize`·`fontFamily`·`color`·`lineHeight`·`textAlign`·`bold`.
 - `howToFix` 예: `"content inline style + block.style의 font-size를 24px로 갱신"`.
 - `severity`: 가독성/위계 영향 큰 것(fontSize·color·bold)=`high`, lineHeight·정렬 미세=`medium`, 그 외=`low`.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] textAlign 비교는 standalone 텍스트뿐 아니라 **multiCard 내부 items**도(제목열·요약열이 center로 남기 쉬움 — Figma가 left면 diff).
+- [ ] 정렬 판정은 **content paragraph format 우선**(block.style.textAlign은 center로 남아도 렌더는 content 기준 — 오탐 주의).

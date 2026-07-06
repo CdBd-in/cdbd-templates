@@ -33,3 +33,7 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 - `field` 예: `imageRatio`·`borderRadius`·`imageWidth`·`shape`.
 - `cardId` = 해당 block의 `id`.
 - `severity`: 비율·크기(레이아웃 큰 영향)=high, borderRadius 미세=medium, 그 외=low.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] 이미지 비율은 **`block.style.aspectRatio`로 판정** — `block.shape='square'`가 있어도 `aspectRatio='auto'`면 원본비로 렌더(shape 필드에 속지 말 것, 실제 렌더 = aspectRatio).
+- [ ] 이미지 **크기(width %)**도 비교 — 로고가 Figma 소형(예 50px)인데 CdBd `width:100%`면 diff. 수정은 S4 '크기' 텍스트 필드.

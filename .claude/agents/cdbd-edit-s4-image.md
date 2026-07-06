@@ -20,3 +20,9 @@ description: CdBd 파이프라인 S4 — 이미지. 준비된 이미지 파일�
 
 ## 출력
 `{applied:[{cardId,slot}...]}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
+
+## ✅ 체크리스트 (2026-07-06 5025 교훈)
+- [ ] 모든 이미지 슬롯 업로드·적용(로고·프로필·메인·갤러리).
+- [ ] **프로필 이미지**: 아바타 placeholder 클릭 → onDrop 업로드 — 빈 상태 방치 ❌(생성물 준비: gpt-image-1 등).
+- [ ] **이미지 크기**(로고 소형화 등)는 이미지 패널 '크기' **텍스트 필드 입력** — 슬라이더 드래그·`block.style.width` mutate ❌.
+- [ ] 비율(원본/1:1/가로/세로)·정렬 = 패널 칩 fiber onClick.
