@@ -24,6 +24,17 @@
 
 ---
 
+## 진행 상황 (2026-07-06 체크포인트)
+
+**T1·T2·T3 완료·검증** (editor 5025, de-risk 슬라이스). 나머지 **T4~T16 다음 세션**.
+- **T1 ✅** `dumpState()` 드라이버 추가 — 17/17 캡처·순서보존·읽기전용.
+- **T2 ✅** `.claude/cdbd-edit-shared.md` + `.claude/workflows/cdbd-editor-pipeline.js`(스텁+스키마).
+- **T3 ✅** `cdbd-edit-v1-textdesign` + `cdbd-edit-f1-fix` + 코어 루프(스냅샷→검증→수정→**영속화**) 증명.
+- **🔑 F1 영속화 정답**: block 참조 mutate → **`reorderCard` 라운드트립 commit**(autosave). 정렬버튼·패널 트리거는 커밋 안 됨(검증). `blockById` 드라이버 추가. 상세·부수발견(텍스트 디자인 2곳 저장): [[1-5-1. CdBd 에디터#🧪 파일럿 검증 (2026-07-06, editor 5025)]].
+- **다음**: T4~T14(나머지 에이전트 — V는 V1 파일 템플릿·F는 F1 방식 재사용), T15 워크플로, T16 파일럿.
+
+---
+
 ### Task 1: 스냅샷 능력 확보 (`dumpState` 드라이버 메서드)
 
 병렬 검증의 전제 = 한 번의 덤프로 전체 블록 JSON을 파일에 저장. 기존 `window.__cdbd.blocks()`가 `style`·`content`·`reservation`·`location`·`multiCard`까지 담는지 확인하고, 부족하면 `dumpState()`를 추가한다.
