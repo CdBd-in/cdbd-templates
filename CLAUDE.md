@@ -43,6 +43,7 @@
   - 신규 템플릿 등록: **템플릿 → 템플릿 관리 → 템플릿 추가**
 - **브라우저 자동화**: gstack `browse` (headless Chromium)
 - **참조 디자인 시스템**: `/Users/designer/Documents/GitHub/design/cdbd-design-system/디자인 시스템/`
+- **🎨 Claude Design (claude.ai/design) 사용 시 설정 (필수, 2026-07-06)**: 디자인 시스템에서 **업로드된 "CdBd Design System" 프로젝트 제외(clear selection)** + **로컬 코드베이스에 이 vault `/Users/designer/Documents/GitHub/design/cdbd-templates` 추가**해서 사용. 이유: **vault가 현재 정본**([[1-2. 기획 문서 템플릿]] 등) — claude.ai 업로드 프로젝트는 stale일 수 있음. (DesignSync API가 아닌 디자인 툴 컨텍스트 설정 → 생성 시점에 적용)
 
 ⚠️ 비밀번호 평문 git 커밋 절대 금지. `.env` + `.gitignore` 사용.
 
