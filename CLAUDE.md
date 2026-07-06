@@ -55,9 +55,9 @@
 | [[1-7. 템플릿 상세 페이지]] | 카탈로그 메타데이터(카테고리·제목·썸네일·성과·타겟·주요 기능) 작성 가이드 |
 | [[1-6-1. CdBd 에디터]] | 에디터 3-column 구조, 페이지 테마, OG 이미지 규칙, 자동화 함정, 작업 원칙, 페이지 구조 패턴, 작업 흐름 |
 | [[1-6-2. CdBd 카드 기능]] | 15종 카드 종류, **콘텐츠 의도→카드 타입 룩업**, 라벨 패턴 사전, 카드 사용 정책, 카드 디자인 패턴, **카드 default 기능 재현 ❌ + 편집 불가 장식 배제 기준** |
-| [[1-2. 색상 팔레트]] | WCAG 검증 70개 팔레트 + 9개 무드 분류 |
-| [[1-4. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Unsplash 폴백 · ~~Google Flow 제외 2026-06-30~~) 및 관리 규칙 |
-| [[1-3. 폰트]] | 한글 26 + 영문 18 = 44종, 9개 무드 + 3-Tier 분류 |
+| [[1-3. 색상 팔레트]] | WCAG 검증 70개 팔레트 + 9개 무드 분류 |
+| [[1-5. 이미지]] | 이미지 소스(Thiings 3D · **OpenAI gpt-image-1 생성** · Unsplash 폴백 · ~~Google Flow 제외 2026-06-30~~) 및 관리 규칙 |
+| [[1-4. 폰트]] | 한글 26 + 영문 18 = 44종, 9개 무드 + 3-Tier 분류 |
 | [[00. 작업 가이드/06. 신규 템플릿 기획 워크플로우]] | 신규 템플릿 6단계 워크플로우 (본 파일 워크플로우 섹션의 풀버전) |
 | [[2-0. 전체 템플릿 개요]] | 17개 매트릭스 + 시그니처 매핑 |
 | `2. CdBd 템플릿 현황/2-1.~2-17..md` | 17개 개별 템플릿 분석 (파일명 = 어드민 등록 템플릿명, 하단 `## 디자인 특성` 섹션 포함) |
@@ -79,7 +79,7 @@
 
 🌿 내추럴/오가닉 · 🌸 페미닌/로맨틱 · ✨ 럭셔리/엘레강스 · 💼 프로페셔널/비즈니스 · 🌑 모던/시크 · 🔥 비비드/대담한 · 🎨 빈티지/노스탤직 · 🎉 펀/플레이풀 · 🌙 드리미/감성적
 
-**[[1-2. 색상 팔레트]]와 [[1-3. 폰트]]가 동일 9개 무드** — 무드 결정 시 색·폰트 동시 선정 가능.
+**[[1-3. 색상 팔레트]]와 [[1-4. 폰트]]가 동일 9개 무드** — 무드 결정 시 색·폰트 동시 선정 가능.
 
 ### 팔레트 역할 매핑 (색상 순서 = 역할)
 - **2색**: 색1 = `{배경색}`, 색2 = `{텍스트색}` + `{버튼색}` (동일)
@@ -193,8 +193,8 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 ### 3단계: Figma 반입 + 채택·혼합·수정 + 무드 색·폰트·이미지 확정
 - 선택 시안 HTML을 `DesignSync get_file`로 pull → **Figma 반입**
 - **Claude Code가 채택·혼합·수정**: 여러 시안의 좋은 부분 결합 + **CdBd-legal 정합**(평면 스택·15카드·카드 고정 스펙·평탄화)
-- **무드 색·폰트 확정**: [[1-2. 색상 팔레트]](3토큰, WCAG 3.6:1·버튼대비 재검증) + [[1-3. 폰트]](1~2개, 국문=한글)
-- **이미지 생성**: [[1-4. 이미지]] — OpenAI gpt-image-1(~$0.042/장) · Thiings 3D · Unsplash. 🚫 Google Flow 제외
+- **무드 색·폰트 확정**: [[1-3. 색상 팔레트]](3토큰, WCAG 3.6:1·버튼대비 재검증) + [[1-4. 폰트]](1~2개, 국문=한글)
+- **이미지 생성**: [[1-5. 이미지]] — OpenAI gpt-image-1(~$0.042/장) · Thiings 3D · Unsplash. 🚫 Google Flow 제외
 - 📁 산출물은 `~/Desktop/{템플릿명}/`에 영구 보관 (`/tmp`는 작업용만)
 - → **사용자 피그마 완성본 피드백 게이트**
 
@@ -265,9 +265,9 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 | Block Icon에 `paintAll(node)` (재귀 white) 적용 → 빈 흰 사각형 | 컨테이너+글리프 모두 white로 덮음. **글리프만 타게팅** (VECTOR/BOOLEAN_OPERATION/ELLIPSE 등) 하고 컨테이너 fill은 보존 |
 | INSTANCE 자식의 x/y/size 변경 시 `set_x: This property cannot be overridden in an instance` | instance descendants는 position·size override 차단됨. **`instance.detachInstance()` 으로 분리 후 수정** — 또는 instance 자체를 resize, 또는 wrapper frame으로 padding 추가 |
 | ~~Flow `/generate-flow-image` throttle~~ 🚫 **Flow 제외(2026-06-30)** | Flow는 이미지 표준에서 완전 제외 — 무인 갱신 불가(구글 2FA·기기확인)·throttle. 실사는 **OpenAI gpt-image-1 / Unsplash** 사용. (이 행은 역사적 기록) |
-| **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-4. 이미지#🅳️ 생성 모드]] |
-| **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-4. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
-| **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-4. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
+| **`upload_assets` nodeId 자동 fill 실패 (auto-layout FRAME)** (2026-06-19) | auto-layout FRAME nodeId 지정해도 SOLID 잔존. **RECTANGLE 자식 추가 후 RECTANGLE nodeId 지정**, 또는 nodeId 없이 업로드 → imageHash 회수 → `use_figma` 한 호출에서 `n.fills = [{type:"IMAGE", imageHash, scaleMode:"FILL"}]` 직접 설정. 풀패턴: [[1-5. 이미지#🅳️ 생성 모드]] |
+| **`download_assets`로 받은 PNG 모서리에 페이지 배경색이 박힘 (투명 ❌)** (2026-06-22) | `download_assets` 의 `export` URL은 노드를 **페이지 캔버스 배경색과 합성**해서 렌더 → 둥근 모서리 바깥이 투명이 아니라 페이지 배경색(예: `#f5f5f5`=rgb 154,154,154)으로 채워짐. **해결: `use_figma`에서 `node.exportAsync({format:"PNG"})` → `figma.createImage(bytes)` → 임시 RECT에 IMAGE fill → `download_assets`의 `rawImages[].url` 다운로드.** rawImages 경로는 노드 자체만(투명 보존) 반환. 작업 후 임시 RECT 제거. (아이콘·썸네일·feature 프리뷰 등 카드/그리드 셀에 들어가는 모든 자산은 투명 필수) 풀패턴: [[1-5. 이미지#✂️ Figma 노드 투명 배경 PNG export (2026-06-22 기록)]] |
+| **OpenAI `gpt-image-1` 한국 인물 자동화** (2026-06-19) | `~/.config/cdbd/credentials.json` `openai_api_key` 보관 (chmod 600 · vault 평문 ❌). 한국 웨딩: `Realistic Korean facial features` + `candid documentary` + `soft natural light` 필수 · 인종 명시 없으면 동남아·일본인 생성. 마스터 템플릿·안티패턴: [[1-5. 이미지#🅳️ 생성 모드 — OpenAI gpt-image-1 + upload_assets (현재 권장 표준)]] |
 | **`use_figma` 생성 후 반환 node ID가 재매핑됨** (2026-06-22) | `figma.createSection()`/createFrame 등으로 만든 노드의 return ID(예: `501:23`)가 이후 호출에서 **다른 ID(예: `505:606`)로 최종 확정** → `getNodeByIdAsync(옛 ID)` = null. **같은 호출 안에서는 변수 참조로 안전**하나, 다음 호출에서 참조하려면 **이름으로 재탐색** (`pg.findOne(n=>n.name===...)` 또는 children name 매칭) 후 새 ID 사용. 문서에 figma 링크 적을 땐 이름 재탐색으로 확정한 ID를 사용. (이 문서는 `loadAllPagesAsync` 미지원 = 클래식 모드) |
 | **SECTION 자식 노드의 x/y는 섹션-상대 좌표** (2026-06-23) | `figma.createSection()` 안에 `appendChild`한 노드의 `.x`/`.y`는 **페이지 절대좌표가 아니라 섹션 원점 기준 상대좌표**. 섹션을 abs (20800,-2200)에 두고 자식 `fr.x = 20840`(절대 의도)로 설정하면 실제 렌더는 abs **41640**(=섹션x+20840)으로 섹션 박스 밖으로 튕겨나가고, 섹션 screenshot 경계가 비정상 확장됨(빈 영역). **해결: 섹션 자식은 섹션-상대 좌표로 설정** (첫 카드 x=40 등). 잘못 넣었으면 일괄 보정 `c.x -= sec.x; c.y -= sec.y`. (page-level 직계 자식은 절대좌표라 혼동 주의) |
 
