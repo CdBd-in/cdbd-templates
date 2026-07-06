@@ -37,5 +37,5 @@ description: CdBd 파이프라인 V5 — 스냅샷을 비교해 카드 디자인
 
 ## ✅ 체크리스트 (2026-07-06 5025 교훈)
 - [ ] 배경·채움/아웃라인·모서리·내부여백 비교.
-- [ ] ⚠️ **방향성 외부여백/패딩(좌우-only·상하-only)은 CdBd 여백 컨트롤이 uniform 단일값(사방 동일)이라 불가(structural)** — diff로 내되 "수정 불가(구조 제약)" 명시, 억지 우회 ❌. block.style.margin/padding mutate도 리버트.
-- [ ] 카드 여백은 uniform 값만 조정 가능(패널 여백 컨트롤).
+- [ ] **방향성 외부여백/패딩(상/하/좌/우 개별) = 가능** — 여백 컨트롤 **우측 아코디언 버튼(chevron)** 클릭 → 상/하/좌/우 개별 필드 노출 → **텍스트 필드 키보드 입력**(영속). block.style.margin/padding mutate는 리버트 → 반드시 아코디언 UI.
+- [ ] 값은 CSS shorthand로 저장(예: `margin '0px 20px'`=좌우20 인셋 플로팅 카드 / `padding '4px 20px 8px'`=상4·좌우20·하8 타이트).

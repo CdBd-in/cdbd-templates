@@ -19,6 +19,7 @@ CdBd 수정은 **block 객체를 참조로 직접 변경 → reorder-commit**으
    - `var blk = window.__cdbd.blockById('<cardId>')`.
    - **텍스트 디자인**(fontSize/color/lineHeight/textAlign/fontFamily/bold): `blk.style`의 키를 `expected`로, **그리고 `blk.content`(Lexical JSON 문자열)를 `JSON.parse` → 모든 `text` 노드 inline `style`(및 paragraph `textStyle`)의 해당 속성을 expected로, bold는 `format` 비트 → `JSON.stringify`로 `blk.content` 재대입**. (렌더는 content 기준 → content 갱신 필수.)
    - **비텍스트**(이미지/구분선/갤러리/프로필 등): `blk.style`·`blk.divider`·`blk.gallery`·`blk.innerStyle`·`blk.profile` 등 해당 키 직접 변경.
+   - **⚠️ 패널 UI로만 되는 것(block mutate 리버트, 2026-07-06 검증)**: 카드 **외부여백/내부여백(방향성 포함)** = 카드 디자인 패널 **여백 아코디언**(상/하/좌/우 텍스트 필드), **이미지 크기** = 이미지 패널 '크기' 텍스트 필드, **예약/버튼 텍스트** = 프리뷰 contenteditable 키보드, **위치 옵션(주소표시·지도버튼)** = 위치 패널 토글. 이들은 참조 mutate+reorder-commit으로 원복되니 해당 UI로 적용.
    - 여러 diff·여러 카드를 **모두 참조 변경**해 둔다(한 번의 커밋으로 일괄 저장 가능 — 카드별 선택 반복 불필요).
 3. **커밋(영속화) = reorder 라운드트립** (bash sleep 필수, 동기 2회 ❌):
    ```bash
