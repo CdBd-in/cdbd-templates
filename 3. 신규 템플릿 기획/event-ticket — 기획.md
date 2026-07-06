@@ -6,7 +6,7 @@ slug: event-ticket
 상태: 기획 완료 — claude.ai/design 생성 대기 (검증용 1호)
 color: 개방 (미지정)   # claude.ai/design이 무드 방향에 맞게 탐색
 font: 개방 (미지정)    # 3토큰·WCAG·국문=한글 규칙 내에서 자유
-related: "[[1-0. CdBd 생성 계약]], [[3-0. 기획 문서 템플릿]]"
+related: "[[1-0. CdBd 생성 계약]]"
 ---
 
 # event-ticket — 기획 문서 (claude.ai/design 붙여넣기용)
