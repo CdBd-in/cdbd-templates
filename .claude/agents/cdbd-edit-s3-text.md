@@ -28,3 +28,12 @@ description: CdBd 파이프라인 S3 — 텍스트 내용. 모든 카드의 텍�
 - [ ] **multiCard 내부 텍스트**(제목열·요약열)도 정렬 확인 — 기본 center로 남기 쉬움, Figma가 left면 left.
 - [ ] 예약/버튼 카드 텍스트는 **프리뷰 contenteditable 실제 키보드**로(block.content mutate는 리버트).
 - [ ] **복합 정보 텍스트(예: 세션 일시 = 날짜/시간, 주소 = 도로명/상세)** 는 Figma가 여러 줄이면 요소 내 **linebreak로 줄 분리** — 짧아 보여도 한 줄로 뭉치지 말 것(2026-07-07 5025: '세션 일시' 줄바꿈 누락).
+
+## ⚠️ 자동화 함정 — Lexical 텍스트 입력 (1-6-1 발췌)
+
+> 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+
+- [ ] **"last contenteditable" = 최하단 버튼 텍스트** (함정1·13) — 새 텍스트 카드 후 마지막 contenteditable에 focus하면 페이지 최하단 버튼 텍스트가 덮어써짐. **카드 보드에서 새 카드 명시 클릭 → 우측 패널 입력**(mobile preview 의존 ❌, 마운트 시간차).
+- [ ] **Lexical 다줄 = 한 줄씩 type + Enter** (함정16) — paste의 `\n`은 단일 paragraph로 뭉침. `$B type "줄1"; $B press Enter; $B type "줄2"`.
+- [ ] **완전 클리어 = Meta+A→Backspace 2회** (함정17) — 1회는 selection만 지움 → 텍스트 잔존/중복. `Meta+A;Backspace;Meta+A;Backspace`.
+- [ ] **shell 예약 문자(`|`·`~`·`#`·`$`) `$B type` 실패** (함정18) — `|`=`$B press "Shift+Backslash"`, `~`=`$B press "Shift+Backquote"`. 일반 ASCII만 `$B type`.
