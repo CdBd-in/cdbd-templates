@@ -22,9 +22,9 @@ description: CdBd 파이프라인 F2 — 페이지 마무리. URL 정보(제목�
 ## 출력
 `{screenshots:[경로...], remainingDiffs:[{cardId,field,...}], urlInfo:{title,description}, ogGuidance:"준비 안내"}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
 
-## ⚠️ 자동화 함정 — 모바일 프리뷰 캡처 (1-6-1 발췌)
+## ⚠️ 자동화 함정 — 모바일 프리뷰 캡처
 
-> 풀버전: [[1-6-1. CdBd 에디터#🥇 4단계 마지막 — 모바일 프리뷰 전체 페이지 캡처 (2026-06-19 기록)]].
+> 코드 레시피: skill `cdbd-card-automation`.
 
 - [ ] **전체 페이지 캡처 = inner overflow 임시 확장** — mobile preview 컨테이너(`bg rgb(22,22,26)`)의 inner `[class*=overflow-y-scroll]`를 `height=scrollHeight`·`overflow=visible`·`position=static`으로 확장 → element 캡처 → 원복. 셀렉터 `.max-w-1\/2.transform.origin-top`는 deprecated(폴백).
 - [ ] **멀티페이지는 각 페이지 명시 1클릭 후 각각 캡처**(마지막 본 페이지만 열리는 함정).

@@ -35,9 +35,9 @@ CdBd 수정은 **block 객체를 참조로 직접 변경 → reorder-commit**으
 ## 설계 함의 (스펙 반영됨)
 참조 변경 + 단일 reorder-commit이라 **카드별 선택이 불필요** → "수정=카드별"의 선택-최소화 근거는 약해지고, 실제로는 **모든 diff를 배치 mutate 후 1회 커밋**이 가장 효율적. (이미지 업로드 등 패널 필요한 수정만 예외.)
 
-## ⚠️ 자동화 함정 — 카드 디자인 패널 (1-6-1 발췌)
+## ⚠️ 자동화 함정 — 카드 디자인 패널
 
-> 패널 UI로만 되는 수정(여백 아코디언 등) 시 참조. 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+> 패널 UI로만 되는 수정(여백 아코디언 등) 시 참조. 코드 레시피: skill `cdbd-card-automation`.
 
 - [ ] **MUI Collapse 닫힌 섹션 element = `visibility:hidden`** (함정15) — `getBoundingClientRect()`·`aria-pressed`는 정상이라 클릭 가능해 보이지만 `$B click` timeout. 같은 텍스트 버튼이 여러 개면(예: 위치 카드 "둥근" 2개) **`getComputedStyle(el).visibility==="visible"` 필터 필수**. 작업 섹션만 펼치기.
 - [ ] **카드 디자인 accordion 상태는 카드 전환 시 reset** (함정21) — 카드마다 카드 디자인 펼치기 → 여백 accordion expand 반복(helper 함수화).

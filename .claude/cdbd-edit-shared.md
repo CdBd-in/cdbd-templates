@@ -40,4 +40,4 @@
 - [ ] **Reload 시 값 손실 = blur 미발생** (함정6) — input 변경 후 `blur` 강제 또는 `$B fill`(자동저장이 blur 트리거).
 - [ ] **한글 attribute CSS selector 파싱 실패** (함정7) — Figma `node.query('[name*=시안]')` ❌ → `findAll(n => n.name.includes('시안'))` predicate.
 - [ ] **모달 X 닫기 = absolute DIV**(button 아님·ESC ❌) (함정3) — `document.querySelector('div.absolute.right-\\[24px\\].top-\\[30px\\]').click()`.
-- [ ] 참고 표: [[1-6-1. CdBd 에디터#🛡 안전한 자동화 패턴 사전]] · [[1-6-1. CdBd 에디터#📋 4단계 자동화 가능/수동 매트릭스 (T-NEW1 학습 기반)]] — 검증된 셀렉터·패턴 사전.
+- [ ] 검증된 셀렉터·패턴·자동화 가능/수동 범위: skill `cdbd-card-automation`(Common mistakes·내부 동작).

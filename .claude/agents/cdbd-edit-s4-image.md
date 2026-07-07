@@ -28,9 +28,9 @@ description: CdBd 파이프라인 S4 — 이미지. 준비된 이미지 파일�
 - [ ] 비율(원본/1:1/가로/세로)·정렬 = 패널 칩 fiber onClick.
 - [ ] **시안과 다른 이미지는 Figma 노드에서 3배수(3x) scale로 직접 export**한 파일로 교체(해상도 확보) — 로고 등 투명 필요 자산은 `download_assets` export URL(배경 합성으로 둥근 모서리 밖에 페이지색 박힘) 대신 **노드 자체 export → rawImages 경로**로 투명 보존(2026-07-07 5025: 로고·예배당·목사 이미지 시안과 상이 → 재export·교체).
 
-## ⚠️ 자동화 함정 — 파일 업로드 (1-6-1 발췌)
+## ⚠️ 자동화 함정 — 파일 업로드
 
-> 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+> 코드 레시피: skill `cdbd-card-automation`.
 
 - [ ] **transient `<input type=file>` 후킹 ❌ → React `onDrop` 직접 호출** (함정23) — Bash `base64` → `$B js` inject → File 객체 → dropzone(`div.border-dashed` 또는 fiber `onDrop` 보유 div)의 `props.onDrop({preventDefault, stopPropagation, dataTransfer, target, currentTarget})` 직접 호출(`dt=new DataTransfer(); dt.items.add(file)`).
 - [ ] 적용/저장도 동일 패턴 — 카드 `적용하기` → 모달 `저장하기` 각 `props.onClick` 직접 호출. 파일 ≤10MB 권장.

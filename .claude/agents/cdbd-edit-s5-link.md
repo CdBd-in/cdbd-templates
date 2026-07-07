@@ -29,9 +29,9 @@ description: CdBd 파이프라인 S5 — 링크·기능. 버튼 링크 6종·위
 - [ ] Google 위치카드 한글 주소는 지오코더 영문 반환(structural) → 한글은 **별도 텍스트카드**로 표시(좌표·지도는 정상).
 - [ ] 버튼 링크 6종 onUpdateItem(전화=`type:'call'`).
 
-## ⚠️ 자동화 함정 — Q&A 폼 (1-6-1 발췌)
+## ⚠️ 자동화 함정 — Q&A 폼
 
-> 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+> 코드 레시피: skill `cdbd-card-automation`.
 
 - [ ] **Q&A 질문 유형 in-place 변경 불가** (함정11) — kebab은 복제/삭제만. **삭제 → 객관식 신규 추가**(마지막 배치) → `onDragEnd`로 reorder.
 - [ ] **객관식 input 구조** (함정12) — 인풋0=질문, 인풋1~=옵션, "옵션 추가" 버튼 N번. **복수선택 토글 = 24×15 사용자정의 div**(MUI Switch 아님, 활성 시 `bg: var(--color-information)` + inner `translateX(9px)`) → 좌표 직접 click.
