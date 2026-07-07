@@ -258,10 +258,26 @@ $B js "![...document.querySelectorAll('input')].find(e=>e.placeholder==='제목�
 - 여러 예약 카드는 **매번 fiber onClick으로 정확히 선택**(라벨/위치로 추정 ❌ — 같은 'reservation' 타입이라 헷갈림).
 - **모달 취소(저장 폐기)**: 스테이징된 변경이 있으면 "저장 없이 나가기" 확인 다이얼로그 → **"나가기"** 클릭. (테스트로 임시 옵션 추가 후 서버 데이터 보존하며 빠져나올 때 유용.)
 
-### ⚡ 더 빠른 방법 시도 결과 (2026-06-24 조사 — 비추천)
-- **날짜/시간 필드 직접 타이핑** (`$B type "20260625"`/`"1900"`): 작동하나 **weekday 섹션 `(EEEE)` 미해결·시간 섹션 갱신 불안정** → 신뢰성 낮아 비추천. 픽커 클릭이 안전.
-- **dayjs 값 onChange 직접 주입**: `window.dayjs` 없음 + MUI X 어댑터 값 타입 구성 어려움 → 불가.
-- **결론**: 픽커 클릭 유지하되 **sleep 단축(위) + 모달은 fiber onClick으로 열기**가 가장 견고한 ~40% 단축. 옵션당 ~5초가 현실적 하한(렌더 사이 끊어야 해서 JS round-trip×8 + 최소 sleep).
+### ⚡ 날짜·시간 픽커 = dayjs onChange 직접 주입 (2026-07-07 5025 검증 — 캘린더/리스트 클릭 0번, S6 ~50-60%↓)
+
+**해결됨** — 구 2026-06-24 "불가/비추천" 판정 뒤집힘. MUI X 날짜·시간 픽커에 앱 onChange로 dayjs를 주입하면 팝업 없이 즉시 세팅되고 **요일 `(토)`도 자동 파생**(타이핑 방식이 못 풀던 weekday 문제 해결).
+
+1. **dayjs 어댑터 추출** (모달당 1회) — `window.dayjs`는 없지만 MUI `LocalizationProvider` **context**에 AdapterDayjs가 있음. 날짜 input fiber를 타고 올라가며 context dependency 중 `.date()` 함수 보유 객체(`lib:'dayjs'`)를 찾음:
+   ```js
+   var di=[...document.querySelectorAll('input')].find(e=>e.placeholder==='날짜를 선택해 주세요');
+   var f=window.__cdbd.fiberOf(di),adapter=null,d=0;
+   while(f&&d<25){var dep=f.dependencies&&f.dependencies.firstContext;while(dep){var v=dep.memoizedValue;if(v){var c=v.utils||v;if(typeof c.date==='function')adapter=c;}dep=dep.next;}if(adapter)break;f=f.return;d++;}
+   ```
+2. **날짜·시간 세팅** — 각 input fiber 체인에서 onChange 중 **소스에 `isValid()` 포함**한 앱 핸들러를 찾아 dayjs 주입. ⚠️ depth로 고정 ❌(depth~13은 MUI 내부 field onChange라 무효) → 앱 핸들러는 `e=>{if(e&&e.isValid()){...er({...en,date/time...})}}`:
+   ```js
+   function inject(ph,iso){var i=[...document.querySelectorAll('input')].find(e=>e.placeholder===ph);var f=window.__cdbd.fiberOf(i),fn=null,g=0;while(f&&g<25){var p=f.memoizedProps;if(p&&typeof p.onChange==='function'&&/isValid\(\)/.test(p.onChange.toString())){fn=p.onChange;break;}f=f.return;g++;}return fn(adapter.date(iso));}
+   inject('날짜를 선택해 주세요','2026-10-17T00:00:00');   // → 필드 "2026.10.17(토)"
+   inject('시간을 선택해 주세요','2026-10-17T19:30:00');   // → 필드 "19:30"
+   ```
+   방문체크 종료 일시도 동일(단 placeholder '날짜'/'시간' 중 `value===''`인 종료 필드 타게팅).
+3. 인원 `$B fill` + `설정하기`는 기존대로.
+- **효과**: 옵션당 픽커 클릭(캘린더 open+day + 시간 open+hour+minute ~2초) → onChange 2회(~0.2초). **옵션당 ~5초→~2초, S6 전체 ~50-60% 단축.** (구 결론의 "옵션당 ~5초 하한"은 픽커 클릭 전제라 무효화.)
+- ⚠️ input 식별 = placeholder / onChange 식별 = **소스 `isValid()`**(depth 아님). 어댑터·핸들러 모두 모달 열릴 때마다 재탐색(fiber 재생성).
 
 ## 버튼 링크 — 2단카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
 

@@ -11,7 +11,7 @@ description: CdBd 파이프라인 S6 — 예약 정보. 예약 카드에 날짜�
 
 ## 🔑 자동화 (skill 레시피)
 - 예약 카드 추가는 **확인 다이얼로그 1단계 더**(S2와 동일; 이미 추가됐으면 생략).
-- 예약 정보 모달: 날짜(MUI X DatePicker — `button[aria-label="Next month"]`/`"Previous month"` 직접), 시간, 정원, **방문체크 종료 필수**.
+- 예약 정보 모달: **🥇 날짜·시간 = dayjs onChange 직접 주입 fast-path**(캘린더/리스트 클릭 0번, 옵션당 픽커 ~2초→~0.2초, S6 ~50-60%↓ — skill `cdbd-card-automation#날짜·시간 픽커 = dayjs onChange 직접 주입`). 어댑터 context 추출 → `isValid()` 소스 가진 onChange에 `adapter.date(iso)` 주입. 정원 `$B fill`, **방문체크 종료 필수**(시작은 자동). 캘린더 화살표 클릭(아래 함정)은 fallback.
 - 확정은 snapshot ref 실제 클릭(크레딧 확인 다이얼로그). skill `cdbd-card-automation#예약-정보`.
 
 ## 크레딧 부족 처리 (필수)
