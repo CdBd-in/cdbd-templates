@@ -8,7 +8,7 @@
 - 완료 보고에 실행 위치(editor URL `https://www.cdbd.in/editor/{id}`) 포함.
 
 ## ⚠️ 영속화: block mutate로 되는 것 vs 패널 UI로만 되는 것 (2026-07-06 검증)
-- **block mutate + reorder-commit으로 영속됨**: 텍스트 디자인(폰트·크기·색·정렬·줄간격 — `block.style` + `block.content` Lexical 둘 다)·줄바꿈(linebreak 노드)·모서리 `borderRadius`·배경 `background`·이미지 비율 `aspectRatio`·`multiCard.ratio`/`align`·`divider.*`.
+- **block mutate + reorder-commit으로 영속됨**: 텍스트 디자인(폰트·크기·색·정렬·줄간격 — `block.style` + `block.content` Lexical 둘 다)·줄바꿈(linebreak 노드)·모서리 `borderRadius`·배경 `background`·이미지 비율 `aspectRatio`·`multiCard.ratio`/`align`·`divider.*`·**`multiCard.items[].content`**(줄바꿈 linebreak + 줄별 inline 스타일 — 2026-07-07 5025 검증. 저장 시 paragraph `textStyle`/`textFormat`이 첫 run 스타일로 enrich되는 정규화는 리버트 아님)·프로필 `innerStyle.width`.
 - **block mutate로 리버트(리로드 원복) → 패널/프리뷰 UI로만 영속**:
   - **카드 외부여백/내부여백**(특히 multiCard·reservation): `block.style.margin/padding` mutate는 리버트. **패널 "카드 디자인" 여백 컨트롤 = [슬라이더 | 텍스트필드 | 우측 아코디언 버튼(chevron)]. 아코디언 버튼 onClick → 상/하/좌/우 개별 필드가 펼쳐져 방향성 설정 가능**(2026-07-06 정정 — '단일값·structural 불가'는 오류였음). 각 방향 텍스트 필드에 키보드 입력 → `block.style`에 CSS shorthand로 커밋·영속(예: `margin:'0px 20px'`=좌우20 인셋, `padding:'4px 20px 8px'`=상4·좌우20·하8). multiCard·reservation은 "카드 디자인"이 MuiCollapse라 헤더 먼저 펼치고 field `scrollIntoView` 후 click.
   - **예약 콘텐츠**(버튼 텍스트·날짜·정원): 예약 정보 모달 + 프리뷰 contenteditable로만.
