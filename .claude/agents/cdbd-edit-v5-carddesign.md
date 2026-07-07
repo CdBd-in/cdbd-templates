@@ -41,3 +41,10 @@ description: CdBd 파이프라인 V5 — 스냅샷을 비교해 카드 디자인
 - [ ] 값은 CSS shorthand로 저장(예: `margin '0px 20px'`=좌우20 인셋 플로팅 카드 / `padding '4px 20px 8px'`=상4·좌우20·하8 타이트).
 - [ ] **상하 여백 내부(padding)+외부(margin) 중복 적용 금지** — 같은 상하 간격이 padding과 margin 양쪽에 들어가 간격이 두 배가 되지 않았는지 확인. 상하 간격은 한쪽(보통 padding)만(2026-07-07 5025: 내부/외부 중복 점검).
 - [ ] **최하단(마지막) 카드 하단 여백 ≥ 40** — page gap=0이라 페이지 끝 여백은 마지막 카드 padding-bottom(또는 하단 여백 카드)으로 표현, 콘텐츠가 화면 끝에 붙지 않게(2026-07-07 5025).
+
+## ⚠️ 자동화 함정 — 카드 디자인 패널 (1-6-1 발췌)
+
+> 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+
+- [ ] **MUI Collapse 닫힌 섹션 element = `visibility:hidden`** (함정15) — `getBoundingClientRect()`·`aria-pressed`는 정상이라 클릭 가능해 보이지만 `$B click` timeout. 같은 텍스트 버튼이 여러 개면(예: 위치 카드 "둥근" 2개) **`getComputedStyle(el).visibility==="visible"` 필터 필수**. 작업 섹션만 펼치기.
+- [ ] **카드 디자인 accordion 상태는 카드 전환 시 reset** (함정21) — 카드마다 카드 디자인 펼치기 → 여백 accordion expand 반복(helper 함수화).

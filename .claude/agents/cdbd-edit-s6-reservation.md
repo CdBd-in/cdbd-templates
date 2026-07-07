@@ -22,3 +22,10 @@ description: CdBd 파이프라인 S6 — 예약 정보. 예약 카드에 날짜�
 
 ## 출력
 `{status:'ok'|'partial', reservations:[...], reason?}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
+
+## ⚠️ 자동화 함정 — 캘린더 (1-6-1 발췌)
+
+> 풀버전: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+
+- [ ] **MUI X DatePicker 화살표 = `button[aria-label="Next month"]`/`"Previous month"` 직접**(좌표 추정 ❌) (함정8).
+- [ ] 날짜 클릭 = `button` 중 `textContent==='N'` && `!disabled` && 캘린더 영역 좌표(x 600~950, y>480).
