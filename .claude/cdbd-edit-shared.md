@@ -7,6 +7,15 @@
 - diff 8필드: `cardId, cardType, scope, field, current, expected, howToFix, severity(high|medium|low)`.
 - 완료 보고에 실행 위치(editor URL `https://www.cdbd.in/editor/{id}`) 포함.
 
+## 🔬 검증 스코프(V*) 공통 규칙 (2026-07-07 5025 미스 회고)
+
+> 왜: 5025에서 로고 크기·예배당 둥근·2단 내부여백·비-legal 버튼/지도·좌우 여백 5건이 빠짐. 근본원인 4종을 절차로 차단.
+
+- [ ] **A. 스펙은 카드×속성 전 매트릭스로 추출** — 사용자가 언급한 축만 보지 말 것. 스펙에 없는 속성은 diff가 조용히 빈 배열=거짓 '일치'가 됨(측정 안 한 건 검증 불가). 각 V는 대상 카드의 **모든 담당 속성을 빠짐없이** Figma 실측해 채운 뒤 비교. 이전 에디터 예시값을 이어받지 말고 **이번 시안 실측**.
+- [ ] **B. 불일치 발견 = 반드시 diff 방출** — '확인'만 하고 넘기지 말 것. 읽기 전용 확인이 수정 필요를 찾고도 diff를 안 내면 F1이 못 고침(2026-07-07 예배당 '둥근' 유실 원인).
+- [ ] **C. Figma-literal ❌ → CdBd-legal 스냅 비교** — borderRadius·비율·높이는 px 정확일치가 목표가 아니라 **CdBd 실제 옵션(각진/둥근/원형·가로/1:1·기본높이)으로 매핑**해 비교. Figma px를 그대로 통과시키면 에디터에 없는 값이 들어감(CLAUDE.md "모서리 3옵션·픽셀값 금지"). 리터럴 px 일치를 '정상' 판정하지 말 것. 오탐방지의 ±px 허용오차는 **legal 옵션 안에서의 오차**이지 비-legal 리터럴 인정이 아님.
+- [ ] **D. 요청 목록 수정 후에도 V1~V5 전수 스윕 1회 필수** — 지적된 항목만 고치고 끝내면 목록 밖 이슈는 아무 스코프도 안 봄(5025 5건 공통 최대원인). 타깃 수정 후 전 카드×전 속성 스윕을 게이트로 통과 → 리로드 재검증.
+
 ## ⚠️ 영속화: block mutate로 되는 것 vs 패널 UI로만 되는 것 (2026-07-06 검증)
 - **block mutate + reorder-commit으로 영속됨**: 텍스트 디자인(폰트·크기·색·정렬·줄간격 — `block.style` + `block.content` Lexical 둘 다)·줄바꿈(linebreak 노드)·모서리 `borderRadius`·배경 `background`·이미지 비율 `aspectRatio`·`multiCard.ratio`/`align`·`divider.*`·**`multiCard.items[].content`**(줄바꿈 linebreak + 줄별 inline 스타일 — 2026-07-07 5025 검증. 저장 시 paragraph `textStyle`/`textFormat`이 첫 run 스타일로 enrich되는 정규화는 리버트 아님)·프로필 `innerStyle.width`.
 - **block mutate로 리버트(리로드 원복) → 패널/프리뷰 UI로만 영속**:

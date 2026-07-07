@@ -9,7 +9,7 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 입력으로 받은 **스냅샷 JSON 파일 경로**(CdBd `window.__cdbd.dumpState()` 결과 + Figma 스펙)만 열어, 이미지를 렌더링하는 카드의 **모양 속성**을 비교한다. **브라우저·Figma 라이브 접근 금지** — 파일만 읽는다.
 
 ## 대상 카드 (`block.type`)
-`image` · `profile`(프로필 이미지) · `gallery`(갤러리 이미지) · `multiCard`/`product`/`button`(내부 이미지 요소). 이미지를 렌더하는 모든 카드.
+`image` · `profile`(프로필 이미지) · `gallery`(갤러리 이미지) · `location`(지도 모양·비율) · `multiCard`/`product`/`button`(내부 이미지 요소). 이미지를 렌더하는 모든 카드.
 
 ## 비교 속성 (모양만)
 - **이미지 비율**: 원본 / 1:1 / 3:2 / 2:3 등 (Figma 프레임 종횡비 → CdBd `block.image.ratio` 또는 style 종횡비).
@@ -36,5 +36,7 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 
 ## ✅ 체크리스트 (2026-07-06 5025 교훈)
 - [ ] 이미지 비율은 **`block.style.aspectRatio`로 판정** — `block.shape='square'`가 있어도 `aspectRatio='auto'`면 원본비로 렌더(shape 필드에 속지 말 것, 실제 렌더 = aspectRatio).
-- [ ] 이미지 **크기(width %)**도 비교 — 로고가 Figma 소형(예 50px)인데 CdBd `width:100%`면 diff. 수정은 S4 '크기' 텍스트 필드.
+- [ ] **이미지 카드 모서리(둥근) 적용 여부를 반드시 검사·diff** — Figma `rounded-[Npx]`면 CdBd `block.style.borderRadius`가 각진(0)인지 확인해 diff 방출(borderRadius는 mutate로 영속 → F1 적용 가능). ⚠️ '모양 확인'을 비율만 보고 끝내지 말 것(2026-07-07 5025 예배당 '둥근' 유실). **CdBd-legal 스냅**: px 정확일치 ❌ → 각진/둥근/원형 중 하나로 매핑 비교(Figma 14px 리터럴은 비-legal).
+- [ ] **모든 이미지 카드의 크기(width %)를 개별 실측 비교** — 로고 등 특정 카드만이 아니라 전 이미지. Figma 로고 폭÷프레임 폭 비율을 실측해 CdBd width%와 대조(예: 시안 로고≈16%인데 CdBd 28%면 diff). ⚠️ **이전 에디터 예시값(28% 등)을 이어받지 말 것 — 이번 시안 실측 필수**(2026-07-07 5025 로고 미스: 캐리오버값 방치). 수정은 S4 '크기' 텍스트 필드.
+- [ ] **위치 카드 지도 모양(각진/둥근)·비율(가로/1:1)** 도 CdBd-legal 옵션으로 비교 — Figma 지도 프레임 종횡비·모서리를 CdBd 지도 옵션에 매핑(리터럴 px/임의 비율 ❌, 2026-07-07 5025 지도 비-legal 값 미스).
 - [ ] **프로필 이미지 크기**(`block.innerStyle.width` %)가 Figma 대비 작지 않은지 별도 확인 — 프로필은 이미지 카드(`block.style.width`·패널 전용)와 달리 **F1이 `innerStyle.width` mutate로 직접 상향**(패널 아님). 사용자가 '더 키우기' 지시 시 현재값×배수로 조정(2026-07-07 5025: 프로필 이미지 확대 요청).

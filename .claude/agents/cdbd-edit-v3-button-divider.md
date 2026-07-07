@@ -30,3 +30,7 @@ description: CdBd 파이프라인 V3 — 스냅샷을 비교해 버튼(가로·�
 - `field` 예: `strokeWidth`·`dividerShape`·`strokeColor`·`buttonColumns`·`buttonHeight`·`borderRadius`.
 - `cardId` = 해당 block의 `id`.
 - `severity`: 개수·모양=high, 두께·여백 미세=medium, 색 미세=low.
+
+## ✅ 체크리스트 (2026-07-07 5025 미스)
+- [ ] **버튼 모양·높이는 CdBd-legal 옵션으로 스냅 비교** — 모양은 각진/둥근/원형 3옵션 중 하나로, 높이는 CdBd 기본 높이(py 기본)로 매핑해 비교. Figma `rounded-[Npx]`·임의 py를 **리터럴 px로 통과시키지 말 것**(에디터에 없는 값 = 사용자가 디자인 보드에서 못 맞춤, 2026-07-07 5025 버튼 비-legal 값 미스). 오탐방지의 "±0.5/±2px"는 legal 옵션 안에서의 허용오차이지 비-legal 리터럴 인정이 아님.
+- [ ] 구분선 모양(solid/dashed/dots)·두께·색도 CdBd 옵션 집합 내에서 비교.
