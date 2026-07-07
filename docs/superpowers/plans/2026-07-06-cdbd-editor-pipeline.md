@@ -34,7 +34,7 @@
 - **T4~T14 ✅** 13 에이전트 전부 생성: S1~S6(생성)·V1~V5(검증)·F1·F2. V2~V5는 5025 스냅샷 라이브 테스트 통과(비텍스트 diff 20건). S1~S6·F2는 파일 완성(라이브 검증은 파일럿).
 - **T15 ✅** 오케스트레이터 완성(`.claude/workflows/cdbd-editor-pipeline.js`) — `mode`(full/verify/fix)·cardId+field 디둡·figmaFileKey. 본문 문법 검증 OK.
 - **🔑 학습(2026-07-06 2세션)**: ①**신규 에이전트는 세션 리로드 전 `agentType` 미해결** → 오케스트레이터 실행 전 리로드 필수(우회: general-purpose에 `.md` 스펙 읽힘). ②**V3↔V5 버튼 borderRadius 중복 검출** → 디둡으로 해결. ③5025 전체 검증 = 50 diff(V1 30 + 비텍스트 20).
-- **다음(T16)**: **세션 리로드 후** `Workflow({name:'cdbd-editor-pipeline', args:{editorId, figmaFileKey, figmaNodeId, mode}})`. 5025 재현=`mode:'verify'`(figmaFileKey `2CX6W3Zg9OzbBiwIZ9Tk6J`·node `8-3425`), 신규 원페이지=`mode:'full'`(S6 예약은 크레딧 필요).
+- **다음(T16)**: **세션 리로드 후** `Workflow({name:'cdbd-editor-pipeline', args:{editorId, figmaFileKey, figmaNodeId, mode}})`. 5025 재현=`mode:'verify'`(figmaFileKey `oi8zIHLfy59O5zV8aysqq4`·node `964-1600` `church-rsvp` — 구 `2CX…`·`8-3425`는 stale, 2026-07-07 정정), 신규 원페이지=`mode:'full'`(S6 예약은 크레딧 필요).
 
 ---
 
