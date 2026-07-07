@@ -14,3 +14,30 @@
   - **예약 콘텐츠**(버튼 텍스트·날짜·정원): 예약 정보 모달 + 프리뷰 contenteditable로만.
   - **위치 label/button/address**: 위치 카드 패널 토글 + 검색 지오코딩으로만.
 - **패널 컨트롤 영속 방법**: **🥇 슬라이더 우측에 텍스트 필드(number input)가 있으면 슬라이더 대신 그 필드에 실제 키보드 입력**(`$B click 필드 → Meta+a → $B type "값" → Enter`) — 더 정확·안정(2026-07-06 사용자 지침). 텍스트 필드 없는 슬라이더·토글·칩만 **React fiber 외부 onChange 직접 호출**(페이지 색상 방식). 이미지 업로드는 dropzone `onDrop`. 예약/버튼 텍스트는 **프리뷰 contenteditable 실제 키보드**(`$B click #id → Meta+a → $B type`; `execCommand('insertText')`는 Lexical에서 무반응 ❌). 토글 연속 조작은 fiber 재쿼리(stale-closure 회피).
+
+---
+
+## ✅ 작업 원칙 (필수 준수) — 모든 스코프 공통
+
+> 풀버전: [[1-6-1. CdBd 에디터#✅ 작업 원칙 (필수 준수)]]. (위 색상·라벨 원칙의 풀 체크리스트)
+
+- [ ] **범용성** — 페이지뿐 아니라 **각 카드도 반복 복제**될 수 있게. 카드 1개 = 독립 의미 단위.
+- [ ] **텍스트 카드 분리** — **하나의 텍스트 카드 = 하나의 텍스트 속성**. 제목+본문을 한 카드에 묶지 말 것(편집 용이성).
+- [ ] **보조 텍스트 색상** — 캡션·유의사항은 `{텍스트색} × N%`(투명도). 별도 회색 hex ❌.
+- [ ] **테마 default 색상** — 색 쓰는 모든 요소는 `{버튼색}`/`{배경색}`/`{텍스트색}` 그대로. 카드별 커스텀 최소화.
+- [ ] **장식 그래픽 배제** — 편집 불가 장식 이미지 ❌. 로고·프로필 등 교체 가능 이미지는 OK.
+- [ ] **이미지 ≠ 텍스트** — 워드마크·문구를 이미지에 넣지 말 것(교체 시 편집 불가) → 이미지엔 **심볼만**, 워드마크·태그라인은 **텍스트 카드로 분리**.
+- [ ] **카드 라벨 = 목적·내용 이름** — 기본 타입명("텍스트/이미지/구분선") 그대로 ❌ → 목적·내용 이름(예: 회사명·슬로건·여백·위치 안내). 카드 보드 가독성.
+
+## ⚠️ 공통 자동화 함정 (스코프 무관) — 1-6-1 발췌
+
+> 스코프 전용 함정은 각 S/F 에이전트 체크리스트 참조. 풀버전·코드: [[1-6-1. CdBd 에디터#🤖 CdBd 에디터 자동화 함정 (2026-06-18 기록)]].
+
+- [ ] **snapshot `@eN` ref는 매 호출 재번호** (함정14) — ref로 카드 식별 ❌ → **라벨 input value로 식별 → 부모 row 6단계 walk up → `elementFromPoint(r.left+50, r.top+r.height/2).click()`**.
+- [ ] **`$B click`은 selector 전용** (함정9) — 좌표 클릭은 `document.elementFromPoint(x,y).click()` JS로.
+- [ ] **`$B viewport`는 `1440x1024 --scale 1` 형식** (함정10) — `1440 1024`(공백 인자) ❌.
+- [ ] **React form state는 native input setter로 안 들어감** (함정5) — 모달 input은 `$B fill`(keyboard 시뮬레이션 → form state 반영). native setter+dispatch만 쓰면 "값을 입력해주세요" 에러.
+- [ ] **Reload 시 값 손실 = blur 미발생** (함정6) — input 변경 후 `blur` 강제 또는 `$B fill`(자동저장이 blur 트리거).
+- [ ] **한글 attribute CSS selector 파싱 실패** (함정7) — Figma `node.query('[name*=시안]')` ❌ → `findAll(n => n.name.includes('시안'))` predicate.
+- [ ] **모달 X 닫기 = absolute DIV**(button 아님·ESC ❌) (함정3) — `document.querySelector('div.absolute.right-\\[24px\\].top-\\[30px\\]').click()`.
+- [ ] 참고 표: [[1-6-1. CdBd 에디터#🛡 안전한 자동화 패턴 사전]] · [[1-6-1. CdBd 에디터#📋 4단계 자동화 가능/수동 매트릭스 (T-NEW1 학습 기반)]] — 검증된 셀렉터·패턴 사전.
