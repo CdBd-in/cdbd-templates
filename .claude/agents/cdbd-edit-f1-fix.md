@@ -32,6 +32,13 @@ CdBd 수정은 **block 객체를 참조로 직접 변경 → reorder-commit**으
 ## 출력
 `{applied:[{cardId,field}...], remaining:[{cardId,field}...]}` + 실행 위치 `https://www.cdbd.in/editor/{editorId}`.
 
+## ✅ 체크리스트 (2026-07-06~07 5025)
+- [ ] 텍스트 디자인은 `block.style` + `block.content` inline **둘 다** 갱신(렌더=content 우선). `multiCard.items[].content`도 mutate+reorder-commit으로 영속.
+- [ ] **줄별 스타일 다른 줄바꿈**(제목/일시)은 content를 **줄별 text 노드+linebreak+inline 스타일**로 원자 재작성(S3·V1 통합) — 단순 linebreak 불가.
+- [ ] **여백·이미지 크기·예약/버튼 텍스트·위치 옵션 = mutate 리버트 → 패널/프리뷰 UI만**(shared.md 영속화 표).
+- [ ] **여백 패널 필드 = 값 입력 후 blur(다른 방향 필드 click)해야 커밋** — Enter만 하고 카드 전환 시 revert(배치서 8/14 유실 사례). 카드 전환마다 아코디언 재펼침(reset).
+- [ ] 커밋 = reorder 라운드트립(정렬버튼·패널 트리거는 커밋 ❌) → **리로드 재검증** 후 완료.
+
 ## 설계 함의 (스펙 반영됨)
 참조 변경 + 단일 reorder-commit이라 **카드별 선택이 불필요** → "수정=카드별"의 선택-최소화 근거는 약해지고, 실제로는 **모든 diff를 배치 mutate 후 1회 커밋**이 가장 효율적. (이미지 업로드 등 패널 필요한 수정만 예외.)
 
