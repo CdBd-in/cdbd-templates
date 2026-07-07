@@ -35,3 +35,4 @@ CdBd 텍스트는 디자인이 **두 곳**에 저장된다:
 ## ✅ 체크리스트 (2026-07-06 5025 교훈)
 - [ ] textAlign 비교는 standalone 텍스트뿐 아니라 **multiCard 내부 items**도(제목열·요약열이 center로 남기 쉬움 — Figma가 left면 diff).
 - [ ] 정렬 판정은 **content paragraph format 우선**(block.style.textAlign은 center로 남아도 렌더는 content 기준 — 오탐 주의).
+- [ ] **한 카드 안에서 텍스트 런(run)별로 색·웨이트·사이즈가 다른 경우**(예: 세션 일시의 날짜 vs 시간)는 content inline의 **런별 값**을 각각 Figma와 비교 — 카드 단일값(block.style)으로 뭉뚱그리면 부분 강조 diff 누락(2026-07-07 5025: 세션 일시 내부 텍스트 속성 미적용).

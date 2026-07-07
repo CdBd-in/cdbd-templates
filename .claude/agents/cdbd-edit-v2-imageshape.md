@@ -37,3 +37,4 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 ## ✅ 체크리스트 (2026-07-06 5025 교훈)
 - [ ] 이미지 비율은 **`block.style.aspectRatio`로 판정** — `block.shape='square'`가 있어도 `aspectRatio='auto'`면 원본비로 렌더(shape 필드에 속지 말 것, 실제 렌더 = aspectRatio).
 - [ ] 이미지 **크기(width %)**도 비교 — 로고가 Figma 소형(예 50px)인데 CdBd `width:100%`면 diff. 수정은 S4 '크기' 텍스트 필드.
+- [ ] **프로필 이미지 크기**(`block.innerStyle.width` %)가 Figma 대비 작지 않은지 별도 확인 — 프로필은 이미지 카드(`block.style.width`·패널 전용)와 달리 **F1이 `innerStyle.width` mutate로 직접 상향**(패널 아님). 사용자가 '더 키우기' 지시 시 현재값×배수로 조정(2026-07-07 5025: 프로필 이미지 확대 요청).

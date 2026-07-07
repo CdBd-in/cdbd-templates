@@ -27,3 +27,4 @@ description: CdBd 파이프라인 S3 — 텍스트 내용. 모든 카드의 텍�
 - [ ] 모든 텍스트 정렬 = Figma(일반 텍스트 left, 예약/버튼 center)를 **content paragraph format**으로 설정.
 - [ ] **multiCard 내부 텍스트**(제목열·요약열)도 정렬 확인 — 기본 center로 남기 쉬움, Figma가 left면 left.
 - [ ] 예약/버튼 카드 텍스트는 **프리뷰 contenteditable 실제 키보드**로(block.content mutate는 리버트).
+- [ ] **복합 정보 텍스트(예: 세션 일시 = 날짜/시간, 주소 = 도로명/상세)** 는 Figma가 여러 줄이면 요소 내 **linebreak로 줄 분리** — 짧아 보여도 한 줄로 뭉치지 말 것(2026-07-07 5025: '세션 일시' 줄바꿈 누락).
