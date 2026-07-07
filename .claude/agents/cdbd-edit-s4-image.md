@@ -26,3 +26,4 @@ description: CdBd 파이프라인 S4 — 이미지. 준비된 이미지 파일�
 - [ ] **프로필 이미지**: 아바타 placeholder 클릭 → onDrop 업로드 — 빈 상태 방치 ❌(생성물 준비: gpt-image-1 등).
 - [ ] **이미지 크기**(로고 소형화 등)는 이미지 패널 '크기' **텍스트 필드 입력** — 슬라이더 드래그·`block.style.width` mutate ❌.
 - [ ] 비율(원본/1:1/가로/세로)·정렬 = 패널 칩 fiber onClick.
+- [ ] **시안과 다른 이미지는 Figma 노드에서 3배수(3x) scale로 직접 export**한 파일로 교체(해상도 확보) — 로고 등 투명 필요 자산은 `download_assets` export URL(배경 합성으로 둥근 모서리 밖에 페이지색 박힘) 대신 **노드 자체 export → rawImages 경로**로 투명 보존(2026-07-07 5025: 로고·예배당·목사 이미지 시안과 상이 → 재export·교체).
