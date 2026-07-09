@@ -275,6 +275,7 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 ### 🚦 파이프라인 검증 게이트 함정 (2026-07-09, 필수)
 - **검증 에이전트가 전부 실패(null 반환) → `remaining=0`으로 오판해 `clean=true` (거짓 클린)** — 최종검증 루프에서 `remaining = re.filter(Boolean).flatMap(r=>r.diffs)`처럼 짜면, V-에이전트가 **weekly limit·529로 전부 죽어 null**이면 filter가 빈 배열 → diff 0 → clean으로 착각. **해결: 검증 성공 개수(`re.filter(Boolean).length`)가 기대치(=차원 수)에 못 미치면 clean 판정 보류(=미검증)**하고 리포트에 "검증 미완"으로 표기. 완료 보고 전 반드시 성공 검증 확인.
 - **weekly usage limit 도달 시 서브에이전트 전멸 + 메인루프는 생존** — 대량 병렬 서브에이전트(수백만 토큰)로 주간 한도 소진되면 이후 `agent()`가 "You've hit your weekly limit"로 실패. **메인 루프(직접 `$B`)는 계속 동작** → 남은 수정은 `card-driver.js` 주입 후 `blockById`+참조 mutate+`reorderCard(0,1)/(1,0)` 커밋으로 **직접 처리 가능**(서브에이전트 불필요). 리셋 시각 확인 후 재개 판단.
+- **🎨 카드 디테일 직접수정 3기법 (2026-07-09, 5067 검증)** — `blockById`+`block.style`/`innerStyle` mutate → reorder 커밋으로 재현: ① **짧은 중앙 구분선**(섹션 타이틀 하단 액센트) = `block.style.padding`의 좌우값 크게(예 `"20px 150px"` → 중앙 ~64px 라인). ② **카드 외부 인셋**(Q&A·위치 등 섹션 카드를 페이지 가장자리서 띄움) = `block.style.margin="0px 20px"` (⚠️ 렌더 폭 측정 시 outer row는 여전히 full-width로 잡힘 — 실제 인셋되는 건 배경 가진 **자식** 요소라 시각 확인이 정확). ③ **버튼 Outlined** = `block.innerStyle` `{background:"transparent", color:{버튼색}, borderColor:{버튼색}, borderWidth:"1.5px"}` (채움은 background={버튼색}·color={배경색}). ⚠️ **위치 안내 카드 내부 '지도 보기' 버튼은 Outlined 불가(채움 고정)** — 이 규칙은 별도 버튼 카드엔 미적용. ④ **한글 어절 중간 끊김 방지** = 문장 경계에 명시 개행(Lexical `content`에 `{type:"linebreak",version:1}` 삽입, 런 분할) — `wordBreak:"break-all"` 전역변경(에디터 미노출=비재현) 대신 개행으로 처리.
 
 | 함정 | 해결 |
 |---|---|
