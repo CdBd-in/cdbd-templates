@@ -272,8 +272,13 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 
 ## 🛠 자동화 트러블슈팅
 
+### 🚦 파이프라인 검증 게이트 함정 (2026-07-09, 필수)
+- **검증 에이전트가 전부 실패(null 반환) → `remaining=0`으로 오판해 `clean=true` (거짓 클린)** — 최종검증 루프에서 `remaining = re.filter(Boolean).flatMap(r=>r.diffs)`처럼 짜면, V-에이전트가 **weekly limit·529로 전부 죽어 null**이면 filter가 빈 배열 → diff 0 → clean으로 착각. **해결: 검증 성공 개수(`re.filter(Boolean).length`)가 기대치(=차원 수)에 못 미치면 clean 판정 보류(=미검증)**하고 리포트에 "검증 미완"으로 표기. 완료 보고 전 반드시 성공 검증 확인.
+- **weekly usage limit 도달 시 서브에이전트 전멸 + 메인루프는 생존** — 대량 병렬 서브에이전트(수백만 토큰)로 주간 한도 소진되면 이후 `agent()`가 "You've hit your weekly limit"로 실패. **메인 루프(직접 `$B`)는 계속 동작** → 남은 수정은 `card-driver.js` 주입 후 `blockById`+참조 mutate+`reorderCard(0,1)/(1,0)` 커밋으로 **직접 처리 가능**(서브에이전트 불필요). 리셋 시각 확인 후 재개 판단.
+
 | 함정 | 해결 |
 |---|---|
+| **OG 썸네일 = 이 에디터 버전에선 자동화 가능 (2026-07-09, 문서 정정)** — 구 "OG 썸네일 수동(OS 파일 다이얼로그)" 기록은 outdated | 썸네일 hover 오버레이 onClick=`L("metadata")` → 표준 이미지 라이브러리 모달(react-dropzone) 열림 → 함정23 `onDrop` + 셀 fiber `onClick`(적용, `memoizedProps.onClick` 호출)으로 완전 자동화. **영속은 발행(URL 생성) 필요** · **slug 하이픈 금지**(영문·숫자·`_`·`.`만 → `asera-gala`→`asera_gala`). 발행 시 크레딧 확인 모달(120C/월). |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
 | 멀티페이지 에디터 열고 바로 추출 | 마지막에 본 페이지가 열림 → **명시적으로 페이지 1 클릭 후 추출** |
 | 핀 카드 SVG 인덱스 기준 추출 | drag handle 사라져 인덱스 어긋남 → `rect[rx="4"]` 찾기 방식 |
