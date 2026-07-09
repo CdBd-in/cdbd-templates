@@ -25,7 +25,8 @@ const DIFF_SCHEMA = {
 //         'verify'= 검증(V)만 산출     (5025 같은 기존 에디터 QA — 읽기 위주)
 // ⚠️ 실행 전 세션 리로드 필요: 신규 에이전트(S1~S6·V2~V5·F2)는 세션 시작 시 로드된
 //    레지스트리에만 잡힘 → 파일 생성 직후 같은 세션에선 agentType 미해결. 리로드 후 실행.
-const a = args || {}
+let a = args || {}
+if (typeof a === 'string') { try { a = JSON.parse(a) } catch (e) { a = {} } }
 const editorId = a.editorId
 const figmaNodeId = a.figmaNodeId
 const figmaFileKey = a.figmaFileKey
