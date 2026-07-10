@@ -167,7 +167,7 @@ $B js "window.__cdbd.applyImage('img')"; sleep 2
 - `uploadImage`는 `window.__cdbdImg`(base64)를 읽어 `File` → `new DataTransfer()` → dropzone `onDrop({…,dataTransfer})` 직접 호출. OS 다이얼로그 우회.
 - `applyImage(filenameMatch)`: 라이브러리 이미지(alt/src 부분일치) 셀의 onClick으로 선택 → **같은 셀 안의** "적용하기" 클릭. ⚠️ "적용하기"는 모든 이미지 셀에 있으므로 셀 범위로 좁혀야 함.
 - OG 이미지·페이지 썸네일도 같은 패턴(트리거만 다름). 풀 원리: [[1-4-1. 에디터 페이지#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]]
-- 이미지 **생성·준비**(Thiings·OpenAI gpt-image-1·Flow·투명 PNG export)는 [[1-3. 이미지]] — 별개 단계.
+- 이미지 **생성·준비**(Thiings·OpenAI gpt-image-1·Flow·투명 PNG export)는 [[1-5. 이미지]] — 별개 단계.
 
 ## 페이지 색상 (배경·텍스트·버튼 hex) — swatch 클릭 없이
 
