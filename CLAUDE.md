@@ -38,7 +38,10 @@
   cat .env   # CDBD_EMAIL / CDBD_PASSWORD
   ```
 - **로그인 URL**: https://www.cdbd.in/login
-- **라이브 템플릿 URL**: `https://www.cdbd.in/templates/{slug}` (slug는 각 노트 frontmatter)
+- **라이브 템플릿 URL (2026-07-10 실측 정정)**: 카탈로그 `https://www.cdbd.in/templates` → 카테고리 `.../templates/{카테고리}` → **상세 `https://www.cdbd.in/templates/{카테고리}/{slug}`**
+  - 카테고리 경로: `invitation`(초대·예약) 등. 예: `https://www.cdbd.in/templates/invitation/gala-rsvp`
+  - ⚠️ **`/templates/{slug}`(카테고리 없이)는 존재하지 않는 경로 — 항상 404.** 활성 템플릿도 404이므로 **"404 = 미등록"으로 판단하면 안 됨**(과거 오판 사례). 등록·활성 여부는 **어드민 템플릿 목록**에서 확인할 것.
+  - 카탈로그·상세는 SSR 메타(og:title)가 항상 CdBd 기본값 → `curl | grep og:title`로 검증 불가. **브라우저 렌더 후 본문 텍스트로 확인.** (카드 문구는 Next.js flight payload라 `<script>` 안에도 있어 innerText 매칭 시 오탐 주의)
 - **어드민 URL**: https://cdbd-admin.vercel.app/login (동일 계정 로그인)
   - 신규 템플릿 등록: **템플릿 → 템플릿 관리 → 템플릿 추가**
 - **브라우저 자동화**: gstack `browse` (headless Chromium)
@@ -260,7 +263,7 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
   - **우측 하단 "스와이퍼 영역"** = 피그마 **주요기능-N** 박스 N개 → 각 항목: 제목 · 설명 · 표시 순서 · 아이콘 이미지(38×38) · 설명 이미지(360×300)
 
 ### 🔄 활성 템플릿 에디터 변경 → 라이브 반영 (2026-06-22, 필수)
-**이미 어드민 등록·활성화된 템플릿의 에디터에 변경(카드 추가/삭제·라벨·디자인·콘텐츠 등)이 생기면 자동 반영 안 됨.** 라이브 템플릿(`/templates/{slug}`)에 반영하려면 어드민에서 에디터 데이터를 다시 끌어와 저장해야 함:
+**이미 어드민 등록·활성화된 템플릿의 에디터에 변경(카드 추가/삭제·라벨·디자인·콘텐츠 등)이 생기면 자동 반영 안 됨.** 라이브 템플릿(`/templates/{카테고리}/{slug}`)에 반영하려면 어드민에서 에디터 데이터를 다시 끌어와 저장해야 함:
 1. 어드민 템플릿 수정 페이지 진입: `https://cdbd-admin.vercel.app/template/templates/{admin-uuid}/edit`
 2. **"에디터 데이터 갱신" 체크박스 ON** → 숨겨져 있던 **"에디터 ID" 입력 필드 + "갱신" 버튼**이 나타남
 3. **에디터 ID 재입력**(예: `4856`) → **"갱신" 버튼** 클릭 (최신 에디터 데이터 pull)
