@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-02T09:22:39Z",
+  "title": "Design System: CdBd 템플릿",
+  "extensions": {
+    "colorMeta": {
+      "theme-bg-default": { "role": "neutral", "displayName": "배경 {배경색} (기본)", "canonical": "#FAFAFA" },
+      "theme-ink-default": { "role": "neutral", "displayName": "텍스트 {텍스트색} (기본)", "canonical": "#292929" },
+      "theme-button-default": { "role": "primary", "displayName": "버튼 {버튼색} (기본)", "canonical": "#292929" },
+      "accent-natural": { "role": "primary", "displayName": "내추럴 틸", "canonical": "#078080" },
+      "accent-feminine": { "role": "primary", "displayName": "페미닌 딥로즈", "canonical": "#CF2F89" },
+      "accent-luxury": { "role": "primary", "displayName": "럭셔리 골드", "canonical": "#F9BC60" },
+      "accent-professional": { "role": "primary", "displayName": "프로페셔널 블루", "canonical": "#0B64FE" },
+      "accent-modern": { "role": "primary", "displayName": "모던 바이올렛", "canonical": "#7F5AF0" },
+      "accent-vivid": { "role": "primary", "displayName": "비비드 오렌지", "canonical": "#FF8906" },
+      "accent-vintage": { "role": "primary", "displayName": "빈티지 브론즈", "canonical": "#8C7851" },
+      "accent-fun": { "role": "primary", "displayName": "펀 옐로", "canonical": "#FFD803" },
+      "accent-dreamy": { "role": "primary", "displayName": "드리미 핑크", "canonical": "#F582AE" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "페이지 최상단 타이틀·로고 타이포. 무드 디스플레이 폰트, 강제 Bold." },
+      "headline": { "displayName": "Headline", "purpose": "섹션 제목. {버튼색} 포인트 컬러 액센트 허용." },
+      "body": { "displayName": "Body", "purpose": "본문. 국문은 한글 폰트 의무. 보조는 {텍스트색}×60%." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "scroll-reveal", "value": "위로 이동 / 확대 / 없음 (CdBd 헤더 애니메이션 설정)", "purpose": "카드 등장 스크롤 애니메이션. 페이지 단위 옵션, 토큰 아님." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "single-column", "purpose": "CdBd는 모바일 세로 1열 전용. 반응형 브레이크포인트 없음." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "채움 버튼. 배경={버튼색}, 텍스트={배경색} 고정 매핑. 높이 ~58px.",
+      "html": "<button class=\"ds-btn-primary\">신청하기</button>",
+      "css": ".ds-btn-primary { display: block; width: 100%; box-sizing: border-box; background: #292929; color: #FAFAFA; padding: 18px 24px; min-height: 58px; border: none; border-radius: 16px; font-family: Pretendard, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; transition: opacity 0.2s ease-out; } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:active { opacity: 0.8; }"
+    },
+    {
+      "name": "Q&A Text Input",
+      "kind": "input",
+      "refersTo": "qa-input",
+      "description": "주관식 입력. border 1px {버튼색}, radius 8px, placeholder {텍스트색}×50%. CdBd 시스템 자체 디자인.",
+      "html": "<input class=\"ds-qa-input\" type=\"text\" placeholder=\"답변을 입력하세요\" />",
+      "css": ".ds-qa-input { display: block; width: 100%; box-sizing: border-box; background: transparent; color: #292929; border: 1px solid #292929; border-radius: 8px; padding: 12px 10px; font-family: Pretendard, sans-serif; font-size: 16px; outline: none; transition: border-color 0.2s ease-out; } .ds-qa-input::placeholder { color: rgba(41,41,41,0.5); } .ds-qa-input:focus { border-color: #292929; box-shadow: 0 0 0 3px rgba(41,41,41,0.12); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "교체 가능한 카드 키트 (The Swappable Card Kit)",
+    "overview": "CdBd 템플릿의 모든 요소는 비디자이너 사업자가 복제·삭제·재색칠할 수 있는 카드다. 완성된 예술품이 아니라 사용자가 몇 분 만에 자기 것으로 바꾸는 출발점이다. 색은 실제 hex가 아니라 세 개의 테마 변수({배경색}·{텍스트색}·{버튼색})로 존재하며, 사용자가 9개 무드 중 하나를 고르면 팔레트와 폰트가 동시에 결정된다.",
+    "keyCharacteristics": [
+      "평면 카드 스택 — 그림자·중첩 컨테이너 없음. 깊이는 섹션 배경 띠와 여백으로만.",
+      "테마 변수 3역할 — {배경색}·{텍스트색}·{버튼색}. 한 번에 톤 교체.",
+      "9무드 통일 — 색과 폰트가 같은 무드 축에서 동시 결정.",
+      "1 카드 = 1 속성 — 카드를 지워도 레이아웃이 무너지지 않는다.",
+      "카드 default 신뢰 — 기본 제공 UI·동작은 디자인에서 재현하지 않는다."
+    ],
+    "rules": [
+      { "name": "The Theme-Variable Rule", "body": "색은 언제나 {배경색}·{텍스트색}·{버튼색} 세 역할로만 지정한다. 하드코딩 hex 금지 — 무드 하나를 바꾸면 페이지 전체가 따라와야 한다.", "section": "colors" },
+      { "name": "The 3.6:1 Rule", "body": "배경↔텍스트 대비 ≥ 3.6:1(햇빛·작은 화면 전제). 본문은 가능하면 4.5:1까지.", "section": "colors" },
+      { "name": "The Button-Contrast Rule", "body": "버튼 텍스트={배경색} 고정이므로 {버튼색}은 {배경색} 대비 ≥ 3.6:1이어야 글자가 읽힌다. 버튼-배경 대비는 별도 검증.", "section": "colors" },
+      { "name": "The Transparency-Not-Gray Rule", "body": "보조 텍스트는 별도 회색 hex가 아니라 {텍스트색}×N%. 섹션 강조 배경은 {버튼색}×N%.", "section": "colors" },
+      { "name": "The One-or-Two-Font Rule", "body": "한 페이지 = 1~2개 폰트. 기본 1개, 헤드라인+본문 분리 시에만 2개.", "section": "typography" },
+      { "name": "The Korean-Body Rule", "body": "국문 본문·캡션·버튼 텍스트는 반드시 한글 폰트. 영문 헤드라인 + 한글 본문 조합만 예외.", "section": "typography" },
+      { "name": "The Display-Never-Body Rule", "body": "헤드라인 전용(🆑) 19종은 본문 금지. 본문은 🅰/🅱 등급만.", "section": "typography" },
+      { "name": "The Flat-Stack Rule", "body": "페이지는 평면 카드 스택. box-shadow·글래스모피즘·중첩 카드 금지. 깊이는 섹션 배경 띠와 여백으로.", "section": "elevation" },
+      { "name": "The No-Auto-Gap Rule", "body": "자동 분배 레이아웃(SPACE_BETWEEN/AROUND) 없음. 간격은 카드 padding 또는 여백 카드로. 가로 N등분은 등폭 FILL.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do 색을 {배경색}·{텍스트색}·{버튼색} 세 변수로만 지정하고, 보조 톤은 투명도(×N%)로 파생시켜라.",
+      "Do 버튼 텍스트를 {배경색}으로 두고, {버튼색}이 {배경색} 대비 ≥3.6:1인지 별도로 검증하라.",
+      "Do 하나의 텍스트 카드에 하나의 속성만 담아 — 사용자가 카드를 지워도 균형이 유지되게.",
+      "Do 카드가 기본 제공하는 UI·동작(유튜브 플레이·별표·지도 임베드·갤러리 그리드)은 그대로 신뢰하고 다시 만들지 마라.",
+      "Do 모서리는 각진/둥근/원형, 여백은 0~40(2단위), 텍스트는 정해진 사이즈 스텝 안에서만 조정하라.",
+      "Do 국문 본문엔 한글 폰트를, 한 페이지엔 1~2개 폰트만 써라."
+    ],
+    "donts": [
+      "Don't 사용자가 못 바꾸는 편집 불가 장식(팬텀)을 넣지 마라 — 골드 라인·점선 테두리·노치·형광펜.",
+      "Don't 보조 텍스트를 별도 회색 hex로 지정하지 마라 — {텍스트색}×N% 투명도로.",
+      "Don't opacity-blended 유효색·픽셀 패딩 매칭·SemiBold/Medium 미세 구분 같은 시안 단계 미세 위계를 만들지 마라.",
+      "Don't 자동 분배 레이아웃이나 그림자·글래스·중첩 카드를 쓰지 마라.",
+      "Don't 헤드라인 전용 폰트로 본문을 쓰거나, 영문 폰트로 한글 본문을 쓰지 마라.",
+      "Don't 위치 카드 버튼을 outline으로, 예약카드 옵션을 '풀패키지' 같은 SKU 어휘로 부르지 마라.",
+      "Don't (impeccable 공통) side-stripe border·gradient text·장식용 글래스모피즘을 쓰지 마라."
+    ]
+  }
+}
