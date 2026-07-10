@@ -29,11 +29,13 @@ status: 적용 완료 (잔여: 인증 실제 값 확인)
 
 | 파일 | 슬롯 | 비율 | Figma imageHash |
 |---|---|---|---|
-| `hero-living-after.png` | P1 히어로 (3015:36) | 1:1 | `fdf9448359e1101d…` |
+| `hero-living-after.png` | P1 표지 갤러리 슬라이드 1 — 아파트 (3015:36) | 1:1 | `fdf9448359e1101d…` |
+| `cover-2-cafe.png` | P1 표지 갤러리 슬라이드 2 — 상업 공간 | 1:1 | `1899f58b61d419ef…` |
+| `cover-3-house.png` | P1 표지 갤러리 슬라이드 3 — 단독주택 | 1:1 | `47a71333f7b41180…` |
 | `profile-ceo.png` | P2 프로필 (3015:72) | 1:1 | `a742712943ae41b9…` |
-| `gallery-1-before.png` | P3 갤러리 슬라이드 1 (3031:55) | 3:2 | `4dd2fe855dcafe61…` |
-| `gallery-2-during.png` | P3 갤러리 슬라이드 2 | 3:2 | `28a067fe11215c17…` |
-| `gallery-3-after.png` | P3 갤러리 슬라이드 3 | 3:2 | `bd707ae7ae5f097d…` |
+| `gallery-1-before.png` | P3 `이미지 · 시공 전` (3031:54) | 3:2 | `4dd2fe855dcafe61…` |
+| `gallery-3-after.png` | P3 `이미지 · 시공 후` | 3:2 | `bd707ae7ae5f097d…` |
+| `gallery-2-during.png` | **미사용** (BEFORE/AFTER 복원으로 제외) | 3:2 | `28a067fe11215c17…` |
 
 - 생성: **gpt-image-1** `quality=medium`, 총 ~8,800 토큰 ≈ **$0.35** (히어로 1회 재생성 포함)
 - 갤러리는 카드 특성상 **1번 슬라이드만 노출** → 3장 전체는 P3 아래 `참고 · 갤러리 슬라이드 3장` 주석 프레임(3039:31)에 배치
