@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vip-dinner freeform 시안 A·B·C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:#d7d7db;
+    font-family:'Gothic A1',sans-serif;
+    display:flex;flex-wrap:wrap;gap:36px;justify-content:center;
+    padding:44px 24px 72px;
+  }
+  .col{display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .label{
+    font-family:'Gothic A1',sans-serif;font-size:13px;color:#2a2a2a;font-weight:700;
+    text-align:center;max-width:380px;line-height:1.55;
+  }
+  .label small{display:block;color:#777;font-weight:400;font-size:11px;margin-top:3px;}
+  .comp{
+    font-family:'Gothic A1',sans-serif;font-size:10.5px;color:#555;line-height:1.7;
+    max-width:380px;background:#ececed;border:1px solid #ccc;border-radius:6px;
+    padding:10px 12px;text-align:left;
+  }
+  .comp b{color:#111;}
+
+  .frame{width:380px;font-family:var(--font);background:var(--bg);color:var(--text);
+    box-shadow:0 10px 34px rgba(0,0,0,.20);overflow:hidden;}
+  .card{padding:24px;}
+  .tight{padding-top:6px;padding-bottom:6px;}
+  .first{padding-top:38px;}
+  .last{padding-bottom:40px;}
+
+  /* image placeholders (교체 가능 이미지 = 허용) */
+  .imgph{width:100%;display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'Gothic A1',sans-serif;font-size:11px;letter-spacing:.02em;line-height:1.6;
+    padding:16px;color:var(--bg);background:var(--btn);}
+  .imgph.seat{background:transparent;border:1px dashed color-mix(in srgb,var(--text) 45%,transparent);
+    color:var(--text);opacity:.75;}
+
+  /* interactive card mimic */
+  .btn{display:block;width:100%;text-align:center;padding:15px;font-size:16px;font-weight:700;
+    background:var(--btn);color:var(--bg);}
+  .field{border:1px solid color-mix(in srgb,var(--text) 55%,transparent);padding:13px 14px;
+    font-size:15px;color:var(--text);}
+  .opt{display:flex;align-items:center;gap:12px;padding:11px 0;font-size:16px;}
+  .box{width:18px;height:18px;border:1.5px solid var(--text);flex:0 0 auto;}
+  .box.r{border-radius:50%;}
+  hr.div{border:none;height:1px;background:color-mix(in srgb,var(--text) 30%,transparent);}
+</style>
+</head>
+<body>
+
+<!-- ============ 시안 A — Midnight Gala ============ -->
+<div class="col">
+  <div class="label">시안 A — 미드나잇 갈라 · 딥 네이비 #14141c · 나눔명조<small>이미지-리드 · 극장식 중앙정렬 · 세리프. 헤더 사진으로 압도 → 아래로 격식 있게 흐름.</small></div>
+  <div class="comp"><b>구성:</b> 헤더이미지 → 아이브로우/행사명(텍스트2) → 일시·장소(텍스트) → 호스트 프로필(강조·원형) → 구분선 → 드레스코드(라벨/값) → 좌석배치도(이미지) → 좌석안내(텍스트) → RSVP(예약) → 동반자·식사(Q&A) → 주차(텍스트) → 문의(버튼)</div>
+  <div class="frame" style="--bg:#14141c;--text:#f0ebdf;--btn:#c9a86a;--font:'Nanum Myeongjo',serif;">
+    <div class="imgph" style="aspect-ratio:3/2;">[헤더 이미지 3:2]<br>샹들리에 연회장 · 어두운 골드 톤</div>
+    <div class="card first" style="padding-bottom:4px;text-align:center;">
+      <div style="font-size:12px;letter-spacing:.28em;opacity:.6;">SEONGJIN GROUP</div>
+    </div>
+    <div class="card tight" style="text-align:center;">
+      <div style="font-size:27px;font-weight:800;line-height:1.35;">2025 연말<br>시상식 만찬</div>
+    </div>
+    <div class="card tight" style="text-align:center;padding-bottom:20px;">
+      <div style="font-size:17px;line-height:1.7;opacity:.9;">12월 19일 (금) 오후 6:30<br>그랜드 오키드 볼룸</div>
+    </div>
+    <div class="card" style="text-align:center;padding-top:8px;padding-bottom:8px;">
+      <div class="imgph" style="width:104px;height:104px;border-radius:50%;margin:0 auto 14px;font-size:10px;">호스트<br>프로필</div>
+      <div style="font-size:20px;font-weight:700;">이정환 부회장</div>
+      <div style="font-size:14px;opacity:.6;margin-top:5px;">성진그룹 · 초청 호스트</div>
+    </div>
+    <div class="card tight"><hr class="div"></div>
+    <div class="card tight" style="text-align:center;">
+      <div style="font-size:12px;letter-spacing:.2em;opacity:.55;">DRESS CODE</div>
+    </div>
+    <div class="card tight" style="text-align:center;padding-bottom:22px;">
+      <div style="font-size:18px;font-weight:500;">블랙 타이 · 이브닝 정장</div>
+    </div>
+    <div class="card" style="padding:8px 24px 6px;">
+      <div class="imgph seat" style="aspect-ratio:3/2;">[좌석 배치도 3:2]<br>번호 시각화 · 최대 10MB</div>
+    </div>
+    <div class="card tight" style="text-align:center;padding-bottom:20px;">
+      <div style="font-size:15px;opacity:.8;line-height:1.6;">위 배치도에서 귀하의<br>좌석 번호를 확인해 주세요</div>
+    </div>
+    <div class="card" style="padding-top:14px;padding-bottom:14px;">
+      <div style="font-size:12px;letter-spacing:.2em;opacity:.55;text-align:center;margin-bottom:14px;">RSVP · 참석 회신</div>
+      <div class="opt" style="justify-content:center;gap:10px;"><span class="box r"></span> 오후 6:00 입장 (정원 40)</div>
+      <div class="opt" style="justify-content:center;gap:10px;opacity:.55;"><span class="box r"></span> 오후 6:30 입장 (정원 40)</div>
+    </div>
+    <div class="card" style="padding-top:12px;padding-bottom:16px;">
+      <div style="font-size:12px;letter-spacing:.2em;opacity:.55;text-align:center;margin-bottom:12px;">동반자 · 식사 안내</div>
+      <div style="font-size:15px;margin-bottom:8px;">동반 인원</div>
+      <div class="opt"><span class="box"></span> 1명</div>
+      <div class="opt"><span class="box"></span> 2명</div>
+      <div style="font-size:15px;margin:12px 0 8px;">식사 옵션</div>
+      <div class="opt"><span class="box"></span> 한식 / 양식 / 채식 / 할랄</div>
+      <div class="field" style="margin-top:12px;opacity:.6;">알레르기·요청사항 (주관식)</div>
+    </div>
+    <div class="card tight" style="text-align:center;padding-top:14px;padding-bottom:22px;">
+      <div style="font-size:14px;opacity:.75;line-height:1.7;">발렛 파킹 제공 · 호텔 지하 2층<br>지하철 2호선 삼성역 5분</div>
+    </div>
+    <div class="card last" style="padding-top:6px;">
+      <div class="btn" style="border-radius:0;">비서실 직통 문의</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 시안 B — Ivory Letter ============ -->
+<div class="col">
+  <div class="label">시안 B — 아이보리 레터 · 웜 아이보리 #f4efe6 · 고운바탕<small>편지형 · 좌측정렬 · 호스트 인사 먼저. 개인적으로 초대받은 느낌 → 정보는 2단 카드로 정돈.</small></div>
+  <div class="comp"><b>구성:</b> 호스트 프로필(명함형) → 인사말(텍스트) → 헤더이미지 → 행사명(텍스트) → <b>일시│장소(2단 카드)</b> → 드레스코드(텍스트) → 좌석배치도(이미지) → 좌석안내(텍스트) → RSVP(예약) → 동반자·식사(Q&A) → 위치·주차(위치안내) → 문의(버튼)</div>
+  <div class="frame" style="--bg:#f4efe6;--text:#3a3128;--btn:#6b5847;--font:'Gowun Batang',serif;">
+    <div class="card first" style="padding-bottom:8px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div class="imgph" style="width:72px;height:72px;border-radius:50%;flex:0 0 auto;font-size:9px;">호스트</div>
+        <div>
+          <div style="font-size:19px;font-weight:700;">이정환 부회장</div>
+          <div style="font-size:13px;opacity:.6;margin-top:4px;">성진그룹 초청 호스트</div>
+        </div>
+      </div>
+    </div>
+    <div class="card tight" style="padding-bottom:22px;">
+      <div style="font-size:16px;line-height:1.85;opacity:.85;">한 해의 여정을 함께해 주신 귀하를<br>2025 연말 시상식 만찬에 정중히<br>모시고자 합니다.</div>
+    </div>
+    <div class="card" style="padding:0 24px;">
+      <div class="imgph" style="aspect-ratio:3/2;">[헤더 이미지 3:2]<br>따뜻한 촛불 연회 테이블</div>
+    </div>
+    <div class="card tight" style="padding-top:22px;padding-bottom:20px;">
+      <div style="font-size:26px;font-weight:700;line-height:1.4;">2025 연말 시상식 만찬</div>
+    </div>
+    <div class="card" style="padding-top:6px;padding-bottom:6px;">
+      <div style="display:flex;gap:0;border:1px solid color-mix(in srgb,var(--text) 25%,transparent);">
+        <div style="flex:1;padding:16px;border-right:1px solid color-mix(in srgb,var(--text) 25%,transparent);">
+          <div style="font-size:12px;letter-spacing:.12em;opacity:.55;margin-bottom:6px;">일시</div>
+          <div style="font-size:16px;font-weight:700;line-height:1.5;">12.19 (금)<br>18:30</div>
+        </div>
+        <div style="flex:1;padding:16px;">
+          <div style="font-size:12px;letter-spacing:.12em;opacity:.55;margin-bottom:6px;">장소</div>
+          <div style="font-size:16px;font-weight:700;line-height:1.5;">그랜드 오키드<br>볼룸</div>
+        </div>
+      </div>
+    </div>
+    <div class="card tight" style="padding-top:18px;padding-bottom:22px;">
+      <div style="font-size:14px;opacity:.7;">드레스 코드 — 블랙 타이 · 이브닝 정장</div>
+    </div>
+    <div class="card" style="padding:0 24px;">
+      <div class="imgph seat" style="aspect-ratio:3/2;">[좌석 배치도 3:2]<br>번호 시각화 · 최대 10MB</div>
+    </div>
+    <div class="card tight" style="padding-top:14px;padding-bottom:22px;">
+      <div style="font-size:15px;opacity:.8;line-height:1.65;">위 배치도에서 성함으로 좌석을 확인하실 수 있습니다.</div>
+    </div>
+    <div class="card" style="padding-top:8px;padding-bottom:14px;">
+      <div style="font-size:14px;font-weight:700;margin-bottom:14px;">참석 회신</div>
+      <div class="opt"><span class="box r"></span> 참석합니다 — 18:00 입장</div>
+      <div class="opt" style="opacity:.55;"><span class="box r"></span> 참석합니다 — 18:30 입장</div>
+      <div class="opt" style="opacity:.55;"><span class="box r"></span> 부득이 불참합니다</div>
+    </div>
+    <div class="card" style="padding-top:10px;padding-bottom:14px;">
+      <div style="font-size:14px;font-weight:700;margin-bottom:12px;">동반자 · 식사</div>
+      <div class="opt"><span class="box"></span> 동반 1명</div>
+      <div class="opt"><span class="box"></span> 동반 2명</div>
+      <div class="field" style="margin-top:10px;opacity:.6;">식사 옵션 · 알레르기 (자유 기재)</div>
+    </div>
+    <div class="card" style="padding-top:10px;padding-bottom:10px;">
+      <div class="imgph" style="aspect-ratio:2/1;opacity:.85;">[지도 임베드]<br>발렛 · 지하 2층 · 삼성역 5분</div>
+    </div>
+    <div class="card last" style="padding-top:16px;">
+      <div class="btn" style="border-radius:8px;">비서실 문의하기</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 시안 C — Monochrome Modern ============ -->
+<div class="col">
+  <div class="label">시안 C — 모노크롬 모던 · 화이트 #ffffff / 블랙 #111 · 고딕A1<small>타입-리드 · 하이컨트라스트 · 각진 · 산세리프. 거대한 날짜 타이포로 시작 → 절제된 그리드.</small></div>
+  <div class="comp"><b>구성:</b> 아이브로우(텍스트) → <b>거대 날짜(텍스트)</b> → 행사명(텍스트) → 헤더이미지(1:1) → 개요(텍스트) → 드레스코드(텍스트) → 호스트 프로필(기본·각진) → 좌석배치도(이미지) → 좌석안내(텍스트) → RSVP(예약) → 동반자·식사(Q&A) → 주차(텍스트) → 문의(버튼 2개 메뉴)</div>
+  <div class="frame" style="--bg:#ffffff;--text:#111111;--btn:#111111;--font:'Gothic A1',sans-serif;">
+    <div class="card first" style="padding-bottom:0;">
+      <div style="font-size:12px;letter-spacing:.3em;font-weight:700;opacity:.5;">SEONGJIN GROUP · AWARDS NIGHT</div>
+    </div>
+    <div class="card tight" style="padding-top:14px;padding-bottom:2px;">
+      <div style="font-size:64px;font-weight:900;line-height:.95;letter-spacing:-.02em;">12.19</div>
+    </div>
+    <div class="card tight" style="padding-bottom:24px;">
+      <div style="font-size:20px;font-weight:700;">2025 연말 시상식 만찬</div>
+    </div>
+    <div class="card" style="padding:0;">
+      <div class="imgph" style="aspect-ratio:1/1;">[헤더 이미지 1:1]<br>모노톤 흑백 연회장</div>
+    </div>
+    <div class="card" style="padding-top:22px;padding-bottom:6px;">
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-top:1px solid #111;">
+        <span style="opacity:.5;">일시</span><span style="font-weight:700;">금 18:30</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-top:1px solid #eee;">
+        <span style="opacity:.5;">장소</span><span style="font-weight:700;">그랜드 오키드 볼룸</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-top:1px solid #eee;border-bottom:1px solid #111;">
+        <span style="opacity:.5;">드레스</span><span style="font-weight:700;">블랙 타이</span></div>
+    </div>
+    <div class="card" style="padding-top:20px;padding-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="imgph" style="width:60px;height:60px;flex:0 0 auto;font-size:9px;">호스트</div>
+        <div>
+          <div style="font-size:16px;font-weight:700;">이정환 부회장</div>
+          <div style="font-size:13px;opacity:.5;margin-top:2px;">초청 호스트</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="padding:0;">
+      <div class="imgph seat" style="aspect-ratio:3/2;">[좌석 배치도 3:2]<br>번호 시각화 · 최대 10MB</div>
+    </div>
+    <div class="card tight" style="padding-top:16px;padding-bottom:24px;">
+      <div style="font-size:14px;opacity:.75;">→ 배치도에서 좌석 번호를 확인하세요</div>
+    </div>
+    <div class="card" style="padding-top:6px;padding-bottom:14px;">
+      <div style="font-size:13px;font-weight:900;letter-spacing:.05em;margin-bottom:14px;">RSVP</div>
+      <div class="opt"><span class="box r"></span> 18:00 입장 (정원 40)</div>
+      <div class="opt" style="opacity:.5;"><span class="box r"></span> 18:30 입장 (정원 40)</div>
+    </div>
+    <div class="card" style="padding-top:10px;padding-bottom:16px;">
+      <div style="font-size:13px;font-weight:900;letter-spacing:.05em;margin-bottom:12px;">동반자 · 식사</div>
+      <div class="opt"><span class="box"></span> 동반 1명</div>
+      <div class="opt"><span class="box"></span> 동반 2명</div>
+      <div class="opt"><span class="box"></span> 한식 / 양식 / 채식 / 할랄</div>
+      <div class="field" style="margin-top:12px;border-radius:0;opacity:.55;">알레르기·요청사항</div>
+    </div>
+    <div class="card tight" style="padding-top:12px;padding-bottom:22px;">
+      <div style="font-size:13px;opacity:.6;line-height:1.7;">발렛 지하 2층 · 삼성역 5번 출구 5분</div>
+    </div>
+    <div class="card last" style="padding-top:6px;">
+      <div style="display:flex;gap:8px;">
+        <div class="btn" style="border-radius:0;">전화 문의</div>
+        <div class="btn" style="border-radius:0;background:transparent;color:var(--text);border:1.5px solid var(--text);">문자 문의</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

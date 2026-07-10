@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vip-dinner 에디토리얼 3종 — Gilded Nocturne · Maison Ivoire · Éclat Noir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#c9c4bc;font-family:'Noto Sans KR',sans-serif;
+    display:flex;flex-wrap:wrap;gap:44px;justify-content:center;align-items:flex-start;
+    padding:52px 24px 80px;}
+  .col{display:flex;flex-direction:column;align-items:center;gap:16px;width:380px;}
+  .lab{font-size:13px;color:#2a2a2a;font-weight:700;text-align:center;line-height:1.5;}
+  .lab b{font-family:'EB Garamond',serif;font-weight:600;}
+  .lab small{display:block;color:#6a655d;font-weight:400;font-size:11px;margin-top:3px;}
+  .frame{width:380px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.24);}
+
+  /* =============== 01 Gilded Nocturne =============== */
+  .gn{background:#0f0f0c;color:#ece2cb;padding:40px 34px 40px;
+    font-family:'Noto Serif KR',serif;text-align:center;}
+  .gn .toprule{border-top:1px solid #c8a24e;border-bottom:1px solid #c8a24e;
+    padding:11px 0;margin-bottom:34px;}
+  .gn .brand{font-family:'Cormorant',serif;font-size:14px;letter-spacing:.42em;
+    color:#c8a24e;font-weight:600;padding-left:.42em;}
+  .gn .mono{width:74px;height:74px;border:1px solid #c8a24e;border-radius:50%;
+    margin:0 auto 30px;display:flex;align-items:center;justify-content:center;
+    font-family:'Cormorant',serif;font-size:30px;color:#d8b968;}
+  .gn .invit{font-family:'Cormorant',serif;font-style:italic;font-size:22px;
+    color:#cba85a;margin-bottom:26px;}
+  .gn .year{font-size:30px;font-weight:500;letter-spacing:.02em;color:#f2ead6;}
+  .gn .title{font-size:31px;font-weight:600;line-height:1.32;color:#f2ead6;margin-top:2px;}
+  .gn .sub{font-size:12.5px;letter-spacing:.34em;color:#c8a24e;margin-top:20px;padding-left:.34em;}
+  .gn .diamond{color:#c8a24e;font-size:11px;margin:22px 0 26px;}
+  .gn .imgbox{border:1px solid #c8a24e;aspect-ratio:4/3;
+    background:repeating-linear-gradient(135deg,#2c2a15 0 2px,#1c1b10 2px 13px);
+    display:flex;align-items:center;justify-content:center;color:#c9b06a;
+    font-size:11px;letter-spacing:.06em;margin-bottom:32px;}
+  .gn .k{font-size:11.5px;letter-spacing:.3em;color:#c8a24e;margin-bottom:8px;padding-left:.3em;}
+  .gn .v{font-size:16px;color:#ece2cb;margin-bottom:22px;line-height:1.5;}
+  .gn .goldrule{height:1px;background:#c8a24e;opacity:.65;margin:6px 0 22px;}
+  .gn .rsvp{font-size:13px;letter-spacing:.3em;color:#c8a24e;margin-bottom:10px;padding-left:.3em;}
+  .gn .note{font-size:13.5px;color:#cbbfa4;line-height:1.6;}
+
+  /* =============== 02 Maison Ivoire =============== */
+  .mi{background:#f0e8d7;color:#3a2e28;padding:0 0 40px;
+    font-family:'Nanum Myeongjo',serif;text-align:center;}
+  .mi .arch{margin:34px 34px 0;height:360px;border:1px solid rgba(110,32,41,.4);
+    border-radius:170px 170px 6px 6px;
+    background:repeating-linear-gradient(135deg,#e7ddc9 0 2px,#f0e8d7 2px 14px);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:#8a7d6a;font-size:11.5px;letter-spacing:.04em;padding:20px;}
+  .mi .inner{padding:0 40px;}
+  .mi .invit{font-family:'EB Garamond',serif;font-style:italic;font-size:26px;
+    color:#6e2029;margin:30px 0 16px;}
+  .mi .title{font-size:27px;font-weight:700;line-height:1.4;color:#2e2521;}
+  .mi .brand{font-size:12px;letter-spacing:.26em;color:#6e2029;margin-top:18px;padding-left:.26em;}
+  .mi .orn{color:#6e2029;font-size:15px;margin:22px 0;}
+  .mi .body{font-size:15.5px;line-height:1.95;color:#4a3d35;margin-bottom:30px;}
+  .mi .row{display:flex;align-items:baseline;text-align:left;
+    border-bottom:1px solid rgba(58,46,40,.2);padding:14px 0;}
+  .mi .row .rk{font-size:12px;letter-spacing:.14em;color:#6e2029;width:78px;flex:0 0 auto;}
+  .mi .row .rv{font-size:15.5px;color:#2e2521;line-height:1.5;font-weight:400;}
+  .mi .host{display:flex;align-items:center;gap:15px;text-align:left;margin:26px 0 8px;}
+  .mi .host .av{width:56px;height:56px;border-radius:50%;flex:0 0 auto;
+    border:1px solid rgba(110,32,41,.4);
+    background:repeating-linear-gradient(135deg,#e7ddc9 0 2px,#f0e8d7 2px 10px);
+    display:flex;align-items:center;justify-content:center;font-size:9px;color:#8a7d6a;}
+  .mi .host .hr{font-size:12.5px;color:#6a5c52;}
+  .mi .host .hn{font-size:18px;font-weight:700;color:#2e2521;margin-top:3px;}
+  .mi .host .hn span{font-size:13px;font-weight:400;color:#6a5c52;}
+  .mi .btn{background:#6e2029;color:#f0e8d7;font-family:'Noto Sans KR',sans-serif;
+    font-weight:700;font-size:15.5px;padding:16px;margin-top:20px;letter-spacing:.02em;}
+  .mi .fine{font-size:12.5px;color:#8a7d6a;margin-top:16px;}
+
+  /* =============== 03 Éclat Noir =============== */
+  .en{background:#faf8f4;color:#1c1c1c;font-family:'Noto Sans KR',sans-serif;}
+  .en .top{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;}
+  .en .top .bl{font-weight:700;font-size:13px;letter-spacing:.1em;}
+  .en .top .yr{font-family:'Anton',sans-serif;font-size:15px;color:#c2a15a;letter-spacing:.04em;}
+  .en .img{aspect-ratio:1/1;background:repeating-linear-gradient(135deg,#dedbd3 0 3px,#e9e6df 3px 16px);
+    display:flex;align-items:center;justify-content:center;color:#8f8a80;font-size:11.5px;letter-spacing:.05em;}
+  .en .plate{background:#faf8f4;padding:22px 28px 30px;}
+  .en .ann{font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.06em;color:#c2a15a;}
+  .en .big{font-family:'Anton',sans-serif;font-size:104px;line-height:.86;color:#151515;letter-spacing:-.01em;margin:2px 0 18px;}
+  .en .head{font-size:26px;font-weight:700;line-height:1.32;color:#151515;margin-bottom:22px;}
+  .en .grid{display:flex;border-top:1px solid #151515;border-bottom:1px solid #151515;}
+  .en .grid .c{flex:1;padding:14px 0;}
+  .en .grid .c+.c{border-left:1px solid #d8d4cc;padding-left:16px;}
+  .en .kk{font-family:'Anton',sans-serif;font-size:12px;letter-spacing:.08em;color:#8a857b;margin-bottom:7px;}
+  .en .vv{font-size:14.5px;font-weight:500;line-height:1.5;color:#1c1c1c;}
+  .en .venue{padding:16px 0 4px;border-bottom:1px solid #151515;}
+  .en .host{display:flex;align-items:center;gap:13px;padding:20px 0 6px;}
+  .en .host .av{width:46px;height:46px;flex:0 0 auto;
+    background:repeating-linear-gradient(135deg,#dedbd3 0 3px,#e9e6df 3px 12px);
+    display:flex;align-items:center;justify-content:center;font-size:9px;color:#8f8a80;}
+  .en .host .hr{font-size:12px;color:#8a857b;}
+  .en .host .hn{font-size:16px;font-weight:700;margin-top:2px;}
+  .en .btn{background:#151515;color:#faf8f4;font-weight:700;font-size:15.5px;
+    text-align:center;padding:16px;letter-spacing:.02em;margin-top:6px;}
+  .en .fine{font-size:12px;color:#8a857b;text-align:center;margin-top:14px;}
+</style>
+</head>
+<body>
+
+<!-- ===== 01 Gilded Nocturne ===== -->
+<div class="col">
+  <div class="lab">01 — <b>Gilded Nocturne</b>
+    <small>금박 세리모니 · 블랙그린 #0f0f0c + 골드 #c8a24e · Cormorant + 본명조</small></div>
+  <div class="frame gn">
+    <div class="toprule"><div class="brand">SEONGRIM GROUP</div></div>
+    <div class="mono">S</div>
+    <div class="invit">You are cordially invited</div>
+    <div class="year">2026</div>
+    <div class="title">연말 시상식 만찬</div>
+    <div class="sub">THE 38TH · 임원의 밤</div>
+    <div class="diamond">◆</div>
+    <div class="imgbox">연회장 무드컷 · 샹들리에 / 트로피 (4:3)</div>
+    <div class="k">DATE</div><div class="v">2026. 12. 19 (금) 오후 6:30</div>
+    <div class="k">VENUE</div><div class="v">그랜드 오리엔스 호텔 3층 그랜드볼룸</div>
+    <div class="k">ATTIRE</div><div class="v">블랙타이 · 이브닝 정장</div>
+    <div class="goldrule"></div>
+    <div class="rsvp">R.S.V.P</div>
+    <div class="note">비서실 · 12월 12일(금)까지 회신 부탁드립니다</div>
+  </div>
+</div>
+
+<!-- ===== 02 Maison Ivoire ===== -->
+<div class="col">
+  <div class="lab">02 — <b>Maison Ivoire</b>
+    <small>아이보리 레터프레스 · 크림 #f0e8d7 + 보르도 잉크 #6e2029 · 나눔명조 + EB Garamond</small></div>
+  <div class="frame mi">
+    <div class="arch">촛불 켜진 만찬 테이블 · 아치 크롭 (세로)</div>
+    <div class="inner">
+      <div class="invit">Invitation</div>
+      <div class="title">제38회 임원 만찬<br>· 시상식</div>
+      <div class="brand">SEONGRIM GROUP · 2026</div>
+      <div class="orn">❦</div>
+      <div class="body">지난 한 해 성림그룹과 함께 걸어주신<br>임원 여러분을 정중히 모십니다.<br>부디 참석하시어 자리를 빛내 주십시오.</div>
+      <div class="row"><div class="rk">DATE</div><div class="rv">2026. 12. 19 (금) 오후 6:30</div></div>
+      <div class="row"><div class="rk">VENUE</div><div class="rv">그랜드 오리엔스 호텔<br>3층 그랜드볼룸</div></div>
+      <div class="row"><div class="rk">ATTIRE</div><div class="rv">블랙타이 · 이브닝 정장</div></div>
+      <div class="host">
+        <div class="av">호스트</div>
+        <div><div class="hr">성림그룹 대표이사 회장</div><div class="hn">정도현 <span>드림</span></div></div>
+      </div>
+      <div class="btn">참석 회신하기</div>
+      <div class="fine">비서실 · 12월 12일(금)까지</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 03 Éclat Noir ===== -->
+<div class="col">
+  <div class="lab">03 — <b>Éclat Noir</b>
+    <small>모던 에디토리얼 · 모노톤 + 샴페인 악센트 #c2a15a · Anton + 본고딕</small></div>
+  <div class="frame en">
+    <div class="top"><div class="bl">SEONGRIM GROUP</div><div class="yr">2026</div></div>
+    <div class="img">연회장 와이드 (흑백)</div>
+    <div class="plate">
+      <div class="ann">THE 38TH ANNUAL GALA</div>
+      <div class="big">38</div>
+      <div class="head">연말 시상식<br>만찬에 초대합니다</div>
+      <div class="grid">
+        <div class="c"><div class="kk">DATE</div><div class="vv">2026. 12. 19 (금)<br>오후 6:30</div></div>
+        <div class="c"><div class="kk">DRESS</div><div class="vv">블랙타이<br>이브닝 정장</div></div>
+      </div>
+      <div class="venue"><div class="kk">VENUE</div><div class="vv">그랜드 오리엔스 호텔 3층 그랜드볼룸</div></div>
+      <div class="host">
+        <div class="av">호스트</div>
+        <div><div class="hr">HOST · 대표이사 회장</div><div class="hn">정도현</div></div>
+      </div>
+      <div class="btn">참석 회신 · RSVP</div>
+      <div class="fine">비서실 직통 · 12월 12일(금)까지</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

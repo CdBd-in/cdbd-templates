@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vip-dinner 시안 (Claude 단일안) — The Sanctuary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#dcdcdc;
+    font-family:-apple-system,'Segoe UI',sans-serif;
+    display:flex; flex-direction:column; align-items:center;
+    padding:40px 24px 64px; gap:14px;
+  }
+  .label {
+    font-size:13px; color:#333; font-weight:600; text-align:center;
+    max-width:380px; line-height:1.5;
+  }
+  .label small { display:block; color:#777; font-weight:400; font-size:11px; margin-top:3px; }
+
+  /* ---- mobile frame = 380px card width ---- */
+  .frame {
+    width:380px;
+    --bg:#371722; --text:#FFFFFF; --btn:#BBAB9B;
+    --kr:'Noto Serif KR',serif; --en:'Playfair Display',serif;
+    font-family:var(--kr);
+    background:var(--bg); color:var(--text);
+    box-shadow:0 8px 30px rgba(0,0,0,.22);
+  }
+
+  /* ---- cards ---- */
+  .card { padding:24px 28px; }             /* 좌우 28 · 내부여백감 */
+  .tight { padding:6px 28px; }             /* 분할 텍스트 블록 (상하 대칭) */
+  .first { padding:0; }                    /* 풀블리드 헤더 */
+  .last  { padding-bottom:44px; }          /* 마지막 카드 bottom 흡수 */
+
+  /* image placeholders (교체 가능 이미지 슬롯) */
+  .imgph {
+    width:100%; display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:-apple-system,sans-serif; font-size:11px;
+    letter-spacing:.02em; line-height:1.7; padding:16px;
+    color:var(--bg); background:var(--btn);
+  }
+  .imgph.header { aspect-ratio:3/2; }
+  .imgph.seat   { aspect-ratio:3/2; border:1px solid var(--btn); background:transparent; color:var(--text); opacity:.72; }
+  .imgph.avatar { width:104px; height:104px; border-radius:50%; margin:0 auto 16px; }
+
+  /* text blocks — 1속성 = 1블록 */
+  .eyebrow  { font-family:var(--en); font-size:14px; letter-spacing:.30em; text-transform:uppercase; opacity:.65; text-align:center; }
+  .event-en { font-family:var(--en); font-size:35px; font-weight:500; font-style:italic; line-height:1.2; text-align:center; }
+  .event-kr { font-size:20px; font-weight:500; line-height:1.5; text-align:center; opacity:.85; }
+  .caption  { font-size:12px; letter-spacing:.18em; text-transform:uppercase; opacity:.55; text-align:center; }
+  .value    { font-size:18px; font-weight:500; line-height:1.5; text-align:center; }
+  .body     { font-size:16px; font-weight:400; line-height:1.6; text-align:center; opacity:.80; }
+  .name     { font-size:22px; font-weight:600; text-align:center; }
+  .role     { font-size:14px; opacity:.60; text-align:center; margin-top:6px; }
+  .sec-title{ font-size:18px; font-weight:600; text-align:center; }
+
+  /* divider card (구분선 — 얇은 골드 헤어라인) */
+  .divider  { height:1px; background:var(--btn); opacity:.45; margin:0 28px; }
+  .spacer   { height:14px; }               /* 두께0 여백카드 (intra-section tight) */
+
+  /* reservation card (예약 = 슬롯 + 버튼 1개) */
+  .slot {
+    display:flex; justify-content:space-between; align-items:center;
+    border:1px solid var(--btn); padding:14px 16px; margin-bottom:10px; font-size:15px;
+  }
+  .slot.sel { background:var(--btn); color:var(--bg); }
+  .slot .cap { font-size:12px; opacity:.7; }
+  .slot.sel .cap { opacity:.85; }
+
+  /* Q&A (폼) — 마커는 시스템 기본값(16×16 체크박스) */
+  .q   { font-size:16px; font-weight:600; margin-bottom:12px; }
+  .opt { display:flex; align-items:center; gap:12px; margin-bottom:10px; font-size:16px; }
+  .chk { width:16px; height:16px; border:2px solid var(--btn); border-radius:4px; flex:0 0 auto; }
+  .chk.on { background:var(--btn); position:relative; }
+  .chk.on::after { content:''; position:absolute; left:4px; top:1px; width:4px; height:8px; border:solid var(--bg); border-width:0 2px 2px 0; transform:rotate(45deg); }
+  .qgap { height:32px; }                    /* Q&A 질문 간격 32 (CdBd 옵션값) */
+  .textin {
+    width:100%; border:1px solid var(--btn); border-radius:8px;
+    padding:12px; font-size:15px; background:transparent; color:var(--text); font-family:var(--kr);
+  }
+  .textin::placeholder { color:var(--text); opacity:.5; }
+
+  /* button card — 각진 0 (VIP 격식) · 버튼글자 = 배경색 */
+  .btn {
+    width:100%; text-align:center; padding:18px; font-size:16px; font-weight:600;
+    background:var(--btn); color:var(--bg); border:none; letter-spacing:.02em;
+    font-family:var(--kr); cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="label">vip-dinner — Claude 단일 시안
+  <small>The Sanctuary · 배경 #371722 · 텍스트 #FFFFFF · 버튼 #BBAB9B · 대비 16.05(AAA)<br>본문 본명조(Noto Serif KR) + 행사명만 Playfair Display · 버튼/모서리 각진(0) · 좌우 패딩 28</small></div>
+
+<div class="frame">
+
+  <!-- 1 이미지 — VIP 헤더 (풀블리드 3:2) -->
+  <div class="card first">
+    <div class="imgph header">[VIP 헤더 이미지]<br>어두운 연회장 · 샴페인 타워 · 골드 캔들 조명<br>가로 3:2 · 풀블리드(좌우 여백 0)</div>
+  </div>
+
+  <!-- 2 프로필 — 호스트 임원 (명함형·가운데·원형) -->
+  <div class="card" style="padding-top:34px;padding-bottom:28px;">
+    <div class="imgph avatar">[호스트<br>사진]</div>
+    <div class="name">이지웰</div>
+    <div class="role">아세라그룹 회장 · 주최</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3 텍스트(제목 그룹) — 영문 행사명 + 국문 부제 (블록 분리) -->
+  <div class="card tight" style="padding-top:32px;"><div class="eyebrow">You Are Invited</div></div>
+  <div class="spacer"></div>
+  <div class="card tight"><div class="event-en">Annual Gala 2025</div></div>
+  <div class="card tight" style="padding-bottom:28px;"><div class="event-kr">아세라그룹 연말 시상식 만찬</div></div>
+
+  <!-- 4 텍스트(본문) — 일시·장소·드레스코드 (속성 분리) -->
+  <div class="card tight" style="padding-top:8px;"><div class="caption">일시</div></div>
+  <div class="card tight"><div class="value">2025. 12. 19 (금) 오후 6:30</div></div>
+  <div class="spacer"></div>
+  <div class="card tight"><div class="caption">장소</div></div>
+  <div class="card tight"><div class="value">그랜드 하얏트 서울 · 3F 볼룸</div></div>
+  <div class="spacer"></div>
+  <div class="card tight"><div class="caption">드레스 코드</div></div>
+  <div class="card tight" style="padding-bottom:32px;"><div class="value">Black Tie</div></div>
+
+  <div class="divider"></div>
+
+  <!-- 5 이미지 — 좌석 배치도 (3:2 · 외부여백) -->
+  <div class="card" style="padding-top:28px;padding-bottom:14px;">
+    <div class="imgph seat">[좌석 배치도 이미지]<br>번호 매겨진 라운드 테이블 12개 도면<br>가로 3:2 · 판독 가능 해상도 (최대 10MB)</div>
+  </div>
+  <!-- 6 텍스트 — 좌석 안내 캡션 -->
+  <div class="card tight" style="padding-bottom:32px;"><div class="body">위 배치도에서 지정된 좌석 번호를 확인해 주세요.<br>변경이 필요하시면 아래 비서실로 연락 바랍니다.</div></div>
+
+  <div class="divider"></div>
+
+  <!-- 7 예약(RSVP) — 입장 시간 슬롯 + 정원 (버튼 1개) -->
+  <div class="card" style="padding-top:28px;">
+    <div class="sec-title" style="margin-bottom:18px;">입장 시간 선택</div>
+    <div class="slot"><span>오후 6:00 리셉션</span><span class="cap">잔여 12석</span></div>
+    <div class="slot sel"><span>오후 6:30 만찬 시작</span><span class="cap">잔여 8석</span></div>
+    <div class="slot"><span>오후 7:00 시상식</span><span class="cap">잔여 20석</span></div>
+    <button class="btn" style="margin-top:8px;">참석 회신하기</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8 Q&A(폼) — 동반자·식사·알레르기 -->
+  <div class="card" style="padding-top:28px;">
+    <div class="sec-title" style="margin-bottom:24px;">참석 정보</div>
+    <div class="q">동반자 인원 *</div>
+    <div class="opt"><span class="chk"></span>없음</div>
+    <div class="opt"><span class="chk on"></span>1명</div>
+    <div class="opt"><span class="chk"></span>2명</div>
+    <div class="qgap"></div>
+    <div class="q">식사 옵션 *</div>
+    <div class="opt"><span class="chk on"></span>양식 코스</div>
+    <div class="opt"><span class="chk"></span>한식 코스</div>
+    <div class="opt"><span class="chk"></span>채식(비건)</div>
+    <div class="opt"><span class="chk"></span>할랄</div>
+    <div class="qgap"></div>
+    <div class="q">알레르기 · 요청사항</div>
+    <input class="textin" placeholder="예: 갑각류 알레르기, 휠체어 좌석 요청">
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 9 텍스트 — 주차·교통 안내 (제목/본문 분리) -->
+  <div class="card tight" style="padding-top:28px;"><div class="sec-title">주차 및 교통</div></div>
+  <div class="card tight" style="padding-bottom:28px;"><div class="body">호텔 지하 주차장 3시간 무료 · 발렛 가능<br>지하철 3호선 신사역 4번 출구 도보 5분</div></div>
+
+  <!-- 10 버튼 — 비서실 직통 (마지막 카드) -->
+  <div class="card last"><button class="btn">비서실 문의 · 02-1234-5678</button></div>
+
+</div>
+
+</body>
+</html>
