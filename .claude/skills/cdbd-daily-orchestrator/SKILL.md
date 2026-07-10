@@ -56,7 +56,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 
 ## 절대 규칙
 
-- 🚫 **게시·활성화·어드민 등록 절대 안 함** — 끝선은 Figma 시안 + CdBd 에디터 *초안* + 상세페이지(피그마)까지. CdBd 에디터의 게시/활성화 토글, 라이브 노출(`/templates/{slug}`), 어드민(`cdbd-admin.vercel.app`) 등록은 **건드리지 않는다**. 그 결정은 사람이 아침 검수 후 직접 한다.
+- 🚫 **게시·활성화·어드민 등록 절대 안 함** — 끝선은 Figma 시안 + CdBd 에디터 *초안* + 상세페이지(피그마)까지. CdBd 에디터의 게시/활성화 토글, 라이브 노출(`/templates/{카테고리}/{slug}`), 어드민(`cdbd-admin.vercel.app`) 등록은 **건드리지 않는다**. 그 결정은 사람이 아침 검수 후 직접 한다.
 - 병렬 단계 금지(공유 리소스). 단계는 한 번에 하나.
 - 크레딧/이미지 생성은 드라이런에서 금지.
 - 이미지원 Flow 금지(OpenAI/Thiings/Unsplash만).
