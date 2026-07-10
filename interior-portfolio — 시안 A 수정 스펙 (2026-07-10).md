@@ -33,9 +33,19 @@ status: 적용 완료 (잔여: 인증 실제 값 확인)
 | `cover-2-cafe.png` | P1 표지 갤러리 슬라이드 2 — 상업 공간 | 1:1 | `1899f58b61d419ef…` |
 | `cover-3-house.png` | P1 표지 갤러리 슬라이드 3 — 단독주택 | 1:1 | `47a71333f7b41180…` |
 | `profile-ceo.png` | P2 프로필 (3015:72) | 1:1 | `a742712943ae41b9…` |
-| `gallery-1-before.png` | P3 `이미지 · 시공 전` (3031:54) | 3:2 | `4dd2fe855dcafe61…` |
-| `gallery-3-after.png` | P3 `이미지 · 시공 후` | 3:2 | `bd707ae7ae5f097d…` |
+| `gallery-1-before.png` | P3 거실 BEFORE (3031:54) | 3:2 | `4dd2fe855dcafe61…` |
+| `gallery-3-after.png` | P3 거실 AFTER | 3:2 | `bd707ae7ae5f097d…` |
+| `kitchen-before.png` | P3 주방 BEFORE | 3:2 | `27061e91ff1e622c…` |
+| `kitchen-after.png` | P3 주방 AFTER | 3:2 | `499d78e1e38defb3…` |
+| `bath-before.png` | P3 욕실 BEFORE | 3:2 | `a1c524f623491cc6…` |
+| `bath-after.png` | P3 욕실 AFTER | 3:2 | `8fbb1db0f2cc1686…` |
 | `gallery-2-during.png` | **미사용** (BEFORE/AFTER 복원으로 제외) | 3:2 | `28a067fe11215c17…` |
+
+**BEFORE/AFTER 쌍 = 동일 앵글 필수** — 프롬프트에 `shot from the identical straight-on angle facing X` + 창·가구 위치를 동일하게 서술해야 대비가 읽힘. 주방(창 좌측)·욕실(샤워부스 우측) 모두 1회 생성으로 앵글 일치.
+
+### 🖼 4단계 업로드 원칙 (2026-07-10 사용자 확인)
+- **사진(gpt-image-1 산출물) = 원본 PNG 그대로 CdBd 업로드.** Figma 2배 export ❌ — Figma의 324px 프레임에서 재추출하면 축소본을 확대하는 셈이라 화질 저하.
+- **Figma가 원본인 자산만 2배 투명 export** — P1 로고 워드마크, 6단계 어드민 자산(썸네일·아이콘·기능 이미지). `exportAsync(scale 2)` → `createImage` → 임시 RECT → `download_assets` **`rawImages[].url`** (`export.url` ❌ — 페이지 배경색 합성됨).
 
 - 생성: **gpt-image-1** `quality=medium`, 총 ~8,800 토큰 ≈ **$0.35** (히어로 1회 재생성 포함)
 - 갤러리는 카드 특성상 **1번 슬라이드만 노출** → 3장 전체는 P3 아래 `참고 · 갤러리 슬라이드 3장` 주석 프레임(3039:31)에 배치
