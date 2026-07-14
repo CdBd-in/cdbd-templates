@@ -151,3 +151,27 @@ $B goto https://www.cdbd.in/editor/5133; sleep 5
 $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
 ```
 
+---
+
+## 8부 — P1 실제 제작 진행 (2026-07-14 2차, editor 5133)
+
+### ✅ 완료
+1. **테마 색 적용** — 배경 `#F7F6F3` / 텍스트 `#191919` / 버튼 `#191919`. (card-driver `openColorPicker`→`setThemeColor` 한색씩→**수렴루프**(버튼이 stale로 되돌아감, 2.2s 대기 재설정)→`saveTheme`→`confirmThemeWarning`. 툴바 팔레트 아이콘=상단 아이콘 중 index 2 `data-tb=2`.)
+2. **P1 카드 10장 골격 + 순서 완성** — `텍스트·이미지·텍스트·갤러리·텍스트·텍스트·버튼·버튼·버튼·SNS`. 기본3장 재활용 + 텍스트 3복제·버튼 2복제 + 갤러리·SNS 추가 → **재정렬**.
+3. **텍스트 내용 전부 입력** — 영문라벨 `INTERIOR & CONSTRUCTION` · 스튜디오명 `YEOBAEK STUDIO` · 헤드라인 `여백을 채워,↵공간을 완성합니다`(줄바꿈=Enter) · 서브카피 `주거·상업 공간 설계와 시공, 12년의 기록` · 버튼 `회사 소개`/`시공 사례 보기`/`무료 견적 받기`.
+
+### 🧰 이번에 확보한 핵심 자동화 노하우 (다음 세션 재사용)
+- **멀티페이지 재정렬 함정**: card-driver `reorderCard`는 첫 sortable(=**페이지 목록**)을 잡아 `out-of-range(len=2)`. → **카드용 sortable(items.length≥7)만 타게팅하는 `window.__cardReorder(from,to)`를 인라인 정의**해서 해결. (18개 sortable 중 페이지=2·**카드=10**·SNS채널=6.)
+- **텍스트 내용 = 직접 mutate(block.content) + reorder 커밋은 ❌ 렌더 안 됨** (Lexical이 외부 변경 무시). → **모바일 프리뷰 contenteditable에 `$B fill` (키보드 시뮬레이션)** 이 정답. 편집영역은 `[contenteditable=true]` 중 좌측(x<480)만 y순 정렬해 id 부여 후 `$B fill`. 줄바꿈=focus→`$B press Enter`→`$B type`.
+- **툴바 아이콘 4개**(@911 설정·@961 애니메이션·@1011 **테마**·@1082 프리뷰). 테마 패널 열어야 `색상 더보기` 노출.
+
+### 🚧 P1 남은 작업 + 의존성
+1. **이미지 업로드 — 🔴 파일이 이 기기에 없음(블로커)**. 로고 1 + 표지 갤러리 3장(`hero-living-after.png`·`cover-2-cafe.png`·`cover-3-house.png`). `~/Desktop/interior-portfolio/`는 **다른 기기에만** 존재. → 그 폴더를 이 기기로 복사(AirDrop) 하거나 재생성 필요. (업로드=`openImageUpload`→`uploadImage`(onDrop)→`applyImage`.)
+2. **버튼 페이지 링크(회사소개→P2·시공사례→P3·무료견적→P4)** — 현재 에디터에 **페이지가 2개뿐**. P2~P4를 먼저 만들어야 링크 타깃 존재. (멀티페이지 =4페이지 필요.)
+3. **SNS 채널 URL** — 현재 homepage·instagram 토글만 ON. 실제 IG/블로그/유튜브 URL은 사용자 입력 필요(가상 유지도 가능).
+4. **카드 라벨(목적 이름)** 미설정(전부 기본 "텍스트/이미지/버튼").
+5. **디자인 패스(V1)**: 헤드라인 **본명조**·영문라벨/서브카피 크기·투명도 틴트(`{텍스트색}×55/60%`)·**버튼 각진**(현재 pill). = 내용과 분리된 후속 스타일 단계.
+
+### ➡️ P2·P3·P4
+아직 미착수. P2=소개(프로필+시공분야+진행과정4+자격면허3+실적지표) · P3=시공사례(갤러리 6장 등) · P4=문의(Q&A 무료견적폼+위치안내+상담채널2버튼). 매니페스트는 Figma `24O01lprp5i2ufl7CbZXXx` node 3015:26 각 섹션 참조(단 **플레이스홀더 텍스트** → 실제 문구는 vault 스펙 정본).
+
