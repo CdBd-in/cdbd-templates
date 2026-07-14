@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="e6758d1b-1b14-41f2-8da3-a49dd8e8564c"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<style>/* ============================================================
+   CdBd — Webfonts
+   Primary UI face: Pretendard (open-source Korean/Latin sans).
+   Loaded from jsDelivr. The compiler ships these @font-face rules.
+   ------------------------------------------------------------
+   SUBSTITUTION NOTE: the source .fig also uses "Indivisible"
+   (a licensed XYZ Type face) for a handful of small numeric
+   labels (~53 uses). No binary ships with the file, so
+   --font-numeric falls back to a tabular system stack. Provide
+   the real Indivisible woff2 to restore it.
+   ============================================================ */
+
+/* Pretendard — full weight range via the dynamic-subset stylesheet */
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url("9a86e21e-9546-43a1-981a-318c34c4af80") format('woff2'), url("8a97f3e0-bb8d-46ff-9050-4e0c13d30a33") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url("b4aa74fb-050b-4644-9142-2acdd4946604") format('woff2'), url("2715a9fb-c8a3-4921-9b37-170274e6b07e") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url("b8822b36-2b80-47cd-bd0d-6e8e706b03ec") format('woff2'), url("93af1326-655c-4944-900c-2a50051839ae") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url("09f84c4a-5b23-4d0a-97b1-376f5266907f") format('woff2'), url("ec4ac3a2-1f5b-45ee-978f-cd5c0aef0ffa") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url("6e639e64-9d0a-45f9-9a40-f5c4c26434ba") format('woff2'), url("875a01f8-034a-4388-b2cd-b038886d736b") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url("af15cefc-d7df-48ae-89f8-8542a0da7d62") format('woff2'), url("15c3a972-7fde-4d76-a24f-dd24af77f1a2") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url("0cc26e2b-8b82-4e85-8372-1f58ddd6de77") format('woff2'), url("0190a4c8-865a-4f91-aa9e-294c5f36afac") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url("3b214279-8577-4764-b3cc-f50000af6490") format('woff2'), url("e3fa5275-336f-498e-b098-9b9c6efb4010") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url("dbff27f4-4893-4970-8222-36c74e3d8b82") format('woff2'), url("b563d6f2-ad61-49af-a580-4829515d5ced") format('woff');
+}
+
+</style>
+<style>/* ============================================================
+   CdBd — Color tokens
+   Extracted verbatim from "CdBd Design System.fig" › Foundation › Color.
+   Base palette + semantic aliases. Values are the file's exact hexes.
+   ============================================================ */
+
+:root {
+  /* ---- Brand Primary (Violet) ---- */
+  --primary-default: #6C4CFF;
+  --primary-pale:    #E9E8FF;
+  --primary-light:   #B5A5FF;
+  --primary-medium:  #8F80FF;
+  --primary-shadow:  #6C4CFF;
+  --primary-dark:    #4418BF;
+  /* interaction stops (from Button/Basic states) */
+  --primary-hover:   #6030F7;
+  --primary-pressed: #4418BF;
+
+  /* ---- Brand Secondary (Mint) ---- */
+  --secondary-default: #3DF69B;
+  --secondary-dark:    #009D51;
+  --secondary-shadow:  #08DF76;
+  --secondary-light:   #9DFACD;
+  --secondary-pale:    #EEFFF6;
+
+  /* ---- Gray Scale (Black → White, 12 steps) ---- */
+  --black:    #141414;
+  --gray-900: #292929;
+  --gray-800: #3B3D3F;
+  --gray-700: #444648;
+  --gray-600: #505254; /* file specimen duplicated 700's hex; ramp value is #505254 */
+  --gray-500: #65696C;
+  --gray-400: #818588;
+  --gray-300: #A7ABAE;
+  --gray-200: #CCCFD1;
+  --gray-100: #DFE1E2;
+  --gray-50:  #EFF0F0;
+  --white:    #FFFFFF;
+
+  /* ---- System / Semantic status ---- */
+  /* Success — the source's System/Success swatches were unfilled
+     placeholder blues; mapped to the brand green ramp for usability. */
+  --success-normal: #009D51;
+  --success-shadow: #08DF76;
+  --success-medium: #3DF69B;
+  --success-light:  #9DFACD;
+  --success-pale:   #EEFFF6;
+
+  --info-normal: #368BF9;
+  --info-shadow: #1C6FDB;
+  --info-medium: #98B7FF;
+  --info-light:  #DDEAFC;
+  --info-pale:   #EFF3F6;
+
+  --danger-normal: #FC2C19;
+  --danger-shadow: #EA2918;
+  --danger-medium: #FF766A;
+  --danger-light:  #FFE7D1;
+  --danger-pale:   #FFF7F6;
+
+  /* ============================================================
+     Semantic aliases — reach for these in product UI.
+     ============================================================ */
+
+  /* Text / label */
+  --text-strong:     var(--black);     /* headings, primary label */
+  --text-normal:     var(--gray-900);  /* body */
+  --text-sub:        var(--gray-800);  /* secondary body */
+  --text-assistive:  var(--gray-400);  /* captions, hints */
+  --text-disabled:   var(--gray-300);
+  --text-on-primary: var(--white);
+  --text-brand:      var(--primary-default);
+  --text-link:       #222529;
+
+  /* Surfaces */
+  --surface-page:    var(--white);
+  --surface-subtle:  var(--gray-50);
+  --surface-muted:   rgba(239, 240, 240, 0.5);
+  --surface-inverse: var(--black);
+  --surface-brand:   var(--primary-default);
+  --surface-brand-pale: var(--primary-pale);
+
+  /* Lines / borders */
+  --border-default:  var(--gray-200);  /* #CCCFD1 — default control stroke */
+  --border-subtle:   var(--gray-100);
+  --border-strong:   var(--gray-300);
+  --border-focus:    var(--primary-default);
+
+  /* Elevation shadow colors */
+  --shadow-color:    rgba(0, 0, 0, 0.25);
+  --shadow-color-soft: rgba(0, 0, 0, 0.2);
+  --shadow-color-strong: rgba(0, 0, 0, 0.3);
+}
+</style>
+<style>/* ============================================================
+   CdBd — Typography tokens
+   Face: Pretendard. Sizes in px exactly as documented in the
+   .fig › Foundation › Typography spec table. Line-height 1.5 for
+   text, tighter for display. Numeric/mono uses --font-numeric.
+   ============================================================ */
+
+:root {
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  /* Substitute for licensed "Indivisible" (small numeric labels) */
+  --font-numeric: "Pretendard", ui-monospace, "SF Mono", "Roboto Mono", Menlo, monospace;
+
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500;  /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700;    /* @kind font */
+
+  /* Size ramp */
+  --size-display-1: 40px;
+  --size-display-2: 28px;
+  --size-heading-1: 24px;
+  --size-heading-2: 20px;
+  --size-heading-3: 18px;
+  --size-heading-4: 16px;
+  --size-heading-5: 14px;
+  --size-body-1: 16px;   /* Paragraph 1 */
+  --size-body-2: 14px;   /* Paragraph 2 */
+  --size-label: 14px;    /* Button / Subtitle */
+  --size-caption: 12px;
+  --size-unit: 12px;
+
+  --lh-tight: 1.2;  /* @kind font */
+  --lh-snug: 1.3;   /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+
+  --ls-tight: -0.02em;   /* buttons / labels */
+  --ls-normal: 0.006em;  /* long-form body */
+}
+
+/* ---- Type utility classes (used by specimen cards & kits) ---- */
+.cdbd-display-1 { font: var(--fw-bold) var(--size-display-1)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-display-2 { font: var(--fw-bold) var(--size-display-2)/var(--lh-snug) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-h1 { font: var(--fw-bold) var(--size-heading-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-h2 { font: var(--fw-bold) var(--size-heading-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-h3 { font: var(--fw-bold) var(--size-heading-3)/var(--lh-normal) var(--font-sans); }
+.cdbd-h4 { font: var(--fw-bold) var(--size-heading-4)/var(--lh-normal) var(--font-sans); }
+.cdbd-h5 { font: var(--fw-bold) var(--size-heading-5)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-1 { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-2 { font: var(--fw-medium) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-1 { font: var(--fw-medium) var(--size-body-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-2 { font: var(--fw-regular) var(--size-body-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-label { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-caption { font: var(--fw-medium) var(--size-caption)/var(--lh-normal) var(--font-sans); }
+.cdbd-unit { font: var(--fw-regular) var(--size-unit)/var(--lh-normal) var(--font-numeric); }
+</style>
+<style>/* ============================================================
+   CdBd — Layout tokens: spacing, radii, elevation.
+   Spacing & radii mirror the auto-layout gaps and corner radii
+   observed across the .fig (8-based rhythm; large container radii).
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---- Corner radii ---- */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;    /* buttons, inputs, menu items */
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;  /* swatch / small cards */
+  --radius-24: 24px;
+  --radius-40: 40px;  /* content cards */
+  --radius-48: 48px;  /* large panels */
+  --radius-full: 999px;
+
+  /* ---- Control heights ---- */
+  --control-h-sm: 32px;
+  --control-h-md: 38px;   /* default desktop button/input */
+  --control-h-lg: 44px;   /* mobile touch target */
+
+  /* ---- Elevation (alpha 0.2–0.3 per source shadow tokens) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+  /* Hairline inset ring used on "Gray" outlined controls */
+  --ring-default: inset 0 0 0 1px var(--border-default);
+  --ring-focus: inset 0 0 0 1px var(--border-focus);
+}
+</style>
+<style>/* ============================================================
+   CdBd — base reset + document defaults.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--text-normal);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brand mark helper: SVG uses currentColor, so color = mark color */
+.cdbd-mark { color: var(--primary-default); display: inline-flex; }
+.cdbd-mark--black { color: var(--black); }
+</style>
+<style>/* ============================================================
+   CdBd Design System — global stylesheet entry point.
+   Consumers link THIS file. It is an @import manifest only.
+   ============================================================ */
+
+/* ============================================================
+   CdBd — Webfonts
+   Primary UI face: Pretendard (open-source Korean/Latin sans).
+   Loaded from jsDelivr. The compiler ships these @font-face rules.
+   ------------------------------------------------------------
+   SUBSTITUTION NOTE: the source .fig also uses "Indivisible"
+   (a licensed XYZ Type face) for a handful of small numeric
+   labels (~53 uses). No binary ships with the file, so
+   --font-numeric falls back to a tabular system stack. Provide
+   the real Indivisible woff2 to restore it.
+   ============================================================ */
+
+/* Pretendard — full weight range via the dynamic-subset stylesheet */
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url("9a86e21e-9546-43a1-981a-318c34c4af80") format('woff2'), url("8a97f3e0-bb8d-46ff-9050-4e0c13d30a33") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url("b4aa74fb-050b-4644-9142-2acdd4946604") format('woff2'), url("2715a9fb-c8a3-4921-9b37-170274e6b07e") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url("b8822b36-2b80-47cd-bd0d-6e8e706b03ec") format('woff2'), url("93af1326-655c-4944-900c-2a50051839ae") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url("09f84c4a-5b23-4d0a-97b1-376f5266907f") format('woff2'), url("ec4ac3a2-1f5b-45ee-978f-cd5c0aef0ffa") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url("6e639e64-9d0a-45f9-9a40-f5c4c26434ba") format('woff2'), url("875a01f8-034a-4388-b2cd-b038886d736b") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url("af15cefc-d7df-48ae-89f8-8542a0da7d62") format('woff2'), url("15c3a972-7fde-4d76-a24f-dd24af77f1a2") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url("0cc26e2b-8b82-4e85-8372-1f58ddd6de77") format('woff2'), url("0190a4c8-865a-4f91-aa9e-294c5f36afac") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url("3b214279-8577-4764-b3cc-f50000af6490") format('woff2'), url("e3fa5275-336f-498e-b098-9b9c6efb4010") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url("dbff27f4-4893-4970-8222-36c74e3d8b82") format('woff2'), url("b563d6f2-ad61-49af-a580-4829515d5ced") format('woff');
+}
+
+
+/* ============================================================
+   CdBd — Color tokens
+   Extracted verbatim from "CdBd Design System.fig" › Foundation › Color.
+   Base palette + semantic aliases. Values are the file's exact hexes.
+   ============================================================ */
+
+:root {
+  /* ---- Brand Primary (Violet) ---- */
+  --primary-default: #6C4CFF;
+  --primary-pale:    #E9E8FF;
+  --primary-light:   #B5A5FF;
+  --primary-medium:  #8F80FF;
+  --primary-shadow:  #6C4CFF;
+  --primary-dark:    #4418BF;
+  /* interaction stops (from Button/Basic states) */
+  --primary-hover:   #6030F7;
+  --primary-pressed: #4418BF;
+
+  /* ---- Brand Secondary (Mint) ---- */
+  --secondary-default: #3DF69B;
+  --secondary-dark:    #009D51;
+  --secondary-shadow:  #08DF76;
+  --secondary-light:   #9DFACD;
+  --secondary-pale:    #EEFFF6;
+
+  /* ---- Gray Scale (Black → White, 12 steps) ---- */
+  --black:    #141414;
+  --gray-900: #292929;
+  --gray-800: #3B3D3F;
+  --gray-700: #444648;
+  --gray-600: #505254; /* file specimen duplicated 700's hex; ramp value is #505254 */
+  --gray-500: #65696C;
+  --gray-400: #818588;
+  --gray-300: #A7ABAE;
+  --gray-200: #CCCFD1;
+  --gray-100: #DFE1E2;
+  --gray-50:  #EFF0F0;
+  --white:    #FFFFFF;
+
+  /* ---- System / Semantic status ---- */
+  /* Success — the source's System/Success swatches were unfilled
+     placeholder blues; mapped to the brand green ramp for usability. */
+  --success-normal: #009D51;
+  --success-shadow: #08DF76;
+  --success-medium: #3DF69B;
+  --success-light:  #9DFACD;
+  --success-pale:   #EEFFF6;
+
+  --info-normal: #368BF9;
+  --info-shadow: #1C6FDB;
+  --info-medium: #98B7FF;
+  --info-light:  #DDEAFC;
+  --info-pale:   #EFF3F6;
+
+  --danger-normal: #FC2C19;
+  --danger-shadow: #EA2918;
+  --danger-medium: #FF766A;
+  --danger-light:  #FFE7D1;
+  --danger-pale:   #FFF7F6;
+
+  /* ============================================================
+     Semantic aliases — reach for these in product UI.
+     ============================================================ */
+
+  /* Text / label */
+  --text-strong:     var(--black);     /* headings, primary label */
+  --text-normal:     var(--gray-900);  /* body */
+  --text-sub:        var(--gray-800);  /* secondary body */
+  --text-assistive:  var(--gray-400);  /* captions, hints */
+  --text-disabled:   var(--gray-300);
+  --text-on-primary: var(--white);
+  --text-brand:      var(--primary-default);
+  --text-link:       #222529;
+
+  /* Surfaces */
+  --surface-page:    var(--white);
+  --surface-subtle:  var(--gray-50);
+  --surface-muted:   rgba(239, 240, 240, 0.5);
+  --surface-inverse: var(--black);
+  --surface-brand:   var(--primary-default);
+  --surface-brand-pale: var(--primary-pale);
+
+  /* Lines / borders */
+  --border-default:  var(--gray-200);  /* #CCCFD1 — default control stroke */
+  --border-subtle:   var(--gray-100);
+  --border-strong:   var(--gray-300);
+  --border-focus:    var(--primary-default);
+
+  /* Elevation shadow colors */
+  --shadow-color:    rgba(0, 0, 0, 0.25);
+  --shadow-color-soft: rgba(0, 0, 0, 0.2);
+  --shadow-color-strong: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   CdBd — Typography tokens
+   Face: Pretendard. Sizes in px exactly as documented in the
+   .fig › Foundation › Typography spec table. Line-height 1.5 for
+   text, tighter for display. Numeric/mono uses --font-numeric.
+   ============================================================ */
+
+:root {
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  /* Substitute for licensed "Indivisible" (small numeric labels) */
+  --font-numeric: "Pretendard", ui-monospace, "SF Mono", "Roboto Mono", Menlo, monospace;
+
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500;  /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700;    /* @kind font */
+
+  /* Size ramp */
+  --size-display-1: 40px;
+  --size-display-2: 28px;
+  --size-heading-1: 24px;
+  --size-heading-2: 20px;
+  --size-heading-3: 18px;
+  --size-heading-4: 16px;
+  --size-heading-5: 14px;
+  --size-body-1: 16px;   /* Paragraph 1 */
+  --size-body-2: 14px;   /* Paragraph 2 */
+  --size-label: 14px;    /* Button / Subtitle */
+  --size-caption: 12px;
+  --size-unit: 12px;
+
+  --lh-tight: 1.2;  /* @kind font */
+  --lh-snug: 1.3;   /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+
+  --ls-tight: -0.02em;   /* buttons / labels */
+  --ls-normal: 0.006em;  /* long-form body */
+}
+
+/* ---- Type utility classes (used by specimen cards & kits) ---- */
+.cdbd-display-1 { font: var(--fw-bold) var(--size-display-1)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-display-2 { font: var(--fw-bold) var(--size-display-2)/var(--lh-snug) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-h1 { font: var(--fw-bold) var(--size-heading-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-h2 { font: var(--fw-bold) var(--size-heading-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-h3 { font: var(--fw-bold) var(--size-heading-3)/var(--lh-normal) var(--font-sans); }
+.cdbd-h4 { font: var(--fw-bold) var(--size-heading-4)/var(--lh-normal) var(--font-sans); }
+.cdbd-h5 { font: var(--fw-bold) var(--size-heading-5)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-1 { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-2 { font: var(--fw-medium) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-1 { font: var(--fw-medium) var(--size-body-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-2 { font: var(--fw-regular) var(--size-body-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-label { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-caption { font: var(--fw-medium) var(--size-caption)/var(--lh-normal) var(--font-sans); }
+.cdbd-unit { font: var(--fw-regular) var(--size-unit)/var(--lh-normal) var(--font-numeric); }
+
+/* ============================================================
+   CdBd — Layout tokens: spacing, radii, elevation.
+   Spacing & radii mirror the auto-layout gaps and corner radii
+   observed across the .fig (8-based rhythm; large container radii).
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---- Corner radii ---- */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;    /* buttons, inputs, menu items */
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;  /* swatch / small cards */
+  --radius-24: 24px;
+  --radius-40: 40px;  /* content cards */
+  --radius-48: 48px;  /* large panels */
+  --radius-full: 999px;
+
+  /* ---- Control heights ---- */
+  --control-h-sm: 32px;
+  --control-h-md: 38px;   /* default desktop button/input */
+  --control-h-lg: 44px;   /* mobile touch target */
+
+  /* ---- Elevation (alpha 0.2–0.3 per source shadow tokens) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+  /* Hairline inset ring used on "Gray" outlined controls */
+  --ring-default: inset 0 0 0 1px var(--border-default);
+  --ring-focus: inset 0 0 0 1px var(--border-focus);
+}
+
+/* ============================================================
+   CdBd — base reset + document defaults.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--text-normal);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brand mark helper: SVG uses currentColor, so color = mark color */
+.cdbd-mark { color: var(--primary-default); display: inline-flex; }
+.cdbd-mark--black { color: var(--black); }
+
+</style>
+<script src="5c2c6ef8-fd2e-48b1-967e-fbb45a8e0835"></script>
+<script src="2be0e6aa-901b-49c1-9696-f67b28796078"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b7ae85b9-e2eb-4692-b908-2e28a908e965") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c58e213c-62cd-49a6-9898-801766d60c7a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("614ba658-bde0-4eed-bae1-bd72e59be8cd") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1938284a-80ca-47d8-a120-815eb1236dc9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f14a5107-24f1-4cd9-a3a1-5fb823f42466") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("494ba0c9-b98c-4525-99dd-473a49458532") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1938284a-80ca-47d8-a120-815eb1236dc9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f14a5107-24f1-4cd9-a3a1-5fb823f42466") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("494ba0c9-b98c-4525-99dd-473a49458532") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1938284a-80ca-47d8-a120-815eb1236dc9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f14a5107-24f1-4cd9-a3a1-5fb823f42466") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("494ba0c9-b98c-4525-99dd-473a49458532") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1938284a-80ca-47d8-a120-815eb1236dc9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f14a5107-24f1-4cd9-a3a1-5fb823f42466") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("494ba0c9-b98c-4525-99dd-473a49458532") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("81aa52d2-0262-412f-9425-60a0933733a8") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bc4fbc16-a29a-4d57-ba75-8c9afbc4097e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f2685974-fa1d-4256-a6d6-791b3e02158c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("81aa52d2-0262-412f-9425-60a0933733a8") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("bc4fbc16-a29a-4d57-ba75-8c9afbc4097e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("f2685974-fa1d-4256-a6d6-791b3e02158c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("81aa52d2-0262-412f-9425-60a0933733a8") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("bc4fbc16-a29a-4d57-ba75-8c9afbc4097e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("f2685974-fa1d-4256-a6d6-791b3e02158c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  html,body{margin:0;background:#e7e5ee;}
+  *{box-sizing:border-box;}
+  .scr::-webkit-scrollbar{display:none;}
+  .scr{-ms-overflow-style:none;scrollbar-width:none;}
+  a{text-decoration:none;color:inherit;}
+  a:hover{opacity:.82;}
+  input,textarea,button{font-family:"Pretendard",sans-serif;outline:none;}
+  input::placeholder,textarea::placeholder{opacity:.5;}
+  image-slot{display:block;}
+</style>
+</helmet>
+
+<section id="turn2" style="padding:64px 56px 40px;font-family:'Pretendard',sans-serif;">
+  <header style="max-width:1360px;margin:0 auto 48px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#0E0E10;color:#D7FF3E;padding:7px 14px;border-radius:999px;font:800 12px/1 'Pretendard';">시안 2a · 멀티페이지 구조</div>
+    <h1 style="margin:16px 0 8px;font:800 30px/1.15 'Pretendard';letter-spacing:-0.02em;color:#16141c;">멀티페이지 버전 — 표지 + 3 서브페이지</h1>
+    <p style="margin:0;max-width:820px;font:500 15px/1.6 'Pretendard';color:#5f5b6b;">색·폰트·카드 디자인은 <a href="#1a" style="color:#0E0E10;font-weight:700;">시안 1a</a>(Lime on Black)와 동일. 구조만 표지(목차) → ①소개·실적·자격 → ②프로그램·변화 → ③상담·연락처로 분할했습니다. <span style="color:#8a8697;">목차 버튼과 상단 헤더의 ← 표지 이동이 실제로 동작합니다 — 폰 안에서 탭해 보세요.</span></p>
+  </header>
+
+  <div style="display:flex;justify-content:center;">
+    <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(30,20,60,.35);flex-shrink:0;">
+      <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:20;pointer-events:none;"></div>
+      <div id="c2-scr" class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#0E0E10;">
+
+        <!-- ══════════ 표지 페이지 (목차) ══════════ -->
+        <sc-if value="{{ showCover }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="position:relative;z-index:5;height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#F5F5F5;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#F5F5F5"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(245,245,245,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#F5F5F5;border-radius:1px;"></div></div></div>
+          </div>
+          <!-- 카드: 이미지 (풀블리드 코치 히어로) -->
+          <image-slot id="c2-hero" shape="rect" fit="cover" placeholder="코치 히어로 사진" style="width:100%;height:420px;margin-top:-52px;"></image-slot>
+          <!-- 카드: 텍스트 (kicker) -->
+          <div style="padding:24px 24px 0;"><span style="font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.24em;color:#D7FF3E;">1:1 PERSONAL TRAINING COACH</span></div>
+          <!-- 카드: 텍스트 (이름 헤드라인) -->
+          <div style="padding:10px 24px 0;"><h1 style="margin:0;font-weight:800;font-size:45px;line-height:1.04;letter-spacing:-0.03em;color:#F5F5F5;">강태오<br>퍼스널 코치</h1></div>
+          <!-- 카드: 텍스트 (태그라인) -->
+          <div style="padding:16px 24px 0;"><p style="margin:0;font-size:20px;line-height:1.4;font-weight:600;color:#F5F5F5;">12주, 당신 인생 최고의 몸을 만듭니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목 — 목차) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">둘러보기</h2></div>
+          <!-- 카드: 메뉴 (목차 — 각 페이지로 이동) -->
+          <div style="padding:16px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <button sc-camel-on-click="{{ goP1 }}" style="width:100%;text-align:left;display:flex;align-items:center;gap:16px;padding:20px 18px;background:rgba(215,255,62,.1);border:none;cursor:pointer;"><span style="font-family:'Anton',sans-serif;font-size:26px;color:#D7FF3E;width:36px;flex:none;">01</span><span style="flex:1;"><span style="display:block;font-size:17px;font-weight:700;color:#F5F5F5;">코치 소개 · 실적</span><span style="display:block;margin-top:3px;font-size:13px;color:rgba(245,245,245,.55);">소개 스토리 · 경력 · 자격 · 수상</span></span><span style="color:#D7FF3E;font-weight:800;font-size:18px;">→</span></button>
+            <button sc-camel-on-click="{{ goP2 }}" style="width:100%;text-align:left;display:flex;align-items:center;gap:16px;padding:20px 18px;background:rgba(215,255,62,.1);border:none;cursor:pointer;"><span style="font-family:'Anton',sans-serif;font-size:26px;color:#D7FF3E;width:36px;flex:none;">02</span><span style="flex:1;"><span style="display:block;font-size:17px;font-weight:700;color:#F5F5F5;">코칭 프로그램 · 변화</span><span style="display:block;margin-top:3px;font-size:13px;color:rgba(245,245,245,.55);">프로그램 4종 · Before / After</span></span><span style="color:#D7FF3E;font-weight:800;font-size:18px;">→</span></button>
+            <button sc-camel-on-click="{{ goP3 }}" style="width:100%;text-align:left;display:flex;align-items:center;gap:16px;padding:20px 18px;background:rgba(215,255,62,.1);border:none;cursor:pointer;"><span style="font-family:'Anton',sans-serif;font-size:26px;color:#D7FF3E;width:36px;flex:none;">03</span><span style="flex:1;"><span style="display:block;font-size:17px;font-weight:700;color:#F5F5F5;">상담 · 체험 신청</span><span style="display:block;margin-top:3px;font-size:13px;color:rgba(245,245,245,.55);">무료 체험 신청 · 연락처 · 오시는 길</span></span><span style="color:#D7FF3E;font-weight:800;font-size:18px;">→</span></button>
+          </div>
+
+          <!-- 카드: 버튼 (대표 CTA) -->
+          <div style="padding:24px 24px 0;"><button sc-camel-on-click="{{ goP3 }}" style="width:100%;padding:18px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:17px;border:none;cursor:pointer;">무료 체험 수업 신청하기</button></div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:32px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">IG</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">YT</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(245,245,245,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+        </sc-if>
+
+        <!-- ══════════ 서브페이지 ① 코치 소개 · 실적 · 자격 ══════════ -->
+        <sc-if value="{{ showP1 }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <!-- 카드: 텍스트 (낮은 헤더 — 표지로 돌아가기) -->
+          <div style="position:sticky;top:0;z-index:10;background:#0E0E10;display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(245,245,245,.1);">
+            <button sc-camel-on-click="{{ goCover }}" style="display:flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;color:#D7FF3E;font-size:15px;font-weight:700;">← 표지</button>
+            <span style="flex:1;text-align:center;font-size:15px;font-weight:700;color:#F5F5F5;">코치 소개 · 실적</span>
+            <span style="width:48px;"></span>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:30px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">코치 소개</h2></div>
+          <!-- 카드: 텍스트 (상세 스토리) -->
+          <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.7;color:rgba(245,245,245,.78);">저는 '평생 유지되는 몸'을 만드는 코칭을 합니다. 무리한 단기 감량이 아니라, 회원 한 분 한 분의 체형·생활 패턴을 분석해 지속 가능한 루틴을 설계합니다. 특히 체형교정과 근력 향상이 필요한 초·중급자에게 강합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">숫자로 증명합니다</h2></div>
+          <!-- 카드: 2단 카드 (실적 1) -->
+          <div style="padding:16px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">8<span style="font-size:20px;">년</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">코칭 경력</div></div>
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">1,200<span style="font-size:20px;">명</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">누적 회원</div></div>
+          </div>
+          <!-- 카드: 2단 카드 (실적 2) -->
+          <div style="padding:12px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">300<span style="font-size:20px;">건</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">바디프로필 성공</div></div>
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">85<span style="font-size:20px;">%</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">재등록률</div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">경력 · 자격 · 수상</h2></div>
+          <!-- 카드: 텍스트 (자격 나열) -->
+          <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'17</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">생활스포츠지도사 2급 취득</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'19</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">NSCA-CPT 국제 퍼스널 트레이너 자격</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'21</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">머슬마니아 스포츠모델 부문 입상</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'22</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">스포츠의학 학사 · 재활 트레이닝 과정 수료</span></div>
+          </div>
+
+          <!-- 카드: 버튼 (다음 페이지 이동) -->
+          <div style="padding:36px 24px 0;"><button sc-camel-on-click="{{ goP2 }}" style="width:100%;padding:17px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">다음 · 코칭 프로그램 →</button></div>
+          <div style="padding:12px 24px 40px;"><button sc-camel-on-click="{{ goCover }}" style="width:100%;padding:15px;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:700;font-size:15px;border:none;cursor:pointer;">표지로 돌아가기</button></div>
+        </div>
+        </sc-if>
+
+        <!-- ══════════ 서브페이지 ② 코칭 프로그램 · 변화 ══════════ -->
+        <sc-if value="{{ showP2 }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <!-- 카드: 텍스트 (낮은 헤더) -->
+          <div style="position:sticky;top:0;z-index:10;background:#0E0E10;display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(245,245,245,.1);">
+            <button sc-camel-on-click="{{ goCover }}" style="display:flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;color:#D7FF3E;font-size:15px;font-weight:700;">← 표지</button>
+            <span style="flex:1;text-align:center;font-size:15px;font-weight:700;color:#F5F5F5;">코칭 프로그램 · 변화</span>
+            <span style="width:48px;"></span>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:30px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">코칭 프로그램</h2></div>
+          <!-- 카드: 상품 (프로그램 1) -->
+          <div style="padding:16px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c2-p1" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">1:1 퍼스널 트레이닝</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">완전 맞춤 프로그램 · 주 2~3회 · 체형교정 포함</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩1,320,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">24회 / 12주</span></div><button sc-camel-on-click="{{ goP3 }}" style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 2) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c2-p2" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">2:1 듀오 PT</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">친구·연인과 함께 · 주 2회 · 비용 부담 절반</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩880,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">16회 / 8주</span></div><button sc-camel-on-click="{{ goP3 }}" style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 3) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c2-p3" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">바디프로필 준비반</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">촬영 목표 12주 집중 · 식단·컨디셔닝 관리</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩1,800,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">36회 / 12주</span></div><button sc-camel-on-click="{{ goP3 }}" style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 4) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c2-p4" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">온라인 다이어트 코칭</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">비대면 식단·운동 관리 · 주 1회 피드백</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩320,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">4주</span></div><button sc-camel-on-click="{{ goP3 }}" style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:36px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">회원 변화 · Before / After</h2></div>
+          <!-- 카드: 갤러리 (2단 그리드) -->
+          <div style="padding:16px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="c2-g1" shape="rect" placeholder="변화 사진 1" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c2-g2" shape="rect" placeholder="변화 사진 2" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c2-g3" shape="rect" placeholder="변화 사진 3" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c2-g4" shape="rect" placeholder="변화 사진 4" style="width:100%;height:180px;"></image-slot>
+          </div>
+
+          <!-- 카드: 버튼 (다음 페이지 이동) -->
+          <div style="padding:36px 24px 0;"><button sc-camel-on-click="{{ goP3 }}" style="width:100%;padding:17px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">다음 · 상담 신청 →</button></div>
+          <div style="padding:12px 24px 40px;"><button sc-camel-on-click="{{ goCover }}" style="width:100%;padding:15px;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:700;font-size:15px;border:none;cursor:pointer;">표지로 돌아가기</button></div>
+        </div>
+        </sc-if>
+
+        <!-- ══════════ 서브페이지 ③ 상담 · 체험 신청 · 연락처 ══════════ -->
+        <sc-if value="{{ showP3 }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <!-- 카드: 텍스트 (낮은 헤더) -->
+          <div style="position:sticky;top:0;z-index:10;background:#0E0E10;display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(245,245,245,.1);">
+            <button sc-camel-on-click="{{ goCover }}" style="display:flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;color:#D7FF3E;font-size:15px;font-weight:700;">← 표지</button>
+            <span style="flex:1;text-align:center;font-size:15px;font-weight:700;color:#F5F5F5;">상담 · 체험 신청</span>
+            <span style="width:48px;"></span>
+          </div>
+
+          <!-- 카드: 질문과답변(Q&A) — 상담·체험 신청 폼 -->
+          <div style="padding:30px 24px 0;">
+            <div style="background:rgba(215,255,62,.07);padding:30px 22px;">
+              <h3 style="margin:0;text-align:center;font-size:22px;font-weight:800;color:#F5F5F5;">무료 체험 수업 신청</h3>
+              <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(245,245,245,.6);">1:1 상담 후 첫 수업은 무료로 진행돼요</p>
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                <input placeholder="이름" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;">
+                <input placeholder="연락처" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;">
+                <textarea placeholder="운동 목표 / 현재 상태" rows="3" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;resize:none;"></textarea>
+                <button style="margin-top:4px;padding:17px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청 제출하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:36px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">연락처</h2></div>
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:16px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="tel:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">전화 상담</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">010-0000-0000 →</span></a>
+            <a href="sms:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">문자 문의</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">카카오톡 상담</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">연락처 저장</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">vCard →</span></a>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:36px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">오시는 길</h2></div>
+          <!-- 카드: 위치안내 (지도 + 주소 + 길찾기 버튼) -->
+          <div style="padding:16px 24px 0;">
+            <div style="width:100%;height:180px;background:rgba(245,245,245,.06);display:flex;align-items:center;justify-content:center;color:rgba(245,245,245,.35);font-size:14px;">지도</div>
+            <p style="margin:16px 0 0;text-align:center;font-size:16px;line-height:1.5;color:#F5F5F5;">서울 강남구 테헤란로 152, 3층<br>TAEO STUDIO</p>
+            <button style="margin-top:14px;width:100%;padding:16px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">길찾기</button>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:32px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">IG</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">YT</a>
+          </div>
+          <div style="padding:26px 24px 0;"><button sc-camel-on-click="{{ goCover }}" style="width:100%;padding:15px;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:700;font-size:15px;border:none;cursor:pointer;">표지로 돌아가기</button></div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(245,245,245,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="turn1" style="padding:64px 56px 120px;font-family:'Pretendard',sans-serif;">
+  <header style="max-width:1360px;margin:0 auto 56px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#16141c;color:#fff;padding:7px 14px;border-radius:999px;font:700 12px/1 'Pretendard';letter-spacing:.02em;">coach-card · 프로필·명함 B②</div>
+    <h1 style="margin:16px 0 8px;font:800 34px/1.15 'Pretendard';letter-spacing:-0.02em;color:#16141c;">PT 코치 영업용 명함 — 3가지 구조 시안</h1>
+    <p style="margin:0;max-width:760px;font:500 15px/1.6 'Pretendard';color:#5f5b6b;">CdBd 카드 스택 · 모바일 세로 1컬럼 · 3토큰 색 모델(배경/텍스트/버튼) · 🔥 비비드 무드. 세 시안은 히어로 처리 · 정보 밀도 · 이미지 비중 · 카드 타입 · 섹션 순서에서 서로 다릅니다. <span style="color:#8a8697">이미지는 드래그로 교체 가능한 슬롯입니다.</span></p>
+  </header>
+
+  <div style="display:flex;flex-wrap:wrap;gap:72px;align-items:flex-start;justify-content:center;">
+
+    <!-- ============================ 시안 1a ============================ -->
+    <div id="1a" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#0E0E10;color:#D7FF3E;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 1a</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#16141c;">풀블리드 사진 히어로형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b6777;">사진 중심 · 조밀 · 큰 실적 수치(2단 카드) · 프로그램=상품 카드 · 각진 버튼 · Lime on Black</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(30,20,60,.35);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#0E0E10;">
+          <!-- status bar -->
+          <div style="position:relative;z-index:5;height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#F5F5F5;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#F5F5F5"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(245,245,245,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#F5F5F5;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 이미지 (풀블리드 코치 히어로) -->
+          <image-slot id="c1a-hero" shape="rect" fit="cover" placeholder="코치 히어로 사진 (운동복·역동적)" style="width:100%;height:470px;margin-top:-52px;"></image-slot>
+
+          <!-- 카드: 텍스트 (kicker) -->
+          <div style="padding:24px 24px 0;"><span style="font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.24em;color:#D7FF3E;">1:1 PERSONAL TRAINING COACH</span></div>
+          <!-- 카드: 텍스트 (이름 헤드라인) -->
+          <div style="padding:10px 24px 0;"><h1 style="margin:0;font-weight:800;font-size:45px;line-height:1.04;letter-spacing:-0.03em;color:#F5F5F5;">강태오<br>퍼스널 코치</h1></div>
+          <!-- 카드: 텍스트 (태그라인) -->
+          <div style="padding:16px 24px 0;"><p style="margin:0;font-size:20px;line-height:1.4;font-weight:600;color:#F5F5F5;">12주, 당신 인생 최고의 몸을 만듭니다.</p></div>
+
+          <!-- 카드: 메뉴 (연락처: 전화·문자·카카오톡·연락처 저장) -->
+          <div style="padding:26px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="tel:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">전화 상담</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">010-0000-0000 →</span></a>
+            <a href="sms:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">문자 문의</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">카카오톡 상담</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(215,255,62,.1);"><span style="font-size:16px;font-weight:600;color:#F5F5F5;">연락처 저장</span><span style="font-size:14px;font-weight:700;color:#D7FF3E;">vCard →</span></a>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:30px 24px;"><div style="height:1px;background:rgba(245,245,245,.14);"></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:0 24px;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">숫자로 증명합니다</h2></div>
+          <!-- 카드: 2단 카드 (실적 1) -->
+          <div style="padding:16px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">8<span style="font-size:20px;">년</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">코칭 경력</div></div>
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">1,200<span style="font-size:20px;">명</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">누적 회원</div></div>
+          </div>
+          <!-- 카드: 2단 카드 (실적 2) -->
+          <div style="padding:12px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">300<span style="font-size:20px;">건</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">바디프로필 성공</div></div>
+            <div style="flex:1;background:rgba(215,255,62,.1);padding:22px 16px;"><div style="font-family:'Anton',sans-serif;font-size:45px;line-height:.95;color:#D7FF3E;">85<span style="font-size:20px;">%</span></div><div style="margin-top:8px;font-size:14px;color:rgba(245,245,245,.6);">재등록률</div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">코치 소개</h2></div>
+          <!-- 카드: 텍스트 (상세 스토리) -->
+          <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.7;color:rgba(245,245,245,.78);">저는 '평생 유지되는 몸'을 만드는 코칭을 합니다. 무리한 단기 감량이 아니라, 회원 한 분 한 분의 체형·생활 패턴을 분석해 지속 가능한 루틴을 설계합니다. 특히 체형교정과 근력 향상이 필요한 초·중급자에게 강합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">회원 변화 · Before / After</h2></div>
+          <!-- 카드: 갤러리 (2단 그리드) -->
+          <div style="padding:16px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="c1a-g1" shape="rect" placeholder="변화 사진 1" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c1a-g2" shape="rect" placeholder="변화 사진 2" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c1a-g3" shape="rect" placeholder="변화 사진 3" style="width:100%;height:180px;"></image-slot>
+            <image-slot id="c1a-g4" shape="rect" placeholder="변화 사진 4" style="width:100%;height:180px;"></image-slot>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">코칭 프로그램</h2></div>
+          <!-- 카드: 상품 (프로그램 1) -->
+          <div style="padding:16px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c1a-p1" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">1:1 퍼스널 트레이닝</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">완전 맞춤 프로그램 · 주 2~3회 · 체형교정 포함</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩1,320,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">24회 / 12주</span></div><button style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 2) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c1a-p2" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">2:1 듀오 PT</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">친구·연인과 함께 · 주 2회 · 비용 부담 절반</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩880,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">16회 / 8주</span></div><button style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 3) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c1a-p3" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">바디프로필 준비반</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">촬영 목표 12주 집중 · 식단·컨디셔닝 관리</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩1,800,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">36회 / 12주</span></div><button style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 4) -->
+          <div style="padding:12px 24px 0;"><div style="background:rgba(215,255,62,.07);"><image-slot id="c1a-p4" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:18px;"><div style="font-size:18px;font-weight:700;color:#F5F5F5;">온라인 다이어트 코칭</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(245,245,245,.6);">비대면 식단·운동 관리 · 주 1회 피드백</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:22px;font-weight:800;color:#D7FF3E;">₩320,000</span><span style="font-size:12px;color:rgba(245,245,245,.5);">4주</span></div><button style="margin-top:14px;width:100%;padding:15px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청하기</button></div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">경력 · 자격 · 수상</h2></div>
+          <!-- 카드: 텍스트 (자격 나열) -->
+          <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'17</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">생활스포츠지도사 2급 취득</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'19</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">NSCA-CPT 국제 퍼스널 트레이너 자격</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'21</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">머슬마니아 스포츠모델 부문 입상</span></div>
+            <div style="display:flex;gap:14px;"><span style="flex:none;width:44px;font-family:'Anton',sans-serif;font-size:16px;color:#D7FF3E;">'22</span><span style="flex:1;font-size:15px;line-height:1.4;color:rgba(245,245,245,.82);">스포츠의학 학사 · 재활 트레이닝 과정 수료</span></div>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:30px 24px 6px;"><div style="height:1px;background:rgba(245,245,245,.14);"></div></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 상담·체험 신청 폼 -->
+          <div style="padding:24px;">
+            <div style="background:rgba(215,255,62,.07);padding:30px 22px;">
+              <h3 style="margin:0;text-align:center;font-size:22px;font-weight:800;color:#F5F5F5;">무료 체험 수업 신청</h3>
+              <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(245,245,245,.6);">1:1 상담 후 첫 수업은 무료로 진행돼요</p>
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                <input placeholder="이름" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;">
+                <input placeholder="연락처" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;">
+                <textarea placeholder="운동 목표 / 현재 상태" rows="3" style="padding:15px;border:none;background:rgba(245,245,245,.07);color:#F5F5F5;font-size:16px;resize:none;"></textarea>
+                <button style="margin-top:4px;padding:17px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">신청 제출하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:6px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#F5F5F5;">오시는 길</h2></div>
+          <!-- 카드: 위치안내 (지도 + 주소 + 길찾기 버튼) -->
+          <div style="padding:16px 24px 0;">
+            <div style="width:100%;height:180px;background:rgba(245,245,245,.06);display:flex;align-items:center;justify-content:center;color:rgba(245,245,245,.35);font-size:14px;">지도</div>
+            <p style="margin:16px 0 0;text-align:center;font-size:16px;line-height:1.5;color:#F5F5F5;">서울 강남구 테헤란로 152, 3층<br>TAEO STUDIO</p>
+            <button style="margin-top:14px;width:100%;padding:16px;background:#D7FF3E;color:#0E0E10;font-weight:800;font-size:16px;border:none;cursor:pointer;">길찾기</button>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:32px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">IG</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(215,255,62,.1);color:#D7FF3E;font-weight:800;font-size:14px;">YT</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(245,245,245,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ 시안 1b ============================ -->
+    <div id="1b" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#EB1F13;color:#fff;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 1b</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#16141c;">타이포 헤드라인형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b6777;">타이포 중심 · 여백 많은 긴 스크롤 · 실적=텍스트 · 프로그램=2단 번호 카드 · 자격=메뉴 · 이미지 절제 · 둥근16 · Red on White</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(30,20,60,.35);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+          <div style="height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#16161A;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#16161A"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(22,22,26,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#16161A;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (kicker) -->
+          <div style="padding:32px 26px 0;"><span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;letter-spacing:.14em;color:#EB1F13;">SINCE 2017 · PERSONAL TRAINER</span></div>
+          <!-- 카드: 텍스트 (헤드라인) -->
+          <div style="padding:18px 26px 0;"><h1 style="margin:0;font-weight:800;font-size:50px;line-height:1.02;letter-spacing:-0.035em;color:#16161A;">결과로<br>말하는<br>퍼스널 코칭</h1></div>
+          <!-- 카드: 텍스트 (태그라인) -->
+          <div style="padding:22px 26px 0;"><p style="margin:0;font-size:20px;line-height:1.45;font-weight:600;color:#16161A;">지난 8년, <span style="color:#EB1F13;">1,200명</span>의 회원이 강태오와 함께 몸을 바꿨습니다.</p></div>
+
+          <!-- 카드: 프로필 (아바타 + 이름 + 한 줄 소개) -->
+          <div style="padding:34px 26px 0;display:flex;align-items:center;gap:16px;">
+            <image-slot id="c1b-avatar" shape="circle" placeholder="프로필" style="width:76px;height:76px;flex:none;"></image-slot>
+            <div><div style="font-size:20px;font-weight:800;color:#16161A;">강태오 코치</div><div style="margin-top:4px;font-size:14px;color:rgba(22,22,26,.55);">1:1 맞춤 PT · 체형교정 전문</div></div>
+          </div>
+
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:28px 26px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="tel:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(235,31,19,.06);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#16161A;">전화 상담</span><span style="font-size:14px;font-weight:700;color:#EB1F13;">010-0000-0000 →</span></a>
+            <a href="sms:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(235,31,19,.06);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#16161A;">문자 문의</span><span style="font-size:14px;font-weight:700;color:#EB1F13;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(235,31,19,.06);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#16161A;">카카오톡 상담</span><span style="font-size:14px;font-weight:700;color:#EB1F13;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(235,31,19,.06);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#16161A;">연락처 저장</span><span style="font-size:14px;font-weight:700;color:#EB1F13;">vCard →</span></a>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:36px 26px;"><div style="height:1px;background:rgba(22,22,26,.1);"></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:0 26px;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#16161A;">대표 실적</h2></div>
+          <!-- 카드: 텍스트 (실적 나열) -->
+          <div style="padding:18px 26px 0;display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(22,22,26,.08);"><span style="font-size:16px;color:rgba(22,22,26,.6);">코칭 경력</span><span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;color:#16161A;">8년</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(22,22,26,.08);"><span style="font-size:16px;color:rgba(22,22,26,.6);">누적 회원</span><span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;color:#16161A;">1,200명</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(22,22,26,.08);"><span style="font-size:16px;color:rgba(22,22,26,.6);">바디프로필 성공</span><span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;color:#16161A;">300건</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;"><span style="font-size:16px;color:rgba(22,22,26,.6);">재등록률</span><span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;color:#EB1F13;">85%</span></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:40px 26px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#16161A;">코칭 프로그램</h2></div>
+          <!-- 카드: 2단 카드 (프로그램 1 — 번호 좌 FIXED 44 + 설명 우 FILL) -->
+          <div style="padding:20px 26px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Archivo',sans-serif;font-weight:900;font-size:35px;line-height:1;color:#EB1F13;">01</div><div style="flex:1;"><div style="font-size:18px;font-weight:700;color:#16161A;">1:1 퍼스널 트레이닝</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:rgba(22,22,26,.55);">완전 맞춤 프로그램 · 주 2~3회 · 체형교정 포함</div><div style="margin-top:8px;font-size:15px;font-weight:700;color:#16161A;">₩1,320,000 <span style="font-weight:500;color:rgba(22,22,26,.45);font-size:13px;">· 24회 / 12주</span></div></div></div>
+          <!-- 카드: 2단 카드 (프로그램 2) -->
+          <div style="padding:22px 26px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Archivo',sans-serif;font-weight:900;font-size:35px;line-height:1;color:#EB1F13;">02</div><div style="flex:1;"><div style="font-size:18px;font-weight:700;color:#16161A;">2:1 듀오 PT</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:rgba(22,22,26,.55);">친구·연인과 함께 · 주 2회 · 비용 부담 절반</div><div style="margin-top:8px;font-size:15px;font-weight:700;color:#16161A;">₩880,000 <span style="font-weight:500;color:rgba(22,22,26,.45);font-size:13px;">· 16회 / 8주</span></div></div></div>
+          <!-- 카드: 2단 카드 (프로그램 3) -->
+          <div style="padding:22px 26px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Archivo',sans-serif;font-weight:900;font-size:35px;line-height:1;color:#EB1F13;">03</div><div style="flex:1;"><div style="font-size:18px;font-weight:700;color:#16161A;">바디프로필 준비반</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:rgba(22,22,26,.55);">촬영 목표 12주 집중 · 식단·컨디셔닝 관리</div><div style="margin-top:8px;font-size:15px;font-weight:700;color:#16161A;">₩1,800,000 <span style="font-weight:500;color:rgba(22,22,26,.45);font-size:13px;">· 36회 / 12주</span></div></div></div>
+          <!-- 카드: 2단 카드 (프로그램 4) -->
+          <div style="padding:22px 26px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Archivo',sans-serif;font-weight:900;font-size:35px;line-height:1;color:#EB1F13;">04</div><div style="flex:1;"><div style="font-size:18px;font-weight:700;color:#16161A;">온라인 다이어트 코칭</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:rgba(22,22,26,.55);">비대면 식단·운동 관리 · 주 1회 피드백</div><div style="margin-top:8px;font-size:15px;font-weight:700;color:#16161A;">₩320,000 <span style="font-weight:500;color:rgba(22,22,26,.45);font-size:13px;">· 4주</span></div></div></div>
+
+          <!-- 카드: 버튼 (전체 프로그램 상담 CTA) -->
+          <div style="padding:28px 26px 0;"><button style="width:100%;padding:18px;background:#EB1F13;color:#FFFFFF;font-weight:800;font-size:17px;border:none;border-radius:16px;cursor:pointer;">프로그램 상담 신청하기</button></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:40px 26px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#16161A;">경력 · 자격 · 수상</h2></div>
+          <!-- 카드: 메뉴 (자격 나열) -->
+          <div style="padding:16px 26px 0;display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:rgba(22,22,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#16161A;">생활스포츠지도사 2급</span><span style="font-size:13px;font-weight:700;color:#EB1F13;">2017</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:rgba(22,22,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#16161A;">NSCA-CPT 국제 자격</span><span style="font-size:13px;font-weight:700;color:#EB1F13;">2019</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:rgba(22,22,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#16161A;">머슬마니아 스포츠모델 입상</span><span style="font-size:13px;font-weight:700;color:#EB1F13;">2021</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:rgba(22,22,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#16161A;">스포츠의학 학사</span><span style="font-size:13px;font-weight:700;color:#EB1F13;">2022</span></div>
+          </div>
+
+          <!-- 카드: 이미지 (스튜디오 현장 — 절제된 1장) -->
+          <div style="padding:36px 26px 0;">
+            <image-slot id="c1b-studio" shape="rounded" radius="16" placeholder="스튜디오 / 트레이닝 현장 사진" style="width:100%;height:220px;"></image-slot>
+            <p style="margin:12px 2px 0;font-size:13px;color:rgba(22,22,26,.5);">TAEO STUDIO · 강남 프라이빗 PT 룸</p>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:36px 26px 0;"><div style="height:1px;background:rgba(22,22,26,.1);"></div></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 상담·체험 신청 폼 -->
+          <div style="padding:36px 26px 0;">
+            <h3 style="margin:0;text-align:center;font-size:24px;font-weight:800;color:#16161A;">무료 체험 수업 신청</h3>
+            <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(22,22,26,.55);">1:1 상담 후 첫 수업은 무료로 진행돼요</p>
+            <div style="margin-top:22px;display:flex;flex-direction:column;gap:10px;">
+              <input placeholder="이름" style="padding:16px;border:none;background:rgba(22,22,26,.05);color:#16161A;font-size:16px;border-radius:16px;">
+              <input placeholder="연락처" style="padding:16px;border:none;background:rgba(22,22,26,.05);color:#16161A;font-size:16px;border-radius:16px;">
+              <textarea placeholder="운동 목표 / 현재 상태" rows="3" style="padding:16px;border:none;background:rgba(22,22,26,.05);color:#16161A;font-size:16px;border-radius:16px;resize:none;"></textarea>
+              <button style="margin-top:4px;padding:18px;background:#EB1F13;color:#FFFFFF;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">신청 제출하기</button>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:44px 26px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#16161A;">오시는 길</h2></div>
+          <!-- 카드: 위치안내 -->
+          <div style="padding:16px 26px 0;">
+            <div style="width:100%;height:180px;background:rgba(22,22,26,.05);border-radius:16px;display:flex;align-items:center;justify-content:center;color:rgba(22,22,26,.35);font-size:14px;">지도</div>
+            <p style="margin:16px 0 0;text-align:center;font-size:16px;line-height:1.5;color:#16161A;">서울 강남구 테헤란로 152, 3층<br>TAEO STUDIO</p>
+            <button style="margin-top:14px;width:100%;padding:16px;background:#EB1F13;color:#FFFFFF;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">길찾기</button>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:34px 26px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(235,31,19,.08);color:#EB1F13;font-weight:800;font-size:14px;border-radius:16px;">IG</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(235,31,19,.08);color:#EB1F13;font-weight:800;font-size:14px;border-radius:16px;">YT</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 26px 40px;text-align:center;font-size:12px;color:rgba(22,22,26,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ 시안 1c ============================ -->
+    <div id="1c" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#12061F;color:#FF2E93;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 1c</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#16141c;">변화 갤러리 몰입형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b6777;">Before/After 갤러리를 히어로로 · 예약 카드 강조 · 실적=2단 카드 · 프로그램=상품 · 원형 버튼 · Magenta on Deep</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(30,20,60,.35);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#12061F;">
+          <div style="height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#FBEFFF;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#FBEFFF"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(251,239,255,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#FBEFFF;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (kicker) -->
+          <div style="padding:26px 24px 0;text-align:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.2em;color:#FF2E93;">REAL TRANSFORMATION</span></div>
+          <!-- 카드: 텍스트 (헤드라인) -->
+          <div style="padding:12px 24px 0;text-align:center;"><h1 style="margin:0;font-weight:800;font-size:40px;line-height:1.1;letter-spacing:-0.03em;color:#FBEFFF;">직접 확인하세요<br>회원들의 변화</h1></div>
+
+          <!-- 카드: 갤러리 (Before/After 몰입 히어로) -->
+          <div style="padding:24px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="c1c-g1" shape="rounded" radius="20" placeholder="Before 1" style="width:100%;height:210px;"></image-slot>
+            <image-slot id="c1c-g2" shape="rounded" radius="20" placeholder="After 1" style="width:100%;height:210px;"></image-slot>
+            <image-slot id="c1c-g3" shape="rounded" radius="20" placeholder="Before 2" style="width:100%;height:210px;"></image-slot>
+            <image-slot id="c1c-g4" shape="rounded" radius="20" placeholder="After 2" style="width:100%;height:210px;"></image-slot>
+          </div>
+
+          <!-- 카드: 프로필 (아바타 + 이름 + 한 줄 소개) -->
+          <div style="padding:34px 24px 0;text-align:center;">
+            <image-slot id="c1c-avatar" shape="circle" placeholder="프로필" style="width:96px;height:96px;margin:0 auto;"></image-slot>
+            <div style="margin-top:14px;font-size:22px;font-weight:800;color:#FBEFFF;">강태오 코치</div>
+            <div style="margin-top:6px;font-size:15px;color:rgba(251,239,255,.6);">1:1 맞춤 PT · 체형교정 전문</div>
+          </div>
+          <!-- 카드: 텍스트 (태그라인) -->
+          <div style="padding:20px 24px 0;text-align:center;"><p style="margin:0;font-size:18px;line-height:1.5;font-weight:600;color:#FBEFFF;">12주면 충분합니다.<br>당신의 Before/After를 만들어 드릴게요.</p></div>
+
+          <!-- 카드: 2단 카드 (실적 1) -->
+          <div style="padding:30px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(255,46,147,.13);border-radius:20px;padding:22px 14px;text-align:center;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:35px;line-height:1;color:#FF2E93;">300</div><div style="margin-top:8px;font-size:13px;color:rgba(251,239,255,.6);">바디프로필 성공</div></div>
+            <div style="flex:1;background:rgba(255,46,147,.13);border-radius:20px;padding:22px 14px;text-align:center;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:35px;line-height:1;color:#FF2E93;">85%</div><div style="margin-top:8px;font-size:13px;color:rgba(251,239,255,.6);">재등록률</div></div>
+          </div>
+          <!-- 카드: 2단 카드 (실적 2) -->
+          <div style="padding:12px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(255,46,147,.13);border-radius:20px;padding:22px 14px;text-align:center;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:35px;line-height:1;color:#FF2E93;">8년</div><div style="margin-top:8px;font-size:13px;color:rgba(251,239,255,.6);">코칭 경력</div></div>
+            <div style="flex:1;background:rgba(255,46,147,.13);border-radius:20px;padding:22px 14px;text-align:center;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:35px;line-height:1;color:#FF2E93;">1,200</div><div style="margin-top:8px;font-size:13px;color:rgba(251,239,255,.6);">누적 회원</div></div>
+          </div>
+
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:30px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="tel:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 20px;background:rgba(255,46,147,.11);border-radius:999px;"><span style="font-size:16px;font-weight:600;color:#FBEFFF;">전화 상담</span><span style="font-size:14px;font-weight:700;color:#FF2E93;">010-0000-0000 →</span></a>
+            <a href="sms:01000000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 20px;background:rgba(255,46,147,.11);border-radius:999px;"><span style="font-size:16px;font-weight:600;color:#FBEFFF;">문자 문의</span><span style="font-size:14px;font-weight:700;color:#FF2E93;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 20px;background:rgba(255,46,147,.11);border-radius:999px;"><span style="font-size:16px;font-weight:600;color:#FBEFFF;">카카오톡 상담</span><span style="font-size:14px;font-weight:700;color:#FF2E93;">→</span></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:17px 20px;background:rgba(255,46,147,.11);border-radius:999px;"><span style="font-size:16px;font-weight:600;color:#FBEFFF;">연락처 저장</span><span style="font-size:14px;font-weight:700;color:#FF2E93;">vCard →</span></a>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:32px 24px;"><div style="height:1px;background:rgba(251,239,255,.13);"></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:0 24px;text-align:center;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#FBEFFF;">체험 수업 예약</h2></div>
+          <!-- 카드: 예약 -->
+          <div style="padding:18px 24px 0;">
+            <div style="background:rgba(255,46,147,.09);border-radius:24px;padding:22px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:16px;font-weight:700;color:#FBEFFF;">2026년 7월</span><span style="font-size:13px;color:rgba(251,239,255,.5);">◀  ▶</span></div>
+              <div style="margin-top:16px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;">
+                <span style="font-size:11px;color:rgba(251,239,255,.4);">일</span><span style="font-size:11px;color:rgba(251,239,255,.4);">월</span><span style="font-size:11px;color:rgba(251,239,255,.4);">화</span><span style="font-size:11px;color:rgba(251,239,255,.4);">수</span><span style="font-size:11px;color:rgba(251,239,255,.4);">목</span><span style="font-size:11px;color:rgba(251,239,255,.4);">금</span><span style="font-size:11px;color:rgba(251,239,255,.4);">토</span>
+                <span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.75);">13</span><span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.75);">14</span><span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.75);">15</span><span style="padding:7px 0;font-size:13px;color:#12061F;background:#FF2E93;border-radius:999px;font-weight:800;">16</span><span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.75);">17</span><span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.75);">18</span><span style="padding:7px 0;font-size:13px;color:rgba(251,239,255,.3);">19</span>
+              </div>
+              <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;">
+                <span style="padding:9px 16px;font-size:13px;border-radius:999px;background:rgba(251,239,255,.08);color:rgba(251,239,255,.75);">10:00</span>
+                <span style="padding:9px 16px;font-size:13px;border-radius:999px;background:#FF2E93;color:#12061F;font-weight:700;">14:00</span>
+                <span style="padding:9px 16px;font-size:13px;border-radius:999px;background:rgba(251,239,255,.08);color:rgba(251,239,255,.75);">19:00</span>
+                <span style="padding:9px 16px;font-size:13px;border-radius:999px;background:rgba(251,239,255,.08);color:rgba(251,239,255,.75);">20:00</span>
+              </div>
+              <button style="margin-top:20px;width:100%;padding:16px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">체험 수업 예약하기</button>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;text-align:center;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#FBEFFF;">코칭 프로그램</h2></div>
+          <!-- 카드: 상품 (프로그램 1) -->
+          <div style="padding:18px 24px 0;"><div style="background:rgba(255,46,147,.08);border-radius:24px;overflow:hidden;"><image-slot id="c1c-p1" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:20px;"><div style="font-size:18px;font-weight:700;color:#FBEFFF;">1:1 퍼스널 트레이닝</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(251,239,255,.6);">완전 맞춤 · 주 2~3회 · 체형교정 포함</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:20px;font-weight:800;color:#FF2E93;">₩1,320,000</span><span style="font-size:12px;color:rgba(251,239,255,.5);">24회 / 12주</span></div><button style="margin-top:14px;width:100%;padding:14px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 2) -->
+          <div style="padding:14px 24px 0;"><div style="background:rgba(255,46,147,.08);border-radius:24px;overflow:hidden;"><image-slot id="c1c-p2" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:20px;"><div style="font-size:18px;font-weight:700;color:#FBEFFF;">바디프로필 준비반</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(251,239,255,.6);">촬영 목표 12주 집중 · 식단·컨디셔닝 관리</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:20px;font-weight:800;color:#FF2E93;">₩1,800,000</span><span style="font-size:12px;color:rgba(251,239,255,.5);">36회 / 12주</span></div><button style="margin-top:14px;width:100%;padding:14px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 3) -->
+          <div style="padding:14px 24px 0;"><div style="background:rgba(255,46,147,.08);border-radius:24px;overflow:hidden;"><image-slot id="c1c-p3" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:20px;"><div style="font-size:18px;font-weight:700;color:#FBEFFF;">2:1 듀오 PT</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(251,239,255,.6);">친구·연인과 함께 · 주 2회 · 비용 부담 절반</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:20px;font-weight:800;color:#FF2E93;">₩880,000</span><span style="font-size:12px;color:rgba(251,239,255,.5);">16회 / 8주</span></div><button style="margin-top:14px;width:100%;padding:14px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">신청하기</button></div></div></div>
+          <!-- 카드: 상품 (프로그램 4) -->
+          <div style="padding:14px 24px 0;"><div style="background:rgba(255,46,147,.08);border-radius:24px;overflow:hidden;"><image-slot id="c1c-p4" shape="rect" placeholder="프로그램 사진" style="width:100%;height:150px;"></image-slot><div style="padding:20px;"><div style="font-size:18px;font-weight:700;color:#FBEFFF;">온라인 다이어트 코칭</div><div style="margin-top:6px;font-size:14px;line-height:1.5;color:rgba(251,239,255,.6);">비대면 식단·운동 관리 · 주 1회 피드백</div><div style="margin-top:14px;display:flex;align-items:baseline;justify-content:space-between;"><span style="font-size:20px;font-weight:800;color:#FF2E93;">₩320,000</span><span style="font-size:12px;color:rgba(251,239,255,.5);">4주</span></div><button style="margin-top:14px;width:100%;padding:14px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">신청하기</button></div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;text-align:center;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#FBEFFF;">경력 · 자격 · 수상</h2></div>
+          <!-- 카드: 텍스트 (자격 나열) -->
+          <div style="padding:16px 24px 0;display:flex;flex-direction:column;gap:11px;">
+            <div style="display:flex;gap:14px;justify-content:center;"><span style="font-size:15px;line-height:1.4;color:rgba(251,239,255,.82);">생활스포츠지도사 2급 · NSCA-CPT</span></div>
+            <div style="display:flex;gap:14px;justify-content:center;"><span style="font-size:15px;line-height:1.4;color:rgba(251,239,255,.82);">2021 머슬마니아 스포츠모델 입상</span></div>
+            <div style="display:flex;gap:14px;justify-content:center;"><span style="font-size:15px;line-height:1.4;color:rgba(251,239,255,.82);">스포츠의학 학사 · 재활 트레이닝 수료</span></div>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:32px 24px;"><div style="height:1px;background:rgba(251,239,255,.13);"></div></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 상담·체험 신청 폼 -->
+          <div style="padding:0 24px;">
+            <h3 style="margin:0;text-align:center;font-size:22px;font-weight:800;color:#FBEFFF;">상담 신청</h3>
+            <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(251,239,255,.6);">궁금한 점을 남겨주시면 코치가 직접 답변드려요</p>
+            <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+              <input placeholder="이름" style="padding:16px;border:none;background:rgba(251,239,255,.07);color:#FBEFFF;font-size:16px;border-radius:999px;">
+              <input placeholder="연락처" style="padding:16px;border:none;background:rgba(251,239,255,.07);color:#FBEFFF;font-size:16px;border-radius:999px;">
+              <textarea placeholder="운동 목표 / 현재 상태" rows="3" style="padding:16px;border:none;background:rgba(251,239,255,.07);color:#FBEFFF;font-size:16px;border-radius:22px;resize:none;"></textarea>
+              <button style="margin-top:4px;padding:17px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">신청 제출하기</button>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:42px 24px 0;text-align:center;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#FBEFFF;">오시는 길</h2></div>
+          <!-- 카드: 위치안내 -->
+          <div style="padding:16px 24px 0;">
+            <div style="width:100%;height:180px;background:rgba(251,239,255,.06);border-radius:20px;display:flex;align-items:center;justify-content:center;color:rgba(251,239,255,.35);font-size:14px;">지도</div>
+            <p style="margin:16px 0 0;text-align:center;font-size:16px;line-height:1.5;color:#FBEFFF;">서울 강남구 테헤란로 152, 3층<br>TAEO STUDIO</p>
+            <button style="margin-top:14px;width:100%;padding:16px;background:#FF2E93;color:#12061F;font-weight:800;font-size:16px;border:none;border-radius:999px;cursor:pointer;">길찾기</button>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:34px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(255,46,147,.11);color:#FF2E93;font-weight:800;font-size:14px;border-radius:999px;">IG</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(255,46,147,.11);color:#FF2E93;font-weight:800;font-size:14px;border-radius:999px;">YT</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(251,239,255,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = { page: "cover" };
+  renderVals() {
+    const p = this.state.page;
+    const go = (pg) => {
+      this.setState({ page: pg });
+      const el = document.querySelector("#c2-scr");
+      if (el) el.scrollTop = 0;
+    };
+    return {
+      showCover: p === "cover",
+      showP1: p === "p1",
+      showP2: p === "p2",
+      showP3: p === "p3",
+      goCover: () => go("cover"),
+      goP1: () => go("p1"),
+      goP2: () => go("p2"),
+      goP3: () => go("p3"),
+    };
+  }
+}
+</script>
+
+
+</body></html>
