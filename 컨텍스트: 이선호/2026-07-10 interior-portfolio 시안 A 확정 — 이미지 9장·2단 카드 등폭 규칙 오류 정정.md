@@ -114,3 +114,40 @@ NOT a sepia, amber, monotone or single-hue colour filter. no yellow cast
 3. **자격·면허 3줄 실제 값** — 현재 플레이스홀더(실내건축기사/건설업 면허/하자이행보증).
 4. **P3 첫 슬라이드** — 현재 `거실 시공 전`(어두운 방)이 「햇빛 담은 거실」 제목 밑에 노출. `시공 후`로 바꾸면 해소(한 줄 작업). 사용자가 트레이드오프 인지하고 현 상태 선택함.
 5. **`AskUserQuestion` 도구가 이 세션에서 3회 연속 내부 오류** — 선택지 제시는 텍스트로 대체함. 재발 시 동일 대응.
+
+---
+
+## 7부 — 4단계 착수 진행 상황 (2026-07-14 추가, 다음 세션 이어가기용)
+
+> 이 기기(계정 `mustard` / 로그인 유저 `jeonjuyun`)에서 gstack을 처음부터 세팅해 4단계를 착수. **아직 카드는 안 쌓았고**, 새 에디터 생성 + 테마 설정 도중까지 진행. 아래 상태에서 바로 이어가면 됨.
+
+### ✅ 이번에 세팅 완료된 것 (한 번 해두면 유지됨)
+1. **gstack 이 기기에 설치·빌드 완료** — 소스 clone(`~/.claude/skills/gstack/`) → `bun` 설치(`~/.bun/bin/bun`, v1.3.14) → `./setup` 실행 → **`browse` 바이너리 생성**. 경로 = `~/.claude/skills/gstack/browse/dist/browse` (= `$B`). 정상 작동 검증됨. gstack 스킬 전체도 자동 등록됨.
+   - ⚠️ gstack은 npm/brew에 없는 **비공개 빌드**. 재설치 필요 시 소스 clone 후 `bun` 있어야 `./setup`으로 빌드.
+2. **CdBd 로그인 정보 `.env` 생성** — vault 루트 `.env`(권한 600, gitignore 확인). `CDBD_EMAIL=account@emka.group` / `CDBD_PASSWORD` 채워짐. 로그인 자동화 검증됨(`#email`·`#password` fill → `버튼[3]` 클릭 → `/home`).
+3. **Figma dev-mode MCP(로컬 데스크톱 앱)는 연결됨** — 단 **claude.ai Figma 원격 커넥터는 미인증**. 로컬 앱으로 노드 읽기 가능.
+
+### 🆕 새 에디터 5133 (이걸로 작업)
+- **[editor/5133](https://www.cdbd.in/editor/5133)** — 멀티페이지 · 가로 380 고정 · 2026-07-14 신규 생성. 현재 **기본 안내 카드 3장(text/image/button)만** 있는 빈 상태.
+- ⚠️ **옛 5083 폐기** — 스펙엔 "빈 상태"였지만 실제로 열어보니 **다른 템플릿 3개(갈라·교회·출석체크) 카드 73장**이 들어있었음. 건드리지 않고 새로 5133 생성(사용자 승인). 스펙 문서 「4단계」 절도 5133으로 갱신 완료.
+- **크레딧 0 / 포인트 984,321 P** — 발행(URL 생성)은 포인트로 가능(홈 화면서 확인).
+
+### ⏸ 중단 지점 (여기서 이어가기)
+- 새 페이지 생성 직후 뜬 **"페이지 테마 설정하기" 온보딩 모달**에서 **폰트 단계까지** 진행: 한국어 기본 = **프리텐다드**(이미 선택됨, 본문용으로 맞음). **색상 단계로 넘어가려던 참에 중단.**
+- **아직 안 한 것**: ① ENG 폰트 = Montserrat 지정(소형 영문 라벨용, 후순위) ② **색상 3종**(배경 `#F7F6F3` / 텍스트 `#191919` / 버튼 `#191919`) ③ **버튼 모양 = 각진** ④ 헤드라인용 **본명조**는 카드별 오버라이드(S3/V1).
+- 색상은 온보딩 모달이 hex 직접입력을 지원하는지 미확인. 안 되면 모달 닫고 **표준 "색상 더보기" 픽커 + card-driver `setThemeColor`** 사용(스킬 `cdbd-card-automation` 「페이지 색상」).
+
+### 🚧 카드 쌓기 전 반드시 필요한 것 — P1 매니페스트
+- **P1(표지) 10장의 정확한 카드 타입·순서·문구를 Figma 노드 3015:26에서 읽어야 함.** 현재 데스크톱 Figma 앱에 **다른 파일("CdBd 템플릿 등록")이 열려 있어** `get_metadata(3015:26)`가 실패함.
+- **다음 세션 첫 액션**: 사용자가 Figma 데스크톱 앱에서 **"CdBd 템플릿 — 섹션 프리셋" 파일**(fileKey `24O01lprp5i2ufl7CbZXXx`)을 **활성 탭**으로 열기 → 그 후 `get_metadata`/`get_design_context`로 P1 프레임 실측 → card-driver로 카드 생성.
+- 참고: git에서 복구한 옛 `interior-portfolio — 시안 A-2 CdBd 카드 스펙`에 P1 10장 초안 있으나 **폰트(고운바탕/나눔고딕)·구조가 옛 버전** → 최종 스펙 6건 변경(브랜드명→로고 이미지, 히어로 1:1 갤러리 3장 등) 반영해 Figma로 재확인 필요. 정본 = [[../interior-portfolio — 시안 A 수정 스펙 (2026-07-10)]].
+
+### 🔑 재개 절차 요약
+```bash
+B="$HOME/.claude/skills/gstack/browse/dist/browse"
+cd <vault>; set -a; . ./.env; set +a
+# (로그인 풀렸으면) goto /login → #email·#password fill → 버튼[3] click
+$B goto https://www.cdbd.in/editor/5133; sleep 5
+$B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
+```
+
