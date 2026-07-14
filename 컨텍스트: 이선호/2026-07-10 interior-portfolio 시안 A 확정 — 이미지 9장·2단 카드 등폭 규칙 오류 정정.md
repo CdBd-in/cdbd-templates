@@ -172,6 +172,13 @@ $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
 4. **카드 라벨(목적 이름)** 미설정(전부 기본 "텍스트/이미지/버튼").
 5. **디자인 패스(V1)**: 헤드라인 **본명조**·영문라벨/서브카피 크기·투명도 틴트(`{텍스트색}×55/60%`)·**버튼 각진**(현재 pill). = 내용과 분리된 후속 스타일 단계.
 
+### ✅ P1 디자인 다듬기 완료 (2026-07-14 3차, 사용자 피드백 4건)
+1. **헤드라인 본명조·28px·Bold** — 폰트토큰 `notoSerifKr`(서체옵션 className에서 확인). `block.style`{fontFamily:'notoSerifKr',fontSize:28,lineHeight:'1.4'} mutate→reorder커밋(스타일은 렌더됨, 내용과 달리). **Bold=Lexical런 format:1** → 타이핑된 헤드라인은 format:0이라 **CE focus→selectAll→`$B press Meta+b`**(Lexical bold 커맨드)로 적용.
+2. **버튼 각진** — pill은 `block.innerStyle.borderRadius:"999px"`. 테마 패널 **"버튼 모양" 세그먼트의 "각진" 클릭**→confirmThemeWarning → 3버튼 모두 innerStyle.borderRadius 0px.
+3. **버튼 간격 12px** — 버튼 `block.style.padding` "20px"(→40px갭)를 **"6px 20px"**(→12px갭)로 mutate+reorder.
+4. **로고 삽입** — Figma 로고 node 1139:902를 `download_assets`(png,scale4)→ `/…/interior-portfolio/logo-yeobaek.png`(투명, #f7f6f3 위에 자연스러움). 이미지카드 업로드: **⚠️ openImageUpload(패널버튼)은 이미지카드엔 없음** → 카드 선택 후 **프리뷰 이미지영역을 `$B click`(실제클릭, synthetic onClick은 `n||()` 가드로 막힘)** 로 라이브러리 모달 오픈 → `uploadImage`(onDrop)→`applyImage('logo-yeobaek')`.
+- 🔑 **텍스트 스타일 3규칙**: ①런 style 비면 block.style가 크기·폰트 지배(mutate+reorder로 렌더됨) ②Bold는 런 format→CE에서 Meta+b ③내용(텍스트 문자)은 mutate 안 먹힘→$B fill.
+
 ### ➡️ P2·P3·P4
 아직 미착수. P2=소개(프로필+시공분야+진행과정4+자격면허3+실적지표) · P3=시공사례(갤러리 6장 등) · P4=문의(Q&A 무료견적폼+위치안내+상담채널2버튼). 매니페스트는 Figma `24O01lprp5i2ufl7CbZXXx` node 3015:26 각 섹션 참조(단 **플레이스홀더 텍스트** → 실제 문구는 vault 스펙 정본).
 
