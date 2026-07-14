@@ -291,7 +291,7 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 
 | 함정 | 해결 |
 |---|---|
-| **OG 썸네일 = 이 에디터 버전에선 자동화 가능 (2026-07-09, 문서 정정)** — 구 "OG 썸네일 수동(OS 파일 다이얼로그)" 기록은 outdated | 썸네일 hover 오버레이 onClick=`L("metadata")` → 표준 이미지 라이브러리 모달(react-dropzone) 열림 → 함정23 `onDrop` + 셀 fiber `onClick`(적용, `memoizedProps.onClick` 호출)으로 완전 자동화. **영속은 발행(URL 생성) 필요** · **slug 하이픈 금지**(영문·숫자·`_`·`.`만 → `asera-gala`→`asera_gala`). 발행 시 크레딧 확인 모달(120C/월). |
+| **OG 썸네일 = 이 에디터 버전에선 자동화 가능 (2026-07-09, 문서 정정)** — 구 "OG 썸네일 수동(OS 파일 다이얼로그)" 기록은 outdated | 썸네일 hover 오버레이 onClick=`L("metadata")` → 표준 이미지 라이브러리 모달(react-dropzone) 열림 → 함정23 `onDrop` + 셀 fiber `onClick`(적용, `memoizedProps.onClick` 호출)으로 완전 자동화. **영속은 발행(URL 생성) 필요** · **slug 하이픈 금지**(영문·숫자·`_`·`.`만 → `asera-gala`→`asera_gala`). 발행 시 크레딧 확인 모달(120C/월). **💰 크레딧 0이어도 포인트 잔액으로 발행(URL 생성) 대체 가능** (2026-07-14 사용자 확인) — 크레딧=0이라고 발행이 하드블록은 아님, 포인트 차감으로 진행됨. (OG 썸네일 영속화도 포인트로 되는지는 미확인) |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
 | 멀티페이지 에디터 열고 바로 추출 | 마지막에 본 페이지가 열림 → **명시적으로 페이지 1 클릭 후 추출** |
 | 핀 카드 SVG 인덱스 기준 추출 | drag handle 사라져 인덱스 어긋남 → `rect[rx="4"]` 찾기 방식 |
