@@ -166,7 +166,7 @@ $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
 - **툴바 아이콘 4개**(@911 설정·@961 애니메이션·@1011 **테마**·@1082 프리뷰). 테마 패널 열어야 `색상 더보기` 노출.
 
 ### 🚧 P1 남은 작업 + 의존성
-1. **이미지 업로드 — 🔴 파일이 이 기기에 없음(블로커)**. 로고 1 + 표지 갤러리 3장(`hero-living-after.png`·`cover-2-cafe.png`·`cover-3-house.png`). `~/Desktop/interior-portfolio/`는 **다른 기기에만** 존재. → 그 폴더를 이 기기로 복사(AirDrop) 하거나 재생성 필요. (업로드=`openImageUpload`→`uploadImage`(onDrop)→`applyImage`.)
+1. **이미지 — ✅ 확보 완료 (2026-07-14)**. Figma 최종본 파일 `oi8zIHLfy59O5zV8aysqq4` node **1139:896**(=P1~P4 진짜 조립본, 실제 문구!)의 "참고" 프레임에서 원본 이미지 asset URL을 `get_design_context`로 얻어 **10장 JPG로 저장**: `/Users/mustard/Desktop/mustard/CDBD/템플릿 등록/interior-portfolio/` (cover-1-apartment·cover-2-cafe·cover-3-house · gallery-1~6(전후) · profile-ceo). ⚠️ **로고는 사진 아님**(Figma 텍스트 조판 node 1139:902) → 별도 투명 PNG export 필요. **업로드 남음**: 표지 갤러리 3장 → 갤러리 카드(idx3), 로고 → 이미지 카드(idx1). 업로드=`openImageUpload`→`uploadImage`(onDrop)→`applyImage`(단 갤러리 카드 다중 업로드 UI는 미확인). 🔑 **최종본 노드 1139:896이 정본** — 3015:26(플레이스홀더)보다 이걸 참조.
 2. **버튼 페이지 링크(회사소개→P2·시공사례→P3·무료견적→P4)** — 현재 에디터에 **페이지가 2개뿐**. P2~P4를 먼저 만들어야 링크 타깃 존재. (멀티페이지 =4페이지 필요.)
 3. **SNS 채널 URL** — 현재 homepage·instagram 토글만 ON. 실제 IG/블로그/유튜브 URL은 사용자 입력 필요(가상 유지도 가능).
 4. **카드 라벨(목적 이름)** 미설정(전부 기본 "텍스트/이미지/버튼").
