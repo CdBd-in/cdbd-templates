@@ -232,6 +232,12 @@ $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
   - 버튼: bg#191919 h58 Pretendard Bold 15 #f7f6f3. / 구분선: rgba(25,25,25,0.12) 1px. / 여백divider: h48 **선 strokeWidth 0**.
   - 적용법(P1 검증): 텍스트카드=block.style{fontFamily:'notoSerifKr',fontSize,color,textAlign,lineHeight} mutate→reorder커밋 / Bold=CE selectAll→`$B press Meta+b` / 프로필名·소개=block.profile.nameStyle·descriptionStyle / 멀티카드 셀=셀 contenteditable $B fill+런 스타일. P3(1139:1023)·P4(1139:1060) 스펙은 동일 패턴, 필요시 get_design_context.
 
+### 🎨 P2 폴리시 적용 (2026-07-15 재개, 동시세션 충돌 원인 규명)
+- **원인 규명**: 브라우저 URL이 `editor/5153`였음 = **다른 세션이 공유 gstack 브라우저로 5153("ROOFTOP HOUSE NIGHT")을 조작** → 내 5133 작업에 다크테마 끼어듦. **5133은 무손상, 4페이지 전부 크림 확인**(페이지 패널 실측).
+- **안전 네비 확립**: 좌측 `>` chevron(svg@~5,145)을 **fiber onClick**으로 열기 → "N 페이지" 패널 → 썸네일 `elementFromPoint(x,313)`(P1=107·P2=242·P3=378·P4=513) 클릭 → chevron(x~745) fiber onClick으로 닫기. 이동 후 **boardRows 개수로 검증**(P2=21). ⚠️ **`$B viewport` 절대 금지**(좌표 무효화).
+- **✅ 반영됨**(block.style/전용필드 mutate+reorder): 단순 텍스트카드(ABOUT·대표문장·시공분야·목록·진행과정·자격&면허) 본명조/크기/색/중앙 + 제목 Bold(CE Meta+b) · **프로필 nameStyle**{fontSize26,isBold,fontFamily:notoSerifKr}·descriptionStyle{13,tint55} · **여백 divider strokeWidth 0**. → 김도현 큰 본명조·대표문장 본명조·ABOUT 강조 렌더 확인.
+- **❌ 반영 안 됨(한계)**: **2단 카드 셀(실적 값·프로세스 번호/정렬·인증 정렬)은 item.style mutate가 렌더 안 됨** — 셀 텍스트가 $B fill로 채워져 content 런 스타일이 우선, mutation 무시(Lexical과 동일). 프로세스 번호 32px·우측셀 좌정렬·실적 값 본명조 미적용. → **셀 스타일은 에디터 UI(셀 선택+패널) 편집 필요**(신규 자동화 미확보). 인증 발급 우정렬은 기본값이라 OK.
+
 ### 📊 전체 현황 (2026-07-15)
 - **P1**: ✅ 완성(폴리시까지) · **P2**: 콘텐츠 완성(폴리시 남음) · **P3**: 골격+텍스트(갤러리·버튼링크·폴리시 남음) · **P4**: 골격+텍스트(Q&A·위치·SNS·폴리시 남음)
 - 4페이지 전부 **구조+텍스트 존재**. 남은 건 이미지(갤러리)·기능(Q&A/위치/링크/SNS)·디자인 폴리시.
