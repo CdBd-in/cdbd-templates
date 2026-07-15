@@ -179,6 +179,12 @@ $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
 4. **로고 삽입** — Figma 로고 node 1139:902를 `download_assets`(png,scale4)→ `/…/interior-portfolio/logo-yeobaek.png`(투명, #f7f6f3 위에 자연스러움). 이미지카드 업로드: **⚠️ openImageUpload(패널버튼)은 이미지카드엔 없음** → 카드 선택 후 **프리뷰 이미지영역을 `$B click`(실제클릭, synthetic onClick은 `n||()` 가드로 막힘)** 로 라이브러리 모달 오픈 → `uploadImage`(onDrop)→`applyImage('logo-yeobaek')`.
 - 🔑 **텍스트 스타일 3규칙**: ①런 style 비면 block.style가 크기·폰트 지배(mutate+reorder로 렌더됨) ②Bold는 런 format→CE에서 Meta+b ③내용(텍스트 문자)은 mutate 안 먹힘→$B fill.
 
+### ✅ P1 상하 여백 + 텍스트 색 (2026-07-15, 사용자 피드백)
+- **카드별 상하 여백**: `block.style.padding` 을 Figma(1139:898) 실측 비대칭값으로 일괄 mutate+reorder. 영문라벨 `48 28 14 28`·로고 `0 28 10 28`·스튜디오명 `0 28 40 28`·갤러리 `0 28 0 28`·헤드라인 `56 28 14 28`·서브카피 `0 28 44 28`·버튼 `0 28 12 28`(막버튼 40)·SNS `0 28 48 28`.
+- **보조 텍스트 투명도 색**: `block.style.color` → 영문라벨 `rgba(25,25,25,0.5)`·스튜디오명 `0.45`·서브카피 `0.6`·헤드라인 `#191919`(100%). (런 style 비어서 block.style.color가 렌더 지배.)
+- **갤러리 표지 3장은 사용자가 직접 업로드함**(넘겨보기 swipe, 오늘). imgCount 3 확인.
+- **P1 사실상 시각 완성**: 텍스트·색·여백·로고·헤드라인·버튼·갤러리 다 됨. 남음=버튼 페이지링크(P2~4 생성 후)·SNS 실제 URL·자동넘김/내비 설정 확인.
+
 ### ➡️ P2·P3·P4
 아직 미착수. P2=소개(프로필+시공분야+진행과정4+자격면허3+실적지표) · P3=시공사례(갤러리 6장 등) · P4=문의(Q&A 무료견적폼+위치안내+상담채널2버튼). 매니페스트는 Figma `24O01lprp5i2ufl7CbZXXx` node 3015:26 각 섹션 참조(단 **플레이스홀더 텍스트** → 실제 문구는 vault 스펙 정본).
 
