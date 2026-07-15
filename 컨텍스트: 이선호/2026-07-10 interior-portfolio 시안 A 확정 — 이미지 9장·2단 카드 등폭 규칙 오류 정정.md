@@ -219,6 +219,19 @@ $B eval .claude/skills/cdbd-card-automation/card-driver.js   # window.__cdbd
 
 **⏭ P3·P4 남은 것**: ① **P3 갤러리 6장 수동 업로드** ② **P4 Q&A 폼 6문항**(어떤 공간·평형·예상 예산·희망 시기·성함·연락처, 객관식/주관식 혼합 — **신규 자동화 필요**, 프리뷰에 contenteditable 안 나옴) ③ **P4 위치 지오코딩**(주소 `경기 성남시 분당구 정자일로 95, 2층` 검색 드롭다운 선택) ④ 버튼 페이지링크(P1 3버튼·P2·P3 버튼) ⑤ 헤더 메뉴아이콘(P2·P3·P4) ⑥ SNS 채널 URL ⑦ **디자인 폴리시**(본명조 제목·투명도 틴트·헤더 다크바·상하여백·구분선/여백) — P2·P3·P4 전부.
 
+### ⚠️ 디자인 폴리시 시도 중 사고 (2026-07-15) — 내용 무손상, 폴리시 미완
+- **`$B viewport` 리셋 후 뷰포트가 바뀌어(1280↔1456) 좌표 기반 페이지 네비 클릭이 전부 엇나감** → 색상 피커·스크롤 애니메이션 모달·"ROOFTOP HOUSE NIGHT" 다크 페이지가 열림. **다크 테마+본고딕이 "페이지 전체 일괄 적용" 확인 모달까지 갔으나 2회 모두 `취소하기`로 막음**(전역 손상 방지). 리로드마다 P4 크림·12장 정상 확인 → **미저장이라 다크 테마는 전부 폐기됨**.
+- **🔑 교훈/재발방지**: ① **`$B viewport` 함부로 쓰지 말 것**(context recreate + 좌표 무효화). ② 멀티페이지 이동은 **좌표 elementFromPoint 금지** — 페이지 썸네일/토글은 세션마다 위치가 달라짐. **테마 패널 열린 상태에서 좌표 클릭=색상 피커 오픈 위험**. ③ 이동 전 **카드 fiber onClick으로 카드 선택→테마 패널부터 닫고**, 페이지 전환은 신뢰 가능한 핸들러(가능하면 store의 page-select fiber 직접 호출)를 찾아 쓸 것. ④ **의심되는 스트레이 5번째 페이지("ROOFTOP HOUSE NIGHT" 다크)** 존재 가능 — 다음 세션에 페이지 패널 열어 개수 확인·불필요 페이지 삭제 필요(P1~4는 무손상).
+- **P2 디자인 스펙 확보(정본, node 1139:931)** — 다음 세션 폴리시 즉시 적용용:
+  - 헤더(2단 텍스트+이미지): **다크바 아님**(밝은 배경 #f7f6f3). 좌 "여백 YEOBAEK" Pretendard Bold 13 #191919 좌정렬 + 우 햄버거아이콘(rgba(25,25,25,0.75)). py20 px28.
+  - ABOUT: Montserrat SemiBold 11 rgba(25,25,25,0.5) 중앙. / 김도현(프로필名): **notoSerifKr Bold 26** #191919 중앙 · 소개 Pretendard 13 rgba(25,25,25,0.55). 아바타 96 원형 gap32.
+  - 대표문장: **notoSerifKr Regular 19** #191919 중앙 lh1.6. / 실적 값: **notoSerifKr Bold 24** #191919 · 라벨 Pretendard 12 rgba(25,25,25,0.5) 중앙 gap6.
+  - 섹션제목(시공분야·진행과정·자격&면허): **notoSerifKr Bold 18** #191919 중앙. / 시공분야목록: Pretendard 14 rgba(25,25,25,0.7) 중앙 lh2 3줄.
+  - 프로세스: 번호 **notoSerifKr Bold 32** #191919(좌 FIXED44) + 우[제목 Pretendard Bold 15 #191919 / 설명 Pretendard 13 rgba(25,25,25,0.5)] 좌정렬 gap16.
+  - 인증: 좌 인증명 Pretendard Bold 15 #191919 **좌정렬** + 우 발급 Pretendard 13 rgba(25,25,25,0.55) **우정렬**. gap12 등폭.
+  - 버튼: bg#191919 h58 Pretendard Bold 15 #f7f6f3. / 구분선: rgba(25,25,25,0.12) 1px. / 여백divider: h48 **선 strokeWidth 0**.
+  - 적용법(P1 검증): 텍스트카드=block.style{fontFamily:'notoSerifKr',fontSize,color,textAlign,lineHeight} mutate→reorder커밋 / Bold=CE selectAll→`$B press Meta+b` / 프로필名·소개=block.profile.nameStyle·descriptionStyle / 멀티카드 셀=셀 contenteditable $B fill+런 스타일. P3(1139:1023)·P4(1139:1060) 스펙은 동일 패턴, 필요시 get_design_context.
+
 ### 📊 전체 현황 (2026-07-15)
 - **P1**: ✅ 완성(폴리시까지) · **P2**: 콘텐츠 완성(폴리시 남음) · **P3**: 골격+텍스트(갤러리·버튼링크·폴리시 남음) · **P4**: 골격+텍스트(Q&A·위치·SNS·폴리시 남음)
 - 4페이지 전부 **구조+텍스트 존재**. 남은 건 이미지(갤러리)·기능(Q&A/위치/링크/SNS)·디자인 폴리시.
