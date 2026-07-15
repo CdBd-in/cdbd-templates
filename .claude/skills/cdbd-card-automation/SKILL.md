@@ -49,6 +49,8 @@ $B js "JSON.stringify(window.__cdbd.count())"   # 마운트된 카드 수/타입
 
 `count()`는 **화면에 마운트된 카드만** 센다(보드 가상화). 절대수 신뢰 불가 → 성공 판정은 **모달이 닫혔는지 / 스크린샷**으로 한다.
 
+> ⚠️ **멀티페이지 필수 (2026-07-15)**: 페이지 전환 시 CdBd가 **이전 페이지의 모바일 프리뷰 DOM을 숨긴 채 유지** → `count()`(전역 `querySelectorAll` 스캔)가 **이전 페이지 카드를 계속 읽어 stale**. **멀티페이지에서 활성 페이지 카드 검증은 `count()` 금지, `boardRows()`(가운데 보드 기준) 사용**(검증: page2 전환 후 boardRows=0인데 count=이전10). 페이지 전환 = 좌측 `>` 토글로 "N 페이지" 패널 → 썸네일 `elementFromPoint(x,y).click()`(썸네일 y≈313) → **패널 바깥 클릭으로 닫아야**(예 `elementFromPoint(825,450)`) 활성 전환 완료. 전환 후 `카드 추가`는 활성 페이지로 들어감.
+
 ## Recipes
 
 단계 사이에 모달·메뉴·다이얼로그 렌더 대기(`sleep ~1.2`)가 **필수**. async eval 금지, bash `sleep`으로 끊는다.
