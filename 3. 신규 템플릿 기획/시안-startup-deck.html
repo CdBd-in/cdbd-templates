@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="6de2640e-b79d-4dc7-a0df-3ed2a95c6f64"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<style>/* ============================================================
+   CdBd — Webfonts
+   Primary UI face: Pretendard (open-source Korean/Latin sans).
+   Loaded from jsDelivr. The compiler ships these @font-face rules.
+   ------------------------------------------------------------
+   SUBSTITUTION NOTE: the source .fig also uses "Indivisible"
+   (a licensed XYZ Type face) for a handful of small numeric
+   labels (~53 uses). No binary ships with the file, so
+   --font-numeric falls back to a tabular system stack. Provide
+   the real Indivisible woff2 to restore it.
+   ============================================================ */
+
+/* Pretendard — full weight range via the dynamic-subset stylesheet */
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url("ae5dbb42-1377-4bea-8f60-7ec3be4c3215") format('woff2'), url("2c90c1d5-e278-4950-a5c1-d25b90528507") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url("007f3b46-1d73-48a4-9c24-12e66a788425") format('woff2'), url("dd74d75f-1ee5-48b6-be36-198913e55ed2") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url("2a67a718-a699-4627-b4c1-3bb02a56614d") format('woff2'), url("1e41bccf-69f3-466f-b874-26ea82641967") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url("bae0d908-1684-4e2e-ba70-cfc88cbc56bf") format('woff2'), url("8b406404-8a78-4c22-85c3-5fc192d91052") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url("24f394a4-bfc7-4d99-aee6-bad3b32f6968") format('woff2'), url("47548507-d63e-466c-8570-b9bae439a701") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url("531131be-c4dc-4e62-8fa8-d7b5bc4a58fe") format('woff2'), url("57c31400-2c0f-4cf9-a033-255fc8b8087d") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url("ab2e943d-b48b-4f1d-baee-06f75e08af2c") format('woff2'), url("0101dc6d-de6d-4275-83f7-b423d82260ae") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url("ffc92e46-b450-46a5-a36c-d4c0a369abdb") format('woff2'), url("43e8f97d-c7ac-46f0-a9bc-cd0fb58c0fcc") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url("76eaf3c4-6918-4ea3-bfef-9e4dc76bdbcb") format('woff2'), url("0a66dfee-5e4c-4aad-ab30-06368dbaee8e") format('woff');
+}
+
+</style>
+<style>/* ============================================================
+   CdBd — Color tokens
+   Extracted verbatim from "CdBd Design System.fig" › Foundation › Color.
+   Base palette + semantic aliases. Values are the file's exact hexes.
+   ============================================================ */
+
+:root {
+  /* ---- Brand Primary (Violet) ---- */
+  --primary-default: #6C4CFF;
+  --primary-pale:    #E9E8FF;
+  --primary-light:   #B5A5FF;
+  --primary-medium:  #8F80FF;
+  --primary-shadow:  #6C4CFF;
+  --primary-dark:    #4418BF;
+  /* interaction stops (from Button/Basic states) */
+  --primary-hover:   #6030F7;
+  --primary-pressed: #4418BF;
+
+  /* ---- Brand Secondary (Mint) ---- */
+  --secondary-default: #3DF69B;
+  --secondary-dark:    #009D51;
+  --secondary-shadow:  #08DF76;
+  --secondary-light:   #9DFACD;
+  --secondary-pale:    #EEFFF6;
+
+  /* ---- Gray Scale (Black → White, 12 steps) ---- */
+  --black:    #141414;
+  --gray-900: #292929;
+  --gray-800: #3B3D3F;
+  --gray-700: #444648;
+  --gray-600: #505254; /* file specimen duplicated 700's hex; ramp value is #505254 */
+  --gray-500: #65696C;
+  --gray-400: #818588;
+  --gray-300: #A7ABAE;
+  --gray-200: #CCCFD1;
+  --gray-100: #DFE1E2;
+  --gray-50:  #EFF0F0;
+  --white:    #FFFFFF;
+
+  /* ---- System / Semantic status ---- */
+  /* Success — the source's System/Success swatches were unfilled
+     placeholder blues; mapped to the brand green ramp for usability. */
+  --success-normal: #009D51;
+  --success-shadow: #08DF76;
+  --success-medium: #3DF69B;
+  --success-light:  #9DFACD;
+  --success-pale:   #EEFFF6;
+
+  --info-normal: #368BF9;
+  --info-shadow: #1C6FDB;
+  --info-medium: #98B7FF;
+  --info-light:  #DDEAFC;
+  --info-pale:   #EFF3F6;
+
+  --danger-normal: #FC2C19;
+  --danger-shadow: #EA2918;
+  --danger-medium: #FF766A;
+  --danger-light:  #FFE7D1;
+  --danger-pale:   #FFF7F6;
+
+  /* ============================================================
+     Semantic aliases — reach for these in product UI.
+     ============================================================ */
+
+  /* Text / label */
+  --text-strong:     var(--black);     /* headings, primary label */
+  --text-normal:     var(--gray-900);  /* body */
+  --text-sub:        var(--gray-800);  /* secondary body */
+  --text-assistive:  var(--gray-400);  /* captions, hints */
+  --text-disabled:   var(--gray-300);
+  --text-on-primary: var(--white);
+  --text-brand:      var(--primary-default);
+  --text-link:       #222529;
+
+  /* Surfaces */
+  --surface-page:    var(--white);
+  --surface-subtle:  var(--gray-50);
+  --surface-muted:   rgba(239, 240, 240, 0.5);
+  --surface-inverse: var(--black);
+  --surface-brand:   var(--primary-default);
+  --surface-brand-pale: var(--primary-pale);
+
+  /* Lines / borders */
+  --border-default:  var(--gray-200);  /* #CCCFD1 — default control stroke */
+  --border-subtle:   var(--gray-100);
+  --border-strong:   var(--gray-300);
+  --border-focus:    var(--primary-default);
+
+  /* Elevation shadow colors */
+  --shadow-color:    rgba(0, 0, 0, 0.25);
+  --shadow-color-soft: rgba(0, 0, 0, 0.2);
+  --shadow-color-strong: rgba(0, 0, 0, 0.3);
+}
+</style>
+<style>/* ============================================================
+   CdBd — Typography tokens
+   Face: Pretendard. Sizes in px exactly as documented in the
+   .fig › Foundation › Typography spec table. Line-height 1.5 for
+   text, tighter for display. Numeric/mono uses --font-numeric.
+   ============================================================ */
+
+:root {
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  /* Substitute for licensed "Indivisible" (small numeric labels) */
+  --font-numeric: "Pretendard", ui-monospace, "SF Mono", "Roboto Mono", Menlo, monospace;
+
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500;  /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700;    /* @kind font */
+
+  /* Size ramp */
+  --size-display-1: 40px;
+  --size-display-2: 28px;
+  --size-heading-1: 24px;
+  --size-heading-2: 20px;
+  --size-heading-3: 18px;
+  --size-heading-4: 16px;
+  --size-heading-5: 14px;
+  --size-body-1: 16px;   /* Paragraph 1 */
+  --size-body-2: 14px;   /* Paragraph 2 */
+  --size-label: 14px;    /* Button / Subtitle */
+  --size-caption: 12px;
+  --size-unit: 12px;
+
+  --lh-tight: 1.2;  /* @kind font */
+  --lh-snug: 1.3;   /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+
+  --ls-tight: -0.02em;   /* buttons / labels */
+  --ls-normal: 0.006em;  /* long-form body */
+}
+
+/* ---- Type utility classes (used by specimen cards & kits) ---- */
+.cdbd-display-1 { font: var(--fw-bold) var(--size-display-1)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-display-2 { font: var(--fw-bold) var(--size-display-2)/var(--lh-snug) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-h1 { font: var(--fw-bold) var(--size-heading-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-h2 { font: var(--fw-bold) var(--size-heading-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-h3 { font: var(--fw-bold) var(--size-heading-3)/var(--lh-normal) var(--font-sans); }
+.cdbd-h4 { font: var(--fw-bold) var(--size-heading-4)/var(--lh-normal) var(--font-sans); }
+.cdbd-h5 { font: var(--fw-bold) var(--size-heading-5)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-1 { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-2 { font: var(--fw-medium) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-1 { font: var(--fw-medium) var(--size-body-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-2 { font: var(--fw-regular) var(--size-body-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-label { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-caption { font: var(--fw-medium) var(--size-caption)/var(--lh-normal) var(--font-sans); }
+.cdbd-unit { font: var(--fw-regular) var(--size-unit)/var(--lh-normal) var(--font-numeric); }
+</style>
+<style>/* ============================================================
+   CdBd — Layout tokens: spacing, radii, elevation.
+   Spacing & radii mirror the auto-layout gaps and corner radii
+   observed across the .fig (8-based rhythm; large container radii).
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---- Corner radii ---- */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;    /* buttons, inputs, menu items */
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;  /* swatch / small cards */
+  --radius-24: 24px;
+  --radius-40: 40px;  /* content cards */
+  --radius-48: 48px;  /* large panels */
+  --radius-full: 999px;
+
+  /* ---- Control heights ---- */
+  --control-h-sm: 32px;
+  --control-h-md: 38px;   /* default desktop button/input */
+  --control-h-lg: 44px;   /* mobile touch target */
+
+  /* ---- Elevation (alpha 0.2–0.3 per source shadow tokens) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+  /* Hairline inset ring used on "Gray" outlined controls */
+  --ring-default: inset 0 0 0 1px var(--border-default);
+  --ring-focus: inset 0 0 0 1px var(--border-focus);
+}
+</style>
+<style>/* ============================================================
+   CdBd — base reset + document defaults.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--text-normal);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brand mark helper: SVG uses currentColor, so color = mark color */
+.cdbd-mark { color: var(--primary-default); display: inline-flex; }
+.cdbd-mark--black { color: var(--black); }
+</style>
+<style>/* ============================================================
+   CdBd Design System — global stylesheet entry point.
+   Consumers link THIS file. It is an @import manifest only.
+   ============================================================ */
+
+/* ============================================================
+   CdBd — Webfonts
+   Primary UI face: Pretendard (open-source Korean/Latin sans).
+   Loaded from jsDelivr. The compiler ships these @font-face rules.
+   ------------------------------------------------------------
+   SUBSTITUTION NOTE: the source .fig also uses "Indivisible"
+   (a licensed XYZ Type face) for a handful of small numeric
+   labels (~53 uses). No binary ships with the file, so
+   --font-numeric falls back to a tabular system stack. Provide
+   the real Indivisible woff2 to restore it.
+   ============================================================ */
+
+/* Pretendard — full weight range via the dynamic-subset stylesheet */
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url("ae5dbb42-1377-4bea-8f60-7ec3be4c3215") format('woff2'), url("2c90c1d5-e278-4950-a5c1-d25b90528507") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url("007f3b46-1d73-48a4-9c24-12e66a788425") format('woff2'), url("dd74d75f-1ee5-48b6-be36-198913e55ed2") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url("2a67a718-a699-4627-b4c1-3bb02a56614d") format('woff2'), url("1e41bccf-69f3-466f-b874-26ea82641967") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url("bae0d908-1684-4e2e-ba70-cfc88cbc56bf") format('woff2'), url("8b406404-8a78-4c22-85c3-5fc192d91052") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url("24f394a4-bfc7-4d99-aee6-bad3b32f6968") format('woff2'), url("47548507-d63e-466c-8570-b9bae439a701") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url("531131be-c4dc-4e62-8fa8-d7b5bc4a58fe") format('woff2'), url("57c31400-2c0f-4cf9-a033-255fc8b8087d") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url("ab2e943d-b48b-4f1d-baee-06f75e08af2c") format('woff2'), url("0101dc6d-de6d-4275-83f7-b423d82260ae") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url("ffc92e46-b450-46a5-a36c-d4c0a369abdb") format('woff2'), url("43e8f97d-c7ac-46f0-a9bc-cd0fb58c0fcc") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url("76eaf3c4-6918-4ea3-bfef-9e4dc76bdbcb") format('woff2'), url("0a66dfee-5e4c-4aad-ab30-06368dbaee8e") format('woff');
+}
+
+
+/* ============================================================
+   CdBd — Color tokens
+   Extracted verbatim from "CdBd Design System.fig" › Foundation › Color.
+   Base palette + semantic aliases. Values are the file's exact hexes.
+   ============================================================ */
+
+:root {
+  /* ---- Brand Primary (Violet) ---- */
+  --primary-default: #6C4CFF;
+  --primary-pale:    #E9E8FF;
+  --primary-light:   #B5A5FF;
+  --primary-medium:  #8F80FF;
+  --primary-shadow:  #6C4CFF;
+  --primary-dark:    #4418BF;
+  /* interaction stops (from Button/Basic states) */
+  --primary-hover:   #6030F7;
+  --primary-pressed: #4418BF;
+
+  /* ---- Brand Secondary (Mint) ---- */
+  --secondary-default: #3DF69B;
+  --secondary-dark:    #009D51;
+  --secondary-shadow:  #08DF76;
+  --secondary-light:   #9DFACD;
+  --secondary-pale:    #EEFFF6;
+
+  /* ---- Gray Scale (Black → White, 12 steps) ---- */
+  --black:    #141414;
+  --gray-900: #292929;
+  --gray-800: #3B3D3F;
+  --gray-700: #444648;
+  --gray-600: #505254; /* file specimen duplicated 700's hex; ramp value is #505254 */
+  --gray-500: #65696C;
+  --gray-400: #818588;
+  --gray-300: #A7ABAE;
+  --gray-200: #CCCFD1;
+  --gray-100: #DFE1E2;
+  --gray-50:  #EFF0F0;
+  --white:    #FFFFFF;
+
+  /* ---- System / Semantic status ---- */
+  /* Success — the source's System/Success swatches were unfilled
+     placeholder blues; mapped to the brand green ramp for usability. */
+  --success-normal: #009D51;
+  --success-shadow: #08DF76;
+  --success-medium: #3DF69B;
+  --success-light:  #9DFACD;
+  --success-pale:   #EEFFF6;
+
+  --info-normal: #368BF9;
+  --info-shadow: #1C6FDB;
+  --info-medium: #98B7FF;
+  --info-light:  #DDEAFC;
+  --info-pale:   #EFF3F6;
+
+  --danger-normal: #FC2C19;
+  --danger-shadow: #EA2918;
+  --danger-medium: #FF766A;
+  --danger-light:  #FFE7D1;
+  --danger-pale:   #FFF7F6;
+
+  /* ============================================================
+     Semantic aliases — reach for these in product UI.
+     ============================================================ */
+
+  /* Text / label */
+  --text-strong:     var(--black);     /* headings, primary label */
+  --text-normal:     var(--gray-900);  /* body */
+  --text-sub:        var(--gray-800);  /* secondary body */
+  --text-assistive:  var(--gray-400);  /* captions, hints */
+  --text-disabled:   var(--gray-300);
+  --text-on-primary: var(--white);
+  --text-brand:      var(--primary-default);
+  --text-link:       #222529;
+
+  /* Surfaces */
+  --surface-page:    var(--white);
+  --surface-subtle:  var(--gray-50);
+  --surface-muted:   rgba(239, 240, 240, 0.5);
+  --surface-inverse: var(--black);
+  --surface-brand:   var(--primary-default);
+  --surface-brand-pale: var(--primary-pale);
+
+  /* Lines / borders */
+  --border-default:  var(--gray-200);  /* #CCCFD1 — default control stroke */
+  --border-subtle:   var(--gray-100);
+  --border-strong:   var(--gray-300);
+  --border-focus:    var(--primary-default);
+
+  /* Elevation shadow colors */
+  --shadow-color:    rgba(0, 0, 0, 0.25);
+  --shadow-color-soft: rgba(0, 0, 0, 0.2);
+  --shadow-color-strong: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   CdBd — Typography tokens
+   Face: Pretendard. Sizes in px exactly as documented in the
+   .fig › Foundation › Typography spec table. Line-height 1.5 for
+   text, tighter for display. Numeric/mono uses --font-numeric.
+   ============================================================ */
+
+:root {
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  /* Substitute for licensed "Indivisible" (small numeric labels) */
+  --font-numeric: "Pretendard", ui-monospace, "SF Mono", "Roboto Mono", Menlo, monospace;
+
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500;  /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700;    /* @kind font */
+
+  /* Size ramp */
+  --size-display-1: 40px;
+  --size-display-2: 28px;
+  --size-heading-1: 24px;
+  --size-heading-2: 20px;
+  --size-heading-3: 18px;
+  --size-heading-4: 16px;
+  --size-heading-5: 14px;
+  --size-body-1: 16px;   /* Paragraph 1 */
+  --size-body-2: 14px;   /* Paragraph 2 */
+  --size-label: 14px;    /* Button / Subtitle */
+  --size-caption: 12px;
+  --size-unit: 12px;
+
+  --lh-tight: 1.2;  /* @kind font */
+  --lh-snug: 1.3;   /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+
+  --ls-tight: -0.02em;   /* buttons / labels */
+  --ls-normal: 0.006em;  /* long-form body */
+}
+
+/* ---- Type utility classes (used by specimen cards & kits) ---- */
+.cdbd-display-1 { font: var(--fw-bold) var(--size-display-1)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-display-2 { font: var(--fw-bold) var(--size-display-2)/var(--lh-snug) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-h1 { font: var(--fw-bold) var(--size-heading-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-h2 { font: var(--fw-bold) var(--size-heading-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-h3 { font: var(--fw-bold) var(--size-heading-3)/var(--lh-normal) var(--font-sans); }
+.cdbd-h4 { font: var(--fw-bold) var(--size-heading-4)/var(--lh-normal) var(--font-sans); }
+.cdbd-h5 { font: var(--fw-bold) var(--size-heading-5)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-1 { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-subtitle-2 { font: var(--fw-medium) var(--size-label)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-1 { font: var(--fw-medium) var(--size-body-1)/var(--lh-normal) var(--font-sans); }
+.cdbd-body-2 { font: var(--fw-regular) var(--size-body-2)/var(--lh-normal) var(--font-sans); }
+.cdbd-label { font: var(--fw-semibold) var(--size-label)/var(--lh-normal) var(--font-sans); letter-spacing: var(--ls-tight); }
+.cdbd-caption { font: var(--fw-medium) var(--size-caption)/var(--lh-normal) var(--font-sans); }
+.cdbd-unit { font: var(--fw-regular) var(--size-unit)/var(--lh-normal) var(--font-numeric); }
+
+/* ============================================================
+   CdBd — Layout tokens: spacing, radii, elevation.
+   Spacing & radii mirror the auto-layout gaps and corner radii
+   observed across the .fig (8-based rhythm; large container radii).
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---- Corner radii ---- */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;    /* buttons, inputs, menu items */
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;  /* swatch / small cards */
+  --radius-24: 24px;
+  --radius-40: 40px;  /* content cards */
+  --radius-48: 48px;  /* large panels */
+  --radius-full: 999px;
+
+  /* ---- Control heights ---- */
+  --control-h-sm: 32px;
+  --control-h-md: 38px;   /* default desktop button/input */
+  --control-h-lg: 44px;   /* mobile touch target */
+
+  /* ---- Elevation (alpha 0.2–0.3 per source shadow tokens) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+  /* Hairline inset ring used on "Gray" outlined controls */
+  --ring-default: inset 0 0 0 1px var(--border-default);
+  --ring-focus: inset 0 0 0 1px var(--border-focus);
+}
+
+/* ============================================================
+   CdBd — base reset + document defaults.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-body-2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--text-normal);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brand mark helper: SVG uses currentColor, so color = mark color */
+.cdbd-mark { color: var(--primary-default); display: inline-flex; }
+.cdbd-mark--black { color: var(--black); }
+
+</style>
+<script src="a215d507-f94b-4e55-bccc-4746a92626e6"></script>
+<script src="b6db2c2b-e557-4544-8c57-fa5b072bc368"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5f66583b-5567-4c1c-b3f4-e3de1a2539ec") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4f67e263-941e-4fd4-abc9-0eaf2d11a336") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b7171b4b-7a7a-49b3-aa8b-e5dc163e3307") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5f66583b-5567-4c1c-b3f4-e3de1a2539ec") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4f67e263-941e-4fd4-abc9-0eaf2d11a336") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b7171b4b-7a7a-49b3-aa8b-e5dc163e3307") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5f66583b-5567-4c1c-b3f4-e3de1a2539ec") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4f67e263-941e-4fd4-abc9-0eaf2d11a336") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b7171b4b-7a7a-49b3-aa8b-e5dc163e3307") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5f66583b-5567-4c1c-b3f4-e3de1a2539ec") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4f67e263-941e-4fd4-abc9-0eaf2d11a336") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b7171b4b-7a7a-49b3-aa8b-e5dc163e3307") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a4c2ed51-98ac-46fc-a80e-7db03e177cca") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("dc5132ba-10ea-458b-94b9-e94df8a987ba") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c6ad3d39-773d-46bc-a0dd-c6a5965cec78") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("a4c2ed51-98ac-46fc-a80e-7db03e177cca") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("dc5132ba-10ea-458b-94b9-e94df8a987ba") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c6ad3d39-773d-46bc-a0dd-c6a5965cec78") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("a4c2ed51-98ac-46fc-a80e-7db03e177cca") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("dc5132ba-10ea-458b-94b9-e94df8a987ba") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c6ad3d39-773d-46bc-a0dd-c6a5965cec78") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("0698f6fa-20e1-4f25-848c-8685e5da650e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ee174fe9-ba7d-43e8-94f0-a1832117dbd4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6bf01d09-5831-48a8-86f9-071790112cb0") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("0698f6fa-20e1-4f25-848c-8685e5da650e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("ee174fe9-ba7d-43e8-94f0-a1832117dbd4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6bf01d09-5831-48a8-86f9-071790112cb0") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("0698f6fa-20e1-4f25-848c-8685e5da650e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("ee174fe9-ba7d-43e8-94f0-a1832117dbd4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("6bf01d09-5831-48a8-86f9-071790112cb0") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  html,body{margin:0;background:#e5e7eb;}
+  *{box-sizing:border-box;}
+  .scr::-webkit-scrollbar{display:none;}
+  .scr{-ms-overflow-style:none;scrollbar-width:none;}
+  a{text-decoration:none;color:inherit;}
+  a:hover{opacity:.82;}
+  input,textarea,button{font-family:"Pretendard",sans-serif;outline:none;}
+  input::placeholder,textarea::placeholder{opacity:.5;}
+  image-slot{display:block;}
+</style>
+</helmet>
+
+<section id="turn2" style="padding:64px 56px 40px;font-family:'Pretendard',sans-serif;">
+  <header style="max-width:1360px;margin:0 auto 44px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#0F1E3D;color:#fff;padding:7px 14px;border-radius:999px;font:700 12px/1 'Pretendard';letter-spacing:.02em;">startup-deck · 멀티페이지</div>
+    <h1 style="margin:16px 0 8px;font:800 32px/1.15 'Pretendard';letter-spacing:-0.02em;color:#0F1E3D;">멀티페이지 IR — 3가지 구조 시안</h1>
+    <p style="margin:0;max-width:840px;font:500 15px/1.6 'Pretendard';color:#5a606e;">각 시안 = <b>표지 1 + 서브페이지 3~4</b> (폰 프레임 1개 = 페이지 1개, 가로로 나란히). 표지 목차 버튼 · 서브 상단 헤더(2단 카드)의 홈 아이콘 · 하단 이동 버튼이 <b>실제 앵커 링크</b>로 해당 페이지로 이동합니다. 세 시안은 표지 히어로 · 페이지 배분(3 vs 4 서브) · 이미지 비중 · 카드 타입(지표 2단 vs 텍스트, 팀 프로필 vs 갤러리) · 목차 강조에서 다릅니다.</p>
+  </header>
+
+  <!-- ══════════════════ 시안 2a : 풀블리드 목업 표지 · 3서브 · Blue/White ══════════════════ -->
+  <div id="2a" style="margin:0 auto 72px;max-width:100%;">
+    <div style="margin:0 0 18px;"><span style="display:inline-flex;align-items:center;gap:8px;background:#1B4DDB;color:#fff;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 2a</span> <span style="font:700 16px/1 'Pretendard';color:#0F1E3D;margin-left:8px;">풀블리드 목업 표지 · 3서브 · 지표=2단 · 팀=프로필 · Blue on White</span></div>
+    <div style="display:flex;flex-wrap:nowrap;gap:28px;align-items:flex-start;overflow-x:auto;padding-bottom:12px;">
+
+      <!-- 페이지: 표지 (P1) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2a-cover" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+            <!-- 카드: 이미지 (풀블리드 히어로 목업) -->
+            <image-slot id="m2a-hero" shape="rect" fit="cover" placeholder="제품 목업 (대표 화면)" style="width:100%;height:320px;"></image-slot>
+            <!-- 카드: 이미지 (로고) -->
+            <div style="padding:22px 22px 0;"><image-slot id="m2a-logo" shape="rect" fit="contain" placeholder="로고" style="width:110px;height:32px;"></image-slot></div>
+            <!-- 카드: 텍스트 (회사명) -->
+            <div style="padding:14px 22px 0;"><h1 style="margin:0;font-weight:800;font-size:40px;line-height:1.05;letter-spacing:-0.03em;color:#0F1E3D;">리플로우</h1></div>
+            <!-- 카드: 텍스트 (원라이너) -->
+            <div style="padding:12px 22px 0;"><p style="margin:0;font-size:18px;line-height:1.45;font-weight:600;color:#0F1E3D;">중소기업의 반복 업무를, 코딩 없이 자동화합니다.</p></div>
+            <!-- 카드: 2단 카드 (지표 티저) -->
+            <div style="padding:22px 22px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:18px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:.95;color:#1B4DDB;">40개사</div><div style="margin-top:6px;font-size:13px;color:#5a606e;">베타 도입</div></div>
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:18px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:.95;color:#1B4DDB;">+35%</div><div style="margin-top:6px;font-size:13px;color:#5a606e;">전월 대비</div></div>
+            </div>
+            <!-- 카드: 텍스트 (목차 제목) -->
+            <div style="padding:30px 22px 0;"><h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">둘러보기</h2></div>
+            <!-- 카드: 메뉴 (목차 — 페이지 이동) -->
+            <div style="padding:14px 22px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="#p-2a-p2" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(27,77,219,.08);"><span style="font-size:15px;font-weight:700;color:#0F1E3D;">문제 &amp; 솔루션 &amp; 제품</span><span style="font-size:14px;font-weight:800;color:#1B4DDB;">→</span></a>
+              <a href="#p-2a-p3" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(27,77,219,.08);"><span style="font-size:15px;font-weight:700;color:#0F1E3D;">시장 &amp; 지표 &amp; 모델</span><span style="font-size:14px;font-weight:800;color:#1B4DDB;">→</span></a>
+              <a href="#p-2a-p4" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(27,77,219,.08);"><span style="font-size:15px;font-weight:700;color:#0F1E3D;">팀 &amp; 투자 &amp; 문의</span><span style="font-size:14px;font-weight:800;color:#1B4DDB;">→</span></a>
+            </div>
+            <!-- 카드: 버튼 (대표 CTA — 문의 페이지 이동) -->
+            <div style="padding:22px 22px 0;"><a href="#p-2a-p4" style="display:block;text-align:center;width:100%;padding:17px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;">투자 미팅 요청하기</a></div>
+            <!-- 카드: 텍스트 (footer) -->
+            <div style="padding:26px 22px 40px;text-align:center;font-size:12px;color:rgba(15,30,61,.4);">이 페이지는 #CdBd 로 만들었습니다</div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P1 · 표지</div>
+      </div>
+
+      <!-- 페이지: 문제·솔루션·제품 (P2) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2a-p2" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+            <!-- 카드: 2단 카드 (상단 헤더 — 좌 회사명 + 우 홈 아이콘, 표지 이동) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#1B4DDB;">
+              <span style="font-size:15px;font-weight:800;color:#FFFFFF;">리플로우</span>
+              <a href="#p-2a-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#FFFFFF;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">문제</h2></div>
+            <!-- 카드: 텍스트 (문제 본문) -->
+            <div style="padding:12px 22px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">중소기업 실무자는 주당 평균 <b style="color:#1B4DDB;">11시간</b>을 복사·붙여넣기, 자료 취합 같은 반복 수작업에 씁니다. 개발 인력은 없고 기존 자동화 도구는 너무 복잡합니다.</p></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:30px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">솔루션</h2></div>
+            <!-- 카드: 텍스트 (솔루션 본문) -->
+            <div style="padding:12px 22px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">리플로우는 드래그 한 번으로 업무 흐름을 만드는 노코드 자동화 SaaS입니다. 개발자 없이도 5분 만에 반복 업무를 자동화합니다.</p></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:32px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">제품</h2></div>
+            <!-- 카드: 2단 카드 (제품 1) -->
+            <div style="padding:16px 22px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">01</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">비주얼 워크플로우 빌더</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">노드를 드래그로 연결해 자동화 흐름을 설계</div></div></div>
+            <!-- 카드: 2단 카드 (제품 2) -->
+            <div style="padding:18px 22px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">02</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">200+ 앱 연동</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">슬랙·노션·구글·자체 API까지 즉시 연결</div></div></div>
+            <!-- 카드: 2단 카드 (제품 3) -->
+            <div style="padding:18px 22px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">03</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">AI 업무 추천</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">사용 패턴을 학습해 자동화할 업무를 먼저 제안</div></div></div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:34px 22px 0;"><a href="#p-2a-p3" style="display:block;text-align:center;width:100%;padding:16px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;">다음 · 시장 &amp; 지표 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 22px 40px;"><a href="#p-2a-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(27,77,219,.08);color:#1B4DDB;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P2 · 문제·솔루션·제품</div>
+      </div>
+
+      <!-- 페이지: 시장·지표·모델 (P3) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2a-p3" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#1B4DDB;">
+              <span style="font-size:15px;font-weight:800;color:#FFFFFF;">리플로우</span>
+              <a href="#p-2a-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#FFFFFF;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">시장 기회</h2></div>
+            <!-- 카드: 텍스트 (시장 본문) -->
+            <div style="padding:12px 22px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">국내 노코드·업무 자동화 시장 <b style="color:#1B4DDB;">1.2조원</b>(TAM), 연 28% 성장 중. 초기 타깃 SOM은 국내 SMB 60만곳입니다.</p></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:32px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">핵심 지표</h2></div>
+            <!-- 카드: 2단 카드 (지표 1) -->
+            <div style="padding:16px 22px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:20px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:.95;color:#1B4DDB;">40개사</div><div style="margin-top:7px;font-size:13px;color:#5a606e;">베타 도입 기업</div></div>
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:20px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:.95;color:#1B4DDB;">₩1,200만</div><div style="margin-top:7px;font-size:13px;color:#5a606e;">월 반복매출</div></div>
+            </div>
+            <!-- 카드: 2단 카드 (지표 2) -->
+            <div style="padding:12px 22px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:20px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:.95;color:#1B4DDB;">+35%</div><div style="margin-top:7px;font-size:13px;color:#5a606e;">전월 대비 성장</div></div>
+              <div style="flex:1;background:rgba(27,77,219,.08);padding:20px 14px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:.95;color:#1B4DDB;">850명</div><div style="margin-top:7px;font-size:13px;color:#5a606e;">출시 대기자</div></div>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:32px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">비즈니스 모델</h2></div>
+            <!-- 카드: 텍스트 (BM 본문) -->
+            <div style="padding:12px 22px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">좌석당 월 구독(SaaS). 실행 건수 기반 상위 요금제 · 엔터프라이즈 연간 계약으로 확장합니다.</p></div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:34px 22px 0;"><a href="#p-2a-p4" style="display:block;text-align:center;width:100%;padding:16px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;">다음 · 팀 &amp; 투자 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 22px 40px;"><a href="#p-2a-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(27,77,219,.08);color:#1B4DDB;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P3 · 시장·지표·모델</div>
+      </div>
+
+      <!-- 페이지: 팀·투자·문의 (P4) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2a-p4" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#1B4DDB;">
+              <span style="font-size:15px;font-weight:800;color:#FFFFFF;">리플로우</span>
+              <a href="#p-2a-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#FFFFFF;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">팀</h2></div>
+            <!-- 카드: 프로필 (팀 1) -->
+            <div style="padding:16px 22px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2a-t1" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#0F1E3D;">김도현 · 대표</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 토스 PO · 노코드 5년</div></div></div>
+            <!-- 카드: 프로필 (팀 2) -->
+            <div style="padding:14px 22px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2a-t2" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#0F1E3D;">이서준 · CTO</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 네이버 백엔드 리드</div></div></div>
+            <!-- 카드: 프로필 (팀 3) -->
+            <div style="padding:14px 22px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2a-t3" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#0F1E3D;">박지우 · 디자인</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 카카오 프로덕트 디자이너</div></div></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:30px 22px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">투자 제안</h2></div>
+            <!-- 카드: 텍스트 (Ask 강조) -->
+            <div style="padding:14px 22px 0;"><div style="background:rgba(27,77,219,.08);padding:22px 18px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;line-height:1;color:#1B4DDB;">₩5억</div><div style="margin-top:8px;font-size:15px;font-weight:600;color:#0F1E3D;">프리시드 라운드 진행 중</div><div style="margin-top:10px;font-size:14px;line-height:1.6;color:#5a606e;">제품 고도화 50% · 세일즈/마케팅 30% · 채용 20%</div></div></div>
+            <!-- 카드: 갤러리 (파트너·투자사 로고) -->
+            <div style="padding:26px 22px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <image-slot id="m2a-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2a-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2a-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2a-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+            </div>
+            <!-- 카드: 버튼 (IR 자료 다운로드) -->
+            <div style="padding:24px 22px 0;"><button style="width:100%;padding:16px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;border:none;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+            <!-- 카드: 구분선 -->
+            <div style="padding:28px 22px;"><div style="height:1px;background:rgba(15,30,61,.12);"></div></div>
+            <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+            <div style="padding:0 22px;">
+              <div style="background:rgba(27,77,219,.06);padding:28px 20px;">
+                <h3 style="margin:0;text-align:center;font-size:21px;font-weight:800;color:#0F1E3D;">투자 미팅 요청</h3>
+                <p style="margin:8px 0 0;text-align:center;font-size:14px;color:#5a606e;">담당자가 1영업일 내에 연락드립니다</p>
+                <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;">
+                  <input placeholder="이름" style="padding:14px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                  <input placeholder="소속 (투자사·직함)" style="padding:14px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                  <input placeholder="연락처" style="padding:14px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                  <textarea placeholder="문의 내용" rows="3" style="padding:14px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;resize:none;"></textarea>
+                  <button style="margin-top:4px;padding:16px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;border:none;cursor:pointer;">미팅 요청 보내기</button>
+                </div>
+              </div>
+            </div>
+            <!-- 카드: 메뉴 (연락처) -->
+            <div style="padding:26px 22px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(15,30,61,.05);"><span style="font-size:15px;font-weight:600;color:#0F1E3D;">이메일</span><span style="font-size:14px;font-weight:700;color:#1B4DDB;">ir@reflow.io →</span></a>
+              <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(15,30,61,.05);"><span style="font-size:15px;font-weight:600;color:#0F1E3D;">전화</span><span style="font-size:14px;font-weight:700;color:#1B4DDB;">02-0000-0000 →</span></a>
+            </div>
+            <!-- 카드: SNS -->
+            <div style="padding:26px 22px 0;display:flex;justify-content:center;gap:12px;">
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:12px;">WEB</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:12px;">IN</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:12px;">X</a>
+            </div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:24px 22px 40px;"><a href="#p-2a-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(27,77,219,.08);color:#1B4DDB;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P4 · 팀·투자·문의</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════ 시안 2b : 원라이너 타이포 미니멀 표지 · 4서브 · Green ink/off-white serif ══════════════════ -->
+  <div id="2b" style="margin:0 auto 72px;max-width:100%;">
+    <div style="margin:0 0 18px;"><span style="display:inline-flex;align-items:center;gap:8px;background:#0A5C4A;color:#fff;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 2b</span> <span style="font:700 16px/1 'Pretendard';color:#0F1E3D;margin-left:8px;">원라이너 타이포 미니멀 표지 · 4서브 · 지표=텍스트 · 팀=갤러리 · Ink on Off-white (Serif)</span></div>
+    <div style="display:flex;flex-wrap:nowrap;gap:28px;align-items:flex-start;overflow-x:auto;padding-bottom:12px;">
+
+      <!-- 페이지: 표지 (P1) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2b-cover" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+            <div style="height:48px;"></div>
+            <!-- 카드: 이미지 (로고) -->
+            <div style="padding:24px 28px 0;"><image-slot id="m2b-logo" shape="rect" fit="contain" placeholder="로고" style="width:104px;height:32px;"></image-slot></div>
+            <!-- 카드: 텍스트 (원라이너 대형 타이포) -->
+            <div style="padding:56px 28px 0;"><h1 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:45px;line-height:1.12;letter-spacing:-0.01em;color:#1A1A1A;">반복 업무가<br>사라지는 곳,<br>리플로우.</h1></div>
+            <!-- 카드: 텍스트 (부제 원라이너) -->
+            <div style="padding:24px 28px 0;"><p style="margin:0;font-size:17px;line-height:1.6;color:#4a4a44;">중소기업의 반복 업무를 코딩 없이 자동화하는 노코드 워크플로우 SaaS.</p></div>
+            <!-- 카드: 이미지 (절제된 히어로) -->
+            <div style="padding:44px 28px 0;"><image-slot id="m2b-hero" shape="rounded" radius="16" fit="cover" placeholder="상징 이미지 (절제)" style="width:100%;height:180px;"></image-slot></div>
+            <!-- 카드: 텍스트 (목차 제목) -->
+            <div style="padding:48px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">목차</span></div>
+            <!-- 카드: 메뉴 (목차 — 페이지 이동) -->
+            <div style="padding:16px 28px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="#p-2b-p2" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,92,74,.06);border-radius:16px;"><span style="font-size:15px;font-weight:700;color:#1A1A1A;">문제 &amp; 솔루션</span><span style="font-size:14px;font-weight:800;color:#0A5C4A;">→</span></a>
+              <a href="#p-2b-p3" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,92,74,.06);border-radius:16px;"><span style="font-size:15px;font-weight:700;color:#1A1A1A;">제품 &amp; 시장</span><span style="font-size:14px;font-weight:800;color:#0A5C4A;">→</span></a>
+              <a href="#p-2b-p4" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,92,74,.06);border-radius:16px;"><span style="font-size:15px;font-weight:700;color:#1A1A1A;">지표 &amp; 모델 &amp; 팀</span><span style="font-size:14px;font-weight:800;color:#0A5C4A;">→</span></a>
+              <a href="#p-2b-p5" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(10,92,74,.06);border-radius:16px;"><span style="font-size:15px;font-weight:700;color:#1A1A1A;">투자 &amp; 문의</span><span style="font-size:14px;font-weight:800;color:#0A5C4A;">→</span></a>
+            </div>
+            <!-- 카드: 버튼 (대표 CTA) -->
+            <div style="padding:24px 28px 0;"><a href="#p-2b-p5" style="display:block;text-align:center;width:100%;padding:17px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border-radius:16px;">투자 미팅 요청하기</a></div>
+            <!-- 카드: 텍스트 (footer) -->
+            <div style="padding:26px 28px 40px;text-align:center;font-size:12px;color:rgba(26,26,26,.4);">이 페이지는 #CdBd 로 만들었습니다</div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P1 · 표지</div>
+      </div>
+
+      <!-- 페이지: 문제·솔루션 (P2) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2b-p2" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#1A1A1A;">
+              <span style="font-size:15px;font-weight:800;color:#F7F5F0;">리플로우</span>
+              <a href="#p-2b-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#F7F5F0;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:32px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">01 — 문제</span></div>
+            <!-- 카드: 텍스트 (문제 헤드) -->
+            <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:28px;line-height:1.25;color:#1A1A1A;">실무자는 매주 11시간을 복붙에 씁니다.</h2></div>
+            <!-- 카드: 텍스트 (문제 본문) -->
+            <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">중소기업엔 개발 인력이 없습니다. 자료 취합, 보고서 작성, 데이터 이동 같은 단순 반복 업무가 사람 손에 남습니다. 기존 자동화 도구는 너무 복잡해 실무자가 쓰기 어렵습니다.</p></div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">02 — 솔루션</span></div>
+            <!-- 카드: 텍스트 (솔루션 헤드) -->
+            <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:28px;line-height:1.25;color:#1A1A1A;">드래그 한 번으로 자동화합니다.</h2></div>
+            <!-- 카드: 텍스트 (솔루션 본문) -->
+            <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">리플로우는 노드를 끌어다 연결하는 것만으로 업무 흐름을 완성합니다. 개발자 없이 5분이면 첫 자동화를 실행할 수 있습니다.</p></div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:44px 28px 0;"><a href="#p-2b-p3" style="display:block;text-align:center;width:100%;padding:16px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border-radius:16px;">다음 · 제품 &amp; 시장 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 28px 40px;"><a href="#p-2b-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(10,92,74,.06);color:#0A5C4A;font-weight:700;font-size:15px;border-radius:16px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P2 · 문제·솔루션</div>
+      </div>
+
+      <!-- 페이지: 제품·시장 (P3) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2b-p3" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#1A1A1A;">
+              <span style="font-size:15px;font-weight:800;color:#F7F5F0;">리플로우</span>
+              <a href="#p-2b-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#F7F5F0;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:32px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">03 — 제품</span></div>
+            <!-- 카드: 이미지 (제품 1) -->
+            <div style="padding:18px 28px 0;"><image-slot id="m2b-p1" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 1" style="width:100%;height:180px;"></image-slot></div>
+            <!-- 카드: 텍스트 (제품 1 설명) -->
+            <div style="padding:14px 28px 0;"><div style="font-size:18px;font-weight:700;color:#1A1A1A;">비주얼 워크플로우 빌더</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">노드를 드래그로 연결해 자동화 흐름을 설계합니다.</p></div>
+            <!-- 카드: 이미지 (제품 2) -->
+            <div style="padding:30px 28px 0;"><image-slot id="m2b-p2" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 2" style="width:100%;height:180px;"></image-slot></div>
+            <!-- 카드: 텍스트 (제품 2 설명) -->
+            <div style="padding:14px 28px 0;"><div style="font-size:18px;font-weight:700;color:#1A1A1A;">200+ 앱 연동</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">슬랙·노션·구글·자체 API까지 즉시 연결됩니다.</p></div>
+            <!-- 카드: 이미지 (제품 3) -->
+            <div style="padding:30px 28px 0;"><image-slot id="m2b-p3" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 3" style="width:100%;height:180px;"></image-slot></div>
+            <!-- 카드: 텍스트 (제품 3 설명) -->
+            <div style="padding:14px 28px 0;"><div style="font-size:18px;font-weight:700;color:#1A1A1A;">AI 업무 추천</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">사용 패턴을 학습해 자동화할 업무를 먼저 제안합니다.</p></div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:44px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">04 — 시장</span></div>
+            <!-- 카드: 텍스트 (시장 본문) -->
+            <div style="padding:14px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">국내 노코드·업무 자동화 시장은 1.2조원(TAM), 연 28% 성장 중입니다. 초기 타깃은 국내 중소기업 60만곳(SOM)입니다.</p></div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:40px 28px 0;"><a href="#p-2b-p4" style="display:block;text-align:center;width:100%;padding:16px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border-radius:16px;">다음 · 지표 &amp; 팀 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 28px 40px;"><a href="#p-2b-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(10,92,74,.06);color:#0A5C4A;font-weight:700;font-size:15px;border-radius:16px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P3 · 제품·시장</div>
+      </div>
+
+      <!-- 페이지: 지표·모델·팀 (P4) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2b-p4" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#1A1A1A;">
+              <span style="font-size:15px;font-weight:800;color:#F7F5F0;">리플로우</span>
+              <a href="#p-2b-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#F7F5F0;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:32px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">05 — 지금까지</span></div>
+            <!-- 카드: 텍스트 (지표 나열) -->
+            <div style="padding:16px 28px 0;">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">베타 도입 기업</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">40개사</span></div>
+              <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">월 반복매출(MRR)</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">₩1,200만</span></div>
+              <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">전월 대비 성장</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#0A5C4A;">+35%</span></div>
+              <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;"><span style="font-size:16px;color:#4a4a44;">출시 대기자</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">850명</span></div>
+            </div>
+            <!-- 카드: 텍스트 (BM 본문) -->
+            <div style="padding:24px 28px 0;"><p style="margin:0;font-size:15px;line-height:1.7;color:#4a4a44;"><b style="color:#1A1A1A;">비즈니스 모델</b> — 좌석당 월 구독. 실행 건수 상위 요금제와 엔터프라이즈 연간 계약으로 확장합니다.</p></div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:44px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">06 — 팀</span></div>
+            <!-- 카드: 갤러리 (팀 사진 그리드) -->
+            <div style="padding:16px 28px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <image-slot id="m2b-t1" shape="rounded" radius="16" placeholder="팀 사진 1" style="width:100%;height:150px;"></image-slot>
+              <image-slot id="m2b-t2" shape="rounded" radius="16" placeholder="팀 사진 2" style="width:100%;height:150px;"></image-slot>
+              <image-slot id="m2b-t3" shape="rounded" radius="16" placeholder="팀 사진 3" style="width:100%;height:150px;"></image-slot>
+              <image-slot id="m2b-t4" shape="rounded" radius="16" placeholder="팀 사진 4" style="width:100%;height:150px;"></image-slot>
+            </div>
+            <!-- 카드: 텍스트 (팀 명단) -->
+            <div style="padding:18px 28px 0;display:flex;flex-direction:column;gap:8px;">
+              <div style="font-size:15px;color:#1A1A1A;"><b>김도현</b> · 대표 <span style="color:#6a6a62;">— 전 토스 PO</span></div>
+              <div style="font-size:15px;color:#1A1A1A;"><b>이서준</b> · CTO <span style="color:#6a6a62;">— 전 네이버 백엔드 리드</span></div>
+              <div style="font-size:15px;color:#1A1A1A;"><b>박지우</b> · 디자인 <span style="color:#6a6a62;">— 전 카카오 디자이너</span></div>
+            </div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:40px 28px 0;"><a href="#p-2b-p5" style="display:block;text-align:center;width:100%;padding:16px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border-radius:16px;">다음 · 투자 &amp; 문의 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 28px 40px;"><a href="#p-2b-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(10,92,74,.06);color:#0A5C4A;font-weight:700;font-size:15px;border-radius:16px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P4 · 지표·모델·팀</div>
+      </div>
+
+      <!-- 페이지: 투자·문의 (P5) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2b-p5" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#1A1A1A;">
+              <span style="font-size:15px;font-weight:800;color:#F7F5F0;">리플로우</span>
+              <a href="#p-2b-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#F7F5F0;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (챕터 라벨) -->
+            <div style="padding:32px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">07 — 제안</span></div>
+            <!-- 카드: 텍스트 (Ask 헤드) -->
+            <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.15;color:#1A1A1A;">프리시드 <span style="color:#0A5C4A;">₩5억</span> 라운드를 진행합니다.</h2></div>
+            <!-- 카드: 텍스트 (Ask 본문) -->
+            <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">제품 고도화 50% · 세일즈/마케팅 30% · 핵심 인재 채용 20%에 사용합니다.</p></div>
+            <!-- 카드: 갤러리 (파트너·투자사 로고) -->
+            <div style="padding:30px 28px 0;"><div style="font-size:13px;letter-spacing:.06em;color:#6a6a62;margin-bottom:14px;">함께하는 파트너 · 투자사</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <image-slot id="m2b-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2b-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2b-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2b-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+            </div></div>
+            <!-- 카드: 버튼 (IR 자료 다운로드) -->
+            <div style="padding:26px 28px 0;"><button style="width:100%;padding:17px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+            <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+            <div style="padding:44px 28px 0;">
+              <h3 style="margin:0;text-align:center;font-family:'Newsreader',serif;font-weight:500;font-size:28px;color:#1A1A1A;">투자 미팅 요청</h3>
+              <p style="margin:8px 0 0;text-align:center;font-size:14px;color:#6a6a62;">담당자가 1영업일 내에 연락드립니다</p>
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                <input placeholder="이름" style="padding:15px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+                <input placeholder="소속 (투자사·직함)" style="padding:15px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+                <input placeholder="연락처" style="padding:15px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+                <textarea placeholder="문의 내용" rows="3" style="padding:15px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;resize:none;"></textarea>
+                <button style="margin-top:4px;padding:17px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">미팅 요청 보내기</button>
+              </div>
+            </div>
+            <!-- 카드: 메뉴 (연락처) -->
+            <div style="padding:32px 28px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(26,26,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#1A1A1A;">이메일</span><span style="font-size:14px;font-weight:700;color:#0A5C4A;">ir@reflow.io →</span></a>
+              <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(26,26,26,.04);border-radius:16px;"><span style="font-size:15px;font-weight:600;color:#1A1A1A;">전화</span><span style="font-size:14px;font-weight:700;color:#0A5C4A;">02-0000-0000 →</span></a>
+            </div>
+            <!-- 카드: SNS -->
+            <div style="padding:28px 28px 0;display:flex;justify-content:center;gap:12px;">
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:12px;border-radius:16px;">WEB</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:12px;border-radius:16px;">IN</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:12px;border-radius:16px;">X</a>
+            </div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:24px 28px 40px;"><a href="#p-2b-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(10,92,74,.06);color:#0A5C4A;font-weight:700;font-size:15px;border-radius:16px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P5 · 투자·문의</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════ 시안 2c : 절제 미니멀 표지(지표 대시보드) · 3서브 · Slate/Gold · 제품 갤러리 중심 ══════════════════ -->
+  <div id="2c" style="margin:0 auto 40px;max-width:100%;">
+    <div style="margin:0 0 18px;"><span style="display:inline-flex;align-items:center;gap:8px;background:#14181F;color:#E9B949;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 2c</span> <span style="font:700 16px/1 'Pretendard';color:#0F1E3D;margin-left:8px;">절제 미니멀 표지(지표 대시보드) · 3서브 · 제품 갤러리 중심 · Gold on Slate</span></div>
+    <div style="display:flex;flex-wrap:nowrap;gap:28px;align-items:flex-start;overflow-x:auto;padding-bottom:12px;">
+
+      <!-- 페이지: 표지 (P1) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2c-cover" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#14181F;">
+            <div style="height:56px;"></div>
+            <!-- 카드: 이미지 (로고) -->
+            <div style="padding:24px 24px 0;"><image-slot id="m2c-logo" shape="rect" fit="contain" placeholder="로고" style="width:104px;height:30px;"></image-slot></div>
+            <!-- 카드: 텍스트 (회사명) -->
+            <div style="padding:28px 24px 0;"><h1 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:40px;line-height:1.04;letter-spacing:-0.02em;color:#EAEEF3;">리플로우</h1></div>
+            <!-- 카드: 텍스트 (원라이너) -->
+            <div style="padding:14px 24px 0;"><p style="margin:0;font-size:18px;line-height:1.45;font-weight:600;color:rgba(234,238,243,.85);">중소기업의 반복 업무를, 코딩 없이 자동화합니다.</p></div>
+            <!-- 카드: 텍스트 (지표 대시보드 제목) -->
+            <div style="padding:36px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:18px;font-weight:800;letter-spacing:.02em;color:rgba(234,238,243,.6);">TRACTION</h2></div>
+            <!-- 카드: 2단 카드 (지표 대시보드 1) -->
+            <div style="padding:14px 24px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;line-height:.95;color:#E9B949;">40</div><div style="margin-top:6px;font-size:13px;color:rgba(234,238,243,.6);">베타 도입 기업</div></div>
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;line-height:.95;color:#E9B949;">+35%</div><div style="margin-top:6px;font-size:13px;color:rgba(234,238,243,.6);">전월 대비</div></div>
+            </div>
+            <!-- 카드: 2단 카드 (지표 대시보드 2) -->
+            <div style="padding:12px 24px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;line-height:.95;color:#E9B949;">₩1,200만</div><div style="margin-top:6px;font-size:13px;color:rgba(234,238,243,.6);">월 반복매출</div></div>
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;line-height:.95;color:#E9B949;">850</div><div style="margin-top:6px;font-size:13px;color:rgba(234,238,243,.6);">출시 대기자</div></div>
+            </div>
+            <!-- 카드: 텍스트 (목차 제목) -->
+            <div style="padding:34px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">둘러보기</h2></div>
+            <!-- 카드: 메뉴 (목차 — 페이지 이동) -->
+            <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="#p-2c-p2" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(233,185,73,.1);"><span style="font-size:15px;font-weight:700;color:#EAEEF3;">문제 &amp; 솔루션 &amp; 제품</span><span style="font-size:14px;font-weight:800;color:#E9B949;">→</span></a>
+              <a href="#p-2c-p3" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(233,185,73,.1);"><span style="font-size:15px;font-weight:700;color:#EAEEF3;">시장 &amp; 지표 &amp; 모델</span><span style="font-size:14px;font-weight:800;color:#E9B949;">→</span></a>
+              <a href="#p-2c-p4" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(233,185,73,.1);"><span style="font-size:15px;font-weight:700;color:#EAEEF3;">팀 &amp; 투자 &amp; 문의</span><span style="font-size:14px;font-weight:800;color:#E9B949;">→</span></a>
+            </div>
+            <!-- 카드: 버튼 (대표 CTA) -->
+            <div style="padding:22px 24px 0;"><a href="#p-2c-p4" style="display:block;text-align:center;width:100%;padding:17px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;">투자 미팅 요청하기</a></div>
+            <!-- 카드: 텍스트 (footer) -->
+            <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(234,238,243,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P1 · 표지</div>
+      </div>
+
+      <!-- 페이지: 문제·솔루션·제품 (P2) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2c-p2" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#14181F;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#E9B949;">
+              <span style="font-size:15px;font-weight:800;color:#14181F;">리플로우</span>
+              <a href="#p-2c-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#14181F;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">문제 · 솔루션</h2></div>
+            <!-- 카드: 텍스트 (문제 본문) -->
+            <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);"><b style="color:#E9B949;">문제.</b> 중소기업 실무자는 주당 11시간을 반복 수작업에 씁니다. 개발 인력은 없고 기존 도구는 복잡합니다.</p></div>
+            <!-- 카드: 텍스트 (솔루션 본문) -->
+            <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);"><b style="color:#E9B949;">솔루션.</b> 드래그로 업무 흐름을 만드는 노코드 자동화. 개발자 없이 5분이면 자동화를 실행합니다.</p></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:34px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">제품</h2></div>
+            <!-- 카드: 갤러리 (제품 스크린샷 몰입 그리드) -->
+            <div style="padding:16px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <image-slot id="m2c-g1" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 1" style="width:100%;height:190px;"></image-slot>
+              <image-slot id="m2c-g2" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 2" style="width:100%;height:190px;"></image-slot>
+              <image-slot id="m2c-g3" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 3" style="width:100%;height:190px;"></image-slot>
+              <image-slot id="m2c-g4" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 4" style="width:100%;height:190px;"></image-slot>
+            </div>
+            <!-- 카드: 텍스트 (제품 나열) -->
+            <div style="padding:22px 24px 0;display:flex;flex-direction:column;gap:16px;">
+              <div><div style="font-size:16px;font-weight:700;color:#EAEEF3;">비주얼 워크플로우 빌더</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">노드를 드래그로 연결해 자동화 흐름을 설계</div></div>
+              <div><div style="font-size:16px;font-weight:700;color:#EAEEF3;">200+ 앱 연동</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">슬랙·노션·구글·자체 API까지 즉시 연결</div></div>
+              <div><div style="font-size:16px;font-weight:700;color:#EAEEF3;">AI 업무 추천</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">사용 패턴을 학습해 자동화할 업무를 먼저 제안</div></div>
+            </div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:34px 24px 0;"><a href="#p-2c-p3" style="display:block;text-align:center;width:100%;padding:16px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;">다음 · 시장 &amp; 지표 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 24px 40px;"><a href="#p-2c-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(233,185,73,.1);color:#E9B949;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P2 · 문제·솔루션·제품</div>
+      </div>
+
+      <!-- 페이지: 시장·지표·모델 (P3) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2c-p3" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#14181F;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#E9B949;">
+              <span style="font-size:15px;font-weight:800;color:#14181F;">리플로우</span>
+              <a href="#p-2c-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#14181F;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">시장 기회</h2></div>
+            <!-- 카드: 텍스트 (시장 본문) -->
+            <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);">국내 노코드·업무 자동화 시장 <b style="color:#E9B949;">1.2조원</b>(TAM), 연 28% 성장 중. 초기 타깃 SOM은 국내 SMB 60만곳입니다.</p></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:34px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">핵심 지표</h2></div>
+            <!-- 카드: 2단 카드 (지표 1) -->
+            <div style="padding:14px 24px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;line-height:.95;color:#E9B949;">40개사</div><div style="margin-top:7px;font-size:13px;color:rgba(234,238,243,.6);">베타 도입</div></div>
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;line-height:.95;color:#E9B949;">₩1,200만</div><div style="margin-top:7px;font-size:13px;color:rgba(234,238,243,.6);">월 반복매출</div></div>
+            </div>
+            <!-- 카드: 2단 카드 (지표 2) -->
+            <div style="padding:12px 24px 0;display:flex;gap:12px;">
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;line-height:.95;color:#E9B949;">+35%</div><div style="margin-top:7px;font-size:13px;color:rgba(234,238,243,.6);">전월 대비</div></div>
+              <div style="flex:1;background:rgba(233,185,73,.12);padding:20px 14px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;line-height:.95;color:#E9B949;">850명</div><div style="margin-top:7px;font-size:13px;color:rgba(234,238,243,.6);">출시 대기자</div></div>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:34px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">비즈니스 모델</h2></div>
+            <!-- 카드: 텍스트 (BM 본문) -->
+            <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);">좌석당 월 구독(SaaS). 실행 건수 기반 상위 요금제 · 엔터프라이즈 연간 계약으로 확장합니다.</p></div>
+            <!-- 카드: 버튼 (다음 페이지 이동) -->
+            <div style="padding:38px 24px 0;"><a href="#p-2c-p4" style="display:block;text-align:center;width:100%;padding:16px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;">다음 · 팀 &amp; 투자 →</a></div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:12px 24px 40px;"><a href="#p-2c-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(233,185,73,.1);color:#E9B949;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P3 · 시장·지표·모델</div>
+      </div>
+
+      <!-- 페이지: 팀·투자·문의 (P4) -->
+      <div style="display:flex;flex-direction:column;gap:12px;flex:none;">
+        <div id="p-2c-p4" style="position:relative;width:360px;height:780px;border-radius:44px;background:#000;padding:11px;box-shadow:0 30px 70px rgba(15,30,61,.28);">
+          <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:110px;height:29px;background:#000;border-radius:0 0 18px 18px;z-index:6;"></div>
+          <div class="scr" style="position:relative;width:100%;height:100%;border-radius:34px;overflow-y:auto;overflow-x:hidden;background:#14181F;">
+            <!-- 카드: 2단 카드 (상단 헤더) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#E9B949;">
+              <span style="font-size:15px;font-weight:800;color:#14181F;">리플로우</span>
+              <a href="#p-2c-cover" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;color:#14181F;"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></a>
+            </div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:28px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">팀</h2></div>
+            <!-- 카드: 프로필 (팀 1) -->
+            <div style="padding:16px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2c-t1" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">김도현 · 대표</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 토스 PO · 노코드 5년</div></div></div>
+            <!-- 카드: 프로필 (팀 2) -->
+            <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2c-t2" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">이서준 · CTO</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 네이버 백엔드 리드</div></div></div>
+            <!-- 카드: 프로필 (팀 3) -->
+            <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="m2c-t3" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">박지우 · 디자인</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 카카오 프로덕트 디자이너</div></div></div>
+            <!-- 카드: 텍스트 (섹션 제목) -->
+            <div style="padding:30px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">투자 제안</h2></div>
+            <!-- 카드: 텍스트 (Ask 강조) -->
+            <div style="padding:14px 24px 0;"><div style="background:rgba(233,185,73,.12);padding:22px 18px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:1;color:#E9B949;">₩5억</div><div style="margin-top:8px;font-size:15px;font-weight:600;color:#EAEEF3;">프리시드 라운드 진행 중</div><div style="margin-top:10px;font-size:14px;line-height:1.6;color:rgba(234,238,243,.6);">제품 고도화 50% · 세일즈/마케팅 30% · 채용 20%</div></div></div>
+            <!-- 카드: 갤러리 (파트너·투자사 로고) -->
+            <div style="padding:26px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <image-slot id="m2c-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2c-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2c-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+              <image-slot id="m2c-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:64px;"></image-slot>
+            </div>
+            <!-- 카드: 버튼 (IR 자료 다운로드) -->
+            <div style="padding:24px 24px 0;"><button style="width:100%;padding:16px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;border:none;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+            <!-- 카드: 구분선 -->
+            <div style="padding:28px 24px;"><div style="height:1px;background:rgba(234,238,243,.13);"></div></div>
+            <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+            <div style="padding:0 24px;">
+              <h3 style="margin:0;text-align:center;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;color:#EAEEF3;">투자 미팅 요청</h3>
+              <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(234,238,243,.6);">담당자가 1영업일 내에 연락드립니다</p>
+              <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;">
+                <input placeholder="이름" style="padding:14px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+                <input placeholder="소속 (투자사·직함)" style="padding:14px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+                <input placeholder="연락처" style="padding:14px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+                <textarea placeholder="문의 내용" rows="3" style="padding:14px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;resize:none;"></textarea>
+                <button style="margin-top:4px;padding:16px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;border:none;cursor:pointer;">미팅 요청 보내기</button>
+              </div>
+            </div>
+            <!-- 카드: 메뉴 (연락처) -->
+            <div style="padding:26px 24px 0;display:flex;flex-direction:column;gap:8px;">
+              <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(234,238,243,.06);"><span style="font-size:15px;font-weight:600;color:#EAEEF3;">이메일</span><span style="font-size:14px;font-weight:700;color:#E9B949;">ir@reflow.io →</span></a>
+              <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:rgba(234,238,243,.06);"><span style="font-size:15px;font-weight:600;color:#EAEEF3;">전화</span><span style="font-size:14px;font-weight:700;color:#E9B949;">02-0000-0000 →</span></a>
+            </div>
+            <!-- 카드: SNS -->
+            <div style="padding:26px 24px 0;display:flex;justify-content:center;gap:12px;">
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:12px;">WEB</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:12px;">IN</a>
+              <a href="#" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:12px;">X</a>
+            </div>
+            <!-- 카드: 버튼 (표지로) -->
+            <div style="padding:24px 24px 40px;"><a href="#p-2c-cover" style="display:block;text-align:center;width:100%;padding:15px;background:rgba(233,185,73,.1);color:#E9B949;font-weight:700;font-size:15px;">표지로 돌아가기</a></div>
+          </div>
+        </div>
+        <div style="text-align:center;font:700 13px/1 'Pretendard';color:#6b7280;">P4 · 팀·투자·문의</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="turn1" style="padding:64px 56px 120px;font-family:'Pretendard',sans-serif;">
+  <header style="max-width:1360px;margin:0 auto 56px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#0F1E3D;color:#fff;padding:7px 14px;border-radius:999px;font:700 12px/1 'Pretendard';letter-spacing:.02em;">startup-deck · 프로필·명함 ④ IR</div>
+    <h1 style="margin:16px 0 8px;font:800 34px/1.15 'Pretendard';letter-spacing:-0.02em;color:#0F1E3D;">스타트업 모바일 IR 원페이저 — 3가지 구조 시안</h1>
+    <p style="margin:0;max-width:780px;font:500 15px/1.6 'Pretendard';color:#5a606e;">CdBd 카드 스택 · 모바일 세로 1컬럼 · 3토큰 색 모델 · 💼 프로페셔널 무드 · 시드/프리시드(비전·팀 강조, traction 절제). 세 시안은 히어로 처리 · 정보 밀도 · 이미지 비중 · 카드 타입 · 섹션 순서에서 다릅니다. <span style="color:#8890a0;">이미지는 드래그로 교체 가능한 슬롯입니다.</span></p>
+  </header>
+
+  <div style="display:flex;flex-wrap:wrap;gap:72px;align-items:flex-start;justify-content:center;">
+
+    <!-- ============================ 시안 A : IR 대시보드형 ============================ -->
+    <div id="1a" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#1B4DDB;color:#fff;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 A</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#0F1E3D;">IR 대시보드형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b7280;">원라이너 타이포 히어로 · 지표 상단 강조(2단 카드) · 조밀 · 제품=번호 2단 · 각진 버튼 · Blue on White</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(15,30,61,.3);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#FFFFFF;">
+          <div style="height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#0F1E3D;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#0F1E3D"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(15,30,61,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#0F1E3D;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 이미지 (로고) -->
+          <div style="padding:20px 24px 0;"><image-slot id="a-logo" shape="rect" fit="contain" placeholder="로고" style="width:120px;height:36px;"></image-slot></div>
+          <!-- 카드: 텍스트 (kicker) -->
+          <div style="padding:22px 24px 0;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#1B4DDB;">PRE-SEED · NO-CODE SaaS</span></div>
+          <!-- 카드: 텍스트 (회사명 헤드라인) -->
+          <div style="padding:10px 24px 0;"><h1 style="margin:0;font-weight:800;font-size:45px;line-height:1.04;letter-spacing:-0.03em;color:#0F1E3D;">리플로우</h1></div>
+          <!-- 카드: 텍스트 (원라이너) -->
+          <div style="padding:14px 24px 0;"><p style="margin:0;font-size:20px;line-height:1.45;font-weight:600;color:#0F1E3D;">중소기업의 반복 업무를, 코딩 없이 자동화합니다.</p></div>
+
+          <!-- 카드: 이미지 (히어로 제품 목업) -->
+          <div style="padding:22px 24px 0;"><image-slot id="a-hero" shape="rect" fit="cover" placeholder="제품 목업 (대시보드 화면)" style="width:100%;height:230px;"></image-slot></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">핵심 지표</h2></div>
+          <!-- 카드: 2단 카드 (지표 1) -->
+          <div style="padding:16px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(27,77,219,.08);padding:22px 16px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:.95;color:#1B4DDB;">40<span style="font-size:18px;">개사</span></div><div style="margin-top:8px;font-size:14px;color:#5a606e;">베타 도입 기업</div></div>
+            <div style="flex:1;background:rgba(27,77,219,.08);padding:22px 16px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:.95;color:#1B4DDB;">₩1,200<span style="font-size:18px;">만</span></div><div style="margin-top:8px;font-size:14px;color:#5a606e;">월 반복매출(MRR)</div></div>
+          </div>
+          <!-- 카드: 2단 카드 (지표 2) -->
+          <div style="padding:12px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(27,77,219,.08);padding:22px 16px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:.95;color:#1B4DDB;">+35<span style="font-size:18px;">%</span></div><div style="margin-top:8px;font-size:14px;color:#5a606e;">전월 대비 성장</div></div>
+            <div style="flex:1;background:rgba(27,77,219,.08);padding:22px 16px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:.95;color:#1B4DDB;">850<span style="font-size:18px;">명</span></div><div style="margin-top:8px;font-size:14px;color:#5a606e;">출시 대기자</div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">문제</h2></div>
+          <!-- 카드: 텍스트 (문제 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">중소기업 실무자는 주당 평균 <b style="color:#1B4DDB;">11시간</b>을 복사·붙여넣기, 자료 취합 같은 반복 수작업에 씁니다. 개발 인력은 없고, 기존 자동화 도구는 너무 복잡합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:30px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">솔루션</h2></div>
+          <!-- 카드: 텍스트 (솔루션 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">리플로우는 드래그 한 번으로 업무 흐름을 만드는 노코드 자동화 SaaS입니다. 개발자 없이도 5분 만에 반복 업무를 자동화합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">제품</h2></div>
+          <!-- 카드: 2단 카드 (제품 1 — 번호 좌 FIXED 44 + 설명 우 FILL) -->
+          <div style="padding:16px 24px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">01</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">비주얼 워크플로우 빌더</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">노드를 드래그로 연결해 자동화 흐름을 설계</div></div></div>
+          <!-- 카드: 2단 카드 (제품 2) -->
+          <div style="padding:18px 24px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">02</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">200+ 앱 연동</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">슬랙·노션·구글·자체 API까지 즉시 연결</div></div></div>
+          <!-- 카드: 2단 카드 (제품 3) -->
+          <div style="padding:18px 24px 0;display:flex;gap:16px;"><div style="flex:none;width:44px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#1B4DDB;">03</div><div style="flex:1;"><div style="font-size:17px;font-weight:700;color:#0F1E3D;">AI 업무 추천</div><div style="margin-top:5px;font-size:14px;line-height:1.55;color:#5a606e;">사용 패턴을 학습해 자동화할 업무를 먼저 제안</div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">시장 기회</h2></div>
+          <!-- 카드: 텍스트 (시장 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">국내 노코드·업무 자동화 시장 <b style="color:#1B4DDB;">1.2조원</b>(TAM), 중소기업 SaaS 도입 확대로 연 28% 성장 중. 초기 타깃 SOM은 국내 SMB 60만곳입니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:30px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">비즈니스 모델</h2></div>
+          <!-- 카드: 텍스트 (BM 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:#3d4351;">좌석당 월 구독(SaaS). 실행 건수 기반 상위 요금제 · 엔터프라이즈 연간 계약으로 확장합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">팀</h2></div>
+          <!-- 카드: 프로필 (팀 1) -->
+          <div style="padding:16px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="a-t1" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#0F1E3D;">김도현 · 대표</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 토스 PO · 노코드 5년</div></div></div>
+          <!-- 카드: 프로필 (팀 2) -->
+          <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="a-t2" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#0F1E3D;">이서준 · CTO</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 네이버 백엔드 리드</div></div></div>
+          <!-- 카드: 프로필 (팀 3) -->
+          <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="a-t3" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#0F1E3D;">박지우 · 디자인</div><div style="margin-top:3px;font-size:14px;color:#5a606e;">전 카카오 프로덕트 디자이너</div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">투자 제안</h2></div>
+          <!-- 카드: 텍스트 (Ask 강조 섹션) -->
+          <div style="padding:14px 24px 0;"><div style="background:rgba(27,77,219,.08);padding:24px 20px;"><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:35px;line-height:1;color:#1B4DDB;">₩5억</div><div style="margin-top:8px;font-size:15px;font-weight:600;color:#0F1E3D;">프리시드 라운드 진행 중</div><div style="margin-top:10px;font-size:14px;line-height:1.6;color:#5a606e;">제품 고도화 50% · 세일즈/마케팅 30% · 핵심 인재 채용 20%</div></div></div>
+
+          <!-- 카드: 버튼 (IR 자료 다운로드) -->
+          <div style="padding:20px 24px 0;"><button style="width:100%;padding:17px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;border:none;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">파트너 · 투자사</h2></div>
+          <!-- 카드: 갤러리 (로고 그리드) -->
+          <div style="padding:14px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="a-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:70px;"></image-slot>
+            <image-slot id="a-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:70px;"></image-slot>
+            <image-slot id="a-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:70px;"></image-slot>
+            <image-slot id="a-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:70px;"></image-slot>
+          </div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:30px 24px;"><div style="height:1px;background:rgba(15,30,61,.12);"></div></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+          <div style="padding:0 24px;">
+            <div style="background:rgba(27,77,219,.06);padding:30px 22px;">
+              <h3 style="margin:0;text-align:center;font-size:22px;font-weight:800;color:#0F1E3D;">투자 미팅 요청</h3>
+              <p style="margin:8px 0 0;text-align:center;font-size:14px;color:#5a606e;">담당자가 1영업일 내에 연락드립니다</p>
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                <input placeholder="이름" style="padding:15px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                <input placeholder="소속 (투자사·직함)" style="padding:15px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                <input placeholder="연락처" style="padding:15px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;">
+                <textarea placeholder="문의 내용" rows="3" style="padding:15px;border:none;background:rgba(15,30,61,.05);color:#0F1E3D;font-size:16px;resize:none;"></textarea>
+                <button style="margin-top:4px;padding:17px;background:#1B4DDB;color:#FFFFFF;font-weight:800;font-size:16px;border:none;cursor:pointer;">미팅 요청 보내기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:34px 24px 0;"><h2 style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D;">연락처</h2></div>
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(15,30,61,.05);"><span style="font-size:16px;font-weight:600;color:#0F1E3D;">이메일</span><span style="font-size:14px;font-weight:700;color:#1B4DDB;">ir@reflow.io →</span></a>
+            <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(15,30,61,.05);"><span style="font-size:16px;font-weight:600;color:#0F1E3D;">전화</span><span style="font-size:14px;font-weight:700;color:#1B4DDB;">02-0000-0000 →</span></a>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:32px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:13px;">WEB</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:13px;">IN</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(15,30,61,.05);color:#1B4DDB;font-weight:800;font-size:13px;">X</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(15,30,61,.4);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ 시안 B : 문제→솔루션 스토리 스크롤형 ============================ -->
+    <div id="1b" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#0A5C4A;color:#fff;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 B</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#0F1E3D;">문제→솔루션 스토리 스크롤형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b7280;">세리프 헤드라인 · 여백 많은 긴 스크롤 · 문제→솔루션→제품 서사 · 지표=텍스트 나열 · 제품=이미지+텍스트 · 둥근16 · Ink on Off-white</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(15,30,61,.3);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#F7F5F0;">
+          <div style="height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#1A1A1A;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#1A1A1A"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(26,26,26,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#1A1A1A;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 이미지 (로고) -->
+          <div style="padding:32px 28px 0;"><image-slot id="b-logo" shape="rect" fit="contain" placeholder="로고" style="width:110px;height:34px;"></image-slot></div>
+          <!-- 카드: 텍스트 (헤드라인 원라이너) -->
+          <div style="padding:30px 28px 0;"><h1 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:40px;line-height:1.15;letter-spacing:-0.01em;color:#1A1A1A;">반복 업무가<br>사라지는 곳,<br>리플로우.</h1></div>
+          <!-- 카드: 텍스트 (부제) -->
+          <div style="padding:22px 28px 0;"><p style="margin:0;font-size:17px;line-height:1.6;color:#4a4a44;">중소기업의 반복 업무를 코딩 없이 자동화하는 노코드 워크플로우 SaaS.</p></div>
+
+          <!-- 카드: 이미지 (히어로) -->
+          <div style="padding:34px 28px 0;"><image-slot id="b-hero" shape="rounded" radius="16" fit="cover" placeholder="제품 목업 (상징 이미지)" style="width:100%;height:240px;"></image-slot></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">01 — 문제</span></div>
+          <!-- 카드: 텍스트 (문제 헤드) -->
+          <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:28px;line-height:1.25;color:#1A1A1A;">실무자는 매주 11시간을 복붙에 씁니다.</h2></div>
+          <!-- 카드: 텍스트 (문제 본문) -->
+          <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">중소기업엔 개발 인력이 없습니다. 자료 취합, 보고서 작성, 데이터 이동 같은 단순 반복 업무가 그대로 사람 손에 남습니다. 기존 자동화 도구는 너무 복잡해 실무자가 쓰기 어렵습니다.</p></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">02 — 솔루션</span></div>
+          <!-- 카드: 텍스트 (솔루션 헤드) -->
+          <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:28px;line-height:1.25;color:#1A1A1A;">드래그 한 번으로 자동화합니다.</h2></div>
+          <!-- 카드: 텍스트 (솔루션 본문) -->
+          <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">리플로우는 노드를 끌어다 연결하는 것만으로 업무 흐름을 완성합니다. 개발자 없이 5분이면 첫 자동화를 실행할 수 있습니다.</p></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">03 — 제품</span></div>
+          <!-- 카드: 이미지 (제품 1) -->
+          <div style="padding:20px 28px 0;"><image-slot id="b-p1" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 1" style="width:100%;height:190px;"></image-slot></div>
+          <!-- 카드: 텍스트 (제품 1 설명) -->
+          <div style="padding:16px 28px 0;"><div style="font-size:19px;font-weight:700;color:#1A1A1A;">비주얼 워크플로우 빌더</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">노드를 드래그로 연결해 자동화 흐름을 설계합니다.</p></div>
+          <!-- 카드: 이미지 (제품 2) -->
+          <div style="padding:34px 28px 0;"><image-slot id="b-p2" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 2" style="width:100%;height:190px;"></image-slot></div>
+          <!-- 카드: 텍스트 (제품 2 설명) -->
+          <div style="padding:16px 28px 0;"><div style="font-size:19px;font-weight:700;color:#1A1A1A;">200+ 앱 연동</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">슬랙·노션·구글·자체 API까지 즉시 연결됩니다.</p></div>
+          <!-- 카드: 이미지 (제품 3) -->
+          <div style="padding:34px 28px 0;"><image-slot id="b-p3" shape="rounded" radius="16" fit="cover" placeholder="제품 스크린샷 3" style="width:100%;height:190px;"></image-slot></div>
+          <!-- 카드: 텍스트 (제품 3 설명) -->
+          <div style="padding:16px 28px 0;"><div style="font-size:19px;font-weight:700;color:#1A1A1A;">AI 업무 추천</div><p style="margin:6px 0 0;font-size:15px;line-height:1.65;color:#4a4a44;">사용 패턴을 학습해 자동화할 업무를 먼저 제안합니다.</p></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">04 — 시장</span></div>
+          <!-- 카드: 텍스트 (시장 본문) -->
+          <div style="padding:14px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">국내 노코드·업무 자동화 시장은 1.2조원(TAM), 연 28% 성장 중입니다. 초기 타깃은 국내 중소기업 60만곳(SOM)입니다.</p></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:44px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">05 — 지금까지</span></div>
+          <!-- 카드: 텍스트 (지표 나열) -->
+          <div style="padding:16px 28px 0;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">베타 도입 기업</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">40개사</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">월 반복매출(MRR)</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">₩1,200만</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.1);"><span style="font-size:16px;color:#4a4a44;">전월 대비 성장</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#0A5C4A;">+35%</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;"><span style="font-size:16px;color:#4a4a44;">출시 대기자</span><span style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;color:#1A1A1A;">850명</span></div>
+          </div>
+          <!-- 카드: 텍스트 (BM 본문) -->
+          <div style="padding:24px 28px 0;"><p style="margin:0;font-size:15px;line-height:1.7;color:#4a4a44;"><b style="color:#1A1A1A;">비즈니스 모델</b> — 좌석당 월 구독. 실행 건수 상위 요금제와 엔터프라이즈 연간 계약으로 확장합니다.</p></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">06 — 팀</span></div>
+          <!-- 카드: 프로필 (팀 1) -->
+          <div style="padding:18px 28px 0;display:flex;align-items:center;gap:16px;"><image-slot id="b-t1" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#1A1A1A;">김도현 · 대표</div><div style="margin-top:3px;font-size:14px;color:#6a6a62;">전 토스 PO · 노코드 5년</div></div></div>
+          <!-- 카드: 프로필 (팀 2) -->
+          <div style="padding:16px 28px 0;display:flex;align-items:center;gap:16px;"><image-slot id="b-t2" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#1A1A1A;">이서준 · CTO</div><div style="margin-top:3px;font-size:14px;color:#6a6a62;">전 네이버 백엔드 리드</div></div></div>
+          <!-- 카드: 프로필 (팀 3) -->
+          <div style="padding:16px 28px 0;display:flex;align-items:center;gap:16px;"><image-slot id="b-t3" shape="circle" placeholder="사진" style="width:64px;height:64px;flex:none;"></image-slot><div><div style="font-size:17px;font-weight:800;color:#1A1A1A;">박지우 · 디자인</div><div style="margin-top:3px;font-size:14px;color:#6a6a62;">전 카카오 프로덕트 디자이너</div></div></div>
+
+          <!-- 카드: 갤러리 (파트너·투자사 로고) -->
+          <div style="padding:48px 28px 0;"><div style="font-size:13px;letter-spacing:.06em;color:#6a6a62;margin-bottom:14px;">함께하는 파트너 · 투자사</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="b-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:66px;"></image-slot>
+            <image-slot id="b-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:66px;"></image-slot>
+            <image-slot id="b-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:66px;"></image-slot>
+            <image-slot id="b-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:66px;"></image-slot>
+          </div></div>
+
+          <!-- 카드: 텍스트 (챕터 라벨) -->
+          <div style="padding:56px 28px 0;"><span style="font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:#0A5C4A;">07 — 제안</span></div>
+          <!-- 카드: 텍스트 (Ask 헤드) -->
+          <div style="padding:14px 28px 0;"><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.15;color:#1A1A1A;">프리시드 <span style="color:#0A5C4A;">₩5억</span> 라운드를 진행합니다.</h2></div>
+          <!-- 카드: 텍스트 (Ask 본문) -->
+          <div style="padding:16px 28px 0;"><p style="margin:0;font-size:16px;line-height:1.75;color:#4a4a44;">제품 고도화 50% · 세일즈/마케팅 30% · 핵심 인재 채용 20%에 사용합니다.</p></div>
+
+          <!-- 카드: 버튼 (IR 자료 다운로드) -->
+          <div style="padding:28px 28px 0;"><button style="width:100%;padding:18px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+          <div style="padding:44px 28px 0;">
+            <h3 style="margin:0;text-align:center;font-family:'Newsreader',serif;font-weight:500;font-size:28px;color:#1A1A1A;">투자 미팅 요청</h3>
+            <p style="margin:8px 0 0;text-align:center;font-size:14px;color:#6a6a62;">담당자가 1영업일 내에 연락드립니다</p>
+            <div style="margin-top:22px;display:flex;flex-direction:column;gap:10px;">
+              <input placeholder="이름" style="padding:16px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+              <input placeholder="소속 (투자사·직함)" style="padding:16px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+              <input placeholder="연락처" style="padding:16px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;">
+              <textarea placeholder="문의 내용" rows="3" style="padding:16px;border:none;background:rgba(26,26,26,.05);color:#1A1A1A;font-size:16px;border-radius:16px;resize:none;"></textarea>
+              <button style="margin-top:4px;padding:18px;background:#0A5C4A;color:#F7F5F0;font-weight:800;font-size:16px;border:none;border-radius:16px;cursor:pointer;">미팅 요청 보내기</button>
+            </div>
+          </div>
+
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:36px 28px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(26,26,26,.04);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#1A1A1A;">이메일</span><span style="font-size:14px;font-weight:700;color:#0A5C4A;">ir@reflow.io →</span></a>
+            <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(26,26,26,.04);border-radius:16px;"><span style="font-size:16px;font-weight:600;color:#1A1A1A;">전화</span><span style="font-size:14px;font-weight:700;color:#0A5C4A;">02-0000-0000 →</span></a>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:34px 28px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:13px;border-radius:16px;">WEB</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:13px;border-radius:16px;">IN</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(10,92,74,.08);color:#0A5C4A;font-weight:800;font-size:13px;border-radius:16px;">X</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 28px 40px;text-align:center;font-size:12px;color:rgba(26,26,26,.4);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ 시안 C : 제품 스크린샷 갤러리 몰입형 ============================ -->
+    <div id="1c" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:390px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#14181F;color:#E9B949;padding:6px 13px;border-radius:999px;font:800 13px/1 'Pretendard';">시안 C</div>
+        <h3 style="margin:12px 0 4px;font:800 19px/1.2 'Pretendard';color:#0F1E3D;">제품 갤러리 몰입형</h3>
+        <p style="margin:0;font:500 13px/1.55 'Pretendard';color:#6b7280;">제품 스크린샷 갤러리를 히어로로 · 이미지 중심 · 지표=2단 카드 · 제품=갤러리+텍스트 · 각진 버튼 · Gold on Slate</p>
+      </div>
+
+      <div style="position:relative;width:390px;height:844px;border-radius:48px;background:#000;padding:12px;box-shadow:0 40px 90px rgba(15,30,61,.3);flex-shrink:0;">
+        <div style="position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:0 0 20px 20px;z-index:6;"></div>
+        <div class="scr" style="position:relative;width:100%;height:100%;border-radius:38px;overflow-y:auto;overflow-x:hidden;background:#14181F;">
+          <div style="position:relative;z-index:5;height:52px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;color:#EAEEF3;">
+            <span style="font:700 15px/1 'Pretendard';">9:41</span>
+            <div style="display:flex;gap:6px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#EAEEF3"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.7" y="4" width="3" height="7" rx="1"></rect><rect x="9.3" y="1.5" width="3" height="9.5" rx="1"></rect><rect x="14" width="3" height="11" rx="1"></rect></svg><div style="width:23px;height:11px;border:1px solid rgba(234,238,243,.5);border-radius:3px;padding:1.5px;"><div style="width:75%;height:100%;background:#EAEEF3;border-radius:1px;"></div></div></div>
+          </div>
+
+          <!-- 카드: 이미지 (풀블리드 히어로 목업) -->
+          <image-slot id="c-hero" shape="rect" fit="cover" placeholder="제품 목업 (대표 화면)" style="width:100%;height:360px;margin-top:-52px;"></image-slot>
+
+          <!-- 카드: 이미지 (로고) -->
+          <div style="padding:24px 24px 0;"><image-slot id="c-logo" shape="rect" fit="contain" placeholder="로고" style="width:110px;height:32px;"></image-slot></div>
+          <!-- 카드: 텍스트 (원라이너 헤드) -->
+          <div style="padding:14px 24px 0;"><h1 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:1.1;letter-spacing:-0.02em;color:#EAEEF3;">보이는 대로 자동화하세요</h1></div>
+          <!-- 카드: 텍스트 (부제) -->
+          <div style="padding:14px 24px 0;"><p style="margin:0;font-size:17px;line-height:1.55;color:rgba(234,238,243,.7);">리플로우 — 중소기업의 반복 업무를 코딩 없이 자동화하는 노코드 SaaS.</p></div>
+
+          <!-- 카드: 갤러리 (제품 스크린샷 몰입 그리드) -->
+          <div style="padding:30px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="c-g1" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 1" style="width:100%;height:200px;"></image-slot>
+            <image-slot id="c-g2" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 2" style="width:100%;height:200px;"></image-slot>
+            <image-slot id="c-g3" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 3" style="width:100%;height:200px;"></image-slot>
+            <image-slot id="c-g4" shape="rounded" radius="16" fit="cover" placeholder="스크린샷 4" style="width:100%;height:200px;"></image-slot>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">핵심 지표</h2></div>
+          <!-- 카드: 2단 카드 (지표 1) -->
+          <div style="padding:16px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(233,185,73,.12);padding:22px 16px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:.95;color:#E9B949;">40</div><div style="margin-top:8px;font-size:13px;color:rgba(234,238,243,.6);">베타 도입 기업</div></div>
+            <div style="flex:1;background:rgba(233,185,73,.12);padding:22px 16px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:.95;color:#E9B949;">+35%</div><div style="margin-top:8px;font-size:13px;color:rgba(234,238,243,.6);">전월 대비 성장</div></div>
+          </div>
+          <!-- 카드: 2단 카드 (지표 2) -->
+          <div style="padding:12px 24px 0;display:flex;gap:12px;">
+            <div style="flex:1;background:rgba(233,185,73,.12);padding:22px 16px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:.95;color:#E9B949;">₩1,200만</div><div style="margin-top:8px;font-size:13px;color:rgba(234,238,243,.6);">월 반복매출(MRR)</div></div>
+            <div style="flex:1;background:rgba(233,185,73,.12);padding:22px 16px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:35px;line-height:.95;color:#E9B949;">850</div><div style="margin-top:8px;font-size:13px;color:rgba(234,238,243,.6);">출시 대기자</div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">문제 · 솔루션</h2></div>
+          <!-- 카드: 텍스트 (문제 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);"><b style="color:#E9B949;">문제.</b> 중소기업 실무자는 주당 11시간을 반복 수작업에 씁니다. 개발 인력은 없고 기존 도구는 복잡합니다.</p></div>
+          <!-- 카드: 텍스트 (솔루션 본문) -->
+          <div style="padding:14px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);"><b style="color:#E9B949;">솔루션.</b> 드래그로 업무 흐름을 만드는 노코드 자동화. 개발자 없이 5분이면 자동화를 실행합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">제품</h2></div>
+          <!-- 카드: 텍스트 (제품 나열) -->
+          <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:16px;">
+            <div><div style="font-size:17px;font-weight:700;color:#EAEEF3;">비주얼 워크플로우 빌더</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">노드를 드래그로 연결해 자동화 흐름을 설계</div></div>
+            <div><div style="font-size:17px;font-weight:700;color:#EAEEF3;">200+ 앱 연동</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">슬랙·노션·구글·자체 API까지 즉시 연결</div></div>
+            <div><div style="font-size:17px;font-weight:700;color:#EAEEF3;">AI 업무 추천</div><div style="margin-top:4px;font-size:14px;line-height:1.55;color:rgba(234,238,243,.6);">사용 패턴을 학습해 자동화할 업무를 먼저 제안</div></div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">시장 · 비즈니스 모델</h2></div>
+          <!-- 카드: 텍스트 (시장·BM 본문) -->
+          <div style="padding:12px 24px 0;"><p style="margin:0;font-size:16px;line-height:1.65;color:rgba(234,238,243,.72);">국내 노코드·자동화 시장 1.2조원(TAM), 연 28% 성장. 좌석당 월 구독(SaaS)으로 수익화하며 실행 건수 상위 요금제·엔터프라이즈로 확장합니다.</p></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">팀</h2></div>
+          <!-- 카드: 프로필 (팀 1) -->
+          <div style="padding:16px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="c-t1" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">김도현 · 대표</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 토스 PO · 노코드 5년</div></div></div>
+          <!-- 카드: 프로필 (팀 2) -->
+          <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="c-t2" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">이서준 · CTO</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 네이버 백엔드 리드</div></div></div>
+          <!-- 카드: 프로필 (팀 3) -->
+          <div style="padding:14px 24px 0;display:flex;align-items:center;gap:16px;"><image-slot id="c-t3" shape="circle" placeholder="사진" style="width:60px;height:60px;flex:none;"></image-slot><div><div style="font-size:16px;font-weight:800;color:#EAEEF3;">박지우 · 디자인</div><div style="margin-top:3px;font-size:14px;color:rgba(234,238,243,.6);">전 카카오 프로덕트 디자이너</div></div></div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">파트너 · 투자사</h2></div>
+          <!-- 카드: 갤러리 (로고 그리드) -->
+          <div style="padding:14px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <image-slot id="c-pl1" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:68px;"></image-slot>
+            <image-slot id="c-pl2" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:68px;"></image-slot>
+            <image-slot id="c-pl3" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:68px;"></image-slot>
+            <image-slot id="c-pl4" shape="rect" fit="contain" placeholder="로고" style="width:100%;height:68px;"></image-slot>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">투자 제안</h2></div>
+          <!-- 카드: 텍스트 (Ask 강조 섹션) -->
+          <div style="padding:14px 24px 0;"><div style="background:rgba(233,185,73,.12);padding:24px 20px;"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:40px;line-height:1;color:#E9B949;">₩5억</div><div style="margin-top:8px;font-size:15px;font-weight:600;color:#EAEEF3;">프리시드 라운드 진행 중</div><div style="margin-top:10px;font-size:14px;line-height:1.6;color:rgba(234,238,243,.6);">제품 고도화 50% · 세일즈/마케팅 30% · 채용 20%</div></div></div>
+
+          <!-- 카드: 버튼 (IR 자료 다운로드) -->
+          <div style="padding:20px 24px 0;"><button style="width:100%;padding:17px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;border:none;cursor:pointer;">IR 피치덱 다운로드 (PDF)</button></div>
+
+          <!-- 카드: 구분선 -->
+          <div style="padding:34px 24px;"><div style="height:1px;background:rgba(234,238,243,.13);"></div></div>
+
+          <!-- 카드: 질문과답변(Q&A) — 미팅·투자 문의 폼 -->
+          <div style="padding:0 24px;">
+            <h3 style="margin:0;text-align:center;font-family:'Archivo',sans-serif;font-size:24px;font-weight:800;color:#EAEEF3;">투자 미팅 요청</h3>
+            <p style="margin:8px 0 0;text-align:center;font-size:14px;color:rgba(234,238,243,.6);">담당자가 1영업일 내에 연락드립니다</p>
+            <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+              <input placeholder="이름" style="padding:15px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+              <input placeholder="소속 (투자사·직함)" style="padding:15px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+              <input placeholder="연락처" style="padding:15px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;">
+              <textarea placeholder="문의 내용" rows="3" style="padding:15px;border:none;background:rgba(234,238,243,.07);color:#EAEEF3;font-size:16px;resize:none;"></textarea>
+              <button style="margin-top:4px;padding:17px;background:#E9B949;color:#14181F;font-weight:800;font-size:16px;border:none;cursor:pointer;">미팅 요청 보내기</button>
+            </div>
+          </div>
+
+          <!-- 카드: 텍스트 (섹션 제목) -->
+          <div style="padding:38px 24px 0;"><h2 style="margin:0;font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;color:#EAEEF3;">연락처</h2></div>
+          <!-- 카드: 메뉴 (연락처) -->
+          <div style="padding:14px 24px 0;display:flex;flex-direction:column;gap:8px;">
+            <a href="mailto:ir@reflow.io" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(234,238,243,.06);"><span style="font-size:16px;font-weight:600;color:#EAEEF3;">이메일</span><span style="font-size:14px;font-weight:700;color:#E9B949;">ir@reflow.io →</span></a>
+            <a href="tel:0200000000" style="display:flex;align-items:center;justify-content:space-between;padding:17px 18px;background:rgba(234,238,243,.06);"><span style="font-size:16px;font-weight:600;color:#EAEEF3;">전화</span><span style="font-size:14px;font-weight:700;color:#E9B949;">02-0000-0000 →</span></a>
+          </div>
+
+          <!-- 카드: SNS -->
+          <div style="padding:32px 24px 0;display:flex;justify-content:center;gap:14px;">
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:13px;">WEB</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:13px;">IN</a>
+            <a href="#" style="width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(234,238,243,.06);color:#E9B949;font-weight:800;font-size:13px;">X</a>
+          </div>
+          <!-- 카드: 텍스트 (footer) -->
+          <div style="padding:26px 24px 40px;text-align:center;font-size:12px;color:rgba(234,238,243,.38);">이 페이지는 #CdBd 로 만들었습니다</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+
+
+</body></html>
