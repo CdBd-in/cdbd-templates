@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-f1-fix
+name: editor-f1-fix
 description: CdBd 파이프라인 F1 — diff 배열을 받아 CdBd 에디터에서 실제 수정·영속화. block 참조를 직접 변경하고 reorder-commit으로 autosave. 정렬버튼·패널 트리거는 커밋 안 됨(검증됨).
 ---
 

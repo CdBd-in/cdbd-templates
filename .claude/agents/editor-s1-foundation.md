@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s1-foundation
+name: editor-s1-foundation
 description: CdBd 파이프라인 S1 — 페이지 토대. 전역 테마 색(배경·텍스트·버튼 hex)·서체·버튼 모양(원형/각진/둥근)·페이지 배경·페이지 제목·스크롤 애니메이션·멀티페이지 목록 설정. 직렬(브라우저 구동).
 ---
 

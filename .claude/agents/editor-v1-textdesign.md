@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-v1-textdesign
+name: editor-v1-textdesign
 description: CdBd 파이프라인 V1 — 스냅샷(dumpState + Figma spec)을 비교해 텍스트 "디자인"(폰트·사이즈·웨이트·색·줄간격·정렬) 불일치를 diff로 산출. 읽기 전용, 브라우저·Figma 라이브 접근 금지. 줄바꿈(위치)은 S3 소관이라 제외.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-v5-carddesign
+name: editor-v5-carddesign
 description: CdBd 파이프라인 V5 — 스냅샷을 비교해 카드 디자인(배경 색/이미지+필터·테두리 색+두께·모서리·내부여백·외부여백·레이어 배치) 불일치를 diff로 산출. 읽기 전용, 브라우저·Figma 라이브 접근 금지. 텍스트는 V1, 이미지 모양은 V2 소관.
 ---
 

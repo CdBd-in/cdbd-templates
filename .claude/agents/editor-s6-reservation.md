@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s6-reservation
+name: editor-s6-reservation
 description: CdBd 파이프라인 S6 — 예약 정보. 예약 카드에 날짜·시간·정원·방문체크(필수)를 설정·저장. 크레딧 소모 스코프 — 부족 시 부분완료 리포트를 반환하고 파이프라인은 중단하지 않음. 직렬(브라우저 구동).
 ---
 

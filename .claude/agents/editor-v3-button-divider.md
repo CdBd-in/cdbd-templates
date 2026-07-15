@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-v3-button-divider
+name: editor-v3-button-divider
 description: CdBd 파이프라인 V3 — 스냅샷을 비교해 버튼(가로·세로 개수·모양·높이)·구분선(두께·모양·색·상하여백) 불일치를 diff로 산출. 읽기 전용, 브라우저·Figma 라이브 접근 금지. 버튼 텍스트 디자인은 V1, 카드 배경/채움색은 V5 소관.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s3-text
+name: editor-s3-text
 description: CdBd 파이프라인 S3 — 텍스트 내용. 모든 카드의 텍스트 필드·버튼 텍스트를 정확한 문자열로 채우고 줄바꿈(개행) 위치를 Figma와 일치시킴. 줄간격(디자인)은 V1, 폰트·크기·색·정렬도 V1 소관. 직렬(브라우저 구동).
 ---
 

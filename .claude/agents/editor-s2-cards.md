@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s2-cards
+name: editor-s2-cards
 description: CdBd 파이프라인 S2 — 카드 구성. Figma 카드 매니페스트(타입·순서·라벨)대로 15종 카드를 올바른 순서로 추가하고 상/하 고정(핀)·카드 라벨(목적 이름)을 설정. 내용은 안 채운 빈 스택 산출. 직렬(브라우저 구동).
 ---
 

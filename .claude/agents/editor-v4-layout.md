@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-v4-layout
+name: editor-v4-layout
 description: CdBd 파이프라인 V4 — 스냅샷을 비교해 레이아웃 유형(프로필 기본/강조/명함형·갤러리 나열/넘겨보기/그리드+단수·메뉴·2단 분할·Q&A 정렬 등) 불일치를 diff로 산출. 읽기 전용, 브라우저·Figma 라이브 접근 금지.
 ---
 

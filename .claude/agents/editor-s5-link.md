@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s5-link
+name: editor-s5-link
 description: CdBd 파이프라인 S5 — 링크·기능. 버튼 링크 6종·위치 지오코딩·Q&A 폼·유튜브·SNS 채널을 설정해 실제 동작하게 만듦. 직렬(브라우저 구동).
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-v2-imageshape
+name: editor-v2-imageshape
 description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 비교해 이미지·프로필·갤러리의 "모양"(비율·모서리/모양·크기) 불일치를 diff로 산출. 읽기 전용, 브라우저·Figma 라이브 접근 금지. 텍스트 디자인은 V1, 카드 배경/테두리/여백은 V5 소관.
 ---
 

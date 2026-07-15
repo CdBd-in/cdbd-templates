@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-f2-finalize
+name: editor-f2-finalize
 description: CdBd 파이프라인 F2 — 페이지 마무리. URL 정보(제목·설명) 설정, OG 이미지 수동 준비 안내, 모바일 프리뷰 스크린샷 캡처(멀티페이지 전 페이지), 최종 재스냅샷으로 잔여 diff=0 확인 리포트. 직렬(브라우저 구동) 스코프.
 ---
 

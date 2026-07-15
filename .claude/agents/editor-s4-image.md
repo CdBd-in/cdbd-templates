@@ -1,5 +1,5 @@
 ---
-name: cdbd-edit-s4-image
+name: editor-s4-image
 description: CdBd 파이프라인 S4 — 이미지. 준비된 이미지 파일을 슬롯↔이미지 매핑대로 업로드·적용하고 순서를 맞춤(카드/레이어 배경 이미지 포함). 사이즈·모양·비율은 V2 소관. 직렬(브라우저 구동).
 ---
 
