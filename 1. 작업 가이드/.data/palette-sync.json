@@ -1,0 +1,2867 @@
+{
+ "version": 1,
+ "syncedAt": "2026-07-16",
+ "total": 316,
+ "figma": {
+  "file": "24O01lprp5i2ufl7CbZXXx",
+  "page": "3323:355",
+  "root": "3342:83",
+  "grids": {
+   "내추럴/오가닉": "3342:91",
+   "페미닌/로맨틱": "3342:96",
+   "럭셔리/엘레강스": "3342:101",
+   "프로페셔널/비즈니스": "3342:106",
+   "모던/시크": "3342:111",
+   "비비드/대담한": "3342:116",
+   "빈티지/노스탤직": "3342:121",
+   "펀/플레이풀": "3342:126",
+   "드리미/감성적": "3342:131"
+  }
+ },
+ "palettes": [
+  {
+   "uid": "p001",
+   "name": "HappyHues 8",
+   "mood": "내추럴/오가닉",
+   "src": "HappyHues",
+   "bg": "#F8F5F2",
+   "tx": "#232323",
+   "bt": "#078080"
+  },
+  {
+   "uid": "p002",
+   "name": "HappyHues 5",
+   "mood": "내추럴/오가닉",
+   "src": "HappyHues",
+   "bg": "#F2F7F5",
+   "tx": "#00473E",
+   "bt": "#FAAE2B"
+  },
+  {
+   "uid": "p003",
+   "name": "The Cathedral",
+   "mood": "내추럴/오가닉",
+   "src": "MyMind",
+   "bg": "#424E22",
+   "tx": "#FFAD67",
+   "bt": "#FFAD67"
+  },
+  {
+   "uid": "p004",
+   "name": "Late Homework",
+   "mood": "내추럴/오가닉",
+   "src": "MyMind",
+   "bg": "#178E96",
+   "tx": "#FFFFFF",
+   "bt": "#FDE3C8"
+  },
+  {
+   "uid": "p005",
+   "name": "Huemint 001",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#FBF7F0",
+   "tx": "#232022",
+   "bt": "#A95A3E"
+  },
+  {
+   "uid": "p006",
+   "name": "Huemint 002",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#0F3D3E",
+   "tx": "#FF945A",
+   "bt": "#6CE8FB"
+  },
+  {
+   "uid": "p007",
+   "name": "Huemint 003",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#37503F",
+   "tx": "#CEE4D9",
+   "bt": "#EA9577"
+  },
+  {
+   "uid": "p008",
+   "name": "Huemint 004",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#E8EDE5",
+   "tx": "#84643B",
+   "bt": "#1E535A"
+  },
+  {
+   "uid": "p009",
+   "name": "Huemint 005",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#3A4A2F",
+   "tx": "#D7A5B1",
+   "bt": "#E4E8E1"
+  },
+  {
+   "uid": "p010",
+   "name": "Huemint 006",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#F5F1E8",
+   "tx": "#1E201C",
+   "bt": "#5C605C"
+  },
+  {
+   "uid": "p011",
+   "name": "Huemint 007",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#4A5D3A",
+   "tx": "#F2A3B4",
+   "bt": "#94EBEE"
+  },
+  {
+   "uid": "p012",
+   "name": "Huemint 008",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#37503F",
+   "tx": "#FFFEFF",
+   "bt": "#00E84D"
+  },
+  {
+   "uid": "p013",
+   "name": "Huemint 009",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#1B3B36",
+   "tx": "#FEF6E9",
+   "bt": "#A2A66A"
+  },
+  {
+   "uid": "p014",
+   "name": "Huemint 010",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#EAF0E8",
+   "tx": "#1A1E1F",
+   "bt": "#BA653C"
+  },
+  {
+   "uid": "p015",
+   "name": "Huemint 011",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#2E4633",
+   "tx": "#FFC977",
+   "bt": "#34A9C8"
+  },
+  {
+   "uid": "p016",
+   "name": "Huemint 012",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#15302B",
+   "tx": "#FAB6B5",
+   "bt": "#54B155"
+  },
+  {
+   "uid": "p017",
+   "name": "Huemint 013",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#F2F0E6",
+   "tx": "#293233",
+   "bt": "#0484AA"
+  },
+  {
+   "uid": "p018",
+   "name": "Huemint 014",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#4A5D3A",
+   "tx": "#FFFFBA",
+   "bt": "#F6CD3F"
+  },
+  {
+   "uid": "p019",
+   "name": "Huemint 015",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#F8F5F2",
+   "tx": "#302117",
+   "bt": "#5F643D"
+  },
+  {
+   "uid": "p020",
+   "name": "Huemint 016",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#0F3D3E",
+   "tx": "#A6C8DA",
+   "bt": "#F05E2C"
+  },
+  {
+   "uid": "p021",
+   "name": "Huemint 017",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#E9EFE6",
+   "tx": "#3F3739",
+   "bt": "#007817"
+  },
+  {
+   "uid": "p022",
+   "name": "Huemint 018",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#2E4633",
+   "tx": "#ECEBE8",
+   "bt": "#87A655"
+  },
+  {
+   "uid": "p023",
+   "name": "Huemint 019",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#E5E9DC",
+   "tx": "#1B1E1E",
+   "bt": "#9D6E12"
+  },
+  {
+   "uid": "p024",
+   "name": "Huemint 020",
+   "mood": "내추럴/오가닉",
+   "src": "Huemint",
+   "bg": "#2C4A3A",
+   "tx": "#D09EB3",
+   "bt": "#EACE53"
+  },
+  {
+   "uid": "p025",
+   "name": "Designah 04",
+   "mood": "내추럴/오가닉",
+   "src": "Designah",
+   "bg": "#FAFFFA",
+   "tx": "#0D142B",
+   "bt": "#5C6B3D"
+  },
+  {
+   "uid": "p026",
+   "name": "Designah 05",
+   "mood": "내추럴/오가닉",
+   "src": "Designah",
+   "bg": "#5C6B3D",
+   "tx": "#FAFFFA",
+   "bt": "#ABFA54"
+  },
+  {
+   "uid": "p027",
+   "name": "Lincoln Green",
+   "mood": "내추럴/오가닉",
+   "src": "Colours Cafe",
+   "bg": "#125603",
+   "tx": "#C3F380",
+   "bt": "#C3F380"
+  },
+  {
+   "uid": "p028",
+   "name": "Pine Tree 01",
+   "mood": "내추럴/오가닉",
+   "src": "Pine Tree",
+   "bg": "#202808",
+   "tx": "#DEC59E",
+   "bt": "#C4866D"
+  },
+  {
+   "uid": "p029",
+   "name": "Pine Tree 02",
+   "mood": "내추럴/오가닉",
+   "src": "Pine Tree",
+   "bg": "#DEC59E",
+   "tx": "#202808",
+   "bt": "#33432B"
+  },
+  {
+   "uid": "p030",
+   "name": "Daho 04",
+   "mood": "내추럴/오가닉",
+   "src": "daho_van",
+   "bg": "#4B3535",
+   "tx": "#F7E6D4",
+   "bt": "#E7C58A"
+  },
+  {
+   "uid": "p031",
+   "name": "Daho 05",
+   "mood": "내추럴/오가닉",
+   "src": "daho_van",
+   "bg": "#4B3535",
+   "tx": "#F7E6D4",
+   "bt": "#86B05D"
+  },
+  {
+   "uid": "p032",
+   "name": "Teal Blue 01",
+   "mood": "내추럴/오가닉",
+   "src": "Teal Blue",
+   "bg": "#20432F",
+   "tx": "#DBD3D1",
+   "bt": "#83C0B8"
+  },
+  {
+   "uid": "p033",
+   "name": "Teal Blue 02",
+   "mood": "내추럴/오가닉",
+   "src": "Teal Blue",
+   "bg": "#DBD3D1",
+   "tx": "#20432F",
+   "bt": "#BC3C19"
+  },
+  {
+   "uid": "p034",
+   "name": "Eucalyptus 01",
+   "mood": "내추럴/오가닉",
+   "src": "Eucalyptus",
+   "bg": "#F8E3D2",
+   "tx": "#183425",
+   "bt": "#506C60"
+  },
+  {
+   "uid": "p035",
+   "name": "Eucalyptus 02",
+   "mood": "내추럴/오가닉",
+   "src": "Eucalyptus",
+   "bg": "#183425",
+   "tx": "#F8E3D2",
+   "bt": "#DDBFA7"
+  },
+  {
+   "uid": "p036",
+   "name": "Green Tea 01",
+   "mood": "내추럴/오가닉",
+   "src": "Green Tea",
+   "bg": "#568366",
+   "tx": "#F3F6EB",
+   "bt": "#DBF68F"
+  },
+  {
+   "uid": "p037",
+   "name": "Chewing Gum 02",
+   "mood": "내추럴/오가닉",
+   "src": "Chewing Gum",
+   "bg": "#FAF2E5",
+   "tx": "#1F303D",
+   "bt": "#5F7A51"
+  },
+  {
+   "uid": "p038",
+   "name": "HappyHues 15",
+   "mood": "페미닌/로맨틱",
+   "src": "HappyHues",
+   "bg": "#FAEEE7",
+   "tx": "#33272A",
+   "bt": "#FF8BA7"
+  },
+  {
+   "uid": "p039",
+   "name": "HappyHues 7",
+   "mood": "페미닌/로맨틱",
+   "src": "HappyHues",
+   "bg": "#FEC7D7",
+   "tx": "#0E172C",
+   "bt": "#0E172C"
+  },
+  {
+   "uid": "p040",
+   "name": "Melted Shake",
+   "mood": "페미닌/로맨틱",
+   "src": "MyMind",
+   "bg": "#DABAAF",
+   "tx": "#0B0C11",
+   "bt": "#CF2F89"
+  },
+  {
+   "uid": "p041",
+   "name": "Huemint 021",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#2E1520",
+   "tx": "#FFFDFC",
+   "bt": "#ED3952"
+  },
+  {
+   "uid": "p042",
+   "name": "Huemint 022",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#F7E9E4",
+   "tx": "#66040B",
+   "bt": "#6548F5"
+  },
+  {
+   "uid": "p043",
+   "name": "Huemint 023",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FAE9F0",
+   "tx": "#333132",
+   "bt": "#E23C30"
+  },
+  {
+   "uid": "p044",
+   "name": "Huemint 024",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#3D1A2B",
+   "tx": "#DEB386",
+   "bt": "#9F8DC4"
+  },
+  {
+   "uid": "p045",
+   "name": "Huemint 025",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FAEEE7",
+   "tx": "#571E5B",
+   "bt": "#B85C7D"
+  },
+  {
+   "uid": "p046",
+   "name": "Huemint 026",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FDF2F5",
+   "tx": "#3B3A39",
+   "bt": "#AC57C7"
+  },
+  {
+   "uid": "p047",
+   "name": "Huemint 027",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#611F3A",
+   "tx": "#68B577",
+   "bt": "#D7B7DA"
+  },
+  {
+   "uid": "p048",
+   "name": "Huemint 028",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#5C2A3D",
+   "tx": "#F2F0E3",
+   "bt": "#E19B7D"
+  },
+  {
+   "uid": "p049",
+   "name": "Huemint 029",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#EFD9DE",
+   "tx": "#4A2A48",
+   "bt": "#B12D75"
+  },
+  {
+   "uid": "p050",
+   "name": "Huemint 030",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#3D1A2B",
+   "tx": "#F0F3DB",
+   "bt": "#E03FAB"
+  },
+  {
+   "uid": "p051",
+   "name": "Huemint 031",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FDF4F0",
+   "tx": "#312C30",
+   "bt": "#C55C33"
+  },
+  {
+   "uid": "p052",
+   "name": "Huemint 032",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#54263C",
+   "tx": "#EBFAFC",
+   "bt": "#D597AA"
+  },
+  {
+   "uid": "p053",
+   "name": "Huemint 033",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FCEAE6",
+   "tx": "#541312",
+   "bt": "#9F2FB3"
+  },
+  {
+   "uid": "p054",
+   "name": "Huemint 034",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#3D1A2B",
+   "tx": "#FAF7E1",
+   "bt": "#F46843"
+  },
+  {
+   "uid": "p055",
+   "name": "Huemint 035",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FDF2F5",
+   "tx": "#2D2C34",
+   "bt": "#EF3363"
+  },
+  {
+   "uid": "p056",
+   "name": "Huemint 036",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#F5E6E8",
+   "tx": "#442F39",
+   "bt": "#DF3B19"
+  },
+  {
+   "uid": "p057",
+   "name": "Huemint 037",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#42202E",
+   "tx": "#D9CDB0",
+   "bt": "#B28CBA"
+  },
+  {
+   "uid": "p058",
+   "name": "Huemint 038",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#FCEAE6",
+   "tx": "#120F11",
+   "bt": "#DB282A"
+  },
+  {
+   "uid": "p059",
+   "name": "Huemint 039",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#4A2233",
+   "tx": "#FFF7F7",
+   "bt": "#FF2E31"
+  },
+  {
+   "uid": "p060",
+   "name": "Huemint 040",
+   "mood": "페미닌/로맨틱",
+   "src": "Huemint",
+   "bg": "#2E1520",
+   "tx": "#EFEEF0",
+   "bt": "#E269D3"
+  },
+  {
+   "uid": "p061",
+   "name": "Blood Red",
+   "mood": "페미닌/로맨틱",
+   "src": "Colours Cafe",
+   "bg": "#630700",
+   "tx": "#FF97D0",
+   "bt": "#FF97D0"
+  },
+  {
+   "uid": "p062",
+   "name": "Daho 06",
+   "mood": "페미닌/로맨틱",
+   "src": "daho_van",
+   "bg": "#242021",
+   "tx": "#CCBEB3",
+   "bt": "#F896A3"
+  },
+  {
+   "uid": "p063",
+   "name": "Chewing Gum 01",
+   "mood": "페미닌/로맨틱",
+   "src": "Chewing Gum",
+   "bg": "#E3B2AF",
+   "tx": "#1F303D",
+   "bt": "#5D262F"
+  },
+  {
+   "uid": "p064",
+   "name": "Chewing Gum 05",
+   "mood": "페미닌/로맨틱",
+   "src": "Chewing Gum",
+   "bg": "#5D262F",
+   "tx": "#FAF2E5",
+   "bt": "#E3B2AF"
+  },
+  {
+   "uid": "p065",
+   "name": "Misty Rose 01",
+   "mood": "페미닌/로맨틱",
+   "src": "Misty Rose",
+   "bg": "#EED4D1",
+   "tx": "#432033",
+   "bt": "#323C31"
+  },
+  {
+   "uid": "p066",
+   "name": "Burgundy 01",
+   "mood": "페미닌/로맨틱",
+   "src": "Burgundy",
+   "bg": "#6C0820",
+   "tx": "#F2DCDB",
+   "bt": "#F2AEBC"
+  },
+  {
+   "uid": "p067",
+   "name": "Burgundy 02",
+   "mood": "페미닌/로맨틱",
+   "src": "Burgundy",
+   "bg": "#F2AEBC",
+   "tx": "#6C0820",
+   "bt": "#3D5D91"
+  },
+  {
+   "uid": "p068",
+   "name": "Burgundy 03",
+   "mood": "페미닌/로맨틱",
+   "src": "Burgundy",
+   "bg": "#F2DCDB",
+   "tx": "#6C0820",
+   "bt": "#3D5D91"
+  },
+  {
+   "uid": "p069",
+   "name": "The Sanctuary",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#371722",
+   "tx": "#FFFFFF",
+   "bt": "#BBAB9B"
+  },
+  {
+   "uid": "p070",
+   "name": "Switched Twins",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#F8EBEE",
+   "tx": "#0C3934",
+   "bt": "#0C3934"
+  },
+  {
+   "uid": "p071",
+   "name": "HappyHues 10",
+   "mood": "럭셔리/엘레강스",
+   "src": "HappyHues",
+   "bg": "#004643",
+   "tx": "#FFFFFE",
+   "bt": "#F9BC60"
+  },
+  {
+   "uid": "p072",
+   "name": "HappyHues 16",
+   "mood": "럭셔리/엘레강스",
+   "src": "HappyHues",
+   "bg": "#55423D",
+   "tx": "#FFFFFE",
+   "bt": "#FFC0AD"
+  },
+  {
+   "uid": "p073",
+   "name": "Bite Your Tongue",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#E88565",
+   "tx": "#181A27",
+   "bt": "#181A27"
+  },
+  {
+   "uid": "p074",
+   "name": "First Edition",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#0C485E",
+   "tx": "#FEB904",
+   "bt": "#FEB904"
+  },
+  {
+   "uid": "p075",
+   "name": "Rosebud",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#501718",
+   "tx": "#FD750A",
+   "bt": "#FFFFFF"
+  },
+  {
+   "uid": "p076",
+   "name": "Late Gift",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#9357A9",
+   "tx": "#FFFFFF",
+   "bt": "#000000"
+  },
+  {
+   "uid": "p077",
+   "name": "Bad Banker",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#12162D",
+   "tx": "#8B743D",
+   "bt": "#8B743D"
+  },
+  {
+   "uid": "p078",
+   "name": "Over the Hill",
+   "mood": "럭셔리/엘레강스",
+   "src": "MyMind",
+   "bg": "#3B755F",
+   "tx": "#000000",
+   "bt": "#F2CB6C"
+  },
+  {
+   "uid": "p079",
+   "name": "Huemint 041",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#1C1C22",
+   "tx": "#FFFEFF",
+   "bt": "#C6CFEF"
+  },
+  {
+   "uid": "p080",
+   "name": "Huemint 042",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2D2416",
+   "tx": "#F0D7BD",
+   "bt": "#B49E58"
+  },
+  {
+   "uid": "p081",
+   "name": "Huemint 043",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#0E1F1C",
+   "tx": "#E99E41",
+   "bt": "#799A64"
+  },
+  {
+   "uid": "p082",
+   "name": "Huemint 044",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#1E1B2E",
+   "tx": "#FFB649",
+   "bt": "#E9E6E4"
+  },
+  {
+   "uid": "p083",
+   "name": "Huemint 045",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#301C28",
+   "tx": "#F7F5F4",
+   "bt": "#829783"
+  },
+  {
+   "uid": "p084",
+   "name": "Huemint 046",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#004643",
+   "tx": "#F9FBC0",
+   "bt": "#E09CBB"
+  },
+  {
+   "uid": "p085",
+   "name": "Huemint 047",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2C1810",
+   "tx": "#E0D7C7",
+   "bt": "#588C92"
+  },
+  {
+   "uid": "p086",
+   "name": "Huemint 048",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#331A22",
+   "tx": "#C1C9C6",
+   "bt": "#AD7A71"
+  },
+  {
+   "uid": "p087",
+   "name": "Huemint 049",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#0F2027",
+   "tx": "#D3C339",
+   "bt": "#78AC9A"
+  },
+  {
+   "uid": "p088",
+   "name": "Huemint 050",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#1A1423",
+   "tx": "#F8BCC1",
+   "bt": "#BD9BC0"
+  },
+  {
+   "uid": "p089",
+   "name": "Huemint 051",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#22301F",
+   "tx": "#EFF5C3",
+   "bt": "#D19439"
+  },
+  {
+   "uid": "p090",
+   "name": "Huemint 052",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2C1810",
+   "tx": "#FFCB24",
+   "bt": "#B37397"
+  },
+  {
+   "uid": "p091",
+   "name": "Huemint 053",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#1C1C22",
+   "tx": "#E0EEDD",
+   "bt": "#73B283"
+  },
+  {
+   "uid": "p092",
+   "name": "Huemint 054",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#1F2D2A",
+   "tx": "#FFECAC",
+   "bt": "#CB6E00"
+  },
+  {
+   "uid": "p093",
+   "name": "Huemint 055",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#101820",
+   "tx": "#E9CCCC",
+   "bt": "#BB7634"
+  },
+  {
+   "uid": "p094",
+   "name": "Huemint 056",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#12162D",
+   "tx": "#FFAF02",
+   "bt": "#9E8FAF"
+  },
+  {
+   "uid": "p095",
+   "name": "Huemint 057",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2D2416",
+   "tx": "#E1D2A3",
+   "bt": "#75C1A7"
+  },
+  {
+   "uid": "p096",
+   "name": "Huemint 058",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2A1F2E",
+   "tx": "#E6A96F",
+   "bt": "#D47327"
+  },
+  {
+   "uid": "p097",
+   "name": "Huemint 059",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#004643",
+   "tx": "#F7F7FD",
+   "bt": "#C2A089"
+  },
+  {
+   "uid": "p098",
+   "name": "Huemint 060",
+   "mood": "럭셔리/엘레강스",
+   "src": "Huemint",
+   "bg": "#2C1810",
+   "tx": "#C5C3B2",
+   "bt": "#D77712"
+  },
+  {
+   "uid": "p099",
+   "name": "Iceberg 03",
+   "mood": "럭셔리/엘레강스",
+   "src": "Iceberg",
+   "bg": "#1E424D",
+   "tx": "#E5D595",
+   "bt": "#E19E11"
+  },
+  {
+   "uid": "p100",
+   "name": "Iceberg 07",
+   "mood": "럭셔리/엘레강스",
+   "src": "Iceberg",
+   "bg": "#663E1F",
+   "tx": "#E5D595",
+   "bt": "#E19E11"
+  },
+  {
+   "uid": "p101",
+   "name": "Sapphire 01",
+   "mood": "럭셔리/엘레강스",
+   "src": "Sapphire",
+   "bg": "#112250",
+   "tx": "#F5F0E9",
+   "bt": "#E0C58F"
+  },
+  {
+   "uid": "p102",
+   "name": "Sapphire 02",
+   "mood": "럭셔리/엘레강스",
+   "src": "Sapphire",
+   "bg": "#3C507D",
+   "tx": "#F5F0E9",
+   "bt": "#E0C58F"
+  },
+  {
+   "uid": "p103",
+   "name": "Sapphire 03",
+   "mood": "럭셔리/엘레강스",
+   "src": "Sapphire",
+   "bg": "#E0C58F",
+   "tx": "#112250",
+   "bt": "#3C507D"
+  },
+  {
+   "uid": "p104",
+   "name": "Sapphire 04",
+   "mood": "럭셔리/엘레강스",
+   "src": "Sapphire",
+   "bg": "#F5F0E9",
+   "tx": "#112250",
+   "bt": "#3C507D"
+  },
+  {
+   "uid": "p105",
+   "name": "Chewing Gum 06",
+   "mood": "럭셔리/엘레강스",
+   "src": "Chewing Gum",
+   "bg": "#5D262F",
+   "tx": "#FAF2E5",
+   "bt": "#C0893B"
+  },
+  {
+   "uid": "p106",
+   "name": "Chewing Gum 08",
+   "mood": "럭셔리/엘레강스",
+   "src": "Chewing Gum",
+   "bg": "#1F303D",
+   "tx": "#FAF2E5",
+   "bt": "#C0893B"
+  },
+  {
+   "uid": "p107",
+   "name": "Paradiso",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#F2F2F2",
+   "tx": "#000000",
+   "bt": "#0B64FE"
+  },
+  {
+   "uid": "p108",
+   "name": "HappyHues 1",
+   "mood": "프로페셔널/비즈니스",
+   "src": "HappyHues",
+   "bg": "#FFFFFE",
+   "tx": "#181818",
+   "bt": "#4FC4CF"
+  },
+  {
+   "uid": "p109",
+   "name": "HappyHues 2",
+   "mood": "프로페셔널/비즈니스",
+   "src": "HappyHues",
+   "bg": "#FFFFFE",
+   "tx": "#00214D",
+   "bt": "#00EBC7"
+  },
+  {
+   "uid": "p110",
+   "name": "HappyHues 6",
+   "mood": "프로페셔널/비즈니스",
+   "src": "HappyHues",
+   "bg": "#FFFFFE",
+   "tx": "#2B2C34",
+   "bt": "#6246EA"
+  },
+  {
+   "uid": "p111",
+   "name": "HappyHues 3",
+   "mood": "프로페셔널/비즈니스",
+   "src": "HappyHues",
+   "bg": "#FFFFFE",
+   "tx": "#094067",
+   "bt": "#3DA9FC"
+  },
+  {
+   "uid": "p112",
+   "name": "Wingwoman",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#0E38B1",
+   "tx": "#FFFFFF",
+   "bt": "#FFFFFF"
+  },
+  {
+   "uid": "p113",
+   "name": "Monastery Morning",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#055A5B",
+   "tx": "#E6E6E6",
+   "bt": "#E6E6E6"
+  },
+  {
+   "uid": "p114",
+   "name": "Robed Witness",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#8AA9C6",
+   "tx": "#093929",
+   "bt": "#093929"
+  },
+  {
+   "uid": "p115",
+   "name": "Mr. Business",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#167C80",
+   "tx": "#FFFFFF",
+   "bt": "#FFFFFF"
+  },
+  {
+   "uid": "p116",
+   "name": "Shipwreck",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#0D4CBE",
+   "tx": "#CFCEC7",
+   "bt": "#CFCEC7"
+  },
+  {
+   "uid": "p117",
+   "name": "Earnest Proposal",
+   "mood": "프로페셔널/비즈니스",
+   "src": "MyMind",
+   "bg": "#283470",
+   "tx": "#15A29C",
+   "bt": "#15A29C"
+  },
+  {
+   "uid": "p118",
+   "name": "Huemint 061",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#0A1F44",
+   "tx": "#FFFDF9",
+   "bt": "#00C9FF"
+  },
+  {
+   "uid": "p119",
+   "name": "Huemint 062",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F2F2F2",
+   "tx": "#342D2F",
+   "bt": "#904FEB"
+  },
+  {
+   "uid": "p120",
+   "name": "Huemint 063",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F6F8FA",
+   "tx": "#222832",
+   "bt": "#694DFC"
+  },
+  {
+   "uid": "p121",
+   "name": "Huemint 064",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#13293D",
+   "tx": "#FFF2D9",
+   "bt": "#9E8BC2"
+  },
+  {
+   "uid": "p122",
+   "name": "Huemint 065",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#FFFFFF",
+   "tx": "#093662",
+   "bt": "#007A9D"
+  },
+  {
+   "uid": "p123",
+   "name": "Huemint 066",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F7F8FA",
+   "tx": "#393B6C",
+   "bt": "#3B8A8C"
+  },
+  {
+   "uid": "p124",
+   "name": "Huemint 067",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#EDF1F5",
+   "tx": "#22374A",
+   "bt": "#52779E"
+  },
+  {
+   "uid": "p125",
+   "name": "Huemint 068",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#10243E",
+   "tx": "#F5C8B9",
+   "bt": "#6C88FA"
+  },
+  {
+   "uid": "p126",
+   "name": "Huemint 069",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#FAFAFA",
+   "tx": "#262627",
+   "bt": "#4C78FB"
+  },
+  {
+   "uid": "p127",
+   "name": "Huemint 070",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#13293D",
+   "tx": "#FCE3DA",
+   "bt": "#22BBB8"
+  },
+  {
+   "uid": "p128",
+   "name": "Huemint 071",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#16324F",
+   "tx": "#F7F5F6",
+   "bt": "#47B3FE"
+  },
+  {
+   "uid": "p129",
+   "name": "Huemint 072",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F7F8FA",
+   "tx": "#2C2543",
+   "bt": "#3368CF"
+  },
+  {
+   "uid": "p130",
+   "name": "Huemint 073",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#0D2B40",
+   "tx": "#AEDBDA",
+   "bt": "#4AA1CB"
+  },
+  {
+   "uid": "p131",
+   "name": "Huemint 074",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#FBFCFD",
+   "tx": "#182587",
+   "bt": "#2D48B3"
+  },
+  {
+   "uid": "p132",
+   "name": "Huemint 075",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#123152",
+   "tx": "#FBF8FB",
+   "bt": "#00C8DB"
+  },
+  {
+   "uid": "p133",
+   "name": "Huemint 076",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F2F2F2",
+   "tx": "#05326B",
+   "bt": "#276FA6"
+  },
+  {
+   "uid": "p134",
+   "name": "Huemint 077",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#10243E",
+   "tx": "#E7E6EA",
+   "bt": "#2F86D1"
+  },
+  {
+   "uid": "p135",
+   "name": "Huemint 078",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F8FAFC",
+   "tx": "#1D334A",
+   "bt": "#157C75"
+  },
+  {
+   "uid": "p136",
+   "name": "Huemint 079",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#EEF2F6",
+   "tx": "#7B64D6",
+   "bt": "#7328DE"
+  },
+  {
+   "uid": "p137",
+   "name": "Huemint 080",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Huemint",
+   "bg": "#F7F8FA",
+   "tx": "#292524",
+   "bt": "#287497"
+  },
+  {
+   "uid": "p138",
+   "name": "Designah 03",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Designah",
+   "bg": "#FAFFFA",
+   "tx": "#0D142B",
+   "bt": "#0044FF"
+  },
+  {
+   "uid": "p139",
+   "name": "Neon Brand 02",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Neon Brand",
+   "bg": "#13131A",
+   "tx": "#FBFBFB",
+   "bt": "#1AAEFC"
+  },
+  {
+   "uid": "p140",
+   "name": "Dark Cerulean",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Colours Cafe",
+   "bg": "#0D5072",
+   "tx": "#7FEEFF",
+   "bt": "#7FEEFF"
+  },
+  {
+   "uid": "p141",
+   "name": "Columbia 02",
+   "mood": "프로페셔널/비즈니스",
+   "src": "Columbia",
+   "bg": "#0B1957",
+   "tx": "#D2E0ED",
+   "bt": "#5884E7"
+  },
+  {
+   "uid": "p142",
+   "name": "HappyHues 4",
+   "mood": "모던/시크",
+   "src": "HappyHues",
+   "bg": "#16161A",
+   "tx": "#FFFFFE",
+   "bt": "#7F5AF0"
+  },
+  {
+   "uid": "p143",
+   "name": "HappyHues 9",
+   "mood": "모던/시크",
+   "src": "HappyHues",
+   "bg": "#EFF0F3",
+   "tx": "#0D0D0D",
+   "bt": "#FF8E3C"
+  },
+  {
+   "uid": "p144",
+   "name": "Deep Pond",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#B3E0E0",
+   "tx": "#000000",
+   "bt": "#FFFFFF"
+  },
+  {
+   "uid": "p145",
+   "name": "Gentle Giant",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#EDB5BD",
+   "tx": "#000000",
+   "bt": "#BEDFD4"
+  },
+  {
+   "uid": "p146",
+   "name": "No Dice",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#77EEDF",
+   "tx": "#28292B",
+   "bt": "#28292B"
+  },
+  {
+   "uid": "p147",
+   "name": "Open Book",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#EED974",
+   "tx": "#28292B",
+   "bt": "#28292B"
+  },
+  {
+   "uid": "p148",
+   "name": "Dad's Old Wallet",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#3B465C",
+   "tx": "#E9E8D4",
+   "bt": "#E9E8D4"
+  },
+  {
+   "uid": "p149",
+   "name": "Endless Circle",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#000000",
+   "tx": "#FF0000",
+   "bt": "#FF0000"
+  },
+  {
+   "uid": "p150",
+   "name": "Climb the Terrace",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#343B3F",
+   "tx": "#FF89B5",
+   "bt": "#D1BDFF"
+  },
+  {
+   "uid": "p151",
+   "name": "Precious Ego",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#E57066",
+   "tx": "#28292B",
+   "bt": "#28292B"
+  },
+  {
+   "uid": "p152",
+   "name": "Previous Engagement",
+   "mood": "모던/시크",
+   "src": "MyMind",
+   "bg": "#B1FDEB",
+   "tx": "#6B7C95",
+   "bt": "#000000"
+  },
+  {
+   "uid": "p153",
+   "name": "Huemint 081",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#FFFFFF",
+   "tx": "#040909",
+   "bt": "#C3242F"
+  },
+  {
+   "uid": "p154",
+   "name": "Huemint 082",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#16161A",
+   "tx": "#7B71B8",
+   "bt": "#14AD9F"
+  },
+  {
+   "uid": "p155",
+   "name": "Huemint 083",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#000000",
+   "tx": "#3AC4B7",
+   "bt": "#9364A3"
+  },
+  {
+   "uid": "p156",
+   "name": "Huemint 084",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#EFF0F3",
+   "tx": "#143451",
+   "bt": "#678316"
+  },
+  {
+   "uid": "p157",
+   "name": "Huemint 085",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#2E2E2E",
+   "tx": "#F2F8FC",
+   "bt": "#39AC18"
+  },
+  {
+   "uid": "p158",
+   "name": "Huemint 086",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#2A2A2E",
+   "tx": "#F9FBF4",
+   "bt": "#DE5765"
+  },
+  {
+   "uid": "p159",
+   "name": "Huemint 087",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#E8E8E8",
+   "tx": "#4F343D",
+   "bt": "#1B7262"
+  },
+  {
+   "uid": "p160",
+   "name": "Huemint 088",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#EFF0F3",
+   "tx": "#262059",
+   "bt": "#225FFC"
+  },
+  {
+   "uid": "p161",
+   "name": "Huemint 089",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#DCDCDC",
+   "tx": "#22202C",
+   "bt": "#643492"
+  },
+  {
+   "uid": "p162",
+   "name": "Huemint 090",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#232323",
+   "tx": "#DED9D0",
+   "bt": "#E13E29"
+  },
+  {
+   "uid": "p163",
+   "name": "Huemint 091",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#1A1A1A",
+   "tx": "#CBC7C9",
+   "bt": "#328CB2"
+  },
+  {
+   "uid": "p164",
+   "name": "Huemint 092",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#EFF0F3",
+   "tx": "#002539",
+   "bt": "#BA4071"
+  },
+  {
+   "uid": "p165",
+   "name": "Huemint 093",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#16161A",
+   "tx": "#37E2FB",
+   "bt": "#955EE0"
+  },
+  {
+   "uid": "p166",
+   "name": "Huemint 094",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#2A2A2E",
+   "tx": "#DEF2C5",
+   "bt": "#67A346"
+  },
+  {
+   "uid": "p167",
+   "name": "Huemint 095",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#FFFFFF",
+   "tx": "#002F50",
+   "bt": "#536332"
+  },
+  {
+   "uid": "p168",
+   "name": "Huemint 096",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#FFFFFF",
+   "tx": "#F83646",
+   "bt": "#415B98"
+  },
+  {
+   "uid": "p169",
+   "name": "Huemint 097",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#000000",
+   "tx": "#F3A99C",
+   "bt": "#60A584"
+  },
+  {
+   "uid": "p170",
+   "name": "Huemint 098",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#16161A",
+   "tx": "#CAD3DB",
+   "bt": "#BF9E41"
+  },
+  {
+   "uid": "p171",
+   "name": "Huemint 099",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#111111",
+   "tx": "#DCE159",
+   "bt": "#817919"
+  },
+  {
+   "uid": "p172",
+   "name": "Huemint 100",
+   "mood": "모던/시크",
+   "src": "Huemint",
+   "bg": "#2A2A2E",
+   "tx": "#D8942D",
+   "bt": "#97B9F9"
+  },
+  {
+   "uid": "p173",
+   "name": "Neon Brand 01",
+   "mood": "모던/시크",
+   "src": "Neon Brand",
+   "bg": "#13131A",
+   "tx": "#FBFBFB",
+   "bt": "#B2FF00"
+  },
+  {
+   "uid": "p174",
+   "name": "Neon Brand 03",
+   "mood": "모던/시크",
+   "src": "Neon Brand",
+   "bg": "#FBFBFB",
+   "tx": "#13131A",
+   "bt": "#8455EA"
+  },
+  {
+   "uid": "p175",
+   "name": "Daho 07",
+   "mood": "모던/시크",
+   "src": "daho_van",
+   "bg": "#242021",
+   "tx": "#CCBEB3",
+   "bt": "#9C9E4A"
+  },
+  {
+   "uid": "p176",
+   "name": "HappyHues 13",
+   "mood": "비비드/대담한",
+   "src": "HappyHues",
+   "bg": "#0F0E17",
+   "tx": "#FFFFFE",
+   "bt": "#FF8906"
+  },
+  {
+   "uid": "p177",
+   "name": "kühles Blondes",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#022EAC",
+   "tx": "#13E19B",
+   "bt": "#FBA30C"
+  },
+  {
+   "uid": "p178",
+   "name": "Tamed Beast",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#053161",
+   "tx": "#FF6A34",
+   "bt": "#BED9DA"
+  },
+  {
+   "uid": "p179",
+   "name": "Cruller Intentions",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#FDF06F",
+   "tx": "#D31B33",
+   "bt": "#D31B33"
+  },
+  {
+   "uid": "p180",
+   "name": "Fool's Errand",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#FB9B2A",
+   "tx": "#0C00FF",
+   "bt": "#0C00FF"
+  },
+  {
+   "uid": "p181",
+   "name": "Corrupted Monk",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#E54B4B",
+   "tx": "#FFFFFF",
+   "bt": "#FFFFFF"
+  },
+  {
+   "uid": "p182",
+   "name": "Dante's Daydream",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#1B1D1C",
+   "tx": "#EA1821",
+   "bt": "#EA1821"
+  },
+  {
+   "uid": "p183",
+   "name": "Diamond Day",
+   "mood": "비비드/대담한",
+   "src": "MyMind",
+   "bg": "#FF6090",
+   "tx": "#81072C",
+   "bt": "#FEEA0D"
+  },
+  {
+   "uid": "p184",
+   "name": "Huemint 101",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#FBFBFB",
+   "tx": "#000501",
+   "bt": "#D20F2B"
+  },
+  {
+   "uid": "p185",
+   "name": "Huemint 102",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#101C18",
+   "tx": "#FAD0D0",
+   "bt": "#00C3C5"
+  },
+  {
+   "uid": "p186",
+   "name": "Huemint 103",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#181022",
+   "tx": "#80CFD1",
+   "bt": "#E66B41"
+  },
+  {
+   "uid": "p187",
+   "name": "Huemint 104",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#141414",
+   "tx": "#E4DDD4",
+   "bt": "#4672FB"
+  },
+  {
+   "uid": "p188",
+   "name": "Huemint 105",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#FFFFFE",
+   "tx": "#172138",
+   "bt": "#2F7DCC"
+  },
+  {
+   "uid": "p189",
+   "name": "Huemint 106",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#1B1D1C",
+   "tx": "#ECEAD2",
+   "bt": "#E8406E"
+  },
+  {
+   "uid": "p190",
+   "name": "Huemint 107",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#181818",
+   "tx": "#8D8382",
+   "bt": "#BDAC16"
+  },
+  {
+   "uid": "p191",
+   "name": "Huemint 108",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#0A0A14",
+   "tx": "#F2BF6D",
+   "bt": "#10BC16"
+  },
+  {
+   "uid": "p192",
+   "name": "Huemint 109",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#F2F2F2",
+   "tx": "#3E2207",
+   "bt": "#287338"
+  },
+  {
+   "uid": "p193",
+   "name": "Huemint 110",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#1C1018",
+   "tx": "#E7A960",
+   "bt": "#339D67"
+  },
+  {
+   "uid": "p194",
+   "name": "Huemint 111",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#12121A",
+   "tx": "#FF8B72",
+   "bt": "#CD17FF"
+  },
+  {
+   "uid": "p195",
+   "name": "Huemint 112",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#181022",
+   "tx": "#D3AA68",
+   "bt": "#4297C4"
+  },
+  {
+   "uid": "p196",
+   "name": "Huemint 113",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#FFFFFE",
+   "tx": "#5D110D",
+   "bt": "#C67119"
+  },
+  {
+   "uid": "p197",
+   "name": "Huemint 114",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#1C1018",
+   "tx": "#E8C59F",
+   "bt": "#DA4F94"
+  },
+  {
+   "uid": "p198",
+   "name": "Huemint 115",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#101C18",
+   "tx": "#F2A269",
+   "bt": "#93A61C"
+  },
+  {
+   "uid": "p199",
+   "name": "Huemint 116",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#F2F2F2",
+   "tx": "#2A2530",
+   "bt": "#4074FC"
+  },
+  {
+   "uid": "p200",
+   "name": "Huemint 117",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#0D1117",
+   "tx": "#DAD1B2",
+   "bt": "#E43E53"
+  },
+  {
+   "uid": "p201",
+   "name": "Huemint 118",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#0D1117",
+   "tx": "#ED9DCE",
+   "bt": "#3869D6"
+  },
+  {
+   "uid": "p202",
+   "name": "Huemint 119",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#101010",
+   "tx": "#E9C7A7",
+   "bt": "#2E8C37"
+  },
+  {
+   "uid": "p203",
+   "name": "Huemint 120",
+   "mood": "비비드/대담한",
+   "src": "Huemint",
+   "bg": "#0C0C10",
+   "tx": "#ECBB13",
+   "bt": "#866B1C"
+  },
+  {
+   "uid": "p204",
+   "name": "Designah 01",
+   "mood": "비비드/대담한",
+   "src": "Designah",
+   "bg": "#0D142B",
+   "tx": "#FAFFFA",
+   "bt": "#FF5930"
+  },
+  {
+   "uid": "p205",
+   "name": "Designah 02",
+   "mood": "비비드/대담한",
+   "src": "Designah",
+   "bg": "#0D142B",
+   "tx": "#FAFFFA",
+   "bt": "#ABFA54"
+  },
+  {
+   "uid": "p206",
+   "name": "Grape",
+   "mood": "비비드/대담한",
+   "src": "Colours Cafe",
+   "bg": "#7523B4",
+   "tx": "#FAE170",
+   "bt": "#FAE170"
+  },
+  {
+   "uid": "p207",
+   "name": "iFest 01",
+   "mood": "비비드/대담한",
+   "src": "iFest",
+   "bg": "#000000",
+   "tx": "#FFFFFF",
+   "bt": "#FF90EE"
+  },
+  {
+   "uid": "p208",
+   "name": "iFest 02",
+   "mood": "비비드/대담한",
+   "src": "iFest",
+   "bg": "#000000",
+   "tx": "#FFFFFF",
+   "bt": "#06D172"
+  },
+  {
+   "uid": "p209",
+   "name": "iFest 03",
+   "mood": "비비드/대담한",
+   "src": "iFest",
+   "bg": "#000000",
+   "tx": "#FFFFFF",
+   "bt": "#694AFF"
+  },
+  {
+   "uid": "p210",
+   "name": "iFest 04",
+   "mood": "비비드/대담한",
+   "src": "iFest",
+   "bg": "#000000",
+   "tx": "#FFFFFF",
+   "bt": "#FF5500"
+  },
+  {
+   "uid": "p211",
+   "name": "HappyHues 11",
+   "mood": "빈티지/노스탤직",
+   "src": "HappyHues",
+   "bg": "#F9F4EF",
+   "tx": "#020826",
+   "bt": "#8C7851"
+  },
+  {
+   "uid": "p212",
+   "name": "Cozy Sweater",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#112378",
+   "tx": "#FBECCF",
+   "bt": "#FBECCF"
+  },
+  {
+   "uid": "p213",
+   "name": "Packed Lunch",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#F1C3B8",
+   "tx": "#19227D",
+   "bt": "#19227D"
+  },
+  {
+   "uid": "p214",
+   "name": "Old Diary",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#C0C2CE",
+   "tx": "#012F63",
+   "bt": "#FE667B"
+  },
+  {
+   "uid": "p215",
+   "name": "Awkward Penpal",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#FFFDE7",
+   "tx": "#EC0B19",
+   "bt": "#189BA3"
+  },
+  {
+   "uid": "p216",
+   "name": "Mama's New Bag",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#CBA0AA",
+   "tx": "#5A3C20",
+   "bt": "#FAE397"
+  },
+  {
+   "uid": "p217",
+   "name": "Pleasant Journey",
+   "mood": "빈티지/노스탤직",
+   "src": "MyMind",
+   "bg": "#E33946",
+   "tx": "#FDEDB2",
+   "bt": "#FDEDB2"
+  },
+  {
+   "uid": "p218",
+   "name": "Huemint 121",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#FAF5EA",
+   "tx": "#0B0701",
+   "bt": "#CB614A"
+  },
+  {
+   "uid": "p219",
+   "name": "Huemint 122",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#1B2A4A",
+   "tx": "#DFE198",
+   "bt": "#5EB7C9"
+  },
+  {
+   "uid": "p220",
+   "name": "Huemint 123",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#6B3A2A",
+   "tx": "#FFEA78",
+   "bt": "#A0ACB9"
+  },
+  {
+   "uid": "p221",
+   "name": "Huemint 124",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#112378",
+   "tx": "#2FC8EF",
+   "bt": "#E18976"
+  },
+  {
+   "uid": "p222",
+   "name": "Huemint 125",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#3D2B1F",
+   "tx": "#E6E8E6",
+   "bt": "#C6AA48"
+  },
+  {
+   "uid": "p223",
+   "name": "Huemint 126",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#F7F1E3",
+   "tx": "#4D3745",
+   "bt": "#53817E"
+  },
+  {
+   "uid": "p224",
+   "name": "Huemint 127",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#6B3A2A",
+   "tx": "#F8FFFF",
+   "bt": "#DAA59A"
+  },
+  {
+   "uid": "p225",
+   "name": "Huemint 128",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#243B53",
+   "tx": "#F2F6CB",
+   "bt": "#C89826"
+  },
+  {
+   "uid": "p226",
+   "name": "Huemint 129",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#4A3520",
+   "tx": "#FFCA58",
+   "bt": "#71C7C2"
+  },
+  {
+   "uid": "p227",
+   "name": "Huemint 130",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#112378",
+   "tx": "#A6D2B0",
+   "bt": "#83ABDC"
+  },
+  {
+   "uid": "p228",
+   "name": "Huemint 131",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#3D2B1F",
+   "tx": "#E9B23D",
+   "bt": "#D5708B"
+  },
+  {
+   "uid": "p229",
+   "name": "Huemint 132",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#1B2A4A",
+   "tx": "#FCF2E4",
+   "bt": "#E25265"
+  },
+  {
+   "uid": "p230",
+   "name": "Huemint 133",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#7A3B2E",
+   "tx": "#66C7CE",
+   "bt": "#D9D8CE"
+  },
+  {
+   "uid": "p231",
+   "name": "Huemint 134",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#F4EEDE",
+   "tx": "#353347",
+   "bt": "#5C4F23"
+  },
+  {
+   "uid": "p232",
+   "name": "Huemint 135",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#5A3C20",
+   "tx": "#FDFEF1",
+   "bt": "#D68D60"
+  },
+  {
+   "uid": "p233",
+   "name": "Huemint 136",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#F4EEDE",
+   "tx": "#873B21",
+   "bt": "#346CB2"
+  },
+  {
+   "uid": "p234",
+   "name": "Huemint 137",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#112378",
+   "tx": "#FFFBFC",
+   "bt": "#51BBAD"
+  },
+  {
+   "uid": "p235",
+   "name": "Huemint 138",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#E8DFC8",
+   "tx": "#001838",
+   "bt": "#C73758"
+  },
+  {
+   "uid": "p236",
+   "name": "Huemint 139",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#3D2B1F",
+   "tx": "#E9E5D4",
+   "bt": "#52ABD6"
+  },
+  {
+   "uid": "p237",
+   "name": "Huemint 140",
+   "mood": "빈티지/노스탤직",
+   "src": "Huemint",
+   "bg": "#6B3A2A",
+   "tx": "#EDDECE",
+   "bt": "#66B8B0"
+  },
+  {
+   "uid": "p238",
+   "name": "Sinopia",
+   "mood": "빈티지/노스탤직",
+   "src": "Colours Cafe",
+   "bg": "#FAE170",
+   "tx": "#D13F13",
+   "bt": "#D13F13"
+  },
+  {
+   "uid": "p239",
+   "name": "Golden Brown",
+   "mood": "빈티지/노스탤직",
+   "src": "Colours Cafe",
+   "bg": "#906713",
+   "tx": "#FFDB58",
+   "bt": "#FFDB58"
+  },
+  {
+   "uid": "p240",
+   "name": "Iceberg 01",
+   "mood": "빈티지/노스탤직",
+   "src": "Iceberg",
+   "bg": "#77B5D3",
+   "tx": "#1E424D",
+   "bt": "#663E1F"
+  },
+  {
+   "uid": "p241",
+   "name": "Iceberg 02",
+   "mood": "빈티지/노스탤직",
+   "src": "Iceberg",
+   "bg": "#1E424D",
+   "tx": "#E5D595",
+   "bt": "#77B5D3"
+  },
+  {
+   "uid": "p242",
+   "name": "Iceberg 04",
+   "mood": "빈티지/노스탤직",
+   "src": "Iceberg",
+   "bg": "#E5D595",
+   "tx": "#1E424D",
+   "bt": "#663E1F"
+  },
+  {
+   "uid": "p243",
+   "name": "Iceberg 05",
+   "mood": "빈티지/노스탤직",
+   "src": "Iceberg",
+   "bg": "#E19E11",
+   "tx": "#1E424D",
+   "bt": "#663E1F"
+  },
+  {
+   "uid": "p244",
+   "name": "Iceberg 06",
+   "mood": "빈티지/노스탤직",
+   "src": "Iceberg",
+   "bg": "#663E1F",
+   "tx": "#E5D595",
+   "bt": "#77B5D3"
+  },
+  {
+   "uid": "p245",
+   "name": "Quetra 01",
+   "mood": "빈티지/노스탤직",
+   "src": "QuetraTech",
+   "bg": "#642F37",
+   "tx": "#F7C767",
+   "bt": "#F3904B"
+  },
+  {
+   "uid": "p246",
+   "name": "Quetra 02",
+   "mood": "빈티지/노스탤직",
+   "src": "QuetraTech",
+   "bg": "#642F37",
+   "tx": "#F7C767",
+   "bt": "#B89DBB"
+  },
+  {
+   "uid": "p247",
+   "name": "Daho 01",
+   "mood": "빈티지/노스탤직",
+   "src": "daho_van",
+   "bg": "#5758A6",
+   "tx": "#F7E6D4",
+   "bt": "#E7C58A"
+  },
+  {
+   "uid": "p248",
+   "name": "Daho 02",
+   "mood": "빈티지/노스탤직",
+   "src": "daho_van",
+   "bg": "#E7C58A",
+   "tx": "#4B3535",
+   "bt": "#5758A6"
+  },
+  {
+   "uid": "p249",
+   "name": "Daho 03",
+   "mood": "빈티지/노스탤직",
+   "src": "daho_van",
+   "bg": "#F7E6D4",
+   "tx": "#4B3535",
+   "bt": "#5758A6"
+  },
+  {
+   "uid": "p250",
+   "name": "Antique Brass",
+   "mood": "빈티지/노스탤직",
+   "src": "Chinese Black",
+   "bg": "#CF9D7B",
+   "tx": "#0C1519",
+   "bt": "#3A3534"
+  },
+  {
+   "uid": "p251",
+   "name": "Chewing Gum 03",
+   "mood": "빈티지/노스탤직",
+   "src": "Chewing Gum",
+   "bg": "#FAF2E5",
+   "tx": "#1F303D",
+   "bt": "#5D262F"
+  },
+  {
+   "uid": "p252",
+   "name": "Chewing Gum 04",
+   "mood": "빈티지/노스탤직",
+   "src": "Chewing Gum",
+   "bg": "#C0893B",
+   "tx": "#1F303D",
+   "bt": "#5D262F"
+  },
+  {
+   "uid": "p253",
+   "name": "HappyHues 14",
+   "mood": "펀/플레이풀",
+   "src": "HappyHues",
+   "bg": "#FFFFFE",
+   "tx": "#272343",
+   "bt": "#FFD803"
+  },
+  {
+   "uid": "p254",
+   "name": "Milo's Big Day",
+   "mood": "펀/플레이풀",
+   "src": "MyMind",
+   "bg": "#3333FF",
+   "tx": "#CDFFCC",
+   "bt": "#CDFFCC"
+  },
+  {
+   "uid": "p255",
+   "name": "Block Party",
+   "mood": "펀/플레이풀",
+   "src": "MyMind",
+   "bg": "#75FFC0",
+   "tx": "#7A30CF",
+   "bt": "#7A30CF"
+  },
+  {
+   "uid": "p256",
+   "name": "Open Sea",
+   "mood": "펀/플레이풀",
+   "src": "MyMind",
+   "bg": "#083EA7",
+   "tx": "#1FDE91",
+   "bt": "#1FDE91"
+  },
+  {
+   "uid": "p257",
+   "name": "Penny Candy",
+   "mood": "펀/플레이풀",
+   "src": "MyMind",
+   "bg": "#EEC0DB",
+   "tx": "#162BF4",
+   "bt": "#162BF4"
+  },
+  {
+   "uid": "p258",
+   "name": "Huemint 141",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#EAF6FF",
+   "tx": "#0D0D10",
+   "bt": "#E80420"
+  },
+  {
+   "uid": "p259",
+   "name": "Huemint 142",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFF2E8",
+   "tx": "#41342D",
+   "bt": "#0383B3"
+  },
+  {
+   "uid": "p260",
+   "name": "Huemint 143",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FDFDFD",
+   "tx": "#262224",
+   "bt": "#DD4902"
+  },
+  {
+   "uid": "p261",
+   "name": "Huemint 144",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F0FFF4",
+   "tx": "#0E2A2C",
+   "bt": "#078D17"
+  },
+  {
+   "uid": "p262",
+   "name": "Huemint 145",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F5F0FF",
+   "tx": "#55191A",
+   "bt": "#2C4EB7"
+  },
+  {
+   "uid": "p263",
+   "name": "Huemint 146",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFF0F5",
+   "tx": "#3F372F",
+   "bt": "#8F5FB7"
+  },
+  {
+   "uid": "p264",
+   "name": "Huemint 147",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#E8FFF7",
+   "tx": "#242320",
+   "bt": "#9742CA"
+  },
+  {
+   "uid": "p265",
+   "name": "Huemint 148",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFFFFE",
+   "tx": "#313132",
+   "bt": "#DC5099"
+  },
+  {
+   "uid": "p266",
+   "name": "Huemint 149",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F0FFF4",
+   "tx": "#1C1F2D",
+   "bt": "#B15E35"
+  },
+  {
+   "uid": "p267",
+   "name": "Huemint 150",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F6F2FF",
+   "tx": "#2B2F38",
+   "bt": "#A46E10"
+  },
+  {
+   "uid": "p268",
+   "name": "Huemint 151",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFFFFE",
+   "tx": "#18374B",
+   "bt": "#129241"
+  },
+  {
+   "uid": "p269",
+   "name": "Huemint 152",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#EFF8FF",
+   "tx": "#65534E",
+   "bt": "#477C91"
+  },
+  {
+   "uid": "p270",
+   "name": "Huemint 153",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F2FFF8",
+   "tx": "#3A1744",
+   "bt": "#0067CC"
+  },
+  {
+   "uid": "p271",
+   "name": "Huemint 154",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFFDF5",
+   "tx": "#5409AC",
+   "bt": "#6B5AE9"
+  },
+  {
+   "uid": "p272",
+   "name": "Huemint 155",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#F5F0FF",
+   "tx": "#12204E",
+   "bt": "#E7188C"
+  },
+  {
+   "uid": "p273",
+   "name": "Huemint 156",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FEFCE8",
+   "tx": "#31323E",
+   "bt": "#B36C0A"
+  },
+  {
+   "uid": "p274",
+   "name": "Huemint 157",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#EEF6FF",
+   "tx": "#293F53",
+   "bt": "#6700D6"
+  },
+  {
+   "uid": "p275",
+   "name": "Huemint 158",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFF0F5",
+   "tx": "#4B1647",
+   "bt": "#E6004F"
+  },
+  {
+   "uid": "p276",
+   "name": "Huemint 159",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFF0F5",
+   "tx": "#561230",
+   "bt": "#0065BD"
+  },
+  {
+   "uid": "p277",
+   "name": "Huemint 160",
+   "mood": "펀/플레이풀",
+   "src": "Huemint",
+   "bg": "#FFF6F0",
+   "tx": "#242422",
+   "bt": "#81239F"
+  },
+  {
+   "uid": "p278",
+   "name": "Pastel Magenta",
+   "mood": "펀/플레이풀",
+   "src": "Colours Cafe",
+   "bg": "#FF97D0",
+   "tx": "#125603",
+   "bt": "#125603"
+  },
+  {
+   "uid": "p279",
+   "name": "Light Lime",
+   "mood": "펀/플레이풀",
+   "src": "Colours Cafe",
+   "bg": "#C3F380",
+   "tx": "#7523B4",
+   "bt": "#7523B4"
+  },
+  {
+   "uid": "p280",
+   "name": "Booked 01",
+   "mood": "펀/플레이풀",
+   "src": "Mei Graphic",
+   "bg": "#352900",
+   "tx": "#FBFDF7",
+   "bt": "#F5D6FF"
+  },
+  {
+   "uid": "p281",
+   "name": "Booked 02",
+   "mood": "펀/플레이풀",
+   "src": "Mei Graphic",
+   "bg": "#352900",
+   "tx": "#FBFDF7",
+   "bt": "#AEB7FF"
+  },
+  {
+   "uid": "p282",
+   "name": "Booked 03",
+   "mood": "펀/플레이풀",
+   "src": "Mei Graphic",
+   "bg": "#352900",
+   "tx": "#FBFDF7",
+   "bt": "#FFBC54"
+  },
+  {
+   "uid": "p283",
+   "name": "HappyHues 17",
+   "mood": "드리미/감성적",
+   "src": "HappyHues",
+   "bg": "#FEF6E4",
+   "tx": "#001858",
+   "bt": "#F582AE"
+  },
+  {
+   "uid": "p284",
+   "name": "Inside Joke",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#F1D3D3",
+   "tx": "#000000",
+   "bt": "#1539CF"
+  },
+  {
+   "uid": "p285",
+   "name": "HappyHues 12",
+   "mood": "드리미/감성적",
+   "src": "HappyHues",
+   "bg": "#232946",
+   "tx": "#FFFFFE",
+   "bt": "#EEBBC3"
+  },
+  {
+   "uid": "p286",
+   "name": "Crystal Palace",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#E2A9C9",
+   "tx": "#000000",
+   "bt": "#FC411E"
+  },
+  {
+   "uid": "p287",
+   "name": "Hidden Passage",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#2D1C46",
+   "tx": "#B6D5F4",
+   "bt": "#EC2326"
+  },
+  {
+   "uid": "p288",
+   "name": "Small Gamble",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#D1E9E3",
+   "tx": "#334A45",
+   "bt": "#F3BFA9"
+  },
+  {
+   "uid": "p289",
+   "name": "Second Cousin",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#340B0B",
+   "tx": "#9B8FFF",
+   "bt": "#9B8FFF"
+  },
+  {
+   "uid": "p290",
+   "name": "Bedtime Story",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#BEF6E9",
+   "tx": "#4B5C68",
+   "bt": "#BB828B"
+  },
+  {
+   "uid": "p291",
+   "name": "Lucid Dream",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#121738",
+   "tx": "#D17C78",
+   "bt": "#D17C78"
+  },
+  {
+   "uid": "p292",
+   "name": "The Cottage",
+   "mood": "드리미/감성적",
+   "src": "MyMind",
+   "bg": "#837663",
+   "tx": "#101C4E",
+   "bt": "#FFD3C2"
+  },
+  {
+   "uid": "p293",
+   "name": "Huemint 161",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#FEF6E4",
+   "tx": "#0F211F",
+   "bt": "#D9513D"
+  },
+  {
+   "uid": "p294",
+   "name": "Huemint 162",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#242B47",
+   "tx": "#7BC758",
+   "bt": "#2EA5AD"
+  },
+  {
+   "uid": "p295",
+   "name": "Huemint 163",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E9F0F5",
+   "tx": "#252557",
+   "bt": "#7B2784"
+  },
+  {
+   "uid": "p296",
+   "name": "Huemint 164",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E8E4F3",
+   "tx": "#1B1014",
+   "bt": "#42851F"
+  },
+  {
+   "uid": "p297",
+   "name": "Huemint 165",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#2D1C46",
+   "tx": "#CED9EE",
+   "bt": "#E94F43"
+  },
+  {
+   "uid": "p298",
+   "name": "Huemint 166",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F1D3D3",
+   "tx": "#462642",
+   "bt": "#2E736A"
+  },
+  {
+   "uid": "p299",
+   "name": "Huemint 167",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F5EDF5",
+   "tx": "#2D2524",
+   "bt": "#C93D75"
+  },
+  {
+   "uid": "p300",
+   "name": "Huemint 168",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F0E9F2",
+   "tx": "#90674A",
+   "bt": "#455298"
+  },
+  {
+   "uid": "p301",
+   "name": "Huemint 169",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F1D3D3",
+   "tx": "#1C1D1B",
+   "bt": "#7E5B84"
+  },
+  {
+   "uid": "p302",
+   "name": "Huemint 170",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#31264A",
+   "tx": "#FEFEFA",
+   "bt": "#CAABFF"
+  },
+  {
+   "uid": "p303",
+   "name": "Huemint 171",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#2D1C46",
+   "tx": "#FBD0D1",
+   "bt": "#6F8B69"
+  },
+  {
+   "uid": "p304",
+   "name": "Huemint 172",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E6E9F5",
+   "tx": "#2B262A",
+   "bt": "#D33D30"
+  },
+  {
+   "uid": "p305",
+   "name": "Huemint 173",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F7F0E8",
+   "tx": "#382834",
+   "bt": "#5A54FC"
+  },
+  {
+   "uid": "p306",
+   "name": "Huemint 174",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E4EDF2",
+   "tx": "#77494B",
+   "bt": "#30475F"
+  },
+  {
+   "uid": "p307",
+   "name": "Huemint 175",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#1D2438",
+   "tx": "#F0EBF0",
+   "bt": "#A68352"
+  },
+  {
+   "uid": "p308",
+   "name": "Huemint 176",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E9F0F5",
+   "tx": "#3B3C6C",
+   "bt": "#4D5924"
+  },
+  {
+   "uid": "p309",
+   "name": "Huemint 177",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#242B47",
+   "tx": "#FDFEF9",
+   "bt": "#D967D0"
+  },
+  {
+   "uid": "p310",
+   "name": "Huemint 178",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F5EDF5",
+   "tx": "#311F17",
+   "bt": "#44887B"
+  },
+  {
+   "uid": "p311",
+   "name": "Huemint 179",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#F1D3D3",
+   "tx": "#111216",
+   "bt": "#5D625B"
+  },
+  {
+   "uid": "p312",
+   "name": "Huemint 180",
+   "mood": "드리미/감성적",
+   "src": "Huemint",
+   "bg": "#E6E9F5",
+   "tx": "#3A2F49",
+   "bt": "#5B53E2"
+  },
+  {
+   "uid": "p313",
+   "name": "Shift 01",
+   "mood": "드리미/감성적",
+   "src": "Shift Creative",
+   "bg": "#3939FF",
+   "tx": "#AEE6ED",
+   "bt": "#DBB8FF"
+  },
+  {
+   "uid": "p314",
+   "name": "Columbia 01",
+   "mood": "드리미/감성적",
+   "src": "Columbia",
+   "bg": "#0B1957",
+   "tx": "#D2E0ED",
+   "bt": "#FFBE98"
+  },
+  {
+   "uid": "p315",
+   "name": "Chewing Gum 07",
+   "mood": "드리미/감성적",
+   "src": "Chewing Gum",
+   "bg": "#1F303D",
+   "tx": "#FAF2E5",
+   "bt": "#E3B2AF"
+  },
+  {
+   "uid": "p316",
+   "name": "Burgundy 04",
+   "mood": "드리미/감성적",
+   "src": "Burgundy",
+   "bg": "#3D5D91",
+   "tx": "#F2DCDB",
+   "bt": "#F2AEBC"
+  }
+ ]
+}
