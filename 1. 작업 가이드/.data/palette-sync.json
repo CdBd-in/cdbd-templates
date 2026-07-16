@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "syncedAt": "2026-07-16",
  "total": 316,
  "figma": {
@@ -26,7 +26,8 @@
    "src": "HappyHues",
    "bg": "#F8F5F2",
    "tx": "#232323",
-   "bt": "#078080"
+   "bt": "#078080",
+   "btnText": "bg"
   },
   {
    "uid": "p002",
@@ -35,7 +36,8 @@
    "src": "HappyHues",
    "bg": "#F2F7F5",
    "tx": "#00473E",
-   "bt": "#FAAE2B"
+   "bt": "#FAAE2B",
+   "btnText": "tx"
   },
   {
    "uid": "p003",
@@ -44,7 +46,8 @@
    "src": "MyMind",
    "bg": "#424E22",
    "tx": "#FFAD67",
-   "bt": "#FFAD67"
+   "bt": "#FFAD67",
+   "btnText": "bg"
   },
   {
    "uid": "p004",
@@ -53,7 +56,8 @@
    "src": "MyMind",
    "bg": "#178E96",
    "tx": "#FFFFFF",
-   "bt": "#FDE3C8"
+   "bt": "#FDE3C8",
+   "btnText": "bg"
   },
   {
    "uid": "p005",
@@ -62,7 +66,8 @@
    "src": "Huemint",
    "bg": "#FBF7F0",
    "tx": "#232022",
-   "bt": "#A95A3E"
+   "bt": "#A95A3E",
+   "btnText": "bg"
   },
   {
    "uid": "p006",
@@ -71,7 +76,8 @@
    "src": "Huemint",
    "bg": "#0F3D3E",
    "tx": "#FF945A",
-   "bt": "#6CE8FB"
+   "bt": "#6CE8FB",
+   "btnText": "bg"
   },
   {
    "uid": "p007",
@@ -80,7 +86,8 @@
    "src": "Huemint",
    "bg": "#37503F",
    "tx": "#CEE4D9",
-   "bt": "#EA9577"
+   "bt": "#EA9577",
+   "btnText": "bg"
   },
   {
    "uid": "p008",
@@ -89,7 +96,8 @@
    "src": "Huemint",
    "bg": "#E8EDE5",
    "tx": "#84643B",
-   "bt": "#1E535A"
+   "bt": "#1E535A",
+   "btnText": "bg"
   },
   {
    "uid": "p009",
@@ -98,7 +106,8 @@
    "src": "Huemint",
    "bg": "#3A4A2F",
    "tx": "#D7A5B1",
-   "bt": "#E4E8E1"
+   "bt": "#E4E8E1",
+   "btnText": "bg"
   },
   {
    "uid": "p010",
@@ -107,7 +116,8 @@
    "src": "Huemint",
    "bg": "#F5F1E8",
    "tx": "#1E201C",
-   "bt": "#5C605C"
+   "bt": "#5C605C",
+   "btnText": "bg"
   },
   {
    "uid": "p011",
@@ -116,7 +126,8 @@
    "src": "Huemint",
    "bg": "#4A5D3A",
    "tx": "#F2A3B4",
-   "bt": "#94EBEE"
+   "bt": "#94EBEE",
+   "btnText": "bg"
   },
   {
    "uid": "p012",
@@ -125,7 +136,8 @@
    "src": "Huemint",
    "bg": "#37503F",
    "tx": "#FFFEFF",
-   "bt": "#00E84D"
+   "bt": "#00E84D",
+   "btnText": "bg"
   },
   {
    "uid": "p013",
@@ -134,7 +146,8 @@
    "src": "Huemint",
    "bg": "#1B3B36",
    "tx": "#FEF6E9",
-   "bt": "#A2A66A"
+   "bt": "#A2A66A",
+   "btnText": "bg"
   },
   {
    "uid": "p014",
@@ -143,7 +156,8 @@
    "src": "Huemint",
    "bg": "#EAF0E8",
    "tx": "#1A1E1F",
-   "bt": "#BA653C"
+   "bt": "#BA653C",
+   "btnText": "bg"
   },
   {
    "uid": "p015",
@@ -152,7 +166,8 @@
    "src": "Huemint",
    "bg": "#2E4633",
    "tx": "#FFC977",
-   "bt": "#34A9C8"
+   "bt": "#34A9C8",
+   "btnText": "bg"
   },
   {
    "uid": "p016",
@@ -161,7 +176,8 @@
    "src": "Huemint",
    "bg": "#15302B",
    "tx": "#FAB6B5",
-   "bt": "#54B155"
+   "bt": "#54B155",
+   "btnText": "bg"
   },
   {
    "uid": "p017",
@@ -170,7 +186,8 @@
    "src": "Huemint",
    "bg": "#F2F0E6",
    "tx": "#293233",
-   "bt": "#0484AA"
+   "bt": "#0484AA",
+   "btnText": "bg"
   },
   {
    "uid": "p018",
@@ -179,7 +196,8 @@
    "src": "Huemint",
    "bg": "#4A5D3A",
    "tx": "#FFFFBA",
-   "bt": "#F6CD3F"
+   "bt": "#F6CD3F",
+   "btnText": "bg"
   },
   {
    "uid": "p019",
@@ -188,7 +206,8 @@
    "src": "Huemint",
    "bg": "#F8F5F2",
    "tx": "#302117",
-   "bt": "#5F643D"
+   "bt": "#5F643D",
+   "btnText": "bg"
   },
   {
    "uid": "p020",
@@ -197,7 +216,8 @@
    "src": "Huemint",
    "bg": "#0F3D3E",
    "tx": "#A6C8DA",
-   "bt": "#F05E2C"
+   "bt": "#F05E2C",
+   "btnText": "bg"
   },
   {
    "uid": "p021",
@@ -206,7 +226,8 @@
    "src": "Huemint",
    "bg": "#E9EFE6",
    "tx": "#3F3739",
-   "bt": "#007817"
+   "bt": "#007817",
+   "btnText": "bg"
   },
   {
    "uid": "p022",
@@ -215,7 +236,8 @@
    "src": "Huemint",
    "bg": "#2E4633",
    "tx": "#ECEBE8",
-   "bt": "#87A655"
+   "bt": "#87A655",
+   "btnText": "bg"
   },
   {
    "uid": "p023",
@@ -224,7 +246,8 @@
    "src": "Huemint",
    "bg": "#E5E9DC",
    "tx": "#1B1E1E",
-   "bt": "#9D6E12"
+   "bt": "#9D6E12",
+   "btnText": "bg"
   },
   {
    "uid": "p024",
@@ -233,7 +256,8 @@
    "src": "Huemint",
    "bg": "#2C4A3A",
    "tx": "#D09EB3",
-   "bt": "#EACE53"
+   "bt": "#EACE53",
+   "btnText": "bg"
   },
   {
    "uid": "p025",
@@ -242,7 +266,8 @@
    "src": "Designah",
    "bg": "#FAFFFA",
    "tx": "#0D142B",
-   "bt": "#5C6B3D"
+   "bt": "#5C6B3D",
+   "btnText": "bg"
   },
   {
    "uid": "p026",
@@ -251,7 +276,8 @@
    "src": "Designah",
    "bg": "#5C6B3D",
    "tx": "#FAFFFA",
-   "bt": "#ABFA54"
+   "bt": "#ABFA54",
+   "btnText": "bg"
   },
   {
    "uid": "p027",
@@ -260,7 +286,8 @@
    "src": "Colours Cafe",
    "bg": "#125603",
    "tx": "#C3F380",
-   "bt": "#C3F380"
+   "bt": "#C3F380",
+   "btnText": "bg"
   },
   {
    "uid": "p028",
@@ -269,7 +296,8 @@
    "src": "Pine Tree",
    "bg": "#202808",
    "tx": "#DEC59E",
-   "bt": "#C4866D"
+   "bt": "#C4866D",
+   "btnText": "bg"
   },
   {
    "uid": "p029",
@@ -278,7 +306,8 @@
    "src": "Pine Tree",
    "bg": "#DEC59E",
    "tx": "#202808",
-   "bt": "#33432B"
+   "bt": "#33432B",
+   "btnText": "bg"
   },
   {
    "uid": "p030",
@@ -287,7 +316,8 @@
    "src": "daho_van",
    "bg": "#4B3535",
    "tx": "#F7E6D4",
-   "bt": "#E7C58A"
+   "bt": "#E7C58A",
+   "btnText": "bg"
   },
   {
    "uid": "p031",
@@ -296,7 +326,8 @@
    "src": "daho_van",
    "bg": "#4B3535",
    "tx": "#F7E6D4",
-   "bt": "#86B05D"
+   "bt": "#86B05D",
+   "btnText": "bg"
   },
   {
    "uid": "p032",
@@ -305,7 +336,8 @@
    "src": "Teal Blue",
    "bg": "#20432F",
    "tx": "#DBD3D1",
-   "bt": "#83C0B8"
+   "bt": "#83C0B8",
+   "btnText": "bg"
   },
   {
    "uid": "p033",
@@ -314,7 +346,8 @@
    "src": "Teal Blue",
    "bg": "#DBD3D1",
    "tx": "#20432F",
-   "bt": "#BC3C19"
+   "bt": "#BC3C19",
+   "btnText": "bg"
   },
   {
    "uid": "p034",
@@ -323,7 +356,8 @@
    "src": "Eucalyptus",
    "bg": "#F8E3D2",
    "tx": "#183425",
-   "bt": "#506C60"
+   "bt": "#506C60",
+   "btnText": "bg"
   },
   {
    "uid": "p035",
@@ -332,7 +366,8 @@
    "src": "Eucalyptus",
    "bg": "#183425",
    "tx": "#F8E3D2",
-   "bt": "#DDBFA7"
+   "bt": "#DDBFA7",
+   "btnText": "bg"
   },
   {
    "uid": "p036",
@@ -341,7 +376,8 @@
    "src": "Green Tea",
    "bg": "#568366",
    "tx": "#F3F6EB",
-   "bt": "#DBF68F"
+   "bt": "#DBF68F",
+   "btnText": "bg"
   },
   {
    "uid": "p037",
@@ -350,7 +386,8 @@
    "src": "Chewing Gum",
    "bg": "#FAF2E5",
    "tx": "#1F303D",
-   "bt": "#5F7A51"
+   "bt": "#5F7A51",
+   "btnText": "bg"
   },
   {
    "uid": "p038",
@@ -359,7 +396,8 @@
    "src": "HappyHues",
    "bg": "#FAEEE7",
    "tx": "#33272A",
-   "bt": "#FF8BA7"
+   "bt": "#FF8BA7",
+   "btnText": "bg"
   },
   {
    "uid": "p039",
@@ -368,7 +406,8 @@
    "src": "HappyHues",
    "bg": "#FEC7D7",
    "tx": "#0E172C",
-   "bt": "#0E172C"
+   "bt": "#0E172C",
+   "btnText": "bg"
   },
   {
    "uid": "p040",
@@ -377,7 +416,8 @@
    "src": "MyMind",
    "bg": "#DABAAF",
    "tx": "#0B0C11",
-   "bt": "#CF2F89"
+   "bt": "#CF2F89",
+   "btnText": "bg"
   },
   {
    "uid": "p041",
@@ -386,7 +426,8 @@
    "src": "Huemint",
    "bg": "#2E1520",
    "tx": "#FFFDFC",
-   "bt": "#ED3952"
+   "bt": "#ED3952",
+   "btnText": "bg"
   },
   {
    "uid": "p042",
@@ -395,7 +436,8 @@
    "src": "Huemint",
    "bg": "#F7E9E4",
    "tx": "#66040B",
-   "bt": "#6548F5"
+   "bt": "#6548F5",
+   "btnText": "bg"
   },
   {
    "uid": "p043",
@@ -404,7 +446,8 @@
    "src": "Huemint",
    "bg": "#FAE9F0",
    "tx": "#333132",
-   "bt": "#E23C30"
+   "bt": "#E23C30",
+   "btnText": "bg"
   },
   {
    "uid": "p044",
@@ -413,7 +456,8 @@
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#DEB386",
-   "bt": "#9F8DC4"
+   "bt": "#9F8DC4",
+   "btnText": "bg"
   },
   {
    "uid": "p045",
@@ -422,7 +466,8 @@
    "src": "Huemint",
    "bg": "#FAEEE7",
    "tx": "#571E5B",
-   "bt": "#B85C7D"
+   "bt": "#B85C7D",
+   "btnText": "bg"
   },
   {
    "uid": "p046",
@@ -431,7 +476,8 @@
    "src": "Huemint",
    "bg": "#FDF2F5",
    "tx": "#3B3A39",
-   "bt": "#AC57C7"
+   "bt": "#AC57C7",
+   "btnText": "bg"
   },
   {
    "uid": "p047",
@@ -440,7 +486,8 @@
    "src": "Huemint",
    "bg": "#611F3A",
    "tx": "#68B577",
-   "bt": "#D7B7DA"
+   "bt": "#D7B7DA",
+   "btnText": "bg"
   },
   {
    "uid": "p048",
@@ -449,7 +496,8 @@
    "src": "Huemint",
    "bg": "#5C2A3D",
    "tx": "#F2F0E3",
-   "bt": "#E19B7D"
+   "bt": "#E19B7D",
+   "btnText": "bg"
   },
   {
    "uid": "p049",
@@ -458,7 +506,8 @@
    "src": "Huemint",
    "bg": "#EFD9DE",
    "tx": "#4A2A48",
-   "bt": "#B12D75"
+   "bt": "#B12D75",
+   "btnText": "bg"
   },
   {
    "uid": "p050",
@@ -467,7 +516,8 @@
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#F0F3DB",
-   "bt": "#E03FAB"
+   "bt": "#E03FAB",
+   "btnText": "bg"
   },
   {
    "uid": "p051",
@@ -476,7 +526,8 @@
    "src": "Huemint",
    "bg": "#FDF4F0",
    "tx": "#312C30",
-   "bt": "#C55C33"
+   "bt": "#C55C33",
+   "btnText": "bg"
   },
   {
    "uid": "p052",
@@ -485,7 +536,8 @@
    "src": "Huemint",
    "bg": "#54263C",
    "tx": "#EBFAFC",
-   "bt": "#D597AA"
+   "bt": "#D597AA",
+   "btnText": "bg"
   },
   {
    "uid": "p053",
@@ -494,7 +546,8 @@
    "src": "Huemint",
    "bg": "#FCEAE6",
    "tx": "#541312",
-   "bt": "#9F2FB3"
+   "bt": "#9F2FB3",
+   "btnText": "bg"
   },
   {
    "uid": "p054",
@@ -503,7 +556,8 @@
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#FAF7E1",
-   "bt": "#F46843"
+   "bt": "#F46843",
+   "btnText": "bg"
   },
   {
    "uid": "p055",
@@ -512,7 +566,8 @@
    "src": "Huemint",
    "bg": "#FDF2F5",
    "tx": "#2D2C34",
-   "bt": "#EF3363"
+   "bt": "#EF3363",
+   "btnText": "bg"
   },
   {
    "uid": "p056",
@@ -521,7 +576,8 @@
    "src": "Huemint",
    "bg": "#F5E6E8",
    "tx": "#442F39",
-   "bt": "#DF3B19"
+   "bt": "#DF3B19",
+   "btnText": "bg"
   },
   {
    "uid": "p057",
@@ -530,7 +586,8 @@
    "src": "Huemint",
    "bg": "#42202E",
    "tx": "#D9CDB0",
-   "bt": "#B28CBA"
+   "bt": "#B28CBA",
+   "btnText": "bg"
   },
   {
    "uid": "p058",
@@ -539,7 +596,8 @@
    "src": "Huemint",
    "bg": "#FCEAE6",
    "tx": "#120F11",
-   "bt": "#DB282A"
+   "bt": "#DB282A",
+   "btnText": "bg"
   },
   {
    "uid": "p059",
@@ -548,7 +606,8 @@
    "src": "Huemint",
    "bg": "#4A2233",
    "tx": "#FFF7F7",
-   "bt": "#FF2E31"
+   "bt": "#FF2E31",
+   "btnText": "bg"
   },
   {
    "uid": "p060",
@@ -557,7 +616,8 @@
    "src": "Huemint",
    "bg": "#2E1520",
    "tx": "#EFEEF0",
-   "bt": "#E269D3"
+   "bt": "#E269D3",
+   "btnText": "bg"
   },
   {
    "uid": "p061",
@@ -566,7 +626,8 @@
    "src": "Colours Cafe",
    "bg": "#630700",
    "tx": "#FF97D0",
-   "bt": "#FF97D0"
+   "bt": "#FF97D0",
+   "btnText": "bg"
   },
   {
    "uid": "p062",
@@ -575,7 +636,8 @@
    "src": "daho_van",
    "bg": "#242021",
    "tx": "#CCBEB3",
-   "bt": "#F896A3"
+   "bt": "#F896A3",
+   "btnText": "bg"
   },
   {
    "uid": "p063",
@@ -584,7 +646,8 @@
    "src": "Chewing Gum",
    "bg": "#E3B2AF",
    "tx": "#1F303D",
-   "bt": "#5D262F"
+   "bt": "#5D262F",
+   "btnText": "bg"
   },
   {
    "uid": "p064",
@@ -593,7 +656,8 @@
    "src": "Chewing Gum",
    "bg": "#5D262F",
    "tx": "#FAF2E5",
-   "bt": "#E3B2AF"
+   "bt": "#E3B2AF",
+   "btnText": "bg"
   },
   {
    "uid": "p065",
@@ -602,7 +666,8 @@
    "src": "Misty Rose",
    "bg": "#EED4D1",
    "tx": "#432033",
-   "bt": "#323C31"
+   "bt": "#323C31",
+   "btnText": "bg"
   },
   {
    "uid": "p066",
@@ -611,7 +676,8 @@
    "src": "Burgundy",
    "bg": "#6C0820",
    "tx": "#F2DCDB",
-   "bt": "#F2AEBC"
+   "bt": "#F2AEBC",
+   "btnText": "bg"
   },
   {
    "uid": "p067",
@@ -620,7 +686,8 @@
    "src": "Burgundy",
    "bg": "#F2AEBC",
    "tx": "#6C0820",
-   "bt": "#3D5D91"
+   "bt": "#3D5D91",
+   "btnText": "bg"
   },
   {
    "uid": "p068",
@@ -629,7 +696,8 @@
    "src": "Burgundy",
    "bg": "#F2DCDB",
    "tx": "#6C0820",
-   "bt": "#3D5D91"
+   "bt": "#3D5D91",
+   "btnText": "bg"
   },
   {
    "uid": "p069",
@@ -638,7 +706,8 @@
    "src": "MyMind",
    "bg": "#371722",
    "tx": "#FFFFFF",
-   "bt": "#BBAB9B"
+   "bt": "#BBAB9B",
+   "btnText": "bg"
   },
   {
    "uid": "p070",
@@ -647,7 +716,8 @@
    "src": "MyMind",
    "bg": "#F8EBEE",
    "tx": "#0C3934",
-   "bt": "#0C3934"
+   "bt": "#0C3934",
+   "btnText": "bg"
   },
   {
    "uid": "p071",
@@ -656,7 +726,8 @@
    "src": "HappyHues",
    "bg": "#004643",
    "tx": "#FFFFFE",
-   "bt": "#F9BC60"
+   "bt": "#F9BC60",
+   "btnText": "bg"
   },
   {
    "uid": "p072",
@@ -665,7 +736,8 @@
    "src": "HappyHues",
    "bg": "#55423D",
    "tx": "#FFFFFE",
-   "bt": "#FFC0AD"
+   "bt": "#FFC0AD",
+   "btnText": "bg"
   },
   {
    "uid": "p073",
@@ -674,7 +746,8 @@
    "src": "MyMind",
    "bg": "#E88565",
    "tx": "#181A27",
-   "bt": "#181A27"
+   "bt": "#181A27",
+   "btnText": "bg"
   },
   {
    "uid": "p074",
@@ -683,7 +756,8 @@
    "src": "MyMind",
    "bg": "#0C485E",
    "tx": "#FEB904",
-   "bt": "#FEB904"
+   "bt": "#FEB904",
+   "btnText": "bg"
   },
   {
    "uid": "p075",
@@ -692,7 +766,8 @@
    "src": "MyMind",
    "bg": "#501718",
    "tx": "#FD750A",
-   "bt": "#FFFFFF"
+   "bt": "#FFFFFF",
+   "btnText": "bg"
   },
   {
    "uid": "p076",
@@ -701,7 +776,8 @@
    "src": "MyMind",
    "bg": "#9357A9",
    "tx": "#FFFFFF",
-   "bt": "#000000"
+   "bt": "#000000",
+   "btnText": "bg"
   },
   {
    "uid": "p077",
@@ -710,7 +786,8 @@
    "src": "MyMind",
    "bg": "#12162D",
    "tx": "#8B743D",
-   "bt": "#8B743D"
+   "bt": "#8B743D",
+   "btnText": "bg"
   },
   {
    "uid": "p078",
@@ -719,7 +796,8 @@
    "src": "MyMind",
    "bg": "#3B755F",
    "tx": "#000000",
-   "bt": "#F2CB6C"
+   "bt": "#F2CB6C",
+   "btnText": "bg"
   },
   {
    "uid": "p079",
@@ -728,7 +806,8 @@
    "src": "Huemint",
    "bg": "#1C1C22",
    "tx": "#FFFEFF",
-   "bt": "#C6CFEF"
+   "bt": "#C6CFEF",
+   "btnText": "bg"
   },
   {
    "uid": "p080",
@@ -737,7 +816,8 @@
    "src": "Huemint",
    "bg": "#2D2416",
    "tx": "#F0D7BD",
-   "bt": "#B49E58"
+   "bt": "#B49E58",
+   "btnText": "bg"
   },
   {
    "uid": "p081",
@@ -746,7 +826,8 @@
    "src": "Huemint",
    "bg": "#0E1F1C",
    "tx": "#E99E41",
-   "bt": "#799A64"
+   "bt": "#799A64",
+   "btnText": "bg"
   },
   {
    "uid": "p082",
@@ -755,7 +836,8 @@
    "src": "Huemint",
    "bg": "#1E1B2E",
    "tx": "#FFB649",
-   "bt": "#E9E6E4"
+   "bt": "#E9E6E4",
+   "btnText": "bg"
   },
   {
    "uid": "p083",
@@ -764,7 +846,8 @@
    "src": "Huemint",
    "bg": "#301C28",
    "tx": "#F7F5F4",
-   "bt": "#829783"
+   "bt": "#829783",
+   "btnText": "bg"
   },
   {
    "uid": "p084",
@@ -773,7 +856,8 @@
    "src": "Huemint",
    "bg": "#004643",
    "tx": "#F9FBC0",
-   "bt": "#E09CBB"
+   "bt": "#E09CBB",
+   "btnText": "bg"
   },
   {
    "uid": "p085",
@@ -782,7 +866,8 @@
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#E0D7C7",
-   "bt": "#588C92"
+   "bt": "#588C92",
+   "btnText": "bg"
   },
   {
    "uid": "p086",
@@ -791,7 +876,8 @@
    "src": "Huemint",
    "bg": "#331A22",
    "tx": "#C1C9C6",
-   "bt": "#AD7A71"
+   "bt": "#AD7A71",
+   "btnText": "bg"
   },
   {
    "uid": "p087",
@@ -800,7 +886,8 @@
    "src": "Huemint",
    "bg": "#0F2027",
    "tx": "#D3C339",
-   "bt": "#78AC9A"
+   "bt": "#78AC9A",
+   "btnText": "bg"
   },
   {
    "uid": "p088",
@@ -809,7 +896,8 @@
    "src": "Huemint",
    "bg": "#1A1423",
    "tx": "#F8BCC1",
-   "bt": "#BD9BC0"
+   "bt": "#BD9BC0",
+   "btnText": "bg"
   },
   {
    "uid": "p089",
@@ -818,7 +906,8 @@
    "src": "Huemint",
    "bg": "#22301F",
    "tx": "#EFF5C3",
-   "bt": "#D19439"
+   "bt": "#D19439",
+   "btnText": "bg"
   },
   {
    "uid": "p090",
@@ -827,7 +916,8 @@
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#FFCB24",
-   "bt": "#B37397"
+   "bt": "#B37397",
+   "btnText": "bg"
   },
   {
    "uid": "p091",
@@ -836,7 +926,8 @@
    "src": "Huemint",
    "bg": "#1C1C22",
    "tx": "#E0EEDD",
-   "bt": "#73B283"
+   "bt": "#73B283",
+   "btnText": "bg"
   },
   {
    "uid": "p092",
@@ -845,7 +936,8 @@
    "src": "Huemint",
    "bg": "#1F2D2A",
    "tx": "#FFECAC",
-   "bt": "#CB6E00"
+   "bt": "#CB6E00",
+   "btnText": "bg"
   },
   {
    "uid": "p093",
@@ -854,7 +946,8 @@
    "src": "Huemint",
    "bg": "#101820",
    "tx": "#E9CCCC",
-   "bt": "#BB7634"
+   "bt": "#BB7634",
+   "btnText": "bg"
   },
   {
    "uid": "p094",
@@ -863,7 +956,8 @@
    "src": "Huemint",
    "bg": "#12162D",
    "tx": "#FFAF02",
-   "bt": "#9E8FAF"
+   "bt": "#9E8FAF",
+   "btnText": "bg"
   },
   {
    "uid": "p095",
@@ -872,7 +966,8 @@
    "src": "Huemint",
    "bg": "#2D2416",
    "tx": "#E1D2A3",
-   "bt": "#75C1A7"
+   "bt": "#75C1A7",
+   "btnText": "bg"
   },
   {
    "uid": "p096",
@@ -881,7 +976,8 @@
    "src": "Huemint",
    "bg": "#2A1F2E",
    "tx": "#E6A96F",
-   "bt": "#D47327"
+   "bt": "#D47327",
+   "btnText": "bg"
   },
   {
    "uid": "p097",
@@ -890,7 +986,8 @@
    "src": "Huemint",
    "bg": "#004643",
    "tx": "#F7F7FD",
-   "bt": "#C2A089"
+   "bt": "#C2A089",
+   "btnText": "bg"
   },
   {
    "uid": "p098",
@@ -899,7 +996,8 @@
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#C5C3B2",
-   "bt": "#D77712"
+   "bt": "#D77712",
+   "btnText": "bg"
   },
   {
    "uid": "p099",
@@ -908,7 +1006,8 @@
    "src": "Iceberg",
    "bg": "#1E424D",
    "tx": "#E5D595",
-   "bt": "#E19E11"
+   "bt": "#E19E11",
+   "btnText": "bg"
   },
   {
    "uid": "p100",
@@ -917,7 +1016,8 @@
    "src": "Iceberg",
    "bg": "#663E1F",
    "tx": "#E5D595",
-   "bt": "#E19E11"
+   "bt": "#E19E11",
+   "btnText": "bg"
   },
   {
    "uid": "p101",
@@ -926,7 +1026,8 @@
    "src": "Sapphire",
    "bg": "#112250",
    "tx": "#F5F0E9",
-   "bt": "#E0C58F"
+   "bt": "#E0C58F",
+   "btnText": "bg"
   },
   {
    "uid": "p102",
@@ -935,7 +1036,8 @@
    "src": "Sapphire",
    "bg": "#3C507D",
    "tx": "#F5F0E9",
-   "bt": "#E0C58F"
+   "bt": "#E0C58F",
+   "btnText": "bg"
   },
   {
    "uid": "p103",
@@ -944,7 +1046,8 @@
    "src": "Sapphire",
    "bg": "#E0C58F",
    "tx": "#112250",
-   "bt": "#3C507D"
+   "bt": "#3C507D",
+   "btnText": "bg"
   },
   {
    "uid": "p104",
@@ -953,7 +1056,8 @@
    "src": "Sapphire",
    "bg": "#F5F0E9",
    "tx": "#112250",
-   "bt": "#3C507D"
+   "bt": "#3C507D",
+   "btnText": "bg"
   },
   {
    "uid": "p105",
@@ -962,7 +1066,8 @@
    "src": "Chewing Gum",
    "bg": "#5D262F",
    "tx": "#FAF2E5",
-   "bt": "#C0893B"
+   "bt": "#C0893B",
+   "btnText": "bg"
   },
   {
    "uid": "p106",
@@ -971,7 +1076,8 @@
    "src": "Chewing Gum",
    "bg": "#1F303D",
    "tx": "#FAF2E5",
-   "bt": "#C0893B"
+   "bt": "#C0893B",
+   "btnText": "bg"
   },
   {
    "uid": "p107",
@@ -980,7 +1086,8 @@
    "src": "MyMind",
    "bg": "#F2F2F2",
    "tx": "#000000",
-   "bt": "#0B64FE"
+   "bt": "#0B64FE",
+   "btnText": "bg"
   },
   {
    "uid": "p108",
@@ -989,7 +1096,8 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#181818",
-   "bt": "#4FC4CF"
+   "bt": "#4FC4CF",
+   "btnText": "bg"
   },
   {
    "uid": "p109",
@@ -998,7 +1106,8 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#00214D",
-   "bt": "#00EBC7"
+   "bt": "#00EBC7",
+   "btnText": "bg"
   },
   {
    "uid": "p110",
@@ -1007,7 +1116,8 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#2B2C34",
-   "bt": "#6246EA"
+   "bt": "#6246EA",
+   "btnText": "bg"
   },
   {
    "uid": "p111",
@@ -1016,7 +1126,8 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#094067",
-   "bt": "#3DA9FC"
+   "bt": "#3DA9FC",
+   "btnText": "bg"
   },
   {
    "uid": "p112",
@@ -1025,7 +1136,8 @@
    "src": "MyMind",
    "bg": "#0E38B1",
    "tx": "#FFFFFF",
-   "bt": "#FFFFFF"
+   "bt": "#FFFFFF",
+   "btnText": "bg"
   },
   {
    "uid": "p113",
@@ -1034,7 +1146,8 @@
    "src": "MyMind",
    "bg": "#055A5B",
    "tx": "#E6E6E6",
-   "bt": "#E6E6E6"
+   "bt": "#E6E6E6",
+   "btnText": "bg"
   },
   {
    "uid": "p114",
@@ -1043,7 +1156,8 @@
    "src": "MyMind",
    "bg": "#8AA9C6",
    "tx": "#093929",
-   "bt": "#093929"
+   "bt": "#093929",
+   "btnText": "bg"
   },
   {
    "uid": "p115",
@@ -1052,7 +1166,8 @@
    "src": "MyMind",
    "bg": "#167C80",
    "tx": "#FFFFFF",
-   "bt": "#FFFFFF"
+   "bt": "#FFFFFF",
+   "btnText": "bg"
   },
   {
    "uid": "p116",
@@ -1061,7 +1176,8 @@
    "src": "MyMind",
    "bg": "#0D4CBE",
    "tx": "#CFCEC7",
-   "bt": "#CFCEC7"
+   "bt": "#CFCEC7",
+   "btnText": "bg"
   },
   {
    "uid": "p117",
@@ -1070,7 +1186,8 @@
    "src": "MyMind",
    "bg": "#283470",
    "tx": "#15A29C",
-   "bt": "#15A29C"
+   "bt": "#15A29C",
+   "btnText": "bg"
   },
   {
    "uid": "p118",
@@ -1079,7 +1196,8 @@
    "src": "Huemint",
    "bg": "#0A1F44",
    "tx": "#FFFDF9",
-   "bt": "#00C9FF"
+   "bt": "#00C9FF",
+   "btnText": "bg"
   },
   {
    "uid": "p119",
@@ -1088,7 +1206,8 @@
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#342D2F",
-   "bt": "#904FEB"
+   "bt": "#904FEB",
+   "btnText": "bg"
   },
   {
    "uid": "p120",
@@ -1097,7 +1216,8 @@
    "src": "Huemint",
    "bg": "#F6F8FA",
    "tx": "#222832",
-   "bt": "#694DFC"
+   "bt": "#694DFC",
+   "btnText": "bg"
   },
   {
    "uid": "p121",
@@ -1106,7 +1226,8 @@
    "src": "Huemint",
    "bg": "#13293D",
    "tx": "#FFF2D9",
-   "bt": "#9E8BC2"
+   "bt": "#9E8BC2",
+   "btnText": "bg"
   },
   {
    "uid": "p122",
@@ -1115,7 +1236,8 @@
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#093662",
-   "bt": "#007A9D"
+   "bt": "#007A9D",
+   "btnText": "bg"
   },
   {
    "uid": "p123",
@@ -1124,7 +1246,8 @@
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#393B6C",
-   "bt": "#3B8A8C"
+   "bt": "#3B8A8C",
+   "btnText": "bg"
   },
   {
    "uid": "p124",
@@ -1133,7 +1256,8 @@
    "src": "Huemint",
    "bg": "#EDF1F5",
    "tx": "#22374A",
-   "bt": "#52779E"
+   "bt": "#52779E",
+   "btnText": "bg"
   },
   {
    "uid": "p125",
@@ -1142,7 +1266,8 @@
    "src": "Huemint",
    "bg": "#10243E",
    "tx": "#F5C8B9",
-   "bt": "#6C88FA"
+   "bt": "#6C88FA",
+   "btnText": "bg"
   },
   {
    "uid": "p126",
@@ -1151,7 +1276,8 @@
    "src": "Huemint",
    "bg": "#FAFAFA",
    "tx": "#262627",
-   "bt": "#4C78FB"
+   "bt": "#4C78FB",
+   "btnText": "bg"
   },
   {
    "uid": "p127",
@@ -1160,7 +1286,8 @@
    "src": "Huemint",
    "bg": "#13293D",
    "tx": "#FCE3DA",
-   "bt": "#22BBB8"
+   "bt": "#22BBB8",
+   "btnText": "bg"
   },
   {
    "uid": "p128",
@@ -1169,7 +1296,8 @@
    "src": "Huemint",
    "bg": "#16324F",
    "tx": "#F7F5F6",
-   "bt": "#47B3FE"
+   "bt": "#47B3FE",
+   "btnText": "bg"
   },
   {
    "uid": "p129",
@@ -1178,7 +1306,8 @@
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#2C2543",
-   "bt": "#3368CF"
+   "bt": "#3368CF",
+   "btnText": "bg"
   },
   {
    "uid": "p130",
@@ -1187,7 +1316,8 @@
    "src": "Huemint",
    "bg": "#0D2B40",
    "tx": "#AEDBDA",
-   "bt": "#4AA1CB"
+   "bt": "#4AA1CB",
+   "btnText": "bg"
   },
   {
    "uid": "p131",
@@ -1196,7 +1326,8 @@
    "src": "Huemint",
    "bg": "#FBFCFD",
    "tx": "#182587",
-   "bt": "#2D48B3"
+   "bt": "#2D48B3",
+   "btnText": "bg"
   },
   {
    "uid": "p132",
@@ -1205,7 +1336,8 @@
    "src": "Huemint",
    "bg": "#123152",
    "tx": "#FBF8FB",
-   "bt": "#00C8DB"
+   "bt": "#00C8DB",
+   "btnText": "bg"
   },
   {
    "uid": "p133",
@@ -1214,7 +1346,8 @@
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#05326B",
-   "bt": "#276FA6"
+   "bt": "#276FA6",
+   "btnText": "bg"
   },
   {
    "uid": "p134",
@@ -1223,7 +1356,8 @@
    "src": "Huemint",
    "bg": "#10243E",
    "tx": "#E7E6EA",
-   "bt": "#2F86D1"
+   "bt": "#2F86D1",
+   "btnText": "bg"
   },
   {
    "uid": "p135",
@@ -1232,7 +1366,8 @@
    "src": "Huemint",
    "bg": "#F8FAFC",
    "tx": "#1D334A",
-   "bt": "#157C75"
+   "bt": "#157C75",
+   "btnText": "bg"
   },
   {
    "uid": "p136",
@@ -1241,7 +1376,8 @@
    "src": "Huemint",
    "bg": "#EEF2F6",
    "tx": "#7B64D6",
-   "bt": "#7328DE"
+   "bt": "#7328DE",
+   "btnText": "bg"
   },
   {
    "uid": "p137",
@@ -1250,7 +1386,8 @@
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#292524",
-   "bt": "#287497"
+   "bt": "#287497",
+   "btnText": "bg"
   },
   {
    "uid": "p138",
@@ -1259,7 +1396,8 @@
    "src": "Designah",
    "bg": "#FAFFFA",
    "tx": "#0D142B",
-   "bt": "#0044FF"
+   "bt": "#0044FF",
+   "btnText": "bg"
   },
   {
    "uid": "p139",
@@ -1268,7 +1406,8 @@
    "src": "Neon Brand",
    "bg": "#13131A",
    "tx": "#FBFBFB",
-   "bt": "#1AAEFC"
+   "bt": "#1AAEFC",
+   "btnText": "bg"
   },
   {
    "uid": "p140",
@@ -1277,7 +1416,8 @@
    "src": "Colours Cafe",
    "bg": "#0D5072",
    "tx": "#7FEEFF",
-   "bt": "#7FEEFF"
+   "bt": "#7FEEFF",
+   "btnText": "bg"
   },
   {
    "uid": "p141",
@@ -1286,7 +1426,8 @@
    "src": "Columbia",
    "bg": "#0B1957",
    "tx": "#D2E0ED",
-   "bt": "#5884E7"
+   "bt": "#5884E7",
+   "btnText": "bg"
   },
   {
    "uid": "p142",
@@ -1295,7 +1436,8 @@
    "src": "HappyHues",
    "bg": "#16161A",
    "tx": "#FFFFFE",
-   "bt": "#7F5AF0"
+   "bt": "#7F5AF0",
+   "btnText": "bg"
   },
   {
    "uid": "p143",
@@ -1304,7 +1446,8 @@
    "src": "HappyHues",
    "bg": "#EFF0F3",
    "tx": "#0D0D0D",
-   "bt": "#FF8E3C"
+   "bt": "#FF8E3C",
+   "btnText": "bg"
   },
   {
    "uid": "p144",
@@ -1313,7 +1456,8 @@
    "src": "MyMind",
    "bg": "#B3E0E0",
    "tx": "#000000",
-   "bt": "#FFFFFF"
+   "bt": "#FFFFFF",
+   "btnText": "tx"
   },
   {
    "uid": "p145",
@@ -1322,7 +1466,8 @@
    "src": "MyMind",
    "bg": "#EDB5BD",
    "tx": "#000000",
-   "bt": "#BEDFD4"
+   "bt": "#BEDFD4",
+   "btnText": "bg"
   },
   {
    "uid": "p146",
@@ -1331,7 +1476,8 @@
    "src": "MyMind",
    "bg": "#77EEDF",
    "tx": "#28292B",
-   "bt": "#28292B"
+   "bt": "#28292B",
+   "btnText": "bg"
   },
   {
    "uid": "p147",
@@ -1340,7 +1486,8 @@
    "src": "MyMind",
    "bg": "#EED974",
    "tx": "#28292B",
-   "bt": "#28292B"
+   "bt": "#28292B",
+   "btnText": "bg"
   },
   {
    "uid": "p148",
@@ -1349,7 +1496,8 @@
    "src": "MyMind",
    "bg": "#3B465C",
    "tx": "#E9E8D4",
-   "bt": "#E9E8D4"
+   "bt": "#E9E8D4",
+   "btnText": "bg"
   },
   {
    "uid": "p149",
@@ -1358,7 +1506,8 @@
    "src": "MyMind",
    "bg": "#000000",
    "tx": "#FF0000",
-   "bt": "#FF0000"
+   "bt": "#FF0000",
+   "btnText": "bg"
   },
   {
    "uid": "p150",
@@ -1367,7 +1516,8 @@
    "src": "MyMind",
    "bg": "#343B3F",
    "tx": "#FF89B5",
-   "bt": "#D1BDFF"
+   "bt": "#D1BDFF",
+   "btnText": "bg"
   },
   {
    "uid": "p151",
@@ -1376,7 +1526,8 @@
    "src": "MyMind",
    "bg": "#E57066",
    "tx": "#28292B",
-   "bt": "#28292B"
+   "bt": "#28292B",
+   "btnText": "bg"
   },
   {
    "uid": "p152",
@@ -1385,7 +1536,8 @@
    "src": "MyMind",
    "bg": "#B1FDEB",
    "tx": "#6B7C95",
-   "bt": "#000000"
+   "bt": "#000000",
+   "btnText": "bg"
   },
   {
    "uid": "p153",
@@ -1394,7 +1546,8 @@
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#040909",
-   "bt": "#C3242F"
+   "bt": "#C3242F",
+   "btnText": "bg"
   },
   {
    "uid": "p154",
@@ -1403,7 +1556,8 @@
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#7B71B8",
-   "bt": "#14AD9F"
+   "bt": "#14AD9F",
+   "btnText": "bg"
   },
   {
    "uid": "p155",
@@ -1412,7 +1566,8 @@
    "src": "Huemint",
    "bg": "#000000",
    "tx": "#3AC4B7",
-   "bt": "#9364A3"
+   "bt": "#9364A3",
+   "btnText": "bg"
   },
   {
    "uid": "p156",
@@ -1421,7 +1576,8 @@
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#143451",
-   "bt": "#678316"
+   "bt": "#678316",
+   "btnText": "bg"
   },
   {
    "uid": "p157",
@@ -1430,7 +1586,8 @@
    "src": "Huemint",
    "bg": "#2E2E2E",
    "tx": "#F2F8FC",
-   "bt": "#39AC18"
+   "bt": "#39AC18",
+   "btnText": "bg"
   },
   {
    "uid": "p158",
@@ -1439,7 +1596,8 @@
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#F9FBF4",
-   "bt": "#DE5765"
+   "bt": "#DE5765",
+   "btnText": "bg"
   },
   {
    "uid": "p159",
@@ -1448,7 +1606,8 @@
    "src": "Huemint",
    "bg": "#E8E8E8",
    "tx": "#4F343D",
-   "bt": "#1B7262"
+   "bt": "#1B7262",
+   "btnText": "bg"
   },
   {
    "uid": "p160",
@@ -1457,7 +1616,8 @@
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#262059",
-   "bt": "#225FFC"
+   "bt": "#225FFC",
+   "btnText": "bg"
   },
   {
    "uid": "p161",
@@ -1466,7 +1626,8 @@
    "src": "Huemint",
    "bg": "#DCDCDC",
    "tx": "#22202C",
-   "bt": "#643492"
+   "bt": "#643492",
+   "btnText": "bg"
   },
   {
    "uid": "p162",
@@ -1475,7 +1636,8 @@
    "src": "Huemint",
    "bg": "#232323",
    "tx": "#DED9D0",
-   "bt": "#E13E29"
+   "bt": "#E13E29",
+   "btnText": "bg"
   },
   {
    "uid": "p163",
@@ -1484,7 +1646,8 @@
    "src": "Huemint",
    "bg": "#1A1A1A",
    "tx": "#CBC7C9",
-   "bt": "#328CB2"
+   "bt": "#328CB2",
+   "btnText": "bg"
   },
   {
    "uid": "p164",
@@ -1493,7 +1656,8 @@
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#002539",
-   "bt": "#BA4071"
+   "bt": "#BA4071",
+   "btnText": "bg"
   },
   {
    "uid": "p165",
@@ -1502,7 +1666,8 @@
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#37E2FB",
-   "bt": "#955EE0"
+   "bt": "#955EE0",
+   "btnText": "bg"
   },
   {
    "uid": "p166",
@@ -1511,7 +1676,8 @@
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#DEF2C5",
-   "bt": "#67A346"
+   "bt": "#67A346",
+   "btnText": "bg"
   },
   {
    "uid": "p167",
@@ -1520,7 +1686,8 @@
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#002F50",
-   "bt": "#536332"
+   "bt": "#536332",
+   "btnText": "bg"
   },
   {
    "uid": "p168",
@@ -1529,7 +1696,8 @@
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#F83646",
-   "bt": "#415B98"
+   "bt": "#415B98",
+   "btnText": "bg"
   },
   {
    "uid": "p169",
@@ -1538,7 +1706,8 @@
    "src": "Huemint",
    "bg": "#000000",
    "tx": "#F3A99C",
-   "bt": "#60A584"
+   "bt": "#60A584",
+   "btnText": "bg"
   },
   {
    "uid": "p170",
@@ -1547,7 +1716,8 @@
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#CAD3DB",
-   "bt": "#BF9E41"
+   "bt": "#BF9E41",
+   "btnText": "bg"
   },
   {
    "uid": "p171",
@@ -1556,7 +1726,8 @@
    "src": "Huemint",
    "bg": "#111111",
    "tx": "#DCE159",
-   "bt": "#817919"
+   "bt": "#817919",
+   "btnText": "bg"
   },
   {
    "uid": "p172",
@@ -1565,7 +1736,8 @@
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#D8942D",
-   "bt": "#97B9F9"
+   "bt": "#97B9F9",
+   "btnText": "bg"
   },
   {
    "uid": "p173",
@@ -1574,7 +1746,8 @@
    "src": "Neon Brand",
    "bg": "#13131A",
    "tx": "#FBFBFB",
-   "bt": "#B2FF00"
+   "bt": "#B2FF00",
+   "btnText": "bg"
   },
   {
    "uid": "p174",
@@ -1583,7 +1756,8 @@
    "src": "Neon Brand",
    "bg": "#FBFBFB",
    "tx": "#13131A",
-   "bt": "#8455EA"
+   "bt": "#8455EA",
+   "btnText": "bg"
   },
   {
    "uid": "p175",
@@ -1592,7 +1766,8 @@
    "src": "daho_van",
    "bg": "#242021",
    "tx": "#CCBEB3",
-   "bt": "#9C9E4A"
+   "bt": "#9C9E4A",
+   "btnText": "bg"
   },
   {
    "uid": "p176",
@@ -1601,7 +1776,8 @@
    "src": "HappyHues",
    "bg": "#0F0E17",
    "tx": "#FFFFFE",
-   "bt": "#FF8906"
+   "bt": "#FF8906",
+   "btnText": "bg"
   },
   {
    "uid": "p177",
@@ -1610,7 +1786,8 @@
    "src": "MyMind",
    "bg": "#022EAC",
    "tx": "#13E19B",
-   "bt": "#FBA30C"
+   "bt": "#FBA30C",
+   "btnText": "bg"
   },
   {
    "uid": "p178",
@@ -1619,7 +1796,8 @@
    "src": "MyMind",
    "bg": "#053161",
    "tx": "#FF6A34",
-   "bt": "#BED9DA"
+   "bt": "#BED9DA",
+   "btnText": "bg"
   },
   {
    "uid": "p179",
@@ -1628,7 +1806,8 @@
    "src": "MyMind",
    "bg": "#FDF06F",
    "tx": "#D31B33",
-   "bt": "#D31B33"
+   "bt": "#D31B33",
+   "btnText": "bg"
   },
   {
    "uid": "p180",
@@ -1637,7 +1816,8 @@
    "src": "MyMind",
    "bg": "#FB9B2A",
    "tx": "#0C00FF",
-   "bt": "#0C00FF"
+   "bt": "#0C00FF",
+   "btnText": "bg"
   },
   {
    "uid": "p181",
@@ -1646,7 +1826,8 @@
    "src": "MyMind",
    "bg": "#E54B4B",
    "tx": "#FFFFFF",
-   "bt": "#FFFFFF"
+   "bt": "#FFFFFF",
+   "btnText": "bg"
   },
   {
    "uid": "p182",
@@ -1655,7 +1836,8 @@
    "src": "MyMind",
    "bg": "#1B1D1C",
    "tx": "#EA1821",
-   "bt": "#EA1821"
+   "bt": "#EA1821",
+   "btnText": "bg"
   },
   {
    "uid": "p183",
@@ -1664,7 +1846,8 @@
    "src": "MyMind",
    "bg": "#FF6090",
    "tx": "#81072C",
-   "bt": "#FEEA0D"
+   "bt": "#FEEA0D",
+   "btnText": "tx"
   },
   {
    "uid": "p184",
@@ -1673,7 +1856,8 @@
    "src": "Huemint",
    "bg": "#FBFBFB",
    "tx": "#000501",
-   "bt": "#D20F2B"
+   "bt": "#D20F2B",
+   "btnText": "bg"
   },
   {
    "uid": "p185",
@@ -1682,7 +1866,8 @@
    "src": "Huemint",
    "bg": "#101C18",
    "tx": "#FAD0D0",
-   "bt": "#00C3C5"
+   "bt": "#00C3C5",
+   "btnText": "bg"
   },
   {
    "uid": "p186",
@@ -1691,7 +1876,8 @@
    "src": "Huemint",
    "bg": "#181022",
    "tx": "#80CFD1",
-   "bt": "#E66B41"
+   "bt": "#E66B41",
+   "btnText": "bg"
   },
   {
    "uid": "p187",
@@ -1700,7 +1886,8 @@
    "src": "Huemint",
    "bg": "#141414",
    "tx": "#E4DDD4",
-   "bt": "#4672FB"
+   "bt": "#4672FB",
+   "btnText": "bg"
   },
   {
    "uid": "p188",
@@ -1709,7 +1896,8 @@
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#172138",
-   "bt": "#2F7DCC"
+   "bt": "#2F7DCC",
+   "btnText": "bg"
   },
   {
    "uid": "p189",
@@ -1718,7 +1906,8 @@
    "src": "Huemint",
    "bg": "#1B1D1C",
    "tx": "#ECEAD2",
-   "bt": "#E8406E"
+   "bt": "#E8406E",
+   "btnText": "bg"
   },
   {
    "uid": "p190",
@@ -1727,7 +1916,8 @@
    "src": "Huemint",
    "bg": "#181818",
    "tx": "#8D8382",
-   "bt": "#BDAC16"
+   "bt": "#BDAC16",
+   "btnText": "bg"
   },
   {
    "uid": "p191",
@@ -1736,7 +1926,8 @@
    "src": "Huemint",
    "bg": "#0A0A14",
    "tx": "#F2BF6D",
-   "bt": "#10BC16"
+   "bt": "#10BC16",
+   "btnText": "bg"
   },
   {
    "uid": "p192",
@@ -1745,7 +1936,8 @@
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#3E2207",
-   "bt": "#287338"
+   "bt": "#287338",
+   "btnText": "bg"
   },
   {
    "uid": "p193",
@@ -1754,7 +1946,8 @@
    "src": "Huemint",
    "bg": "#1C1018",
    "tx": "#E7A960",
-   "bt": "#339D67"
+   "bt": "#339D67",
+   "btnText": "bg"
   },
   {
    "uid": "p194",
@@ -1763,7 +1956,8 @@
    "src": "Huemint",
    "bg": "#12121A",
    "tx": "#FF8B72",
-   "bt": "#CD17FF"
+   "bt": "#CD17FF",
+   "btnText": "bg"
   },
   {
    "uid": "p195",
@@ -1772,7 +1966,8 @@
    "src": "Huemint",
    "bg": "#181022",
    "tx": "#D3AA68",
-   "bt": "#4297C4"
+   "bt": "#4297C4",
+   "btnText": "bg"
   },
   {
    "uid": "p196",
@@ -1781,7 +1976,8 @@
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#5D110D",
-   "bt": "#C67119"
+   "bt": "#C67119",
+   "btnText": "bg"
   },
   {
    "uid": "p197",
@@ -1790,7 +1986,8 @@
    "src": "Huemint",
    "bg": "#1C1018",
    "tx": "#E8C59F",
-   "bt": "#DA4F94"
+   "bt": "#DA4F94",
+   "btnText": "bg"
   },
   {
    "uid": "p198",
@@ -1799,7 +1996,8 @@
    "src": "Huemint",
    "bg": "#101C18",
    "tx": "#F2A269",
-   "bt": "#93A61C"
+   "bt": "#93A61C",
+   "btnText": "bg"
   },
   {
    "uid": "p199",
@@ -1808,7 +2006,8 @@
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#2A2530",
-   "bt": "#4074FC"
+   "bt": "#4074FC",
+   "btnText": "bg"
   },
   {
    "uid": "p200",
@@ -1817,7 +2016,8 @@
    "src": "Huemint",
    "bg": "#0D1117",
    "tx": "#DAD1B2",
-   "bt": "#E43E53"
+   "bt": "#E43E53",
+   "btnText": "bg"
   },
   {
    "uid": "p201",
@@ -1826,7 +2026,8 @@
    "src": "Huemint",
    "bg": "#0D1117",
    "tx": "#ED9DCE",
-   "bt": "#3869D6"
+   "bt": "#3869D6",
+   "btnText": "bg"
   },
   {
    "uid": "p202",
@@ -1835,7 +2036,8 @@
    "src": "Huemint",
    "bg": "#101010",
    "tx": "#E9C7A7",
-   "bt": "#2E8C37"
+   "bt": "#2E8C37",
+   "btnText": "bg"
   },
   {
    "uid": "p203",
@@ -1844,7 +2046,8 @@
    "src": "Huemint",
    "bg": "#0C0C10",
    "tx": "#ECBB13",
-   "bt": "#866B1C"
+   "bt": "#866B1C",
+   "btnText": "bg"
   },
   {
    "uid": "p204",
@@ -1853,7 +2056,8 @@
    "src": "Designah",
    "bg": "#0D142B",
    "tx": "#FAFFFA",
-   "bt": "#FF5930"
+   "bt": "#FF5930",
+   "btnText": "bg"
   },
   {
    "uid": "p205",
@@ -1862,7 +2066,8 @@
    "src": "Designah",
    "bg": "#0D142B",
    "tx": "#FAFFFA",
-   "bt": "#ABFA54"
+   "bt": "#ABFA54",
+   "btnText": "bg"
   },
   {
    "uid": "p206",
@@ -1871,7 +2076,8 @@
    "src": "Colours Cafe",
    "bg": "#7523B4",
    "tx": "#FAE170",
-   "bt": "#FAE170"
+   "bt": "#FAE170",
+   "btnText": "bg"
   },
   {
    "uid": "p207",
@@ -1880,7 +2086,8 @@
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
-   "bt": "#FF90EE"
+   "bt": "#FF90EE",
+   "btnText": "bg"
   },
   {
    "uid": "p208",
@@ -1889,7 +2096,8 @@
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
-   "bt": "#06D172"
+   "bt": "#06D172",
+   "btnText": "bg"
   },
   {
    "uid": "p209",
@@ -1898,7 +2106,8 @@
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
-   "bt": "#694AFF"
+   "bt": "#694AFF",
+   "btnText": "bg"
   },
   {
    "uid": "p210",
@@ -1907,7 +2116,8 @@
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
-   "bt": "#FF5500"
+   "bt": "#FF5500",
+   "btnText": "bg"
   },
   {
    "uid": "p211",
@@ -1916,7 +2126,8 @@
    "src": "HappyHues",
    "bg": "#F9F4EF",
    "tx": "#020826",
-   "bt": "#8C7851"
+   "bt": "#8C7851",
+   "btnText": "bg"
   },
   {
    "uid": "p212",
@@ -1925,7 +2136,8 @@
    "src": "MyMind",
    "bg": "#112378",
    "tx": "#FBECCF",
-   "bt": "#FBECCF"
+   "bt": "#FBECCF",
+   "btnText": "bg"
   },
   {
    "uid": "p213",
@@ -1934,7 +2146,8 @@
    "src": "MyMind",
    "bg": "#F1C3B8",
    "tx": "#19227D",
-   "bt": "#19227D"
+   "bt": "#19227D",
+   "btnText": "bg"
   },
   {
    "uid": "p214",
@@ -1943,7 +2156,8 @@
    "src": "MyMind",
    "bg": "#C0C2CE",
    "tx": "#012F63",
-   "bt": "#FE667B"
+   "bt": "#FE667B",
+   "btnText": "tx"
   },
   {
    "uid": "p215",
@@ -1952,7 +2166,8 @@
    "src": "MyMind",
    "bg": "#FFFDE7",
    "tx": "#EC0B19",
-   "bt": "#189BA3"
+   "bt": "#189BA3",
+   "btnText": "bg"
   },
   {
    "uid": "p216",
@@ -1961,7 +2176,8 @@
    "src": "MyMind",
    "bg": "#CBA0AA",
    "tx": "#5A3C20",
-   "bt": "#FAE397"
+   "bt": "#FAE397",
+   "btnText": "tx"
   },
   {
    "uid": "p217",
@@ -1970,7 +2186,8 @@
    "src": "MyMind",
    "bg": "#E33946",
    "tx": "#FDEDB2",
-   "bt": "#FDEDB2"
+   "bt": "#FDEDB2",
+   "btnText": "bg"
   },
   {
    "uid": "p218",
@@ -1979,7 +2196,8 @@
    "src": "Huemint",
    "bg": "#FAF5EA",
    "tx": "#0B0701",
-   "bt": "#CB614A"
+   "bt": "#CB614A",
+   "btnText": "bg"
   },
   {
    "uid": "p219",
@@ -1988,7 +2206,8 @@
    "src": "Huemint",
    "bg": "#1B2A4A",
    "tx": "#DFE198",
-   "bt": "#5EB7C9"
+   "bt": "#5EB7C9",
+   "btnText": "bg"
   },
   {
    "uid": "p220",
@@ -1997,7 +2216,8 @@
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#FFEA78",
-   "bt": "#A0ACB9"
+   "bt": "#A0ACB9",
+   "btnText": "bg"
   },
   {
    "uid": "p221",
@@ -2006,7 +2226,8 @@
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#2FC8EF",
-   "bt": "#E18976"
+   "bt": "#E18976",
+   "btnText": "bg"
   },
   {
    "uid": "p222",
@@ -2015,7 +2236,8 @@
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E6E8E6",
-   "bt": "#C6AA48"
+   "bt": "#C6AA48",
+   "btnText": "bg"
   },
   {
    "uid": "p223",
@@ -2024,7 +2246,8 @@
    "src": "Huemint",
    "bg": "#F7F1E3",
    "tx": "#4D3745",
-   "bt": "#53817E"
+   "bt": "#53817E",
+   "btnText": "bg"
   },
   {
    "uid": "p224",
@@ -2033,7 +2256,8 @@
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#F8FFFF",
-   "bt": "#DAA59A"
+   "bt": "#DAA59A",
+   "btnText": "bg"
   },
   {
    "uid": "p225",
@@ -2042,7 +2266,8 @@
    "src": "Huemint",
    "bg": "#243B53",
    "tx": "#F2F6CB",
-   "bt": "#C89826"
+   "bt": "#C89826",
+   "btnText": "bg"
   },
   {
    "uid": "p226",
@@ -2051,7 +2276,8 @@
    "src": "Huemint",
    "bg": "#4A3520",
    "tx": "#FFCA58",
-   "bt": "#71C7C2"
+   "bt": "#71C7C2",
+   "btnText": "bg"
   },
   {
    "uid": "p227",
@@ -2060,7 +2286,8 @@
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#A6D2B0",
-   "bt": "#83ABDC"
+   "bt": "#83ABDC",
+   "btnText": "bg"
   },
   {
    "uid": "p228",
@@ -2069,7 +2296,8 @@
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E9B23D",
-   "bt": "#D5708B"
+   "bt": "#D5708B",
+   "btnText": "bg"
   },
   {
    "uid": "p229",
@@ -2078,7 +2306,8 @@
    "src": "Huemint",
    "bg": "#1B2A4A",
    "tx": "#FCF2E4",
-   "bt": "#E25265"
+   "bt": "#E25265",
+   "btnText": "bg"
   },
   {
    "uid": "p230",
@@ -2087,7 +2316,8 @@
    "src": "Huemint",
    "bg": "#7A3B2E",
    "tx": "#66C7CE",
-   "bt": "#D9D8CE"
+   "bt": "#D9D8CE",
+   "btnText": "bg"
   },
   {
    "uid": "p231",
@@ -2096,7 +2326,8 @@
    "src": "Huemint",
    "bg": "#F4EEDE",
    "tx": "#353347",
-   "bt": "#5C4F23"
+   "bt": "#5C4F23",
+   "btnText": "bg"
   },
   {
    "uid": "p232",
@@ -2105,7 +2336,8 @@
    "src": "Huemint",
    "bg": "#5A3C20",
    "tx": "#FDFEF1",
-   "bt": "#D68D60"
+   "bt": "#D68D60",
+   "btnText": "bg"
   },
   {
    "uid": "p233",
@@ -2114,7 +2346,8 @@
    "src": "Huemint",
    "bg": "#F4EEDE",
    "tx": "#873B21",
-   "bt": "#346CB2"
+   "bt": "#346CB2",
+   "btnText": "bg"
   },
   {
    "uid": "p234",
@@ -2123,7 +2356,8 @@
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#FFFBFC",
-   "bt": "#51BBAD"
+   "bt": "#51BBAD",
+   "btnText": "bg"
   },
   {
    "uid": "p235",
@@ -2132,7 +2366,8 @@
    "src": "Huemint",
    "bg": "#E8DFC8",
    "tx": "#001838",
-   "bt": "#C73758"
+   "bt": "#C73758",
+   "btnText": "bg"
   },
   {
    "uid": "p236",
@@ -2141,7 +2376,8 @@
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E9E5D4",
-   "bt": "#52ABD6"
+   "bt": "#52ABD6",
+   "btnText": "bg"
   },
   {
    "uid": "p237",
@@ -2150,7 +2386,8 @@
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#EDDECE",
-   "bt": "#66B8B0"
+   "bt": "#66B8B0",
+   "btnText": "bg"
   },
   {
    "uid": "p238",
@@ -2159,7 +2396,8 @@
    "src": "Colours Cafe",
    "bg": "#FAE170",
    "tx": "#D13F13",
-   "bt": "#D13F13"
+   "bt": "#D13F13",
+   "btnText": "bg"
   },
   {
    "uid": "p239",
@@ -2168,7 +2406,8 @@
    "src": "Colours Cafe",
    "bg": "#906713",
    "tx": "#FFDB58",
-   "bt": "#FFDB58"
+   "bt": "#FFDB58",
+   "btnText": "bg"
   },
   {
    "uid": "p240",
@@ -2177,7 +2416,8 @@
    "src": "Iceberg",
    "bg": "#77B5D3",
    "tx": "#1E424D",
-   "bt": "#663E1F"
+   "bt": "#663E1F",
+   "btnText": "bg"
   },
   {
    "uid": "p241",
@@ -2186,7 +2426,8 @@
    "src": "Iceberg",
    "bg": "#1E424D",
    "tx": "#E5D595",
-   "bt": "#77B5D3"
+   "bt": "#77B5D3",
+   "btnText": "bg"
   },
   {
    "uid": "p242",
@@ -2195,7 +2436,8 @@
    "src": "Iceberg",
    "bg": "#E5D595",
    "tx": "#1E424D",
-   "bt": "#663E1F"
+   "bt": "#663E1F",
+   "btnText": "bg"
   },
   {
    "uid": "p243",
@@ -2204,7 +2446,8 @@
    "src": "Iceberg",
    "bg": "#E19E11",
    "tx": "#1E424D",
-   "bt": "#663E1F"
+   "bt": "#663E1F",
+   "btnText": "bg"
   },
   {
    "uid": "p244",
@@ -2213,7 +2456,8 @@
    "src": "Iceberg",
    "bg": "#663E1F",
    "tx": "#E5D595",
-   "bt": "#77B5D3"
+   "bt": "#77B5D3",
+   "btnText": "bg"
   },
   {
    "uid": "p245",
@@ -2222,7 +2466,8 @@
    "src": "QuetraTech",
    "bg": "#642F37",
    "tx": "#F7C767",
-   "bt": "#F3904B"
+   "bt": "#F3904B",
+   "btnText": "bg"
   },
   {
    "uid": "p246",
@@ -2231,7 +2476,8 @@
    "src": "QuetraTech",
    "bg": "#642F37",
    "tx": "#F7C767",
-   "bt": "#B89DBB"
+   "bt": "#B89DBB",
+   "btnText": "bg"
   },
   {
    "uid": "p247",
@@ -2240,7 +2486,8 @@
    "src": "daho_van",
    "bg": "#5758A6",
    "tx": "#F7E6D4",
-   "bt": "#E7C58A"
+   "bt": "#E7C58A",
+   "btnText": "bg"
   },
   {
    "uid": "p248",
@@ -2249,7 +2496,8 @@
    "src": "daho_van",
    "bg": "#E7C58A",
    "tx": "#4B3535",
-   "bt": "#5758A6"
+   "bt": "#5758A6",
+   "btnText": "bg"
   },
   {
    "uid": "p249",
@@ -2258,7 +2506,8 @@
    "src": "daho_van",
    "bg": "#F7E6D4",
    "tx": "#4B3535",
-   "bt": "#5758A6"
+   "bt": "#5758A6",
+   "btnText": "bg"
   },
   {
    "uid": "p250",
@@ -2267,7 +2516,8 @@
    "src": "Chinese Black",
    "bg": "#CF9D7B",
    "tx": "#0C1519",
-   "bt": "#3A3534"
+   "bt": "#3A3534",
+   "btnText": "bg"
   },
   {
    "uid": "p251",
@@ -2276,7 +2526,8 @@
    "src": "Chewing Gum",
    "bg": "#FAF2E5",
    "tx": "#1F303D",
-   "bt": "#5D262F"
+   "bt": "#5D262F",
+   "btnText": "bg"
   },
   {
    "uid": "p252",
@@ -2285,7 +2536,8 @@
    "src": "Chewing Gum",
    "bg": "#C0893B",
    "tx": "#1F303D",
-   "bt": "#5D262F"
+   "bt": "#5D262F",
+   "btnText": "bg"
   },
   {
    "uid": "p253",
@@ -2294,7 +2546,8 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#272343",
-   "bt": "#FFD803"
+   "bt": "#FFD803",
+   "btnText": "tx"
   },
   {
    "uid": "p254",
@@ -2303,7 +2556,8 @@
    "src": "MyMind",
    "bg": "#3333FF",
    "tx": "#CDFFCC",
-   "bt": "#CDFFCC"
+   "bt": "#CDFFCC",
+   "btnText": "bg"
   },
   {
    "uid": "p255",
@@ -2312,7 +2566,8 @@
    "src": "MyMind",
    "bg": "#75FFC0",
    "tx": "#7A30CF",
-   "bt": "#7A30CF"
+   "bt": "#7A30CF",
+   "btnText": "bg"
   },
   {
    "uid": "p256",
@@ -2321,7 +2576,8 @@
    "src": "MyMind",
    "bg": "#083EA7",
    "tx": "#1FDE91",
-   "bt": "#1FDE91"
+   "bt": "#1FDE91",
+   "btnText": "bg"
   },
   {
    "uid": "p257",
@@ -2330,7 +2586,8 @@
    "src": "MyMind",
    "bg": "#EEC0DB",
    "tx": "#162BF4",
-   "bt": "#162BF4"
+   "bt": "#162BF4",
+   "btnText": "bg"
   },
   {
    "uid": "p258",
@@ -2339,7 +2596,8 @@
    "src": "Huemint",
    "bg": "#EAF6FF",
    "tx": "#0D0D10",
-   "bt": "#E80420"
+   "bt": "#E80420",
+   "btnText": "bg"
   },
   {
    "uid": "p259",
@@ -2348,7 +2606,8 @@
    "src": "Huemint",
    "bg": "#FFF2E8",
    "tx": "#41342D",
-   "bt": "#0383B3"
+   "bt": "#0383B3",
+   "btnText": "bg"
   },
   {
    "uid": "p260",
@@ -2357,7 +2616,8 @@
    "src": "Huemint",
    "bg": "#FDFDFD",
    "tx": "#262224",
-   "bt": "#DD4902"
+   "bt": "#DD4902",
+   "btnText": "bg"
   },
   {
    "uid": "p261",
@@ -2366,7 +2626,8 @@
    "src": "Huemint",
    "bg": "#F0FFF4",
    "tx": "#0E2A2C",
-   "bt": "#078D17"
+   "bt": "#078D17",
+   "btnText": "bg"
   },
   {
    "uid": "p262",
@@ -2375,7 +2636,8 @@
    "src": "Huemint",
    "bg": "#F5F0FF",
    "tx": "#55191A",
-   "bt": "#2C4EB7"
+   "bt": "#2C4EB7",
+   "btnText": "bg"
   },
   {
    "uid": "p263",
@@ -2384,7 +2646,8 @@
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#3F372F",
-   "bt": "#8F5FB7"
+   "bt": "#8F5FB7",
+   "btnText": "bg"
   },
   {
    "uid": "p264",
@@ -2393,7 +2656,8 @@
    "src": "Huemint",
    "bg": "#E8FFF7",
    "tx": "#242320",
-   "bt": "#9742CA"
+   "bt": "#9742CA",
+   "btnText": "bg"
   },
   {
    "uid": "p265",
@@ -2402,7 +2666,8 @@
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#313132",
-   "bt": "#DC5099"
+   "bt": "#DC5099",
+   "btnText": "bg"
   },
   {
    "uid": "p266",
@@ -2411,7 +2676,8 @@
    "src": "Huemint",
    "bg": "#F0FFF4",
    "tx": "#1C1F2D",
-   "bt": "#B15E35"
+   "bt": "#B15E35",
+   "btnText": "bg"
   },
   {
    "uid": "p267",
@@ -2420,7 +2686,8 @@
    "src": "Huemint",
    "bg": "#F6F2FF",
    "tx": "#2B2F38",
-   "bt": "#A46E10"
+   "bt": "#A46E10",
+   "btnText": "bg"
   },
   {
    "uid": "p268",
@@ -2429,7 +2696,8 @@
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#18374B",
-   "bt": "#129241"
+   "bt": "#129241",
+   "btnText": "bg"
   },
   {
    "uid": "p269",
@@ -2438,7 +2706,8 @@
    "src": "Huemint",
    "bg": "#EFF8FF",
    "tx": "#65534E",
-   "bt": "#477C91"
+   "bt": "#477C91",
+   "btnText": "bg"
   },
   {
    "uid": "p270",
@@ -2447,7 +2716,8 @@
    "src": "Huemint",
    "bg": "#F2FFF8",
    "tx": "#3A1744",
-   "bt": "#0067CC"
+   "bt": "#0067CC",
+   "btnText": "bg"
   },
   {
    "uid": "p271",
@@ -2456,7 +2726,8 @@
    "src": "Huemint",
    "bg": "#FFFDF5",
    "tx": "#5409AC",
-   "bt": "#6B5AE9"
+   "bt": "#6B5AE9",
+   "btnText": "bg"
   },
   {
    "uid": "p272",
@@ -2465,7 +2736,8 @@
    "src": "Huemint",
    "bg": "#F5F0FF",
    "tx": "#12204E",
-   "bt": "#E7188C"
+   "bt": "#E7188C",
+   "btnText": "bg"
   },
   {
    "uid": "p273",
@@ -2474,7 +2746,8 @@
    "src": "Huemint",
    "bg": "#FEFCE8",
    "tx": "#31323E",
-   "bt": "#B36C0A"
+   "bt": "#B36C0A",
+   "btnText": "bg"
   },
   {
    "uid": "p274",
@@ -2483,7 +2756,8 @@
    "src": "Huemint",
    "bg": "#EEF6FF",
    "tx": "#293F53",
-   "bt": "#6700D6"
+   "bt": "#6700D6",
+   "btnText": "bg"
   },
   {
    "uid": "p275",
@@ -2492,7 +2766,8 @@
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#4B1647",
-   "bt": "#E6004F"
+   "bt": "#E6004F",
+   "btnText": "bg"
   },
   {
    "uid": "p276",
@@ -2501,7 +2776,8 @@
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#561230",
-   "bt": "#0065BD"
+   "bt": "#0065BD",
+   "btnText": "bg"
   },
   {
    "uid": "p277",
@@ -2510,7 +2786,8 @@
    "src": "Huemint",
    "bg": "#FFF6F0",
    "tx": "#242422",
-   "bt": "#81239F"
+   "bt": "#81239F",
+   "btnText": "bg"
   },
   {
    "uid": "p278",
@@ -2519,7 +2796,8 @@
    "src": "Colours Cafe",
    "bg": "#FF97D0",
    "tx": "#125603",
-   "bt": "#125603"
+   "bt": "#125603",
+   "btnText": "bg"
   },
   {
    "uid": "p279",
@@ -2528,7 +2806,8 @@
    "src": "Colours Cafe",
    "bg": "#C3F380",
    "tx": "#7523B4",
-   "bt": "#7523B4"
+   "bt": "#7523B4",
+   "btnText": "bg"
   },
   {
    "uid": "p280",
@@ -2537,7 +2816,8 @@
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
-   "bt": "#F5D6FF"
+   "bt": "#F5D6FF",
+   "btnText": "bg"
   },
   {
    "uid": "p281",
@@ -2546,7 +2826,8 @@
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
-   "bt": "#AEB7FF"
+   "bt": "#AEB7FF",
+   "btnText": "bg"
   },
   {
    "uid": "p282",
@@ -2555,7 +2836,8 @@
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
-   "bt": "#FFBC54"
+   "bt": "#FFBC54",
+   "btnText": "bg"
   },
   {
    "uid": "p283",
@@ -2564,7 +2846,8 @@
    "src": "HappyHues",
    "bg": "#FEF6E4",
    "tx": "#001858",
-   "bt": "#F582AE"
+   "bt": "#F582AE",
+   "btnText": "bg"
   },
   {
    "uid": "p284",
@@ -2573,7 +2856,8 @@
    "src": "MyMind",
    "bg": "#F1D3D3",
    "tx": "#000000",
-   "bt": "#1539CF"
+   "bt": "#1539CF",
+   "btnText": "bg"
   },
   {
    "uid": "p285",
@@ -2582,7 +2866,8 @@
    "src": "HappyHues",
    "bg": "#232946",
    "tx": "#FFFFFE",
-   "bt": "#EEBBC3"
+   "bt": "#EEBBC3",
+   "btnText": "bg"
   },
   {
    "uid": "p286",
@@ -2591,7 +2876,8 @@
    "src": "MyMind",
    "bg": "#E2A9C9",
    "tx": "#000000",
-   "bt": "#FC411E"
+   "bt": "#FC411E",
+   "btnText": "bg"
   },
   {
    "uid": "p287",
@@ -2600,7 +2886,8 @@
    "src": "MyMind",
    "bg": "#2D1C46",
    "tx": "#B6D5F4",
-   "bt": "#EC2326"
+   "bt": "#EC2326",
+   "btnText": "bg"
   },
   {
    "uid": "p288",
@@ -2609,7 +2896,8 @@
    "src": "MyMind",
    "bg": "#D1E9E3",
    "tx": "#334A45",
-   "bt": "#F3BFA9"
+   "bt": "#F3BFA9",
+   "btnText": "bg"
   },
   {
    "uid": "p289",
@@ -2618,7 +2906,8 @@
    "src": "MyMind",
    "bg": "#340B0B",
    "tx": "#9B8FFF",
-   "bt": "#9B8FFF"
+   "bt": "#9B8FFF",
+   "btnText": "bg"
   },
   {
    "uid": "p290",
@@ -2627,7 +2916,8 @@
    "src": "MyMind",
    "bg": "#BEF6E9",
    "tx": "#4B5C68",
-   "bt": "#BB828B"
+   "bt": "#BB828B",
+   "btnText": "bg"
   },
   {
    "uid": "p291",
@@ -2636,7 +2926,8 @@
    "src": "MyMind",
    "bg": "#121738",
    "tx": "#D17C78",
-   "bt": "#D17C78"
+   "bt": "#D17C78",
+   "btnText": "bg"
   },
   {
    "uid": "p292",
@@ -2645,7 +2936,8 @@
    "src": "MyMind",
    "bg": "#837663",
    "tx": "#101C4E",
-   "bt": "#FFD3C2"
+   "bt": "#FFD3C2",
+   "btnText": "bg"
   },
   {
    "uid": "p293",
@@ -2654,7 +2946,8 @@
    "src": "Huemint",
    "bg": "#FEF6E4",
    "tx": "#0F211F",
-   "bt": "#D9513D"
+   "bt": "#D9513D",
+   "btnText": "bg"
   },
   {
    "uid": "p294",
@@ -2663,7 +2956,8 @@
    "src": "Huemint",
    "bg": "#242B47",
    "tx": "#7BC758",
-   "bt": "#2EA5AD"
+   "bt": "#2EA5AD",
+   "btnText": "bg"
   },
   {
    "uid": "p295",
@@ -2672,7 +2966,8 @@
    "src": "Huemint",
    "bg": "#E9F0F5",
    "tx": "#252557",
-   "bt": "#7B2784"
+   "bt": "#7B2784",
+   "btnText": "bg"
   },
   {
    "uid": "p296",
@@ -2681,7 +2976,8 @@
    "src": "Huemint",
    "bg": "#E8E4F3",
    "tx": "#1B1014",
-   "bt": "#42851F"
+   "bt": "#42851F",
+   "btnText": "bg"
   },
   {
    "uid": "p297",
@@ -2690,7 +2986,8 @@
    "src": "Huemint",
    "bg": "#2D1C46",
    "tx": "#CED9EE",
-   "bt": "#E94F43"
+   "bt": "#E94F43",
+   "btnText": "bg"
   },
   {
    "uid": "p298",
@@ -2699,7 +2996,8 @@
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#462642",
-   "bt": "#2E736A"
+   "bt": "#2E736A",
+   "btnText": "bg"
   },
   {
    "uid": "p299",
@@ -2708,7 +3006,8 @@
    "src": "Huemint",
    "bg": "#F5EDF5",
    "tx": "#2D2524",
-   "bt": "#C93D75"
+   "bt": "#C93D75",
+   "btnText": "bg"
   },
   {
    "uid": "p300",
@@ -2717,7 +3016,8 @@
    "src": "Huemint",
    "bg": "#F0E9F2",
    "tx": "#90674A",
-   "bt": "#455298"
+   "bt": "#455298",
+   "btnText": "bg"
   },
   {
    "uid": "p301",
@@ -2726,7 +3026,8 @@
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#1C1D1B",
-   "bt": "#7E5B84"
+   "bt": "#7E5B84",
+   "btnText": "bg"
   },
   {
    "uid": "p302",
@@ -2735,7 +3036,8 @@
    "src": "Huemint",
    "bg": "#31264A",
    "tx": "#FEFEFA",
-   "bt": "#CAABFF"
+   "bt": "#CAABFF",
+   "btnText": "bg"
   },
   {
    "uid": "p303",
@@ -2744,7 +3046,8 @@
    "src": "Huemint",
    "bg": "#2D1C46",
    "tx": "#FBD0D1",
-   "bt": "#6F8B69"
+   "bt": "#6F8B69",
+   "btnText": "bg"
   },
   {
    "uid": "p304",
@@ -2753,7 +3056,8 @@
    "src": "Huemint",
    "bg": "#E6E9F5",
    "tx": "#2B262A",
-   "bt": "#D33D30"
+   "bt": "#D33D30",
+   "btnText": "bg"
   },
   {
    "uid": "p305",
@@ -2762,7 +3066,8 @@
    "src": "Huemint",
    "bg": "#F7F0E8",
    "tx": "#382834",
-   "bt": "#5A54FC"
+   "bt": "#5A54FC",
+   "btnText": "bg"
   },
   {
    "uid": "p306",
@@ -2771,7 +3076,8 @@
    "src": "Huemint",
    "bg": "#E4EDF2",
    "tx": "#77494B",
-   "bt": "#30475F"
+   "bt": "#30475F",
+   "btnText": "bg"
   },
   {
    "uid": "p307",
@@ -2780,7 +3086,8 @@
    "src": "Huemint",
    "bg": "#1D2438",
    "tx": "#F0EBF0",
-   "bt": "#A68352"
+   "bt": "#A68352",
+   "btnText": "bg"
   },
   {
    "uid": "p308",
@@ -2789,7 +3096,8 @@
    "src": "Huemint",
    "bg": "#E9F0F5",
    "tx": "#3B3C6C",
-   "bt": "#4D5924"
+   "bt": "#4D5924",
+   "btnText": "bg"
   },
   {
    "uid": "p309",
@@ -2798,7 +3106,8 @@
    "src": "Huemint",
    "bg": "#242B47",
    "tx": "#FDFEF9",
-   "bt": "#D967D0"
+   "bt": "#D967D0",
+   "btnText": "bg"
   },
   {
    "uid": "p310",
@@ -2807,7 +3116,8 @@
    "src": "Huemint",
    "bg": "#F5EDF5",
    "tx": "#311F17",
-   "bt": "#44887B"
+   "bt": "#44887B",
+   "btnText": "bg"
   },
   {
    "uid": "p311",
@@ -2816,7 +3126,8 @@
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#111216",
-   "bt": "#5D625B"
+   "bt": "#5D625B",
+   "btnText": "bg"
   },
   {
    "uid": "p312",
@@ -2825,7 +3136,8 @@
    "src": "Huemint",
    "bg": "#E6E9F5",
    "tx": "#3A2F49",
-   "bt": "#5B53E2"
+   "bt": "#5B53E2",
+   "btnText": "bg"
   },
   {
    "uid": "p313",
@@ -2834,7 +3146,8 @@
    "src": "Shift Creative",
    "bg": "#3939FF",
    "tx": "#AEE6ED",
-   "bt": "#DBB8FF"
+   "bt": "#DBB8FF",
+   "btnText": "bg"
   },
   {
    "uid": "p314",
@@ -2843,7 +3156,8 @@
    "src": "Columbia",
    "bg": "#0B1957",
    "tx": "#D2E0ED",
-   "bt": "#FFBE98"
+   "bt": "#FFBE98",
+   "btnText": "bg"
   },
   {
    "uid": "p315",
@@ -2852,7 +3166,8 @@
    "src": "Chewing Gum",
    "bg": "#1F303D",
    "tx": "#FAF2E5",
-   "bt": "#E3B2AF"
+   "bt": "#E3B2AF",
+   "btnText": "bg"
   },
   {
    "uid": "p316",
@@ -2861,7 +3176,9 @@
    "src": "Burgundy",
    "bg": "#3D5D91",
    "tx": "#F2DCDB",
-   "bt": "#F2AEBC"
+   "bt": "#F2AEBC",
+   "btnText": "bg"
   }
- ]
+ ],
+ "note": "btnText: bg=CdBd 기본(버튼글자=배경색) / tx=예외(버튼글자=텍스트색)"
 }
