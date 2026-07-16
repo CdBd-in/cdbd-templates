@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "syncedAt": "2026-07-16",
  "total": 316,
  "figma": {
@@ -56,7 +56,7 @@
    "src": "MyMind",
    "bg": "#178E96",
    "tx": "#FFFFFF",
-   "bt": "#FDE3C8",
+   "bt": "#110901",
    "btnText": "bg"
   },
   {
@@ -397,7 +397,7 @@
    "bg": "#FAEEE7",
    "tx": "#33272A",
    "bt": "#FF8BA7",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p039",
@@ -417,7 +417,7 @@
    "bg": "#DABAAF",
    "tx": "#0B0C11",
    "bt": "#CF2F89",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p041",
@@ -797,7 +797,7 @@
    "bg": "#3B755F",
    "tx": "#000000",
    "bt": "#F2CB6C",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p079",
@@ -1097,7 +1097,7 @@
    "bg": "#FFFFFE",
    "tx": "#181818",
    "bt": "#4FC4CF",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p109",
@@ -1106,7 +1106,7 @@
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#00214D",
-   "bt": "#00EBC7",
+   "bt": "#00705F",
    "btnText": "bg"
   },
   {
@@ -1127,7 +1127,7 @@
    "bg": "#FFFFFE",
    "tx": "#094067",
    "bt": "#3DA9FC",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p112",
@@ -1447,7 +1447,7 @@
    "bg": "#EFF0F3",
    "tx": "#0D0D0D",
    "bt": "#FF8E3C",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p144",
@@ -1466,7 +1466,7 @@
    "src": "MyMind",
    "bg": "#EDB5BD",
    "tx": "#000000",
-   "bt": "#BEDFD4",
+   "bt": "#224439",
    "btnText": "bg"
   },
   {
@@ -2166,7 +2166,7 @@
    "src": "MyMind",
    "bg": "#FFFDE7",
    "tx": "#EC0B19",
-   "bt": "#189BA3",
+   "bt": "#116C71",
    "btnText": "bg"
   },
   {
@@ -2847,7 +2847,7 @@
    "bg": "#FEF6E4",
    "tx": "#001858",
    "bt": "#F582AE",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p284",
@@ -2876,7 +2876,7 @@
    "src": "MyMind",
    "bg": "#E2A9C9",
    "tx": "#000000",
-   "bt": "#FC411E",
+   "bt": "#6F1301",
    "btnText": "bg"
   },
   {
@@ -2886,7 +2886,7 @@
    "src": "MyMind",
    "bg": "#2D1C46",
    "tx": "#B6D5F4",
-   "bt": "#EC2326",
+   "bt": "#F48082",
    "btnText": "bg"
   },
   {
@@ -2896,7 +2896,7 @@
    "src": "MyMind",
    "bg": "#D1E9E3",
    "tx": "#334A45",
-   "bt": "#F3BFA9",
+   "bt": "#8D3814",
    "btnText": "bg"
   },
   {
@@ -2916,7 +2916,7 @@
    "src": "MyMind",
    "bg": "#BEF6E9",
    "tx": "#4B5C68",
-   "bt": "#BB828B",
+   "bt": "#81464F",
    "btnText": "bg"
   },
   {
@@ -2937,7 +2937,7 @@
    "bg": "#837663",
    "tx": "#101C4E",
    "bt": "#FFD3C2",
-   "btnText": "bg"
+   "btnText": "tx"
   },
   {
    "uid": "p293",
