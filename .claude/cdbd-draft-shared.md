@@ -98,9 +98,17 @@ if (typeof n.cornerRadius === 'number' && n.type !== 'TEXT') n.cornerRadius = TA
 // ❌ 재발한 실패: if (n.paddingLeft === 20) → 16·24인 프레임을 건너뜀
 // ✅ 카드 = 폭 380 (검증됨: w=380 카드 / w=340 프리셋 내부 → 내부는 건드리지 않는다)
 if (n.paddingLeft !== undefined && n.width >= 379 && (n.paddingLeft > 0 || n.paddingRight > 0)) {
+  if (isBarWidthConstraint(n)) continue;          // ⚠️ 아래 예외 필수
   n.paddingLeft = LR; n.paddingRight = LR;
 }
 ```
+
+🚨 **예외 — 비대칭 큰 padding = 「여백」이 아니라 「폭 제약」** (2026-07-16 A④-안2 D3 자기 발견)
+> **폭 가드가 구분선 프레임의 `paddingRight: 300`을 여백으로 오인**해 20으로 바꿨더니, 바가 `FILL`이라 **60×3 액센트바가 340×3 구조선으로 변질**됐다 — **#8이 금지하는 「한 페이지 = 한 언어」 위반을 통일 코드가 스스로 만든 것.**
+
+- **판별**: 자식이 `FILL`인 얇은 바(높이 ≤4)이고 `paddingLeft`↔`paddingRight`가 **크게 비대칭**(예: `20/300`)이면 → 그 padding은 **바 길이를 정하는 수단**이다. **건드리지 말 것.**
+- 같은 수법이 **짧은 중앙 구분선**에도 쓰인다(CLAUDE.md 4단계 팁: `padding: "20px 150px"` → 중앙 64px 라인).
+- ✅ 통일 대상은 **카드 좌우 여백**이지 **바 길이**가 아니다.
 
 ### 〰️ #8 구분선 — 한 페이지 = 한 언어
 
