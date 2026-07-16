@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="1f740c98-fb99-45b9-8508-29d40362698e"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<style>/* ============================================================
+   CdBd — Webfonts
+   Primary UI face: Pretendard (open-source Korean/Latin sans).
+   Loaded from jsDelivr. The compiler ships these @font-face rules.
+   ------------------------------------------------------------
+   SUBSTITUTION NOTE: the source .fig also uses "Indivisible"
+   (a licensed XYZ Type face) for a handful of small numeric
+   labels (~53 uses). No binary ships with the file, so
+   --font-numeric falls back to a tabular system stack. Provide
+   the real Indivisible woff2 to restore it.
+   ============================================================ */
+
+/* Pretendard — full weight range via the dynamic-subset stylesheet */
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url("ab3412eb-d9ac-4ab5-80cf-2548998b633d") format('woff2'), url("0d6283c1-33b8-4a08-98ac-b2b87d82a604") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url("28dd8df1-e39e-4113-8176-2232cc5e4719") format('woff2'), url("cb640ee6-4f03-4d5c-8ab8-93574a0d1a63") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url("80cb372b-4958-48c9-8f05-52b0e0a23344") format('woff2'), url("50adffb8-7206-4b48-adf0-50929316a766") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url("8b907c6d-05d4-4cb8-a3bc-ad189877bb74") format('woff2'), url("3084138f-b114-4cec-8c16-013f6bba9433") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url("2cdb6ceb-4031-4a1e-b16f-a7ab65bc8ee0") format('woff2'), url("318e14b3-69ff-4205-a4ff-e464f8c348b2") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url("2bf8d52b-6292-4e93-a156-e08768d86381") format('woff2'), url("d28f88b1-9494-4410-aaa3-aa798d3b9d4e") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url("5a94ec83-60fe-4d8f-aad0-2c99fef9e95b") format('woff2'), url("790c84b5-09fd-4cb3-9aa9-c5f0ebd34a95") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url("b2072e21-c906-4a46-b594-ad7510998dc6") format('woff2'), url("5d712579-fc24-488f-9a54-1678d4a9acc8") format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url("bdbc7aa3-8d23-4ce7-85ee-4c91cfd04243") format('woff2'), url("f0a8ea78-c4a7-4e24-8e1b-3fe4f7eb97fa") format('woff');
+}
+
+</style>
+<script src="5a7e1b01-ddec-43aa-9bde-851b9008a45b"></script>
+<style>
+  /* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e13bbb3e-0163-4ed5-bd98-f533db687692") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2abe6607-72a2-44c3-b092-97d71e2e8ccb") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("5d35be77-3adc-4e9f-a70e-b318e822a40e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("96e55ffa-b665-4cf7-9e66-762575d2b2f3") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("599357b5-7c44-409f-88fe-44c278469c92") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("b5875a04-9a92-4875-a693-eb3a84ac17e7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("952e70e3-28f4-4fe0-929b-ba70a0861e97") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("160ef6e1-4cf1-4fd3-b64a-211b023c0710") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("ee585067-022c-40ed-9d9d-3cda01681b75") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("ea636c14-e2b1-4b4a-88b4-7c5d97516270") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b5875a04-9a92-4875-a693-eb3a84ac17e7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("952e70e3-28f4-4fe0-929b-ba70a0861e97") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("160ef6e1-4cf1-4fd3-b64a-211b023c0710") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ee585067-022c-40ed-9d9d-3cda01681b75") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ea636c14-e2b1-4b4a-88b4-7c5d97516270") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b5875a04-9a92-4875-a693-eb3a84ac17e7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("952e70e3-28f4-4fe0-929b-ba70a0861e97") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("160ef6e1-4cf1-4fd3-b64a-211b023c0710") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ee585067-022c-40ed-9d9d-3cda01681b75") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ea636c14-e2b1-4b4a-88b4-7c5d97516270") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+  html,body{margin:0;background:#dcdad4;font-family:"Pretendard",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
+  *{box-sizing:border-box;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{opacity:.7;}
+  .ph{display:flex;align-items:center;justify-content:center;}
+  .ph span{font:400 10px/1 "Pretendard";letter-spacing:.28em;}
+  .frame::-webkit-scrollbar{display:none;}
+</style>
+</helmet>
+
+
+<section style="display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start;padding:80px 72px;">
+
+  <!-- ══════════════════ 시안 1a — 화보 풀블리드 몰입형 ══════════════════ -->
+  <div id="1a" style="position:relative;">
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:22px;max-width:404px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:26px;padding:0 10px;border-radius:99px;background:#2a2723;color:#f5f1ea;font:700 13px/1 'Pretendard';letter-spacing:.02em;">1a</span>
+        <span style="font:600 15px/1.3 'Pretendard';color:#2a2723;">화보 풀블리드 몰입형</span>
+      </div>
+      <p style="margin:0;font:400 12.5px/1.6 'Pretendard';color:#6d675c;">히어로·제품 모두 풀블리드 이미지 · 설명 절제 · 갤러리 비중↑ · 화보 → 효과증명(Before/After) → 구매 순.</p>
+    </div>
+
+    <div style="width:404px;border-radius:42px;background:#111;padding:10px;box-shadow:0 40px 100px -30px rgba(40,35,25,.5);">
+      <div class="frame" style="border-radius:32px;overflow:hidden;background:#f5f1ea;color:#2a2723;">
+
+        <!-- status bar -->
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;height:44px;padding:0 24px 6px;">
+          <span style="font:600 14px/1 'Pretendard';">9:41</span>
+          <div style="display:flex;gap:5px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#2a2723"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.5" y="4" width="3" height="7" rx="1"></rect><rect x="9" y="2" width="3" height="9" rx="1"></rect><rect x="13.5" width="3" height="11" rx="1"></rect></svg><div style="width:22px;height:11px;border:1px solid rgba(42,39,35,.4);border-radius:3px;padding:1.5px;"><div style="height:100%;width:70%;background:#2a2723;border-radius:1px;"></div></div></div>
+        </div>
+
+        <!-- 카드: 이미지 (히어로 풀블리드 화보컷) -->
+        <div class="ph" style="aspect-ratio:4/5;background:linear-gradient(150deg,#e8e2d5,#d8d2c4);"><span style="color:#a89f8b;">HERO 화보컷</span></div>
+
+        <!-- 카드: 텍스트 (브랜드명) -->
+        <div style="padding:34px 30px 4px;text-align:center;">
+          <div style="font:300 46px/1 'Cormorant Garamond',serif;letter-spacing:.14em;">ONDAM</div>
+        </div>
+        <!-- 카드: 텍스트 (태그라인) -->
+        <div style="padding:12px 30px 0;text-align:center;">
+          <div style="font:400 15px/1.6 'Pretendard';color:#2a2723;">온담 · 피부가 쉬어가는 클린 스킨케어</div>
+        </div>
+        <!-- 카드: 텍스트 (컬렉션·시즌) -->
+        <div style="padding:10px 30px 34px;text-align:center;">
+          <div style="font:500 12px/1 'Pretendard';letter-spacing:.22em;color:#4f5a3f;">2026 NEW · 진정 라인</div>
+        </div>
+
+        <!-- 카드: 갤러리 (화보 2단 그리드) -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 6px;">
+          <div class="ph" style="aspect-ratio:1;background:#e4ddce;"><span style="color:#aca38d;">화보 01</span></div>
+          <div class="ph" style="aspect-ratio:1;background:#ddd6c7;"><span style="color:#aca38d;">화보 02</span></div>
+          <div class="ph" style="aspect-ratio:1;background:#dbd4c4;"><span style="color:#aca38d;">화보 03</span></div>
+          <div class="ph" style="aspect-ratio:1;background:#e6dfd0;"><span style="color:#aca38d;">화보 04</span></div>
+        </div>
+
+        <!-- 카드: 텍스트 (스토리) -->
+        <div style="padding:42px 34px;text-align:center;">
+          <p style="margin:0;font:400 14px/1.9 'Pretendard';color:#4a453d;text-wrap:pretty;">덜어내는 스킨케어. 꼭 필요한 성분만 남기고, 피부가 스스로 쉴 수 있도록. 제주 유기농 병풀과 저자극 포뮬러로 예민해진 하루에 휴식을 건넵니다.</p>
+        </div>
+
+        <!-- ── 제품 1 (풀블리드 이미지 + 절제된 텍스트) ── -->
+        <!-- 카드: 이미지 (제품 화보 풀블리드) -->
+        <div class="ph" style="aspect-ratio:1;background:linear-gradient(160deg,#e6e0d2,#d5cfc0);"><span style="color:#a89f8b;">진정 시카 세럼</span></div>
+        <!-- 카드: 텍스트 (제품명) -->
+        <div style="padding:26px 30px 4px;text-align:center;"><div style="font:500 20px/1.3 'Pretendard';">진정 시카 세럼</div></div>
+        <!-- 카드: 텍스트 (성분·용량·가격) -->
+        <div style="padding:8px 30px 22px;text-align:center;"><div style="font:400 13px/1.7 'Pretendard';color:#6d675c;">병풀추출물 95% · 붉어짐 진정 · 30ml<br><span style="color:#2a2723;font-weight:600;">₩38,000</span></div></div>
+
+        <!-- 제품 2 -->
+        <!-- 카드: 이미지 -->
+        <div class="ph" style="aspect-ratio:1;background:linear-gradient(160deg,#e3ddd0,#d2ccbd);"><span style="color:#a89f8b;">수분 배리어 크림</span></div>
+        <!-- 카드: 텍스트 (제품명) -->
+        <div style="padding:26px 30px 4px;text-align:center;"><div style="font:500 20px/1.3 'Pretendard';">수분 배리어 크림</div></div>
+        <!-- 카드: 텍스트 -->
+        <div style="padding:8px 30px 22px;text-align:center;"><div style="font:400 13px/1.7 'Pretendard';color:#6d675c;">세라마이드·판테놀 · 장벽 강화 · 50ml<br><span style="color:#2a2723;font-weight:600;">₩42,000</span></div></div>
+
+        <!-- 제품 3 -->
+        <!-- 카드: 이미지 -->
+        <div class="ph" style="aspect-ratio:1;background:linear-gradient(160deg,#e7e1d3,#d6d0c1);"><span style="color:#a89f8b;">저자극 클렌징 오일</span></div>
+        <!-- 카드: 텍스트 (제품명) -->
+        <div style="padding:26px 30px 4px;text-align:center;"><div style="font:500 20px/1.3 'Pretendard';">저자극 클렌징 오일</div></div>
+        <!-- 카드: 텍스트 -->
+        <div style="padding:8px 30px 34px;text-align:center;"><div style="font:400 13px/1.7 'Pretendard';color:#6d675c;">올리브·호호바 · 부드러운 클렌징 · 200ml<br><span style="color:#2a2723;font-weight:600;">₩29,000</span></div></div>
+
+        <!-- ── Before / After (시그니처) ── -->
+        <!-- 카드: 텍스트 (섹션 제목) -->
+        <div style="padding:14px 30px 18px;text-align:center;background:rgba(79,90,63,.07);"><div style="font:400 30px/1.1 'Cormorant Garamond',serif;letter-spacing:.06em;">Before &amp; After</div><div style="margin-top:8px;font:400 12px/1 'Pretendard';color:#6d675c;letter-spacing:.02em;">실제 사용 전후 · 자연스러운 변화</div></div>
+        <!-- 카드: 2단 카드 (좌 BEFORE · 우 AFTER) -->
+        <div style="display:flex;gap:6px;padding:0 6px;background:rgba(79,90,63,.07);">
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;background:#ddd6c7;"></div><span style="position:absolute;left:10px;top:10px;padding:3px 9px;border-radius:99px;background:rgba(42,39,35,.72);color:#f5f1ea;font:600 10px/1 'Pretendard';letter-spacing:.1em;">BEFORE</span></div>
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;background:#e6e0d2;"></div><span style="position:absolute;left:10px;top:10px;padding:3px 9px;border-radius:99px;background:#4f5a3f;color:#f5f1ea;font:600 10px/1 'Pretendard';letter-spacing:.1em;">AFTER</span></div>
+        </div>
+        <!-- 카드: 텍스트 (캡션) -->
+        <div style="padding:14px 30px 34px;text-align:center;background:rgba(79,90,63,.07);"><div style="font:400 12.5px/1.6 'Pretendard';color:#6d675c;">진정 시카 세럼 · 4주 사용 · 붉은기 개선</div></div>
+
+        <!-- 카드: 텍스트 (성분·특징 제목) -->
+        <div style="padding:44px 30px 6px;text-align:center;"><div style="font:500 12px/1 'Pretendard';letter-spacing:.2em;color:#4f5a3f;">CLEAN PROMISE</div></div>
+        <!-- 카드: 메뉴 (안 들어간 것 나열) -->
+        <div style="padding:18px 30px 40px;">
+          <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px;">
+            <span style="padding:9px 16px;border-radius:99px;background:rgba(79,90,63,.1);font:500 12.5px/1 'Pretendard';color:#3f4735;">무향료</span>
+            <span style="padding:9px 16px;border-radius:99px;background:rgba(79,90,63,.1);font:500 12.5px/1 'Pretendard';color:#3f4735;">무색소</span>
+            <span style="padding:9px 16px;border-radius:99px;background:rgba(79,90,63,.1);font:500 12.5px/1 'Pretendard';color:#3f4735;">비건</span>
+            <span style="padding:9px 16px;border-radius:99px;background:rgba(79,90,63,.1);font:500 12.5px/1 'Pretendard';color:#3f4735;">더모테스트 완료</span>
+            <span style="padding:9px 16px;border-radius:99px;background:rgba(79,90,63,.1);font:500 12.5px/1 'Pretendard';color:#3f4735;">저자극</span>
+          </div>
+        </div>
+
+        <!-- 카드: 구분선 -->
+        <div style="height:1px;background:rgba(42,39,35,.1);margin:0 30px;"></div>
+
+        <!-- 카드: 질문과답변 (후기 대체 아님 — 후기는 텍스트) 후기 3 -->
+        <!-- 카드: 텍스트 (후기) -->
+        <div style="padding:34px 30px 8px;text-align:center;"><div style="font:400 15px/1 'Pretendard';color:#4f5a3f;letter-spacing:.2em;">★★★★★</div><p style="margin:12px 0 4px;font:400 14px/1.6 'Pretendard';">"예민한 피부인데 붉은기가 확실히 줄었어요"</p><div style="font:400 12px/1 'Pretendard';color:#8c8474;">김*은</div></div>
+        <div style="padding:20px 30px 8px;text-align:center;"><div style="font:400 15px/1 'Pretendard';color:#4f5a3f;letter-spacing:.2em;">★★★★★</div><p style="margin:12px 0 4px;font:400 14px/1.6 'Pretendard';">"끈적임 없이 촉촉해요. 재구매합니다"</p><div style="font:400 12px/1 'Pretendard';color:#8c8474;">이*정</div></div>
+
+        <!-- 카드: 버튼 (구매) -->
+        <div style="padding:38px 30px 12px;"><div style="height:56px;border-radius:16px;background:#4f5a3f;color:#f5f1ea;display:flex;align-items:center;justify-content:center;font:600 15px/1 'Pretendard';">스토어에서 구매하기</div></div>
+        <!-- 카드: 버튼 (문의) -->
+        <div style="padding:0 30px 8px;"><div style="height:56px;border-radius:16px;background:rgba(79,90,63,.1);color:#3f4735;display:flex;align-items:center;justify-content:center;font:600 15px/1 'Pretendard';">카카오톡으로 문의하기</div></div>
+
+        <!-- 카드: SNS -->
+        <div style="padding:34px 30px 20px;display:flex;justify-content:center;gap:24px;">
+          <div style="text-align:center;"><div style="width:44px;height:44px;border-radius:99px;background:rgba(79,90,63,.12);margin:0 auto;"></div><div style="margin-top:8px;font:400 11px/1 'Pretendard';color:#8c8474;">Instagram</div></div>
+          <div style="text-align:center;"><div style="width:44px;height:44px;border-radius:99px;background:rgba(79,90,63,.12);margin:0 auto;"></div><div style="margin-top:8px;font:400 11px/1 'Pretendard';color:#8c8474;">YouTube</div></div>
+        </div>
+        <!-- 카드: 텍스트 (푸터) -->
+        <div style="padding:8px 0 40px;text-align:center;font:500 11px/1 'Pretendard';color:#b3ab9b;">이 페이지는 <span style="font-weight:700;color:#8c8474;">#CdBd</span> 로 만들었습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 시안 1b — 카탈로그 나열형 ══════════════════ -->
+  <div id="1b" style="position:relative;">
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:22px;max-width:404px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:26px;padding:0 10px;border-radius:99px;background:#23261f;color:#f2f3ee;font:700 13px/1 'Pretendard';">1b</span>
+        <span style="font:600 15px/1.3 'Pretendard';color:#23261f;">타이포 헤드라인 · 카탈로그 나열형</span>
+      </div>
+      <p style="margin:0;font:400 12.5px/1.6 'Pretendard';color:#5f665c;">타이포 히어로(이미지 절제) · 정보 밀도↑ · 제품=상품 카드 · 성분=메뉴 카드 · 스펙·가격 명확.</p>
+    </div>
+
+    <div style="width:404px;border-radius:42px;background:#111;padding:10px;box-shadow:0 40px 100px -30px rgba(30,35,25,.5);">
+      <div class="frame" style="border-radius:32px;overflow:hidden;background:#f2f3ee;color:#23261f;">
+
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;height:44px;padding:0 24px 6px;">
+          <span style="font:600 14px/1 'Pretendard';">9:41</span>
+          <div style="display:flex;gap:5px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#23261f"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.5" y="4" width="3" height="7" rx="1"></rect><rect x="9" y="2" width="3" height="9" rx="1"></rect><rect x="13.5" width="3" height="11" rx="1"></rect></svg><div style="width:22px;height:11px;border:1px solid rgba(35,38,31,.4);border-radius:3px;padding:1.5px;"><div style="height:100%;width:70%;background:#23261f;border-radius:1px;"></div></div></div>
+        </div>
+
+        <!-- 카드: 프로필 (로고+이름+소개) -->
+        <div style="padding:36px 28px 8px;">
+          <div style="width:56px;height:56px;border-radius:99px;background:#37402f;color:#f2f3ee;display:flex;align-items:center;justify-content:center;font:300 22px/1 'Cormorant Garamond',serif;letter-spacing:.06em;">O</div>
+          <div style="margin-top:18px;font:600 22px/1.3 'Pretendard';">온담 ONDAM</div>
+          <div style="margin-top:6px;font:400 14px/1.5 'Pretendard';color:#5f665c;">피부가 쉬어가는 클린 스킨케어</div>
+        </div>
+        <!-- 카드: 텍스트 (타이포 헤드라인) -->
+        <div style="padding:20px 28px 6px;">
+          <div style="font:400 34px/1.25 'Cormorant Garamond',serif;letter-spacing:.01em;">Less, but<br>enough for skin.</div>
+        </div>
+        <!-- 카드: 텍스트 (컬렉션) -->
+        <div style="padding:14px 28px 30px;"><span style="display:inline-block;padding:7px 14px;border-radius:99px;background:#37402f;color:#f2f3ee;font:600 11px/1 'Pretendard';letter-spacing:.14em;">2026 NEW · 진정 라인</span></div>
+
+        <!-- 카드: 이미지 (히어로 — 절제, 1장) -->
+        <div class="ph" style="aspect-ratio:16/10;background:linear-gradient(150deg,#e4e5df,#d6d8cf);margin:0 6px;border-radius:14px;"><span style="color:#9ba193;">대표 화보컷</span></div>
+
+        <!-- 카드: 텍스트 (스토리) -->
+        <div style="padding:34px 28px 24px;">
+          <div style="font:500 12px/1 'Pretendard';letter-spacing:.18em;color:#37402f;">STORY</div>
+          <p style="margin:14px 0 0;font:400 14px/1.85 'Pretendard';color:#42473d;text-wrap:pretty;">온담은 덜어내는 스킨케어입니다. 제주 유기농 병풀을 저온 추출해 꼭 필요한 성분만 담고, 향료·색소를 뺐습니다. 예민한 피부가 스스로 회복하도록 돕습니다.</p>
+        </div>
+
+        <!-- 카드: 메뉴 (성분·특징 아이콘 나열) -->
+        <div style="padding:8px 28px 34px;">
+          <div style="border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(35,38,31,.08);overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid rgba(35,38,31,.07);"><div style="width:34px;height:34px;border-radius:10px;background:rgba(55,64,47,.1);flex-shrink:0;"></div><div><div style="font:600 13.5px/1.3 'Pretendard';">병풀 95% 고함량</div><div style="font:400 12px/1.3 'Pretendard';color:#5f665c;">제주 유기농 저온 추출</div></div></div>
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid rgba(35,38,31,.07);"><div style="width:34px;height:34px;border-radius:10px;background:rgba(55,64,47,.1);flex-shrink:0;"></div><div><div style="font:600 13.5px/1.3 'Pretendard';">비건 · 더모테스트</div><div style="font:400 12px/1.3 'Pretendard';color:#5f665c;">저자극 임상 완료</div></div></div>
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 18px;"><div style="width:34px;height:34px;border-radius:10px;background:rgba(55,64,47,.1);flex-shrink:0;"></div><div><div style="font:600 13.5px/1.3 'Pretendard';">무향료 · 무색소</div><div style="font:400 12px/1.3 'Pretendard';color:#5f665c;">6-Free 클린 포뮬러</div></div></div>
+          </div>
+        </div>
+
+        <!-- 카드: 텍스트 (섹션 제목) -->
+        <div style="padding:6px 28px 16px;"><div style="font:600 18px/1.3 'Pretendard';">제품 라인업</div><div style="margin-top:4px;font:400 12.5px/1 'Pretendard';color:#5f665c;">2026 진정 라인 · 3종</div></div>
+
+        <!-- 카드: 상품 (이미지+정보+가격+버튼) ×3 -->
+        <div style="padding:0 28px 14px;">
+          <div style="display:flex;gap:14px;padding:14px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px rgba(35,38,31,.08);">
+            <div class="ph" style="width:96px;flex-shrink:0;aspect-ratio:3/4;border-radius:10px;background:#e2e3dd;"><span style="color:#a4a99c;">누끼컷</span></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+              <div style="font:600 15px/1.3 'Pretendard';">진정 시카 세럼</div>
+              <div style="margin-top:5px;font:400 12px/1.5 'Pretendard';color:#5f665c;">병풀 95% · 붉어짐 진정 · 30ml</div>
+              <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;"><span style="font:700 15px/1 'Pretendard';">₩38,000</span><span style="padding:8px 14px;border-radius:99px;background:#37402f;color:#f2f3ee;font:600 12px/1 'Pretendard';">구매</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:0 28px 14px;">
+          <div style="display:flex;gap:14px;padding:14px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px rgba(35,38,31,.08);">
+            <div class="ph" style="width:96px;flex-shrink:0;aspect-ratio:3/4;border-radius:10px;background:#dfe0da;"><span style="color:#a4a99c;">누끼컷</span></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+              <div style="font:600 15px/1.3 'Pretendard';">수분 배리어 크림</div>
+              <div style="margin-top:5px;font:400 12px/1.5 'Pretendard';color:#5f665c;">세라마이드·판테놀 · 장벽 강화 · 50ml</div>
+              <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;"><span style="font:700 15px/1 'Pretendard';">₩42,000</span><span style="padding:8px 14px;border-radius:99px;background:#37402f;color:#f2f3ee;font:600 12px/1 'Pretendard';">구매</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:0 28px 34px;">
+          <div style="display:flex;gap:14px;padding:14px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px rgba(35,38,31,.08);">
+            <div class="ph" style="width:96px;flex-shrink:0;aspect-ratio:3/4;border-radius:10px;background:#e3e4de;"><span style="color:#a4a99c;">누끼컷</span></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+              <div style="font:600 15px/1.3 'Pretendard';">저자극 클렌징 오일</div>
+              <div style="margin-top:5px;font:400 12px/1.5 'Pretendard';color:#5f665c;">올리브·호호바 · 부드러운 클렌징 · 200ml</div>
+              <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;"><span style="font:700 15px/1 'Pretendard';">₩29,000</span><span style="padding:8px 14px;border-radius:99px;background:#37402f;color:#f2f3ee;font:600 12px/1 'Pretendard';">구매</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Before / After ── -->
+        <!-- 카드: 텍스트 (섹션 제목) -->
+        <div style="padding:12px 28px 16px;"><div style="font:600 18px/1.3 'Pretendard';">Before / After</div><div style="margin-top:4px;font:400 12.5px/1.5 'Pretendard';color:#5f665c;">진정 시카 세럼 · 4주 사용 · 붉은기 개선</div></div>
+        <!-- 카드: 2단 카드 (좌 BEFORE · 우 AFTER) -->
+        <div style="display:flex;gap:8px;padding:0 28px 34px;">
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:1;border-radius:12px;background:#dcddd6;"></div><span style="position:absolute;left:8px;top:8px;padding:3px 9px;border-radius:99px;background:rgba(35,38,31,.72);color:#f2f3ee;font:600 10px/1 'Pretendard';letter-spacing:.08em;">BEFORE</span></div>
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:1;border-radius:12px;background:#e5e6e0;"></div><span style="position:absolute;left:8px;top:8px;padding:3px 9px;border-radius:99px;background:#37402f;color:#f2f3ee;font:600 10px/1 'Pretendard';letter-spacing:.08em;">AFTER</span></div>
+        </div>
+
+        <!-- 카드: 텍스트 (후기 섹션 제목) -->
+        <div style="padding:10px 28px 14px;background:rgba(55,64,47,.06);"><div style="font:600 15px/1.3 'Pretendard';">고객 후기</div></div>
+        <!-- 카드: 텍스트 (후기 3개, 조밀) -->
+        <div style="padding:0 28px 4px;background:rgba(55,64,47,.06);"><div style="padding:14px 0;border-bottom:1px solid rgba(35,38,31,.08);"><div style="font:400 12px/1 'Pretendard';color:#37402f;letter-spacing:.18em;">★★★★★</div><p style="margin:8px 0 4px;font:400 13.5px/1.5 'Pretendard';">"예민한 피부인데 붉은기가 확실히 줄었어요"</p><div style="font:400 11.5px/1 'Pretendard';color:#8a9080;">김*은</div></div></div>
+        <div style="padding:0 28px 4px;background:rgba(55,64,47,.06);"><div style="padding:14px 0;border-bottom:1px solid rgba(35,38,31,.08);"><div style="font:400 12px/1 'Pretendard';color:#37402f;letter-spacing:.18em;">★★★★★</div><p style="margin:8px 0 4px;font:400 13.5px/1.5 'Pretendard';">"끈적임 없이 촉촉해요. 재구매합니다"</p><div style="font:400 11.5px/1 'Pretendard';color:#8a9080;">이*정</div></div></div>
+        <div style="padding:0 28px 20px;background:rgba(55,64,47,.06);"><div style="padding:14px 0;"><div style="font:400 12px/1 'Pretendard';color:#37402f;letter-spacing:.18em;">★★★★☆</div><p style="margin:8px 0 4px;font:400 13.5px/1.5 'Pretendard';">"향이 없어서 더 안심돼요"</p><div style="font:400 11.5px/1 'Pretendard';color:#8a9080;">박*현</div></div></div>
+
+        <!-- 카드: 버튼 (구매) -->
+        <div style="padding:32px 28px 10px;"><div style="height:54px;border-radius:12px;background:#37402f;color:#f2f3ee;display:flex;align-items:center;justify-content:center;font:600 15px/1 'Pretendard';">전체 제품 스토어 보기</div></div>
+        <!-- 카드: 질문과답변 (문의) -->
+        <div style="padding:0 28px 34px;">
+          <div style="border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px rgba(35,38,31,.08);padding:18px;text-align:center;">
+            <div style="font:600 14px/1.4 'Pretendard';">궁금한 점이 있으신가요?</div>
+            <div style="margin-top:12px;height:44px;border-radius:8px;background:rgba(35,38,31,.05);display:flex;align-items:center;padding:0 14px;font:400 12.5px/1 'Pretendard';color:#9ba193;">이름을 입력하세요</div>
+            <div style="margin-top:8px;height:44px;border-radius:8px;background:rgba(35,38,31,.05);display:flex;align-items:center;padding:0 14px;font:400 12.5px/1 'Pretendard';color:#9ba193;">문의 내용을 입력하세요</div>
+            <div style="margin-top:12px;height:44px;border-radius:8px;background:#37402f;color:#f2f3ee;display:flex;align-items:center;justify-content:center;font:600 13.5px/1 'Pretendard';">문의 보내기</div>
+          </div>
+        </div>
+
+        <!-- 카드: SNS -->
+        <div style="padding:6px 28px 22px;display:flex;gap:10px;">
+          <div style="flex:1;height:46px;border-radius:10px;background:rgba(55,64,47,.09);display:flex;align-items:center;justify-content:center;font:600 12.5px/1 'Pretendard';color:#37402f;">Instagram</div>
+          <div style="flex:1;height:46px;border-radius:10px;background:rgba(55,64,47,.09);display:flex;align-items:center;justify-content:center;font:600 12.5px/1 'Pretendard';color:#37402f;">YouTube</div>
+        </div>
+        <!-- 카드: 텍스트 (푸터) -->
+        <div style="padding:6px 0 40px;text-align:center;font:500 11px/1 'Pretendard';color:#aab09f;">이 페이지는 <span style="font-weight:700;color:#8a9080;">#CdBd</span> 로 만들었습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 시안 1c — Before/After 스토리 중심형 ══════════════════ -->
+  <div id="1c" style="position:relative;">
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:22px;max-width:404px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:26px;padding:0 10px;border-radius:99px;background:#322d25;color:#efe7db;font:700 13px/1 'Pretendard';">1c</span>
+        <span style="font:600 15px/1.3 'Pretendard';color:#322d25;">Before/After 스토리 중심형</span>
+      </div>
+      <p style="margin:0;font:400 12.5px/1.6 'Pretendard';color:#6b6252;">미니멀 히어로 · 효과증명(Before/After)을 상단에 먼저 · 여백 많은 긴 스크롤 · 제품=2단 카드 · 성분=2단 카드.</p>
+    </div>
+
+    <div style="width:404px;border-radius:42px;background:#111;padding:10px;box-shadow:0 40px 100px -30px rgba(45,35,25,.5);">
+      <div class="frame" style="border-radius:32px;overflow:hidden;background:#efe7db;color:#322d25;">
+
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;height:44px;padding:0 24px 6px;">
+          <span style="font:600 14px/1 'Pretendard';">9:41</span>
+          <div style="display:flex;gap:5px;align-items:center;"><svg width="17" height="11" sc-camel-view-box="0 0 17 11" fill="#322d25"><rect y="7" width="3" height="4" rx="1"></rect><rect x="4.5" y="4" width="3" height="7" rx="1"></rect><rect x="9" y="2" width="3" height="9" rx="1"></rect><rect x="13.5" width="3" height="11" rx="1"></rect></svg><div style="width:22px;height:11px;border:1px solid rgba(50,45,37,.4);border-radius:3px;padding:1.5px;"><div style="height:100%;width:70%;background:#322d25;border-radius:1px;"></div></div></div>
+        </div>
+
+        <!-- 카드: 텍스트 (미니멀 브랜드) -->
+        <div style="padding:60px 34px 4px;text-align:center;"><div style="font:300 40px/1 'Cormorant Garamond',serif;letter-spacing:.16em;">ONDAM</div></div>
+        <!-- 카드: 텍스트 (태그라인) -->
+        <div style="padding:16px 34px 60px;text-align:center;"><div style="font:400 14px/1.6 'Pretendard';color:#6b6252;">온담 · 피부가 쉬어가는 클린 스킨케어</div><div style="margin-top:10px;font:500 11px/1 'Pretendard';letter-spacing:.2em;color:#7a4a38;">2026 NEW · 진정 라인</div></div>
+
+        <!-- ── Before / After 를 가장 먼저 (효과 증명 우선) ── -->
+        <!-- 카드: 텍스트 (섹션 제목) -->
+        <div style="padding:0 34px 8px;text-align:center;"><div style="font:400 28px/1.2 'Cormorant Garamond',serif;letter-spacing:.04em;">Real change</div></div>
+        <!-- 카드: 텍스트 (설명) -->
+        <div style="padding:0 34px 26px;text-align:center;"><p style="margin:0;font:400 13px/1.7 'Pretendard';color:#6b6252;">진정 시카 세럼을 4주 사용한 실제 변화. 과장 없이, 피부가 편안해지는 만큼만.</p></div>
+        <!-- 카드: 2단 카드 #1 (좌 BEFORE · 우 AFTER) -->
+        <div style="display:flex;gap:10px;padding:0 34px 12px;">
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;border-radius:16px;background:#e0d8cc;"></div><span style="position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:99px;background:rgba(50,45,37,.72);color:#efe7db;font:600 10px/1 'Pretendard';letter-spacing:.08em;">BEFORE</span></div>
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;border-radius:16px;background:#ece4d7;"></div><span style="position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:99px;background:#7a4a38;color:#efe7db;font:600 10px/1 'Pretendard';letter-spacing:.08em;">AFTER</span></div>
+        </div>
+        <!-- 카드: 텍스트 (캡션) -->
+        <div style="padding:6px 34px 40px;text-align:center;"><div style="font:400 12px/1.5 'Pretendard';color:#8a7f6c;">진정 시카 세럼 · 4주 · 붉은기 개선</div></div>
+
+        <!-- 카드: 2단 카드 #2 -->
+        <div style="display:flex;gap:10px;padding:0 34px 12px;">
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;border-radius:16px;background:#e2dacd;"></div><span style="position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:99px;background:rgba(50,45,37,.72);color:#efe7db;font:600 10px/1 'Pretendard';letter-spacing:.08em;">BEFORE</span></div>
+          <div style="flex:1;position:relative;"><div class="ph" style="aspect-ratio:3/4;border-radius:16px;background:#ede5d8;"></div><span style="position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:99px;background:#7a4a38;color:#efe7db;font:600 10px/1 'Pretendard';letter-spacing:.08em;">AFTER</span></div>
+        </div>
+        <!-- 카드: 텍스트 (캡션) -->
+        <div style="padding:6px 34px 56px;text-align:center;"><div style="font:400 12px/1.5 'Pretendard';color:#8a7f6c;">수분 배리어 크림 · 3주 · 당김 개선</div></div>
+
+        <!-- 카드: 텍스트 (후기 — 큰 인용) -->
+        <div style="padding:0 34px 12px;text-align:center;background:rgba(122,74,56,.07);padding-top:44px;"><div style="font:400 15px/1 'Pretendard';color:#7a4a38;letter-spacing:.2em;">★★★★★</div></div>
+        <div style="padding:14px 34px 44px;text-align:center;background:rgba(122,74,56,.07);"><p style="margin:0;font:400 18px/1.6 'Cormorant Garamond',serif;font-style:italic;color:#4a4236;">"예민한 피부인데 붉은기가 확실히 줄었어요."</p><div style="margin-top:14px;font:400 12px/1 'Pretendard';color:#8a7f6c;">김*은 · 실사용 후기</div></div>
+
+        <!-- 카드: 텍스트 (제품 섹션 제목) -->
+        <div style="padding:56px 34px 24px;text-align:center;"><div style="font:400 28px/1.2 'Cormorant Garamond',serif;letter-spacing:.04em;">The line</div><div style="margin-top:8px;font:400 12.5px/1 'Pretendard';color:#6b6252;">진정 라인 · 3종</div></div>
+
+        <!-- 카드: 2단 카드 (제품 — 좌 이미지 FIXED · 우 정보 FILL) ×3 -->
+        <div style="display:flex;gap:16px;align-items:center;padding:0 34px 28px;">
+          <div class="ph" style="width:120px;flex-shrink:0;aspect-ratio:3/4;border-radius:16px;background:#e4dccf;"><span style="color:#a99e88;">누끼컷</span></div>
+          <div style="flex:1;min-width:0;">
+            <div style="font:500 17px/1.3 'Pretendard';">진정 시카 세럼</div>
+            <div style="margin-top:8px;font:400 12.5px/1.6 'Pretendard';color:#6b6252;">병풀추출물 95%<br>붉어짐 진정 · 30ml</div>
+            <div style="margin-top:12px;font:700 15px/1 'Pretendard';">₩38,000</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;padding:0 34px 28px;">
+          <div class="ph" style="width:120px;flex-shrink:0;aspect-ratio:3/4;border-radius:16px;background:#e1d9cc;"><span style="color:#a99e88;">누끼컷</span></div>
+          <div style="flex:1;min-width:0;">
+            <div style="font:500 17px/1.3 'Pretendard';">수분 배리어 크림</div>
+            <div style="margin-top:8px;font:400 12.5px/1.6 'Pretendard';color:#6b6252;">세라마이드·판테놀<br>장벽 강화 · 50ml</div>
+            <div style="margin-top:12px;font:700 15px/1 'Pretendard';">₩42,000</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;padding:0 34px 52px;">
+          <div class="ph" style="width:120px;flex-shrink:0;aspect-ratio:3/4;border-radius:16px;background:#e5ddd0;"><span style="color:#a99e88;">누끼컷</span></div>
+          <div style="flex:1;min-width:0;">
+            <div style="font:500 17px/1.3 'Pretendard';">저자극 클렌징 오일</div>
+            <div style="margin-top:8px;font:400 12.5px/1.6 'Pretendard';color:#6b6252;">올리브·호호바<br>부드러운 클렌징 · 200ml</div>
+            <div style="margin-top:12px;font:700 15px/1 'Pretendard';">₩29,000</div>
+          </div>
+        </div>
+
+        <!-- 카드: 텍스트 (성분 섹션 제목) -->
+        <div style="padding:0 34px 20px;text-align:center;"><div style="font:400 28px/1.2 'Cormorant Garamond',serif;letter-spacing:.04em;">Clean promise</div></div>
+        <!-- 카드: 2단 카드 (성분·특징 2열) -->
+        <div style="display:flex;gap:12px;padding:0 34px 12px;">
+          <div style="flex:1;padding:20px 16px;border-radius:16px;background:rgba(122,74,56,.08);text-align:center;"><div style="width:32px;height:32px;border-radius:99px;background:rgba(122,74,56,.16);margin:0 auto;"></div><div style="margin-top:12px;font:500 13px/1.3 'Pretendard';">무향료·무색소</div></div>
+          <div style="flex:1;padding:20px 16px;border-radius:16px;background:rgba(122,74,56,.08);text-align:center;"><div style="width:32px;height:32px;border-radius:99px;background:rgba(122,74,56,.16);margin:0 auto;"></div><div style="margin-top:12px;font:500 13px/1.3 'Pretendard';">비건 포뮬러</div></div>
+        </div>
+        <div style="display:flex;gap:12px;padding:0 34px 52px;">
+          <div style="flex:1;padding:20px 16px;border-radius:16px;background:rgba(122,74,56,.08);text-align:center;"><div style="width:32px;height:32px;border-radius:99px;background:rgba(122,74,56,.16);margin:0 auto;"></div><div style="margin-top:12px;font:500 13px/1.3 'Pretendard';">더모테스트 완료</div></div>
+          <div style="flex:1;padding:20px 16px;border-radius:16px;background:rgba(122,74,56,.08);text-align:center;"><div style="width:32px;height:32px;border-radius:99px;background:rgba(122,74,56,.16);margin:0 auto;"></div><div style="margin-top:12px;font:500 13px/1.3 'Pretendard';">저자극 임상</div></div>
+        </div>
+
+        <!-- 카드: 텍스트 (브랜드 스토리 — 하단 배치) -->
+        <div style="padding:0 34px 52px;text-align:center;"><p style="margin:0;font:400 14px/1.9 'Pretendard';color:#4a4236;text-wrap:pretty;">온담은 덜어내는 스킨케어입니다. 제주 유기농 병풀을 저온 추출해 꼭 필요한 성분만 담았습니다. 피부가 스스로 쉬어갈 수 있도록.</p></div>
+
+        <!-- 카드: 이미지 (분위기 화보 — 하단 마무리) -->
+        <div class="ph" style="aspect-ratio:4/5;background:linear-gradient(160deg,#e6ddd0,#d7cdbd);margin:0 6px;border-radius:20px;"><span style="color:#a99e88;">브랜드 무드컷</span></div>
+
+        <!-- 카드: 버튼 (구매) -->
+        <div style="padding:44px 34px 12px;"><div style="height:56px;border-radius:99px;background:#7a4a38;color:#efe7db;display:flex;align-items:center;justify-content:center;font:600 15px/1 'Pretendard';">스토어에서 구매하기</div></div>
+        <!-- 카드: 버튼 (문의) -->
+        <div style="padding:0 34px 8px;"><div style="height:56px;border-radius:99px;background:rgba(122,74,56,.1);color:#5c3829;display:flex;align-items:center;justify-content:center;font:600 15px/1 'Pretendard';">카카오톡 문의하기</div></div>
+
+        <!-- 카드: SNS -->
+        <div style="padding:32px 34px 22px;text-align:center;">
+          <div style="font:400 12px/1 'Pretendard';color:#8a7f6c;letter-spacing:.02em;">@ondam.skin</div>
+          <div style="margin-top:16px;display:flex;justify-content:center;gap:14px;">
+            <div style="width:46px;height:46px;border-radius:99px;background:rgba(122,74,56,.12);"></div>
+            <div style="width:46px;height:46px;border-radius:99px;background:rgba(122,74,56,.12);"></div>
+          </div>
+        </div>
+        <!-- 카드: 텍스트 (푸터) -->
+        <div style="padding:10px 0 40px;text-align:center;font:500 11px/1 'Pretendard';color:#b0a68f;">이 페이지는 <span style="font-weight:700;color:#8a7f6c;">#CdBd</span> 로 만들었습니다.</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</x-dc>
+
+
+</body></html>
