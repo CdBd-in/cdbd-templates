@@ -7,7 +7,11 @@ def expand(style):
         if ':' not in p: continue
         k,v=p.split(':',1); k=k.strip().lower(); v=v.strip()
         if k=='font':
-            m=re.match(r"(\d+)\s+([\d.]+)px(?:/([\d.]+))?\s+(.+)", v)
+            # ⚠️ 'font: italic 400 26px/1 ...' 처럼 style/variant 키워드가 앞설 수 있다.
+            #    예전 정규식은 weight로 시작한다고 가정해 매치 실패 → 크기·폰트가 통째로 버려졌다.
+            #    기울임은 CdBd에 없는 옵션이라(CLAUDE.md 폰트 원칙 11) 읽고 나서 버린다 = 정체로 렌더.
+            m=re.match(r"(?:(?:italic|oblique|small-caps|normal)\s+)*"
+                       r"(\d+)\s+([\d.]+)px(?:/([\d.]+))?\s+(.+)", v)
             if m:
                 d['font-weight']=m.group(1); d['font-size']=float(m.group(2))
                 if m.group(3): d['line-height']=float(m.group(3))
