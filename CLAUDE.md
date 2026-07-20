@@ -329,6 +329,8 @@ CdBd 페이지 = **평면 카드 스택**(중첩 그룹 컨테이너 없음). �
 
 | 함정 | 해결 |
 |---|---|
+| **🔐 어드민(6단계) 작업 중 폼이 초기화되며 `cdbd.in/login?redirect=/editor`로 이탈 (2026-07-20)** — 어드민은 **본사이트 세션도 함께** 요구 | **① `www.cdbd.in/login` → ② `cdbd-admin.vercel.app/login` → ③ 폼 작업** 순서. 입력은 **`$B chain`으로 한 번에**, 필드는 **JS로 id 부여 후 `#id` fill**(@eN ref는 무효화되며 「에디터 ID」 옆 버튼을 눌러 폼이 날아감). 풀버전: [[1-7. 템플릿 상세 페이지#🤖 6단계 어드민 등록 자동화 패턴]] |
+| **에디터 카드 타입·순서 추출 = `card-driver.js` 주입이 정답 (2026-07-20)** — DOM SVG 시그니처 방식은 라벨/아이콘이 겹쳐 **오분류**(전화 상담과 여백이 같은 시그니처로 잡힘) | `$B eval .claude/skills/cdbd-card-automation/card-driver.js` → `window.__cdbd.count()`(타입별 개수) · `boardRows()`+`blockOfRow()`(순서·라벨). ⚠️ **에디터 로딩 10초 이상 대기** 후 주입할 것(빨리 주입하면 팔레트 3개만 잡힘) |
 | **OG 썸네일 = 이 에디터 버전에선 자동화 가능 (2026-07-09, 문서 정정)** — 구 "OG 썸네일 수동(OS 파일 다이얼로그)" 기록은 outdated | 썸네일 hover 오버레이 onClick=`L("metadata")` → 표준 이미지 라이브러리 모달(react-dropzone) 열림 → 함정23 `onDrop` + 셀 fiber `onClick`(적용, `memoizedProps.onClick` 호출)으로 완전 자동화. **영속은 발행(URL 생성) 필요** · **slug 하이픈 금지**(영문·숫자·`_`·`.`만 → `asera-gala`→`asera_gala`). 발행 시 크레딧 확인 모달(120C/월). **💰 크레딧 0이어도 포인트 잔액으로 발행(URL 생성) 대체 가능** (2026-07-14 사용자 확인) — 크레딧=0이라고 발행이 하드블록은 아님, 포인트 차감으로 진행됨. (OG 썸네일 영속화도 포인트로 되는지는 미확인) |
 | `$B click @e1` multiple match 에러 | snapshot 후 ref 재취득 또는 `document.querySelectorAll('button')[N].click()` |
 | 멀티페이지 에디터 열고 바로 추출 | 마지막에 본 페이지가 열림 → **명시적으로 페이지 1 클릭 후 추출** |
