@@ -47,6 +47,33 @@ function mkText(txt,inh){
   t.textAlignHorizontal=inh['text-align']==='center'?'CENTER':(inh['text-align']==='right'?'RIGHT':'LEFT');
   return t;
 }
+// CSS border → Figma stroke.
+// ⚠️ 예전엔 box-shadow:inset 만 테두리로 인식했다 → border / border-top 으로 그린 구분선이 전부 사라졌다.
+// 한 줄짜리 구분선(border-top)은 Figma 개별 변 두께(strokeTopWeight 등)로 재현한다.
+function parseBorder(v){ v=String(v||'').trim(); if(!v||v==='none'||v.indexOf('none')===0) return null;
+  const w=v.match(/^([\d.]+)px/); const c=v.match(/rgba?\([^)]*\)|#[0-9a-fA-F]{3,6}/);
+  if(!w||!c) return null; const px=parseFloat(w[1]); if(!(px>0)) return null;
+  return {w:px, c:c[0]}; }
+function applyBorders(f,st){
+  const all=parseBorder(st.border);
+  const sides={top:parseBorder(st['border-top']),right:parseBorder(st['border-right']),
+               bottom:parseBorder(st['border-bottom']),left:parseBorder(st['border-left'])};
+  const any=all||sides.top||sides.right||sides.bottom||sides.left;
+  if(!any) return;
+  try{ f.strokes=[solid(any.c)]; f.strokeAlign='INSIDE'; }catch(e){ return; }
+  if(all && !sides.top && !sides.right && !sides.bottom && !sides.left){
+    try{ f.strokeWeight=all.w; }catch(e){}
+    return;
+  }
+  // 변별 두께 (지정 안 된 변은 border 일괄값, 그것도 없으면 0)
+  const base=all?all.w:0;
+  try{
+    f.strokeTopWeight    = sides.top    ? sides.top.w    : base;
+    f.strokeRightWeight  = sides.right  ? sides.right.w  : base;
+    f.strokeBottomWeight = sides.bottom ? sides.bottom.w : base;
+    f.strokeLeftWeight   = sides.left   ? sides.left.w   : base;
+  }catch(e){ try{ f.strokeWeight=any.w; }catch(e2){} }
+}
 function isInline(c){const s=c.style||{}; return (c.tag==='span'||c.tag==='b'||c.tag==='strong'||c.tag==='br') && !s.background && !s.padding && !s['border-radius'] && !s.display;}
 function collectSegs(n,inh,out){ const i2=merge(inh,n.style||{});
   for(const c of (n.children||[])){ if(c.tag==='#text') out.push({t:c.text,inh:i2}); else if(c.tag==='br') out.push({t:'\n',inh:i2}); else collectSegs(c,i2,out); } return out; }
@@ -65,7 +92,8 @@ function render(n,inh){
   const st=n.style||{}; const inh2=merge(inh,st);
   const texts=(n.children||[]).filter(c=>c.tag==='#text');
   const elems=(n.children||[]).filter(c=>c.tag!=='#text');
-  const hasBox=st.background||st.padding||st['border-radius']||st['box-shadow']||st.display==='flex';
+  const hasBorder=!!(st.border||st['border-top']||st['border-right']||st['border-bottom']||st['border-left']);
+  const hasBox=st.background||st.padding||st['border-radius']||st['box-shadow']||hasBorder||st.display==='flex';
   const inlineOnly=elems.length>0 && elems.every(isInline);
   if(texts.length && !elems.length && !hasBox){ return mkText(texts.map(t=>t.text).join(' '),inh2); }
   if(texts.length && inlineOnly && !hasBox){ return mkInline(n,inh); }
@@ -78,6 +106,7 @@ function render(n,inh){
   if(st.gap) f.itemSpacing=num(st.gap); else f.itemSpacing=0;
   if(st['border-radius']) f.cornerRadius=Math.min(num(st['border-radius']),999);
   if(st['box-shadow'] && String(st['box-shadow']).indexOf('inset')>=0){ const c=(String(st['box-shadow']).match(/rgba?\([^)]*\)|#[0-9a-fA-F]{3,6}/)||[])[0]; if(c){ f.strokes=[solid(c)]; f.strokeWeight=1; f.strokeAlign='INSIDE'; } }
+  applyBorders(f,st);
   if(st['justify-content']==='space-between') f.primaryAxisAlignItems='SPACE_BETWEEN';
   const jcC=(st['justify-content']==='center'); if(jcC) f.primaryAxisAlignItems='CENTER';
   if(st['align-items']==='center') f.counterAxisAlignItems='CENTER';
