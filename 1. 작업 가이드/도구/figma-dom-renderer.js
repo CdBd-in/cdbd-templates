@@ -21,9 +21,23 @@ function wmap(w,serif){const n=parseInt(w)||400; if(n<=300)return 'Light'; if(n<
 async function loadAll(){
   for(const s of ['Light','Regular','Medium','SemiBold','Bold','ExtraBold']){try{await figma.loadFontAsync({family:'Pretendard',style:s});}catch(e){}}
   for(const s of ['Light','Regular','Medium','SemiBold','Bold']){try{await figma.loadFontAsync({family:'Cormorant Garamond',style:s});}catch(e){}}
-  for(const s of ['Light','Regular','Medium','SemiBold','Bold']){try{await figma.loadFontAsync({family:'Noto Serif KR',style:s});}catch(e){}}
+  for(const s of ['Light','Regular','Medium','SemiBold','Bold','Black']){try{await figma.loadFontAsync({family:'Noto Serif KR',style:s});}catch(e){}}
+  for(const s of ['Regular','Bold']){try{await figma.loadFontAsync({family:'Gowun Batang',style:s});}catch(e){}}
 }
 function hasKo(s){return /[\uAC00-\uD7A3]/.test(s);}
+// CSS font-family \uBB38\uC790\uC5F4 \u2192 Figma \uC2E4\uC7AC \uD3F0\uD2B8.
+// \uB098\uB214\uBA85\uC870\u00B7\uB098\uB214\uACE0\uB515\uC740 Figma\uC5D0 \uC5C6\uB2E4(1-4. \uD3F0\uD2B8 47\uD589) \u2192 \uBCF8\uBA85\uC870(Noto Serif KR)\uB85C \uB300\uCCB4.
+// CdBd \uC5D0\uB514\uD130\uC5D0\uB294 \uB098\uB214\uBA85\uC870\uAC00 \uC788\uC73C\uBBC0\uB85C 4\uB2E8\uACC4\uC5D0\uC11C \uC6D0\uB798 \uD3F0\uD2B8\uB85C \uB418\uB3CC\uB9B0\uB2E4.
+const SERIF_RE=/nanum\s*myeongjo|myeongjo|batang|serif|cormorant|garamond|instrument|times|georgia/i;
+const LATIN_SERIF_RE=/cormorant|garamond|instrument|times|georgia/i;
+function isSerifFam(fam){return SERIF_RE.test(String(fam||''));}
+function famOf(fam,txt){
+  fam=String(fam||'');
+  if(!isSerifFam(fam)) return 'Pretendard';
+  if(hasKo(txt)) return 'Noto Serif KR';                 // \uD55C\uAE00 \uBA85\uC870
+  if(LATIN_SERIF_RE.test(fam)) return 'Cormorant Garamond'; // \uB77C\uD2F4 \uC804\uC6A9 \uC138\uB9AC\uD504
+  return 'Noto Serif KR';                                 // \uB098\uB214\uBA85\uC870 \uACC4\uC5F4\uC758 \uB77C\uD2F4\uB3C4 \uBCF8\uBA85\uC870\uB85C \uD1B5\uC77C
+}
 function mkText(txt,inh){
   const serif=inh['font-family']==='serif'; const fam=serif?(hasKo(txt)?'Noto Serif KR':'Cormorant Garamond'):'Pretendard';
   const t=figma.createText(); t.fontName={family:fam,style:wmap(inh['font-weight'],serif)};

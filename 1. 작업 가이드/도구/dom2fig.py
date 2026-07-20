@@ -11,7 +11,9 @@ def expand(style):
             if m:
                 d['font-weight']=m.group(1); d['font-size']=float(m.group(2))
                 if m.group(3): d['line-height']=float(m.group(3))
-                d['font-family']='serif' if 'Cormorant' in m.group(4) else 'sans'
+                # ⚠️ 예전엔 'serif'/'sans' 2값으로 뭉갰다 → 나눔명조 등이 전부 Pretendard로 떨어짐.
+                #    실제 패밀리 문자열을 그대로 보존하고, 매핑은 렌더러(famOf)가 한다.
+                d['font-family']=m.group(4).strip()
             continue
         d[k]=v
     return d
