@@ -20,7 +20,7 @@ purpose: 신규 템플릿 3종(coach-card·startup-deck·beauty-catalog)의 1~3�
 |---|---|---|---|---|
 | **coach-card** | [[3. 신규 템플릿 기획/coach-card — 기획]] | [[3. 신규 템플릿 기획/시안-coach-card.html]] | `1147:940` (x24388) | 3안 편집본 완료 |
 | **startup-deck** | [[3. 신규 템플릿 기획/startup-deck — 기획]] · [[3. 신규 템플릿 기획/startup-deck — 기획 (멀티페이지)]] | [[3. 신규 템플릿 기획/시안-startup-deck.html]] | `1161:1026` (x26801) | **2a 확정** + 수정 반영 + 이미지 완료 |
-| **beauty-catalog** | [[3. 신규 템플릿 기획/beauty-catalog — 기획]] | [[3. 신규 템플릿 기획/시안-beauty-catalog.html]] | `1255:23` (x29200) | 3안 편집본 완료(DOM 변환) · 이미지 미착수 |
+| **beauty-catalog** | ~~기획 문서~~ (2026-07-20 삭제) | [[3. 신규 템플릿 기획/시안-beauty-catalog.html]] | `1255:23` (x29200) · **확정 시안 `1305:1193`** | **확정 시안 완료** — 좌우 여백·B&A 2세트·CLEAN PROMISE 4칸·이미지 12장+아이콘 4장 적용 |
 
 ### 주요 노드 ID
 - **coach-card**: 1a=`1176:23` (자격 나열 → 2단 카드 변환·섹션 간격 48 적용) · 기타 1b/1c는 섹션 내
