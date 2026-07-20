@@ -39,7 +39,7 @@ function famOf(fam,txt){
   return 'Noto Serif KR';                                 // \uB098\uB214\uBA85\uC870 \uACC4\uC5F4\uC758 \uB77C\uD2F4\uB3C4 \uBCF8\uBA85\uC870\uB85C \uD1B5\uC77C
 }
 function mkText(txt,inh){
-  const serif=inh['font-family']==='serif'; const fam=serif?(hasKo(txt)?'Noto Serif KR':'Cormorant Garamond'):'Pretendard';
+  const serif=isSerifFam(inh['font-family']); const fam=famOf(inh['font-family'],txt);
   const t=figma.createText(); t.fontName={family:fam,style:wmap(inh['font-weight'],serif)};
   t.characters=txt; t.fontSize=inh['font-size']||14;
   t.fills=paintFrom(inh['color']||'#222222'); t.textAutoResize='HEIGHT';
@@ -54,8 +54,8 @@ function mkInline(n,inh){ const segs=collectSegs(n,inh,[]); if(!segs.length) ret
   let full=''; const ranges=[];
   for(const s of segs){ const start=full.length; const piece=(s.t==='\n')?'\n':((full && !full.endsWith('\n'))?' ':'')+s.t; full+=piece; ranges.push({a:start+(piece.length-s.t.length),b:full.length,inh:s.inh}); }
   const base=segs[0].inh; const t=mkText(full,base);
-  for(const rg of ranges){ if(rg.a>=rg.b) continue; const ih=rg.inh; const serif=ih['font-family']==='serif';
-    const fam=serif?(hasKo(full.slice(rg.a,rg.b))?'Noto Serif KR':'Cormorant Garamond'):'Pretendard';
+  for(const rg of ranges){ if(rg.a>=rg.b) continue; const ih=rg.inh; const serif=isSerifFam(ih['font-family']);
+    const fam=famOf(ih['font-family'], full.slice(rg.a,rg.b));
     try{ t.setRangeFontName(rg.a,rg.b,{family:fam,style:wmap(ih['font-weight'],serif)}); }catch(e){}
     try{ if(ih['font-size']) t.setRangeFontSize(rg.a,rg.b,ih['font-size']); }catch(e){}
     try{ if(ih['color']) t.setRangeFills(rg.a,rg.b,paintFrom(ih['color'])); }catch(e){}
@@ -89,6 +89,14 @@ function render(n,inh){
     const child=render(c,inh2); if(!child) continue;
     const cst=c.style||{};
     if(cst.position==='absolute'){ abs.push({node:child,st:cst}); f.appendChild(child); continue; }
+    // margin 지원: Figma 오토레이아웃엔 margin이 없으므로 앞뒤에 투명 스페이서를 끼운다.
+    // (padding으로 접으면 배경 있는 요소 — 예: height:1px 구분선 — 이 두꺼워진다)
+    const mg=px4(cst.margin); const vertical=!row;
+    const spacer=(px)=>{ const s=figma.createAutoLayout('VERTICAL'); s.name='margin'; s.fills=[];
+      s.itemSpacing=0; s.paddingTop=0;s.paddingRight=0;s.paddingBottom=0;s.paddingLeft=0;
+      s.counterAxisSizingMode='FIXED'; s.resize(vertical?f.width||1:px, vertical?px:(f.height||1));
+      s.primaryAxisSizingMode='FIXED'; return s; };
+    if(vertical && mg[0]>0){ const s=spacer(mg[0]); f.appendChild(s); try{s.layoutSizingHorizontal='FILL'; s.layoutSizingVertical='FIXED'; s.resize(s.width,mg[0]);}catch(e){} }
     f.appendChild(child);
     try{
       if(grid && c.w){ child.layoutSizingHorizontal='FIXED'; child.resize(c.w, c.h||child.height); }
@@ -99,6 +107,7 @@ function render(n,inh){
       else if(cst['min-height']){ try{ child.layoutSizingVertical='FIXED'; child.resize(child.width, num(cst['min-height'])); }catch(e){} }
     }catch(e){}
     if(c.h){ try{ child.layoutSizingVertical='FIXED'; child.resize(child.width, c.h); }catch(e){} }
+    if(vertical && mg[2]>0){ const s=spacer(mg[2]); f.appendChild(s); try{s.layoutSizingHorizontal='FILL'; s.layoutSizingVertical='FIXED'; s.resize(s.width,mg[2]);}catch(e){} }
   }
   for(const a of abs){ try{ a.node.layoutPositioning='ABSOLUTE';
       const L=num(a.st.left), B=num(a.st.bottom), T=num(a.st.top);
