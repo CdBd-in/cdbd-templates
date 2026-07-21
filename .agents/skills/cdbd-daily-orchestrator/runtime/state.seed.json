@@ -1,0 +1,19 @@
+{
+  "queue": [
+    "gala-rsvp", "church-rsvp", "omakase-reserve", "event-ticket",
+    "beauty-catalog", "interior-portfolio", "freelancer-card",
+    "coach-card", "startup-deck", "trade-show", "agency-card",
+    "medical-slot", "popup-timed"
+  ],
+  "retry_queue": [],
+  "recent_moods": [],
+  "completed": [],
+  "params": {
+    "retry_limit": 2,
+    "approval_backlog_limit": 5,
+    "queue_low_threshold": 3,
+    "recent_moods_window": 5
+  },
+  "last_run": null,
+  "paused": false
+}
