@@ -147,6 +147,7 @@ function render(n,inh){
       else if(cst['min-height']){ try{ child.layoutSizingVertical='FIXED'; child.resize(child.width, num(cst['min-height'])); }catch(e){} }
     }catch(e){}
     if(c.h){ try{ child.layoutSizingVertical='FIXED'; child.resize(child.width, c.h); }catch(e){} }
+    if(c.tag==='image-slot' && vertical){ try{ child.layoutSizingVertical='FILL'; }catch(e){} }
     if(vertical && mg[2]>0){ const s=spacer(mg[2]); f.appendChild(s); try{s.layoutSizingHorizontal='FILL'; s.layoutSizingVertical='FIXED'; s.resize(s.width,mg[2]);}catch(e){} }
   }
   for(const a of abs){ try{ a.node.layoutPositioning='ABSOLUTE';
