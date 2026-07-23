@@ -47,6 +47,7 @@ class Tree(HTMLParser):
         if tag not in s.VOID: s.stack.append(n)
     def handle_startendtag(s,tag,attrs): pass
     def handle_endtag(s,tag):
+        if tag in s.VOID: return  # <image-slot></image-slot> 등 void의 닫는 태그는 스택 pop 금지
         if len(s.stack)>1: s.stack.pop()
     def handle_data(s,data):
         t=data.strip()
