@@ -41,9 +41,9 @@ function famOf(fam,txt){
 function mkText(txt,inh){
   const serif=isSerifFam(inh['font-family']); const fam=famOf(inh['font-family'],txt);
   const t=figma.createText(); t.fontName={family:fam,style:wmap(inh['font-weight'],serif)};
-  t.characters=txt; t.fontSize=num(inh['font-size'])||14;
+  t.characters=txt; t.fontSize=inh['font-size']||14;
   t.fills=paintFrom(inh['color']||'#222222'); t.textAutoResize='HEIGHT';
-  if(inh['line-height']!==undefined) t.lineHeight={unit:'PERCENT',value:Math.round((num(inh['line-height'])||1.4)*100)};
+  if(inh['line-height']) t.lineHeight={unit:'PERCENT',value:Math.round(inh['line-height']*100)};
   t.textAlignHorizontal=inh['text-align']==='center'?'CENTER':(inh['text-align']==='right'?'RIGHT':'LEFT');
   return t;
 }
@@ -84,7 +84,7 @@ function mkInline(n,inh){ const segs=collectSegs(n,inh,[]); if(!segs.length) ret
   for(const rg of ranges){ if(rg.a>=rg.b) continue; const ih=rg.inh; const serif=isSerifFam(ih['font-family']);
     const fam=famOf(ih['font-family'], full.slice(rg.a,rg.b));
     try{ t.setRangeFontName(rg.a,rg.b,{family:fam,style:wmap(ih['font-weight'],serif)}); }catch(e){}
-    try{ if(ih['font-size']!==undefined) t.setRangeFontSize(rg.a,rg.b,num(ih['font-size'])); }catch(e){}
+    try{ if(ih['font-size']) t.setRangeFontSize(rg.a,rg.b,ih['font-size']); }catch(e){}
     try{ if(ih['color']) t.setRangeFills(rg.a,rg.b,paintFrom(ih['color'])); }catch(e){}
   }
   return t; }
