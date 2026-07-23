@@ -1,7 +1,7 @@
 ---
 created: 2026-07-03
 session_topic: "하루 4개 작업 스트림 통합 — (1) 라이브 18개 에디터 구조 피그마 재현 파이프라인 (초대·예약 6개 완성) (2) vip-dinner 시안 제작·template-brief design-free 전환·에디터 이전 시도 (3) interior-portfolio 멀티페이지 브리프 개정·claude design 시안 3종 피그마 이전 (4) interior-portfolio 여백-스케일 CdBd 시안 직접 제작·내추럴 무드 적용"
-related: "[[../CLAUDE.md]], [[../3. 신규 템플릿 기획/3-0. 신규 템플릿 18건 정리]], [[../2. CdBd 템플릿 현황/.data/live-editor-structures/_index.md]], [[../.claude/skills/template-brief/SKILL.md]], [[../1. 작업 가이드/1-0. 템플릿 기획 워크플로우]], [[2026-06-19 웨딩 초대장 3시안 리팩토링·여백 우선순위 원칙 진화]]"
+related: "[[../CLAUDE.md]], [[../3. 신규 템플릿 기획/3-0. 신규 템플릿 18건 정리]], [[../2. CdBd 템플릿 현황/.data/live-editor-structures/_index.md]], [[../.claude/skills/template-brief/SKILL.md]], [[../1. 작업 가이드/1-0. 템플릿 기획 워크플로우]]"
 ---
 
 # 세션 컨텍스트 — 2026-07-03 (종합)
