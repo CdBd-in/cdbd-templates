@@ -30,7 +30,7 @@ function hasKo(s){return /[\uAC00-\uD7A3]/.test(s);}
 // CdBd \uC5D0\uB514\uD130\uC5D0\uB294 \uB098\uB214\uBA85\uC870\uAC00 \uC788\uC73C\uBBC0\uB85C 4\uB2E8\uACC4\uC5D0\uC11C \uC6D0\uB798 \uD3F0\uD2B8\uB85C \uB418\uB3CC\uB9B0\uB2E4.
 const SERIF_RE=/nanum\s*myeongjo|myeongjo|batang|serif|cormorant|garamond|instrument|times|georgia/i;
 const LATIN_SERIF_RE=/cormorant|garamond|instrument|times|georgia/i;
-function isSerifFam(fam){return SERIF_RE.test(String(fam||''));}
+function isSerifFam(fam){const first=String(fam||'').split(',')[0].trim(); if(/sans-?serif/i.test(first)) return false; return SERIF_RE.test(first);}
 function famOf(fam,txt){
   fam=String(fam||'');
   if(!isSerifFam(fam)) return 'Pretendard';
