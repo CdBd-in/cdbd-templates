@@ -131,7 +131,11 @@ function render(n,inh){
     if(cst.position==='absolute'){ abs.push({node:child,st:cst}); f.appendChild(child); continue; }
     // margin 지원: Figma 오토레이아웃엔 margin이 없으므로 앞뒤에 투명 스페이서를 끼운다.
     // (padding으로 접으면 배경 있는 요소 — 예: height:1px 구분선 — 이 두꺼워진다)
-    const mg=px4(cst.margin); const vertical=!row;
+    const _mArr=px4(cst.margin); const vertical=!row;
+    const mg=[ cst['margin-top']!==undefined?num(cst['margin-top']):_mArr[0],
+               cst['margin-right']!==undefined?num(cst['margin-right']):_mArr[1],
+               cst['margin-bottom']!==undefined?num(cst['margin-bottom']):_mArr[2],
+               cst['margin-left']!==undefined?num(cst['margin-left']):_mArr[3] ];
     const spacer=(px)=>{ const s=figma.createAutoLayout('VERTICAL'); s.name='margin'; s.fills=[];
       s.itemSpacing=0; s.paddingTop=0;s.paddingRight=0;s.paddingBottom=0;s.paddingLeft=0;
       s.counterAxisSizingMode='FIXED'; s.resize(vertical?f.width||1:px, vertical?px:(f.height||1));
