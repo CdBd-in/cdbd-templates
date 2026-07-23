@@ -40,6 +40,9 @@ class Tree(HTMLParser):
         a=dict(attrs); st=expand(a.get('style',''))
         if 'ph' in (a.get('class','') or '').split(): st['_ph']=True
         n={'tag':tag,'style':st,'children':[],'text':None}
+        if tag=='image-slot':
+            n['ph_text']=a.get('placeholder') or '이미지'
+            n['shape']=a.get('shape') or 'rect'
         s.stack[-1]['children'].append(n)
         if tag not in s.VOID: s.stack.append(n)
     def handle_startendtag(s,tag,attrs): pass

@@ -90,6 +90,16 @@ function mkInline(n,inh){ const segs=collectSegs(n,inh,[]); if(!segs.length) ret
   return t; }
 function render(n,inh){
   const st=n.style||{}; const inh2=merge(inh,st);
+  if(n.tag==='image-slot'){
+    const f=figma.createAutoLayout('VERTICAL'); f.name='이미지 슬롯';
+    f.fills=[{type:'SOLID',color:{r:0.898,g:0.867,b:0.816}}];
+    f.primaryAxisAlignItems='CENTER'; f.counterAxisAlignItems='CENTER';
+    f.paddingTop=10;f.paddingBottom=10;f.paddingLeft=14;f.paddingRight=14; f.itemSpacing=0;
+    if(n.shape==='circle'){ f.cornerRadius=999; }
+    const t=mkText('🖼  '+(n.ph_text||'이미지'), {'font-size':'12','color':'#8A7F6E','text-align':'center','line-height':'1.4'});
+    f.appendChild(t); try{t.layoutSizingHorizontal='FILL';}catch(e){}
+    return f;
+  }
   const texts=(n.children||[]).filter(c=>c.tag==='#text');
   const elems=(n.children||[]).filter(c=>c.tag!=='#text');
   const hasBorder=!!(st.border||st['border-top']||st['border-right']||st['border-bottom']||st['border-left']);
@@ -105,6 +115,7 @@ function render(n,inh){
   const p=px4(st.padding); f.paddingTop=p[0];f.paddingRight=p[1];f.paddingBottom=p[2];f.paddingLeft=p[3];
   if(st.gap) f.itemSpacing=num(st.gap); else f.itemSpacing=0;
   if(st['border-radius']) f.cornerRadius=Math.min(num(st['border-radius']),999);
+  if(st['border-radius'] && (st.overflow==='hidden'||st['overflow-x']==='hidden')){ try{f.clipsContent=true;}catch(e){} }
   if(st['box-shadow'] && String(st['box-shadow']).indexOf('inset')>=0){ const c=(String(st['box-shadow']).match(/rgba?\([^)]*\)|#[0-9a-fA-F]{3,6}/)||[])[0]; if(c){ f.strokes=[solid(c)]; f.strokeWeight=1; f.strokeAlign='INSIDE'; } }
   applyBorders(f,st);
   if(st['justify-content']==='space-between') f.primaryAxisAlignItems='SPACE_BETWEEN';
