@@ -27,6 +27,7 @@ description: CdBd 시안 파이프라인 D2 — 콘텐츠 팩 + 레이아웃 스
 - **반드시 내용을 확인하고 고른다**: 후보들의 TEXT를 `getStyledTextSegments(['fontSize','fontName'])` + `characters`로 덤프하거나, 셀을 `get_screenshot`으로 본다.
 - **슬롯이 콘텐츠와 맞는지**가 1순위 (예: `항목⏎세부 정보` = 시간+제목+설명 / `★★★★★`+`리뷰 내용` = 리뷰 / `00단위` = 통계).
 - **크기 폭을 보고 위계에 맞는 걸 고른다** — 같은 서랍에도 히어로 제목 `22/24/28/36`이 다 있다. **하필 최소값을 고르면 D3가 고생한다.**
+- 📖 **스토리(소개글) 첫 문단이 짧으면 = 첫 줄 18px Bold 「리드」형 프리셋 (필수, 2026-07-24 이선호)** — 스토리 첫 문단이 **짧을 때(1줄 정도)** 는 첫 줄을 **18px Bold 리드**로 세우는 프리셋([3979:12371](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=3979-12371))을 쓴다. **균일 15px Regular 본문형**([3310:6568](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=3310-6568))은 짧은 첫 문단이 힘없이 떠서 ❌. (첫 문단이 길어 여러 줄로 감기면 균일 본문형 OK.) 리드 18px Bold / 본문 15px Regular · 줄간격·여백은 동일.
 - **선택 이유를 기록** (`picks[].reason`).
 
 ### 2. 복제 → 조립 (페이지 전환 1회 제약 때문에 2호출)
