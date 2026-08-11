@@ -68,6 +68,10 @@
   - 카탈로그·상세는 SSR 메타(og:title)가 항상 CdBd 기본값 → `curl | grep og:title`로 검증 불가. **브라우저 렌더 후 본문 텍스트로 확인.** (카드 문구는 Next.js flight payload라 `<script>` 안에도 있어 innerText 매칭 시 오탐 주의)
 - **어드민 URL**: https://cdbd-admin.vercel.app/login (동일 계정 로그인)
   - 신규 템플릿 등록: **템플릿 → 템플릿 관리 → 템플릿 추가**
+- **🧩 AI 섹션 프리셋 등록/확인 (관리자 전용 · 프리뷰 도메인에서만, 2026-08-11)** — 에디터 네이티브 「프리셋 저장」 기능. **라이브 `cdbd.in` 아님** — 아래 프리뷰 도메인에서만 동작. 동일 계정(`account@emka.group`).
+  - **에디터(등록)**: `https://cdbd-client-git-ai-makevu-s-team.vercel.app/` → 에디터 상단 `프리셋 설정 → 프리셋 저장`
+  - **프리셋 어드민(확인)**: `https://cdbd-client-git-ai-makevu-s-team.vercel.app/admin/ai/presets`
+  - 키 규칙 `sec/{스타일}/{목적}/{NN}` · 분류 = [[1-8. 섹션 프리셋 라이브러리]] 레이아웃 스타일 3 × 목적 13. 절차 풀버전: [[1-8. 섹션 프리셋 라이브러리#🖥 에디터 네이티브 프리셋 등록 (2026-08-11 · 관리자 전용 프리뷰)]]
 - **브라우저 자동화**: gstack `browse` (headless Chromium)
 - **참조 디자인 시스템**: `/Users/designer/Documents/GitHub/design/cdbd-design-system/디자인 시스템/`
 - **🎨 Claude Design (claude.ai/design) 사용 시 설정 (필수, 2026-07-06)**: 디자인 시스템에서 **업로드된 "CdBd Design System" 프로젝트 제외(clear selection)** + **로컬 코드베이스에 이 vault `/Users/designer/Documents/GitHub/design/cdbd-templates` 추가**해서 사용. 이유: **vault가 현재 정본**([[1-2. 기획 문서 템플릿]] 등) — claude.ai 업로드 프로젝트는 stale일 수 있음. (DesignSync API가 아닌 디자인 툴 컨텍스트 설정 → 생성 시점에 적용)
