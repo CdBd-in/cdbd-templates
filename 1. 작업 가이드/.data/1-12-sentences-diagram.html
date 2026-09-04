@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAFAFA;--ink:#292929;--acc:#6C4CFF;
+ --p1:#8A8F98;--p2:#3B7DD8;--p3:#2E9E7B;--p4:#D98C2B;--p5:#D9534F;--p6:#7B5CD6;
+ --line:rgba(41,41,41,.10);--line2:rgba(41,41,41,.18);--mut:rgba(41,41,41,.55);--mut2:rgba(41,41,41,.38)}
+body{background:var(--bg);color:var(--ink);width:2000px;padding:56px 60px 44px;
+ font-family:'Pretendard','Pretendard Variable','Noto Sans CJK KR',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid var(--ink);padding-bottom:20px;margin-bottom:32px}
+.t1{font-size:44px;font-weight:800;letter-spacing:-1px}
+.t2{font-size:19px;color:var(--mut);margin-top:9px;font-weight:500}
+.t2 b{color:var(--acc);font-weight:700}
+.meta{text-align:right;font-size:14px;color:var(--mut2);line-height:1.7}
+.meta b{color:var(--ink);font-size:15px}
+.sec-h{display:flex;align-items:center;gap:12px;margin:0 0 15px}
+.sec-n{width:27px;height:27px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.sec-t{font-size:23px;font-weight:800}
+.sec-d{font-size:15px;color:var(--mut);font-weight:500}
+.sec-d b{color:var(--ink)}
+
+.rowA{display:grid;grid-template-columns:640px 1fr;gap:36px;margin-bottom:38px}
+/* mock */
+.phone{border:2px solid var(--ink);border-radius:26px;background:#fff;padding:26px 24px 24px;box-shadow:0 3px 0 rgba(41,41,41,.08)}
+.ph-q{font-size:24px;font-weight:800;line-height:1.4;margin-bottom:6px}
+.ph-s{font-size:14px;color:var(--mut2);font-weight:600;margin-bottom:18px}
+.opt{border:1.5px solid var(--line2);border-radius:12px;padding:14px 17px;margin-bottom:9px;font-size:17px;font-weight:700;line-height:1.45;position:relative}
+.opt.reco{border-color:var(--acc);border-width:2px;background:rgba(108,76,255,.06)}
+.opt .rb{position:absolute;right:14px;top:12px;font-size:11px;font-weight:800;color:#fff;background:var(--acc);padding:2px 8px;border-radius:5px}
+.opt .tail{color:var(--acc);font-weight:800}
+.opt.free{border-style:dashed;color:var(--mut2);font-weight:600;text-align:center}
+.opt .kn{display:block;font-size:11.5px;font-weight:800;color:var(--mut2);margin-top:5px}
+.mockcap{margin-top:12px;font-size:13px;color:var(--mut);line-height:1.6;font-weight:600;
+ border-left:3px solid var(--acc);background:rgba(108,76,255,.06);border-radius:0 9px 9px 0;padding:11px 15px}
+.mockcap b{color:var(--ink)}
+
+/* rules */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:16px}
+.rl{border:1.5px solid var(--line2);border-radius:11px;background:#fff;padding:12px 15px;font-size:14px;line-height:1.55;color:var(--mut);font-weight:600;position:relative;padding-left:44px}
+.rl b{color:var(--ink)}
+.rl .n{position:absolute;left:14px;top:12px;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.vb{border:1.5px solid var(--line2);border-radius:12px;background:#fff;padding:15px 18px 16px}
+.vb-h{font-size:17px;font-weight:800;margin-bottom:11px}
+.vb-h span{font-size:13px;color:var(--mut);font-weight:600}
+.vrow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+.vrow:last-child{border-bottom:none}
+.vv{font-weight:800;font-size:15.5px;min-width:210px}
+.vp{font-size:12px;font-weight:800;color:#fff;padding:2px 8px;border-radius:5px}
+.vc{font-size:12.5px;color:var(--mut2);font-weight:700}
+.vsplit{margin-top:12px;padding-top:11px;border-top:1px dashed var(--line2)}
+.vs-h{font-size:14px;font-weight:800;color:#D9534F;margin-bottom:7px}
+.vs{font-size:13px;color:var(--mut);font-weight:600;line-height:1.7}
+.vs b{color:var(--ink)}
+.tone{margin-top:12px;background:rgba(108,76,255,.07);border-radius:10px;padding:12px 15px;font-size:13.5px;line-height:1.65;color:var(--mut);font-weight:600}
+.tone b{color:var(--ink)}
+
+/* sentences */
+.grp2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grp{border:1.5px solid var(--line2);border-radius:13px;background:#fff;padding:0 0 6px;overflow:hidden;margin-bottom:16px}
+.grp-h{display:flex;align-items:baseline;gap:9px;padding:12px 18px 11px;border-bottom:1.5px solid var(--line2);background:rgba(41,41,41,.03)}
+.grp-n{width:22px;height:22px;border-radius:6px;background:var(--c);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;align-self:center;flex:none}
+.grp-t{font-size:18px;font-weight:800}
+.grp-c{font-size:12.5px;color:var(--mut2);font-weight:700;margin-left:auto}
+.sr{padding:11px 18px 10px;border-bottom:1px solid var(--line)}
+.sr:last-child{border-bottom:none}
+.sr-h{display:flex;align-items:baseline;gap:9px}
+.sr-i{font-size:12.5px;font-weight:800;color:#fff;background:var(--pc);padding:2px 7px;border-radius:5px;flex:none}
+.sr-t{font-size:17px;font-weight:700;line-height:1.4}
+.sr-t em{font-style:normal;font-weight:800;color:var(--pc)}
+.sr-v{margin:6px 0 0 44px;font-size:14.5px;font-weight:700;color:var(--acc);line-height:1.4;position:relative;padding-left:16px}
+.sr-v::before{content:'＋';position:absolute;left:0;top:0;font-size:13px}
+.sr-w{margin:5px 0 0 44px;font-size:12.5px;color:var(--mut2);font-weight:600;line-height:1.5}
+.warn{margin:10px 18px 4px;background:rgba(217,83,79,.07);border-left:3px solid #D9534F;border-radius:0 8px 8px 0;
+ padding:9px 13px;font-size:12.5px;line-height:1.6;color:var(--mut);font-weight:600}
+.warn b{color:var(--ink)}
+.ok{margin:10px 18px 4px;background:rgba(46,158,123,.08);border-left:3px solid var(--p3);border-radius:0 8px 8px 0;
+ padding:9px 13px;font-size:12.5px;line-height:1.6;color:var(--mut);font-weight:600}
+.ok b{color:var(--ink)}
+
+/* bottom */
+.bot{display:grid;grid-template-columns:1.45fr 1fr;gap:16px;margin-bottom:24px}
+.bx{border:1.5px solid var(--line2);border-radius:13px;background:#fff;padding:15px 19px 16px}
+.bx-h{font-size:17px;font-weight:800;margin-bottom:11px}
+.bl{font-size:14px;line-height:1.55;color:var(--mut);font-weight:600;margin-bottom:9px;padding-left:26px;position:relative}
+.bl:last-child{margin-bottom:0}
+.bl b{color:var(--ink)}
+.bl .n{position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:var(--ink);color:#fff;font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bx.und{border-color:rgba(217,83,79,.4);background:rgba(217,83,79,.045)}
+.bx.und .bx-h{color:#D9534F}
+.bl.q{padding-left:20px}
+.bl.q::before{content:'?';position:absolute;left:0;top:0;font-weight:800;color:#D9534F}
+code{background:rgba(41,41,41,.07);padding:1px 5px;border-radius:4px;font-family:inherit;font-weight:800;font-size:12.5px}
+.foot{display:flex;justify-content:space-between;border-top:1.5px solid var(--line2);padding-top:15px;gap:40px}
+.lg{display:flex;gap:17px;flex-wrap:wrap}
+.lg-i{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--mut)}
+.dot{width:11px;height:11px;border-radius:3px}
+.fnote{font-size:12.5px;color:var(--mut2);line-height:1.7;text-align:right;font-weight:600;min-width:600px}
+.fnote b{color:var(--mut)}
+</style></head><body>
+
+<div class="top">
+  <div><div class="t1">목적 문장 세트 — 27칸의 화면 어휘</div>
+    <div class="t2">보드의 <b>「이 페이지로 가장 하고 싶은 일은 무엇인가요?」</b> 선택지에 들어갈 문장 &nbsp;·&nbsp; 🔒 유저가 보는 <b>유일한 층</b> — 내부 칸 이름은 절대 노출 ❌</div></div>
+  <div class="meta"><b>1-12. 조립 레시피 §3-C</b><br>2026-09-04 · 확정 전 초안<br>분류 = 대분류 6 × 세부 27 (1-11)</div>
+</div>
+
+<div class="rowA">
+  <div>
+    <div class="sec-h"><div class="sec-n">▶</div><div class="sec-t">화면에서 이렇게 보인다</div></div>
+    <div class="phone">
+      <div class="ph-q">이 페이지로 가장<br>하고 싶은 일은 무엇인가요?</div>
+      <div class="ph-s">유저 입력 = “동네 카페인데 메뉴랑 매장 사진 있어요”</div>
+      <div class="opt reco"><span class="rb">추천</span>메뉴와 가격을 보여주고 싶어요<span class="kn">→ 3-② 메뉴·가격 안내</span></div>
+      <div class="opt">우리가 어떤 곳인지 소개하고 싶어요<span class="kn">→ 3-① 소개 홈</span></div>
+      <div class="opt">우리가 어떤 곳인지 소개하고 <span class="tail">방문 예약도 받고</span> 싶어요<span class="kn">→ 3-① + [예약] · 기능 변주</span></div>
+      <div class="opt">손님이 시간을 골라 예약하게 하고 싶어요<span class="kn">→ 1-⑤ 예약</span></div>
+      <div class="opt free">직접 입력</div>
+    </div>
+    <div class="mockcap"><b>이 한 화면이 세 가지를 동시에 처리한다</b> —
+      ① <b>칸 결정</b>(27칸 중 하나) &nbsp;② <b>갈림 해소</b>(3-② / 3-① / 1-⑤ 중 AI가 갈리면 나란히 올린다)
+      &nbsp;③ <b>구조를 바꾸는 기능</b>(2번↔3번이 「예약 유무」 짝) — 별도 질문 없이.</div>
+  </div>
+
+  <div>
+    <div class="sec-h"><div class="sec-n">A</div><div class="sec-t">설계 규칙 5</div></div>
+    <div class="rules">
+      <div class="rl"><span class="n">1</span><b>1인칭 「~하고 싶어요」</b><br>질문이 “하고 싶은 일”이므로 답도 그 형태</div>
+      <div class="rl"><span class="n">2</span><b>한 줄</b><br>선택지 4개가 나란히 뜨므로 길면 못 읽는다</div>
+      <div class="rl"><span class="n">3</span><b>업종어·카테고리명 ❌</b><br>「랜딩페이지」·「상세페이지」·「초대·예약」 전부 금지 → <b>상황 문장</b></div>
+      <div class="rl"><span class="n">4</span><b>기능은 「~도」로 덧붙인다</b><br>행사에 초대하고 <b>참석 신청도</b> 받고 싶어요</div>
+      <div class="rl" style="grid-column:span 2"><span class="n">5</span><b>「초대」를 아무 데나 쓰지 않는다</b> — 부고·공지는 <b>「알리고」</b>. 말투 3갈래를 동사가 지킨다</div>
+    </div>
+
+    <div class="vb">
+      <div class="vb-h">B. 동사가 하는 일 <span>— 말투를 지키고, 패턴은 절반쯤 드러낸다</span></div>
+      <div class="vrow"><span class="vv">받고 · 예약하게 하고</span><span class="vp" style="background:var(--p3)">P3 접수형</span><span class="vc">1-⑤ · 5-①②④</span></div>
+      <div class="vrow"><span class="vv">초대하고</span><span class="vp" style="background:var(--p2)">P2 안내형</span><span class="vc">1-①②</span></div>
+      <div class="vrow"><span class="vv">팔고</span><span class="vp" style="background:var(--p5)">P5 전환형</span><span class="vc">4-④</span></div>
+      <div class="vsplit">
+        <div class="vs-h">⚠️ 여러 패턴에 걸치는 동사 — 동사만으론 안 정해진다</div>
+        <div class="vs"><b>알리고</b> → P1 6-① · P2 1-④⑥ · P5 4-⑥ &nbsp;&nbsp;|&nbsp;&nbsp; <b>보여주고</b> → P4 3-② 4-②③ 6-② · P6 2-③④<br>
+          <b>소개하고</b> → P6 2-② · P4 4-① · P2+P4 3-①</div>
+        <div class="vs" style="margin-top:7px;color:var(--mut2)">🔴 <b>자체 정정</b> — 처음엔 “동사를 고르면 패턴이 정해진다”고 봤으나 <b>전수 대조 결과 13/27만 일치</b>.</div>
+      </div>
+      <div class="tone">🎯 <b>대신 동사가 확실히 지키는 것 = 말투 3갈래</b><br>
+        🎉 초대 <b>초대하고</b> &nbsp;|&nbsp; 📢 알림 <b>알리고</b> &nbsp;|&nbsp; 📝 접수 <b>받고</b><br>
+        🕯 <b>부고에 「초대」가 절대 안 붙는 이유</b> — 1-⑥은 패턴이 P2인데 동사는 「알리고」. <b>톤이 패턴을 이긴다.</b><br>
+        💡 즉 동사는 <b>「패턴 판정기」가 아니라 「톤 검사기」</b>다.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-h"><div class="sec-n">C</div><div class="sec-t">문장 세트 27</div>
+  <div class="sec-d"><b>기준 문장</b>(굵게 · 동사는 패턴색) &nbsp;<b style="color:#6C4CFF">＋ 기능 변주</b>(구조를 바꾸는 기능이 있을 때 대신) &nbsp;<span style="color:rgba(41,41,41,.38)">유저 어휘</span>(같은 칸을 부르는 다른 말 — 열린 사전)</div></div>
+
+<div class="grp2">
+ <div>
+  <div class="grp" style="--c:var(--p2)">
+   <div class="grp-h"><span class="grp-n">1</span><span class="grp-t">행사 · 안내</span><span class="grp-c">6칸</span></div>
+   <div class="sr" style="--pc:var(--p2)"><div class="sr-h"><span class="sr-i">1-①</span><span class="sr-t">가족 행사에 <em>초대하고</em> 싶어요</span></div>
+     <div class="sr-v">…초대하고 <b>참석 여부도 받고</b> 싶어요</div>
+     <div class="sr-w">청첩장 · 돌잔치 초대장 · 칠순 초대장 · 백일 안내</div></div>
+   <div class="sr" style="--pc:var(--p2)"><div class="sr-h"><span class="sr-i">1-②</span><span class="sr-t">행사에 <em>초대하고</em> 순서를 안내하고 싶어요</span></div>
+     <div class="sr-v">…초대하고 <b>참석 신청도 받고</b> 싶어요</div>
+     <div class="sr-w">창립기념식 초청장 · 임직식 · 졸업식 · 시상식</div></div>
+   <div class="sr" style="--pc:var(--p2)"><div class="sr-h"><span class="sr-i">1-③</span><span class="sr-t">강연·세미나를 <em>알리고</em> 신청을 받고 싶어요</span></div>
+     <div class="sr-v">신청 없이 → …<b>내용만 알리고</b> 싶어요</div>
+     <div class="sr-w">컨퍼런스 안내 · 워크숍 · 설명회 · 웨비나</div></div>
+   <div class="sr" style="--pc:var(--p2)"><div class="sr-h"><span class="sr-i">1-④</span><span class="sr-t">새로 문 여는 걸 <em>알리고</em> 싶어요</span></div>
+     <div class="sr-v">…알리고 <b>방문 예약도 받고</b> 싶어요</div>
+     <div class="sr-w">개업 안내 · 팝업스토어 · 전시 오프닝 · 축제</div></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">1-⑤</span><span class="sr-t">손님이 시간을 골라 <em>예약하게 하고</em> 싶어요</span></div>
+     <div class="sr-w">클래스 예약 · 방문 예약 · 상담 예약 · 픽업 예약</div></div>
+   <div class="sr" style="--pc:var(--p2)"><div class="sr-h"><span class="sr-i">1-⑥</span><span class="sr-t">장례 소식을 <em>알리고</em> 조문 안내를 하고 싶어요</span></div>
+     <div class="sr-w">부고 · 조문 안내 · 49재 안내 · 기일 안내</div></div>
+   <div class="warn">🕯 <b>1-⑥은 「초대」·「신청」 어휘를 절대 쓰지 않는다.</b> 버튼도 “조문 안내”·“위치 보기” · 무채색 · 이모지 ❌</div>
+  </div>
+
+  <div class="grp" style="--c:var(--p6)">
+   <div class="grp-h"><span class="grp-n">2</span><span class="grp-t">프로필 · 명함</span><span class="grp-c">4칸</span></div>
+   <div class="sr" style="--pc:var(--p6)"><div class="sr-h"><span class="sr-i">2-①</span><span class="sr-t">여러 채널·링크를 한곳에 <em>모으고</em> 싶어요</span></div>
+     <div class="sr-w">링크 모음 · 프로필 링크 · 링크트리</div></div>
+   <div class="sr" style="--pc:var(--p6)"><div class="sr-h"><span class="sr-i">2-②</span><span class="sr-t">나를 <em>소개하고</em> 연락처를 남기고 싶어요</span></div>
+     <div class="sr-v">…소개하고 <b>상담 문의도 받고</b> 싶어요</div>
+     <div class="sr-w">모바일 명함 · 영업 명함 · 디지털 명함</div></div>
+   <div class="sr" style="--pc:var(--p6)"><div class="sr-h"><span class="sr-i">2-③</span><span class="sr-t">작업물·사진을 <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">포트폴리오 · 작품집 · 레퍼런스</div></div>
+   <div class="sr" style="--pc:var(--p6)"><div class="sr-h"><span class="sr-i">2-④</span><span class="sr-t">경력과 이력을 <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">이력서 · 경력 소개 · 프로필 이력</div></div>
+   <div class="ok">✅ <b>2-③ ↔ 2-④ 는 목적어로 갈린다</b> — “작업물·사진” vs “경력과 이력”. 사진이 주인공이냐 글이 주인공이냐가 문장에 그대로 드러난다</div>
+  </div>
+
+  <div class="grp" style="--c:var(--p4)">
+   <div class="grp-h"><span class="grp-n">3</span><span class="grp-t">소개 · 홈페이지</span><span class="grp-c">2칸</span></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">3-①</span><span class="sr-t">우리가 어떤 곳인지 <em>소개하고</em> 싶어요</span></div>
+     <div class="sr-v">…소개하고 <b>방문 예약도 받고</b> 싶어요</div>
+     <div class="sr-w">회사 소개 · 매장 소개 · 교회 소개 · 홈페이지 · 동호회 소개</div></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">3-②</span><span class="sr-t">메뉴와 가격을 <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">메뉴판 · 요금표 · 시술 가격표 · 공임표</div></div>
+  </div>
+ </div>
+
+ <div>
+  <div class="grp" style="--c:var(--p5)">
+   <div class="grp-h"><span class="grp-n">4</span><span class="grp-t">상품 · 홍보</span><span class="grp-c">6칸</span></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">4-①</span><span class="sr-t"><b>제품 하나를 자세히</b> <em>소개하고</em> 싶어요</span></div>
+     <div class="sr-w">상품 상세 · 제품 소개 · 매물 상세</div></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">4-②</span><span class="sr-t">컬렉션을 화보처럼 <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">룩북 · 화보 · 시즌 컬렉션</div></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">4-③</span><span class="sr-t"><b>여러 제품을 목록으로</b> <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">카탈로그 · 취급 품목 · 매물 목록 · 품목집</div></div>
+   <div class="sr" style="--pc:var(--p5)"><div class="sr-h"><span class="sr-i">4-④</span><span class="sr-t">제품을 지금 바로 <em>팔고</em> 싶어요</span></div>
+     <div class="sr-w">판매 페이지 · 주문 페이지 · 공동구매</div></div>
+   <div class="sr" style="--pc:var(--p5)"><div class="sr-h"><span class="sr-i">4-⑤</span><span class="sr-t">곧 나올 걸 미리 <em>알리고</em> 알림 신청을 받고 싶어요</span></div>
+     <div class="sr-w">오픈 예정 · 출시 예고 · 사전 알림 · 대기 신청</div></div>
+   <div class="sr" style="--pc:var(--p5)"><div class="sr-h"><span class="sr-i">4-⑥</span><span class="sr-t">할인·이벤트 혜택을 <em>알리고</em> 싶어요</span></div>
+     <div class="sr-w">세일 안내 · 쿠폰 · 프로모션 · 이벤트</div></div>
+   <div class="ok">✅ <b>4-① ↔ 4-③ 이 문장으로 갈린다</b> — “<b>하나를 자세히</b>” vs “<b>여러 개를 목록으로</b>”.
+     앞서 <b>“목적으로는 못 가른다”</b>고 판정했으나, <b>분량을 문장에 넣으면 유저가 답할 수 있다</b>(2026-09-04 정정)</div>
+  </div>
+
+  <div class="grp" style="--c:var(--p3)">
+   <div class="grp-h"><span class="grp-n">5</span><span class="grp-t">신청 · 문의</span><span class="grp-c">5칸</span></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">5-①</span><span class="sr-t">참석 여부·설문 응답을 <em>받고</em> 싶어요</span></div>
+     <div class="sr-w">참석 조사 · 설문 · 신청서 · 주소록 수집</div></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">5-②</span><span class="sr-t">사람을 모집하고 지원을 <em>받고</em> 싶어요</span></div>
+     <div class="sr-w">수강생 모집 · <b>채용 공고</b> · <b>가맹점 모집</b> · 서포터즈 · 체험단</div></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">5-④</span><span class="sr-t">상담·견적 문의를 <em>받고</em> 싶어요</span></div>
+     <div class="sr-w">문의 접수 · 견적 요청 · 상담 신청 · 자료 요청</div></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">5-⑤</span><span class="sr-t">공모전·대회 참가자를 <em>모으고</em> 싶어요</span></div>
+     <div class="sr-w">공모전 요강 · 대회 안내 · 콘테스트</div></div>
+   <div class="sr" style="--pc:var(--p3)"><div class="sr-h"><span class="sr-i">5-⑥</span><span class="sr-t">후원을 <em>요청하고</em> 싶어요</span></div>
+     <div class="sr-v">보고형 → <b>후원금이 어떻게 쓰였는지 알리고</b> 싶어요</div>
+     <div class="sr-w">후원 안내 · 기부 · 모금 · 연간 보고</div></div>
+   <div class="ok">✅ <b>5-② 한 문장이 채용·수강·가맹을 다 덮는다</b> — 섹션 구성이 같고 <b>필드만 다르므로</b> 칸을 안 나눈다(조건부 필드)</div>
+  </div>
+
+  <div class="grp" style="--c:var(--p1)">
+   <div class="grp-h"><span class="grp-n">6</span><span class="grp-t">소식 · 자료</span><span class="grp-c">4칸</span></div>
+   <div class="sr" style="--pc:var(--p1)"><div class="sr-h"><span class="sr-i">6-①</span><span class="sr-t">소식·공지를 빠르게 <em>알리고</em> 싶어요</span></div>
+     <div class="sr-v">상시형 → <b>지금 상황을 계속 알려주고</b> 싶어요</div>
+     <div class="sr-w">공지 · 휴무 안내 · 이전 안내 · 감사 인사 · <b>대기 현황</b></div></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">6-②</span><span class="sr-t">여러 글·기사를 모아 <em>보여주고</em> 싶어요</span></div>
+     <div class="sr-w">소식지 · 매거진 · 뉴스레터 · 사보</div></div>
+   <div class="sr" style="--pc:var(--p4)"><div class="sr-h"><span class="sr-i">6-③</span><span class="sr-t">작품을 기록으로 <em>남기고</em> 싶어요</span></div>
+     <div class="sr-w">도록 · 작품집 · 전시 기록</div></div>
+   <div class="sr" style="--pc:var(--p1)"><div class="sr-h"><span class="sr-i">6-④</span><span class="sr-t">이용 방법·절차를 <em>안내하고</em> 싶어요</span></div>
+     <div class="sr-w">이용 안내 · 매뉴얼 · 가이드북 · 안전 수칙</div></div>
+  </div>
+ </div>
+</div>
+
+<div class="bot">
+  <div class="bx"><div class="bx-h">D. 선택지 4개를 뽑는 규칙</div>
+    <div class="bl"><span class="n">1</span><b>AI 1순위 1개 + 후보 3개 + 직접 입력</b> (보드 구조)</div>
+    <div class="bl"><span class="n">2</span><b>갈릴 때는 후보를 나란히</b> — “예약이냐 상담이냐” 갈리면 <code>1-⑤</code>·<code>5-④</code> 문장을 <b>둘 다</b> 올린다</div>
+    <div class="bl"><span class="n">3</span><b>후보는 서로 충분히 달라야</b> — 같은 대분류에서 4개를 채우지 말 것(<code>4-①②③④</code>를 다 올리면 유저가 못 고른다)</div>
+    <div class="bl"><span class="n">4</span><b>기능 변주는 기준 문장과 짝으로</b> — 나란히 두면 유저가 기능 유무를 <b>스스로</b> 고른다 → 별도 질문 불필요</div>
+    <div class="bl"><span class="n">5</span><b>유저 어휘로 다시 부른다</b> — “아버지 장례”라 썼으면 다음 화면부터 「부고장」, “49재”면 「49재 안내」</div>
+  </div>
+  <div class="bx und"><div class="bx-h">⚠️ 아직 확정 아님</div>
+    <div class="bl q"><b>문장 길이 상한</b> — 모바일에서 2줄까지 허용할지</div>
+    <div class="bl q"><b>「직접 입력」 처리</b> — 자유 문장을 27칸에 매핑하는 방식</div>
+    <div class="bl q"><b>기능 변주를 언제</b> — 선택지로 올릴지 / 다음 화면에서 물을지</div>
+  </div>
+</div>
+
+<div class="foot">
+  <div class="lg">
+    <div class="lg-i"><span class="dot" style="background:var(--p1)"></span>P1 알림형</div>
+    <div class="lg-i"><span class="dot" style="background:var(--p2)"></span>P2 안내형</div>
+    <div class="lg-i"><span class="dot" style="background:var(--p3)"></span>P3 접수형</div>
+    <div class="lg-i"><span class="dot" style="background:var(--p4)"></span>P4 진열형</div>
+    <div class="lg-i"><span class="dot" style="background:var(--p5)"></span>P5 전환형</div>
+    <div class="lg-i"><span class="dot" style="background:var(--p6)"></span>P6 인물형</div>
+  </div>
+  <div class="fnote">
+    🔒 <b>내부 서랍은 닫히고(27칸 고정) · 화면 어휘는 열린다(유저 말을 따라감)</b><br>
+    갈림 질문 5축은 화면 질문이 아니라 <b>선택지 4개를 뽑는 내부 로직</b> · 기능 질문은 <b>플레이스홀더 + 구조를 바꾸는 3개만 문장에 녹임</b><br>
+    5번 대분류에 ③이 없는 이유 = <b>구 「채용 공고」가 5-② 모집에 흡수</b>(섹션 1:1 대응 · 다른 건 필드뿐)
+  </div>
+</div>
+</body></html>
