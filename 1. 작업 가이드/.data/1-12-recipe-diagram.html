@@ -96,6 +96,16 @@ table.who tr:last-child td{border-bottom:none}
 .axwarn{margin-top:12px;background:rgba(217,83,79,.06);border-left:3px solid #D9534F;border-radius:0 9px 9px 0;
   padding:10px 14px;font-size:12.5px;line-height:1.65;color:var(--mut);font-weight:600}
 .axwarn b{color:var(--ink)}
+
+.fixbox{border:1.5px solid rgba(217,83,79,.35);background:rgba(217,83,79,.045);border-radius:12px;padding:13px 17px 12px;margin-top:14px}
+.fx-r{font-size:12.5px;line-height:1.65;color:var(--mut);font-weight:600;margin-bottom:9px;padding-left:80px;position:relative}
+.fx-r:last-child{margin-bottom:0}
+.fx-r b{color:var(--ink)}
+.fx-b{position:absolute;left:0;top:0;width:70px;text-align:center;font-size:11px;font-weight:800;color:#fff;background:#D9534F;padding:3px 0;border-radius:5px}
+.fx-r code{background:rgba(41,41,41,.08);padding:1px 5px;border-radius:4px;font-family:inherit;font-weight:800;font-size:11.5px}
+.axlv{margin-top:11px;background:rgba(41,41,41,.05);border-radius:10px;padding:11px 15px;font-size:12.5px;line-height:1.7;color:var(--mut);font-weight:600}
+.axlv b{color:var(--ink)}
+.lv{display:inline-block;background:#fff;border:1.5px solid var(--line2);border-radius:7px;padding:4px 10px;margin:5px 6px 2px 0;font-size:12px}
 /* ── 분류 체계 스트립 ── */
 .clswrap{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:12px}
 .cls{border:1.5px solid var(--line2);border-radius:12px;background:#fff;padding:13px 16px 14px;position:relative;overflow:hidden}
@@ -256,7 +266,7 @@ table.who tr:last-child td{border-bottom:none}
     <div class="t1">조립 레시피 — 27칸</div>
     <div class="t2">CdBd <b>AI 페이지 빌더</b> 내부 기준 · 「어떤 섹션을 어떤 순서로」 &nbsp;·&nbsp; 공통 골격 <b>1</b> + 배치 패턴 <b>6</b> + 칸별 카드 <b>27</b> &nbsp;·&nbsp; 유저 질문은 <b>「목적」 하나</b></div>
   </div>
-  <div class="meta"><b>1-12. 조립 레시피 (제안 초안)</b><br>2026-09-04 rev.4 · 확정 전 초안<br>분류 정본 = 1-11 (대분류 6 × 세부 27)</div>
+  <div class="meta"><b>1-12. 조립 레시피 (제안 초안)</b><br>2026-09-04 rev.5 · 확정 전 초안<br>분류 정본 = 1-11 (대분류 6 × 세부 27)</div>
 </div>
 
 <div class="rowA">
@@ -288,33 +298,41 @@ table.who tr:last-child td{border-bottom:none}
       <div class="pat" style="--c:var(--p1)">
         <div class="pat-h"><span class="pat-id">P1</span><span class="pat-nm">알림형</span></div>
         <div class="pat-s">읽고 끝<span class="tone">📢 알림</span></div>
-        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx k">★본문</span><span class="ar">→</span><span class="fx">부가</span><span class="ar">→</span><span class="fx">문의</span></div>
-        <div class="pat-f"><b>가장 짧다</b> · 위치❌ 폼❌<br>긴급형은 로고·이미지 없이도 성립 · 멀티 2P</div></div>
+        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx k">★</span><span class="ar">→</span><span class="fx">부가</span><span class="ar">→</span><span class="fx">문의</span></div>
+        <div class="pat-f"><b>가장 짧다</b> · 위치❌ 폼❌<br>긴급형은 로고·이미지 없이도 성립 · 멀티 고르면 2P</div></div>
       <div class="pat" style="--c:var(--p2)">
         <div class="pat-h"><span class="pat-id">P2</span><span class="pat-nm">초대형</span></div>
         <div class="pat-s">오게 함<span class="tone">🎉 초대</span></div>
-        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">도입</span><span class="ar">→</span><span class="fx k">★때·장소</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx">위치</span><span class="ar">→</span><span class="fx">문의</span></div>
-        <div class="pat-f"><b>위치 안내 필수</b> — 「가야 할 곳」이 이 패턴의 정의 · 멀티 3P</div></div>
+        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">도입</span><span class="ar">→</span><span class="fx k">★</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx">위치</span><span class="ar">→</span><span class="fx">문의</span></div>
+        <div class="pat-f"><b>위치 안내 필수</b> — 「가야 할 곳」이 이 패턴의 정의 · 멀티 고르면 3P</div></div>
       <div class="pat" style="--c:var(--p3)">
         <div class="pat-h"><span class="pat-id">P3</span><span class="pat-nm">접수형</span></div>
         <div class="pat-s">받는 게 목적<span class="tone">📝 접수</span></div>
-        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">도입</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx k">★폼·예약</span><span class="ar">→</span><span class="fx">유의</span><span class="ar">→</span><span class="fx">문의</span></div>
-        <div class="pat-f"><b>폼이 화면 절반 안에</b> · 문의는 폼과 별도(즉시 연결) · 멀티 3P</div></div>
+        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">도입</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx k">★</span><span class="ar">→</span><span class="fx">유의</span><span class="ar">→</span><span class="fx">문의</span></div>
+        <div class="pat-f"><b>폼이 화면 절반 안에</b> · 문의는 폼과 별도(즉시 연결) · 멀티 고르면 3P</div></div>
       <div class="pat" style="--c:var(--p4)">
         <div class="pat-h"><span class="pat-id">P4</span><span class="pat-nm">진열형</span></div>
         <div class="pat-s">여러 개 보여줌</div>
-        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">스토리</span><span class="ar">→</span><span class="fx k">★아이템 반복</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx">문의</span></div>
-        <div class="pat-f"><b>아이템 반복이 본체의 8할</b> · 아이템 1개 = 독립 섹션 · 멀티 3~4P</div></div>
+        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx">스토리</span><span class="ar">→</span><span class="fx k">★ 반복</span><span class="ar">→</span><span class="fx">보조</span><span class="ar">→</span><span class="fx">문의</span></div>
+        <div class="pat-f"><b>아이템 반복이 본체의 8할</b> · 아이템 1개 = 독립 섹션 · 멀티 고르면 3~4P</div></div>
       <div class="pat" style="--c:var(--p5)">
         <div class="pat-h"><span class="pat-id">P5</span><span class="pat-nm">전환형</span></div>
         <div class="pat-s">사게 함</div>
-        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx k">★CTA</span><span class="ar">→</span><span class="fx">근거</span><span class="ar">→</span><span class="fx">상세</span><span class="ar">→</span><span class="fx k">★CTA</span></div>
-        <div class="pat-f"><b>CTA가 최상단 + 최하단 두 번</b> — P4와의 결정적 차이 · 스토리는 뒤로 · 멀티 2~3P</div></div>
+        <div class="flow"><span class="fx">히어로</span><span class="ar">→</span><span class="fx k">★ 1차</span><span class="ar">→</span><span class="fx">근거</span><span class="ar">→</span><span class="fx">상세</span><span class="ar">→</span><span class="fx k">★ 재노출</span></div>
+        <div class="pat-f"><b>CTA가 최상단 + 최하단 두 번</b> — P4와의 결정적 차이 · 스토리는 뒤로 · 멀티 고르면 2~3P</div></div>
       <div class="pat" style="--c:var(--p6)">
         <div class="pat-h"><span class="pat-id">P6</span><span class="pat-nm">인물형</span></div>
         <div class="pat-s">사람이 주인공</div>
-        <div class="flow"><span class="fx k">★프로필=히어로</span><span class="ar">→</span><span class="fx">소개</span><span class="ar">→</span><span class="fx k">★실적·링크</span><span class="ar">→</span><span class="fx">문의</span></div>
-        <div class="pat-f"><b>프로필이 최상단</b> — 갤러리·이력·연락처를 프로필보다 위에 ❌ · 멀티 2P</div></div>
+        <div class="flow"><span class="fx k">★ = 히어로 겸</span><span class="ar">→</span><span class="fx">소개</span><span class="ar">→</span><span class="fx k">보조 ★</span><span class="ar">→</span><span class="fx">문의</span></div>
+        <div class="pat-f"><b>프로필이 최상단</b> — 갤러리·이력·연락처를 프로필보다 위에 ❌ · 멀티 고르면 2P</div></div>
+    </div>
+    <div class="fixbox">
+      <div class="fx-r"><span class="fx-b">🔴 정정</span><b>★에 구체 이름을 붙이지 않는다</b> — 예전엔 <code>★때·장소</code>·<code>★폼/예약</code>로 적었으나 <b>여러 칸에서 틀렸다</b> :
+        <code>1-①</code>=주인공 인물(때·장소 아님) · <code>5-②</code>=모집 요강(폼 아님) · <code>4-⑥</code>=혜택＋마감(CTA 아님) · <code>6-④</code>=단계 나열(본문 아님).<br>
+        <b>패턴은 ★의 「자리」만 정하고 「정체」는 칸이 정한다.</b> 단 <b>반복</b>(P4) · <b>1차/재노출</b>(P5) · <b>히어로 겸</b>(P6)은 <b>패턴 정의 자체</b>라 남긴다 — 위치·횟수·형태이지 내용이 아니다.</div>
+      <div class="fx-r"><span class="fx-b">🧭 원/멀티</span><b>패턴이 정하지 않는다</b> — <b>선택은 유저</b>(보드 “이 내용에는 [ ]를 추천해요”).
+        패턴이 정하는 건 <b>멀티를 골랐을 때의 분할 방식</b>뿐.<br>
+        AI 추천 근거 = <b>패턴 선호 ＋ 자료량</b> : P1·P6 원페이지 선호 · P4는 <b>아이템 수</b>에 따라(3개면 원 · 30개면 멀티) · P5는 원페이지 쪽</div>
     </div>
     <div class="abbr">
       <div class="ab-h">📖 약칭 사전 <span>— 흐름 줄의 말들은 13칸 서랍 이름이 아니라 「역할 묶음」이다</span></div>
@@ -376,7 +394,12 @@ table.who tr:last-child td{border-bottom:none}
     <div class="axr"><span class="axl">㉯ 배치 같은데 주제 다름</span>
       <b>룩북</b>(옷) · <b>메뉴판</b>(음식) · <b>도록</b>(작품) · <b>매거진</b>(글) — 재료가 전혀 다른데
       배치는 <b>완전히 같다</b>(히어로→스토리→아이템 반복→문의)</div>
-    <div class="axcl">→ 두 방향이 모두 성립 = <b>독립</b>. 하나로 합칠 수 없다 ∎</div>
+    <div class="axcl">→ 두 방향이 모두 성립 = <b>대분류와 패턴은 독립</b>. 하나로 합칠 수 없다 ∎</div>
+    <div class="axlv">🔴 <b>어느 레벨에서 독립인가</b> — 위 증거는 전부 <b>대분류 레벨</b>이다. <b>칸(27) 레벨에선 독립이 아니다.</b><br>
+      <span class="lv"><b>대분류(6) ↔ 패턴(6)</b> = <b class="grn">직교</b> — 대분류로는 배치를 못 정한다</span>
+      <span class="lv"><b>칸(27) → 패턴</b> = <b class="red">결정적</b> — 칸을 알면 기본 패턴이 나온다</span><br>
+      🔑 <b>인과 방향은 「칸 → 패턴」</b> — ★가 폼이면 P3 · 구매 CTA면 P5 · 반복 아이템이면 P4.
+      → 패턴은 <b>제3의 독립 입력이 아니라 「27칸이 공유하는 순서 템플릿」</b>. 존재 이유는 아래 <b>중복 제거</b>이지 따로 정할 값이어서가 아니다.</div>
     <div class="axsplit">
       <div class="axhalf"><div class="ax-sh">주제 축만 남기면</div>
         같은 순서를 <b>8번 복제</b>(P4를 8칸이 공유) → 규칙 하나 고치려면 8곳.
@@ -395,8 +418,10 @@ table.who tr:last-child td{border-bottom:none}
     <table class="who">
       <tr><td class="w1">섹션 큰 덩어리 순서</td><td class="w2 pt">패턴</td></tr>
       <tr><td class="w1">특징적 배치 <span>P5 CTA 2회 · P6 프로필 최상단 · P2 위치 필수 / P1 배제</span></td><td class="w2 pt">패턴</td></tr>
-      <tr><td class="w1">멀티페이지 분할</td><td class="w2 pt">패턴</td></tr>
-      <tr><td class="w1">★ 결정 블록</td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1"><b>원 / 멀티 선택</b> <span>AI 추천(패턴 선호＋자료량) → 확인</span></td><td class="w2 us">유저</td></tr>
+      <tr><td class="w1">멀티일 때 <b>분할 방식</b></td><td class="w2 pt">패턴</td></tr>
+      <tr><td class="w1">★의 <b>자리</b> <span>몇 번째 · 몇 회 · 반복인지</span></td><td class="w2 pt">패턴</td></tr>
+      <tr><td class="w1">★의 <b>정체·정보 구조</b> <span>식순인지 인물인지 장례 정보인지</span></td><td class="w2 kn">칸</td></tr>
       <tr><td class="w1">반복 단위의 정보 구조</td><td class="w2 kn">칸</td></tr>
       <tr><td class="w1">보조 블록 <b>후보 목록</b> <span>6-① 공지에 [구매] ❌</span></td><td class="w2 kn">칸</td></tr>
       <tr><td class="w1">보조 블록 <b>내용</b> <span>[안내 사항]이 1-②=좌석·주차 / 4-①=배송·환불</span></td><td class="w2 kn">칸</td></tr>
@@ -406,9 +431,11 @@ table.who tr:last-child td{border-bottom:none}
       <tr><td class="w1">그 외 보조 블록 유무 · 콘텐츠</td><td class="w2 us">유저</td></tr>
       <tr><td class="w1">색·폰트(무드)</td><td class="w2 md">AI 추천 → 유저 확인</td></tr>
     </table>
-    <div class="axwarn">🔴 <b>자주 틀리는 둘</b><br>
+    <div class="axwarn">🔴 <b>자주 틀리는 넷</b><br>
       ① “순서는 전부 패턴” ❌ — <b>보조끼리의 세부 순서는 칸</b>. 같은 P2인데 1-②는 <b>폼→안내</b>, 1-③은 <b>안내→폼</b><br>
-      ② “기능은 칸이 정한다” ❌ — 칸은 <b>「붙을 수 있다」까지만</b>. 실제 유무는 <b>유저</b>가 목적 문장에서 고른다</div>
+      ② “기능은 칸이 정한다” ❌ — 칸은 <b>「붙을 수 있다」까지만</b>. 실제 유무는 <b>유저</b><br>
+      ③ “패턴이 ★를 정한다” ❌ — 패턴은 <b>★의 자리</b>만. <b>정체·정보 구조는 칸</b><br>
+      ④ “패턴이 멀티페이지를 정한다” ❌ — <b>원/멀티 선택은 유저</b>. 패턴은 <b>분할 방식</b>만</div>
   </div>
 </div>
 
