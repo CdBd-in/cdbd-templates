@@ -1,0 +1,102 @@
+{
+ "code": "1-②",
+ "folder": "1-2",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary photograph of a design conference talk in a converted brick-and-concrete event hall in Seongsu, Seoul. A speaker stands at the side of a large projection screen showing an abstract blurred diagram, an audience of about a hundred Korean attendees seated on simple chairs seen from behind, warm practical lighting mixed with daylight from tall industrial windows. Realistic Korean facial features, candid documentary, soft natural light. Muted warm palette, no readable text, no logos, no brand names.",
+   "용도": "히어로 — 콘퍼런스 강연장"
+  },
+  {
+   "key": "profile1",
+   "file": "profile1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait headshot of a Korean woman in her mid thirties, retail experience design lead. Realistic Korean facial features, natural relaxed half-smile, short bob haircut, minimal makeup, wearing a simple charcoal knit top. Plain warm grey wall background, soft natural light from a window on one side. Shoulders-up framing, shallow depth of field, editorial photography, no text, no logos.",
+   "용도": "연사 프로필 — 한지우"
+  },
+  {
+   "key": "profile2",
+   "file": "profile2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait headshot of a Korean man in his late thirties, product manager. Realistic Korean facial features, short neat hair, thin metal-framed glasses, calm confident expression, wearing a navy crewneck sweater. Plain light beige wall background, soft natural light from a window on one side. Shoulders-up framing, shallow depth of field, editorial photography, no text, no logos.",
+   "용도": "연사 프로필 — 오세민"
+  },
+  {
+   "key": "profile3",
+   "file": "profile3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait headshot of a Korean woman in her early forties, brand director. Realistic Korean facial features, long hair tied back loosely, warm friendly expression, wearing a cream linen shirt. Plain soft white wall background, soft natural light from a large window. Shoulders-up framing, shallow depth of field, editorial photography, no text, no logos.",
+   "용도": "연사 프로필 — 정하늘"
+  },
+  {
+   "key": "profile4",
+   "file": "profile4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait headshot of a Korean man in his forties, data product team lead. Realistic Korean facial features, slightly greying short hair, thoughtful expression, wearing a dark grey shirt with the collar open. Plain muted olive-grey wall background, soft natural light from a window on one side. Shoulders-up framing, shallow depth of field, editorial photography, no text, no logos.",
+   "용도": "연사 프로필 — 배윤성"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean audience seated at a design conference, seen from the side. Attendees in their twenties to forties taking notes on paper and phones, attentive expressions, realistic Korean facial features. Warm interior of a brick event hall, soft natural light from tall windows, mild backlight haze. No readable text, no logos.",
+   "용도": "지난 현장 — 발표를 듣는 객석"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of four Korean panelists sitting on stools on a low stage during a roundtable discussion, holding handheld microphones, mid conversation and laughing. Realistic Korean facial features, casual smart clothing. Brick wall backdrop, warm stage lighting mixed with soft natural light. No readable text, no logos.",
+   "용도": "지난 현장 — 라운드테이블"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a conference break in a bright concrete-and-glass lobby in Seongsu Seoul. Korean attendees standing in small clusters with paper coffee cups, a simple refreshment table with pastries and a water dispenser. Realistic Korean facial features, candid documentary, soft natural light through large windows. No readable text, no logos.",
+   "용도": "지난 현장 — 쉬는 시간 로비"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close candid documentary photograph of two Korean professionals exchanging blank business cards with both hands in a Korean bow of courtesy, waist-up framing, blurred conference crowd behind. Realistic Korean facial features, soft natural light, warm neutral tones. Cards are plain white with no text, no logos.",
+   "용도": "지난 현장 — 네트워킹 명함"
+  },
+  {
+   "key": "sq5",
+   "file": "sq5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean speaker standing beside a projection screen, leaning forward and listening to a question from the audience, hand raised in the blurred foreground. Realistic Korean facial features, candid documentary, soft natural light in a brick event hall. Screen shows an abstract blurred slide with no readable text. No logos.",
+   "용도": "지난 현장 — 질문받는 연사"
+  },
+  {
+   "key": "sq6",
+   "file": "sq6.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of the end of a conference: a few Korean attendees still chatting among rows of emptied chairs, someone packing a tote bag, evening light coming low through tall industrial windows of a brick hall. Realistic Korean facial features, warm golden soft natural light, quiet closing mood. No readable text, no logos.",
+   "용도": "지난 현장 — 마치고 남은 사람들"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1354,
+   "h": 1020,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid near-black color, no gradient, no 3D, centered. The wordmark reads FLOWLAB in a modern lowercase-feeling geometric sans-serif, with one simple continuous curved line mark to the left suggesting flow. Wide horizontal lockup, crisp vector edges, studio brand identity, nothing else in the frame.",
+   "용도": "로고 워드마크 — 플로우랩"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "code": "3-①",
+ "folder": "3-1",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary photograph of a small Korean metalworking factory building in the Namdong industrial complex in Incheon: a two-storey grey concrete and metal-panel workshop with a wide roller shutter open, a small paved yard with a parked van, power lines and neighbouring workshops. Late morning soft natural light, clear pale sky, honest working-industry realism. No people, no readable signage, no logos, no brand names.",
+   "용도": "히어로 — 공장 전경 (가로형)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph inside a small Korean CNC machining workshop: a row of CNC lathes and machining centres along a clean concrete floor with yellow line markings, coolant hoses, tool trolleys and stacked blue parts bins. Daylight from high side windows mixed with overhead lamps. No people, no readable text, no logos.",
+   "용도": "자료 1 — 공장 내부 전경"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close documentary photograph inside the working chamber of a CNC lathe cutting a steel shaft: bright metal chips curling away, coolant spray mist, the chuck and turret tooling visible through the machine window. Cool machine lighting with soft daylight fill, sharp mechanical detail, shallow depth of field. No people, no text, no logos.",
+   "용도": "자료 2 — CNC 복합기 가공 중"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of a small clean inspection room in a Korean machining company: a coordinate measuring machine on a granite table with a probe over a machined aluminium bracket, digital calipers and a height gauge on a side bench, white walls. Even soft natural light, precise clinical atmosphere. No people, no readable text, no logos.",
+   "용도": "자료 3 — 검사실 3차원 측정기"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1511,
+   "h": 1023,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid dark slate grey color, no gradient, no 3D, centered. The wordmark reads DAESUNG in heavy condensed industrial sans-serif capitals with the smaller word PRECISION beneath, and a simple solid triangle mark to the left. Wide horizontal lockup, crisp vector edges, machining workshop identity, nothing else in the frame.",
+   "용도": "로고 워드마크 — 대성정밀"
+  }
+ ]
+}

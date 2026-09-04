@@ -1,0 +1,61 @@
+{
+ "code": "6-③",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Wide documentary photograph of a quiet contemporary art gallery exhibition room in Korea, white walls and pale polished concrete floor, several abstract paintings and one hanging thread installation visible at a distance, track spotlights, a single visitor seen from behind far away, clean minimal museum architecture, soft even natural and gallery lighting, candid documentary photography, no readable text, no wall labels legible",
+   "용도": "히어로 메인 비주얼 — 1전시실 전경(가로형)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a large abstract oil painting on canvas hanging on a white gallery wall, thick impasto brushwork in deep blues, teal and grey depicting a river surface, visible palette knife texture and layered strokes, contemporary Korean abstract painting, even gallery lighting, frontal documentation shot of the artwork filling most of the frame, no frame, no signature, no text",
+   "용도": "출품작 1 「강의 이름」 서지호 · 캔버스에 유채"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a contemporary Korean ink painting on hanji mulberry paper, soft black sumi ink bleeding into the fibrous paper forming layered horizontal water ripple patterns, subtle warm ivory paper tone, delicate gradations, minimal composition, frontal documentation shot of the artwork filling the frame, even gallery lighting, no text, no signature, no seal",
+   "용도": "출품작 2 「물결 04」 임하늘 · 한지에 먹, 아교"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a contemporary ceramic sculpture on a white plinth in a gallery, stacked irregular layers of pale grey and off-white glazed stoneware resembling sedimentary strata, matte and semi-gloss glaze contrast, soft directional gallery lighting casting a gentle shadow, plain white background wall, artwork documentation shot, no text",
+   "용도": "출품작 3 「퇴적」 문가영 · 도자, 유약"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Fine art black and white photograph of the surface of a river at night, moonlight rippling across dark water, high contrast silver tones, grainy analog film texture, abstract minimal composition with no horizon and no objects, contemporary art photography print, frontal documentation of the print filling the frame, no text, no border",
+   "용도": "출품작 4 「밤의 수면」 배진우 · 아카이벌 피그먼트 프린트"
+  },
+  {
+   "key": "sq5",
+   "file": "sq5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a contemporary art installation in a white gallery space, hundreds of thin nylon threads suspended vertically from a slender steel frame on the ceiling down toward the floor, threads catching light and creating a soft translucent curtain like falling water, pale grey concrete floor, dramatic soft side lighting, documentation shot of the installation, no people, no text",
+   "용도": "출품작 5 「흐름을 세는 법」 정소민 · 철, 나일론 실 설치"
+  },
+  {
+   "key": "sq6",
+   "file": "sq6.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a carved wooden relief panel artwork hanging on a white gallery wall, shallow chiseled wave and current patterns across the surface, painted in muted indigo, ochre and bone white pigments with visible wood grain showing through, contemporary Korean woodcut relief, even gallery lighting, frontal documentation shot filling the frame, no text, no signature",
+   "용도": "출품작 6 「무심(無心)」 오재범 · 목판에 채색"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "code": "6-④",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Wide documentary photograph of a Korean auto camping ground on a hillside at dusk, rows of wooden deck sites with family tents and parked cars, warm string lights and lanterns glowing, low mountains and a soft purple orange sky with the first stars, pine trees around the edges, no people's faces visible, candid documentary photography, soft natural twilight light, natural colors, no readable text, no logos",
+   "용도": "히어로 메인 비주얼 — 해질 무렵 사이트 전경(가로형)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of a single wooden deck camping site at a Korean auto campground at dusk, a family dome tent with a canopy, folding chairs and a table with a lantern, a car parked beside on the gravel, warm lamp glow, grass and pine trees around, no people's faces visible, candid documentary photography, soft twilight light, natural colors, no readable text",
+   "용도": "자료 「둘러보기」 1컷 — 데크 사이트"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of the shared washing area and restroom building at a Korean campground, a long stainless steel sink counter with several faucets under a wooden shelter roof, dish racks, a hose reel, and a tidy tiled restroom entrance beside it, clean and well maintained, daytime, soft natural light, candid documentary photography, no people, no readable text",
+   "용도": "자료 2컷 — 개수대·화장실동"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of the interior of a small campground management office shop in Korea, wooden shelves with bundles of firewood, bags of charcoal, instant noodles, bottled water and a chest freezer for ice, a simple counter with a cash register, warm interior light through a window, cozy rustic wooden interior, no people, candid documentary photography, no readable text, no brand logos",
+   "용도": "자료 3컷 — 관리동 매점 내부"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 728,
+   "h": 194,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid deep navy color, no gradient, no 3D, centered, horizontal composition: a very simple minimal four-pointed star symbol above a small hill curve on the left, followed by the Korean words 별빛언덕 in a clean modern sans-serif Korean typeface, outdoor camping brand feeling, crisp geometric shapes, no background, no frame, no extra text",
+   "용도": "헤더 로고 (별빛언덕 · 별 심볼 + 워드마크)"
+  }
+ ]
+}

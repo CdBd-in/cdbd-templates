@@ -1,0 +1,22 @@
+{
+ "code": "5-④",
+ "images": [
+  {
+   "key": "profile",
+   "file": "profile.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait of a Korean man in his late 30s, a certified labor attorney, wearing a navy suit jacket over a light blue shirt without a tie, standing in a small tidy consulting office with a bookshelf of legal binders softly blurred behind him, calm trustworthy expression, slight closed-lip smile, looking at the camera, Realistic Korean facial features, candid documentary photography, soft natural light from a side window, natural skin texture, professional but approachable, no text",
+   "용도": "소개 섹션 프로필 카드 — 공인노무사 서지훈"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 840,
+   "h": 184,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid deep navy color, no gradient, no 3D, centered, horizontal composition: a very simple minimal geometric mark of two interlocking rounded rectangles on the left, followed by the Korean words 하나로노무법인 in a clean modern sans-serif Korean typeface, professional corporate look, crisp shapes, no background, no frame, no extra text",
+   "용도": "헤더·푸터 워드마크 로고 (하나로노무법인)"
+  }
+ ],
+ "메모": "상담 장면·사무실 사진은 만들지 않음 — 페르소나가 「프로필 사진이 한 장 있지만 고객 후기나 사무실 사진은 없다」고 명시. 보유 자산인 프로필 1장 + 명함용 워드마크만 생성."
+}

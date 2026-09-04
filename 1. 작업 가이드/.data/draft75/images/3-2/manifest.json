@@ -1,0 +1,22 @@
+{
+ "code": "3-②",
+ "folder": "3-2",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Amateur smartphone photograph of a small old neighbourhood hair salon storefront on a quiet street in Busan. A modest backlit signboard with Korean lettering reading 다솜미용실 above a glass door, pink and white striped awning faded by sun, potted plants beside the entrance, reflections in the window. Afternoon soft natural light, slightly tilted everyday framing, no people. No other text or brand logos.",
+   "용도": "히어로 — 미용실 간판 (유저가 올린 유일한 사진 재현)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of the inside of a small long-running Korean neighbourhood hair salon: two styling chairs facing a large mirror, a wooden counter with combs, scissors and hair rollers in a basket, a hood dryer in the corner, patterned floor tiles, a small sofa for waiting. Warm afternoon daylight through the storefront window mixed with ceiling light, lived-in homely atmosphere. No people, no readable text, no logos.",
+   "용도": "매장 내부"
+  }
+ ]
+}

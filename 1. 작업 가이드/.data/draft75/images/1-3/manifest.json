@@ -1,0 +1,22 @@
+{
+ "code": "1-③",
+ "folder": "1-3",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Amateur smartphone photograph of a brand-new small Korean side-dish shop sign on the ground floor of an apartment complex shopping arcade in Cheongju. A clean white backlit signboard with bold Korean lettering reading 엄마손반찬, warm yellow accent bar, glass storefront below with fresh interior visible. Late afternoon soft natural light, slightly off-centre framing, ordinary everyday realism, no people. No other text or brand logos.",
+   "용도": "히어로 — 반찬가게 간판 (유저가 올린 유일한 사진 재현)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of the inside of a small neighbourhood Korean banchan side-dish shop. A refrigerated glass display case filled with stainless trays of freshly made side dishes: seasoned spinach, braised lotus root, stir-fried anchovies, kimchi, bean sprouts. Clean white tiled wall, simple shelving, warm ceiling light mixed with daylight from the storefront. No people, no readable text, no logos. Realistic photography, soft natural light, honest homely mood.",
+   "용도": "매장 외관·반찬 진열"
+  }
+ ]
+}

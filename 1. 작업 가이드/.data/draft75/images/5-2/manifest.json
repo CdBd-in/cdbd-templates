@@ -1,0 +1,61 @@
+{
+ "code": "5-②",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary photograph of a small modern Korean gimbap takeout shop interior in Seoul, warm wood counter, stainless steel prep table, trays of freshly rolled gimbap neatly lined up in a glass display case, a Korean woman in her 30s in a clean beige apron and cap slicing a gimbap roll on a wooden board, hands and torso in frame, Realistic Korean facial features, candid documentary photography, soft natural light from a large street-facing window, shallow depth of field, natural colors, no text overlay, no logo",
+   "용도": "히어로 메인 비주얼 — 매장에서 김밥을 마는 장면"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of the exterior of a small Korean gimbap shop on a quiet neighborhood street in a Korean city, clean white and warm wood storefront with a simple horizontal signboard, large glass window showing the counter inside, a few potted plants and a small A-frame menu board on the sidewalk, daytime, soft natural light, candid documentary photography, realistic Korean street details, no readable text, no brand logo",
+   "용도": "자료(점주 이야기) 부천 중동점 매장 외관 1컷"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph inside the small open kitchen of a Korean gimbap shop, stainless steel work table with bowls of prepped vegetables, seasoned spinach, pickled radish, sheets of dried seaweed and a bamboo rolling mat, a Korean cook's hands in disposable gloves rolling gimbap, steam rising from a rice warmer, Realistic Korean facial features, candid documentary photography, soft natural light, clean and busy morning prep atmosphere, no text",
+   "용도": "자료(점주 이야기) 수원 인계점 주방 작업 1컷"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up food photograph of freshly made Korean gimbap rolls sliced and arranged on a matte ceramic plate on a wooden table, visible fillings of egg, carrot, spinach, pickled radish and burdock, glossy rice, a small dish of danmuji beside it, soft natural window light, shallow depth of field, appetizing natural colors, editorial food photography, no text, no hands",
+   "용도": "브랜드 제품컷 — 김밥 클로즈업(스토리·프로모션 섹션용)"
+  },
+  {
+   "key": "profile1",
+   "file": "profile1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait of a Korean woman in her early 40s, franchise shop owner, wearing a clean beige work apron over a simple shirt, standing behind the counter of her small gimbap shop, arms relaxed, warm confident closed-lip smile, looking at the camera, Realistic Korean facial features, soft natural light from a shop window, blurred shop interior background, natural skin texture, no makeup-heavy styling, no text",
+   "용도": "자료(점주 이야기) 이지선 점주 인물 컷"
+  },
+  {
+   "key": "profile2",
+   "file": "profile2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait of a Korean man in his mid 30s, small restaurant owner, wearing a dark work apron over a plain t-shirt and a black cap, standing in the doorway of his small gimbap shop, calm friendly expression, looking at the camera, Realistic Korean facial features, candid documentary photography, soft natural light, blurred street background, natural skin texture, no text",
+   "용도": "자료(점주 이야기) 최동규 점주 인물 컷"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 790,
+   "h": 171,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid dark charcoal color, no gradient, no 3D, centered, horizontal composition: a very simple minimal line icon of a small round rice roll slice on the left, followed by the Korean word 소반김밥 in a clean modern sans-serif Korean typeface, generous letter spacing, crisp geometric shapes, no background, no frame, no extra text",
+   "용도": "헤더·푸터 워드마크 로고 (소반김밥)"
+  }
+ ]
+}

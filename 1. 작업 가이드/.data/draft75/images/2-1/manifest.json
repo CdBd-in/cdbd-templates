@@ -1,0 +1,14 @@
+{
+ "code": "2-①",
+ "folder": "2-1",
+ "images": [
+  {
+   "key": "profile",
+   "file": "profile.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean woman in her late twenties, a calligraphy artist, seated at a wooden desk holding a brush pen over a sheet of hanji paper with unfinished flowing Korean brush lettering. Realistic Korean facial features, natural quiet expression looking down at the paper, hair tied back, linen shirt with rolled sleeves. Soft natural light from a side window, warm paper and wood tones, small studio in Daegu. Waist-up framing. No readable words, no logos.",
+   "용도": "프로필 — 붓펜을 쥔 손과 쓰다 만 글씨"
+  }
+ ]
+}
