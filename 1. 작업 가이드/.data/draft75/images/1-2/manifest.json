@@ -93,9 +93,9 @@
   {
    "key": "logo",
    "file": "logo.png",
-   "w": 1354,
-   "h": 1020,
-   "prompt": "Flat vector wordmark logo, transparent background, single solid near-black color, no gradient, no 3D, centered. The wordmark reads FLOWLAB in a modern lowercase-feeling geometric sans-serif, with one simple continuous curved line mark to the left suggesting flow. Wide horizontal lockup, crisp vector edges, studio brand identity, nothing else in the frame.",
+   "w": 1140,
+   "h": 211,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid near-black color, no gradient, no 3D, centered. The wordmark reads FLOWLAB in a modern lowercase-feeling geometric sans-serif, with one simple continuous curved line mark to the left suggesting flow. Wide horizontal lockup, crisp vector edges, studio brand identity, nothing else in the frame. The logo sits fully inside the frame, horizontally and vertically centred, occupying about 55 percent of the frame width, with generous empty transparent margin on all four sides and nothing touching or cropped by the edges. Pure flat solid-colour vector shapes with hard clean edges on a fully transparent background. Absolutely no glow, no halo, no soft shadow, no background texture, no background panel, no gradient, no photographic effect.",
    "용도": "로고 워드마크 — 플로우랩"
   }
  ]

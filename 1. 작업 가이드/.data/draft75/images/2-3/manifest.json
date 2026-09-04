@@ -61,9 +61,9 @@
   {
    "key": "logo",
    "file": "logo.png",
-   "w": 1500,
-   "h": 1023,
-   "prompt": "Flat vector wordmark logo, transparent background, single solid charcoal black color, no gradient, no 3D, centered. The wordmark reads HARAM in an elegant high-contrast serif with wide letter spacing, and the small word STUDIO in tiny sans-serif capitals beneath it. Wide horizontal lockup, crisp vector edges, refined design studio identity, nothing else in the frame.",
+   "w": 1013,
+   "h": 390,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid charcoal black color, no gradient, no 3D, centered. The wordmark reads HARAM in an elegant high-contrast serif with wide letter spacing, and the small word STUDIO in tiny sans-serif capitals beneath it. Wide horizontal lockup, crisp vector edges, refined design studio identity, nothing else in the frame. The logo sits fully inside the frame, horizontally and vertically centred, occupying about 55 percent of the frame width, with generous empty transparent margin on all four sides and nothing touching or cropped by the edges. Pure flat solid-colour vector shapes with hard clean edges on a fully transparent background. Absolutely no glow, no halo, no soft shadow, no background texture, no background panel, no gradient, no photographic effect.",
    "용도": "로고 워드마크 — HARAM"
   }
  ]
