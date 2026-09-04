@@ -1,0 +1,79 @@
+{
+ "code": "4-③",
+ "brand": "노트커피 로스터스 (김포 로스터리)",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Wide horizontal photograph inside a small Korean coffee roastery workshop, eight plain unbranded kraft coffee bean bags with folded tops standing in a row on a stainless work bench in front of a drum coffee roaster, bare concrete floor and industrial wall behind, warm afternoon light through a window, calm documentary craft photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging, no people",
+   "용도": "히어로 — 로스터기 앞 원두 봉투 여덟 개 (가로)"
+  },
+  {
+   "key": "story",
+   "file": "story.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean man in his early forties, Realistic Korean facial features, short hair, wearing a dark apron over a work shirt, standing beside a drum coffee roaster and checking the roasting sample tray, looking down at the beans, soft natural light from a workshop window, warm neutral tones, shallow depth of field, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "스토리 — 로스팅 중인 대표"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Macro close-up photograph of light-roast washed Ethiopian Yirgacheffe coffee beans spilled in a shallow pile on a pale grey stone surface, pale cinnamon coloured beans with visible centre cut, soft natural light, minimal specialty coffee product photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "에티오피아 예가체프 코체 G1 — 원두 클로즈업"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Macro close-up photograph of medium-roast washed Colombian coffee beans in a shallow pile on a pale grey stone surface, warm brown even roast, soft natural light, minimal specialty coffee product photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "콜롬비아 우일라 수프리모 — 원두 클로즈업"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a single plain unbranded kraft paper coffee bag with a folded and clipped top standing upright on a pale grey seamless backdrop, a small scatter of medium-dark roasted coffee beans in front of it, soft natural light from the left, minimal specialty coffee packaging photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "과테말라 안티구아 SHB — 봉투 패키지 컷"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up photograph of espresso extracting from a bare bottomless portafilter into a small glass cup, thick caramel coloured crema stream, stainless espresso machine softly out of focus behind, warm moody cafe light, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "노트 시그니처 블렌드 — 에스프레소 추출 컷"
+  },
+  {
+   "key": "sq5",
+   "file": "sq5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up photograph of dark roasted coffee beans pouring out of the discharge chute of a drum coffee roaster into the cooling tray, faint steam and chaff in the air, warm workshop light, documentary craft photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging, no people",
+   "용도": "다크 로스트 블렌드 — 로스터기 배출구 컷"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1187,
+   "h": 74,
+   "prompt": "Flat vector wordmark logo reading 'NOTE COFFEE ROASTERS' on one single line in plain uppercase sans-serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no icon, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 (검정·투명배경 · 알파 크롭 완료)"
+  },
+  {
+   "key": "logo_light",
+   "file": "logo_light.png",
+   "w": 1187,
+   "h": 74,
+   "prompt": "Flat vector wordmark logo reading 'NOTE COFFEE ROASTERS' on one single line in plain uppercase sans-serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no icon, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 흰색 반전본 (다크 배경용)",
+   "파생": "logo.png 반전본 (PIL invert · 알파 보존)"
+  }
+ ]
+}

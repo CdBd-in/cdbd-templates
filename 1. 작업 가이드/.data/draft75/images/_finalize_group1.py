@@ -1,7 +1,7 @@
 import json, os
 from PIL import Image
 BASE = os.path.dirname(os.path.abspath(__file__))
-SPEC = json.load(open(os.path.join(BASE, '_spec.json')))
+SPEC = json.load(open(os.path.join(BASE, '_spec_group1.json')))
 report = []
 for folder, blk in SPEC.items():
     outdir = os.path.join(BASE, folder)
