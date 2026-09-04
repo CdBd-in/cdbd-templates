@@ -1,0 +1,45 @@
+{
+ "code": "6-②",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary photograph of a small neighborhood flea market and farmers market in a Korean city park on a summer afternoon, rows of simple canopy stalls with vegetables, homemade jam, secondhand books and handmade goods, neighbors of all ages browsing, wide overview from a slight elevation, green trees and low apartment buildings behind, Realistic Korean facial features, candid documentary photography, soft natural light, warm community atmosphere, no readable text, no brand logos",
+   "용도": "히어로 메인 비주얼 — 성미산 여름 장터 전경(가로형)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph at eye level of a row of market stall tables at a small Korean neighborhood market, wooden crates of vegetables and jars of homemade side dishes on gingham cloth, a middle-aged Korean woman vendor handing a paper bag to a customer, both partly in frame, Realistic Korean facial features, candid documentary photography, dappled soft natural light under a canopy, warm natural colors, no readable text",
+   "용도": "기사 01 「여름 장터, 3년 만에 다시 열렸습니다」 대표컷"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of a Korean farmer in her late 50s standing in a green rice paddy in early autumn, wearing a wide-brimmed sun hat, long-sleeved work shirt and cotton work gloves, ears of rice at waist height, mountains in the far background, calm weathered expression looking toward the camera, Realistic Korean facial features, candid documentary photography, soft natural light, natural colors, no text",
+   "용도": "기사 02 「우리 쌀은 어디서 오나」 대표컷 — 논에 선 농부"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph looking down at a wooden meeting table with printed financial report booklets spread open, simple bar charts and tables on the pages, a ballpoint pen, reading glasses, a paper cup of barley tea and a calculator, warm daylight from a side window, candid documentary photography, shallow depth of field, no readable text, no logos, Korean office setting",
+   "용도": "기사 03 「상반기 살림 결산」 대표컷 — 총회 자료 펼친 책상"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph inside the small kitchen of a Korean banchan side dish shop early in the morning, large stainless bowls of seasoned namul and braised dishes, a Korean woman in her 50s wearing an apron and gloves arranging side dishes into shallow trays, warm overhead light and steam, Realistic Korean facial features, candid documentary photography, soft natural light, natural colors, no readable text",
+   "용도": "기사 04 「반찬가게 소담 사장님의 하루」 대표컷 — 반찬가게 주방"
+  }
+ ]
+}

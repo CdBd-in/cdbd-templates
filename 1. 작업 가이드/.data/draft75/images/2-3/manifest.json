@@ -1,0 +1,70 @@
+{
+ "code": "2-③",
+ "folder": "2-3",
+ "images": [
+  {
+   "key": "profile",
+   "file": "profile.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary portrait of a Korean woman in her mid thirties, a graphic designer, sitting at her studio desk in Seongsu Seoul. Realistic Korean facial features, calm confident half-smile looking at the camera, short hair, wearing a plain oatmeal sweater. Desk with a laptop, printed paper samples and a mug, white brick wall behind. Soft natural light from a large window on the left. Waist-up framing, shallow depth of field. No readable text, no logos.",
+   "용도": "프로필 — 작업실 책상 앞 반신 컷"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Flat lay photograph of a small bakery brand identity set on a warm oat-coloured paper surface: kraft bread bags, a round stamp, brown paper wrapping, a stack of business cards and a cotton apron corner, all in a cream and wheat colour palette with abstract wheat-motif marks. Soft natural light, subtle shadows, graphic design portfolio shot. Blurred illegible lettering only, no readable text, no real brand logos.",
+   "용도": "작업물 1 — 베이커리 「밀채」 브랜드 아이덴티티"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a warm minimal dental clinic reception corner used as a brand identity portfolio shot: a smooth beige wall with a single soft rounded abstract tooth-like symbol mounted in matte cream metal and nothing else on the wall, a light oak counter edge below, a small ceramic vase with one dried branch. Warm beige and soft white palette, soft natural light, calm friendly mood. Completely free of any letters, words, writing or signage of any kind. No text anywhere in the image, no logos.",
+   "용도": "작업물 2 — 치과 「온담」 아이덴티티"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a two-bottle gift box set of Korean citrus syrup: a sturdy rigid box open to show two glass bottles with warm yellow-orange liquid, matte labels in a soft yellow and deep green palette, tissue paper. Placed on a pale linen surface, soft natural light with gentle shadow. Blurred illegible label lettering only, no readable text, no real brand logos.",
+   "용도": "작업물 3 — 감귤청 「노란오후」 패키지"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade soap bar in a folded recycled-paper sleeve package assembled without tape or glue, shown next to its unfolded flat sheet showing the fold lines. Muted grey-green and raw paper palette on a pale concrete surface, soft natural light, structural packaging design portfolio shot. Blurred illegible lettering only, no readable text, no real brand logos.",
+   "용도": "작업물 4 — 수제 비누 「무른물」 무접착 패키지"
+  },
+  {
+   "key": "sq5",
+   "file": "sq5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a hardcover photo book lying open on a dark wooden table, showing a full-bleed dusk cityscape spread with generous white margins, a second closed copy beside it with a matte deep-blue cover and debossed abstract mark. Soft natural light raking across the paper texture. Editorial book design portfolio shot. Blurred illegible lettering only, no readable text, no real brand logos.",
+   "용도": "작업물 5 — 사진집 『서울, 4시 20분』"
+  },
+  {
+   "key": "sq6",
+   "file": "sq6.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of four issues of an independent quarterly magazine fanned out on a light grey surface, each with a different muted cover colour (sand, sage, clay, slate) and the same restrained minimal cover layout of plain colour fields and thin rules, one issue open showing a two-column spread of tiny illegible grey text lines. Soft natural light, editorial design portfolio shot. Completely free of any readable letters, words or titles anywhere in the image, no logos.",
+   "용도": "작업물 6 — 독립출판 계간지 『곁』 1~4호"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1013,
+   "h": 390,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid charcoal black color, no gradient, no 3D, centered. The wordmark reads HARAM in an elegant high-contrast serif with wide letter spacing, and the small word STUDIO in tiny sans-serif capitals beneath it. Wide horizontal lockup, crisp vector edges, refined design studio identity, nothing else in the frame. The logo sits fully inside the frame, horizontally and vertically centred, occupying about 55 percent of the frame width, with generous empty transparent margin on all four sides and nothing touching or cropped by the edges. Pure flat solid-colour vector shapes with hard clean edges on a fully transparent background. Absolutely no glow, no halo, no soft shadow, no background texture, no background panel, no gradient, no photographic effect.",
+   "용도": "로고 워드마크 — HARAM"
+  }
+ ]
+}

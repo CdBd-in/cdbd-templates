@@ -1,0 +1,126 @@
+{
+ "code": "4-④",
+ "brand": "하동 다래원 (녹차 농가 · 2026 햇차)",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Wide horizontal photograph of terraced green tea fields on a steep mountain slope in Hadong Korea at dawn, low mist drifting between the rows of tea bushes, soft blue and green morning light just before sunrise, distant ridgelines fading into haze, calm documentary landscape photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging, no people",
+   "용도": "히어로 — 새벽 안개 비탈 차밭 (가로)"
+  },
+  {
+   "key": "prod1",
+   "file": "prod1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a small plain kraft-and-cream stand-up tea pouch with a folded top standing upright on a pale linen surface, a shallow wooden dish of dry dark-green Korean green tea leaves beside it, soft natural window light, quiet minimal Korean tea product photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "우전 첫물차 50g 패키지 정면컷",
+   "그룹": "구매(상단 CTA)"
+  },
+  {
+   "key": "prod2",
+   "file": "prod2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a slightly larger plain kraft-and-cream stand-up tea pouch standing upright on a pale linen surface, a few dry green tea leaves scattered in front, soft natural window light, quiet minimal Korean tea product photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "세작 80g 패키지 정면컷",
+   "그룹": "구매(상단 CTA)"
+  },
+  {
+   "key": "prod3",
+   "file": "prod3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a plain natural paper tea box with its lid slightly ajar showing plain unprinted cotton tea bags inside, standing on a pale linen surface, one tea bag resting in front, soft natural window light, quiet minimal Korean tea product photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "하동 발효차 티백 20개입 상자컷",
+   "그룹": "구매(상단 CTA)"
+  },
+  {
+   "key": "proc1",
+   "file": "proc1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Photograph of a steep Korean green tea field before sunrise, rows of tea bushes wet with dew, thick mist hanging over the slope, cool blue-green dawn light, calm documentary landscape photography, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging, no people",
+   "용도": "자료 ①해 뜨기 전 차밭 전경",
+   "그룹": "차를 담기까지"
+  },
+  {
+   "key": "proc2",
+   "file": "proc2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up documentary photograph of the hands of a Korean tea farmer picking one bud and two young leaves from a tea bush, weathered fingers, a woven basket at the waist, only hands and forearms in frame, Realistic Korean skin tone, candid documentary, soft natural morning light, dewy green leaves, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "자료 ②손으로 잎 따는 클로즈업",
+   "그룹": "차를 담기까지"
+  },
+  {
+   "key": "proc3",
+   "file": "proc3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of fresh green tea leaves being pan-fired and hand-tossed in a large cast iron cauldron over a wood fire in a Korean farmhouse, steam rising, a pair of weathered Korean hands turning the leaves, Realistic Korean skin tone, candid documentary, warm firelight and soft daylight mixed, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "자료 ③무쇠솥 덖기",
+   "그룹": "차를 담기까지"
+  },
+  {
+   "key": "proc4",
+   "file": "proc4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Macro close-up photograph of finished dried Korean green tea leaves in a shallow wooden dish, tightly twisted dark green needles with faint silvery down, soft natural light, minimal still life, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "자료 ④완성된 찻잎 클로즈업",
+   "그룹": "차를 담기까지"
+  },
+  {
+   "key": "desc1",
+   "file": "desc1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Macro close-up photograph looking straight down at the surface of pale yellow-green brewed green tea in a white porcelain cup, faint steam and a soft ring of light on the liquid surface, soft natural light, quiet minimal still life, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "스토리 ①향 — 우려낸 찻물 표면",
+   "그룹": "어떤 맛인가요"
+  },
+  {
+   "key": "desc2",
+   "file": "desc2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Still life photograph of a small white Korean porcelain tea cup filled with clear pale green tea, placed on a pale linen cloth beside a simple ceramic teapot, soft natural window light, quiet minimal Korean tea still life, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "스토리 ②맛 — 백자 찻잔에 담긴 차",
+   "그룹": "어떤 맛인가요"
+  },
+  {
+   "key": "desc3",
+   "file": "desc3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up documentary photograph of a Korean woman's hands measuring dry green tea leaves with a small bamboo scoop into a white porcelain brewing pot on a wooden tea tray, only hands in frame, Realistic Korean skin tone, candid documentary, soft natural light, realistic photo, no text, no logo, no watermark, no labels, no lettering on packaging",
+   "용도": "스토리 ③우리는 법 — 다구에 잎 계량",
+   "그룹": "어떤 맛인가요"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 844,
+   "h": 283,
+   "prompt": "Flat vector wordmark logo reading '다래원' in clean Korean Hangul letterforms, transparent background, single solid dark green color, no gradient, no 3D, no shadow, no frame, no extra text, correctly spelled Hangul, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 「다래원」 (딥그린·투명배경 · 알파 크롭 완료)"
+  },
+  {
+   "key": "logo_light",
+   "file": "logo_light.png",
+   "w": 844,
+   "h": 283,
+   "prompt": "Flat vector wordmark logo reading '다래원' in clean Korean Hangul letterforms, transparent background, single solid dark green color, no gradient, no 3D, no shadow, no frame, no extra text, correctly spelled Hangul, centered, generous empty margin around the wordmark",
+   "용도": "로고 반전본 (다크 배경용)",
+   "파생": "logo.png 반전본 (PIL invert · 알파 보존)"
+  }
+ ],
+ "notes": [
+  "제품 3종 + 공정 4컷 + 맛 설명 3컷 생성.",
+  "「다원 주소」는 「이건 없어요」 → 위치·지도 없음.",
+  "로고는 페르소나 답변에 파일 언급이 없었지만 상호(하동 다래원)가 헤더·푸터에 쓰여 워드마크를 만들어 둠 — 필요할 때만 사용."
+ ]
+}

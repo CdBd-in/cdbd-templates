@@ -1,0 +1,171 @@
+{
+ "code": "4-①",
+ "brand": "소도 SODO (경기 이천 도예 공방)",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Wide horizontal photograph of a wooden work table in a small Korean ceramic studio in Icheon, three finished handmade white porcelain pieces arranged on it: a mug, a bowl and a flat plate, all in matte white glaze, quiet workshop background softly out of focus with a potters wheel and shelves, morning daylight from a side window, warm and calm, editorial craft photography, realistic photo, no text, no logo, no watermark, no people",
+   "용도": "히어로 메인 비주얼 — 작업대 위 백자 그릇 세 점"
+  },
+  {
+   "key": "story",
+   "file": "story.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "Vertical documentary photograph of a Korean potter's hands shaping a white porcelain cylinder on a spinning potters wheel, clay slip on the fingers, only the hands and forearms in frame, Realistic Korean facial features not visible, candid documentary, soft natural light from a workshop window, muted earthy tones, shallow depth of field, realistic photo, no text, no logo, no watermark",
+   "용도": "스토리 — 물레에서 성형 중인 손 (세로)"
+  },
+  {
+   "key": "p1_1",
+   "file": "p1_1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "(파생본 — 원본 로고에서 색 반전)",
+   "용도": "미소 머그 ①정면",
+   "그룹": "제품 1 — 미소 머그"
+  },
+  {
+   "key": "p1_2",
+   "file": "p1_2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain mug, matte white glaze with faint throwing rings from the potters wheel, a small pressed thumb dent on the handle, warm grey seamless studio backdrop, three-quarter 45 degree angle showing the curve of the handle, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "미소 머그 ②45도",
+   "그룹": "제품 1 — 미소 머그"
+  },
+  {
+   "key": "p1_3",
+   "file": "p1_3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Extreme close-up macro product photograph of the handle of a handmade white porcelain mug, matte white glaze with faint throwing rings from the potters wheel, a small pressed thumb dent on the handle, warm grey seamless studio backdrop, focused on the pressed thumb dent where the thumb rests, texture of the matte glaze visible, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "미소 머그 ③손잡이 디테일",
+   "그룹": "제품 1 — 미소 머그"
+  },
+  {
+   "key": "p1_4",
+   "file": "p1_4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain mug, matte white glaze with faint throwing rings from the potters wheel, a small pressed thumb dent on the handle, warm grey seamless studio backdrop turned upside down showing the unglazed trimmed foot ring at the bottom and a small maker stamp impressed in the clay, the glaze stopping in a clean line above the foot, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "미소 머그 ④굽 바닥",
+   "그룹": "제품 1 — 미소 머그"
+  },
+  {
+   "key": "p1_5",
+   "file": "p1_5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Lifestyle photograph of a handmade white porcelain mug, matte white glaze with faint throwing rings from the potters wheel, a small pressed thumb dent on the handle, warm grey seamless studio backdrop filled with black drip coffee, placed on a bare wooden table beside a folded linen cloth, steam rising faintly, home cafe scene, morning daylight, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "미소 머그 ⑤사용 컷(드립 커피)",
+   "그룹": "제품 1 — 미소 머그"
+  },
+  {
+   "key": "p2_1",
+   "file": "p2_1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain bowl about 148mm wide and 68mm deep, matte white glaze outside and glossy clear glaze inside, low trimmed foot ring, warm grey seamless studio backdrop, straight-on side view at eye level showing the depth of the bowl, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "담 볼 ①정면(측면 깊이)",
+   "그룹": "제품 2 — 담 볼"
+  },
+  {
+   "key": "p2_2",
+   "file": "p2_2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain bowl about 148mm wide and 68mm deep, matte white glaze outside and glossy clear glaze inside, low trimmed foot ring, warm grey seamless studio backdrop shot from directly above, top view showing the pooled clear glaze and the throwing rings inside, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "담 볼 ②위에서(탑뷰)",
+   "그룹": "제품 2 — 담 볼"
+  },
+  {
+   "key": "p2_3",
+   "file": "p2_3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Extreme close-up macro photograph of the inside bottom of a handmade white porcelain bowl about 148mm wide and 68mm deep, matte white glaze outside and glossy clear glaze inside, low trimmed foot ring, warm grey seamless studio backdrop, clear glaze pooled thicker at the centre, subtle glaze texture, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "담 볼 ③안쪽 디테일",
+   "그룹": "제품 2 — 담 볼"
+  },
+  {
+   "key": "p2_4",
+   "file": "p2_4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain bowl about 148mm wide and 68mm deep, matte white glaze outside and glossy clear glaze inside, low trimmed foot ring, warm grey seamless studio backdrop tilted to show the low trimmed foot ring and the clean line where the matte glaze stops, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "담 볼 ④굽",
+   "그룹": "제품 2 — 담 볼"
+  },
+  {
+   "key": "p2_5",
+   "file": "p2_5.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Lifestyle photograph of a handmade white porcelain bowl about 148mm wide and 68mm deep, matte white glaze outside and glossy clear glaze inside, low trimmed foot ring, warm grey seamless studio backdrop filled with a fresh green salad, placed on a bare wooden dining table with a linen napkin and wooden chopsticks, home dining scene, daylight, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "담 볼 ⑤사용 컷(샐러드)",
+   "그룹": "제품 2 — 담 볼"
+  },
+  {
+   "key": "p3_1",
+   "file": "p3_1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain flat plate about 195mm across with a very thin shaved rim, matte white glaze, warm grey seamless studio backdrop shot from directly above, full top view of the empty plate, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "여백 접시 ①정면(탑뷰)",
+   "그룹": "제품 3 — 여백 접시"
+  },
+  {
+   "key": "p3_2",
+   "file": "p3_2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a handmade white porcelain flat plate about 195mm across with a very thin shaved rim, matte white glaze, warm grey seamless studio backdrop viewed from the side at table level so the very thin shaved rim and low profile are visible, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "여백 접시 ②측면 두께",
+   "그룹": "제품 3 — 여백 접시"
+  },
+  {
+   "key": "p3_3",
+   "file": "p3_3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Extreme close-up macro photograph of the surface and thin rim of a handmade white porcelain flat plate about 195mm across with a very thin shaved rim, matte white glaze, warm grey seamless studio backdrop, raking light revealing the matte glaze texture and subtle tool marks, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "여백 접시 ③유약 디테일",
+   "그룹": "제품 3 — 여백 접시"
+  },
+  {
+   "key": "p3_4",
+   "file": "p3_4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Lifestyle photograph of a handmade white porcelain flat plate about 195mm across with a very thin shaved rim, matte white glaze, warm grey seamless studio backdrop with one slice of toasted bread and a small spoonful of jam on it, on a bare wooden breakfast table, morning daylight, soft natural window light from the left, gentle soft shadow, calm minimal Korean ceramic studio product photography, muted natural palette, realistic photo, no text, no logo, no watermark",
+   "용도": "여백 접시 ④사용 컷(토스트·잼)",
+   "그룹": "제품 3 — 여백 접시"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 906,
+   "h": 246,
+   "prompt": "Flat vector wordmark logo reading 'SODO' in clean geometric uppercase sans-serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 (검정·투명배경 · 알파 크롭 완료)"
+  },
+  {
+   "key": "logo_light",
+   "file": "logo_light.png",
+   "w": 906,
+   "h": 246,
+   "prompt": "Flat vector wordmark logo reading 'SODO' in clean geometric uppercase sans-serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 흰색 반전본 (다크 배경용)",
+   "파생": "logo.png 반전본 (PIL invert · 알파 보존)"
+  }
+ ],
+ "notes": [
+  "페르소나 자료 풍부 — 제품 3종 × 4~5컷 전부 생성.",
+  "「제품 영상」은 페르소나가 「이건 없어요」 → 영상 자산 없음.",
+  "「고객 후기」는 건너뛴 항목 → 리뷰용 이미지 없음.",
+  "지도는 생성하지 않음(고정 지도 이미지 사용)."
+ ]
+}

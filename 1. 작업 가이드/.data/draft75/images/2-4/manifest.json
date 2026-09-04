@@ -1,0 +1,14 @@
+{
+ "code": "2-④",
+ "folder": "2-4",
+ "images": [
+  {
+   "key": "profile",
+   "file": "profile.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Formal Korean ID photograph of a woman in her early fifties, a quality management professional. Realistic Korean facial features, short neatly styled dark hair with a few grey strands, calm composed expression looking straight at the camera, wearing a simple navy blazer over a white blouse. Plain light grey studio backdrop, soft even natural light, head and shoulders framing, straight-on angle, modest and dignified. No text, no logos.",
+   "용도": "프로필 — 증명사진 1장"
+  }
+ ]
+}

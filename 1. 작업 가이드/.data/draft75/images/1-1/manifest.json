@@ -1,0 +1,38 @@
+{
+ "code": "1-①",
+ "folder": "1-1",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Editorial documentary photograph of an elegant Korean convention hall grand ballroom prepared for a corporate 30th anniversary ceremony. Round banquet tables with white linen, gold-rimmed chairs, a low stage with a plain lectern and warm uplighting, soft chandelier glow, tall windows with early evening light. Empty room before guests arrive, formal and dignified atmosphere. Warm neutral palette of ivory, deep navy and brass. No text, no signage, no logos, no people. Realistic photography, wide angle, soft natural light, shallow depth of field on the foreground table setting.",
+   "용도": "히어로 — 기념식 행사장"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph inside a mid-size Korean automotive precision parts factory in an industrial complex. Rows of CNC lathes and press machines, metal shavings, neatly stacked finished steel components in blue plastic bins, clean concrete floor with yellow safety lines. Late afternoon daylight through high factory windows, dust motes in the light. No people, no text, no logos. Realistic photography, soft natural light, muted industrial color palette.",
+   "용도": "연혁·회사 이미지 — 자동차 정밀부품 공장"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close documentary photograph of a formal Korean corporate banquet table detail: folded napkins, name card holders left blank, polished cutlery, a small floral centerpiece of white and cream flowers, soft candle light. Ivory tablecloth, warm brass accents, shallow depth of field. No text, no writing, no logos, no people. Realistic photography, soft natural light, elegant restrained mood.",
+   "용도": "행사 디테일 — 만찬 테이블"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1117,
+   "h": 282,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid dark navy color, no gradient, no 3D, centered. The wordmark reads DAESUNG PRECISION in clean geometric sans-serif capitals, with a single simple square outline mark to the left. Corporate manufacturing identity, wide horizontal lockup, generous letter spacing, crisp vector edges, nothing else in the frame. The logo sits fully inside the frame, horizontally and vertically centred, occupying about 55 percent of the frame width, with generous empty transparent margin on all four sides and nothing touching or cropped by the edges. Pure flat solid-colour vector shapes with hard clean edges on a fully transparent background. Absolutely no glow, no halo, no soft shadow, no background texture, no background panel, no gradient, no photographic effect.",
+   "용도": "로고 워드마크"
+  }
+ ]
+}

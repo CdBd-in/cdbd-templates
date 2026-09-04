@@ -1,0 +1,243 @@
+{
+ "code": "4-②",
+ "brand": "오르트 ORT (성수 여성복 · 2026 F/W)",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body in an oversized alpaca blend coat over a round-neck knit dress with leather loafers, hands in pockets, standing in a quiet narrow Seoul alley on a cold overcast winter afternoon, brick wall and bare branches behind her, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "히어로 화보 — LOOK 1 전신 (세로 2:3)"
+  },
+  {
+   "key": "story",
+   "file": "story.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Horizontal overhead still-life photograph of five rectangular winter fabric swatches laid out in a row on a pale linen surface: alpaca blend coating, wool suiting, ribbed knit, cashmere blend, cotton shirting, muted oatmeal charcoal warm grey deep brown and olive tones, a wooden ruler and a small pair of scissors beside them, soft natural window light, quiet minimal studio still life, realistic photo, no text, no logo, no watermark, no people",
+   "용도": "컬렉션 스토리 — 원단 스와치 5장 (가로)"
+  },
+  {
+   "key": "L1_1",
+   "file": "L1_1.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body, front, wearing an oversized alpaca blend coat open over a round-neck knit dress, leather loafers, in a quiet narrow Seoul alley, overcast winter light, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 1 ①전신",
+   "그룹": "LOOK 1"
+  },
+  {
+   "key": "L1_2",
+   "file": "L1_2.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, upper body from the waist up, showing the wide lapel and the neckline of the knit dress under the alpaca coat, against a plain concrete wall outdoors, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 1 ②상반신",
+   "그룹": "LOOK 1"
+  },
+  {
+   "key": "L1_3",
+   "file": "L1_3.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, seen from behind, full body, showing the back vent and the hem line of the long alpaca coat, walking away in a quiet Seoul alley, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 1 ③뒷모습",
+   "그룹": "LOOK 1"
+  },
+  {
+   "key": "L1_4",
+   "file": "L1_4.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up detail of the folded-back cuff of the alpaca coat sleeve and her hand, cropped at the elbow, outdoors, soft overcast light, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 1 ④소매 디테일",
+   "그룹": "LOOK 1"
+  },
+  {
+   "key": "L2_1",
+   "file": "L2_1.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body in a wool tailored jacket with a dropped waist and high-waisted wide leg trousers, a thin silk scarf at the neck, in a bare white studio corner, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 2 ①전신",
+   "그룹": "LOOK 2"
+  },
+  {
+   "key": "L2_2",
+   "file": "L2_2.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, full body side profile view, showing the waistline of the wool jacket and the drape of the wide trousers, in a bare white studio corner, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 2 ②측면",
+   "그룹": "LOOK 2"
+  },
+  {
+   "key": "L2_3",
+   "file": "L2_3.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, upper body, the wool tailored jacket buttoned closed, silk scarf knotted at the collar, in a bare white studio corner, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 2 ③상반신",
+   "그룹": "LOOK 2"
+  },
+  {
+   "key": "L2_4",
+   "file": "L2_4.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, seated on a low wooden stool, full body, the wide trousers folding into soft creases across the lap, in a bare white studio corner, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 2 ④앉은 자세",
+   "그룹": "LOOK 2"
+  },
+  {
+   "key": "L2_5",
+   "file": "L2_5.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up detail of the welt pocket of the wool tailored jacket, fabric weave visible, no face in frame, in a bare white studio corner, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 2 ⑤포켓 디테일",
+   "그룹": "LOOK 2"
+  },
+  {
+   "key": "L3_1",
+   "file": "L3_1.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body in a turtleneck ribbed knit tucked into a long satin skirt with suede ankle boots, in a dim room at dusk with a plain wall, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 3 ①전신",
+   "그룹": "LOOK 3"
+  },
+  {
+   "key": "L3_2",
+   "file": "L3_2.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, upper body, the high turtleneck ribbed collar framing the jaw, in a dim room at dusk, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 3 ②상반신",
+   "그룹": "LOOK 3"
+  },
+  {
+   "key": "L3_3",
+   "file": "L3_3.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, full body mid-stride walking, the long satin skirt swinging with the movement, slight motion blur in the hem, in a dim corridor at dusk, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 3 ③걷는 컷",
+   "그룹": "LOOK 3"
+  },
+  {
+   "key": "L3_4",
+   "file": "L3_4.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up of the hem slit of the long satin skirt and the suede ankle boots, cropped below the knee, on a wooden floor at dusk, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 3 ④밑단 디테일",
+   "그룹": "LOOK 3"
+  },
+  {
+   "key": "L4_1",
+   "file": "L4_1.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body indoors in an unlined cashmere blend cardigan worn open over a cotton inner top with relaxed trousers, in a bright quiet living room with a linen sofa, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 4 ①전신(실내)",
+   "그룹": "LOOK 4"
+  },
+  {
+   "key": "L4_2",
+   "file": "L4_2.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, seated on a linen sofa with one knee drawn up, full body, wrapped in the cashmere blend cardigan, in a bright quiet living room, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 4 ②앉은 자세",
+   "그룹": "LOOK 4"
+  },
+  {
+   "key": "L4_3",
+   "file": "L4_3.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, upper body, holding the cashmere cardigan closed at the front without buttoning it, in a bright quiet living room, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 4 ③상반신",
+   "그룹": "LOOK 4"
+  },
+  {
+   "key": "L4_4",
+   "file": "L4_4.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up of her hands with the long cardigan sleeves falling over the backs of her hands, in a bright quiet living room, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 4 ④소매",
+   "그룹": "LOOK 4"
+  },
+  {
+   "key": "L4_5",
+   "file": "L4_5.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, extreme close-up macro of the knit structure of a cashmere blend cardigan, soft fibres and rib texture, no person in frame, on a linen sofa in soft daylight, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 4 ⑤니트 조직",
+   "그룹": "LOOK 4"
+  },
+  {
+   "key": "L5_1",
+   "file": "L5_1.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body in a long cotton shirt dress worn alone with a leather belt and knitted socks, against a plain plaster wall, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 5 ①전신",
+   "그룹": "LOOK 5"
+  },
+  {
+   "key": "L5_2",
+   "file": "L5_2.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, standing full body wearing the same long cotton shirt dress layered underneath the open alpaca blend coat, against a plain plaster wall, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 5 ②코트 위",
+   "그룹": "LOOK 5"
+  },
+  {
+   "key": "L5_3",
+   "file": "L5_3.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up of the waist, the leather belt cinched over the cotton shirt dress, cropped at chest and hip, against a plain plaster wall, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 5 ③허리 벨트",
+   "그룹": "LOOK 5"
+  },
+  {
+   "key": "L5_4",
+   "file": "L5_4.png",
+   "w": 1024,
+   "h": 1536,
+   "prompt": "the same Korean woman in her early thirties, Realistic Korean facial features, natural bare makeup, dark hair tied loosely back, calm neutral expression, candid documentary editorial fashion photography, soft natural light, close-up of the buttoned cuff of the cotton shirt dress and her wrist, no face in frame, against a plain plaster wall, muted desaturated winter palette of oatmeal beige charcoal warm grey and deep brown, no bright or saturated colours, film-like grain, quiet minimal Korean fashion lookbook, realistic photo, no text, no logo, no watermark",
+   "용도": "LOOK 5 ④소매 커프스",
+   "그룹": "LOOK 5"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 694,
+   "h": 276,
+   "prompt": "Flat vector wordmark logo reading 'ORT' in refined wide-spaced uppercase serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 (검정·투명배경 · 알파 크롭 완료)"
+  },
+  {
+   "key": "logo_light",
+   "file": "logo_light.png",
+   "w": 694,
+   "h": 276,
+   "prompt": "Flat vector wordmark logo reading 'ORT' in refined wide-spaced uppercase serif letters, transparent background, single solid black color, no gradient, no 3D, no shadow, no frame, no extra text, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 흰색 반전본 — 페르소나가 답한 「흰색 워드마크」에 해당",
+   "파생": "logo.png 반전본 (PIL invert · 알파 보존)"
+  }
+ ],
+ "notes": [
+  "룩북이라 화보만 생성 — 소재·치수·스펙 컷은 만들지 않음(페르소나 「이건 없어요」).",
+  "룩당 4~5컷이라 캐러셀 조건(4장 이상) 충족.",
+  "전 컷 동일 한국인 모델·뮤트 톤으로 통일(쨍한 색 배제).",
+  "지도는 생성하지 않음."
+ ]
+}

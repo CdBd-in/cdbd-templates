@@ -1,0 +1,46 @@
+{
+ "code": "1-④",
+ "folder": "1-4",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary action photograph of a beginner Korean surfer standing up on a soft-top longboard on a small clean wave at Cheongho beach in Sokcho, Korea. Realistic Korean facial features, candid documentary, soft natural light of a summer morning. Green mountains faintly visible on the horizon, blue-grey East Sea water, white foam. Joyful concentrated expression, wetsuit. No text, no logos, no brand names.",
+   "용도": "히어로 — 파도 타는 수강생"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a surf lesson briefing on the sand: a Korean instructor kneeling beside a foam surfboard demonstrating the pop-up while six Korean students in wetsuits sit in a half circle listening. Realistic Korean facial features, candid documentary, soft natural light, Sokcho beach in the morning. No text, no logos.",
+   "용도": "강습 현장 — 모래사장 이론"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean beginner surfer in a black wetsuit standing up for the first time on a wide blue foam surfboard in shallow whitewater, both feet clearly on the board, knees bent, arms out for balance, laughing with delight. The whole surfboard is clearly visible under her feet. Realistic Korean facial features, candid documentary, soft natural light, splashing white water, Korean east coast beach behind. No text, no logos.",
+   "용도": "강습 현장 — 처음 보드에 올라선 순간"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary photograph of a Korean surf instructor standing waist-deep in the sea holding the tail of a foam surfboard, guiding one student lying on it, talking to them. Realistic Korean facial features, candid documentary, soft natural light, calm small waves, Sokcho coastline. No text, no logos.",
+   "용도": "강습 현장 — 한 사람씩 봐 드립니다"
+  },
+  {
+   "key": "sq4",
+   "file": "sq4.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of surfboards lined up standing in the sand at dusk on a Korean east coast beach, silhouettes of two people carrying a board toward the water in the distance, pastel evening sky reflecting on wet sand. Soft natural light, quiet end-of-day mood. No text, no logos, no readable signage.",
+   "용도": "강습 현장 — 끝난 저녁 바다"
+  }
+ ]
+}

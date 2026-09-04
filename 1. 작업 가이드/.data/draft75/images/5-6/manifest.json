@@ -1,0 +1,45 @@
+{
+ "code": "5-⑥",
+ "images": [
+  {
+   "key": "hero",
+   "file": "hero.png",
+   "w": 1536,
+   "h": 1024,
+   "prompt": "Documentary photograph of a community kitchen in a Korean welfare center on a winter morning, long stainless steel table lined with dozens of open lunch boxes being filled with rice and three side dishes, volunteers in aprons, gloves and hairnets working, only hands, arms and backs visible, no faces shown, steam rising, warm overhead light mixed with cold blue dawn light from the windows, candid documentary photography, realistic Korean community center details, no text",
+   "용도": "히어로 메인 비주얼 — 조리실 도시락 준비 전경(얼굴 노출 없음)"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Close-up documentary photograph of gloved hands placing seasoned Korean side dishes into the compartments of a lunch box on a stainless steel kitchen table, bowls of namul, braised potatoes and kimchi around, only hands and forearms in frame, no faces, soft natural light, steam and warm tones, candid documentary photography, realistic Korean community kitchen, no text",
+   "용도": "자료 「이렇게 준비합니다」 1컷 — 조리실에서 반찬 담는 손"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of stacked insulated delivery bags being loaded with warm lunch boxes near the door of a Korean community center, a volunteer's gloved hands zipping a padded thermal bag, sticky notes with route numbers on the bags, no faces visible, cold winter morning light through the doorway, candid documentary photography, realistic details, no readable text",
+   "용도": "자료 2컷 — 보온 가방에 도시락 적재"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of a small white delivery van and two bicycles with insulated boxes on the rear racks parked in front of a modest Korean community center building on a winter morning, van rear door open with thermal delivery bags inside, no people's faces visible, bare trees and low neighborhood buildings behind, soft cold morning light, candid documentary photography, no readable text",
+   "용도": "자료 3컷 — 배달 차량 출발"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 774,
+   "h": 322,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid warm dark green color, no gradient, no 3D, centered, horizontal composition: a very simple minimal line icon of a rice bowl with a small steam curve on the left, followed by the Korean word 밥상나눔 in a friendly rounded sans-serif Korean typeface, warm nonprofit feeling, crisp shapes, no background, no frame, no extra text",
+   "용도": "푸터 워드마크 로고 (밥상나눔 자활지원센터)"
+  }
+ ]
+}

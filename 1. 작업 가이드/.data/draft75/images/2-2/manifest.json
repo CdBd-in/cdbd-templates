@@ -1,0 +1,46 @@
+{
+ "code": "2-②",
+ "folder": "2-2",
+ "images": [
+  {
+   "key": "profile",
+   "file": "profile.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Candid documentary business portrait of a Korean man in his early forties, an industrial sales manager. Realistic Korean facial features, short neat hair, calm trustworthy expression with a slight smile, wearing a navy suit jacket over a white shirt with no tie. Plain light grey office wall background, soft natural light from a window. Waist-up framing, shallow depth of field, professional but relaxed, no text, no logos.",
+   "용도": "프로필 — 정장 반신 컷"
+  },
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Clean product photograph of stainless steel industrial ball valves and butterfly valves arranged on a light grey concrete surface. Brushed metal bodies, red and black lever handles, flanged ends, precise machined detail. Soft diffused natural studio light, subtle shadows, industrial catalogue look. No text, no brand marks, no logos.",
+   "용도": "제품 — 산업용 볼밸브"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Clean product photograph of an assortment of stainless steel 304 and 316 pipe fittings: elbows, tees, reducers, unions and a flange, laid out neatly on a pale grey surface. Brushed metal finish, sharp machined threads, soft diffused natural light, industrial catalogue look. No text, no brand marks, no logos.",
+   "용도": "제품 — 스테인리스 피팅·플랜지"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Documentary photograph of an organised industrial parts warehouse: steel shelving racks stacked with labelled cardboard boxes and bins of stainless valves and fittings, aisle receding into depth, clean concrete floor. Cool daylight from high windows mixed with overhead lighting. No people, no readable text, no logos.",
+   "용도": "재고 창고"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 1102,
+   "h": 294,
+   "prompt": "Flat vector wordmark logo, transparent background, single solid deep steel blue color, no gradient, no 3D, centered. The wordmark reads HANGYEOL TECH in bold industrial sans-serif capitals with a simple hexagon outline mark to the left. Wide horizontal lockup, crisp vector edges, engineering supplier identity, nothing else in the frame. The logo sits fully inside the frame, horizontally and vertically centred, occupying about 55 percent of the frame width, with generous empty transparent margin on all four sides and nothing touching or cropped by the edges. Pure flat solid-colour vector shapes with hard clean edges on a fully transparent background. Absolutely no glow, no halo, no soft shadow, no background texture, no background panel, no gradient, no photographic effect.",
+   "용도": "로고 워드마크 — 한결테크"
+  }
+ ]
+}

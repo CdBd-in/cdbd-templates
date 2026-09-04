@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 KEY = json.load(open(os.path.expanduser('~/.config/cdbd/credentials.json')))['openai_api_key']
-SPEC = json.load(open(os.path.join(BASE, '_spec.json')))
+SPEC = json.load(open(os.path.join(BASE, '_spec_group1.json')))
 only = sys.argv[1:] if len(sys.argv) > 1 else list(SPEC.keys())
 lock = threading.Lock()
 

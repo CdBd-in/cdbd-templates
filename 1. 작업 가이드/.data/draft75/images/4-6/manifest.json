@@ -1,0 +1,53 @@
+{
+ "code": "4-⑥",
+ "brand": "몽실키친 (대전 반려견 수제간식 · 3주년 세일)",
+ "images": [
+  {
+   "key": "sq1",
+   "file": "sq1.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of a small pile of dried chicken breast cubes for dog treats on a pale cream seamless surface, pale beige irregular cubes with a dry matte texture, a small plain white ceramic dish beside them, soft natural light from the left, clean minimal homemade pet treat product photography, realistic photo, no text, no logo, no watermark, no lettering, no signage text, no animals, no people",
+   "용도": "닭가슴살 큐브 100g 대표컷"
+  },
+  {
+   "key": "sq2",
+   "file": "sq2.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of several dried salmon sticks for dog treats arranged in a loose stack on a pale cream seamless surface, slim dusty-orange sticks with a dry pressed texture, a small plain white ceramic dish beside them, soft natural light from the left, clean minimal homemade pet treat product photography, realistic photo, no text, no logo, no watermark, no lettering, no signage text, no animals, no people",
+   "용도": "연어 스틱 80g 대표컷"
+  },
+  {
+   "key": "sq3",
+   "file": "sq3.png",
+   "w": 1024,
+   "h": 1024,
+   "prompt": "Product photograph of thin dried sweet potato slices for dog treats fanned out on a pale cream seamless surface, warm amber orange chewy slices, a small plain white ceramic dish beside them, soft natural light from the left, clean minimal homemade pet treat product photography, realistic photo, no text, no logo, no watermark, no lettering, no signage text, no animals, no people",
+   "용도": "고구마 말랭이 120g 대표컷"
+  },
+  {
+   "key": "logo",
+   "file": "logo.png",
+   "w": 829,
+   "h": 219,
+   "prompt": "Flat vector wordmark logo reading '몽실키친' in soft rounded Korean Hangul letterforms, transparent background, single solid warm dark brown color, no gradient, no 3D, no shadow, no frame, no extra text, correctly spelled Hangul, centered, generous empty margin around the wordmark",
+   "용도": "워드마크 로고 「몽실키친」 (웜브라운·투명배경 · 알파 크롭 완료)"
+  },
+  {
+   "key": "logo_light",
+   "file": "logo_light.png",
+   "w": 829,
+   "h": 219,
+   "prompt": "Flat vector wordmark logo reading '몽실키친' in soft rounded Korean Hangul letterforms, transparent background, single solid warm dark brown color, no gradient, no 3D, no shadow, no frame, no extra text, correctly spelled Hangul, centered, generous empty margin around the wordmark",
+   "용도": "로고 반전본 (다크 배경용)",
+   "파생": "logo.png 반전본 (PIL invert · 알파 보존)"
+  }
+ ],
+ "notes": [
+  "🔑 히어로 이미지는 생성하지 않음 — 페르소나가 「이벤트 배너 이미지 = 이건 없어요」라고 답했고 JSON 히어로도 이미지 null(숫자 텍스트 히어로)이라 의도적으로 비움.",
+  "「상품 상세컷」도 건너뛴 항목이라 상품별 대표컷 1장씩만 생성(3종).",
+  "「고객 후기」는 「이건 없어요」 → 리뷰 이미지 없음.",
+  "로고는 페르소나 답변에 파일 언급이 없었지만 브랜드명이 쓰여 워드마크를 만들어 둠 — 필요할 때만 사용."
+ ]
+}
