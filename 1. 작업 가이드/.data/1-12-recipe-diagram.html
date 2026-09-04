@@ -68,6 +68,34 @@ body{background:var(--bg);color:var(--ink);
 .rules2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .callout code{background:rgba(41,41,41,.08);padding:1px 5px;border-radius:4px;font-family:inherit;font-weight:800;font-size:12.5px}
 
+
+.axwrap{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-bottom:38px}
+.axbox{border:1.5px solid var(--line2);border-radius:14px;background:#fff;padding:16px 20px 18px}
+.ax-h{font-size:18px;font-weight:800;margin-bottom:12px}
+.axr{font-size:13.5px;line-height:1.6;color:var(--mut);font-weight:600;margin-bottom:9px;padding-left:150px;position:relative}
+.axr b{color:var(--ink)}
+.axl{position:absolute;left:0;top:1px;width:138px;font-size:12px;font-weight:800;color:#fff;background:var(--mut2);
+  padding:3px 8px;border-radius:5px;text-align:center}
+.axcl{font-size:14px;font-weight:700;color:var(--acc);background:rgba(108,76,255,.08);border-radius:9px;padding:9px 14px;margin:11px 0 13px}
+.axcl b{color:var(--acc)}
+.axsplit{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.axhalf{border:1.5px solid rgba(217,83,79,.3);background:rgba(217,83,79,.045);border-radius:10px;padding:11px 14px;
+  font-size:12.5px;line-height:1.6;color:var(--mut);font-weight:600}
+.axhalf b{color:var(--ink)} .red{color:#D9534F!important} .grn{color:var(--p3)!important}
+.ax-sh{font-size:14px;font-weight:800;color:#D9534F;margin-bottom:6px}
+.axmath{background:rgba(41,41,41,.045);border-radius:10px;padding:11px 15px;font-size:13.5px;line-height:1.7;color:var(--mut);font-weight:600}
+.axmath b{color:var(--ink)} .axmath span{font-size:12.5px;color:var(--mut2)}
+table.who{width:100%;border-collapse:collapse}
+table.who td{padding:5px 0;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
+table.who tr:last-child td{border-bottom:none}
+.w1{color:var(--ink);font-weight:700}
+.w1 span{display:block;font-size:11px;color:var(--mut2);font-weight:600;margin-top:1px}
+.w1 b{font-weight:800}
+.w2{text-align:right;font-weight:800;font-size:12.5px;white-space:nowrap;padding-left:10px!important}
+.w2.pt{color:var(--p2)}.w2.kn{color:var(--p4)}.w2.us{color:var(--p3)}.w2.mx{color:var(--mut)}.w2.md{color:var(--mut2)}
+.axwarn{margin-top:12px;background:rgba(217,83,79,.06);border-left:3px solid #D9534F;border-radius:0 9px 9px 0;
+  padding:10px 14px;font-size:12.5px;line-height:1.65;color:var(--mut);font-weight:600}
+.axwarn b{color:var(--ink)}
 /* ── 분류 체계 스트립 ── */
 .clswrap{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:12px}
 .cls{border:1.5px solid var(--line2);border-radius:12px;background:#fff;padding:13px 16px 14px;position:relative;overflow:hidden}
@@ -88,6 +116,25 @@ body{background:var(--bg);color:var(--ink);
 .cn{border-left:3px solid var(--acc);background:rgba(108,76,255,.06);border-radius:0 9px 9px 0;
   padding:11px 15px;font-size:13.5px;line-height:1.6;color:var(--mut);font-weight:600}
 .cn b{color:var(--ink)}
+
+.abbr,.condbox{border:1.5px solid var(--line2);border-radius:12px;background:#fff;padding:13px 17px 14px;margin-top:14px}
+.ab-h{font-size:16px;font-weight:800;margin-bottom:10px}
+.ab-h span{font-size:12.5px;color:var(--mut);font-weight:600}
+.ab-h span b{color:var(--ink)}
+.ab-g{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.ab{font-size:12.5px;font-weight:600;color:var(--mut);background:rgba(41,41,41,.05);padding:4px 10px;border-radius:6px}
+.ab b{color:var(--ink);font-weight:800}
+.ab.hi{background:rgba(217,83,79,.08)}
+.ab-n{font-size:12.5px;line-height:1.65;color:var(--mut);font-weight:600;border-top:1px solid var(--line);padding-top:9px}
+.ab-n b{color:var(--ink)}
+.cd-g{margin-bottom:9px}
+.cdr{font-size:13px;line-height:1.55;color:var(--mut);font-weight:600;margin-bottom:6px;padding-left:56px;position:relative}
+.cdr b{color:var(--ink)}
+.cdt{position:absolute;left:0;top:0;width:46px;text-align:center;font-size:11.5px;font-weight:800;color:#fff;padding:2px 0;border-radius:5px}
+.cdt.p1{background:var(--p1)}.cdt.p3{background:var(--p3)}.cdt.p4{background:var(--p4)}.cdt.p5{background:var(--p5)}
+.cd-t{font-size:12.5px;line-height:1.6;color:var(--mut);font-weight:600;background:rgba(41,41,41,.045);border-radius:8px;padding:9px 13px;margin-top:6px}
+.cd-t b{color:var(--ink)}
+.cd-t.acc{background:rgba(108,76,255,.07)}
 /* ── row B : 27 cards ── */
 .cols{display:grid;grid-template-columns:repeat(6,1fr);gap:15px;margin-bottom:38px}
 .col-h{border-top:3px solid var(--ink);padding:11px 4px 12px;margin-bottom:11px}
@@ -103,6 +150,8 @@ body{background:var(--bg);color:var(--ink);
 .cd-i{font-size:13px;font-weight:800;color:var(--mut2)}
 .cd-p{font-size:10.5px;font-weight:800;color:#fff;background:var(--c);
   padding:1.5px 6px;border-radius:5px;letter-spacing:.2px}
+.cd-cond{font-size:10px;font-weight:800;color:var(--mut);background:rgba(41,41,41,.07);padding:1.5px 5px;border-radius:4px;letter-spacing:-.2px}
+.cd-lock{font-size:10px}
 .cd-new{font-size:10.5px;font-weight:800;color:var(--acc);background:rgba(108,76,255,.12);
   padding:1.5px 6px;border-radius:5px}
 .cd-t{font-size:16px;font-weight:800;line-height:1.3;margin-bottom:6px}
@@ -207,7 +256,7 @@ body{background:var(--bg);color:var(--ink);
     <div class="t1">조립 레시피 — 27칸</div>
     <div class="t2">CdBd <b>AI 페이지 빌더</b> 내부 기준 · 「어떤 섹션을 어떤 순서로」 &nbsp;·&nbsp; 공통 골격 <b>1</b> + 배치 패턴 <b>6</b> + 칸별 카드 <b>27</b> &nbsp;·&nbsp; 유저 질문은 <b>「목적」 하나</b></div>
   </div>
-  <div class="meta"><b>1-12. 조립 레시피 (제안 초안)</b><br>2026-09-04 rev.3 · 확정 전 초안<br>분류 정본 = 1-11 (대분류 6 × 세부 27)</div>
+  <div class="meta"><b>1-12. 조립 레시피 (제안 초안)</b><br>2026-09-04 rev.4 · 확정 전 초안<br>분류 정본 = 1-11 (대분류 6 × 세부 27)</div>
 </div>
 
 <div class="rowA">
@@ -267,6 +316,36 @@ body{background:var(--bg);color:var(--ink);
         <div class="flow"><span class="fx k">★프로필=히어로</span><span class="ar">→</span><span class="fx">소개</span><span class="ar">→</span><span class="fx k">★실적·링크</span><span class="ar">→</span><span class="fx">문의</span></div>
         <div class="pat-f"><b>프로필이 최상단</b> — 갤러리·이력·연락처를 프로필보다 위에 ❌ · 멀티 2P</div></div>
     </div>
+    <div class="abbr">
+      <div class="ab-h">📖 약칭 사전 <span>— 흐름 줄의 말들은 13칸 서랍 이름이 아니라 「역할 묶음」이다</span></div>
+      <div class="ab-g">
+        <span class="ab"><b>도입</b> 소개·스토리</span><span class="ab"><b>보조</b> 보조 블록</span>
+        <span class="ab"><b>본문</b> 스토리(글)</span><span class="ab"><b>부가</b> 핵심정보＋안내</span>
+        <span class="ab"><b>때·장소</b> 핵심정보</span><span class="ab"><b>유의</b> 안내 사항</span>
+        <span class="ab hi"><b>근거</b> 핵심정보(가격)＋프로모션＋자료(후기)</span>
+        <span class="ab hi"><b>상세</b> 자료(상세컷)＋제품 설명＋스토리</span>
+        <span class="ab"><b>실적·링크</b> 자료·나열</span>
+      </div>
+      <div class="ab-n">💡 <b>「근거」와 「상세」를 나눈 이유</b> — 근거 = <b>“왜 사야 하나”</b>(싸다·혜택·후기) · 상세 = <b>“무엇을 사는 건가”</b>(사진·스펙).
+        <b>P5는 근거가 먼저</b>(살 이유를 던지고 더 알고 싶은 사람만 내려감) · <b>P4는 상세가 먼저</b>.
+        <b class="red">상세를 먼저 두면 그 순간 P4가 된다</b> — P4↔P5는 CTA 위치만이 아니라 이 순서로도 갈린다.</div>
+    </div>
+
+    <div class="condbox">
+      <div class="ab-h">🔀 한 칸이 <b>여러 패턴을 쓴다</b> <span>— 27칸 중 <b>21칸</b>이 조건에 따라 패턴이 바뀐다. 1:1 고정은 6칸뿐</span></div>
+      <div class="cd-g">
+        <div class="cdr"><span class="cdt p3">＋P3</span><b>받는 기능이 붙는다</b>(참석·신청·예약·문의) → ★ 뒤에 <b>[안내 마감일]＋[폼]</b> 삽입 · 문의 CTA가 “회신하기”로</div>
+        <div class="cdr"><span class="cdt p4">＋P4</span><b>아이템이 여러 개</b>가 된다 → ★가 <b>반복 단위</b>가 되고 앞에 <b>[스토리]</b>가 붙는다</div>
+        <div class="cdr"><span class="cdt p5">＋P5</span><b>결제·전환</b>이 목적에 들어온다 → 구매 CTA를 <b>상단에도</b> 추가 · [스토리]를 뒤로</div>
+        <div class="cdr"><span class="cdt p1">→P1</span><b>짧아지고 받을 것도 없다</b> → 폼·위치·반복이 빠지고 본문 하나로 &nbsp;<b class="red">(대체이지 추가 아님)</b></div>
+      </div>
+      <div class="cd-t">🔒 <b>패턴 고정 6칸</b> 1-⑥ · 2-① · 2-③ · 2-④ · 5-① · 6-①
+        &nbsp;— 공통점 = <b>기능 변주가 없고 아이템 개수도 안 변한다</b></div>
+      <div class="cd-t acc">🔑 <b>트리거는 딱 둘</b> ① <b>기능이 붙는다</b>(＋P3·＋P5) = <b>유저</b>가 목적 문장에서
+        &nbsp;② <b>아이템 개수</b>(＋P4·→P1) = <b>자료 분석</b>(사진 장수·제품 수)<br>
+        → 둘 다 「내용」에서 나오므로 <b>패턴은 유저에게 묻지 않는다</b></div>
+    </div>
+
     <div class="rules2">
       <div class="callout" style="margin-top:14px;border-color:#8A8F98;background:rgba(41,41,41,.045)">
         <b style="color:#292929">🚪 도입 블록은 언제 넣나</b> — 히어로에 흡수되지 않는 <b style="color:#292929">독립 선택 블록</b>.<br>
@@ -283,6 +362,53 @@ body{background:var(--bg);color:var(--ink);
         <b style="color:#D9534F">📍 위치 안내도 보조 블록</b> — 골격의 고정 자리가 아니라 <b style="color:#D9534F">찾아올 곳이 있을 때만</b>.
         단 <b style="color:#D9534F">P2 초대형에선 사실상 필수</b>(「가야 할 곳」이 그 패턴의 정의)</div>
     </div>
+  </div>
+</div>
+
+<div class="sec-h"><div class="sec-n">🧭</div><div><div class="sec-t">왜 두 축인가 · 누가 무엇을 정하나</div></div>
+  <div class="sec-d"><b>명사축(칸 27) × 동사축(패턴 6)</b> — 둘 다 6개인 건 우연이고 대응 관계가 없다</div></div>
+<div class="axwrap">
+  <div class="axbox">
+    <div class="ax-h">두 축은 <b>서로를 결정하지 못한다</b></div>
+    <div class="axr"><span class="axl">㉮ 주제 같은데 배치 다름</span>
+      <b>4-① 상세</b> ↔ <b>4-④ 판매</b> — 둘 다 「물건」·재료도 같은데
+      CTA가 <b>중간 한 번</b> ↔ <b>최상단＋최하단</b> · 스토리가 <b>앞</b> ↔ <b>맨 뒤</b></div>
+    <div class="axr"><span class="axl">㉯ 배치 같은데 주제 다름</span>
+      <b>룩북</b>(옷) · <b>메뉴판</b>(음식) · <b>도록</b>(작품) · <b>매거진</b>(글) — 재료가 전혀 다른데
+      배치는 <b>완전히 같다</b>(히어로→스토리→아이템 반복→문의)</div>
+    <div class="axcl">→ 두 방향이 모두 성립 = <b>독립</b>. 하나로 합칠 수 없다 ∎</div>
+    <div class="axsplit">
+      <div class="axhalf"><div class="ax-sh">주제 축만 남기면</div>
+        같은 순서를 <b>8번 복제</b>(P4를 8칸이 공유) → 규칙 하나 고치려면 8곳.
+        <b class="red">구버전 16개 레시피가 실제로 이 상태였다</b> — 한 곳 고치면 나머지 15개가 낡음</div>
+      <div class="axhalf"><div class="ax-sh">배치 축만 남기면</div>
+        「아이템」에 뭐가 들어가는지 모름 — 룩북=화보 / 도록=<b>캡션 4항목</b> / 메뉴판=<b>2단 양끝정렬</b> / 매거진=제목+발췌
+        → <b class="red">빈 껍데기만 나온다</b></div>
+    </div>
+    <div class="axmath">한 축 : <b>27 × (순서＋내용)</b> — 순서를 27번 기술 &nbsp;&nbsp;|&nbsp;&nbsp;
+      두 축 : <b>6 × 순서 ＋ 27 × 내용</b> — 순서를 6번 &nbsp;<b class="grn">↑ 중복 21번 제거</b><br>
+      <span>조각은 늘고 기술량은 준다 — 이것이 두 축으로 나누는 실질 이득</span></div>
+  </div>
+
+  <div class="axbox">
+    <div class="ax-h">누가 무엇을 정하나 — <b>결정 주체 셋</b></div>
+    <table class="who">
+      <tr><td class="w1">섹션 큰 덩어리 순서</td><td class="w2 pt">패턴</td></tr>
+      <tr><td class="w1">특징적 배치 <span>P5 CTA 2회 · P6 프로필 최상단 · P2 위치 필수 / P1 배제</span></td><td class="w2 pt">패턴</td></tr>
+      <tr><td class="w1">멀티페이지 분할</td><td class="w2 pt">패턴</td></tr>
+      <tr><td class="w1">★ 결정 블록</td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1">반복 단위의 정보 구조</td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1">보조 블록 <b>후보 목록</b> <span>6-① 공지에 [구매] ❌</span></td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1">보조 블록 <b>내용</b> <span>[안내 사항]이 1-②=좌석·주차 / 4-①=배송·환불</span></td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1">보조 블록끼리의 <b>세부 순서</b></td><td class="w2 kn">칸</td></tr>
+      <tr><td class="w1">톤(보이스)</td><td class="w2 mx">패턴 → 칸이 덮어쓰기</td></tr>
+      <tr><td class="w1">기능 유무 <span>참석·예약·결제</span></td><td class="w2 us">유저</td></tr>
+      <tr><td class="w1">그 외 보조 블록 유무 · 콘텐츠</td><td class="w2 us">유저</td></tr>
+      <tr><td class="w1">색·폰트(무드)</td><td class="w2 md">AI 추천 → 유저 확인</td></tr>
+    </table>
+    <div class="axwarn">🔴 <b>자주 틀리는 둘</b><br>
+      ① “순서는 전부 패턴” ❌ — <b>보조끼리의 세부 순서는 칸</b>. 같은 P2인데 1-②는 <b>폼→안내</b>, 1-③은 <b>안내→폼</b><br>
+      ② “기능은 칸이 정한다” ❌ — 칸은 <b>「붙을 수 있다」까지만</b>. 실제 유무는 <b>유저</b>가 목적 문장에서 고른다</div>
   </div>
 </div>
 
@@ -328,17 +454,17 @@ body{background:var(--bg);color:var(--ink);
   <div>
     <div class="col-h"><div class="col-n">대분류 1 · 주인공 = 때</div><div class="col-t">행사 · 안내</div>
       <div class="col-s">세부 <span class="cnt">6칸</span> · 오게 하는 것</div></div>
-    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-①</span><span class="cd-p">P2</span></div>
+    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-①</span><span class="cd-p">P2</span><span class="cd-cond">＋P3</span></div>
       <div class="cd-t">경조사 초대장</div><div class="cd-b"><span class="st">★</span> 주인공 인물 (이름·사진)<div class="cd-s"><span class="lbl">정보 구조</span>사진 + 이름(쌍) + 관계 한 덩어리</div></div></div>
-    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-②</span><span class="cd-p">P2</span></div>
+    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-②</span><span class="cd-p">P2</span><span class="cd-cond">＋P3</span></div>
       <div class="cd-t">행사 초대장</div><div class="cd-b"><span class="st">★</span> 식순 (시간 + 순서)<div class="cd-s"><span class="lbl">정보 구조</span>시간 + 순서명 <b>2열</b> · 인물 카드 ❌</div></div></div>
-    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-③</span><span class="cd-p">P2</span></div>
+    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-③</span><span class="cd-p">P2</span><span class="cd-cond">＋P3 ＋P4</span></div>
       <div class="cd-t">세미나·강연 안내</div><div class="cd-b"><span class="st">★</span> 연사 × N + 세션 목록<div class="cd-s"><span class="lbl">정보 구조</span>연사 카드 × N <b>＋</b> 시간·세션·연사 3열</div></div></div>
-    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-④</span><span class="cd-p">P2</span></div>
+    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-④</span><span class="cd-p">P2</span><span class="cd-cond">＋P3 ＋P4</span></div>
       <div class="cd-t">개업·오픈 안내</div><div class="cd-b"><span class="st">★</span> 기간 + 볼거리·혜택<div class="cd-s"><span class="lbl">정보 구조</span>시작~종료 + 운영시간 ＋ 참여 항목 나열</div></div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">1-⑤</span><span class="cd-p">P3</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">1-⑤</span><span class="cd-p">P3</span><span class="cd-cond">＋P4</span></div>
       <div class="cd-t">예약</div><div class="cd-b"><span class="st">★</span> 회차 버튼 (버튼 1 = 세션 1)<div class="cd-s"><span class="lbl">정보 구조</span>버튼 1 = 세션 1 세로 반복 · 달력 UI ❌</div></div></div>
-    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-⑥</span><span class="cd-p">P2</span><span class="cd-new">📢 알림 톤</span></div>
+    <div class="card" style="--c:var(--p2)"><div class="cd-h"><span class="cd-i">1-⑥</span><span class="cd-p">P2</span><span class="cd-new">📢 알림 톤</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">부고·추모</div><div class="cd-b"><span class="st">★</span> 장례 정보 (빈소·발인·장지)<div class="cd-s"><span class="lbl">정보 구조</span>빈소/발인/장지 <b>다중 일정</b> 라벨+값</div></div></div>
     <div class="note">🕯 부고는 「초대」가 아니다 — 무채색 · 이모지❌ · 버튼 “조문 안내”. 국내 서비스 12곳 전수 확인: 부고를 초대장에 묶는 곳 0</div>
   </div>
@@ -346,13 +472,13 @@ body{background:var(--bg);color:var(--ink);
   <div>
     <div class="col-h"><div class="col-n">대분류 2 · 주인공 = 사람</div><div class="col-t">프로필 · 명함</div>
       <div class="col-s">세부 <span class="cnt">4칸</span> · 전부 P6</div></div>
-    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-①</span><span class="cd-p">P6</span></div>
+    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-①</span><span class="cd-p">P6</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">프로필 (링크 모음)</div><div class="cd-b"><span class="st">★</span> 링크 목록 · 성격별 그룹 최대 3<div class="cd-s"><span class="lbl">정보 구조</span>그룹 제목 + 전폭 버튼 반복 × 최대 3그룹</div></div></div>
-    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-②</span><span class="cd-p">P6</span></div>
+    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-②</span><span class="cd-p">P6</span><span class="cd-cond">＋P3</span></div>
       <div class="cd-t">영업용 명함</div><div class="cd-b"><span class="st">★</span> 사람 + 하는 일 + 연락 수단<div class="cd-s"><span class="lbl">정보 구조</span>프로필 ＋ 분야 나열 ＋ 연락 버튼 한 묶음</div></div></div>
-    <div class="card dual" style="--c:var(--p6);--c2:var(--p4)"><div class="cd-h"><span class="cd-i">2-③</span><span class="cd-p">P6+P4</span></div>
+    <div class="card dual" style="--c:var(--p6);--c2:var(--p4)"><div class="cd-h"><span class="cd-i">2-③</span><span class="cd-p">P6+P4</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">포트폴리오</div><div class="cd-b"><span class="st">★</span> 작업물 — <b>이미지</b>가 주인공<div class="cd-s"><span class="lbl">정보 구조</span>이미지 갤러리(그리드·캐러셀) + 설명</div></div></div>
-    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-④</span><span class="cd-p">P6</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p6)"><div class="cd-h"><span class="cd-i">2-④</span><span class="cd-p">P6</span><span class="cd-new">NEW</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">이력서·경력</div><div class="cd-b"><span class="st">★</span> 시간순 경력 — <b>글</b>이 주인공<div class="cd-s"><span class="lbl">정보 구조</span>기간 + 소속 + 역할 <b>3열 시간순</b> · 이미지 ❌</div></div></div>
     <div class="note">③↔④는 갈림 질문 ⑤로 가른다. 결과물이 글인 직군(번역·집필·연구)은 갤러리가 주인공이 될 수 없다</div>
   </div>
@@ -360,9 +486,9 @@ body{background:var(--bg);color:var(--ink);
   <div>
     <div class="col-h"><div class="col-n">대분류 3 · 주인공 = 공간·조직</div><div class="col-t">소개 · 홈페이지</div>
       <div class="col-s">세부 <span class="cnt">2칸</span> · 확장 여부 미결</div></div>
-    <div class="card dual" style="--c:var(--p2);--c2:var(--p4)"><div class="cd-h"><span class="cd-i">3-①</span><span class="cd-p">P2+P4</span></div>
+    <div class="card dual" style="--c:var(--p2);--c2:var(--p4)"><div class="cd-h"><span class="cd-i">3-①</span><span class="cd-p">P2+P4</span><span class="cd-cond">＋P3</span></div>
       <div class="cd-t">소개 홈</div><div class="cd-b"><span class="st">★</span> 우리가 누구 · 무엇을 하는지<div class="cd-s"><span class="lbl">정보 구조</span>스토리 문단 ＋ 제공 항목 나열 · 섹션 수 최다</div></div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">3-②</span><span class="cd-p">P4</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">3-②</span><span class="cd-p">P4</span><span class="cd-cond">＋P3</span></div>
       <div class="cd-t">메뉴·가격 안내</div><div class="cd-b"><span class="st">★</span> 품목 + 가격 반복<div class="cd-s"><span class="lbl">정보 구조</span><b>2단 양끝정렬</b>(품목 ↔ 가격) 1행 반복</div></div></div>
     <div class="note">🧩 <b>27칸 중 유일한 종합형</b> — 3-①만 다른 대분류의 유형을 <b>페이지 단위</b>로 품는다. 멀티페이지 본진<br><br>
       아트갤러리 홈페이지<br>├ P1 홈<br>├ P2 전시 ← 1-④<br>├ P3 작품 ← 6-③<br>└ P4 방문 안내 ← 1-⑤<br><br>
@@ -373,32 +499,32 @@ body{background:var(--bg);color:var(--ink);
   <div>
     <div class="col-h"><div class="col-n">대분류 4 · 주인공 = 물건</div><div class="col-t">상품 · 홍보</div>
       <div class="col-s">세부 <span class="cnt">6칸</span> · 실사용 최대 구역</div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-①</span><span class="cd-p">P4</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-①</span><span class="cd-p">P4</span><span class="cd-cond">＋P5</span></div>
       <div class="cd-t">상품 상세</div><div class="cd-b"><span class="st">★</span> 제품별 상세 블록 반복 <b>(깊고 적게)</b><div class="cd-s"><span class="lbl">정보 구조</span><b>제품 1개 = 섹션 여러 개</b><br>갤러리→이름·가격→설명→스펙→실측→구매</div></div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-②</span><span class="cd-p">P4</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-②</span><span class="cd-p">P4</span><span class="cd-cond">＋P5</span></div>
       <div class="cd-t">룩북·컬렉션</div><div class="cd-b"><span class="st">★</span> 룩별 화보 섹션 · 「LOOK N」<div class="cd-s"><span class="lbl">정보 구조</span><b>룩 1개 = 독립 섹션</b> · LOOK N + 화보 + 1줄</div></div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-③</span><span class="cd-p">P4</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">4-③</span><span class="cd-p">P4</span><span class="cd-new">NEW</span><span class="cd-cond">＋P5</span></div>
       <div class="cd-t">카탈로그</div><div class="cd-b"><span class="st">★</span> 여러 품목 목록 <b>(얕고 많이)</b><div class="cd-s"><span class="lbl">정보 구조</span><b>품목 1개 = 카드 1장</b> · 이름+컷+1~2줄</div></div></div>
-    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-④</span><span class="cd-p">P5</span></div>
+    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-④</span><span class="cd-p">P5</span><span class="cd-cond">＋P4</span></div>
       <div class="cd-t">판매·주문</div><div class="cd-b"><span class="st">★</span> 구매 CTA — 상단 + 하단<div class="cd-s"><span class="lbl">정보 구조</span><b>상단·하단 2회</b> + 사이에 근거(가격·리뷰)</div></div></div>
-    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-⑤</span><span class="cd-p">P5</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-⑤</span><span class="cd-p">P5</span><span class="cd-new">NEW</span><span class="cd-cond">＋P3 →P1</span></div>
       <div class="cd-t">출시·사전예약</div><div class="cd-b"><span class="st">★</span> 출시 예고 + 알림 신청 <b>(돈❌)</b><div class="cd-s"><span class="lbl">정보 구조</span>D-DAY + 티저 ＋ <b>연락처만</b> 받는 폼</div></div></div>
-    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-⑥</span><span class="cd-p">P5</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p5)"><div class="cd-h"><span class="cd-i">4-⑥</span><span class="cd-p">P5</span><span class="cd-new">NEW</span><span class="cd-cond">＋P4 →P1</span></div>
       <div class="cd-t">프로모션·이벤트</div><div class="cd-b"><span class="st">★</span> 혜택 + 마감<div class="cd-s"><span class="lbl">정보 구조</span>혜택 숫자·% + 쿠폰 코드 + 마감 시각</div></div></div>
   </div>
 
   <div>
     <div class="col-h"><div class="col-n">대분류 5 · 주인공 = 폼</div><div class="col-t">신청 · 문의</div>
       <div class="col-s">세부 <span class="cnt">5칸</span> · 전부 P3</div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-①</span><span class="cd-p">P3</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-①</span><span class="cd-p">P3</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">신청·접수</div><div class="cd-b"><span class="st">★</span> 폼 (행사 정보는 짧게)<div class="cd-s"><span class="lbl">정보 구조</span><b>집계형 폼</b> — 선택지 다수 · 명단 집계</div></div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-②</span><span class="cd-p">P3</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-②</span><span class="cd-p">P3</span><span class="cd-cond">＋P4</span></div>
       <div class="cd-t">모집</div><div class="cd-b"><span class="st">★</span> 모집 요강 (정원·마감·선발)<div class="cd-s"><span class="lbl">정보 구조</span>정원·기간·대상 ＋ 조건부 나열 ＋ 지원 폼</div></div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-④</span><span class="cd-p">P3</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-④</span><span class="cd-p">P3</span><span class="cd-new">NEW</span><span class="cd-cond">＋P4 ＋P6</span></div>
       <div class="cd-t">상담·문의 받기</div><div class="cd-b"><span class="st">★</span> 문의 폼<div class="cd-s"><span class="lbl">정보 구조</span><b>서술형 폼</b> — 자유 서술 · 1건씩 회신</div></div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-⑤</span><span class="cd-p">P3</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-⑤</span><span class="cd-p">P3</span><span class="cd-new">NEW</span><span class="cd-cond">＋P4</span></div>
       <div class="cd-t">공모전·대회</div><div class="cd-b"><span class="st">★</span> 부문 + 자격 + 시상<div class="cd-s"><span class="lbl">정보 구조</span>부문 나열 / 자격·마감 / 시상 나열 3블록</div></div></div>
-    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-⑥</span><span class="cd-p">P3</span><span class="cd-new">NEW</span></div>
+    <div class="card" style="--c:var(--p3)"><div class="cd-h"><span class="cd-i">5-⑥</span><span class="cd-p">P3</span><span class="cd-new">NEW</span><span class="cd-cond">＋P4 ＋P5</span></div>
       <div class="cd-t">후원·기부</div><div class="cd-b"><span class="st">★</span> 취지 + 사용처 + 후원 방법<div class="cd-s"><span class="lbl">정보 구조</span>스토리 문단 ＋ <b>항목별 숫자</b> ＋ 계좌</div></div></div>
     <div class="note">🗑 <b>구 「③ 채용 공고」는 5-②에 흡수</b> — 섹션이 1:1 대응하고 다른 건 필드뿐<br><br>
       5-② 조건부 필드 3종<br>· <b>채용</b> 직무·전형 절차<br>· <b>수강</b> 커리큘럼·강사<br>· <b>가맹</b> 비용·수익 구조<br><br>
@@ -408,13 +534,13 @@ body{background:var(--bg);color:var(--ink);
   <div>
     <div class="col-h"><div class="col-n">대분류 6 · 주인공 = 글</div><div class="col-t">소식 · 자료</div>
       <div class="col-s">세부 <span class="cnt">4칸</span> · 읽고 끝나는 것</div></div>
-    <div class="card" style="--c:var(--p1)"><div class="cd-h"><span class="cd-i">6-①</span><span class="cd-p">P1</span></div>
+    <div class="card" style="--c:var(--p1)"><div class="cd-h"><span class="cd-i">6-①</span><span class="cd-p">P1</span><span class="cd-lock">🔒</span></div>
       <div class="cd-t">공지·알림</div><div class="cd-b"><span class="st">★</span> 본문 글 · <b>변주 2종</b><div class="cd-s"><span class="lbl">정보 구조</span>제목 + 문단 · 나열·폼·위치 <b>전부 ❌</b></div></div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">6-②</span><span class="cd-p">P4</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">6-②</span><span class="cd-p">P4</span><span class="cd-cond">→P1</span></div>
       <div class="cd-t">매거진·소식지</div><div class="cd-b"><span class="st">★</span> 글 나열 (제목+발췌)<div class="cd-s"><span class="lbl">정보 구조</span>제목 + 발췌 + 이미지 <b>텍스트 블록</b> 반복</div></div></div>
-    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">6-③</span><span class="cd-p">P4</span></div>
+    <div class="card" style="--c:var(--p4)"><div class="cd-h"><span class="cd-i">6-③</span><span class="cd-p">P4</span><span class="cd-cond">＋P2</span></div>
       <div class="cd-t">도록·작품집</div><div class="cd-b"><span class="st">★</span> 이미지 + 캡션 나열<div class="cd-s"><span class="lbl">정보 구조</span>이미지 + <b>캡션 4항목</b> · 2단 양끝정렬</div></div></div>
-    <div class="card" style="--c:var(--p1)"><div class="cd-h"><span class="cd-i">6-④</span><span class="cd-p">P1</span></div>
+    <div class="card" style="--c:var(--p1)"><div class="cd-h"><span class="cd-i">6-④</span><span class="cd-p">P1</span><span class="cd-cond">＋P4</span></div>
       <div class="cd-t">가이드·이용안내</div><div class="cd-b"><span class="st">★</span> 단계별 안내 · 넘버링 필수<div class="cd-s"><span class="lbl">정보 구조</span>번호 + 제목 + 설명 <b>순서 반복</b></div></div></div>
     <div class="note">🔀 <b>6-① 변주 2종</b> (칸은 안 나눔)<br>
       · <b>일회성 공지</b> — 며칠 · 히어로 = 제목<br>
