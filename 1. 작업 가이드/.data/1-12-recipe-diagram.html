@@ -264,6 +264,7 @@ table.who tr:last-child td{border-bottom:none}
 <div class="top">
   <div>
     <div class="t1">조립 레시피 — 주제 25개</div>
+    <div class="subs" style="padding-left:0;font-size:15px;color:#5b5b5b">📖 <b>용어 (2026-09-04 개명)</b> — 옛 「칸」 = <b>주제 분류(주제) 25</b> · 옛 「배치 패턴」 = <b>목적 분류(목적) 6 · P1~P6</b> &nbsp;|&nbsp; 인과 방향 <b>주제 → 목적</b></div>
     <div class="t2">CdBd <b>AI 페이지 빌더</b> 내부 기준 · 「어떤 섹션을 어떤 순서로」 &nbsp;·&nbsp; 공통 골격 <b>1</b> + 목적 분류 <b>6</b> + 주제별 카드 <b>27</b> &nbsp;·&nbsp; 유저 질문은 <b>「목적」 하나</b></div>
   </div>
   <div class="meta"><b>1-12. 조립 레시피 (제안 초안)</b><br>2026-09-04 rev.5 · 확정 전 초안<br>분류 정본 = 1-11 (대분류 6 × 세부 27)</div>
@@ -571,15 +572,16 @@ table.who tr:last-child td{border-bottom:none}
   </div>
 </div>
 
-<div class="sec-h"><div class="sec-n">+</div><div><div class="sec-t">유저에게 묻는 것 — 「목적 질문」 하나로 모인다</div></div>
+<div class="sec-h"><div class="sec-n">+</div><div><div class="sec-t">유저에게 묻는 것 — 「하고 싶은 일」 + 🆕「타겟」 + 「유형(통보)」</div></div>
   <div class="sec-d">새 플로우 보드 <b>Figma 236-5375</b> 기준 · 카테고리 이름은 <b>절대 노출하지 않는다</b> · 전부 상황 문장</div></div>
 
 <div class="flowbar">
   <div class="fb">자료 있나요?</div><div class="fb-a">→</div>
   <div class="fb">URL·파일 / 직접 설명</div><div class="fb-a">→</div>
   <div class="fb">이런 페이지 같아요, 맞나요?</div><div class="fb-a">→</div>
-  <div class="fb key">★ 이 페이지로 가장 하고 싶은 일은 무엇인가요?</div><div class="fb-a">→</div>
-  <div class="fb">이 내용에는 [　]를 추천해요</div><div class="fb-a">→</div>
+  <div class="fb key">★ 이 페이지로 가장 하고 싶은 일은 무엇인가요?<br><span>＋ 이런 것도 같이 넣어드릴게요 (칩)</span></div><div class="fb-a">→</div>
+  <div class="fb key">🆕 이 타겟을 위한 페이지가 맞나요?<br><span>AI 생성 타겟 + 추천 2·3·4 + 직접 입력</span></div><div class="fb-a">→</div>
+  <div class="fb">[　]로 시안을 만들어 드릴게요<br><span>통보형 · 원 / 멀티</span></div><div class="fb-a">→</div>
   <div class="fb">시안 A·B·C</div><div class="fb-a">→</div>
   <div class="fb">무드 확인</div><div class="fb-a">→</div>
   <div class="fb ph">여기에 이런 걸 넣으면 좋아요<br><span>플레이스홀더</span></div><div class="fb-a">→</div>
@@ -589,11 +591,13 @@ table.who tr:last-child td{border-bottom:none}
 
 <div class="qgrid">
   <div class="qbox main">
-    <div class="qb-h"><span class="qb-b acc">★</span>목적 질문 = <b>주제 25개를 고르는 자리</b></div>
+    <div class="qb-h"><span class="qb-b acc">★</span>화면 질문 3개가 각각 정하는 것</div>
     <div class="two">
-      <div class="tw"><div class="tw-q">“이 페이지로 가장<br>하고 싶은 일은?”</div><div class="tw-a">→ <b>주제 25개 중 하나</b></div></div>
-      <div class="tw"><div class="tw-q">“이 내용에는<br>[　]를 추천해요”</div><div class="tw-a">→ <b>원페이지 / 멀티페이지</b></div></div>
+      <div class="tw"><div class="tw-q">“이 페이지로 가장<br>하고 싶은 일은?”</div><div class="tw-a">→ <b>주제 분류 25개 중 하나</b></div></div>
+      <div class="tw"><div class="tw-q">🆕 “이 타겟을 위한<br>페이지가 맞나요?”</div><div class="tw-a">→ <b>타겟</b> · 무드·카피 톤·이미지·정보 밀도<br><b style="color:#D9534F">분류는 안 바꾼다</b></div></div>
+      <div class="tw"><div class="tw-q">“[　]로 시안을<br>만들어 드릴게요”</div><div class="tw-a">→ <b>원 / 멀티</b> (통보형)</div></div>
     </div>
+    <div class="wy" style="margin-top:10px"><span class="wn">⚠</span><b>이름 충돌 주의</b> — 화면의 「하고 싶은 일 질문」은 <b>주제 분류</b>를 고른다. <b>목적 분류(P1~P6)는 유저가 고르지 않고 주제에서 자동으로 따라온다.</b></div>
     <div class="why">
       <div class="wy"><span class="wn">1</span><b>내용만으론 목적을 모른다</b> — 카페 사진+메뉴로 <code>3-②</code> 메뉴 / <code>1-④</code> 예약 / <code>3-①</code> 소개 셋 다 나온다. 자료는 “무엇이 있나”만 알려준다</div>
       <div class="wy"><span class="wn">2</span><b>목적축이 체계의 근간</b> — 목적이 곧 구성 · 업종·주제는 구조를 안 바꾼다</div>
