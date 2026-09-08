@@ -468,20 +468,35 @@
   // ── 카드 순서 변경 (dnd-kit onDragEnd 직접 호출) ───────────────────────
   // 마우스/키보드 이벤트는 dnd-kit이 무시 → DndContext의 onDragEnd 콜백을 fiber에서
   // 찾아 {active, over}로 직접 호출하면 arrayMove reorder가 즉시 동작.
+  // 🚨 2026-09-08 실측 — 옛 구현은 `document.querySelector("[aria-roledescription=sortable]")`로
+  //    **DOM 첫 번째** sortable을 잡았다. 멀티페이지 에디터에는 SortableContext가 2개 이상 있고
+  //    **페이지 사이드바 목록이 DOM에서 먼저** 나오기 때문에, 카드가 아니라 **페이지 순서**를
+  //    바꿔놓고도 `moved`를 반환했다(조용한 오작동 — 거짓 성공보다 위험).
+  //    → 후보를 전부 훑어 **items.length === boardRows().length** 인 컨텍스트(=카드 보드)를 고른다.
   const _sortableCtx = () => {
-    const s = document.querySelector("[aria-roledescription=sortable]");
-    if (!s) return null;
-    const fk = Object.keys(s).find((k) => k.startsWith("__reactFiber"));
-    let fiber = s[fk],
-      items = null,
-      onDragEnd = null;
-    for (let i = 0; i < 60 && fiber; i++) {
-      const p = fiber.memoizedProps;
-      if (p && p.items && !items) items = p.items;
-      if (p && typeof p.onDragEnd === "function" && !onDragEnd) onDragEnd = p.onDragEnd;
-      fiber = fiber.return;
+    const cands = [...document.querySelectorAll("[aria-roledescription=sortable]")];
+    if (!cands.length) return null;
+    const want = boardRows().length;
+    const found = [];
+    for (const s of cands) {
+      const fk = Object.keys(s).find((k) => k.startsWith("__reactFiber"));
+      let fiber = s[fk],
+        items = null,
+        onDragEnd = null;
+      for (let i = 0; i < 60 && fiber; i++) {
+        const p = fiber.memoizedProps;
+        if (p && p.items && !items) items = p.items;
+        if (p && typeof p.onDragEnd === "function" && !onDragEnd) onDragEnd = p.onDragEnd;
+        fiber = fiber.return;
+      }
+      if (items && onDragEnd) found.push({ items, onDragEnd });
     }
-    return items && onDragEnd ? { items, onDragEnd } : null;
+    if (!found.length) return null;
+    // 카드 보드 컨텍스트 = 아이템 수가 보드 행 수와 같은 것
+    const exact = found.find((c) => c.items.length === want);
+    if (exact) return exact;
+    // 못 찾으면 오작동 위험이 있으므로 **실패로 처리**한다 (옛 동작처럼 아무거나 쓰지 않는다)
+    return { items: [], onDragEnd: null, _mismatch: found.map((c) => c.items.length), _want: want };
   };
 
   // 현재 카드 순서 [{id,type}] (sortable items 기준 = 보드 표시 순서)
@@ -509,6 +524,8 @@
   const reorderCard = (fromIdx, toIdx) => {
     const ctx = _sortableCtx();
     if (!ctx) return "no-sortable-ctx";
+    if (!ctx.onDragEnd)
+      return `wrong-sortable-ctx(보드=${ctx._want}, 후보=${JSON.stringify(ctx._mismatch)}) — 카드 컨텍스트를 못 찾음. 페이지 목록을 건드릴 뻔했으므로 중단`;
     const items = ctx.items;
     if (fromIdx < 0 || fromIdx >= items.length || toIdx < 0 || toIdx >= items.length)
       return `out-of-range(len=${items.length})`;
