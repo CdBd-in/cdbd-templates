@@ -15,7 +15,8 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 - 이전 세션 잔존 카드 일괄 삭제
 - 같은 카드(텍스트·버튼 등) 반복 복제
 
-**When NOT:** 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴(미통합). (카드 라벨 변경은 이제 지원 — 아래 "카드 라벨(이름) 변경" 참조.)
+**When NOT:** 배경 이미지 밝기·테두리 등 일부 카드 디자인 옵션 — 미통합.
+(**여백(내부·외부)은 이제 지원** — 아래 「카드 여백」 참조 · 2026-09-08 신설. 카드 라벨 변경도 지원 — 「카드 라벨(이름) 변경」 참조.)
 
 ## Quick reference (검증: editor 4903)
 
@@ -155,6 +156,40 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
   - 증상 확인법: `cardOrder()`가 `["?","?"]`처럼 **보드 카드 수와 다르게** 나오면 잘못된 컨텍스트를 잡은 것.
 - ⚠️ **`dumpState()`는 멀티페이지에서 여전히 신뢰 불가**(`captured:0` 관측). 상태 검증은 **`boardRows()`+`blockOfRow()`** 로 할 것.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
+
+## 카드 여백 (내부·외부) — 필드 `onChange` + **`onBlur`** (2026-09-08 실측 신설)
+
+```bash
+# 1) 카드 선택 (좌표 클릭·scrollIntoView 금지 — 「보드 스크롤 = 페이지 드리프트」 참조)
+$B js "var r=window.__cdbd.boardRows()[N];var t=Array.from(r.querySelectorAll('*')).find(function(e){return /^h-\[52px\]/.test(e.className||'')});var k=Object.keys(t).find(function(k){return k.startsWith('__reactProps')});t[k].onClick({stopPropagation:function(){},preventDefault:function(){}});'sel'"; sleep 1.5
+
+# 2) 아코디언(∧) 펼치기 — 펼치지 않으면 상/하/좌/우 4칸이 없다
+$B js "window.__cdbd.openSpacing('외부여백')"; sleep 1.5     # 또는 '내부여백'
+
+# 3) 값 주입
+$B js "window.__cdbd.setSpacing('외부여백',{상:0,하:0,좌:40,우:40})"; sleep 1.5
+
+# 4) 검증 — 반환값을 믿지 말 것
+$B js "window.__cdbd.blockOfRow(window.__cdbd.boardRows()[N]).style.margin"   # → "0px 40px"
+$B js "JSON.stringify(window.__cdbd.spacingValues('외부여백'))"                # 필드 현재값
+```
+
+- **저장 위치** — 외부여백 = `block.style.margin` · 내부여백 = `block.style.padding` (CSS shorthand)
+- 🚨 **유일한 커밋 경로 = native value setter → React `props.onChange` → React `props.onBlur`.**
+  **`onBlur`를 빼면 필드엔 값이 보이는데 `block.style`에 커밋되지 않는다**(리로드 시 유실). `setSpacing`이 이걸 처리한다.
+- ❌ **전부 실패하는 방법**(2026-09-08 4가지 다 시도해 확인): `new Event('input'/'change')` dispatch · `el.blur()` · `Tab` · 다른 필드 click · `$B fill` · **슬라이더**(= `onChange` prop 자체가 없음) · PointerEvent 드래그
+- 🚨 **검증 시 `getComputedStyle(el).margin`을 보면 항상 `0px`이다.** 제품이 외부여백을 **부모 카드 슬롯의 `padding`**으로 렌더하기 때문. `block.style.margin`으로 볼 것.
+- ⚠️ 2열(multiCard)·예약 카드는 「카드 디자인」이 MuiCollapse라 `openSpacing`이 `no-label:외부여백`을 낼 수 있음 → 헤더를 먼저 펼치는 클릭 1단계 추가 (`.claude/cdbd-edit-shared.md`)
+- ⚠️ 여러 장 일괄 시 **한 장씩 + settle + 전체 재스캔 수렴 루프**. 라벨 배치에서 debounce로 +1 시프트가 났던 전례와 같은 계열.
+
+## 카드 표시 토글 (ON/OFF) — 2026-09-08 신설
+
+```bash
+$B js "window.__cdbd.cardVisible({index:2})"                 # true = ON
+$B js "window.__cdbd.setCardVisible({index:2}, false)"; sleep 1.5
+$B js "window.__cdbd.cardVisible({index:2})"                 # 검증
+```
+🚨 **`block.isShow`라는 필드는 존재하지 않는다.** 실제 필드 = **`block.disabled`(반전)** — `disabled:true` = OFF.
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
 
