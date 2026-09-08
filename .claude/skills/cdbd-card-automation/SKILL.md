@@ -26,7 +26,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 | 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 다이얼로그** 1회 더 | "예약 카드 추가하기" (⚠️ 확정은 크레딧 필요) |
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
-| **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 🚨 **표시 토글 OFF 카드는 순서 변경 불가**(영상 1-3 실측 2026-09-04). ⚠️ **핸들·핀 아이콘은 회색으로 계속 보이므로 "보이니까 되겠지"로 가정하면 조용히 실패** → 이동 전 `block.isShow`(토글 상태) 확인, OFF면 **먼저 ON으로 켜고 이동한 뒤 되돌릴 것** |
+| **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 🚨 **표시 토글 OFF 카드는 순서 변경 불가**(영상 1-3 실측 2026-09-04). ⚠️ **핸들·핀 아이콘은 회색으로 계속 보이므로 "보이니까 되겠지"로 가정하면 조용히 실패** → 이동 전 **`cardVisible({index})`** 확인, OFF면 **`setCardVisible({index}, true)`** 로 켜고 이동한 뒤 되돌릴 것<br>🚨 **2026-09-08 정정: `block.isShow`라는 필드는 존재하지 않는다.** 실제 필드 = **`block.disabled`(반전)** — `disabled:true` = OFF |
 | **고정 (핀)** | 핀 버튼 onClick → 위치 메뉴(상단/하단) / 해제는 확인창 | 해제 시 "고정 해제하기" |
 | **이미지 업로드/적용** | dropzone `onDrop` 직접 호출 → 라이브러리 선택 → 적용하기 | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
@@ -146,7 +146,11 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
 
 - matcher = `{type}` | `{id}` | `{index}` (openKebab과 동일).
 - ⚠️ **고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로 이동** → 위치(x)로 찾으면 실패. 드라이버는 onClick 시그니처(`unpinTitle`/`K(e.currentTarget)`)로 핀 버튼을 식별.
-- 고정 여부는 핸들러 소스로 알 수 없음(항상 `unpinTitle` 포함) → **`block.fixedPosition`**(`"top"`/`"bottom"`/`null`)으로 판별. `openPin`이 자동 처리(미고정→메뉴, 고정→확인창).
+- 고정 여부는 핸들러 소스로 알 수 없음(항상 `unpinTitle` 포함) → **`block.fixedPosition`**(`"top"`/`"bottom"`)으로 판별. ⚠️ **미고정 카드에는 이 필드 자체가 없다(undefined).** `openPin`이 자동 처리(미고정→메뉴, 고정→확인창).
+- 🚨 **2026-09-08 실측 — `pinTo`는 거짓 성공을 냈었다.** 상단/하단 자리가 이미 차 있으면 **「고정 카드 교체하기」 모달**이 뜨고 고정은 되지 않는데, 옛 코드는 `pinned:top`을 반환했다.
+  - 이 모달은 **SweetAlert가 아니다**(`.swal2-popup` 없음) → `confirmSwal()`로 안 닫힌다. **`confirmReplace()`** 를 쓸 것.
+  - 정식 흐름: `openPin` → sleep → `pinTo('top')` → sleep → (모달이면) `confirmReplace()` → sleep → **`pinVerify()`로 반드시 검증**
+- 🔴 **`reorderCard`·`cardOrder`·`dumpState`는 멀티페이지에서 신뢰 불가**(2026-09-08 실측: `reorderCard`가 `moved`를 반환해도 순서 불변, `cardOrder()`는 `["?","?"]`, `dumpState()`는 `captured:0`). 검증은 **`boardRows()`+`blockOfRow()`** 로 할 것.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
