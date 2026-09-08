@@ -202,3 +202,22 @@ purpose: "신규 템플릿 `plant-completion`(대형산업시설 준공식 초�
   | P1 로고 카드 상단 | 44 | **45** | 페이지 최상단 여백 통일 |
   | P2 구분선 카드 상단 | 44 | **45** | 〃 |
 - ✅ **점검 후 일관 확인**: 섹션 제목 상단 45(22px) / 서브 블록 상단 40(17px) / 나열 항목 간 12 · 마지막 0 / 이미지 앞 30 · 뒤 45 / 버튼 그룹 16→10→10 / 페이지 하단 40.
+
+### 🇬🇧 2026-09-08 3차 — 영문판 추가 (`plant-completion-en`)
+
+- **산출물**: [섹션 1406-3366 (EN)](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1406-3366) — 국문판 오른쪽에 나란히 배치
+  - P1 Cover [1406-3367](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1406-3367) · P2 Event Details [1406-3408](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1406-3408) · P3 About the Facility [1406-3462](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1406-3462) · P4 RSVP & Directions [1406-3507](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1406-3507)
+- **제작 방식**: 이선호 최신 수정본을 **그대로 복제** 후 텍스트·서체만 교체 (구조·여백·색·이미지 100% 동일 = 쌍둥이 페이지)
+- **서체 매핑 (CdBd 영문 18종 내에서만)**: `Noto Serif KR` → **PT Serif** (제목·강조·값) · `Noto Sans KR` → **Lato** (본문·라벨·버튼). 국문판의 「명조 제목 + 고딕 본문」 대비 구조를 영문에서 그대로 재현.
+- **영문화 시 손본 것 (폭 때문에)**:
+  | 항목 | 처리 |
+  |---|---|
+  | 식순·경과 시간 열 | 68·86 → **88px** (AM/PM·`Mar 2024` 수용) |
+  | 셔틀 2번째 옵션 | `Cheonan-Asan Stn · Departs 09:40`이 2줄로 접혀 박스 높이가 달라짐 → **`Cheonan-Asan · Departs 09:40`**(1줄·두 박스 높이 동일) |
+  | 「About the Ceremony」 본문 | 마지막 줄이 `ceremony.` 한 단어(고아) → 문장 재작성 |
+  | 단위 | 평 → **acres**(20.4) · 억 원 → **KRW 240 billion** · 톤 → **tons per year** · 명 → **positions** |
+  | 날짜 | `2026. 11. 12 (목) 오전 10:30` → **`12 November 2026 (Thu) · 10:30 AM`** |
+  | 주소 | 도로명 로마자 표기 `128 Asan Valley-ro, Dunpo-myeon / Asan-si, Chungcheongnam-do` |
+  | 전화 | 국가번호 추가 **`+82 41-000-0000`** |
+- **로고**: 심볼 `H` 동일 · 워드마크는 `HANSEONG` + `MATERIALS CO., LTD.`(국문 상호 제거)
+- ⚠️ **국문판은 손대지 않음** — 이선호 수정본 그대로 유지.
