@@ -72,6 +72,24 @@
   "key": null
  },
  {
+  "id": "6559:7872",
+  "name": "key_info-mixed-03",
+  "grp": "핵심 정보-미에",
+  "h": 170,
+  "slots": "label|세부 정보|label|세부 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6559:7881",
+  "name": "key_info-mixed-04",
+  "grp": "핵심 정보-미에",
+  "h": 222,
+  "slots": "label|세부 정보|추가 정보|label|세부 정보|추가 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
   "id": "5395:14800",
   "name": "key_info-mixed-05",
   "grp": "핵심 정보-미볼",
@@ -99,6 +117,42 @@
   "key": null
  },
  {
+  "id": "6559:7936",
+  "name": "key_info-mixed-08",
+  "grp": "핵심 정보-미볼",
+  "h": 155,
+  "slots": "label 세부 정보 추가 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6560:7953",
+  "name": "key_info-mixed-09",
+  "grp": "핵심 정보-미볼",
+  "h": 155,
+  "slots": "label 세부 정보 추가 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6559:7941",
+  "name": "key_info-mixed-10",
+  "grp": "핵심 정보-미볼",
+  "h": 132,
+  "slots": "label 세부 정보|label 세부 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6559:7946",
+  "name": "key_info-mixed-11",
+  "grp": "핵심 정보-미볼",
+  "h": 132,
+  "slots": "label 세부 정보|label 세부 정보|label 세부 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
   "id": "5395:14810",
   "name": "key_info-mixed-12",
   "grp": "핵심 정보-에볼",
@@ -113,15 +167,6 @@
   "grp": "핵심 정보-에볼",
   "h": 176,
   "slots": "📅|label 세부 정보|📍|label 세부 정보",
-  "old_name": "핵심 정보-에디토리얼",
-  "key": null
- },
- {
-  "id": "5395:14210",
-  "name": "key_info-editorial-01",
-  "grp": "핵심 정보-에디토리얼",
-  "h": 170,
-  "slots": "label|세부 정보|label|세부 정보",
   "old_name": "핵심 정보-에디토리얼",
   "key": null
  },
@@ -171,6 +216,33 @@
   "key": null
  },
  {
+  "id": "6559:7819",
+  "name": "key_info-editorial-06",
+  "grp": "핵심 정보-에디토리얼",
+  "h": 126,
+  "slots": "label 세부 정보|label 세부 정보|label 세부 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6559:7895",
+  "name": "key_info-editorial-07",
+  "grp": "핵심 정보-에디토리얼",
+  "h": 93,
+  "slots": "label|세부 정보 추가 정보",
+  "old_name": "07-V2 2열(라벨 HUG) + 휴무 하위",
+  "key": null
+ },
+ {
+  "id": "6560:7957",
+  "name": "key_info-editorial-08",
+  "grp": "핵심 정보-에디토리얼",
+  "h": 205,
+  "slots": "label|세부 정보 추가 정보|label|세부 정보 추가 정보|구분선|*부가 설명 텍스트",
+  "old_name": "07-V2 2열(라벨 HUG) + 휴무 하위",
+  "key": null
+ },
+ {
   "id": "5395:14307",
   "name": "key_info-bold-01",
   "grp": "핵심 정보-볼드",
@@ -194,15 +266,6 @@
   "grp": "핵심 정보-볼드",
   "h": 172,
   "slots": "설명 텍스트|label|세부 정보|label|세부 정보",
-  "old_name": "핵심 정보-볼드",
-  "key": null
- },
- {
-  "id": "5395:14347",
-  "name": "key_info-bold-04",
-  "grp": "핵심 정보-볼드",
-  "h": 132,
-  "slots": "label 세부 정보|label 세부 정보",
   "old_name": "핵심 정보-볼드",
   "key": null
  },
@@ -243,555 +306,6 @@
   "key": null
  },
  {
-  "id": "5455:157",
-  "name": "hero-minimal-01",
-  "grp": "히어로-미니멀",
-  "h": 188,
-  "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:164",
-  "name": "hero-minimal-02",
-  "grp": "히어로-미니멀",
-  "h": 233,
-  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:174",
-  "name": "hero-minimal-03",
-  "grp": "히어로-미니멀",
-  "h": 211,
-  "slots": "로고|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:182",
-  "name": "hero-minimal-04",
-  "grp": "히어로-미니멀",
-  "h": 611,
-  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:195",
-  "name": "hero-minimal-05",
-  "grp": "히어로-미니멀",
-  "h": 569,
-  "slots": "로고|페이지 제목|카피 혹은 소개 문구|이미지",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:207",
-  "name": "hero-editorial-01",
-  "grp": "히어로-에디토리얼",
-  "h": 194,
-  "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:214",
-  "name": "hero-editorial-02",
-  "grp": "히어로-에디토리얼",
-  "h": 231,
-  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:224",
-  "name": "hero-editorial-03",
-  "grp": "히어로-에디토리얼",
-  "h": 289,
-  "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:238",
-  "name": "hero-editorial-04",
-  "grp": "히어로-에디토리얼",
-  "h": 589,
-  "slots": "로고|페이지 제목|카피 혹은 소개 문구|메인 이미지",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:249",
-  "name": "hero-editorial-05",
-  "grp": "히어로-에디토리얼",
-  "h": 594,
-  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|메인 이미지",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:262",
-  "name": "hero-editorial-06",
-  "grp": "히어로-에디토리얼",
-  "h": 508,
-  "slots": "메인 이미지|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:270",
-  "name": "hero-editorial-07",
-  "grp": "히어로-에디토리얼",
-  "h": 613,
-  "slots": "메인 이미지|로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:283",
-  "name": "hero-editorial-08",
-  "grp": "히어로-에디토리얼",
-  "h": 844,
-  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:315",
-  "name": "hero-editorial-09",
-  "grp": "히어로-에디토리얼",
-  "h": 642,
-  "slots": "한 줄 설명|페이지 제목 페이지 제목|메인 이미지|워드마크 로고|설명 문구",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:331",
-  "name": "hero-bold-01",
-  "grp": "히어로-볼드",
-  "h": 803,
-  "slots": "EYEBROW|로고|회사명 혹은 브랜드명|메인 이미지|페이지 제목|서브카피",
-  "old_name": "히어로-볼드",
-  "key": null
- },
- {
-  "id": "5455:346",
-  "name": "hero-bold-02",
-  "grp": "히어로-볼드",
-  "h": 393,
-  "slots": "로고|회사명|슬로건|EYEBROW|페이지 제목|카피 혹은 설명 문구",
-  "old_name": "히어로-볼드",
-  "key": null
- },
- {
-  "id": "5455:359",
-  "name": "hero-bold-03",
-  "grp": "히어로-볼드",
-  "h": 525,
-  "slots": "메인 비주얼|EYEBROW|페이지 제목|한 줄 카피",
-  "old_name": "히어로",
-  "key": null
- },
- {
-  "id": "5455:369",
-  "name": "hero-bold-04",
-  "grp": "히어로-볼드",
-  "h": 589,
-  "slots": "EYEBROW|페이지 제목|한 줄 카피|메인 비주얼",
-  "old_name": "히어로",
-  "key": null
- },
- {
-  "id": "5455:379",
-  "name": "hero-bold-05",
-  "grp": "히어로-볼드",
-  "h": 981,
-  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
-  "old_name": "히어로-볼드",
-  "key": null
- },
- {
-  "id": "5455:411",
-  "name": "hero-bold-06",
-  "grp": "히어로-볼드",
-  "h": 1005,
-  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
-  "old_name": "히어로-볼드",
-  "key": null
- },
- {
-  "id": "5455:439",
-  "name": "hero-bold-07",
-  "grp": "히어로-볼드",
-  "h": 483,
-  "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 설명 문구",
-  "old_name": "히어로-볼드",
-  "key": null
- },
- {
-  "id": "5455:454",
-  "name": "hero-bold-08",
-  "grp": "히어로-볼드",
-  "h": 196,
-  "slots": "페이지 제목|카피 혹은 설명 문구",
-  "old_name": "Frame 48097695",
-  "key": null
- },
- {
-  "id": "5455:111",
-  "name": "hero-mixed-01",
-  "grp": "히어로-에볼",
-  "h": 786,
-  "slots": "로고|카피 혹은 소개 문구|혜택 및 핵심 정보|문장형 카피를 입력합니다|카피 혹은 소개 문구 강조 텍스트|이미지",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:128",
-  "name": "hero-mixed-02",
-  "grp": "히어로-에볼",
-  "h": 940,
-  "slots": "EYEBROW|페이지 제목|한 줄 행사 설명|메인 이미지|LABEL|세부 정보",
-  "old_name": "히어로-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:89",
-  "name": "hero-mixed-06",
-  "grp": "히어로-미에볼",
-  "h": 759,
-  "slots": "로고|카피 혹은 소개 문구|이미지|페이지 제목|EYEBROW|일정 정보",
-  "old_name": "히어로-미니멀",
-  "key": null
- },
- {
-  "id": "5455:486",
-  "name": "intro-editorial-01",
-  "grp": "소개-에디토리얼",
-  "h": 124,
-  "slots": "프로필 이미지|이름 한 줄 소개",
-  "old_name": "소개-에디토리얼",
-  "key": null
- },
- {
-  "id": "5474:26654",
-  "name": "intro-editorial-02",
-  "grp": "소개-에디토리얼",
-  "h": 108,
-  "slots": "프로필 이미지|이름 한 줄 소개",
-  "old_name": "소개-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:490",
-  "name": "intro-editorial-03",
-  "grp": "소개-에디토리얼",
-  "h": 257,
-  "slots": "프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개",
-  "old_name": "소개-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:503",
-  "name": "intro-editorial-04",
-  "grp": "소개-에디토리얼",
-  "h": 316,
-  "slots": "소개 문구|이미지|이미지|이미지|이미지",
-  "old_name": "About B · 좌측 에디토리얼+그리드",
-  "key": null
- },
- {
-  "id": "5486:23",
-  "name": "intro-editorial-05",
-  "grp": "소개-에디토리얼",
-  "h": 451,
-  "slots": "소개 문구|이미지",
-  "old_name": "About A · 넘겨보기",
-  "key": null
- },
- {
-  "id": "5474:26659",
-  "name": "intro-bold-01",
-  "grp": "소개-볼드",
-  "h": 255,
-  "slots": "프로필 이미지|이름|한 줄 설명",
-  "old_name": "소개-볼드",
-  "key": null
- },
- {
-  "id": "5455:518",
-  "name": "intro-bold-02",
-  "grp": "소개-볼드",
-  "h": 323,
-  "slots": "프로필 이미지|이름|한 줄 소개",
-  "old_name": "소개-볼드",
-  "key": null
- },
- {
-  "id": "5474:26668",
-  "name": "intro-bold-03",
-  "grp": "소개-볼드",
-  "h": 105,
-  "slots": "소개 문구",
-  "old_name": "소개-볼드",
-  "key": null
- },
- {
-  "id": "5455:462",
-  "name": "intro-mixed-01",
-  "grp": "소개-미에볼",
-  "h": 65,
-  "slots": "소개 문구",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5455:465",
-  "name": "intro-mixed-02",
-  "grp": "소개-미에볼",
-  "h": 451,
-  "slots": "소개 문구|이미지",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5474:26608",
-  "name": "intro-minimal-01",
-  "grp": "소개-미니멀",
-  "h": 255,
-  "slots": "프로필 이미지|이름|한 줄 설명",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5474:26616",
-  "name": "intro-minimal-02",
-  "grp": "소개-미니멀",
-  "h": 225,
-  "slots": "프로필 이미지|이름|한 줄 설명",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5455:537",
-  "name": "story-bold-01",
-  "grp": "스토리-볼드",
-  "h": 73,
-  "slots": "한 줄 카피",
-  "old_name": "텍스트",
-  "key": null
- },
- {
-  "id": "5455:544",
-  "name": "story-bold-02",
-  "grp": "스토리-볼드",
-  "h": 151,
-  "slots": "한 줄 카피|본문 텍스트",
-  "old_name": "스토리-볼드",
-  "key": null
- },
- {
-  "id": "5484:23",
-  "name": "story-bold-03",
-  "grp": "스토리-볼드",
-  "h": 108,
-  "slots": "본문 텍스트",
-  "old_name": "스토리-볼드",
-  "key": null
- },
- {
-  "id": "5498:26841",
-  "name": "story-mixed-01",
-  "grp": "스토리-미에",
-  "h": 68,
-  "slots": "본문 텍스트",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5484:27",
-  "name": "story-mixed-02",
-  "grp": "스토리-미에",
-  "h": 108,
-  "slots": "본문 텍스트",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5498:26845",
-  "name": "story-mixed-03",
-  "grp": "스토리-미에",
-  "h": 108,
-  "slots": "본문 텍스트",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5498:26874",
-  "name": "story-mixed-05",
-  "grp": "스토리-미에볼",
-  "h": 109,
-  "slots": "본문 텍스트|본문 텍스트",
-  "old_name": "스토리-미니멀",
-  "key": null
- },
- {
-  "id": "5484:31",
-  "name": "story-minimal-01",
-  "grp": "스토리-미니멀",
-  "h": 68,
-  "slots": "본문 텍스트",
-  "old_name": "소개-미니멀",
-  "key": null
- },
- {
-  "id": "5498:26850",
-  "name": "story-minimal-02",
-  "grp": "스토리-미니멀",
-  "h": 104,
-  "slots": "본문 텍스트|본문 텍스트",
-  "old_name": "스토리-미니멀",
-  "key": null
- },
- {
-  "id": "5484:35",
-  "name": "story-editorial-01",
-  "grp": "스토리-에디토리얼",
-  "h": 104,
-  "slots": "본문 텍스트|본문 텍스트",
-  "old_name": "스토리-에디토리얼",
-  "key": null
- },
- {
-  "id": "5484:40",
-  "name": "story-editorial-02",
-  "grp": "스토리-에디토리얼",
-  "h": 142,
-  "slots": "본문 텍스트|본문 텍스트",
-  "old_name": "스토리-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:1228",
-  "name": "notice-editorial-01",
-  "grp": "안내사항-에디토리얼",
-  "h": 350,
-  "slots": "메인 이미지|안내 사항 안내 사항",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:1235",
-  "name": "notice-editorial-02",
-  "grp": "안내사항-에디토리얼",
-  "h": 234,
-  "slots": "01 안내 사항|02 안내 사항",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5486:311",
-  "name": "notice-editorial-03",
-  "grp": "안내사항-에디토리얼",
-  "h": 334,
-  "slots": "메인 이미지|안내 사항 안내 사항",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5486:317",
-  "name": "notice-editorial-04",
-  "grp": "안내사항-에디토리얼",
-  "h": 273,
-  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:1243",
-  "name": "notice-bold-01",
-  "grp": "안내사항-볼드",
-  "h": 180,
-  "slots": "LABEL  ● 안내 사항 ● 안내 사항",
-  "old_name": "안내사항-볼드",
-  "key": null
- },
- {
-  "id": "5486:326",
-  "name": "notice-bold-02",
-  "grp": "안내사항-볼드",
-  "h": 180,
-  "slots": "LABEL  ● 안내 사항 ● 안내 사항",
-  "old_name": "안내사항-볼드",
-  "key": null
- },
- {
-  "id": "5486:330",
-  "name": "notice-bold-03",
-  "grp": "안내사항-볼드",
-  "h": 271,
-  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
-  "old_name": "안내사항-볼드",
-  "key": null
- },
- {
-  "id": "5486:339",
-  "name": "notice-bold-04",
-  "grp": "안내사항-볼드",
-  "h": 271,
-  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
-  "old_name": "안내사항-볼드",
-  "key": null
- },
- {
-  "id": "5455:1199",
-  "name": "notice-mixed-01",
-  "grp": "안내사항-미에",
-  "h": 206,
-  "slots": "💡|안내 사항|✅|안내 사항|✔️|안내 사항",
-  "old_name": "안내사항-미니멀",
-  "key": null
- },
- {
-  "id": "5455:1214",
-  "name": "notice-mixed-02",
-  "grp": "안내사항-에볼",
-  "h": 184,
-  "slots": "LABEL 안내 사항 안내 사항",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:1218",
-  "name": "notice-mixed-03",
-  "grp": "안내사항-에볼",
-  "h": 273,
-  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
-  "old_name": "안내사항-에디토리얼",
-  "key": null
- },
- {
-  "id": "5455:1195",
-  "name": "notice-mixed-05",
-  "grp": "안내사항-미에볼",
-  "h": 92,
-  "slots": "안내 사항 안내 사항",
-  "old_name": "안내사항-미니멀",
-  "key": null
- },
- {
-  "id": "5486:307",
-  "name": "notice-mixed-06",
-  "grp": "안내사항-미에볼",
-  "h": 124,
-  "slots": "안내 사항 안내 사항",
-  "old_name": "안내사항-미니멀",
-  "key": null
- },
- {
   "id": "5395:11819",
   "name": "materials-minimal-01",
   "grp": "자료-미니멀",
@@ -807,6 +321,33 @@
   "h": 581,
   "slots": "01|LABEL|소개 문구|메인 이미지|00단위 label",
   "old_name": "자료-미니멀",
+  "key": null
+ },
+ {
+  "id": "6560:8497",
+  "name": "materials-minimal-03",
+  "grp": "자료-미니멀",
+  "h": 164,
+  "slots": "이미지|LABEL|소개 문구",
+  "old_name": "05-V1 이미지 좌 + 텍스트 우",
+  "key": null
+ },
+ {
+  "id": "6560:8504",
+  "name": "materials-minimal-04",
+  "grp": "자료-미니멀",
+  "h": 164,
+  "slots": "LABEL|소개 문구|이미지",
+  "old_name": "05-V2 텍스트 좌 + 이미지 우 (교차)",
+  "key": null
+ },
+ {
+  "id": "6560:8511",
+  "name": "materials-minimal-05",
+  "grp": "자료-미니멀",
+  "h": 347,
+  "slots": "이미지|LABEL|소개 문구",
+  "old_name": "05-V3 이미지 위 전폭 + 텍스트 아래",
   "key": null
  },
  {
@@ -897,6 +438,15 @@
   "h": 813,
   "slots": "카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지",
   "old_name": "자료-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "6560:8535",
+  "name": "materials-mixed-03",
+  "grp": "자료-미에",
+  "h": 384,
+  "slots": "이미지|LABEL 소개 문구|LABEL 소개 문구|이미지",
+  "old_name": "05-V4 썸네일 리스트 행 ×3",
   "key": null
  },
  {
@@ -1041,6 +591,24 @@
   "h": 298,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
+  "key": null
+ },
+ {
+  "id": "6560:8139",
+  "name": "list-minimal-08",
+  "grp": "나열-미니멀",
+  "h": 204,
+  "slots": "YYYY.MM – YYYY.MM|회사명|소속 · 역할|YYYY.MM – YYYY.MM|회사명|소속 · 역할",
+  "old_name": "04-V1 연도 좌 고정 + 내용",
+  "key": null
+ },
+ {
+  "id": "6560:8787",
+  "name": "list-minimal-09",
+  "grp": "나열-미니멀",
+  "h": 162,
+  "slots": "00 label|세부 정보|00 label|세부 정보|00 label|세부 정보",
+  "old_name": "16-V2 세로 링크 행 + →",
   "key": null
  },
  {
@@ -1278,6 +846,33 @@
   "key": null
  },
  {
+  "id": "6560:8229",
+  "name": "list-bold-13",
+  "grp": "나열-볼드",
+  "h": 291,
+  "slots": "YYYY|이력 내용|구분선|YYYY|이력 내용|구분선",
+  "old_name": "04-V4 큰 연도 + 구분선",
+  "key": null
+ },
+ {
+  "id": "6560:8470",
+  "name": "list-bold-14",
+  "grp": "나열-볼드",
+  "h": 291,
+  "slots": "hh:mm|프로그램|구분선|hh:mm|프로그램|구분선",
+  "old_name": "04-V4 큰 연도 + 구분선 (시간표형)",
+  "key": null
+ },
+ {
+  "id": "6560:8487",
+  "name": "list-bold-15",
+  "grp": "나열-볼드",
+  "h": 426,
+  "slots": "hh:mm 프로그램 진행자|hh:mm 프로그램 진행자|hh:mm 프로그램 진행자",
+  "old_name": null,
+  "key": null
+ },
+ {
   "id": "5408:212",
   "name": "list-mixed-01",
   "grp": "나열-미에",
@@ -1293,6 +888,24 @@
   "h": 1522,
   "slots": "메인 이미지|서브 이미지|항목|설명 문구",
   "old_name": "나열-미니멀",
+  "key": null
+ },
+ {
+  "id": "6560:8193",
+  "name": "list-mixed-03",
+  "grp": "나열-미에",
+  "h": 219,
+  "slots": "●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용",
+  "old_name": "04-V3 마커(●) + 연도 + 내용",
+  "key": null
+ },
+ {
+  "id": "6560:8413",
+  "name": "list-mixed-04",
+  "grp": "나열-미에",
+  "h": 218,
+  "slots": "YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선",
+  "old_name": "04-V2 좌측 세로선 + 스택",
   "key": null
  },
  {
@@ -1395,6 +1008,114 @@
   "key": null
  },
  {
+  "id": "6560:8248",
+  "name": "list-mixed-16",
+  "grp": "나열-미에볼",
+  "h": 156,
+  "slots": "YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용",
+  "old_name": "04-V2 좌측 세로선 + 스택",
+  "key": null
+ },
+ {
+  "id": "6560:8286",
+  "name": "list-mixed-17",
+  "grp": "나열-미에볼",
+  "h": 205,
+  "slots": "YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선",
+  "old_name": "04-V2 좌측 세로선 + 스택",
+  "key": null
+ },
+ {
+  "id": "6560:8379",
+  "name": "list-mixed-18",
+  "grp": "나열-미에볼",
+  "h": 156,
+  "slots": "hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램",
+  "old_name": "11-V1 시간 좌 고정 + 순서명",
+  "key": null
+ },
+ {
+  "id": "6560:8389",
+  "name": "list-mixed-19",
+  "grp": "나열-미에볼",
+  "h": 231,
+  "slots": "hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자",
+  "old_name": "11-V1 시간 좌 고정 + 순서명",
+  "key": null
+ },
+ {
+  "id": "6560:8399",
+  "name": "list-mixed-20",
+  "grp": "나열-미에볼",
+  "h": 225,
+  "slots": "hh:mm|내용|hh:mm|내용|hh:mm|내용",
+  "old_name": "11-V2 시간 위 / 순서명 아래",
+  "key": null
+ },
+ {
+  "id": "6560:8660",
+  "name": "list-mixed-21",
+  "grp": "나열-미에볼",
+  "h": 248,
+  "slots": "label|항목|세부 정보|항목|세부 정보|label",
+  "old_name": "12-V1 그룹 헤더 + 라벨↔값",
+  "key": null
+ },
+ {
+  "id": "6560:8678",
+  "name": "list-mixed-22",
+  "grp": "나열-미에볼",
+  "h": 310,
+  "slots": "label|항목|세부 정보|항목|세부 정보|label",
+  "old_name": "12-V2 그룹 헤더 = 틴트 밴드",
+  "key": null
+ },
+ {
+  "id": "6560:8696",
+  "name": "list-mixed-23",
+  "grp": "나열-미에볼",
+  "h": 251,
+  "slots": "label|항목|세부 정보|항목|세부 정보|구분선",
+  "old_name": "12-V3 구분선으로 그룹 구분",
+  "key": null
+ },
+ {
+  "id": "6560:8746",
+  "name": "list-mixed-24",
+  "grp": "나열-미에볼",
+  "h": 150,
+  "slots": "아이콘|label 세부 정보|아이콘|label 세부 정보",
+  "old_name": "14-V2 파일 아이콘 + 제목·용량 + →",
+  "key": null
+ },
+ {
+  "id": "6560:8761",
+  "name": "list-mixed-25",
+  "grp": "나열-미에볼",
+  "h": 210,
+  "slots": "label 세부 정보|→|label 세부 정보|→",
+  "old_name": "14-V3 틴트 카드 + 우측 링크",
+  "key": null
+ },
+ {
+  "id": "6560:8913",
+  "name": "list-mixed-26",
+  "grp": "나열-미에볼",
+  "h": 116,
+  "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
+  "old_name": "16-V3 2열 그리드 버튼",
+  "key": null
+ },
+ {
+  "id": "6560:8949",
+  "name": "list-mixed-27",
+  "grp": "나열-미에볼",
+  "h": 116,
+  "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
+  "old_name": "16-V3 2열 그리드 버튼",
+  "key": null
+ },
+ {
   "id": "5455:1271",
   "name": "location-bold-01",
   "grp": "위치 안내-볼드",
@@ -1449,6 +1170,618 @@
   "key": null
  },
  {
+  "id": "5455:157",
+  "name": "hero-minimal-01",
+  "grp": "히어로-미니멀",
+  "h": 188,
+  "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:164",
+  "name": "hero-minimal-02",
+  "grp": "히어로-미니멀",
+  "h": 233,
+  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:174",
+  "name": "hero-minimal-03",
+  "grp": "히어로-미니멀",
+  "h": 211,
+  "slots": "로고|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:182",
+  "name": "hero-minimal-04",
+  "grp": "히어로-미니멀",
+  "h": 611,
+  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:195",
+  "name": "hero-minimal-05",
+  "grp": "히어로-미니멀",
+  "h": 569,
+  "slots": "로고|페이지 제목|카피 혹은 소개 문구|이미지",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "6498:7480",
+  "name": "hero-minimal-06",
+  "grp": "히어로-미니멀",
+  "h": 277,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6498:7488",
+  "name": "hero-minimal-07",
+  "grp": "히어로-미니멀",
+  "h": 247,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "5455:207",
+  "name": "hero-editorial-01",
+  "grp": "히어로-에디토리얼",
+  "h": 194,
+  "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:214",
+  "name": "hero-editorial-02",
+  "grp": "히어로-에디토리얼",
+  "h": 231,
+  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:224",
+  "name": "hero-editorial-03",
+  "grp": "히어로-에디토리얼",
+  "h": 289,
+  "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:238",
+  "name": "hero-editorial-04",
+  "grp": "히어로-에디토리얼",
+  "h": 589,
+  "slots": "로고|페이지 제목|카피 혹은 소개 문구|메인 이미지",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:249",
+  "name": "hero-editorial-05",
+  "grp": "히어로-에디토리얼",
+  "h": 594,
+  "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|메인 이미지",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:262",
+  "name": "hero-editorial-06",
+  "grp": "히어로-에디토리얼",
+  "h": 508,
+  "slots": "메인 이미지|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:270",
+  "name": "hero-editorial-07",
+  "grp": "히어로-에디토리얼",
+  "h": 613,
+  "slots": "메인 이미지|로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:283",
+  "name": "hero-editorial-08",
+  "grp": "히어로-에디토리얼",
+  "h": 844,
+  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:315",
+  "name": "hero-editorial-09",
+  "grp": "히어로-에디토리얼",
+  "h": 642,
+  "slots": "한 줄 설명|페이지 제목 페이지 제목|메인 이미지|워드마크 로고|설명 문구",
+  "old_name": "히어로-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "6498:7500",
+  "name": "hero-editorial-10",
+  "grp": "히어로-에디토리얼",
+  "h": 124,
+  "slots": "프로필 이미지|이름 한 줄 소개",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6498:7504",
+  "name": "hero-editorial-11",
+  "grp": "히어로-에디토리얼",
+  "h": 124,
+  "slots": "프로필 이미지|이름 한 줄 소개",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6498:7509",
+  "name": "hero-editorial-12",
+  "grp": "히어로-에디토리얼",
+  "h": 192,
+  "slots": "문장형 카피를 입력합니다|——",
+  "old_name": "09-V1 eyebrow + 제목 + 카피",
+  "key": null
+ },
+ {
+  "id": "6498:7524",
+  "name": "hero-editorial-13",
+  "grp": "히어로-에디토리얼",
+  "h": 363,
+  "slots": "EYEBROW|문장형 카피를 입력합니다|LABEL 세부 정보|LABEL 세부 정보|LABEL 세부 정보",
+  "old_name": "09-V3 eyebrow + 제목 + 세부 3행",
+  "key": null
+ },
+ {
+  "id": "5455:331",
+  "name": "hero-bold-01",
+  "grp": "히어로-볼드",
+  "h": 803,
+  "slots": "EYEBROW|로고|회사명 혹은 브랜드명|메인 이미지|페이지 제목|서브카피",
+  "old_name": "히어로-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:346",
+  "name": "hero-bold-02",
+  "grp": "히어로-볼드",
+  "h": 393,
+  "slots": "로고|회사명|슬로건|EYEBROW|페이지 제목|카피 혹은 설명 문구",
+  "old_name": "히어로-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:359",
+  "name": "hero-bold-03",
+  "grp": "히어로-볼드",
+  "h": 525,
+  "slots": "메인 비주얼|EYEBROW|페이지 제목|한 줄 카피",
+  "old_name": "히어로",
+  "key": null
+ },
+ {
+  "id": "5455:369",
+  "name": "hero-bold-04",
+  "grp": "히어로-볼드",
+  "h": 589,
+  "slots": "EYEBROW|페이지 제목|한 줄 카피|메인 비주얼",
+  "old_name": "히어로",
+  "key": null
+ },
+ {
+  "id": "5455:379",
+  "name": "hero-bold-05",
+  "grp": "히어로-볼드",
+  "h": 981,
+  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
+  "old_name": "히어로-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:411",
+  "name": "hero-bold-06",
+  "grp": "히어로-볼드",
+  "h": 1005,
+  "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
+  "old_name": "히어로-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:439",
+  "name": "hero-bold-07",
+  "grp": "히어로-볼드",
+  "h": 483,
+  "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 설명 문구",
+  "old_name": "히어로-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:454",
+  "name": "hero-bold-08",
+  "grp": "히어로-볼드",
+  "h": 196,
+  "slots": "페이지 제목|카피 혹은 설명 문구",
+  "old_name": "Frame 48097695",
+  "key": null
+ },
+ {
+  "id": "6585:9285",
+  "name": "hero-bold-09",
+  "grp": "히어로-볼드",
+  "h": 331,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6560:9086",
+  "name": "hero-bold-10",
+  "grp": "히어로-볼드",
+  "h": 350,
+  "slots": "메인 비주얼|페이지 제목 카피 혹은 설명 문구|버튼 텍스트",
+  "old_name": "21-V3 카드 배경 + 버튼",
+  "key": null
+ },
+ {
+  "id": "6498:7469",
+  "name": "hero-mixed-01",
+  "grp": "히어로-미에",
+  "h": 416,
+  "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지",
+  "old_name": "08-V2 eyebrow + 이름 + 소개 + 사진",
+  "key": null
+ },
+ {
+  "id": "6560:9095",
+  "name": "hero-mixed-02",
+  "grp": "히어로-미에",
+  "h": 460,
+  "slots": "메인 비주얼|EYEBROW 페이지 제목 카피",
+  "old_name": "21-V1 페이지 배경형",
+  "key": null
+ },
+ {
+  "id": "6560:9101",
+  "name": "hero-mixed-03",
+  "grp": "히어로-미에",
+  "h": 256,
+  "slots": "메인 비주얼|페이지 제목 카피 혹은 설명 문구",
+  "old_name": "21-V2 카드 배경형",
+  "key": null
+ },
+ {
+  "id": "6498:7424",
+  "name": "hero-mixed-04",
+  "grp": "히어로-에볼",
+  "h": 786,
+  "slots": "로고|카피 혹은 소개 문구|혜택 및 핵심 정보|문장형 카피를 입력합니다|카피 혹은 소개 문구 강조 텍스트|이미지",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6498:7441",
+  "name": "hero-mixed-05",
+  "grp": "히어로-에볼",
+  "h": 940,
+  "slots": "EYEBROW|페이지 제목|한 줄 행사 설명|메인 이미지|LABEL|세부 정보",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "5455:89",
+  "name": "hero-mixed-06",
+  "grp": "히어로-미에볼",
+  "h": 759,
+  "slots": "로고|카피 혹은 소개 문구|이미지|페이지 제목|EYEBROW|일정 정보",
+  "old_name": "히어로-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:486",
+  "name": "intro-editorial-01",
+  "grp": "소개-에디토리얼",
+  "h": 124,
+  "slots": "프로필 이미지|이름 한 줄 소개",
+  "old_name": "소개-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5474:26654",
+  "name": "intro-editorial-02",
+  "grp": "소개-에디토리얼",
+  "h": 108,
+  "slots": "프로필 이미지|이름 한 줄 소개",
+  "old_name": "소개-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:490",
+  "name": "intro-editorial-03",
+  "grp": "소개-에디토리얼",
+  "h": 257,
+  "slots": "프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개",
+  "old_name": "소개-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:503",
+  "name": "intro-editorial-04",
+  "grp": "소개-에디토리얼",
+  "h": 316,
+  "slots": "소개 문구|이미지|이미지|이미지|이미지",
+  "old_name": "About B · 좌측 에디토리얼+그리드",
+  "key": null
+ },
+ {
+  "id": "5486:23",
+  "name": "intro-editorial-05",
+  "grp": "소개-에디토리얼",
+  "h": 451,
+  "slots": "소개 문구|이미지",
+  "old_name": "About A · 넘겨보기",
+  "key": null
+ },
+ {
+  "id": "6559:7736",
+  "name": "intro-editorial-06",
+  "grp": "소개-에디토리얼",
+  "h": 68,
+  "slots": "label|소개 문구",
+  "old_name": "보조텍스트-리드중앙",
+  "key": null
+ },
+ {
+  "id": "5474:26659",
+  "name": "intro-bold-01",
+  "grp": "소개-볼드",
+  "h": 255,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": "소개-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:518",
+  "name": "intro-bold-02",
+  "grp": "소개-볼드",
+  "h": 323,
+  "slots": "프로필 이미지|이름|한 줄 소개",
+  "old_name": "소개-볼드",
+  "key": null
+ },
+ {
+  "id": "5474:26668",
+  "name": "intro-bold-03",
+  "grp": "소개-볼드",
+  "h": 105,
+  "slots": "소개 문구",
+  "old_name": "소개-볼드",
+  "key": null
+ },
+ {
+  "id": "6498:7711",
+  "name": "intro-bold-04",
+  "grp": "소개-볼드",
+  "h": 105,
+  "slots": "소개 문구",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "5455:462",
+  "name": "intro-mixed-01",
+  "grp": "소개-미에볼",
+  "h": 65,
+  "slots": "소개 문구",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:465",
+  "name": "intro-mixed-02",
+  "grp": "소개-미에볼",
+  "h": 451,
+  "slots": "소개 문구|이미지",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "6498:7721",
+  "name": "intro-mixed-03",
+  "grp": "소개-미에볼",
+  "h": 68,
+  "slots": "소개 문구",
+  "old_name": "보조텍스트-이음말",
+  "key": null
+ },
+ {
+  "id": "6559:7729",
+  "name": "intro-mixed-04",
+  "grp": "소개-미에볼",
+  "h": 104,
+  "slots": "초대의 글|○○○ 드림",
+  "old_name": "보조텍스트-맺음말서명",
+  "key": null
+ },
+ {
+  "id": "6559:7740",
+  "name": "intro-mixed-05",
+  "grp": "소개-미에볼",
+  "h": 108,
+  "slots": "구분선|소개 문구|구분선",
+  "old_name": "보조텍스트-리드좌",
+  "key": null
+ },
+ {
+  "id": "5474:26608",
+  "name": "intro-minimal-01",
+  "grp": "소개-미니멀",
+  "h": 255,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5474:26616",
+  "name": "intro-minimal-02",
+  "grp": "소개-미니멀",
+  "h": 225,
+  "slots": "프로필 이미지|이름|한 줄 설명",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:537",
+  "name": "story-bold-01",
+  "grp": "스토리-볼드",
+  "h": 73,
+  "slots": "한 줄 카피",
+  "old_name": "텍스트",
+  "key": null
+ },
+ {
+  "id": "5455:544",
+  "name": "story-bold-02",
+  "grp": "스토리-볼드",
+  "h": 151,
+  "slots": "한 줄 카피|본문 텍스트",
+  "old_name": "스토리-볼드",
+  "key": null
+ },
+ {
+  "id": "5484:23",
+  "name": "story-bold-03",
+  "grp": "스토리-볼드",
+  "h": 108,
+  "slots": "본문 텍스트",
+  "old_name": "스토리-볼드",
+  "key": null
+ },
+ {
+  "id": "6559:7771",
+  "name": "story-bold-04",
+  "grp": "스토리-볼드",
+  "h": 136,
+  "slots": "“문장형 카피를 입력합니다.” —",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "6559:7779",
+  "name": "story-bold-05",
+  "grp": "스토리-볼드",
+  "h": 228,
+  "slots": "“|문장형 카피를 입력합니다.|“",
+  "old_name": "02-V3 큰 따옴표 글리프",
+  "key": null
+ },
+ {
+  "id": "5498:26841",
+  "name": "story-mixed-01",
+  "grp": "스토리-미에",
+  "h": 68,
+  "slots": "본문 텍스트",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5484:27",
+  "name": "story-mixed-02",
+  "grp": "스토리-미에",
+  "h": 108,
+  "slots": "본문 텍스트",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5498:26845",
+  "name": "story-mixed-03",
+  "grp": "스토리-미에",
+  "h": 108,
+  "slots": "본문 텍스트",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "6559:7775",
+  "name": "story-mixed-04",
+  "grp": "스토리-미에",
+  "h": 136,
+  "slots": "“문장형 카피를 입력합니다.” —",
+  "old_name": null,
+  "key": null
+ },
+ {
+  "id": "5498:26874",
+  "name": "story-mixed-05",
+  "grp": "스토리-미에볼",
+  "h": 109,
+  "slots": "본문 텍스트|본문 텍스트",
+  "old_name": "스토리-미니멀",
+  "key": null
+ },
+ {
+  "id": "5484:31",
+  "name": "story-minimal-01",
+  "grp": "스토리-미니멀",
+  "h": 68,
+  "slots": "본문 텍스트",
+  "old_name": "소개-미니멀",
+  "key": null
+ },
+ {
+  "id": "5498:26850",
+  "name": "story-minimal-02",
+  "grp": "스토리-미니멀",
+  "h": 104,
+  "slots": "본문 텍스트|본문 텍스트",
+  "old_name": "스토리-미니멀",
+  "key": null
+ },
+ {
+  "id": "6559:7748",
+  "name": "story-minimal-03",
+  "grp": "스토리-미니멀",
+  "h": 142,
+  "slots": "문장형 카피를 입력합니다|——",
+  "old_name": "02-V1 큰 글씨 + 하단 짧은 바",
+  "key": null
+ },
+ {
+  "id": "5484:35",
+  "name": "story-editorial-01",
+  "grp": "스토리-에디토리얼",
+  "h": 104,
+  "slots": "본문 텍스트|본문 텍스트",
+  "old_name": "스토리-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5484:40",
+  "name": "story-editorial-02",
+  "grp": "스토리-에디토리얼",
+  "h": 142,
+  "slots": "본문 텍스트|본문 텍스트",
+  "old_name": "스토리-에디토리얼",
+  "key": null
+ },
+ {
   "id": "5455:724",
   "name": "purchase-editorial-01",
   "grp": "구매-에디토리얼",
@@ -1473,6 +1806,33 @@
   "h": 468,
   "slots": "이미지|상품명|가격 (그리드)",
   "old_name": "구매-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "6560:9006",
+  "name": "purchase-editorial-04",
+  "grp": "구매-에디토리얼",
+  "h": 202,
+  "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원|→ 00,000원",
+  "old_name": "18-V1 한 카드 3줄",
+  "key": null
+ },
+ {
+  "id": "6560:9052",
+  "name": "purchase-editorial-05",
+  "grp": "구매-에디토리얼",
+  "h": 226,
+  "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원|→ 00,000원|(추가할인조건 00,000원)",
+  "old_name": "18-V1 한 카드 3줄 + 추가할인",
+  "key": null
+ },
+ {
+  "id": "6560:9039",
+  "name": "purchase-editorial-06",
+  "grp": "구매-에디토리얼",
+  "h": 194,
+  "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원 → 00,000원|(추가할인조건 00,000원)",
+  "old_name": "18-V1 한 카드 3줄 (1행형)",
   "key": null
  },
  {
@@ -1962,6 +2322,150 @@
   "key": null
  },
  {
+  "id": "5455:1228",
+  "name": "notice-editorial-01",
+  "grp": "안내사항-에디토리얼",
+  "h": 350,
+  "slots": "메인 이미지|안내 사항 안내 사항",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:1235",
+  "name": "notice-editorial-02",
+  "grp": "안내사항-에디토리얼",
+  "h": 234,
+  "slots": "01 안내 사항|02 안내 사항",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5486:311",
+  "name": "notice-editorial-03",
+  "grp": "안내사항-에디토리얼",
+  "h": 334,
+  "slots": "메인 이미지|안내 사항 안내 사항",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5486:317",
+  "name": "notice-editorial-04",
+  "grp": "안내사항-에디토리얼",
+  "h": 273,
+  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:1243",
+  "name": "notice-bold-01",
+  "grp": "안내사항-볼드",
+  "h": 180,
+  "slots": "LABEL  ● 안내 사항 ● 안내 사항",
+  "old_name": "안내사항-볼드",
+  "key": null
+ },
+ {
+  "id": "5486:326",
+  "name": "notice-bold-02",
+  "grp": "안내사항-볼드",
+  "h": 180,
+  "slots": "LABEL  ● 안내 사항 ● 안내 사항",
+  "old_name": "안내사항-볼드",
+  "key": null
+ },
+ {
+  "id": "5486:330",
+  "name": "notice-bold-03",
+  "grp": "안내사항-볼드",
+  "h": 271,
+  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
+  "old_name": "안내사항-볼드",
+  "key": null
+ },
+ {
+  "id": "5486:339",
+  "name": "notice-bold-04",
+  "grp": "안내사항-볼드",
+  "h": 271,
+  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
+  "old_name": "안내사항-볼드",
+  "key": null
+ },
+ {
+  "id": "5455:1199",
+  "name": "notice-mixed-01",
+  "grp": "안내사항-미에",
+  "h": 206,
+  "slots": "💡|안내 사항|✅|안내 사항|✔️|안내 사항",
+  "old_name": "안내사항-미니멀",
+  "key": null
+ },
+ {
+  "id": "5455:1214",
+  "name": "notice-mixed-02",
+  "grp": "안내사항-에볼",
+  "h": 184,
+  "slots": "LABEL 안내 사항 안내 사항",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5455:1218",
+  "name": "notice-mixed-03",
+  "grp": "안내사항-에볼",
+  "h": 273,
+  "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
+  "old_name": "안내사항-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "6560:8842",
+  "name": "notice-mixed-04",
+  "grp": "안내사항-에볼",
+  "h": 240,
+  "slots": "00|질문|답변|00|질문|답변",
+  "old_name": "13-V3 번호 + 틴트 답변 카드",
+  "key": null
+ },
+ {
+  "id": "5455:1195",
+  "name": "notice-mixed-05",
+  "grp": "안내사항-미에볼",
+  "h": 92,
+  "slots": "안내 사항 안내 사항",
+  "old_name": "안내사항-미니멀",
+  "key": null
+ },
+ {
+  "id": "5486:307",
+  "name": "notice-mixed-06",
+  "grp": "안내사항-미에볼",
+  "h": 124,
+  "slots": "안내 사항 안내 사항",
+  "old_name": "안내사항-미니멀",
+  "key": null
+ },
+ {
+  "id": "6560:8856",
+  "name": "notice-mixed-07",
+  "grp": "안내사항-미에볼",
+  "h": 176,
+  "slots": "Q|질문|A|답변|Q|질문",
+  "old_name": "13-V1 Q / A 라벨",
+  "key": null
+ },
+ {
+  "id": "6560:8870",
+  "name": "notice-mixed-08",
+  "grp": "안내사항-미에볼",
+  "h": 193,
+  "slots": "질문|답변|구분선|질문|답변",
+  "old_name": "13-V2 질문 Bold + 구분선",
+  "key": null
+ },
+ {
   "id": "5455:1285",
   "name": "contact-mixed-01",
   "grp": "문의-미에볼",
@@ -2115,120 +2619,12 @@
   "key": null
  },
  {
-  "id": "3311:10471",
-  "name": "header-02",
-  "grp": "헤더",
-  "h": 41,
-  "slots": "",
-  "old_name": "헤더-텍스트",
-  "key": null
- },
- {
-  "id": "3311:10470",
-  "name": "header-03",
-  "grp": "헤더",
-  "h": 40,
-  "slots": "",
-  "old_name": "헤더-텍스트",
-  "key": null
- },
- {
-  "id": "3311:10480",
-  "name": "header-04",
-  "grp": "헤더",
-  "h": 40,
-  "slots": "",
-  "old_name": "헤더-텍스트",
-  "key": null
- },
- {
-  "id": "3311:10487",
-  "name": "header-05",
-  "grp": "헤더",
-  "h": 40,
-  "slots": "",
-  "old_name": "헤더-텍스트",
-  "key": null
- },
- {
-  "id": "3311:10494",
-  "name": "header-06",
-  "grp": "헤더",
-  "h": 37,
-  "slots": "",
-  "old_name": "헤더-배너",
-  "key": null
- },
- {
-  "id": "3311:10497",
-  "name": "header-07",
-  "grp": "헤더",
-  "h": 37,
-  "slots": "",
-  "old_name": "헤더-배너",
-  "key": null
- },
- {
   "id": "4445:87",
   "name": "header-08",
   "grp": "헤더",
   "h": 45,
   "slots": "",
   "old_name": "헤더-로고+텍스트",
-  "key": null
- },
- {
-  "id": "4445:96",
-  "name": "header-09",
-  "grp": "헤더",
-  "h": 45,
-  "slots": "",
-  "old_name": "헤더-로고+텍스트",
-  "key": null
- },
- {
-  "id": "4445:105",
-  "name": "header-10",
-  "grp": "헤더",
-  "h": 44,
-  "slots": "",
-  "old_name": "헤더-로고+텍스트",
-  "key": null
- },
- {
-  "id": "4445:112",
-  "name": "header-11",
-  "grp": "헤더",
-  "h": 44,
-  "slots": "",
-  "old_name": "헤더-로고+텍스트",
-  "key": null
- },
- {
-  "id": "4445:119",
-  "name": "header-12",
-  "grp": "헤더",
-  "h": 44,
-  "slots": "",
-  "old_name": "헤더-로고+텍스트",
-  "key": null
- },
- {
-  "id": "4460:87",
-  "name": "header-13",
-  "grp": "헤더",
-  "h": 45,
-  "slots": "",
-  "old_name": "헤더-로고만",
-  "key": null
- },
- {
-  "id": "4460:98",
-  "name": "header-14",
-  "grp": "헤더",
-  "h": 45,
-  "slots": "",
-  "old_name": "헤더-로고만",
   "key": null
  },
  {
@@ -2241,6 +2637,24 @@
   "key": null
  },
  {
+  "id": "3311:10471",
+  "name": "header-02",
+  "grp": "헤더",
+  "h": 41,
+  "slots": "",
+  "old_name": "헤더-텍스트",
+  "key": null
+ },
+ {
+  "id": "4445:96",
+  "name": "header-09",
+  "grp": "헤더",
+  "h": 45,
+  "slots": "",
+  "old_name": "헤더-로고+텍스트",
+  "key": null
+ },
+ {
   "id": "4460:118",
   "name": "header-16",
   "grp": "헤더",
@@ -2250,10 +2664,100 @@
   "key": null
  },
  {
+  "id": "3311:10470",
+  "name": "header-03",
+  "grp": "헤더",
+  "h": 40,
+  "slots": "",
+  "old_name": "헤더-텍스트",
+  "key": null
+ },
+ {
+  "id": "4445:105",
+  "name": "header-10",
+  "grp": "헤더",
+  "h": 44,
+  "slots": "",
+  "old_name": "헤더-로고+텍스트",
+  "key": null
+ },
+ {
   "id": "4460:127",
   "name": "header-17",
   "grp": "헤더",
   "h": 44,
+  "slots": "",
+  "old_name": "헤더-로고만",
+  "key": null
+ },
+ {
+  "id": "3311:10480",
+  "name": "header-04",
+  "grp": "헤더",
+  "h": 40,
+  "slots": "",
+  "old_name": "헤더-텍스트",
+  "key": null
+ },
+ {
+  "id": "4445:112",
+  "name": "header-11",
+  "grp": "헤더",
+  "h": 44,
+  "slots": "",
+  "old_name": "헤더-로고+텍스트",
+  "key": null
+ },
+ {
+  "id": "3311:10487",
+  "name": "header-05",
+  "grp": "헤더",
+  "h": 40,
+  "slots": "",
+  "old_name": "헤더-텍스트",
+  "key": null
+ },
+ {
+  "id": "4445:119",
+  "name": "header-12",
+  "grp": "헤더",
+  "h": 44,
+  "slots": "",
+  "old_name": "헤더-로고+텍스트",
+  "key": null
+ },
+ {
+  "id": "3311:10494",
+  "name": "header-06",
+  "grp": "헤더",
+  "h": 37,
+  "slots": "",
+  "old_name": "헤더-배너",
+  "key": null
+ },
+ {
+  "id": "4460:87",
+  "name": "header-13",
+  "grp": "헤더",
+  "h": 45,
+  "slots": "",
+  "old_name": "헤더-로고만",
+  "key": null
+ },
+ {
+  "id": "3311:10497",
+  "name": "header-07",
+  "grp": "헤더",
+  "h": 37,
+  "slots": "",
+  "old_name": "헤더-배너",
+  "key": null
+ },
+ {
+  "id": "4460:98",
+  "name": "header-14",
+  "grp": "헤더",
+  "h": 45,
   "slots": "",
   "old_name": "헤더-로고만",
   "key": null
@@ -2268,210 +2772,12 @@
   "key": null
  },
  {
-  "id": "3311:10075",
-  "name": "footer-02",
-  "grp": "푸터",
-  "h": 111,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3001:2701",
-  "name": "footer-03",
-  "grp": "푸터",
-  "h": 135,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:10089",
-  "name": "footer-04",
-  "grp": "푸터",
-  "h": 135,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9698",
-  "name": "footer-05",
-  "grp": "푸터",
-  "h": 120,
-  "slots": "",
-  "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9825",
-  "name": "footer-06",
-  "grp": "푸터",
-  "h": 135,
-  "slots": "",
-  "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9718",
-  "name": "footer-07",
-  "grp": "푸터",
-  "h": 86,
-  "slots": "",
-  "old_name": "푸터-SNS",
-  "key": null
- },
- {
-  "id": "3311:9764",
-  "name": "footer-08",
-  "grp": "푸터",
-  "h": 127,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:10107",
-  "name": "footer-09",
-  "grp": "푸터",
-  "h": 127,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:9770",
-  "name": "footer-10",
-  "grp": "푸터",
-  "h": 151,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:10113",
-  "name": "footer-11",
-  "grp": "푸터",
-  "h": 151,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9778",
-  "name": "footer-12",
-  "grp": "푸터",
-  "h": 126,
-  "slots": "",
-  "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
   "id": "3311:9842",
   "name": "footer-13",
   "grp": "푸터",
   "h": 141,
   "slots": "",
   "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9789",
-  "name": "footer-14",
-  "grp": "푸터",
-  "h": 92,
-  "slots": "",
-  "old_name": "푸터-SNS",
-  "key": null
- },
- {
-  "id": "3311:9892",
-  "name": "footer-15",
-  "grp": "푸터",
-  "h": 128,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:10081",
-  "name": "footer-16",
-  "grp": "푸터",
-  "h": 128,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:9898",
-  "name": "footer-17",
-  "grp": "푸터",
-  "h": 152,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:10097",
-  "name": "footer-18",
-  "grp": "푸터",
-  "h": 152,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9906",
-  "name": "footer-19",
-  "grp": "푸터",
-  "h": 127,
-  "slots": "",
-  "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9917",
-  "name": "footer-20",
-  "grp": "푸터",
-  "h": 142,
-  "slots": "",
-  "old_name": "푸터-브랜드+카피",
-  "key": null
- },
- {
-  "id": "3311:9928",
-  "name": "footer-21",
-  "grp": "푸터",
-  "h": 93,
-  "slots": "",
-  "old_name": "푸터-SNS",
-  "key": null
- },
- {
-  "id": "3311:10009",
-  "name": "footer-22",
-  "grp": "푸터",
-  "h": 127,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:10121",
-  "name": "footer-23",
-  "grp": "푸터",
-  "h": 127,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드",
-  "key": null
- },
- {
-  "id": "3311:10015",
-  "name": "footer-24",
-  "grp": "푸터",
-  "h": 151,
-  "slots": "",
-  "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
  {
@@ -2484,12 +2790,48 @@
   "key": null
  },
  {
+  "id": "3311:10075",
+  "name": "footer-02",
+  "grp": "푸터",
+  "h": 111,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
+  "id": "3311:9789",
+  "name": "footer-14",
+  "grp": "푸터",
+  "h": 92,
+  "slots": "",
+  "old_name": "푸터-SNS",
+  "key": null
+ },
+ {
   "id": "3311:10023",
   "name": "footer-26",
   "grp": "푸터",
   "h": 126,
   "slots": "",
   "old_name": "푸터-브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3001:2701",
+  "name": "footer-03",
+  "grp": "푸터",
+  "h": 135,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:9892",
+  "name": "footer-15",
+  "grp": "푸터",
+  "h": 128,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
   "key": null
  },
  {
@@ -2502,12 +2844,48 @@
   "key": null
  },
  {
+  "id": "3311:10089",
+  "name": "footer-04",
+  "grp": "푸터",
+  "h": 135,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:10081",
+  "name": "footer-16",
+  "grp": "푸터",
+  "h": 128,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
   "id": "3311:10034",
   "name": "footer-28",
   "grp": "푸터",
   "h": 92,
   "slots": "",
   "old_name": "푸터-SNS",
+  "key": null
+ },
+ {
+  "id": "3311:9698",
+  "name": "footer-05",
+  "grp": "푸터",
+  "h": 120,
+  "slots": "",
+  "old_name": "푸터-브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:9898",
+  "name": "footer-17",
+  "grp": "푸터",
+  "h": 152,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
  {
@@ -2520,12 +2898,48 @@
   "key": null
  },
  {
+  "id": "3311:9825",
+  "name": "footer-06",
+  "grp": "푸터",
+  "h": 135,
+  "slots": "",
+  "old_name": "푸터-브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:10097",
+  "name": "footer-18",
+  "grp": "푸터",
+  "h": 152,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
+  "key": null
+ },
+ {
   "id": "3311:9868",
   "name": "footer-30",
   "grp": "푸터",
   "h": 39,
   "slots": "",
   "old_name": "푸터-하단고정바",
+  "key": null
+ },
+ {
+  "id": "3311:9718",
+  "name": "footer-07",
+  "grp": "푸터",
+  "h": 86,
+  "slots": "",
+  "old_name": "푸터-SNS",
+  "key": null
+ },
+ {
+  "id": "3311:9906",
+  "name": "footer-19",
+  "grp": "푸터",
+  "h": 127,
+  "slots": "",
+  "old_name": "푸터-브랜드+카피",
   "key": null
  },
  {
@@ -2538,12 +2952,48 @@
   "key": null
  },
  {
+  "id": "3311:9764",
+  "name": "footer-08",
+  "grp": "푸터",
+  "h": 127,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
+  "id": "3311:9917",
+  "name": "footer-20",
+  "grp": "푸터",
+  "h": 142,
+  "slots": "",
+  "old_name": "푸터-브랜드+카피",
+  "key": null
+ },
+ {
   "id": "3311:10065",
   "name": "footer-32",
   "grp": "푸터",
   "h": 38,
   "slots": "",
   "old_name": "푸터-하단고정바",
+  "key": null
+ },
+ {
+  "id": "3311:10107",
+  "name": "footer-09",
+  "grp": "푸터",
+  "h": 127,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
+  "id": "3311:9928",
+  "name": "footer-21",
+  "grp": "푸터",
+  "h": 93,
+  "slots": "",
+  "old_name": "푸터-SNS",
   "key": null
  },
  {
@@ -2556,6 +3006,24 @@
   "key": null
  },
  {
+  "id": "3311:9770",
+  "name": "footer-10",
+  "grp": "푸터",
+  "h": 151,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:10009",
+  "name": "footer-22",
+  "grp": "푸터",
+  "h": 127,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
   "id": "3311:9879",
   "name": "footer-34",
   "grp": "푸터",
@@ -2565,12 +3033,48 @@
   "key": null
  },
  {
+  "id": "3311:10113",
+  "name": "footer-11",
+  "grp": "푸터",
+  "h": 151,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:10121",
+  "name": "footer-23",
+  "grp": "푸터",
+  "h": 127,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드",
+  "key": null
+ },
+ {
   "id": "3311:9883",
   "name": "footer-35",
   "grp": "푸터",
   "h": 52,
   "slots": "",
   "old_name": "푸터-하단고정바",
+  "key": null
+ },
+ {
+  "id": "3311:9778",
+  "name": "footer-12",
+  "grp": "푸터",
+  "h": 126,
+  "slots": "",
+  "old_name": "푸터-브랜드+카피",
+  "key": null
+ },
+ {
+  "id": "3311:10015",
+  "name": "footer-24",
+  "grp": "푸터",
+  "h": 151,
+  "slots": "",
+  "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
  {
