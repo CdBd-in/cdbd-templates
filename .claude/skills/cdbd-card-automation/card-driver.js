@@ -230,6 +230,77 @@
     return `toggled:${visible} (미검증 — sleep 후 cardVisible() 확인)`;
   };
 
+  // ── 여백 (내부여백 / 외부여백) ────────────────────────────────────────
+  // 🚨 2026-09-08 실측으로 확정한 유일한 커밋 경로:
+  //    native value setter → **React props.onChange** → **React props.onBlur**
+  //    ❌ 안 되는 것: new Event('input'/'change') dispatch · el.blur() · Tab · 다른 필드 click
+  //       · $B fill · 슬라이더 onChange(존재 안 함) · PointerEvent 드래그
+  //    ⚠️ onBlur를 부르지 않으면 필드에 값은 보이는데 block.style에 커밋되지 않는다(리로드 시 유실).
+  //    저장 형식은 CSS shorthand — 예: margin:'0px 0px 0px 40px'(좌40), padding:'20px 40px'(상하20·좌우40)
+  const _setSpacingField = (input, val) => {
+    const k = Object.keys(input).find((x) => x.startsWith("__reactProps"));
+    const p = input[k];
+    if (!p || !p.onChange) return false;
+    const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
+    setter.call(input, String(val));
+    const ev = { target: input, currentTarget: input, stopPropagation() {}, preventDefault() {} };
+    p.onChange({ ...ev, type: "change" });
+    if (p.onBlur) p.onBlur({ ...ev, type: "blur" });
+    return true;
+  };
+
+  // 여백 아코디언(∧)을 펼치고 상/하/좌/우 input을 찾아 준다.
+  // kind: '외부여백' | '내부여백'
+  const openSpacing = (kind = "외부여백") => {
+    const lab = [...document.querySelectorAll("*")].find(
+      (e) => e.childElementCount === 0 && e.textContent.trim() === kind
+    );
+    if (!lab) return `no-label:${kind}`;
+    const btn = lab.parentElement.querySelector("button");
+    if (!btn) return `no-accordion:${kind}`;
+    btn.click();
+    return `opened:${kind}`;
+  };
+
+  const _spacingInputs = (kind = "외부여백") => {
+    const lab = [...document.querySelectorAll("*")].find(
+      (e) => e.childElementCount === 0 && e.textContent.trim() === kind
+    );
+    if (!lab) return null;
+    const wrap = lab.parentElement.parentElement;
+    const map = {};
+    [...wrap.querySelectorAll("*")]
+      .filter((e) => e.childElementCount === 0 && ["상", "하", "좌", "우"].includes(e.textContent.trim()))
+      .forEach((d) => {
+        const n = d.textContent.trim();
+        if (map[n]) return;
+        const i = d.parentElement.querySelector("input:not([type=range])");
+        if (i) map[n] = i;
+      });
+    return map;
+  };
+
+  // 카드가 이미 선택돼 있고 openSpacing(kind)로 펼친 상태에서 호출.
+  // vals 예: {좌:40, 우:40} / {상:0, 하:0, 좌:40, 우:40}
+  const setSpacing = (kind = "외부여백", vals = {}) => {
+    const map = _spacingInputs(kind);
+    if (!map) return `no-panel:${kind}`;
+    const done = [];
+    for (const [dir, v] of Object.entries(vals)) {
+      if (!map[dir]) { done.push(`${dir}:no-field`); continue; }
+      done.push(`${dir}:${_setSpacingField(map[dir], v) ? v : "fail"}`);
+    }
+    return `${kind} ${done.join(" ")} (미검증 — sleep 후 blockOfRow().style 확인)`;
+  };
+
+  const spacingValues = (kind = "외부여백") => {
+    const map = _spacingInputs(kind);
+    if (!map) return null;
+    const o = {};
+    for (const [d, i] of Object.entries(map)) o[d] = i.value;
+    return o;
+  };
+
   // ── 카드 고정 (핀) ────────────────────────────────────────────────────
   // 핀 버튼은 드래그 핸들 옆. ⚠️ 고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로
   // 이동하므로 위치(x)로 찾으면 안 됨 → onClick 소스 시그니처로 식별.
@@ -606,6 +677,9 @@
   //   권장 F1 시퀀스: 참조 mutate → reorderCard(a,b) [sleep] → reorderCard(b,a) [sleep] → dumpState 검증.
 
   window.__cdbd = {
+    openSpacing,
+    setSpacing,
+    spacingValues,
     cardVisible,
     setCardVisible,
     pinVerify,
