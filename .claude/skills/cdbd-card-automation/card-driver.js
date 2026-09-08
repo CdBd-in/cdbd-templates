@@ -187,6 +187,49 @@
     return "swal-confirmed";
   };
 
+  // ── 공통: matcher로 block 찾기 ────────────────────────────────────────
+  const _blockByMatcher = (matcher = {}) => {
+    const rows = boardRows();
+    if (matcher.index != null) return blockOfRow(rows[matcher.index]);
+    for (const el of rows) {
+      const b = blockOfRow(el);
+      if (!b) continue;
+      if (matcher.id && b.id === matcher.id) return b;
+      if (matcher.type && b.type === matcher.type) return b;
+    }
+    return null;
+  };
+  const _rowByMatcher = (matcher = {}) => {
+    const rows = boardRows();
+    if (matcher.index != null) return rows[matcher.index] || null;
+    for (const el of rows) {
+      const b = blockOfRow(el);
+      if (!b) continue;
+      if (matcher.id && b.id === matcher.id) return el;
+      if (matcher.type && b.type === matcher.type) return el;
+    }
+    return null;
+  };
+
+  // ── 표시 토글 (ON/OFF) ────────────────────────────────────────────────
+  // 🚨 2026-09-08 실측 정정: 토글 필드는 `isShow`가 **아니다**. 그런 필드는 없다.
+  //    실제 필드 = `block.disabled` (**반전**). disabled:true = 토글 OFF = 방문자에게 안 보임.
+  //    block이 실제로 갖는 키: id,type,style,title,active,disabled,content,previewText,
+  //                            colorPicker,backgroundImage,(고정 시)fixedPosition
+  const cardVisible = (matcher = {}) => {
+    const b = _blockByMatcher(matcher);
+    return b ? !b.disabled : null;
+  };
+  const setCardVisible = (matcher = {}, visible = true) => {
+    const row = _rowByMatcher(matcher);
+    if (!row) return "no-row";
+    const input = row.querySelector(".MuiSwitch-root input");
+    if (!input) return "no-switch";
+    if (input.checked === !!visible) return `already:${visible}`;
+    input.click();
+    return `toggled:${visible} (미검증 — sleep 후 cardVisible() 확인)`;
+  };
+
   // ── 카드 고정 (핀) ────────────────────────────────────────────────────
   // 핀 버튼은 드래그 핸들 옆. ⚠️ 고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로
   // 이동하므로 위치(x)로 찾으면 안 됨 → onClick 소스 시그니처로 식별.
@@ -242,9 +285,27 @@
     const fn = onClickOf(it, 4);
     if (!fn) return `no-handler:${label}`;
     fn({ stopPropagation: () => {}, preventDefault: () => {} });
-    return `pinned:${position}`;
+    // ⚠️ 2026-09-08 실측: 상단/하단 자리가 이미 차 있으면 「고정 카드 교체하기」 모달이 뜨고
+    //    고정은 되지 않는다. 예전 코드는 여기서 무조건 `pinned:top`을 반환해 **거짓 성공**이었다.
+    return `pin-clicked:${position} (미검증 — sleep 후 pinVerify() 필수)`;
   };
-  // 고정: openPin(matcher) → (sleep) → pinTo('top'/'bottom')
+
+  // 「고정 카드 교체하기」 모달 확인. ⚠️ SweetAlert 아님(.swal2-popup 없음) → confirmSwal() 안 통함
+  const confirmReplace = () => {
+    const btn = [...document.querySelectorAll("button")].find(
+      (b) => b.textContent.trim() === "교체하기"
+    );
+    if (!btn) return "no-replace-modal";
+    btn.click();
+    return "replaced";
+  };
+
+  // 고정 결과 검증. ⚠️ fixedPosition은 **고정된 뒤에만 생기는 필드**(미고정 시 undefined)
+  const pinVerify = (matcher = {}) => {
+    const b = _blockByMatcher(matcher);
+    return b ? b.fixedPosition || null : null;
+  };
+  // 고정: openPin → (sleep) → pinTo → (sleep) → [교체 모달이면 confirmReplace] → pinVerify
   // 해제: openPin(matcher) → (sleep) → confirmSwal()
 
   // ── 이미지 업로드/적용 (React onDrop·onClick 직접 호출) ────────────────
@@ -545,6 +606,10 @@
   //   권장 F1 시퀀스: 참조 mutate → reorderCard(a,b) [sleep] → reorderCard(b,a) [sleep] → dumpState 검증.
 
   window.__cdbd = {
+    cardVisible,
+    setCardVisible,
+    pinVerify,
+    confirmReplace,
     fiberOf,
     onClickOf,
     boardRows,
