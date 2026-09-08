@@ -1,0 +1,1728 @@
+[
+ {
+  "code": "1-①",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EAEDF1",
+   "#1F2A37",
+   "#34424F"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#342D2F",
+   "#904FEB"
+  ],
+  "pal": "Huemint 062",
+  "uid": "p119",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 12.01,
+  "ct_bt": 4.16
+ },
+ {
+  "code": "1-①",
+  "style": "에디토리얼",
+  "mood": "럭셔리/엘레강스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F2EBDD",
+   "#2B2620",
+   "#8A5A22"
+  ],
+  "new": [
+   "#E0C58F",
+   "#112250",
+   "#3C507D"
+  ],
+  "pal": "Sapphire 03",
+  "uid": "p103",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "Sapphire",
+  "ct_tx": 9.17,
+  "ct_bt": 4.76
+ },
+ {
+  "code": "1-①",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#16202E",
+   "#E8EDF3",
+   "#6FA8DC"
+  ],
+  "new": [
+   "#232323",
+   "#DED9D0",
+   "#E13E29"
+  ],
+  "pal": "Huemint 090",
+  "uid": "p162",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.18,
+  "ct_bt": 3.68
+ },
+ {
+  "code": "1-②",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E9E9E6",
+   "#23262B",
+   "#2F3E9E"
+  ],
+  "new": [
+   "#EFF0F3",
+   "#143451",
+   "#678316"
+  ],
+  "pal": "Huemint 084",
+  "uid": "p156",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.24,
+  "ct_bt": 3.81
+ },
+ {
+  "code": "1-②",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F0E8DC",
+   "#2A211A",
+   "#A4402A"
+  ],
+  "new": [
+   "#F4EEDE",
+   "#353347",
+   "#5C4F23"
+  ],
+  "pal": "Huemint 134",
+  "uid": "p231",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "Huemint",
+  "ct_tx": 10.57,
+  "ct_bt": 6.98
+ },
+ {
+  "code": "1-②",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "어두움",
+  "pool": "이웃무드혼합",
+  "old": [
+   "#171A21",
+   "#F0EDE6",
+   "#C7F04A"
+  ],
+  "new": [
+   "#2A2A2E",
+   "#DEF2C5",
+   "#67A346"
+  ],
+  "pal": "Huemint 094",
+  "uid": "p166",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.99,
+  "ct_bt": 4.7
+ },
+ {
+  "code": "1-③",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F3EEE3",
+   "#2E2A20",
+   "#3F6B4A"
+  ],
+  "new": [
+   "#DEC59E",
+   "#202808",
+   "#33432B"
+  ],
+  "pal": "Pine Tree 02",
+  "uid": "p029",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Pine Tree",
+  "ct_tx": 9.2,
+  "ct_bt": 6.36
+ },
+ {
+  "code": "1-③",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E3D9C8",
+   "#33291C",
+   "#8C3B2E"
+  ],
+  "new": [
+   "#F7F1E3",
+   "#4D3745",
+   "#53817E"
+  ],
+  "pal": "Huemint 126",
+  "uid": "p223",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "Huemint",
+  "ct_tx": 9.57,
+  "ct_bt": 3.88
+ },
+ {
+  "code": "1-③",
+  "style": "볼드",
+  "mood": "펀/플레이풀",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#2B211A",
+   "#F5EBD9",
+   "#E8A33D"
+  ],
+  "new": [
+   "#352900",
+   "#FBFDF7",
+   "#AEB7FF"
+  ],
+  "pal": "Booked 02",
+  "uid": "p281",
+  "pal_mood": "펀/플레이풀",
+  "src": "Mei Graphic",
+  "ct_tx": 13.96,
+  "ct_bt": 7.5
+ },
+ {
+  "code": "1-④",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E9EEF0",
+   "#1E2A2E",
+   "#14646E"
+  ],
+  "new": [
+   "#EDB5BD",
+   "#000000",
+   "#224439"
+  ],
+  "pal": "Gentle Giant",
+  "uid": "p145",
+  "pal_mood": "모던/시크",
+  "src": "MyMind",
+  "ct_tx": 11.95,
+  "ct_bt": 6.11
+ },
+ {
+  "code": "1-④",
+  "style": "에디토리얼",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDE3D2",
+   "#2D2A22",
+   "#A8461F"
+  ],
+  "new": [
+   "#EAF0E8",
+   "#1A1E1F",
+   "#BA653C"
+  ],
+  "pal": "Huemint 010",
+  "uid": "p014",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 14.51,
+  "ct_bt": 3.62
+ },
+ {
+  "code": "1-④",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "어두움",
+  "pool": "이웃무드혼합",
+  "old": [
+   "#10222F",
+   "#EAF2F6",
+   "#F2B233"
+  ],
+  "new": [
+   "#2A2A2E",
+   "#F9FBF4",
+   "#DE5765"
+  ],
+  "pal": "Huemint 086",
+  "uid": "p158",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 13.7,
+  "ct_bt": 3.85
+ },
+ {
+  "code": "2-①",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F3EEE4",
+   "#3A342C",
+   "#A8573B"
+  ],
+  "new": [
+   "#F5F1E8",
+   "#1E201C",
+   "#5C605C"
+  ],
+  "pal": "Huemint 006",
+  "uid": "p010",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 14.57,
+  "ct_bt": 5.68
+ },
+ {
+  "code": "2-①",
+  "style": "에디토리얼",
+  "mood": "드리미/감성적",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#26313B",
+   "#E8E4DA",
+   "#9BBFA4"
+  ],
+  "new": [
+   "#1F303D",
+   "#FAF2E5",
+   "#E3B2AF"
+  ],
+  "pal": "Chewing Gum 07",
+  "uid": "p315",
+  "pal_mood": "드리미/감성적",
+  "src": "Chewing Gum",
+  "ct_tx": 12.2,
+  "ct_bt": 7.27
+ },
+ {
+  "code": "2-①",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F7EFDF",
+   "#262421",
+   "#303A8C"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#3E2207",
+   "#287338"
+  ],
+  "pal": "Huemint 109",
+  "uid": "p192",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.06,
+  "ct_bt": 5.21
+ },
+ {
+  "code": "2-②",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E8ECEF",
+   "#2B3038",
+   "#17605B"
+  ],
+  "new": [
+   "#EDF1F5",
+   "#22374A",
+   "#52779E"
+  ],
+  "pal": "Huemint 067",
+  "uid": "p124",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 10.8,
+  "ct_bt": 4.12
+ },
+ {
+  "code": "2-②",
+  "style": "에디토리얼",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#172230",
+   "#E6EAF0",
+   "#C8A24A"
+  ],
+  "new": [
+   "#242021",
+   "#CCBEB3",
+   "#9C9E4A"
+  ],
+  "pal": "Daho 07",
+  "uid": "p175",
+  "pal_mood": "모던/시크",
+  "src": "daho_van",
+  "ct_tx": 8.89,
+  "ct_bt": 5.68
+ },
+ {
+  "code": "2-②",
+  "style": "볼드",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDE8DF",
+   "#26241F",
+   "#3B3A38"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#000000",
+   "#0B64FE"
+  ],
+  "pal": "Paradiso",
+  "uid": "p107",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "MyMind",
+  "ct_tx": 18.76,
+  "ct_bt": 4.39
+ },
+ {
+  "code": "2-③",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EAE7DE",
+   "#212328",
+   "#3D4E4A"
+  ],
+  "new": [
+   "#EFF0F3",
+   "#262059",
+   "#225FFC"
+  ],
+  "pal": "Huemint 088",
+  "uid": "p160",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 12.86,
+  "ct_bt": 4.48
+ },
+ {
+  "code": "2-③",
+  "style": "에디토리얼",
+  "mood": "럭셔리/엘레강스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#221F1B",
+   "#EDE6D9",
+   "#D08C52"
+  ],
+  "new": [
+   "#112250",
+   "#F5F0E9",
+   "#E0C58F"
+  ],
+  "pal": "Sapphire 01",
+  "uid": "p101",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "Sapphire",
+  "ct_tx": 13.54,
+  "ct_bt": 9.17
+ },
+ {
+  "code": "2-③",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E9E8F1",
+   "#1E2029",
+   "#2B3FD0"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#2A2530",
+   "#4074FC"
+  ],
+  "pal": "Huemint 116",
+  "uid": "p199",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.34,
+  "ct_bt": 3.66
+ },
+ {
+  "code": "2-④",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E7EAE4",
+   "#2E3138",
+   "#33406E"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#05326B",
+   "#276FA6"
+  ],
+  "pal": "Huemint 076",
+  "uid": "p133",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 11.2,
+  "ct_bt": 4.8
+ },
+ {
+  "code": "2-④",
+  "style": "에디토리얼",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#21261F",
+   "#E5E7DE",
+   "#D2A24A"
+  ],
+  "new": [
+   "#2E2E2E",
+   "#F2F8FC",
+   "#39AC18"
+  ],
+  "pal": "Huemint 085",
+  "uid": "p157",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 12.68,
+  "ct_bt": 4.58
+ },
+ {
+  "code": "2-④",
+  "style": "볼드",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EBE6DC",
+   "#262320",
+   "#3E4340"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#000000",
+   "#0B64FE"
+  ],
+  "pal": "Paradiso",
+  "uid": "p107",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "MyMind",
+  "ct_tx": 18.76,
+  "ct_bt": 4.39
+ },
+ {
+  "code": "3-①",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDEAE4",
+   "#23262B",
+   "#2F5D7C"
+  ],
+  "new": [
+   "#E8E8E8",
+   "#4F343D",
+   "#1B7262"
+  ],
+  "pal": "Huemint 087",
+  "uid": "p159",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 9.06,
+  "ct_bt": 4.72
+ },
+ {
+  "code": "3-①",
+  "style": "에디토리얼",
+  "mood": "프로페셔널/비즈니스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#16202B",
+   "#E7EAEE",
+   "#C08A3E"
+  ],
+  "new": [
+   "#123152",
+   "#FBF8FB",
+   "#00C8DB"
+  ],
+  "pal": "Huemint 075",
+  "uid": "p132",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 12.55,
+  "ct_bt": 6.48
+ },
+ {
+  "code": "3-①",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#D8D3C7",
+   "#22201B",
+   "#9C4019"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#2A2530",
+   "#4074FC"
+  ],
+  "pal": "Huemint 116",
+  "uid": "p199",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.34,
+  "ct_bt": 3.66
+ },
+ {
+  "code": "3-②",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EFEAE1",
+   "#33302A",
+   "#5E6B4A"
+  ],
+  "new": [
+   "#F2F0E6",
+   "#293233",
+   "#0484AA"
+  ],
+  "pal": "Huemint 013",
+  "uid": "p017",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 11.5,
+  "ct_bt": 3.76
+ },
+ {
+  "code": "3-②",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F3E9E6",
+   "#4A2B33",
+   "#9B3B54"
+  ],
+  "new": [
+   "#E5D595",
+   "#1E424D",
+   "#663E1F"
+  ],
+  "pal": "Iceberg 04",
+  "uid": "p242",
+  "pal_mood": "페미닌/로맨틱",
+  "src": "Huemint",
+  "ct_tx": 7.36,
+  "ct_bt": 6.28,
+  "note": "1-13 ⑬ 무드 정정(페미닌→빈티지) 반영"
+ },
+ {
+  "code": "3-②",
+  "style": "볼드",
+  "mood": "럭셔리/엘레강스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#2B2724",
+   "#EDE6DA",
+   "#C29A4E"
+  ],
+  "new": [
+   "#1F303D",
+   "#FAF2E5",
+   "#C0893B"
+  ],
+  "pal": "Chewing Gum 08",
+  "uid": "p106",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "Chewing Gum",
+  "ct_tx": 12.2,
+  "ct_bt": 4.44
+ },
+ {
+  "code": "4-①",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F2EDE4",
+   "#2E2A26",
+   "#3E5A6E"
+  ],
+  "new": [
+   "#DCDCDC",
+   "#22202C",
+   "#643492"
+  ],
+  "pal": "Huemint 089",
+  "uid": "p161",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.68,
+  "ct_bt": 6.26
+ },
+ {
+  "code": "4-①",
+  "style": "에디토리얼",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E5E9E1",
+   "#26332B",
+   "#7A5C3E"
+  ],
+  "new": [
+   "#FAF2E5",
+   "#1F303D",
+   "#5F7A51"
+  ],
+  "pal": "Chewing Gum 02",
+  "uid": "p037",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Chewing Gum",
+  "ct_tx": 12.2,
+  "ct_bt": 4.31
+ },
+ {
+  "code": "4-①",
+  "style": "볼드",
+  "mood": "럭셔리/엘레강스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#2B2320",
+   "#EFE7DA",
+   "#D89B4A"
+  ],
+  "new": [
+   "#3C507D",
+   "#F5F0E9",
+   "#E0C58F"
+  ],
+  "pal": "Sapphire 02",
+  "uid": "p102",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "Sapphire",
+  "ct_tx": 7.03,
+  "ct_bt": 4.76
+ },
+ {
+  "code": "4-②",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E8E4DE",
+   "#2A2A2C",
+   "#55606B"
+  ],
+  "new": [
+   "#EFF0F3",
+   "#002539",
+   "#BA4071"
+  ],
+  "pal": "Huemint 092",
+  "uid": "p164",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 13.92,
+  "ct_bt": 4.54
+ },
+ {
+  "code": "4-②",
+  "style": "에디토리얼",
+  "mood": "드리미/감성적",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1F2430",
+   "#E6E3DC",
+   "#C08A7E"
+  ],
+  "new": [
+   "#232946",
+   "#FFFFFE",
+   "#EEBBC3"
+  ],
+  "pal": "HappyHues 12",
+  "uid": "p285",
+  "pal_mood": "드리미/감성적",
+  "src": "HappyHues",
+  "ct_tx": 14.21,
+  "ct_bt": 8.48
+ },
+ {
+  "code": "4-②",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDE7DC",
+   "#2A2622",
+   "#4E5A3A"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#3E2207",
+   "#287338"
+  ],
+  "pal": "Huemint 109",
+  "uid": "p192",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.06,
+  "ct_bt": 5.21
+ },
+ {
+  "code": "4-③",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F1EFEA",
+   "#2C2A28",
+   "#2F5D4E"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#342D2F",
+   "#904FEB"
+  ],
+  "pal": "Huemint 062",
+  "uid": "p119",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 12.01,
+  "ct_bt": 4.16
+ },
+ {
+  "code": "4-③",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDE3D1",
+   "#3A2E23",
+   "#9A4A2F"
+  ],
+  "new": [
+   "#FAF5EA",
+   "#0B0701",
+   "#CB614A"
+  ],
+  "pal": "Huemint 121",
+  "uid": "p218",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "Huemint",
+  "ct_tx": 18.48,
+  "ct_bt": 3.61
+ },
+ {
+  "code": "4-③",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#221C18",
+   "#F0E7DA",
+   "#C9922F"
+  ],
+  "new": [
+   "#232323",
+   "#DED9D0",
+   "#E13E29"
+  ],
+  "pal": "Huemint 090",
+  "uid": "p162",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.18,
+  "ct_bt": 3.68
+ },
+ {
+  "code": "4-④",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F2EDE3",
+   "#2E3A2C",
+   "#3F6B4A"
+  ],
+  "new": [
+   "#E9EFE6",
+   "#3F3739",
+   "#007817"
+  ],
+  "pal": "Huemint 017",
+  "uid": "p021",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 9.88,
+  "ct_bt": 4.85
+ },
+ {
+  "code": "4-④",
+  "style": "에디토리얼",
+  "mood": "드리미/감성적",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#D9DFD3",
+   "#22282B",
+   "#2F4858"
+  ],
+  "new": [
+   "#E6E9F5",
+   "#3A2F49",
+   "#5B53E2"
+  ],
+  "pal": "Huemint 180",
+  "uid": "p312",
+  "pal_mood": "드리미/감성적",
+  "src": "Huemint",
+  "ct_tx": 10.3,
+  "ct_bt": 4.59
+ },
+ {
+  "code": "4-④",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1E2A22",
+   "#EDE7D8",
+   "#D9A441"
+  ],
+  "new": [
+   "#2A2A2E",
+   "#DEF2C5",
+   "#67A346"
+  ],
+  "pal": "Huemint 094",
+  "uid": "p166",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.99,
+  "ct_bt": 4.7
+ },
+ {
+  "code": "4-⑤",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F4F0E8",
+   "#33302A",
+   "#8A5A2B"
+  ],
+  "new": [
+   "#F8F5F2",
+   "#302117",
+   "#5F643D"
+  ],
+  "pal": "Huemint 015",
+  "uid": "p019",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 14.26,
+  "ct_bt": 5.73
+ },
+ {
+  "code": "4-⑤",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E7DCC8",
+   "#3B3226",
+   "#2A6157"
+  ],
+  "new": [
+   "#F9F4EF",
+   "#020826",
+   "#8C7851"
+  ],
+  "pal": "HappyHues 11",
+  "uid": "p211",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "HappyHues",
+  "ct_tx": 18.04,
+  "ct_bt": 3.91
+ },
+ {
+  "code": "4-⑤",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#2A2521",
+   "#F0E8D9",
+   "#E8B33C"
+  ],
+  "new": [
+   "#2A2A2E",
+   "#F9FBF4",
+   "#DE5765"
+  ],
+  "pal": "Huemint 086",
+  "uid": "p158",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 13.7,
+  "ct_bt": 3.85
+ },
+ {
+  "code": "4-⑥",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F5EFE4",
+   "#34302B",
+   "#B4522B"
+  ],
+  "new": [
+   "#DBD3D1",
+   "#20432F",
+   "#BC3C19"
+  ],
+  "pal": "Teal Blue 02",
+  "uid": "p033",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Teal Blue",
+  "ct_tx": 7.48,
+  "ct_bt": 3.75
+ },
+ {
+  "code": "4-⑥",
+  "style": "에디토리얼",
+  "mood": "펀/플레이풀",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E6EFEA",
+   "#232B27",
+   "#16706B"
+  ],
+  "new": [
+   "#F5F0FF",
+   "#12204E",
+   "#E7188C"
+  ],
+  "pal": "Huemint 155",
+  "uid": "p272",
+  "pal_mood": "펀/플레이풀",
+  "src": "Huemint",
+  "ct_tx": 14.0,
+  "ct_bt": 3.83
+ },
+ {
+  "code": "4-⑥",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "어두움",
+  "pool": "이웃무드혼합",
+  "old": [
+   "#1F2540",
+   "#F2EDE0",
+   "#E3C14A"
+  ],
+  "new": [
+   "#352900",
+   "#FBFDF7",
+   "#FFBC54"
+  ],
+  "pal": "Booked 03",
+  "uid": "p282",
+  "pal_mood": "펀/플레이풀",
+  "src": "Mei Graphic",
+  "ct_tx": 13.96,
+  "ct_bt": 8.56
+ },
+ {
+  "code": "5-①",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F2EFE7",
+   "#2B2B2B",
+   "#0F5F5C"
+  ],
+  "new": [
+   "#EDF1F5",
+   "#22374A",
+   "#52779E"
+  ],
+  "pal": "Huemint 067",
+  "uid": "p124",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 10.8,
+  "ct_bt": 4.12
+ },
+ {
+  "code": "5-①",
+  "style": "에디토리얼",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EFF1E9",
+   "#2C332B",
+   "#4F6B3F"
+  ],
+  "new": [
+   "#F8F5F2",
+   "#232323",
+   "#078080"
+  ],
+  "pal": "HappyHues 8",
+  "uid": "p001",
+  "pal_mood": "내추럴/오가닉",
+  "src": "HappyHues",
+  "ct_tx": 14.47,
+  "ct_bt": 4.39
+ },
+ {
+  "code": "5-①",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1E2933",
+   "#EAF0F5",
+   "#F2A65A"
+  ],
+  "new": [
+   "#2E2E2E",
+   "#F2F8FC",
+   "#39AC18"
+  ],
+  "pal": "Huemint 085",
+  "uid": "p157",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 12.68,
+  "ct_bt": 4.58
+ },
+ {
+  "code": "5-②",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F4F2ED",
+   "#232A2E",
+   "#1F4E46"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#05326B",
+   "#276FA6"
+  ],
+  "pal": "Huemint 076",
+  "uid": "p133",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 11.2,
+  "ct_bt": 4.8
+ },
+ {
+  "code": "5-②",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#FBF6EA",
+   "#33291D",
+   "#B4531F"
+  ],
+  "new": [
+   "#E5D595",
+   "#1E424D",
+   "#663E1F"
+  ],
+  "pal": "Iceberg 04",
+  "uid": "p242",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "Iceberg",
+  "ct_tx": 7.36,
+  "ct_bt": 6.28
+ },
+ {
+  "code": "5-②",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "어두움",
+  "pool": "이웃무드혼합",
+  "old": [
+   "#181C22",
+   "#F0EDE6",
+   "#E8B33C"
+  ],
+  "new": [
+   "#352900",
+   "#FBFDF7",
+   "#F5D6FF"
+  ],
+  "pal": "Booked 01",
+  "uid": "p280",
+  "pal_mood": "펀/플레이풀",
+  "src": "Mei Graphic",
+  "ct_tx": 13.96,
+  "ct_bt": 10.86
+ },
+ {
+  "code": "5-④",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#23262B",
+   "#E6E7E3",
+   "#9BB2CE"
+  ],
+  "new": [
+   "#242021",
+   "#CCBEB3",
+   "#9C9E4A"
+  ],
+  "pal": "Daho 07",
+  "uid": "p175",
+  "pal_mood": "모던/시크",
+  "src": "daho_van",
+  "ct_tx": 8.89,
+  "ct_bt": 5.68
+ },
+ {
+  "code": "5-④",
+  "style": "에디토리얼",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F0EBE0",
+   "#1E2A33",
+   "#1F4E79"
+  ],
+  "new": [
+   "#EDF1F5",
+   "#22374A",
+   "#52779E"
+  ],
+  "pal": "Huemint 067",
+  "uid": "p124",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 10.8,
+  "ct_bt": 4.12
+ },
+ {
+  "code": "5-④",
+  "style": "볼드",
+  "mood": "럭셔리/엘레강스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#22201D",
+   "#EFEAE0",
+   "#C9A227"
+  ],
+  "new": [
+   "#371722",
+   "#FFFFFF",
+   "#BBAB9B"
+  ],
+  "pal": "The Sanctuary",
+  "uid": "p069",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "MyMind",
+  "ct_tx": 16.05,
+  "ct_bt": 7.19
+ },
+ {
+  "code": "5-⑤",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EAE8E3",
+   "#232323",
+   "#41505E"
+  ],
+  "new": [
+   "#EFF0F3",
+   "#262059",
+   "#225FFC"
+  ],
+  "pal": "Huemint 088",
+  "uid": "p160",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 12.86,
+  "ct_bt": 4.48
+ },
+ {
+  "code": "5-⑤",
+  "style": "에디토리얼",
+  "mood": "드리미/감성적",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EAE6F0",
+   "#2B2833",
+   "#5B4B8A"
+  ],
+  "new": [
+   "#F5EDF5",
+   "#2D2524",
+   "#C93D75"
+  ],
+  "pal": "Huemint 167",
+  "uid": "p299",
+  "pal_mood": "드리미/감성적",
+  "src": "Huemint",
+  "ct_tx": 13.07,
+  "ct_bt": 4.15
+ },
+ {
+  "code": "5-⑤",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "어두움",
+  "pool": "이웃무드혼합",
+  "old": [
+   "#17181C",
+   "#F2F0EA",
+   "#F2994A"
+  ],
+  "new": [
+   "#352900",
+   "#FBFDF7",
+   "#FFBC54"
+  ],
+  "pal": "Booked 03",
+  "uid": "p282",
+  "pal_mood": "펀/플레이풀",
+  "src": "Mei Graphic",
+  "ct_tx": 13.96,
+  "ct_bt": 8.56
+ },
+ {
+  "code": "5-⑥",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F1EFE6",
+   "#2E3A2E",
+   "#3F6B4A"
+  ],
+  "new": [
+   "#F8E3D2",
+   "#183425",
+   "#506C60"
+  ],
+  "pal": "Eucalyptus 01",
+  "uid": "p034",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Eucalyptus",
+  "ct_tx": 10.86,
+  "ct_bt": 4.63
+ },
+ {
+  "code": "5-⑥",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F5EDE1",
+   "#3B2F26",
+   "#A3522A"
+  ],
+  "new": [
+   "#F7E6D4",
+   "#4B3535",
+   "#5758A6"
+  ],
+  "pal": "Daho 03",
+  "uid": "p249",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "daho_van",
+  "ct_tx": 9.26,
+  "ct_bt": 5.14
+ },
+ {
+  "code": "5-⑥",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1D2321",
+   "#EDEAE2",
+   "#E8C05A"
+  ],
+  "new": [
+   "#242021",
+   "#CCBEB3",
+   "#9C9E4A"
+  ],
+  "pal": "Daho 07",
+  "uid": "p175",
+  "pal_mood": "모던/시크",
+  "src": "daho_van",
+  "ct_tx": 8.89,
+  "ct_bt": 5.68
+ },
+ {
+  "code": "6-①",
+  "style": "미니멀",
+  "mood": "프로페셔널/비즈니스",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F2F1EC",
+   "#22262A",
+   "#1F5F8B"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#342D2F",
+   "#904FEB"
+  ],
+  "pal": "Huemint 062",
+  "uid": "p119",
+  "pal_mood": "프로페셔널/비즈니스",
+  "src": "Huemint",
+  "ct_tx": 12.01,
+  "ct_bt": 4.16
+ },
+ {
+  "code": "6-①",
+  "style": "에디토리얼",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1E2124",
+   "#E8E6E1",
+   "#D0894A"
+  ],
+  "new": [
+   "#232323",
+   "#DED9D0",
+   "#E13E29"
+  ],
+  "pal": "Huemint 090",
+  "uid": "p162",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 11.18,
+  "ct_bt": 3.68
+ },
+ {
+  "code": "6-①",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E8E3D8",
+   "#241F1A",
+   "#B3341F"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#2A2530",
+   "#4074FC"
+  ],
+  "pal": "Huemint 116",
+  "uid": "p199",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.34,
+  "ct_bt": 3.66
+ },
+ {
+  "code": "6-②",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#F1EEE6",
+   "#2C2E28",
+   "#46654A"
+  ],
+  "new": [
+   "#E5E9DC",
+   "#1B1E1E",
+   "#9D6E12"
+  ],
+  "pal": "Huemint 019",
+  "uid": "p023",
+  "pal_mood": "내추럴/오가닉",
+  "src": "Huemint",
+  "ct_tx": 13.6,
+  "ct_bt": 3.64
+ },
+ {
+  "code": "6-②",
+  "style": "에디토리얼",
+  "mood": "빈티지/노스탤직",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E6DECF",
+   "#33291F",
+   "#8A4B2A"
+  ],
+  "new": [
+   "#E8DFC8",
+   "#001838",
+   "#C73758"
+  ],
+  "pal": "Huemint 138",
+  "uid": "p235",
+  "pal_mood": "빈티지/노스탤직",
+  "src": "Huemint",
+  "ct_tx": 13.32,
+  "ct_bt": 3.84
+ },
+ {
+  "code": "6-②",
+  "style": "볼드",
+  "mood": "모던/시크",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1B1E22",
+   "#E9E7E2",
+   "#5A9BC4"
+  ],
+  "new": [
+   "#2A2A2E",
+   "#F9FBF4",
+   "#DE5765"
+  ],
+  "pal": "Huemint 086",
+  "uid": "p158",
+  "pal_mood": "모던/시크",
+  "src": "Huemint",
+  "ct_tx": 13.7,
+  "ct_bt": 3.85
+ },
+ {
+  "code": "6-③",
+  "style": "미니멀",
+  "mood": "모던/시크",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EAE8E3",
+   "#212326",
+   "#35566B"
+  ],
+  "new": [
+   "#EDB5BD",
+   "#000000",
+   "#224439"
+  ],
+  "pal": "Gentle Giant",
+  "uid": "p145",
+  "pal_mood": "모던/시크",
+  "src": "MyMind",
+  "ct_tx": 11.95,
+  "ct_bt": 6.11
+ },
+ {
+  "code": "6-③",
+  "style": "에디토리얼",
+  "mood": "럭셔리/엘레강스",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#211E1B",
+   "#E9E2D6",
+   "#BE9752"
+  ],
+  "new": [
+   "#22301F",
+   "#EFF5C3",
+   "#D19439"
+  ],
+  "pal": "Huemint 051",
+  "uid": "p089",
+  "pal_mood": "럭셔리/엘레강스",
+  "src": "Huemint",
+  "ct_tx": 12.26,
+  "ct_bt": 5.3
+ },
+ {
+  "code": "6-③",
+  "style": "볼드",
+  "mood": "드리미/감성적",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#C9D2CE",
+   "#1F2A28",
+   "#6E3B5C"
+  ],
+  "new": [
+   "#E9F0F5",
+   "#252557",
+   "#7B2784"
+  ],
+  "pal": "Huemint 163",
+  "uid": "p295",
+  "pal_mood": "드리미/감성적",
+  "src": "Huemint",
+  "ct_tx": 12.32,
+  "ct_bt": 7.4
+ },
+ {
+  "code": "6-④",
+  "style": "미니멀",
+  "mood": "내추럴/오가닉",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#EDEAE0",
+   "#2B2E27",
+   "#4F6B3A"
+  ],
+  "new": [
+   "#F8F5F2",
+   "#232323",
+   "#078080"
+  ],
+  "pal": "HappyHues 8",
+  "uid": "p001",
+  "pal_mood": "내추럴/오가닉",
+  "src": "HappyHues",
+  "ct_tx": 14.47,
+  "ct_bt": 4.39
+ },
+ {
+  "code": "6-④",
+  "style": "에디토리얼",
+  "mood": "드리미/감성적",
+  "band": "어두움",
+  "pool": "동일무드",
+  "old": [
+   "#1C2430",
+   "#E4E7EC",
+   "#D9A441"
+  ],
+  "new": [
+   "#242B47",
+   "#FDFEF9",
+   "#D967D0"
+  ],
+  "pal": "Huemint 177",
+  "uid": "p309",
+  "pal_mood": "드리미/감성적",
+  "src": "Huemint",
+  "ct_tx": 13.71,
+  "ct_bt": 4.5
+ },
+ {
+  "code": "6-④",
+  "style": "볼드",
+  "mood": "비비드/대담한",
+  "band": "밝음",
+  "pool": "동일무드",
+  "old": [
+   "#E9E1D2",
+   "#2A2318",
+   "#A8471A"
+  ],
+  "new": [
+   "#F2F2F2",
+   "#3E2207",
+   "#287338"
+  ],
+  "pal": "Huemint 109",
+  "uid": "p192",
+  "pal_mood": "비비드/대담한",
+  "src": "Huemint",
+  "ct_tx": 13.06,
+  "ct_bt": 5.21
+ }
+]

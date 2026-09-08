@@ -1,6 +1,9 @@
 # 75안 제작 — 완료 (2026-09-05)
 
-**Figma**: [조합 테스트 (0904 수정 플로우) `5843:37`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=5843-37)
+> 🔄 **2026-09-08 개정본이 있습니다** — 규칙·프리셋 업데이트를 반영한 사본 = [조합 테스트 (0908) `6600:92`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=6600-92) · 변경 내역 = `REVISION-0908.md`
+> 아래는 **0904 원본**의 기록입니다.
+
+**Figma**: [조합 테스트 (0904) `6446:17301`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=6446-17301) *(2026-09-07 페이지 교체 반영)*
 
 ## 결과
 | 항목 | 수치 |
