@@ -127,7 +127,7 @@
  },
  {
   "id": "5395:14219",
-  "name": "key_info-editorial-01",
+  "name": "key_info-editorial-02",
   "grp": "핵심 정보-에디토리얼",
   "h": 228,
   "slots": "label|세부 정보|label|세부 정보|*부가 설명 텍스트",
@@ -136,7 +136,7 @@
  },
  {
   "id": "5395:14201",
-  "name": "key_info-editorial-02",
+  "name": "key_info-editorial-03",
   "grp": "핵심 정보-에디토리얼",
   "h": 276,
   "slots": "label 세부 정보|label 세부 정보|*부가 설명 텍스트",
@@ -145,7 +145,7 @@
  },
  {
   "id": "5395:14250",
-  "name": "key_info-editorial-03",
+  "name": "key_info-editorial-04",
   "grp": "핵심 정보-에디토리얼",
   "h": 218,
   "slots": "📅|label 세부 정보|💬|label 세부 정보",
@@ -154,7 +154,7 @@
  },
  {
   "id": "5395:14259",
-  "name": "key_info-editorial-04",
+  "name": "key_info-editorial-05",
   "grp": "핵심 정보-에디토리얼",
   "h": 126,
   "slots": "label 세부 정보|label 세부 정보",
@@ -163,7 +163,7 @@
  },
  {
   "id": "5395:14278",
-  "name": "key_info-editorial-05",
+  "name": "key_info-editorial-06",
   "grp": "핵심 정보-에디토리얼",
   "h": 134,
   "slots": "00|세부 정보|00|세부 정보|00|세부 정보",
@@ -208,7 +208,7 @@
  },
  {
   "id": "5395:14352",
-  "name": "key_info-bold-04",
+  "name": "key_info-bold-05",
   "grp": "핵심 정보-볼드",
   "h": 424,
   "slots": "세부 정보1 세부 정보2|지도 임베드|주소 텍스트",
@@ -217,7 +217,7 @@
  },
  {
   "id": "5395:14361",
-  "name": "key_info-bold-05",
+  "name": "key_info-bold-06",
   "grp": "핵심 정보-볼드",
   "h": 117,
   "slots": "00단위 label|00단위 label|00단위 label",
@@ -226,7 +226,7 @@
  },
  {
   "id": "5395:14366",
-  "name": "key_info-bold-06",
+  "name": "key_info-bold-07",
   "grp": "핵심 정보-볼드",
   "h": 280,
   "slots": "00단위 LABEL|00단위 LABEL|00단위 LABEL|00단위 LABEL",
@@ -235,7 +235,7 @@
  },
  {
   "id": "5395:14379",
-  "name": "key_info-bold-07",
+  "name": "key_info-bold-08",
   "grp": "핵심 정보-볼드",
   "h": 250,
   "slots": "01|label 세부 정보|02|label 세부 정보|03|label 세부 정보",
