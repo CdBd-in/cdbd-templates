@@ -168,3 +168,18 @@ purpose: "신규 템플릿 `plant-completion`(대형산업시설 준공식 초�
 - **CdBd 위반 → 수정한 점**:
 - **🔺 Part A 반영 후보 규칙**:
 - **비용**:
+
+---
+
+## 🖼 시안 산출물 (2026-09-08) — 기존 초대장 레이아웃 재사용 + 멀티페이지
+
+> 이선호 지시: 「VIP 초대장 · B안」([1642-23](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1642-23))과 **레이아웃 동일 · 내용만 준공식으로 · 멀티페이지 · 이미지 채움**.
+
+- **산출물**: [섹션 1754-36 · 멀티페이지 4장](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1754-36) (파일 = CdBd 템플릿 등록 · 페이지 「사례 기획」)
+  - P1 표지 [1750-36](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1750-36) · P2 행사 안내 [1751-36](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1751-36) · P3 시설 소개 [1751-93](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1751-93) · P4 참석 회신·오시는 길 [1752-36](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1752-36)
+- **제작 방식**: 원본 카드를 **노드 복제**해 조립(freehand 재구성 ❌) → 텍스트·이미지만 교체. 여백·글자 크기·줄간격·색·서체 전부 원본 보존.
+- **테마 3토큰(원본 그대로)**: 배경 `#15191a` · 텍스트 `#e9e3d6` · 버튼 `#c4a26a` (버튼 텍스트 = 배경색) · 서체 Noto Serif KR + Noto Sans KR · 좌우 여백 30
+- **원본 카드 → 준공식 매핑**: 드레스→복장(안전장구) · 참석 예약(입장 시간대)→**셔틀버스 탑승 편**(정원 40석) · 입장 안내 01·02·03→**출입 안내**(회신→방문증 QR→정문 출입) · 동반자 안내→**동반·차량 안내**(차량 사전 등록) · 오시는 길→자차(정문 출입)·셔틀버스
+- **멀티페이지 내비**: P1 하단 **목차 버튼 3개**(페이지 이동) + P2~P4 **상단 고정 헤더**(2열 카드 · 좌 브랜드 / 우 「표지」 · {버튼색}×10% 틴트 + 하단 구분선 30%) + P2·P3 하단 「참석 회신하러 가기」
+- **이미지 8장 생성** (OpenAI gpt-image-1 · medium · 약 $0.34): 히어로 전경 2 · 야간 파노라마 · 정문 광장 · 골조 공사 · 준공 외관 · 생산 라인 · 설비 상세. 톤 = 다크 배경에 맞춘 **blue hour + 앰버 조명**(이미지 톤=페이지 톤 규칙). 원본 `/tmp/plantimg/`
+- ⚠️ **지도는 고정 placeholder**(강남 코엑스 · [[1-5. 이미지]] 규칙) — 4단계 에디터에서 실제 주소로 지오코딩 교체
