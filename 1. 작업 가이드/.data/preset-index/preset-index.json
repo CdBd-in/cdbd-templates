@@ -73,7 +73,7 @@
  },
  {
   "id": "5395:14800",
-  "name": "key_info-mixed-03",
+  "name": "key_info-mixed-05",
   "grp": "핵심 정보-미볼",
   "h": 176,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
@@ -82,7 +82,7 @@
  },
  {
   "id": "5395:14827",
-  "name": "key_info-mixed-04",
+  "name": "key_info-mixed-06",
   "grp": "핵심 정보-미볼",
   "h": 274,
   "slots": "label 세부 정보|label 세부 정보|*부가 설명 텍스트",
@@ -91,7 +91,7 @@
  },
  {
   "id": "5534:4026",
-  "name": "key_info-mixed-05",
+  "name": "key_info-mixed-07",
   "grp": "핵심 정보-미볼",
   "h": 214,
   "slots": "LABEL 상세 정보  LABEL 상세 정보",
@@ -100,7 +100,7 @@
  },
  {
   "id": "5395:14810",
-  "name": "key_info-mixed-06",
+  "name": "key_info-mixed-12",
   "grp": "핵심 정보-에볼",
   "h": 176,
   "slots": "아이콘|label 세부 정보|아이콘|label 세부 정보",
@@ -109,7 +109,7 @@
  },
  {
   "id": "5395:14819",
-  "name": "key_info-mixed-07",
+  "name": "key_info-mixed-13",
   "grp": "핵심 정보-에볼",
   "h": 176,
   "slots": "📅|label 세부 정보|📍|label 세부 정보",
@@ -460,7 +460,7 @@
  },
  {
   "id": "5455:89",
-  "name": "hero-mixed-03",
+  "name": "hero-mixed-06",
   "grp": "히어로-미에볼",
   "h": 759,
   "slots": "로고|카피 혹은 소개 문구|이미지|페이지 제목|EYEBROW|일정 정보",
@@ -631,7 +631,7 @@
  },
  {
   "id": "5498:26874",
-  "name": "story-mixed-04",
+  "name": "story-mixed-05",
   "grp": "스토리-미에볼",
   "h": 109,
   "slots": "본문 텍스트|본문 텍스트",
@@ -775,7 +775,7 @@
  },
  {
   "id": "5455:1195",
-  "name": "notice-mixed-04",
+  "name": "notice-mixed-05",
   "grp": "안내사항-미에볼",
   "h": 92,
   "slots": "안내 사항 안내 사항",
@@ -784,7 +784,7 @@
  },
  {
   "id": "5486:307",
-  "name": "notice-mixed-05",
+  "name": "notice-mixed-06",
   "grp": "안내사항-미에볼",
   "h": 124,
   "slots": "안내 사항 안내 사항",
@@ -811,7 +811,7 @@
  },
  {
   "id": "5395:13748",
-  "name": "materials-mixed-01",
+  "name": "materials-mixed-04",
   "grp": "자료-미에볼",
   "h": 325,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
@@ -820,33 +820,6 @@
  },
  {
   "id": "5395:13785",
-  "name": "materials-mixed-02",
-  "grp": "자료-미에볼",
-  "h": 325,
-  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
-  "old_name": "자료-미니멀",
-  "key": null
- },
- {
-  "id": "5395:13820",
-  "name": "materials-mixed-03",
-  "grp": "자료-미에볼",
-  "h": 326,
-  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
-  "old_name": "자료-미니멀",
-  "key": null
- },
- {
-  "id": "5543:26879",
-  "name": "materials-mixed-04",
-  "grp": "자료-미에볼",
-  "h": 330,
-  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
-  "old_name": "자료-에디토리얼",
-  "key": null
- },
- {
-  "id": "5395:13857",
   "name": "materials-mixed-05",
   "grp": "자료-미에볼",
   "h": 325,
@@ -855,8 +828,35 @@
   "key": null
  },
  {
-  "id": "5395:13927",
+  "id": "5395:13820",
   "name": "materials-mixed-06",
+  "grp": "자료-미에볼",
+  "h": 326,
+  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
+  "old_name": "자료-미니멀",
+  "key": null
+ },
+ {
+  "id": "5543:26879",
+  "name": "materials-mixed-07",
+  "grp": "자료-미에볼",
+  "h": 330,
+  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
+  "old_name": "자료-에디토리얼",
+  "key": null
+ },
+ {
+  "id": "5395:13857",
+  "name": "materials-mixed-08",
+  "grp": "자료-미에볼",
+  "h": 325,
+  "slots": "LABEL|단위 등의 설명 문구|label|A|B",
+  "old_name": "자료-미니멀",
+  "key": null
+ },
+ {
+  "id": "5395:13927",
+  "name": "materials-mixed-09",
   "grp": "자료-미에볼",
   "h": 327,
   "slots": "LABEL|단위 등의 설명 문구|A|● value|○ value",
@@ -865,7 +865,7 @@
  },
  {
   "id": "5395:13956",
-  "name": "materials-mixed-07",
+  "name": "materials-mixed-10",
   "grp": "자료-미에볼",
   "h": 327,
   "slots": "LABEL|단위 등의 설명 문구|A|● value|○ value",
@@ -874,7 +874,7 @@
  },
  {
   "id": "5543:26917",
-  "name": "materials-mixed-08",
+  "name": "materials-mixed-11",
   "grp": "자료-미에볼",
   "h": 277,
   "slots": "LABEL|단위 등의 설명 문구|1|value・상세|2",
@@ -883,7 +883,7 @@
  },
  {
   "id": "5395:14052",
-  "name": "materials-mixed-09",
+  "name": "materials-mixed-01",
   "grp": "자료-미에",
   "h": 264,
   "slots": "소개 문구|이미지|이미지|이미지|세부 정보",
@@ -892,7 +892,7 @@
  },
  {
   "id": "5395:14065",
-  "name": "materials-mixed-10",
+  "name": "materials-mixed-02",
   "grp": "자료-미에",
   "h": 813,
   "slots": "카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지",
@@ -1297,7 +1297,7 @@
  },
  {
   "id": "5408:274",
-  "name": "list-mixed-03",
+  "name": "list-mixed-05",
   "grp": "나열-미볼",
   "h": 204,
   "slots": "항목x3",
@@ -1306,7 +1306,7 @@
  },
  {
   "id": "5408:286",
-  "name": "list-mixed-04",
+  "name": "list-mixed-06",
   "grp": "나열-에볼",
   "h": 834,
   "slots": "이미지|세부 정보 x2",
@@ -1315,7 +1315,7 @@
  },
  {
   "id": "5408:302",
-  "name": "list-mixed-05",
+  "name": "list-mixed-07",
   "grp": "나열-에볼",
   "h": 333,
   "slots": "프로필+리뷰 3개",
@@ -1324,7 +1324,7 @@
  },
  {
   "id": "5487:65",
-  "name": "list-mixed-06",
+  "name": "list-mixed-08",
   "grp": "나열-에볼",
   "h": 147,
   "slots": "항목 · 세부 정보x3",
@@ -1333,7 +1333,7 @@
  },
  {
   "id": "5408:90",
-  "name": "list-mixed-07",
+  "name": "list-mixed-09",
   "grp": "나열-미에볼",
   "h": 147,
   "slots": "항목 · 세부 정보x3",
@@ -1342,7 +1342,7 @@
  },
  {
   "id": "5408:97",
-  "name": "list-mixed-08",
+  "name": "list-mixed-10",
   "grp": "나열-미에볼",
   "h": 284,
   "slots": "항목|→ x4 (링크형)",
@@ -1351,7 +1351,7 @@
  },
  {
   "id": "5408:114",
-  "name": "list-mixed-09",
+  "name": "list-mixed-11",
   "grp": "나열-미에볼",
   "h": 395,
   "slots": "리뷰 3개 (별점·날짜·작성자 분리)",
@@ -1360,7 +1360,7 @@
  },
  {
   "id": "5571:72",
-  "name": "list-mixed-10",
+  "name": "list-mixed-12",
   "grp": "나열-미에볼",
   "h": 395,
   "slots": "리뷰 3개 (별점·날짜·작성자 분리)",
@@ -1369,7 +1369,7 @@
  },
  {
   "id": "5408:144",
-  "name": "list-mixed-11",
+  "name": "list-mixed-13",
   "grp": "나열-미에볼",
   "h": 385,
   "slots": "리뷰 3개 (인라인)",
@@ -1378,7 +1378,7 @@
  },
  {
   "id": "5408:154",
-  "name": "list-mixed-12",
+  "name": "list-mixed-14",
   "grp": "나열-미에볼",
   "h": 604,
   "slots": "LABEL|label|항목|세부 정보 (표형)",
@@ -1387,7 +1387,7 @@
  },
  {
   "id": "5408:191",
-  "name": "list-mixed-13",
+  "name": "list-mixed-15",
   "grp": "나열-미에볼",
   "h": 485,
   "slots": "💡 항목 세부 정보 x3 (아이콘형)",
@@ -1513,7 +1513,7 @@
  },
  {
   "id": "5455:552",
-  "name": "purchase-mixed-01",
+  "name": "purchase-mixed-02",
   "grp": "구매-미에볼",
   "h": 919,
   "slots": "이미지x2|상품명|가격|설명 문구",
@@ -1522,7 +1522,7 @@
  },
  {
   "id": "5455:567",
-  "name": "purchase-mixed-02",
+  "name": "purchase-mixed-03",
   "grp": "구매-미에볼",
   "h": 745,
   "slots": "메인+서브 이미지|상품명|가격",
@@ -1531,7 +1531,7 @@
  },
  {
   "id": "5455:586",
-  "name": "purchase-mixed-03",
+  "name": "purchase-mixed-04",
   "grp": "구매-미에볼",
   "h": 1063,
   "slots": "이미지|상품명|가격|설명 문구 (상세형)",
@@ -1540,7 +1540,7 @@
  },
  {
   "id": "5455:612",
-  "name": "purchase-mixed-04",
+  "name": "purchase-mixed-05",
   "grp": "구매-미에볼",
   "h": 1041,
   "slots": "이미지|상품명|가격|설명 문구 (상세형)",
@@ -1549,7 +1549,7 @@
  },
  {
   "id": "5455:639",
-  "name": "purchase-mixed-05",
+  "name": "purchase-mixed-06",
   "grp": "구매-미에볼",
   "h": 285,
   "slots": "상품명|가격 x4 (리스트)",
@@ -1558,7 +1558,7 @@
  },
  {
   "id": "5455:657",
-  "name": "purchase-mixed-06",
+  "name": "purchase-mixed-07",
   "grp": "구매-미에볼",
   "h": 604,
   "slots": "이미지|상품명|가격|구매하기 (그리드)",
@@ -1567,7 +1567,7 @@
  },
  {
   "id": "5455:692",
-  "name": "purchase-mixed-07",
+  "name": "purchase-mixed-08",
   "grp": "구매-미에볼",
   "h": 428,
   "slots": "이미지|상품명|가격 (그리드)",
@@ -1576,7 +1576,7 @@
  },
  {
   "id": "5486:34",
-  "name": "purchase-mixed-08",
+  "name": "purchase-mixed-09",
   "grp": "구매-미에볼",
   "h": 890,
   "slots": "이미지x2|상품명|가격|설명 문구",
@@ -1585,7 +1585,7 @@
  },
  {
   "id": "5486:49",
-  "name": "purchase-mixed-09",
+  "name": "purchase-mixed-01",
   "grp": "구매-에볼",
   "h": 309,
   "slots": "상품명|가격 x4 (리스트)",
