@@ -150,7 +150,10 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
 - 🚨 **2026-09-08 실측 — `pinTo`는 거짓 성공을 냈었다.** 상단/하단 자리가 이미 차 있으면 **「고정 카드 교체하기」 모달**이 뜨고 고정은 되지 않는데, 옛 코드는 `pinned:top`을 반환했다.
   - 이 모달은 **SweetAlert가 아니다**(`.swal2-popup` 없음) → `confirmSwal()`로 안 닫힌다. **`confirmReplace()`** 를 쓸 것.
   - 정식 흐름: `openPin` → sleep → `pinTo('top')` → sleep → (모달이면) `confirmReplace()` → sleep → **`pinVerify()`로 반드시 검증**
-- 🔴 **`reorderCard`·`cardOrder`·`dumpState`는 멀티페이지에서 신뢰 불가**(2026-09-08 실측: `reorderCard`가 `moved`를 반환해도 순서 불변, `cardOrder()`는 `["?","?"]`, `dumpState()`는 `captured:0`). 검증은 **`boardRows()`+`blockOfRow()`** 로 할 것.
+- 🚨🚨 **멀티페이지 `reorderCard` 오작동 — 2026-09-08 수정됨.** 옛 `_sortableCtx()`는 `document.querySelector("[aria-roledescription=sortable]")`로 **DOM 첫 번째** sortable을 잡았는데, 멀티페이지 에디터는 **페이지 사이드바 목록이 DOM에서 먼저** 나온다. 그래서 **카드가 아니라 페이지 순서를 바꿔놓고 `moved`를 반환**했다(거짓 성공보다 위험한 *조용한 오작동*).
+  - 수정: 후보를 전부 훑어 **`items.length === boardRows().length`** 인 컨텍스트만 사용. 못 찾으면 **실패로 중단**(아무거나 쓰지 않음).
+  - 증상 확인법: `cardOrder()`가 `["?","?"]`처럼 **보드 카드 수와 다르게** 나오면 잘못된 컨텍스트를 잡은 것.
+- ⚠️ **`dumpState()`는 멀티페이지에서 여전히 신뢰 불가**(`captured:0` 관측). 상태 검증은 **`boardRows()`+`blockOfRow()`** 로 할 것.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
