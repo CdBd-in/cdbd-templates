@@ -26,9 +26,9 @@ for e in data:
     for s in EXPAND.get(tok, [tok]): buckets[purpose][s].append(e)
 
 today = datetime.date.today().isoformat()
-L = [f'# 목적 × 스타일 프리셋 픽리스트 ({today} 자동 생성)', '',
+L = [f'# 목적 × 스타일 섹션 픽리스트 ({today} 자동 생성)', '',
      '> ⚠️ 손으로 고치지 말 것 — `preset-index/preset-index.json`에서 `rebuild-picklist.py`로 재생성됩니다.',
-     f'> 프리셋 {len(data)}개 (섹션 {len(data)-sum(1 for e in data if e["grp"] in STRUCT)} · 구조 {sum(1 for e in data if e["grp"] in STRUCT)})', '']
+     f'> 전체 {len(data)}개 (섹션 {len(data)-sum(1 for e in data if e["grp"] in STRUCT)} · 구조 {sum(1 for e in data if e["grp"] in STRUCT)})', '']
 for purpose in ORDER + [p for p in buckets if p not in ORDER]:
     if purpose not in buckets: continue
     L.append(f'## {purpose}')
