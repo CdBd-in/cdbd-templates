@@ -1,9 +1,9 @@
 ---
 name: draft
-description: Use when making CdBd 시안 (draft mockups) by combining 섹션 프리셋 from the 1차 프리셋 라이브러리 — triggers like "시안 만들어줘", "A② 3안 제작", "프리셋 조합해서 시안", "/draft". Orchestrates 5 agents serially — D1 내용(1회·3안 공통) → 갈래별 [D2 조합 → D3 통일 → D4 무드] → D5 검수(1회·읽기 전용) → 라우팅 재실행(≤2). Produces 3 시안 (레이아웃 스타일 3 × 무드 3) on the 「조합 테스트」 Figma page. 지금은 테스트 목적 — 1-1 워크플로우 2단계를 아직 대체하지 않는다.
+description: Use when making CdBd 시안 (draft mockups) by combining 섹션 from the 1차 섹션 라이브러리 — triggers like "시안 만들어줘", "A② 3안 제작", "섹션 조합해서 시안", "/draft". Orchestrates 5 agents serially — D1 내용(1회·3안 공통) → 갈래별 [D2 조합 → D3 통일 → D4 무드] → D5 검수(1회·읽기 전용) → 라우팅 재실행(≤2). Produces 3 시안 (레이아웃 스타일 3 × 무드 3) on the 「조합 테스트」 Figma page. 지금은 테스트 목적 — 1-1 워크플로우 2단계를 아직 대체하지 않는다.
 ---
 
-# /draft — 프리셋 조합으로 시안 3안 만들기
+# /draft — 섹션 조합으로 시안 3안 만들기
 
 > 설계 정본: `docs/superpowers/specs/2026-07-16-cdbd-draft-pipeline-design.md`
 > 공통 규칙: `.Codex/cdbd-draft-shared.md` (**D1~D5가 모두 먼저 읽는다**)
@@ -16,7 +16,7 @@ description: Use when making CdBd 시안 (draft mockups) by combining 섹션 프
 | 기획 문서 경로 (또는 주제 + 세부 카테고리) | ✅ | — |
 | 3안의 (레이아웃 스타일 × 무드) 3쌍 | ❌ | 스타일 3종 고정 + **무드는 주제에서 서로 다른 3개 자동 선정** |
 
-- 세부 카테고리 → [[4-5. 섹션 프리셋 라이브러리]] 「🧩 조립 레시피」에서 **섹션 목적 순서**를 읽는다.
+- 세부 카테고리 → [[4-5. 섹션 라이브러리]] 「🧩 조립 레시피」에서 **섹션 목적 순서**를 읽는다.
 - 시나리오 테스트면 [[4-9-2. 16 시나리오 테스트]]의 **답변만** 재료로 쓴다(카피만 AI).
 
 ## 파이프라인
@@ -46,19 +46,19 @@ D5 검수 ─ 1회 (3안 전체 · 읽기 전용)
 ## 🔒 게이트
 
 - **D5 `verified:false` = "미검증"** — "통과"로 보고하지 말 것. 재시도 2회 초과 시 **사용자 게이트**.
-- **프리셋 원본 훼손 발견 시 즉시 중단** → 원복 후 재개.
+- **섹션 원본 훼손 발견 시 즉시 중단** → 원복 후 재개.
 - **D5 `crossDraft.needsHumanCall:true`** — 차별성 정량 판정은 미정이라 **사람이 눈으로** 본다. 근거만 제시.
 
 ## 산출물
 
-- **위치**: 프리셋 파일 「조합 테스트」 [3322:70](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=3322-70)
+- **위치**: 섹션 파일 「조합 테스트」 [3322:70](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=3322-70)
 - 3안 **가로로 나란히** · 각 안 = 세로 프레임 **폭 380** · 이름 `{주제}-미니멀`/`-에디토리얼`/`-볼드`
 - **기존 시안과 겹치지 않게 y 오프셋** (A① y=0 · A② y=2200 사용 중)
 
 ## 리포트 (완료 보고)
 
 - **Figma 링크 필수** (AGENTS.md 협업 규칙) · **비개발자가 한 번에 이해하게 — 결론 먼저·짧게·전문용어 배제**
-- 포함: 3안 링크 · 프리셋 선택 로그(이유) · **팔레트 근거(장면·브랜드 앵커·명도·hue)** · 대비 수치 · 위계 측정 · **D1 `missing[]`(질문 세트 누락 후보)** · **D4 `unmappedColors`(라이브러리 버그 후보)** · 미해결 문제
+- 포함: 3안 링크 · 섹션 선택 로그(이유) · **팔레트 근거(장면·브랜드 앵커·명도·hue)** · 대비 수치 · 위계 측정 · **D1 `missing[]`(질문 세트 누락 후보)** · **D4 `unmappedColors`(라이브러리 버그 후보)** · 미해결 문제
 
 ## 🔁 알려진 함정 (매번 나온다)
 

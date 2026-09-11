@@ -1,6 +1,6 @@
 # 75안 제작 — 완료 (2026-09-05)
 
-> 🔄 **2026-09-08 개정본이 있습니다** — 규칙·프리셋 업데이트를 반영한 사본 = [조합 테스트 (0908) `6600:92`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=6600-92) · 변경 내역 = `REVISION-0908.md`
+> 🔄 **2026-09-08 개정본이 있습니다** — 규칙·섹션 업데이트를 반영한 사본 = [조합 테스트 (0908) `6600:92`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=6600-92) · 변경 내역 = `REVISION-0908.md`
 > 아래는 **0904 원본**의 기록입니다.
 
 **Figma**: [조합 테스트 (0904) `6446:17301`](https://www.figma.com/design/24O01lprp5i2ufl7CbZXXx/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF--%EC%84%B9%EC%85%98-%ED%94%84%EB%A6%AC%EC%85%8B?node-id=6446-17301) *(2026-09-07 페이지 교체 반영)*
@@ -13,7 +13,7 @@
 | 지도 | **45 / 45** (기존 고정 이미지 재사용) |
 | 잔존 플레이스홀더 텍스트 | **0** |
 | 잔존 빈 이미지 슬롯 | **0** |
-| 새로 창작한 프리셋 | **0** (전부 실존 ID clone) |
+| 새로 창작한 섹션 | **0** (전부 실존 ID clone) |
 | 대비 (텍스트↔배경 / 버튼↔배경) | 전 75안 **≥3.6 통과** |
 
 ## 배치
@@ -36,6 +36,6 @@
 ## 산출물
 - 콘텐츠 팩 25개 `<코드>.json` — 페르소나 + 섹션 + 3안 무드
 - 이미지 148장 `images/<코드>/` + `manifest.json`
-- 프리셋 인덱스 299개 `../preset-index/preset-index.json` · 픽리스트 `PRESETS.md`
+- 섹션 인덱스 299개 `../preset-index/preset-index.json` · 픽리스트 `PRESETS.md`
 - 조립 엔진 `ASSEMBLER.js` · 가이드 `ASSEMBLY-GUIDE.md` · `INJECT-BRIEF.md` · `FONTS.md`
 - 이슈 `ISSUES.md`
