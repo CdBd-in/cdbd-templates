@@ -2,7 +2,7 @@
  {
   "code": "1-①",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -17,7 +17,7 @@
   ],
   "pal": "Huemint 062",
   "uid": "p119",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 12.01,
   "ct_bt": 4.16
@@ -25,7 +25,7 @@
  {
   "code": "1-①",
   "style": "에디토리얼",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -40,7 +40,7 @@
   ],
   "pal": "Sapphire 03",
   "uid": "p103",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Sapphire",
   "ct_tx": 9.17,
   "ct_bt": 4.76
@@ -48,7 +48,7 @@
  {
   "code": "1-①",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -63,7 +63,7 @@
   ],
   "pal": "Huemint 090",
   "uid": "p162",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.18,
   "ct_bt": 3.68
@@ -71,7 +71,7 @@
  {
   "code": "1-②",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -86,7 +86,7 @@
   ],
   "pal": "Huemint 084",
   "uid": "p156",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.24,
   "ct_bt": 3.81
@@ -94,7 +94,7 @@
  {
   "code": "1-②",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -109,7 +109,7 @@
   ],
   "pal": "Huemint 134",
   "uid": "p231",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Huemint",
   "ct_tx": 10.57,
   "ct_bt": 6.98
@@ -117,7 +117,7 @@
  {
   "code": "1-②",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "어두움",
   "pool": "이웃무드혼합",
   "old": [
@@ -132,7 +132,7 @@
   ],
   "pal": "Huemint 094",
   "uid": "p166",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.99,
   "ct_bt": 4.7
@@ -140,7 +140,7 @@
  {
   "code": "1-③",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -155,7 +155,7 @@
   ],
   "pal": "Pine Tree 02",
   "uid": "p029",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Pine Tree",
   "ct_tx": 9.2,
   "ct_bt": 6.36
@@ -163,7 +163,7 @@
  {
   "code": "1-③",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -178,7 +178,7 @@
   ],
   "pal": "Huemint 126",
   "uid": "p223",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Huemint",
   "ct_tx": 9.57,
   "ct_bt": 3.88
@@ -186,7 +186,7 @@
  {
   "code": "1-③",
   "style": "볼드",
-  "mood": "펀/플레이풀",
+  "mood": "플레이풀",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -201,7 +201,7 @@
   ],
   "pal": "Booked 02",
   "uid": "p281",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "Mei Graphic",
   "ct_tx": 13.96,
   "ct_bt": 7.5
@@ -209,7 +209,7 @@
  {
   "code": "1-④",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -224,7 +224,7 @@
   ],
   "pal": "Huemint 142",
   "uid": "p259",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "MyMind",
   "ct_tx": 10.9,
   "ct_bt": 3.9,
@@ -233,7 +233,7 @@
  {
   "code": "1-④",
   "style": "에디토리얼",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -248,7 +248,7 @@
   ],
   "pal": "Sapphire 04",
   "uid": "p104",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Huemint",
   "ct_tx": 13.54,
   "ct_bt": 7.03,
@@ -257,7 +257,7 @@
  {
   "code": "1-④",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "어두움",
   "pool": "이웃무드혼합",
   "old": [
@@ -272,7 +272,7 @@
   ],
   "pal": "Huemint 071",
   "uid": "p128",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 12.07,
   "ct_bt": 5.71,
@@ -281,7 +281,7 @@
  {
   "code": "2-①",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -296,7 +296,7 @@
   ],
   "pal": "Huemint 006",
   "uid": "p010",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Huemint",
   "ct_tx": 14.57,
   "ct_bt": 5.68
@@ -304,7 +304,7 @@
  {
   "code": "2-①",
   "style": "에디토리얼",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -319,7 +319,7 @@
   ],
   "pal": "Chewing Gum 07",
   "uid": "p315",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Chewing Gum",
   "ct_tx": 12.2,
   "ct_bt": 7.27
@@ -327,7 +327,7 @@
  {
   "code": "2-①",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -342,7 +342,7 @@
   ],
   "pal": "Huemint 109",
   "uid": "p192",
-  "pal_mood": "비비드/대담한",
+  "pal_mood": "비비드",
   "src": "Huemint",
   "ct_tx": 13.06,
   "ct_bt": 5.21
@@ -350,7 +350,7 @@
  {
   "code": "2-②",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -365,7 +365,7 @@
   ],
   "pal": "Huemint 067",
   "uid": "p124",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 10.8,
   "ct_bt": 4.12
@@ -373,7 +373,7 @@
  {
   "code": "2-②",
   "style": "에디토리얼",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -388,7 +388,7 @@
   ],
   "pal": "Daho 07",
   "uid": "p175",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "daho_van",
   "ct_tx": 8.89,
   "ct_bt": 5.68
@@ -396,7 +396,7 @@
  {
   "code": "2-②",
   "style": "볼드",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -411,7 +411,7 @@
   ],
   "pal": "Paradiso",
   "uid": "p107",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "MyMind",
   "ct_tx": 18.76,
   "ct_bt": 4.39
@@ -419,7 +419,7 @@
  {
   "code": "2-③",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -434,7 +434,7 @@
   ],
   "pal": "Huemint 088",
   "uid": "p160",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 12.86,
   "ct_bt": 4.48
@@ -442,7 +442,7 @@
  {
   "code": "2-③",
   "style": "에디토리얼",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -457,7 +457,7 @@
   ],
   "pal": "Sapphire 01",
   "uid": "p101",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Sapphire",
   "ct_tx": 13.54,
   "ct_bt": 9.17
@@ -465,7 +465,7 @@
  {
   "code": "2-③",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -480,7 +480,7 @@
   ],
   "pal": "Huemint 116",
   "uid": "p199",
-  "pal_mood": "비비드/대담한",
+  "pal_mood": "비비드",
   "src": "Huemint",
   "ct_tx": 13.34,
   "ct_bt": 3.66
@@ -488,7 +488,7 @@
  {
   "code": "2-④",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -503,7 +503,7 @@
   ],
   "pal": "Huemint 076",
   "uid": "p133",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 11.2,
   "ct_bt": 4.8
@@ -511,7 +511,7 @@
  {
   "code": "2-④",
   "style": "에디토리얼",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -526,7 +526,7 @@
   ],
   "pal": "Huemint 085",
   "uid": "p157",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 12.68,
   "ct_bt": 4.58
@@ -534,7 +534,7 @@
  {
   "code": "2-④",
   "style": "볼드",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -549,7 +549,7 @@
   ],
   "pal": "Paradiso",
   "uid": "p107",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "MyMind",
   "ct_tx": 18.76,
   "ct_bt": 4.39
@@ -557,7 +557,7 @@
  {
   "code": "3-①",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -572,7 +572,7 @@
   ],
   "pal": "Huemint 087",
   "uid": "p159",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 9.06,
   "ct_bt": 4.72
@@ -580,7 +580,7 @@
  {
   "code": "3-①",
   "style": "에디토리얼",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -595,7 +595,7 @@
   ],
   "pal": "Huemint 075",
   "uid": "p132",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 12.55,
   "ct_bt": 6.48
@@ -603,7 +603,7 @@
  {
   "code": "3-①",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -618,7 +618,7 @@
   ],
   "pal": "Huemint 116",
   "uid": "p199",
-  "pal_mood": "비비드/대담한",
+  "pal_mood": "비비드",
   "src": "Huemint",
   "ct_tx": 13.34,
   "ct_bt": 3.66
@@ -626,7 +626,7 @@
  {
   "code": "3-②",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -641,7 +641,7 @@
   ],
   "pal": "Huemint 013",
   "uid": "p017",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Huemint",
   "ct_tx": 11.5,
   "ct_bt": 3.76
@@ -649,7 +649,7 @@
  {
   "code": "3-②",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -664,7 +664,7 @@
   ],
   "pal": "Iceberg 04",
   "uid": "p242",
-  "pal_mood": "페미닌/로맨틱",
+  "pal_mood": "페미닌",
   "src": "Huemint",
   "ct_tx": 7.36,
   "ct_bt": 6.28,
@@ -673,7 +673,7 @@
  {
   "code": "3-②",
   "style": "볼드",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -688,7 +688,7 @@
   ],
   "pal": "Chewing Gum 08",
   "uid": "p106",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Chewing Gum",
   "ct_tx": 12.2,
   "ct_bt": 4.44
@@ -696,7 +696,7 @@
  {
   "code": "4-①",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -711,7 +711,7 @@
   ],
   "pal": "Huemint 089",
   "uid": "p161",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.68,
   "ct_bt": 6.26
@@ -719,7 +719,7 @@
  {
   "code": "4-①",
   "style": "에디토리얼",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -734,7 +734,7 @@
   ],
   "pal": "Chewing Gum 02",
   "uid": "p037",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Chewing Gum",
   "ct_tx": 12.2,
   "ct_bt": 4.31
@@ -742,7 +742,7 @@
  {
   "code": "4-①",
   "style": "볼드",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -757,7 +757,7 @@
   ],
   "pal": "Sapphire 02",
   "uid": "p102",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Sapphire",
   "ct_tx": 7.03,
   "ct_bt": 4.76
@@ -765,7 +765,7 @@
  {
   "code": "4-②",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -780,7 +780,7 @@
   ],
   "pal": "Chewing Gum 03",
   "uid": "p251",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Chewing Gum",
   "ct_tx": 12.2,
   "ct_bt": 10.6,
@@ -794,7 +794,7 @@
  {
   "code": "4-②",
   "style": "에디토리얼",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -809,7 +809,7 @@
   ],
   "pal": "Huemint 047",
   "uid": "p085",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Huemint",
   "ct_tx": 11.8,
   "ct_bt": 4.5,
@@ -823,7 +823,7 @@
  {
   "code": "4-②",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -838,7 +838,7 @@
   ],
   "pal": "Huemint 174",
   "uid": "p306",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Huemint",
   "ct_tx": 6.2,
   "ct_bt": 8.1,
@@ -852,7 +852,7 @@
  {
   "code": "4-③",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -867,7 +867,7 @@
   ],
   "pal": "Huemint 062",
   "uid": "p119",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 12.01,
   "ct_bt": 4.16
@@ -875,7 +875,7 @@
  {
   "code": "4-③",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -890,7 +890,7 @@
   ],
   "pal": "Huemint 121",
   "uid": "p218",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Huemint",
   "ct_tx": 18.48,
   "ct_bt": 3.61
@@ -898,7 +898,7 @@
  {
   "code": "4-③",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -913,7 +913,7 @@
   ],
   "pal": "Huemint 090",
   "uid": "p162",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.18,
   "ct_bt": 3.68
@@ -921,7 +921,7 @@
  {
   "code": "4-④",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -936,7 +936,7 @@
   ],
   "pal": "Huemint 017",
   "uid": "p021",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Huemint",
   "ct_tx": 9.88,
   "ct_bt": 4.85
@@ -944,7 +944,7 @@
  {
   "code": "4-④",
   "style": "에디토리얼",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -959,7 +959,7 @@
   ],
   "pal": "Huemint 180",
   "uid": "p312",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Huemint",
   "ct_tx": 10.3,
   "ct_bt": 4.59
@@ -967,7 +967,7 @@
  {
   "code": "4-④",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -982,7 +982,7 @@
   ],
   "pal": "Huemint 094",
   "uid": "p166",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.99,
   "ct_bt": 4.7
@@ -990,7 +990,7 @@
  {
   "code": "4-⑤",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1005,7 +1005,7 @@
   ],
   "pal": "Huemint 015",
   "uid": "p019",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Huemint",
   "ct_tx": 14.26,
   "ct_bt": 5.73
@@ -1013,7 +1013,7 @@
  {
   "code": "4-⑤",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1028,7 +1028,7 @@
   ],
   "pal": "HappyHues 11",
   "uid": "p211",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "HappyHues",
   "ct_tx": 18.04,
   "ct_bt": 3.91
@@ -1036,7 +1036,7 @@
  {
   "code": "4-⑤",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1051,7 +1051,7 @@
   ],
   "pal": "Huemint 086",
   "uid": "p158",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 13.7,
   "ct_bt": 3.85
@@ -1059,7 +1059,7 @@
  {
   "code": "4-⑥",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1074,7 +1074,7 @@
   ],
   "pal": "Teal Blue 02",
   "uid": "p033",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Teal Blue",
   "ct_tx": 7.48,
   "ct_bt": 3.75
@@ -1082,7 +1082,7 @@
  {
   "code": "4-⑥",
   "style": "에디토리얼",
-  "mood": "펀/플레이풀",
+  "mood": "플레이풀",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1097,7 +1097,7 @@
   ],
   "pal": "Huemint 155",
   "uid": "p272",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "Huemint",
   "ct_tx": 14.0,
   "ct_bt": 3.83
@@ -1105,7 +1105,7 @@
  {
   "code": "4-⑥",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "어두움",
   "pool": "이웃무드혼합",
   "old": [
@@ -1120,7 +1120,7 @@
   ],
   "pal": "Booked 03",
   "uid": "p282",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "Mei Graphic",
   "ct_tx": 13.96,
   "ct_bt": 8.56
@@ -1128,7 +1128,7 @@
  {
   "code": "5-①",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1143,7 +1143,7 @@
   ],
   "pal": "Huemint 067",
   "uid": "p124",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 10.8,
   "ct_bt": 4.12
@@ -1151,7 +1151,7 @@
  {
   "code": "5-①",
   "style": "에디토리얼",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1166,7 +1166,7 @@
   ],
   "pal": "HappyHues 8",
   "uid": "p001",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "HappyHues",
   "ct_tx": 14.47,
   "ct_bt": 4.39
@@ -1174,7 +1174,7 @@
  {
   "code": "5-①",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1189,7 +1189,7 @@
   ],
   "pal": "Huemint 085",
   "uid": "p157",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 12.68,
   "ct_bt": 4.58
@@ -1197,7 +1197,7 @@
  {
   "code": "5-②",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1212,7 +1212,7 @@
   ],
   "pal": "Huemint 076",
   "uid": "p133",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 11.2,
   "ct_bt": 4.8
@@ -1220,7 +1220,7 @@
  {
   "code": "5-②",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1235,7 +1235,7 @@
   ],
   "pal": "Iceberg 04",
   "uid": "p242",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Iceberg",
   "ct_tx": 7.36,
   "ct_bt": 6.28
@@ -1243,7 +1243,7 @@
  {
   "code": "5-②",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "어두움",
   "pool": "이웃무드혼합",
   "old": [
@@ -1258,7 +1258,7 @@
   ],
   "pal": "Booked 01",
   "uid": "p280",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "Mei Graphic",
   "ct_tx": 13.96,
   "ct_bt": 10.86
@@ -1266,7 +1266,7 @@
  {
   "code": "5-④",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1281,7 +1281,7 @@
   ],
   "pal": "Daho 07",
   "uid": "p175",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "daho_van",
   "ct_tx": 8.89,
   "ct_bt": 5.68
@@ -1289,7 +1289,7 @@
  {
   "code": "5-④",
   "style": "에디토리얼",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1304,7 +1304,7 @@
   ],
   "pal": "Huemint 067",
   "uid": "p124",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 10.8,
   "ct_bt": 4.12
@@ -1312,7 +1312,7 @@
  {
   "code": "5-④",
   "style": "볼드",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1327,7 +1327,7 @@
   ],
   "pal": "The Sanctuary",
   "uid": "p069",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "MyMind",
   "ct_tx": 16.05,
   "ct_bt": 7.19
@@ -1335,7 +1335,7 @@
  {
   "code": "5-⑤",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1350,7 +1350,7 @@
   ],
   "pal": "Huemint 088",
   "uid": "p160",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 12.86,
   "ct_bt": 4.48
@@ -1358,7 +1358,7 @@
  {
   "code": "5-⑤",
   "style": "에디토리얼",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1373,7 +1373,7 @@
   ],
   "pal": "Huemint 167",
   "uid": "p299",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Huemint",
   "ct_tx": 13.07,
   "ct_bt": 4.15
@@ -1381,7 +1381,7 @@
  {
   "code": "5-⑤",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "어두움",
   "pool": "이웃무드혼합",
   "old": [
@@ -1396,7 +1396,7 @@
   ],
   "pal": "Booked 03",
   "uid": "p282",
-  "pal_mood": "펀/플레이풀",
+  "pal_mood": "플레이풀",
   "src": "Mei Graphic",
   "ct_tx": 13.96,
   "ct_bt": 8.56
@@ -1404,7 +1404,7 @@
  {
   "code": "5-⑥",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1419,7 +1419,7 @@
   ],
   "pal": "Eucalyptus 01",
   "uid": "p034",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Eucalyptus",
   "ct_tx": 10.86,
   "ct_bt": 4.63
@@ -1427,7 +1427,7 @@
  {
   "code": "5-⑥",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1442,7 +1442,7 @@
   ],
   "pal": "Daho 03",
   "uid": "p249",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "daho_van",
   "ct_tx": 9.26,
   "ct_bt": 5.14
@@ -1450,7 +1450,7 @@
  {
   "code": "5-⑥",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1465,7 +1465,7 @@
   ],
   "pal": "Daho 07",
   "uid": "p175",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "daho_van",
   "ct_tx": 8.89,
   "ct_bt": 5.68
@@ -1473,7 +1473,7 @@
  {
   "code": "6-①",
   "style": "미니멀",
-  "mood": "프로페셔널/비즈니스",
+  "mood": "프로페셔널",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1488,7 +1488,7 @@
   ],
   "pal": "Huemint 062",
   "uid": "p119",
-  "pal_mood": "프로페셔널/비즈니스",
+  "pal_mood": "프로페셔널",
   "src": "Huemint",
   "ct_tx": 12.01,
   "ct_bt": 4.16
@@ -1496,7 +1496,7 @@
  {
   "code": "6-①",
   "style": "에디토리얼",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1511,7 +1511,7 @@
   ],
   "pal": "Huemint 090",
   "uid": "p162",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 11.18,
   "ct_bt": 3.68
@@ -1519,7 +1519,7 @@
  {
   "code": "6-①",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1534,7 +1534,7 @@
   ],
   "pal": "Huemint 116",
   "uid": "p199",
-  "pal_mood": "비비드/대담한",
+  "pal_mood": "비비드",
   "src": "Huemint",
   "ct_tx": 13.34,
   "ct_bt": 3.66
@@ -1542,7 +1542,7 @@
  {
   "code": "6-②",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1557,7 +1557,7 @@
   ],
   "pal": "Huemint 019",
   "uid": "p023",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "Huemint",
   "ct_tx": 13.6,
   "ct_bt": 3.64
@@ -1565,7 +1565,7 @@
  {
   "code": "6-②",
   "style": "에디토리얼",
-  "mood": "빈티지/노스탤직",
+  "mood": "빈티지",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1580,7 +1580,7 @@
   ],
   "pal": "Huemint 138",
   "uid": "p235",
-  "pal_mood": "빈티지/노스탤직",
+  "pal_mood": "빈티지",
   "src": "Huemint",
   "ct_tx": 13.32,
   "ct_bt": 3.84
@@ -1588,7 +1588,7 @@
  {
   "code": "6-②",
   "style": "볼드",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1603,7 +1603,7 @@
   ],
   "pal": "Huemint 086",
   "uid": "p158",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "Huemint",
   "ct_tx": 13.7,
   "ct_bt": 3.85
@@ -1611,7 +1611,7 @@
  {
   "code": "6-③",
   "style": "미니멀",
-  "mood": "모던/시크",
+  "mood": "모던",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1626,7 +1626,7 @@
   ],
   "pal": "Huemint 087",
   "uid": "p159",
-  "pal_mood": "모던/시크",
+  "pal_mood": "모던",
   "src": "MyMind",
   "ct_tx": 9.06,
   "ct_bt": 4.72,
@@ -1635,7 +1635,7 @@
  {
   "code": "6-③",
   "style": "에디토리얼",
-  "mood": "럭셔리/엘레강스",
+  "mood": "럭셔리",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1650,7 +1650,7 @@
   ],
   "pal": "Huemint 051",
   "uid": "p089",
-  "pal_mood": "럭셔리/엘레강스",
+  "pal_mood": "럭셔리",
   "src": "Huemint",
   "ct_tx": 12.26,
   "ct_bt": 5.3
@@ -1658,7 +1658,7 @@
  {
   "code": "6-③",
   "style": "볼드",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1673,7 +1673,7 @@
   ],
   "pal": "Huemint 163",
   "uid": "p295",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Huemint",
   "ct_tx": 12.32,
   "ct_bt": 7.4
@@ -1681,7 +1681,7 @@
  {
   "code": "6-④",
   "style": "미니멀",
-  "mood": "내추럴/오가닉",
+  "mood": "내추럴",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1696,7 +1696,7 @@
   ],
   "pal": "HappyHues 8",
   "uid": "p001",
-  "pal_mood": "내추럴/오가닉",
+  "pal_mood": "내추럴",
   "src": "HappyHues",
   "ct_tx": 14.47,
   "ct_bt": 4.39
@@ -1704,7 +1704,7 @@
  {
   "code": "6-④",
   "style": "에디토리얼",
-  "mood": "드리미/감성적",
+  "mood": "감성적",
   "band": "어두움",
   "pool": "동일무드",
   "old": [
@@ -1719,7 +1719,7 @@
   ],
   "pal": "Huemint 177",
   "uid": "p309",
-  "pal_mood": "드리미/감성적",
+  "pal_mood": "감성적",
   "src": "Huemint",
   "ct_tx": 13.71,
   "ct_bt": 4.5
@@ -1727,7 +1727,7 @@
  {
   "code": "6-④",
   "style": "볼드",
-  "mood": "비비드/대담한",
+  "mood": "비비드",
   "band": "밝음",
   "pool": "동일무드",
   "old": [
@@ -1742,7 +1742,7 @@
   ],
   "pal": "Huemint 109",
   "uid": "p192",
-  "pal_mood": "비비드/대담한",
+  "pal_mood": "비비드",
   "src": "Huemint",
   "ct_tx": 13.06,
   "ct_bt": 5.21

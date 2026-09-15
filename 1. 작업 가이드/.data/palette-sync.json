@@ -7,22 +7,22 @@
   "page": "3323:355",
   "root": "3342:83",
   "grids": {
-   "내추럴/오가닉": "3342:91",
-   "페미닌/로맨틱": "3342:96",
-   "럭셔리/엘레강스": "3342:101",
-   "프로페셔널/비즈니스": "3342:106",
-   "모던/시크": "3342:111",
-   "비비드/대담한": "3342:116",
-   "빈티지/노스탤직": "3342:121",
-   "펀/플레이풀": "3342:126",
-   "드리미/감성적": "3342:131"
+   "내추럴": "3342:91",
+   "페미닌": "3342:96",
+   "럭셔리": "3342:101",
+   "프로페셔널": "3342:106",
+   "모던": "3342:111",
+   "비비드": "3342:116",
+   "빈티지": "3342:121",
+   "플레이풀": "3342:126",
+   "감성적": "3342:131"
   }
  },
  "palettes": [
   {
    "uid": "p001",
    "name": "HappyHues 8",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "HappyHues",
    "bg": "#F8F5F2",
    "tx": "#232323",
@@ -32,7 +32,7 @@
   {
    "uid": "p002",
    "name": "HappyHues 5",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "HappyHues",
    "bg": "#F2F7F5",
    "tx": "#00473E",
@@ -42,7 +42,7 @@
   {
    "uid": "p003",
    "name": "The Cathedral",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "MyMind",
    "bg": "#424E22",
    "tx": "#FFAD67",
@@ -52,7 +52,7 @@
   {
    "uid": "p004",
    "name": "Late Homework",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "MyMind",
    "bg": "#178E96",
    "tx": "#FFFFFF",
@@ -62,7 +62,7 @@
   {
    "uid": "p005",
    "name": "Huemint 001",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#FBF7F0",
    "tx": "#232022",
@@ -72,7 +72,7 @@
   {
    "uid": "p006",
    "name": "Huemint 002",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#0F3D3E",
    "tx": "#FF945A",
@@ -82,7 +82,7 @@
   {
    "uid": "p007",
    "name": "Huemint 003",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#37503F",
    "tx": "#CEE4D9",
@@ -92,7 +92,7 @@
   {
    "uid": "p008",
    "name": "Huemint 004",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#E8EDE5",
    "tx": "#84643B",
@@ -102,7 +102,7 @@
   {
    "uid": "p009",
    "name": "Huemint 005",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#3A4A2F",
    "tx": "#D7A5B1",
@@ -112,7 +112,7 @@
   {
    "uid": "p010",
    "name": "Huemint 006",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#F5F1E8",
    "tx": "#1E201C",
@@ -122,7 +122,7 @@
   {
    "uid": "p011",
    "name": "Huemint 007",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#4A5D3A",
    "tx": "#F2A3B4",
@@ -132,7 +132,7 @@
   {
    "uid": "p012",
    "name": "Huemint 008",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#37503F",
    "tx": "#FFFEFF",
@@ -142,7 +142,7 @@
   {
    "uid": "p013",
    "name": "Huemint 009",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#1B3B36",
    "tx": "#FEF6E9",
@@ -152,7 +152,7 @@
   {
    "uid": "p014",
    "name": "Huemint 010",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#EAF0E8",
    "tx": "#1A1E1F",
@@ -162,7 +162,7 @@
   {
    "uid": "p015",
    "name": "Huemint 011",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#2E4633",
    "tx": "#FFC977",
@@ -172,7 +172,7 @@
   {
    "uid": "p016",
    "name": "Huemint 012",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#15302B",
    "tx": "#FAB6B5",
@@ -182,7 +182,7 @@
   {
    "uid": "p017",
    "name": "Huemint 013",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#F2F0E6",
    "tx": "#293233",
@@ -192,7 +192,7 @@
   {
    "uid": "p018",
    "name": "Huemint 014",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#4A5D3A",
    "tx": "#FFFFBA",
@@ -202,7 +202,7 @@
   {
    "uid": "p019",
    "name": "Huemint 015",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#F8F5F2",
    "tx": "#302117",
@@ -212,7 +212,7 @@
   {
    "uid": "p020",
    "name": "Huemint 016",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#0F3D3E",
    "tx": "#A6C8DA",
@@ -222,7 +222,7 @@
   {
    "uid": "p021",
    "name": "Huemint 017",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#E9EFE6",
    "tx": "#3F3739",
@@ -232,7 +232,7 @@
   {
    "uid": "p022",
    "name": "Huemint 018",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#2E4633",
    "tx": "#ECEBE8",
@@ -242,7 +242,7 @@
   {
    "uid": "p023",
    "name": "Huemint 019",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#E5E9DC",
    "tx": "#1B1E1E",
@@ -252,7 +252,7 @@
   {
    "uid": "p024",
    "name": "Huemint 020",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Huemint",
    "bg": "#2C4A3A",
    "tx": "#D09EB3",
@@ -262,7 +262,7 @@
   {
    "uid": "p025",
    "name": "Designah 04",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Designah",
    "bg": "#FAFFFA",
    "tx": "#0D142B",
@@ -272,7 +272,7 @@
   {
    "uid": "p026",
    "name": "Designah 05",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Designah",
    "bg": "#5C6B3D",
    "tx": "#FAFFFA",
@@ -282,7 +282,7 @@
   {
    "uid": "p027",
    "name": "Lincoln Green",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Colours Cafe",
    "bg": "#125603",
    "tx": "#C3F380",
@@ -292,7 +292,7 @@
   {
    "uid": "p028",
    "name": "Pine Tree 01",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Pine Tree",
    "bg": "#202808",
    "tx": "#DEC59E",
@@ -302,7 +302,7 @@
   {
    "uid": "p029",
    "name": "Pine Tree 02",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Pine Tree",
    "bg": "#DEC59E",
    "tx": "#202808",
@@ -312,7 +312,7 @@
   {
    "uid": "p030",
    "name": "Daho 04",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "daho_van",
    "bg": "#4B3535",
    "tx": "#F7E6D4",
@@ -322,7 +322,7 @@
   {
    "uid": "p031",
    "name": "Daho 05",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "daho_van",
    "bg": "#4B3535",
    "tx": "#F7E6D4",
@@ -332,7 +332,7 @@
   {
    "uid": "p032",
    "name": "Teal Blue 01",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Teal Blue",
    "bg": "#20432F",
    "tx": "#DBD3D1",
@@ -342,7 +342,7 @@
   {
    "uid": "p033",
    "name": "Teal Blue 02",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Teal Blue",
    "bg": "#DBD3D1",
    "tx": "#20432F",
@@ -352,7 +352,7 @@
   {
    "uid": "p034",
    "name": "Eucalyptus 01",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Eucalyptus",
    "bg": "#F8E3D2",
    "tx": "#183425",
@@ -362,7 +362,7 @@
   {
    "uid": "p035",
    "name": "Eucalyptus 02",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Eucalyptus",
    "bg": "#183425",
    "tx": "#F8E3D2",
@@ -372,7 +372,7 @@
   {
    "uid": "p036",
    "name": "Green Tea 01",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Green Tea",
    "bg": "#568366",
    "tx": "#F3F6EB",
@@ -382,7 +382,7 @@
   {
    "uid": "p037",
    "name": "Chewing Gum 02",
-   "mood": "내추럴/오가닉",
+   "mood": "내추럴",
    "src": "Chewing Gum",
    "bg": "#FAF2E5",
    "tx": "#1F303D",
@@ -392,7 +392,7 @@
   {
    "uid": "p038",
    "name": "HappyHues 15",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "HappyHues",
    "bg": "#FAEEE7",
    "tx": "#33272A",
@@ -402,7 +402,7 @@
   {
    "uid": "p039",
    "name": "HappyHues 7",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "HappyHues",
    "bg": "#FEC7D7",
    "tx": "#0E172C",
@@ -412,7 +412,7 @@
   {
    "uid": "p040",
    "name": "Melted Shake",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "MyMind",
    "bg": "#DABAAF",
    "tx": "#0B0C11",
@@ -422,7 +422,7 @@
   {
    "uid": "p041",
    "name": "Huemint 021",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#2E1520",
    "tx": "#FFFDFC",
@@ -432,7 +432,7 @@
   {
    "uid": "p042",
    "name": "Huemint 022",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#F7E9E4",
    "tx": "#66040B",
@@ -442,7 +442,7 @@
   {
    "uid": "p043",
    "name": "Huemint 023",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FAE9F0",
    "tx": "#333132",
@@ -452,7 +452,7 @@
   {
    "uid": "p044",
    "name": "Huemint 024",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#DEB386",
@@ -462,7 +462,7 @@
   {
    "uid": "p045",
    "name": "Huemint 025",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FAEEE7",
    "tx": "#571E5B",
@@ -472,7 +472,7 @@
   {
    "uid": "p046",
    "name": "Huemint 026",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FDF2F5",
    "tx": "#3B3A39",
@@ -482,7 +482,7 @@
   {
    "uid": "p047",
    "name": "Huemint 027",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#611F3A",
    "tx": "#68B577",
@@ -492,7 +492,7 @@
   {
    "uid": "p048",
    "name": "Huemint 028",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#5C2A3D",
    "tx": "#F2F0E3",
@@ -502,7 +502,7 @@
   {
    "uid": "p049",
    "name": "Huemint 029",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#EFD9DE",
    "tx": "#4A2A48",
@@ -512,7 +512,7 @@
   {
    "uid": "p050",
    "name": "Huemint 030",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#F0F3DB",
@@ -522,7 +522,7 @@
   {
    "uid": "p051",
    "name": "Huemint 031",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FDF4F0",
    "tx": "#312C30",
@@ -532,7 +532,7 @@
   {
    "uid": "p052",
    "name": "Huemint 032",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#54263C",
    "tx": "#EBFAFC",
@@ -542,7 +542,7 @@
   {
    "uid": "p053",
    "name": "Huemint 033",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FCEAE6",
    "tx": "#541312",
@@ -552,7 +552,7 @@
   {
    "uid": "p054",
    "name": "Huemint 034",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#3D1A2B",
    "tx": "#FAF7E1",
@@ -562,7 +562,7 @@
   {
    "uid": "p055",
    "name": "Huemint 035",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FDF2F5",
    "tx": "#2D2C34",
@@ -572,7 +572,7 @@
   {
    "uid": "p056",
    "name": "Huemint 036",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#F5E6E8",
    "tx": "#442F39",
@@ -582,7 +582,7 @@
   {
    "uid": "p057",
    "name": "Huemint 037",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#42202E",
    "tx": "#D9CDB0",
@@ -592,7 +592,7 @@
   {
    "uid": "p058",
    "name": "Huemint 038",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#FCEAE6",
    "tx": "#120F11",
@@ -602,7 +602,7 @@
   {
    "uid": "p059",
    "name": "Huemint 039",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#4A2233",
    "tx": "#FFF7F7",
@@ -612,7 +612,7 @@
   {
    "uid": "p060",
    "name": "Huemint 040",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Huemint",
    "bg": "#2E1520",
    "tx": "#EFEEF0",
@@ -622,7 +622,7 @@
   {
    "uid": "p061",
    "name": "Blood Red",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Colours Cafe",
    "bg": "#630700",
    "tx": "#FF97D0",
@@ -632,7 +632,7 @@
   {
    "uid": "p062",
    "name": "Daho 06",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "daho_van",
    "bg": "#242021",
    "tx": "#CCBEB3",
@@ -642,7 +642,7 @@
   {
    "uid": "p063",
    "name": "Chewing Gum 01",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Chewing Gum",
    "bg": "#E3B2AF",
    "tx": "#1F303D",
@@ -652,7 +652,7 @@
   {
    "uid": "p064",
    "name": "Chewing Gum 05",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Chewing Gum",
    "bg": "#5D262F",
    "tx": "#FAF2E5",
@@ -662,7 +662,7 @@
   {
    "uid": "p065",
    "name": "Misty Rose 01",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Misty Rose",
    "bg": "#EED4D1",
    "tx": "#432033",
@@ -672,7 +672,7 @@
   {
    "uid": "p066",
    "name": "Burgundy 01",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Burgundy",
    "bg": "#6C0820",
    "tx": "#F2DCDB",
@@ -682,7 +682,7 @@
   {
    "uid": "p067",
    "name": "Burgundy 02",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Burgundy",
    "bg": "#F2AEBC",
    "tx": "#6C0820",
@@ -692,7 +692,7 @@
   {
    "uid": "p068",
    "name": "Burgundy 03",
-   "mood": "페미닌/로맨틱",
+   "mood": "페미닌",
    "src": "Burgundy",
    "bg": "#F2DCDB",
    "tx": "#6C0820",
@@ -702,7 +702,7 @@
   {
    "uid": "p069",
    "name": "The Sanctuary",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#371722",
    "tx": "#FFFFFF",
@@ -712,7 +712,7 @@
   {
    "uid": "p070",
    "name": "Switched Twins",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#F8EBEE",
    "tx": "#0C3934",
@@ -722,7 +722,7 @@
   {
    "uid": "p071",
    "name": "HappyHues 10",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "HappyHues",
    "bg": "#004643",
    "tx": "#FFFFFE",
@@ -732,7 +732,7 @@
   {
    "uid": "p072",
    "name": "HappyHues 16",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "HappyHues",
    "bg": "#55423D",
    "tx": "#FFFFFE",
@@ -742,7 +742,7 @@
   {
    "uid": "p073",
    "name": "Bite Your Tongue",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#E88565",
    "tx": "#181A27",
@@ -752,7 +752,7 @@
   {
    "uid": "p074",
    "name": "First Edition",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#0C485E",
    "tx": "#FEB904",
@@ -762,7 +762,7 @@
   {
    "uid": "p075",
    "name": "Rosebud",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#501718",
    "tx": "#FD750A",
@@ -772,7 +772,7 @@
   {
    "uid": "p076",
    "name": "Late Gift",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#9357A9",
    "tx": "#FFFFFF",
@@ -782,7 +782,7 @@
   {
    "uid": "p077",
    "name": "Bad Banker",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#12162D",
    "tx": "#8B743D",
@@ -792,7 +792,7 @@
   {
    "uid": "p078",
    "name": "Over the Hill",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "MyMind",
    "bg": "#3B755F",
    "tx": "#000000",
@@ -802,7 +802,7 @@
   {
    "uid": "p079",
    "name": "Huemint 041",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#1C1C22",
    "tx": "#FFFEFF",
@@ -812,7 +812,7 @@
   {
    "uid": "p080",
    "name": "Huemint 042",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2D2416",
    "tx": "#F0D7BD",
@@ -822,7 +822,7 @@
   {
    "uid": "p081",
    "name": "Huemint 043",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#0E1F1C",
    "tx": "#E99E41",
@@ -832,7 +832,7 @@
   {
    "uid": "p082",
    "name": "Huemint 044",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#1E1B2E",
    "tx": "#FFB649",
@@ -842,7 +842,7 @@
   {
    "uid": "p083",
    "name": "Huemint 045",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#301C28",
    "tx": "#F7F5F4",
@@ -852,7 +852,7 @@
   {
    "uid": "p084",
    "name": "Huemint 046",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#004643",
    "tx": "#F9FBC0",
@@ -862,7 +862,7 @@
   {
    "uid": "p085",
    "name": "Huemint 047",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#E0D7C7",
@@ -872,7 +872,7 @@
   {
    "uid": "p086",
    "name": "Huemint 048",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#331A22",
    "tx": "#C1C9C6",
@@ -882,7 +882,7 @@
   {
    "uid": "p087",
    "name": "Huemint 049",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#0F2027",
    "tx": "#D3C339",
@@ -892,7 +892,7 @@
   {
    "uid": "p088",
    "name": "Huemint 050",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#1A1423",
    "tx": "#F8BCC1",
@@ -902,7 +902,7 @@
   {
    "uid": "p089",
    "name": "Huemint 051",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#22301F",
    "tx": "#EFF5C3",
@@ -912,7 +912,7 @@
   {
    "uid": "p090",
    "name": "Huemint 052",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#FFCB24",
@@ -922,7 +922,7 @@
   {
    "uid": "p091",
    "name": "Huemint 053",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#1C1C22",
    "tx": "#E0EEDD",
@@ -932,7 +932,7 @@
   {
    "uid": "p092",
    "name": "Huemint 054",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#1F2D2A",
    "tx": "#FFECAC",
@@ -942,7 +942,7 @@
   {
    "uid": "p093",
    "name": "Huemint 055",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#101820",
    "tx": "#E9CCCC",
@@ -952,7 +952,7 @@
   {
    "uid": "p094",
    "name": "Huemint 056",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#12162D",
    "tx": "#FFAF02",
@@ -962,7 +962,7 @@
   {
    "uid": "p095",
    "name": "Huemint 057",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2D2416",
    "tx": "#E1D2A3",
@@ -972,7 +972,7 @@
   {
    "uid": "p096",
    "name": "Huemint 058",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2A1F2E",
    "tx": "#E6A96F",
@@ -982,7 +982,7 @@
   {
    "uid": "p097",
    "name": "Huemint 059",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#004643",
    "tx": "#F7F7FD",
@@ -992,7 +992,7 @@
   {
    "uid": "p098",
    "name": "Huemint 060",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Huemint",
    "bg": "#2C1810",
    "tx": "#C5C3B2",
@@ -1002,7 +1002,7 @@
   {
    "uid": "p099",
    "name": "Iceberg 03",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Iceberg",
    "bg": "#1E424D",
    "tx": "#E5D595",
@@ -1012,7 +1012,7 @@
   {
    "uid": "p100",
    "name": "Iceberg 07",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Iceberg",
    "bg": "#663E1F",
    "tx": "#E5D595",
@@ -1022,7 +1022,7 @@
   {
    "uid": "p101",
    "name": "Sapphire 01",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Sapphire",
    "bg": "#112250",
    "tx": "#F5F0E9",
@@ -1032,7 +1032,7 @@
   {
    "uid": "p102",
    "name": "Sapphire 02",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Sapphire",
    "bg": "#3C507D",
    "tx": "#F5F0E9",
@@ -1042,7 +1042,7 @@
   {
    "uid": "p103",
    "name": "Sapphire 03",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Sapphire",
    "bg": "#E0C58F",
    "tx": "#112250",
@@ -1052,7 +1052,7 @@
   {
    "uid": "p104",
    "name": "Sapphire 04",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Sapphire",
    "bg": "#F5F0E9",
    "tx": "#112250",
@@ -1062,7 +1062,7 @@
   {
    "uid": "p105",
    "name": "Chewing Gum 06",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Chewing Gum",
    "bg": "#5D262F",
    "tx": "#FAF2E5",
@@ -1072,7 +1072,7 @@
   {
    "uid": "p106",
    "name": "Chewing Gum 08",
-   "mood": "럭셔리/엘레강스",
+   "mood": "럭셔리",
    "src": "Chewing Gum",
    "bg": "#1F303D",
    "tx": "#FAF2E5",
@@ -1082,7 +1082,7 @@
   {
    "uid": "p107",
    "name": "Paradiso",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#F2F2F2",
    "tx": "#000000",
@@ -1092,7 +1092,7 @@
   {
    "uid": "p108",
    "name": "HappyHues 1",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#181818",
@@ -1102,7 +1102,7 @@
   {
    "uid": "p109",
    "name": "HappyHues 2",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#00214D",
@@ -1112,7 +1112,7 @@
   {
    "uid": "p110",
    "name": "HappyHues 6",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#2B2C34",
@@ -1122,7 +1122,7 @@
   {
    "uid": "p111",
    "name": "HappyHues 3",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#094067",
@@ -1132,7 +1132,7 @@
   {
    "uid": "p112",
    "name": "Wingwoman",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#0E38B1",
    "tx": "#FFFFFF",
@@ -1142,7 +1142,7 @@
   {
    "uid": "p113",
    "name": "Monastery Morning",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#055A5B",
    "tx": "#E6E6E6",
@@ -1152,7 +1152,7 @@
   {
    "uid": "p114",
    "name": "Robed Witness",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#8AA9C6",
    "tx": "#093929",
@@ -1162,7 +1162,7 @@
   {
    "uid": "p115",
    "name": "Mr. Business",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#167C80",
    "tx": "#FFFFFF",
@@ -1172,7 +1172,7 @@
   {
    "uid": "p116",
    "name": "Shipwreck",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#0D4CBE",
    "tx": "#CFCEC7",
@@ -1182,7 +1182,7 @@
   {
    "uid": "p117",
    "name": "Earnest Proposal",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "MyMind",
    "bg": "#283470",
    "tx": "#15A29C",
@@ -1192,7 +1192,7 @@
   {
    "uid": "p118",
    "name": "Huemint 061",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#0A1F44",
    "tx": "#FFFDF9",
@@ -1202,7 +1202,7 @@
   {
    "uid": "p119",
    "name": "Huemint 062",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#342D2F",
@@ -1212,7 +1212,7 @@
   {
    "uid": "p120",
    "name": "Huemint 063",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F6F8FA",
    "tx": "#222832",
@@ -1222,7 +1222,7 @@
   {
    "uid": "p121",
    "name": "Huemint 064",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#13293D",
    "tx": "#FFF2D9",
@@ -1232,7 +1232,7 @@
   {
    "uid": "p122",
    "name": "Huemint 065",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#093662",
@@ -1242,7 +1242,7 @@
   {
    "uid": "p123",
    "name": "Huemint 066",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#393B6C",
@@ -1252,7 +1252,7 @@
   {
    "uid": "p124",
    "name": "Huemint 067",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#EDF1F5",
    "tx": "#22374A",
@@ -1262,7 +1262,7 @@
   {
    "uid": "p125",
    "name": "Huemint 068",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#10243E",
    "tx": "#F5C8B9",
@@ -1272,7 +1272,7 @@
   {
    "uid": "p126",
    "name": "Huemint 069",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#FAFAFA",
    "tx": "#262627",
@@ -1282,7 +1282,7 @@
   {
    "uid": "p127",
    "name": "Huemint 070",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#13293D",
    "tx": "#FCE3DA",
@@ -1292,7 +1292,7 @@
   {
    "uid": "p128",
    "name": "Huemint 071",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#16324F",
    "tx": "#F7F5F6",
@@ -1302,7 +1302,7 @@
   {
    "uid": "p129",
    "name": "Huemint 072",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#2C2543",
@@ -1312,7 +1312,7 @@
   {
    "uid": "p130",
    "name": "Huemint 073",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#0D2B40",
    "tx": "#AEDBDA",
@@ -1322,7 +1322,7 @@
   {
    "uid": "p131",
    "name": "Huemint 074",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#FBFCFD",
    "tx": "#182587",
@@ -1332,7 +1332,7 @@
   {
    "uid": "p132",
    "name": "Huemint 075",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#123152",
    "tx": "#FBF8FB",
@@ -1342,7 +1342,7 @@
   {
    "uid": "p133",
    "name": "Huemint 076",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#05326B",
@@ -1352,7 +1352,7 @@
   {
    "uid": "p134",
    "name": "Huemint 077",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#10243E",
    "tx": "#E7E6EA",
@@ -1362,7 +1362,7 @@
   {
    "uid": "p135",
    "name": "Huemint 078",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F8FAFC",
    "tx": "#1D334A",
@@ -1372,7 +1372,7 @@
   {
    "uid": "p136",
    "name": "Huemint 079",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#EEF2F6",
    "tx": "#7B64D6",
@@ -1382,7 +1382,7 @@
   {
    "uid": "p137",
    "name": "Huemint 080",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Huemint",
    "bg": "#F7F8FA",
    "tx": "#292524",
@@ -1392,7 +1392,7 @@
   {
    "uid": "p138",
    "name": "Designah 03",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Designah",
    "bg": "#FAFFFA",
    "tx": "#0D142B",
@@ -1402,7 +1402,7 @@
   {
    "uid": "p139",
    "name": "Neon Brand 02",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Neon Brand",
    "bg": "#13131A",
    "tx": "#FBFBFB",
@@ -1412,7 +1412,7 @@
   {
    "uid": "p140",
    "name": "Dark Cerulean",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Colours Cafe",
    "bg": "#0D5072",
    "tx": "#7FEEFF",
@@ -1422,7 +1422,7 @@
   {
    "uid": "p141",
    "name": "Columbia 02",
-   "mood": "프로페셔널/비즈니스",
+   "mood": "프로페셔널",
    "src": "Columbia",
    "bg": "#0B1957",
    "tx": "#D2E0ED",
@@ -1432,7 +1432,7 @@
   {
    "uid": "p142",
    "name": "HappyHues 4",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "HappyHues",
    "bg": "#16161A",
    "tx": "#FFFFFE",
@@ -1442,7 +1442,7 @@
   {
    "uid": "p143",
    "name": "HappyHues 9",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "HappyHues",
    "bg": "#EFF0F3",
    "tx": "#0D0D0D",
@@ -1452,7 +1452,7 @@
   {
    "uid": "p144",
    "name": "Deep Pond",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#B3E0E0",
    "tx": "#000000",
@@ -1462,7 +1462,7 @@
   {
    "uid": "p145",
    "name": "Gentle Giant",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#EDB5BD",
    "tx": "#000000",
@@ -1472,7 +1472,7 @@
   {
    "uid": "p146",
    "name": "No Dice",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#77EEDF",
    "tx": "#28292B",
@@ -1482,7 +1482,7 @@
   {
    "uid": "p147",
    "name": "Open Book",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#EED974",
    "tx": "#28292B",
@@ -1492,7 +1492,7 @@
   {
    "uid": "p148",
    "name": "Dad's Old Wallet",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#3B465C",
    "tx": "#E9E8D4",
@@ -1502,7 +1502,7 @@
   {
    "uid": "p149",
    "name": "Endless Circle",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#000000",
    "tx": "#FF0000",
@@ -1512,7 +1512,7 @@
   {
    "uid": "p150",
    "name": "Climb the Terrace",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#343B3F",
    "tx": "#FF89B5",
@@ -1522,7 +1522,7 @@
   {
    "uid": "p151",
    "name": "Precious Ego",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#E57066",
    "tx": "#28292B",
@@ -1532,7 +1532,7 @@
   {
    "uid": "p152",
    "name": "Previous Engagement",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "MyMind",
    "bg": "#B1FDEB",
    "tx": "#6B7C95",
@@ -1542,7 +1542,7 @@
   {
    "uid": "p153",
    "name": "Huemint 081",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#040909",
@@ -1552,7 +1552,7 @@
   {
    "uid": "p154",
    "name": "Huemint 082",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#7B71B8",
@@ -1562,7 +1562,7 @@
   {
    "uid": "p155",
    "name": "Huemint 083",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#000000",
    "tx": "#3AC4B7",
@@ -1572,7 +1572,7 @@
   {
    "uid": "p156",
    "name": "Huemint 084",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#143451",
@@ -1582,7 +1582,7 @@
   {
    "uid": "p157",
    "name": "Huemint 085",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#2E2E2E",
    "tx": "#F2F8FC",
@@ -1592,7 +1592,7 @@
   {
    "uid": "p158",
    "name": "Huemint 086",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#F9FBF4",
@@ -1602,7 +1602,7 @@
   {
    "uid": "p159",
    "name": "Huemint 087",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#E8E8E8",
    "tx": "#4F343D",
@@ -1612,7 +1612,7 @@
   {
    "uid": "p160",
    "name": "Huemint 088",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#262059",
@@ -1622,7 +1622,7 @@
   {
    "uid": "p161",
    "name": "Huemint 089",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#DCDCDC",
    "tx": "#22202C",
@@ -1632,7 +1632,7 @@
   {
    "uid": "p162",
    "name": "Huemint 090",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#232323",
    "tx": "#DED9D0",
@@ -1642,7 +1642,7 @@
   {
    "uid": "p163",
    "name": "Huemint 091",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#1A1A1A",
    "tx": "#CBC7C9",
@@ -1652,7 +1652,7 @@
   {
    "uid": "p164",
    "name": "Huemint 092",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#EFF0F3",
    "tx": "#002539",
@@ -1662,7 +1662,7 @@
   {
    "uid": "p165",
    "name": "Huemint 093",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#37E2FB",
@@ -1672,7 +1672,7 @@
   {
    "uid": "p166",
    "name": "Huemint 094",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#DEF2C5",
@@ -1682,7 +1682,7 @@
   {
    "uid": "p167",
    "name": "Huemint 095",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#002F50",
@@ -1692,7 +1692,7 @@
   {
    "uid": "p168",
    "name": "Huemint 096",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#FFFFFF",
    "tx": "#F83646",
@@ -1702,7 +1702,7 @@
   {
    "uid": "p169",
    "name": "Huemint 097",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#000000",
    "tx": "#F3A99C",
@@ -1712,7 +1712,7 @@
   {
    "uid": "p170",
    "name": "Huemint 098",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#16161A",
    "tx": "#CAD3DB",
@@ -1722,7 +1722,7 @@
   {
    "uid": "p171",
    "name": "Huemint 099",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#111111",
    "tx": "#DCE159",
@@ -1732,7 +1732,7 @@
   {
    "uid": "p172",
    "name": "Huemint 100",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Huemint",
    "bg": "#2A2A2E",
    "tx": "#D8942D",
@@ -1742,7 +1742,7 @@
   {
    "uid": "p173",
    "name": "Neon Brand 01",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Neon Brand",
    "bg": "#13131A",
    "tx": "#FBFBFB",
@@ -1752,7 +1752,7 @@
   {
    "uid": "p174",
    "name": "Neon Brand 03",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "Neon Brand",
    "bg": "#FBFBFB",
    "tx": "#13131A",
@@ -1762,7 +1762,7 @@
   {
    "uid": "p175",
    "name": "Daho 07",
-   "mood": "모던/시크",
+   "mood": "모던",
    "src": "daho_van",
    "bg": "#242021",
    "tx": "#CCBEB3",
@@ -1772,7 +1772,7 @@
   {
    "uid": "p176",
    "name": "HappyHues 13",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "HappyHues",
    "bg": "#0F0E17",
    "tx": "#FFFFFE",
@@ -1782,7 +1782,7 @@
   {
    "uid": "p177",
    "name": "kühles Blondes",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#022EAC",
    "tx": "#13E19B",
@@ -1792,7 +1792,7 @@
   {
    "uid": "p178",
    "name": "Tamed Beast",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#053161",
    "tx": "#FF6A34",
@@ -1802,7 +1802,7 @@
   {
    "uid": "p179",
    "name": "Cruller Intentions",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#FDF06F",
    "tx": "#D31B33",
@@ -1812,7 +1812,7 @@
   {
    "uid": "p180",
    "name": "Fool's Errand",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#FB9B2A",
    "tx": "#0C00FF",
@@ -1822,7 +1822,7 @@
   {
    "uid": "p181",
    "name": "Corrupted Monk",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#E54B4B",
    "tx": "#FFFFFF",
@@ -1832,7 +1832,7 @@
   {
    "uid": "p182",
    "name": "Dante's Daydream",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#1B1D1C",
    "tx": "#EA1821",
@@ -1842,7 +1842,7 @@
   {
    "uid": "p183",
    "name": "Diamond Day",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "MyMind",
    "bg": "#FF6090",
    "tx": "#81072C",
@@ -1852,7 +1852,7 @@
   {
    "uid": "p184",
    "name": "Huemint 101",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#FBFBFB",
    "tx": "#000501",
@@ -1862,7 +1862,7 @@
   {
    "uid": "p185",
    "name": "Huemint 102",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#101C18",
    "tx": "#FAD0D0",
@@ -1872,7 +1872,7 @@
   {
    "uid": "p186",
    "name": "Huemint 103",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#181022",
    "tx": "#80CFD1",
@@ -1882,7 +1882,7 @@
   {
    "uid": "p187",
    "name": "Huemint 104",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#141414",
    "tx": "#E4DDD4",
@@ -1892,7 +1892,7 @@
   {
    "uid": "p188",
    "name": "Huemint 105",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#172138",
@@ -1902,7 +1902,7 @@
   {
    "uid": "p189",
    "name": "Huemint 106",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#1B1D1C",
    "tx": "#ECEAD2",
@@ -1912,7 +1912,7 @@
   {
    "uid": "p190",
    "name": "Huemint 107",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#181818",
    "tx": "#8D8382",
@@ -1922,7 +1922,7 @@
   {
    "uid": "p191",
    "name": "Huemint 108",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#0A0A14",
    "tx": "#F2BF6D",
@@ -1932,7 +1932,7 @@
   {
    "uid": "p192",
    "name": "Huemint 109",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#3E2207",
@@ -1942,7 +1942,7 @@
   {
    "uid": "p193",
    "name": "Huemint 110",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#1C1018",
    "tx": "#E7A960",
@@ -1952,7 +1952,7 @@
   {
    "uid": "p194",
    "name": "Huemint 111",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#12121A",
    "tx": "#FF8B72",
@@ -1962,7 +1962,7 @@
   {
    "uid": "p195",
    "name": "Huemint 112",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#181022",
    "tx": "#D3AA68",
@@ -1972,7 +1972,7 @@
   {
    "uid": "p196",
    "name": "Huemint 113",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#5D110D",
@@ -1982,7 +1982,7 @@
   {
    "uid": "p197",
    "name": "Huemint 114",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#1C1018",
    "tx": "#E8C59F",
@@ -1992,7 +1992,7 @@
   {
    "uid": "p198",
    "name": "Huemint 115",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#101C18",
    "tx": "#F2A269",
@@ -2002,7 +2002,7 @@
   {
    "uid": "p199",
    "name": "Huemint 116",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#F2F2F2",
    "tx": "#2A2530",
@@ -2012,7 +2012,7 @@
   {
    "uid": "p200",
    "name": "Huemint 117",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#0D1117",
    "tx": "#DAD1B2",
@@ -2022,7 +2022,7 @@
   {
    "uid": "p201",
    "name": "Huemint 118",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#0D1117",
    "tx": "#ED9DCE",
@@ -2032,7 +2032,7 @@
   {
    "uid": "p202",
    "name": "Huemint 119",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#101010",
    "tx": "#E9C7A7",
@@ -2042,7 +2042,7 @@
   {
    "uid": "p203",
    "name": "Huemint 120",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Huemint",
    "bg": "#0C0C10",
    "tx": "#ECBB13",
@@ -2052,7 +2052,7 @@
   {
    "uid": "p204",
    "name": "Designah 01",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Designah",
    "bg": "#0D142B",
    "tx": "#FAFFFA",
@@ -2062,7 +2062,7 @@
   {
    "uid": "p205",
    "name": "Designah 02",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Designah",
    "bg": "#0D142B",
    "tx": "#FAFFFA",
@@ -2072,7 +2072,7 @@
   {
    "uid": "p206",
    "name": "Grape",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "Colours Cafe",
    "bg": "#7523B4",
    "tx": "#FAE170",
@@ -2082,7 +2082,7 @@
   {
    "uid": "p207",
    "name": "iFest 01",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
@@ -2092,7 +2092,7 @@
   {
    "uid": "p208",
    "name": "iFest 02",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
@@ -2102,7 +2102,7 @@
   {
    "uid": "p209",
    "name": "iFest 03",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
@@ -2112,7 +2112,7 @@
   {
    "uid": "p210",
    "name": "iFest 04",
-   "mood": "비비드/대담한",
+   "mood": "비비드",
    "src": "iFest",
    "bg": "#000000",
    "tx": "#FFFFFF",
@@ -2122,7 +2122,7 @@
   {
    "uid": "p211",
    "name": "HappyHues 11",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "HappyHues",
    "bg": "#F9F4EF",
    "tx": "#020826",
@@ -2132,7 +2132,7 @@
   {
    "uid": "p212",
    "name": "Cozy Sweater",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#112378",
    "tx": "#FBECCF",
@@ -2142,7 +2142,7 @@
   {
    "uid": "p213",
    "name": "Packed Lunch",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#F1C3B8",
    "tx": "#19227D",
@@ -2152,7 +2152,7 @@
   {
    "uid": "p214",
    "name": "Old Diary",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#C0C2CE",
    "tx": "#012F63",
@@ -2162,7 +2162,7 @@
   {
    "uid": "p215",
    "name": "Awkward Penpal",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#FFFDE7",
    "tx": "#EC0B19",
@@ -2172,7 +2172,7 @@
   {
    "uid": "p216",
    "name": "Mama's New Bag",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#CBA0AA",
    "tx": "#5A3C20",
@@ -2182,7 +2182,7 @@
   {
    "uid": "p217",
    "name": "Pleasant Journey",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "MyMind",
    "bg": "#E33946",
    "tx": "#FDEDB2",
@@ -2192,7 +2192,7 @@
   {
    "uid": "p218",
    "name": "Huemint 121",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#FAF5EA",
    "tx": "#0B0701",
@@ -2202,7 +2202,7 @@
   {
    "uid": "p219",
    "name": "Huemint 122",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#1B2A4A",
    "tx": "#DFE198",
@@ -2212,7 +2212,7 @@
   {
    "uid": "p220",
    "name": "Huemint 123",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#FFEA78",
@@ -2222,7 +2222,7 @@
   {
    "uid": "p221",
    "name": "Huemint 124",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#2FC8EF",
@@ -2232,7 +2232,7 @@
   {
    "uid": "p222",
    "name": "Huemint 125",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E6E8E6",
@@ -2242,7 +2242,7 @@
   {
    "uid": "p223",
    "name": "Huemint 126",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#F7F1E3",
    "tx": "#4D3745",
@@ -2252,7 +2252,7 @@
   {
    "uid": "p224",
    "name": "Huemint 127",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#F8FFFF",
@@ -2262,7 +2262,7 @@
   {
    "uid": "p225",
    "name": "Huemint 128",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#243B53",
    "tx": "#F2F6CB",
@@ -2272,7 +2272,7 @@
   {
    "uid": "p226",
    "name": "Huemint 129",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#4A3520",
    "tx": "#FFCA58",
@@ -2282,7 +2282,7 @@
   {
    "uid": "p227",
    "name": "Huemint 130",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#A6D2B0",
@@ -2292,7 +2292,7 @@
   {
    "uid": "p228",
    "name": "Huemint 131",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E9B23D",
@@ -2302,7 +2302,7 @@
   {
    "uid": "p229",
    "name": "Huemint 132",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#1B2A4A",
    "tx": "#FCF2E4",
@@ -2312,7 +2312,7 @@
   {
    "uid": "p230",
    "name": "Huemint 133",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#7A3B2E",
    "tx": "#66C7CE",
@@ -2322,7 +2322,7 @@
   {
    "uid": "p231",
    "name": "Huemint 134",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#F4EEDE",
    "tx": "#353347",
@@ -2332,7 +2332,7 @@
   {
    "uid": "p232",
    "name": "Huemint 135",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#5A3C20",
    "tx": "#FDFEF1",
@@ -2342,7 +2342,7 @@
   {
    "uid": "p233",
    "name": "Huemint 136",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#F4EEDE",
    "tx": "#873B21",
@@ -2352,7 +2352,7 @@
   {
    "uid": "p234",
    "name": "Huemint 137",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#112378",
    "tx": "#FFFBFC",
@@ -2362,7 +2362,7 @@
   {
    "uid": "p235",
    "name": "Huemint 138",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#E8DFC8",
    "tx": "#001838",
@@ -2372,7 +2372,7 @@
   {
    "uid": "p236",
    "name": "Huemint 139",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#3D2B1F",
    "tx": "#E9E5D4",
@@ -2382,7 +2382,7 @@
   {
    "uid": "p237",
    "name": "Huemint 140",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Huemint",
    "bg": "#6B3A2A",
    "tx": "#EDDECE",
@@ -2392,7 +2392,7 @@
   {
    "uid": "p238",
    "name": "Sinopia",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Colours Cafe",
    "bg": "#FAE170",
    "tx": "#D13F13",
@@ -2402,7 +2402,7 @@
   {
    "uid": "p239",
    "name": "Golden Brown",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Colours Cafe",
    "bg": "#906713",
    "tx": "#FFDB58",
@@ -2412,7 +2412,7 @@
   {
    "uid": "p240",
    "name": "Iceberg 01",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Iceberg",
    "bg": "#77B5D3",
    "tx": "#1E424D",
@@ -2422,7 +2422,7 @@
   {
    "uid": "p241",
    "name": "Iceberg 02",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Iceberg",
    "bg": "#1E424D",
    "tx": "#E5D595",
@@ -2432,7 +2432,7 @@
   {
    "uid": "p242",
    "name": "Iceberg 04",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Iceberg",
    "bg": "#E5D595",
    "tx": "#1E424D",
@@ -2442,7 +2442,7 @@
   {
    "uid": "p243",
    "name": "Iceberg 05",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Iceberg",
    "bg": "#E19E11",
    "tx": "#1E424D",
@@ -2452,7 +2452,7 @@
   {
    "uid": "p244",
    "name": "Iceberg 06",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Iceberg",
    "bg": "#663E1F",
    "tx": "#E5D595",
@@ -2462,7 +2462,7 @@
   {
    "uid": "p245",
    "name": "Quetra 01",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "QuetraTech",
    "bg": "#642F37",
    "tx": "#F7C767",
@@ -2472,7 +2472,7 @@
   {
    "uid": "p246",
    "name": "Quetra 02",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "QuetraTech",
    "bg": "#642F37",
    "tx": "#F7C767",
@@ -2482,7 +2482,7 @@
   {
    "uid": "p247",
    "name": "Daho 01",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "daho_van",
    "bg": "#5758A6",
    "tx": "#F7E6D4",
@@ -2492,7 +2492,7 @@
   {
    "uid": "p248",
    "name": "Daho 02",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "daho_van",
    "bg": "#E7C58A",
    "tx": "#4B3535",
@@ -2502,7 +2502,7 @@
   {
    "uid": "p249",
    "name": "Daho 03",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "daho_van",
    "bg": "#F7E6D4",
    "tx": "#4B3535",
@@ -2512,7 +2512,7 @@
   {
    "uid": "p250",
    "name": "Antique Brass",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Chinese Black",
    "bg": "#CF9D7B",
    "tx": "#0C1519",
@@ -2522,7 +2522,7 @@
   {
    "uid": "p251",
    "name": "Chewing Gum 03",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Chewing Gum",
    "bg": "#FAF2E5",
    "tx": "#1F303D",
@@ -2532,7 +2532,7 @@
   {
    "uid": "p252",
    "name": "Chewing Gum 04",
-   "mood": "빈티지/노스탤직",
+   "mood": "빈티지",
    "src": "Chewing Gum",
    "bg": "#C0893B",
    "tx": "#1F303D",
@@ -2542,7 +2542,7 @@
   {
    "uid": "p253",
    "name": "HappyHues 14",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "HappyHues",
    "bg": "#FFFFFE",
    "tx": "#272343",
@@ -2552,7 +2552,7 @@
   {
    "uid": "p254",
    "name": "Milo's Big Day",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "MyMind",
    "bg": "#3333FF",
    "tx": "#CDFFCC",
@@ -2562,7 +2562,7 @@
   {
    "uid": "p255",
    "name": "Block Party",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "MyMind",
    "bg": "#75FFC0",
    "tx": "#7A30CF",
@@ -2572,7 +2572,7 @@
   {
    "uid": "p256",
    "name": "Open Sea",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "MyMind",
    "bg": "#083EA7",
    "tx": "#1FDE91",
@@ -2582,7 +2582,7 @@
   {
    "uid": "p257",
    "name": "Penny Candy",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "MyMind",
    "bg": "#EEC0DB",
    "tx": "#162BF4",
@@ -2592,7 +2592,7 @@
   {
    "uid": "p258",
    "name": "Huemint 141",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#EAF6FF",
    "tx": "#0D0D10",
@@ -2602,7 +2602,7 @@
   {
    "uid": "p259",
    "name": "Huemint 142",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFF2E8",
    "tx": "#41342D",
@@ -2612,7 +2612,7 @@
   {
    "uid": "p260",
    "name": "Huemint 143",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FDFDFD",
    "tx": "#262224",
@@ -2622,7 +2622,7 @@
   {
    "uid": "p261",
    "name": "Huemint 144",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F0FFF4",
    "tx": "#0E2A2C",
@@ -2632,7 +2632,7 @@
   {
    "uid": "p262",
    "name": "Huemint 145",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F5F0FF",
    "tx": "#55191A",
@@ -2642,7 +2642,7 @@
   {
    "uid": "p263",
    "name": "Huemint 146",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#3F372F",
@@ -2652,7 +2652,7 @@
   {
    "uid": "p264",
    "name": "Huemint 147",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#E8FFF7",
    "tx": "#242320",
@@ -2662,7 +2662,7 @@
   {
    "uid": "p265",
    "name": "Huemint 148",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#313132",
@@ -2672,7 +2672,7 @@
   {
    "uid": "p266",
    "name": "Huemint 149",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F0FFF4",
    "tx": "#1C1F2D",
@@ -2682,7 +2682,7 @@
   {
    "uid": "p267",
    "name": "Huemint 150",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F6F2FF",
    "tx": "#2B2F38",
@@ -2692,7 +2692,7 @@
   {
    "uid": "p268",
    "name": "Huemint 151",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFFFFE",
    "tx": "#18374B",
@@ -2702,7 +2702,7 @@
   {
    "uid": "p269",
    "name": "Huemint 152",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#EFF8FF",
    "tx": "#65534E",
@@ -2712,7 +2712,7 @@
   {
    "uid": "p270",
    "name": "Huemint 153",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F2FFF8",
    "tx": "#3A1744",
@@ -2722,7 +2722,7 @@
   {
    "uid": "p271",
    "name": "Huemint 154",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFFDF5",
    "tx": "#5409AC",
@@ -2732,7 +2732,7 @@
   {
    "uid": "p272",
    "name": "Huemint 155",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#F5F0FF",
    "tx": "#12204E",
@@ -2742,7 +2742,7 @@
   {
    "uid": "p273",
    "name": "Huemint 156",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FEFCE8",
    "tx": "#31323E",
@@ -2752,7 +2752,7 @@
   {
    "uid": "p274",
    "name": "Huemint 157",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#EEF6FF",
    "tx": "#293F53",
@@ -2762,7 +2762,7 @@
   {
    "uid": "p275",
    "name": "Huemint 158",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#4B1647",
@@ -2772,7 +2772,7 @@
   {
    "uid": "p276",
    "name": "Huemint 159",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFF0F5",
    "tx": "#561230",
@@ -2782,7 +2782,7 @@
   {
    "uid": "p277",
    "name": "Huemint 160",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Huemint",
    "bg": "#FFF6F0",
    "tx": "#242422",
@@ -2792,7 +2792,7 @@
   {
    "uid": "p278",
    "name": "Pastel Magenta",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Colours Cafe",
    "bg": "#FF97D0",
    "tx": "#125603",
@@ -2802,7 +2802,7 @@
   {
    "uid": "p279",
    "name": "Light Lime",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Colours Cafe",
    "bg": "#C3F380",
    "tx": "#7523B4",
@@ -2812,7 +2812,7 @@
   {
    "uid": "p280",
    "name": "Booked 01",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
@@ -2822,7 +2822,7 @@
   {
    "uid": "p281",
    "name": "Booked 02",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
@@ -2832,7 +2832,7 @@
   {
    "uid": "p282",
    "name": "Booked 03",
-   "mood": "펀/플레이풀",
+   "mood": "플레이풀",
    "src": "Mei Graphic",
    "bg": "#352900",
    "tx": "#FBFDF7",
@@ -2842,7 +2842,7 @@
   {
    "uid": "p283",
    "name": "HappyHues 17",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "HappyHues",
    "bg": "#FEF6E4",
    "tx": "#001858",
@@ -2852,7 +2852,7 @@
   {
    "uid": "p284",
    "name": "Inside Joke",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#F1D3D3",
    "tx": "#000000",
@@ -2862,7 +2862,7 @@
   {
    "uid": "p285",
    "name": "HappyHues 12",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "HappyHues",
    "bg": "#232946",
    "tx": "#FFFFFE",
@@ -2872,7 +2872,7 @@
   {
    "uid": "p286",
    "name": "Crystal Palace",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#E2A9C9",
    "tx": "#000000",
@@ -2882,7 +2882,7 @@
   {
    "uid": "p287",
    "name": "Hidden Passage",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#2D1C46",
    "tx": "#B6D5F4",
@@ -2892,7 +2892,7 @@
   {
    "uid": "p288",
    "name": "Small Gamble",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#D1E9E3",
    "tx": "#334A45",
@@ -2902,7 +2902,7 @@
   {
    "uid": "p289",
    "name": "Second Cousin",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#340B0B",
    "tx": "#9B8FFF",
@@ -2912,7 +2912,7 @@
   {
    "uid": "p290",
    "name": "Bedtime Story",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#BEF6E9",
    "tx": "#4B5C68",
@@ -2922,7 +2922,7 @@
   {
    "uid": "p291",
    "name": "Lucid Dream",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#121738",
    "tx": "#D17C78",
@@ -2932,7 +2932,7 @@
   {
    "uid": "p292",
    "name": "The Cottage",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "MyMind",
    "bg": "#837663",
    "tx": "#101C4E",
@@ -2942,7 +2942,7 @@
   {
    "uid": "p293",
    "name": "Huemint 161",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#FEF6E4",
    "tx": "#0F211F",
@@ -2952,7 +2952,7 @@
   {
    "uid": "p294",
    "name": "Huemint 162",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#242B47",
    "tx": "#7BC758",
@@ -2962,7 +2962,7 @@
   {
    "uid": "p295",
    "name": "Huemint 163",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E9F0F5",
    "tx": "#252557",
@@ -2972,7 +2972,7 @@
   {
    "uid": "p296",
    "name": "Huemint 164",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E8E4F3",
    "tx": "#1B1014",
@@ -2982,7 +2982,7 @@
   {
    "uid": "p297",
    "name": "Huemint 165",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#2D1C46",
    "tx": "#CED9EE",
@@ -2992,7 +2992,7 @@
   {
    "uid": "p298",
    "name": "Huemint 166",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#462642",
@@ -3002,7 +3002,7 @@
   {
    "uid": "p299",
    "name": "Huemint 167",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F5EDF5",
    "tx": "#2D2524",
@@ -3012,7 +3012,7 @@
   {
    "uid": "p300",
    "name": "Huemint 168",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F0E9F2",
    "tx": "#90674A",
@@ -3022,7 +3022,7 @@
   {
    "uid": "p301",
    "name": "Huemint 169",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#1C1D1B",
@@ -3032,7 +3032,7 @@
   {
    "uid": "p302",
    "name": "Huemint 170",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#31264A",
    "tx": "#FEFEFA",
@@ -3042,7 +3042,7 @@
   {
    "uid": "p303",
    "name": "Huemint 171",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#2D1C46",
    "tx": "#FBD0D1",
@@ -3052,7 +3052,7 @@
   {
    "uid": "p304",
    "name": "Huemint 172",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E6E9F5",
    "tx": "#2B262A",
@@ -3062,7 +3062,7 @@
   {
    "uid": "p305",
    "name": "Huemint 173",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F7F0E8",
    "tx": "#382834",
@@ -3072,7 +3072,7 @@
   {
    "uid": "p306",
    "name": "Huemint 174",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E4EDF2",
    "tx": "#77494B",
@@ -3082,7 +3082,7 @@
   {
    "uid": "p307",
    "name": "Huemint 175",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#1D2438",
    "tx": "#F0EBF0",
@@ -3092,7 +3092,7 @@
   {
    "uid": "p308",
    "name": "Huemint 176",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E9F0F5",
    "tx": "#3B3C6C",
@@ -3102,7 +3102,7 @@
   {
    "uid": "p309",
    "name": "Huemint 177",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#242B47",
    "tx": "#FDFEF9",
@@ -3112,7 +3112,7 @@
   {
    "uid": "p310",
    "name": "Huemint 178",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F5EDF5",
    "tx": "#311F17",
@@ -3122,7 +3122,7 @@
   {
    "uid": "p311",
    "name": "Huemint 179",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#F1D3D3",
    "tx": "#111216",
@@ -3132,7 +3132,7 @@
   {
    "uid": "p312",
    "name": "Huemint 180",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Huemint",
    "bg": "#E6E9F5",
    "tx": "#3A2F49",
@@ -3142,7 +3142,7 @@
   {
    "uid": "p313",
    "name": "Shift 01",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Shift Creative",
    "bg": "#3939FF",
    "tx": "#AEE6ED",
@@ -3152,7 +3152,7 @@
   {
    "uid": "p314",
    "name": "Columbia 01",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Columbia",
    "bg": "#0B1957",
    "tx": "#D2E0ED",
@@ -3162,7 +3162,7 @@
   {
    "uid": "p315",
    "name": "Chewing Gum 07",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Chewing Gum",
    "bg": "#1F303D",
    "tx": "#FAF2E5",
@@ -3172,7 +3172,7 @@
   {
    "uid": "p316",
    "name": "Burgundy 04",
-   "mood": "드리미/감성적",
+   "mood": "감성적",
    "src": "Burgundy",
    "bg": "#3D5D91",
    "tx": "#F2DCDB",

@@ -48,7 +48,7 @@ description: CdBd 시안 파이프라인 D1 — 기획 문서 + 조립 레시피
   "slug": "seedling-demoday",
   "category": "초대·예약 ② 사전 정보 수집 초대장",
   "topic": "2026 SEEDLING DEMO DAY",
-  "moodDirection": "💼 프로페셔널/비즈니스",
+  "moodDirection": "💼 프로페셔널",
   "brandAssets": { "logo": "씨들링벤처스 워드마크", "signatureColor": "남색" },
   "scene": "무대 · 연단 · 스포트라이트",
   "recipe": ["히어로","스토리","핵심 정보","나열","폼","위치 안내","문의","푸터"],

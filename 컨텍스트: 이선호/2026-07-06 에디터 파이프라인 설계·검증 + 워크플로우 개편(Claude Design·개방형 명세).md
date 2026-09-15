@@ -272,7 +272,7 @@ editor URL 진입 시 `/login` 리다이렉트되면: `$B fill 'input[name=email
 - **결과 pull**: `DesignSync get_file`(project + path) — 생성된 HTML을 코드로 가져와 Figma 반입.
 - **범위 삭제(sed)**: `sed -i '' '/START패턴/,/END패턴/d' 파일` — Edit 통삭제 어려운 대형 블록에.
 - **백업**: `/tmp/CLAUDE.md.bak`, `/tmp/3-0.bak.md`.
-- **event-ticket 참고값(이제 미지정, 기록용)**: 모던/시크 다크 HappyHues 4 `#16161A`/`#FFFFFE`/`#7F5AF0`(버튼-배경 3.98·텍스트 18 AAA), Bebas Neue+Pretendard. → **개방형 전환으로 브리프엔 안 적음**.
+- **event-ticket 참고값(이제 미지정, 기록용)**: 모던 다크 HappyHues 4 `#16161A`/`#FFFFFE`/`#7F5AF0`(버튼-배경 3.98·텍스트 18 AAA), Bebas Neue+Pretendard. → **개방형 전환으로 브리프엔 안 적음**.
 
 ---
 
