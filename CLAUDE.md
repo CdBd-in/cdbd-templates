@@ -93,6 +93,7 @@
   - 📤 **가이드 MD 업로드 = 슬롯 12개** (페이지 설명 / 목적·주제 판정·추가 항목 / 타겟 / 페이지 유형 판정·페이지 구성 / 시안 4 / 채움 화면 문구). **MD를 고치면 여기 올리는 것까지가 작업**이다. 절차 = 슬롯 클릭 → textarea에 전문 → `새 버전으로 저장`(= **draft**) → **`활성화` 버튼을 눌러야 active**(저장만 하면 예전 버전이 계속 쓰인다) · 자동화 = native setter로 textarea `value` 주입 후 `input` 이벤트
   - 🔤 **섹션 목적 13칸 이름 정본 = 이 어드민 표기 (띄어쓰기까지)** — **`안내 사항` · `핵심 정보` · `위치 안내`는 띄어 쓴다**(2026-09-15 개발 피드백 · 문서·에이전트 105곳 정정). ✅ **Figma 그룹 이름·색인·픽리스트까지 개명 완료 (2026-09-15)** — 어드민·Figma·문서·색인이 같은 이름. 다음에 목적 이름을 손대면 **네 곳을 함께** 고칠 것
 - **브라우저 자동화**: gstack `browse` (headless Chromium)
+- **🗂 시안 작업 위치 = 「CdBd 템플릿 등록」 파일 › 「사례 기획」 페이지 (필수, 2026-09-15 이선호 지시)** — claude.ai/design **HTML 시안을 Figma로 반입**하거나 시안을 만들 때는 [oi8zIHLfy59O5zV8aysqq4 › 사례 기획 (`1:746`)](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1-746)에 놓는다. 다른 파일(블로그 이미지 등)에 만들면 사용자가 다시 옮겨야 한다. 🔧 **HTML 반입 절차**: React 번들이라 파일 파싱 ❌ → **`browse`로 렌더 후 DOM computed style을 스펙 JSON으로 추출** → `use_figma`로 오토레이아웃 재생성(글자 크기·줄간격·자간·굵기를 CdBd 지원값으로 스냅). 풀버전 = [[3. 신규 템플릿 기획/b2b-lineup-catalog — 기획]]
 - **참조 디자인 시스템**: `/Users/designer/Documents/GitHub/design/cdbd-design-system/디자인 시스템/`
 - **🎨 Claude Design (claude.ai/design) 사용 시 설정 (필수, 2026-07-06)**: 디자인 시스템에서 **업로드된 "CdBd Design System" 프로젝트 제외(clear selection)** + **로컬 코드베이스에 이 vault `/Users/designer/Documents/GitHub/design/cdbd-templates` 추가**해서 사용. 이유: **vault가 현재 정본**([[1-2. 기획 문서 템플릿]] 등) — claude.ai 업로드 프로젝트는 stale일 수 있음. (DesignSync API가 아닌 디자인 툴 컨텍스트 설정 → 생성 시점에 적용)
 
