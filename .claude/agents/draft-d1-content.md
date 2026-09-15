@@ -51,7 +51,7 @@ description: CdBd 시안 파이프라인 D1 — 기획 문서 + 조립 레시피
   "moodDirection": "💼 프로페셔널/비즈니스",
   "brandAssets": { "logo": "씨들링벤처스 워드마크", "signatureColor": "남색" },
   "scene": "무대 · 연단 · 스포트라이트",
-  "recipe": ["히어로","스토리","핵심정보","나열","폼","위치안내","문의","푸터"],
+  "recipe": ["히어로","스토리","핵심 정보","나열","폼","위치 안내","문의","푸터"],
   "sections": [
     { "purpose":"히어로",
       "texts": { "eyebrow":"2026. 9. 5 FRI", "title":"2026 SEEDLING\nDEMO DAY", "sub":"여섯 팀의 데모, 그리고 다음 라운드", "logo":"씨들링벤처스" },
@@ -61,7 +61,7 @@ description: CdBd 시안 파이프라인 D1 — 기획 문서 + 조립 레시피
       "items": [ {"head":"14:00  등록 · 네트워킹","body":"명찰을 받고 부스를 둘러보세요."} ]
     }
   ],
-  "missing": [{ "purpose":"안내사항", "need":"응답 마감일", "reason":"질문 세트에 문항 없음 — 사실이라 창작 ❌" }],
+  "missing": [{ "purpose":"안내 사항", "need":"응답 마감일", "reason":"질문 세트에 문항 없음 — 사실이라 창작 ❌" }],
   "note": "..."
 }
 ```
