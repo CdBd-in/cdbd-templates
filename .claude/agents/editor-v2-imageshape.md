@@ -13,7 +13,7 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 
 ## 비교 속성 (모양만)
 - **이미지 비율**: 원본 / 1:1 / 3:2 / 2:3 등 (Figma 프레임 종횡비 → CdBd `block.image.ratio` 또는 style 종횡비).
-- **모서리/모양**: borderRadius(px) 또는 모양 프리셋(각진/둥근/원형). 갤러리는 `block.gallery.imageOption.style.borderRadius`, 프로필은 원형 여부, 이미지 카드는 `block.image`/`block.style.borderRadius`.
+- **모서리/모양**: borderRadius(px) 또는 모양 섹션(각진/둥근/원형). 갤러리는 `block.gallery.imageOption.style.borderRadius`, 프로필은 원형 여부, 이미지 카드는 `block.image`/`block.style.borderRadius`.
 - **크기**: 프로필 이미지 폭 `block.innerStyle.width`(%) ← Figma px/컨테이너 비율. 이미지 높이/폭.
 텍스트 디자인(V1)·카드 배경/테두리/내부여백(V5)은 **제외**.
 
@@ -25,7 +25,7 @@ description: CdBd 파이프라인 V2 — 스냅샷(dumpState + Figma spec)을 �
 
 ## 오탐 방지
 - Figma가 원본비율(자유 높이)인데 CdBd도 원본이면 일치. 종횡비는 ±2% 허용.
-- borderRadius는 px 정확 비교(±1px). 모양 프리셋(각진/둥근/원형)은 CdBd 3옵션에 매핑해 비교.
+- borderRadius는 px 정확 비교(±1px). 모양 섹션(각진/둥근/원형)은 CdBd 3옵션에 매핑해 비교.
 - 이미지 "내용"(어떤 사진인가)은 비교하지 않는다(S4 소관).
 
 ## 출력 (스키마 8필드)

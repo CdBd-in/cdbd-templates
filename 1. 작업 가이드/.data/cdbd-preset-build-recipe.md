@@ -1,7 +1,7 @@
-# CdBd 히어로 프리셋 빌드 레시피 (editor 5541, 프리뷰 빌드) — 에이전트 자율 실행용
+# CdBd 히어로 섹션 빌드 레시피 (editor 5541, 프리뷰 빌드) — 에이전트 자율 실행용
 
 > 이 레시피는 CdBd 프리뷰 에디터(cdbd-client-git-ai-makevu-s-team.vercel.app/editor/5541)에서
-> Figma 히어로 프리셋 1개를 **정밀 재현 + 등록**하는 검증된 절차. 질문 금지, 자율 실행.
+> Figma 히어로 섹션 1개를 **정밀 재현 + 등록**하는 검증된 절차. 질문 금지, 자율 실행.
 > 브라우저는 이미 5541에 로그인·드라이버 설치된 공유 세션. **좌표 클릭 대신 fiber/JS 우선.**
 
 ## 0. 환경
@@ -21,7 +21,7 @@ DRV=".claude/skills/cdbd-card-automation/card-driver.js"
 - 구분선 포인트 = `rgba(108,76,255,0.4)` (={버튼색}×40%).
 - **Figma에서 뽑은 hex/opacity를 그대로 쓰되, 위 역할값과 일치**(디폴트 테마라 그대로 매핑됨).
 
-## 2. Figma 스펙 덤프 (내 프리셋 노드 1개)
+## 2. Figma 스펙 덤프 (내 섹션 노드 1개)
 ToolSearch로 `use_figma` 로드 후 (skillNames=figma-use), 페이지 34:23 전환 후 내 노드 덤프:
 ```js
 const page=await figma.getNodeByIdAsync("34:23"); await figma.setCurrentPageAsync(page);
@@ -105,7 +105,7 @@ b.style.padding="<상>px <우>px <하>px <좌>px";  // Figma 구분선 프레임
 
 ## 8. 프리셋 저장·등록 (검증됨: 키 인풋 직접 세팅 가능)
 1. `프리셋 설정`(상단, y<80) click → 드롭다운.
-2. `지금 내용을 프리셋으로 저장` 항목: `document.elementFromPoint(cx,cy)`에 pointerdown/mousedown/pointerup/mouseup/click 시퀀스(일반 click 안먹음). 모달 열림('프리셋 키' 텍스트 확인).
+2. `지금 내용을 섹션으로 저장` 항목: `document.elementFromPoint(cx,cy)`에 pointerdown/mousedown/pointerup/mouseup/click 시퀀스(일반 click 안먹음). 모달 열림('프리셋 키' 텍스트 확인).
 3. **레이아웃 스타일 토글** (미니멀/에디토리얼/볼드/공통 라벨 버튼, **다중선택**):
    - 라벨 좌표 ≈ 미니멀(582,315)·에디토리얼(663,315)·볼드(740,315). 텍스트로 재확인. **클릭 = mouse이벤트 시퀀스**(일반 click 안먹음).
    - 기본 미니멀 ON. **목표 태그(들) ON + 미니멀 OFF**. 
