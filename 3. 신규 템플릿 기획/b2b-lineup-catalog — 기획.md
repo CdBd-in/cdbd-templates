@@ -53,3 +53,33 @@ purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로�
 
 ## 다음 단계
 1단계 게이트(기획 피드백) → 2단계: 붙여넣기용 문서를 claude.ai/design에 넣어 **멀티 3안** 생성.
+
+---
+
+## 🖼 2026-09-15 — HTML 시안 3안 → Figma 반입 완료
+
+- **원본**: `~/Downloads/루멘스텍 라인업 카탈로그 3안.html` (claude.ai/design 번들 · 23MB)
+- **산출물**: [Figma 페이지 「b2b-lineup-catalog 시안 3안 (HTML 반입)」](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1512-81)
+  - [시안 1a 인덱스형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-160) · [시안 1b 카탈로그 그리드형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-161) · [시안 1c 스펙시트형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-162)
+  - **3안 × 8페이지 = 24 프레임 · 카드 475장 · 텍스트 727개**
+
+### 반입 방법 (재사용 가능한 절차)
+1. **HTML을 headless 브라우저로 렌더**(`browse`) → DOM에서 **computed style을 스펙 JSON으로 추출**(패딩·배경·테두리·모서리·flex/grid·텍스트 속성).
+   - ⚠️ 이 HTML은 React 번들이라 **파일을 파싱해선 내용이 안 나온다** — 반드시 렌더 후 DOM에서 뽑아야 한다.
+2. 스펙 JSON을 `use_figma` 빌더로 **오토레이아웃 프레임 트리**로 재생성.
+3. **라인업 장 P2~P7은 P2를 복제 + 텍스트만 교체**(안당 텍스트 26~32개 · 차이나는 인덱스만 diff로 주입) — 원본이 "6장 동일 구성"이라 가능.
+
+### CdBd-legal 정규화 (반입하면서 자동 교정)
+| 항목 | 처리 | 결과 |
+|---|---|---|
+| 글자 크기 | 13·15·17·40 등 → **CdBd 지원 16단계로 스냅** | 위반 **0** |
+| 줄간격 | 125·150·170 등 → **100/120/140/160/180** | 위반 **0** |
+| 자간 | 전부 **0** (CdBd에 자간 옵션 없음) | 위반 **0** |
+| 굵기 | CdBd는 사실상 Regular/Bold 2단계 → **fw≥600=Bold, 나머지 Regular** | Pretendard 2종만 사용 |
+| 카드 구조 | 페이지 = **평면 카드 스택**(390 고정폭) | 24/24 |
+| 카드 이름 | 내용으로 타입 추론해 **「카드: 텍스트/이미지/버튼/2열 카드/갤러리/위치 안내/질문과 답변」** 부여 | 475장 |
+| 메뉴 화살표 `›` | **CdBd 카드 default UI라 제거**(재현 금지 규칙) | — |
+
+### 남은 일
+- 이미지·지도는 **플레이스홀더 박스**(원본 HTML도 동일) → 3단계에서 실제 이미지 생성·주입
+- 3안 중 채택 → 4단계 에디터 구현
