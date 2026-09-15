@@ -2614,7 +2614,7 @@
   "name": "header-01",
   "grp": "헤더",
   "h": 41,
-  "slots": "페이지 제목|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-텍스트",
   "key": null
  },
@@ -2623,7 +2623,7 @@
   "name": "header-08",
   "grp": "헤더",
   "h": 45,
-  "slots": "로고|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-로고+텍스트",
   "key": null
  },
@@ -2632,7 +2632,7 @@
   "name": "header-15",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고",
+  "slots": "",
   "old_name": "헤더-로고만",
   "key": null
  },
@@ -2641,7 +2641,7 @@
   "name": "header-02",
   "grp": "헤더",
   "h": 41,
-  "slots": "페이지 제목|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-텍스트",
   "key": null
  },
@@ -2650,7 +2650,7 @@
   "name": "header-09",
   "grp": "헤더",
   "h": 45,
-  "slots": "로고|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-로고+텍스트",
   "key": null
  },
@@ -2659,7 +2659,7 @@
   "name": "header-16",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고",
+  "slots": "",
   "old_name": "헤더-로고만",
   "key": null
  },
@@ -2668,7 +2668,7 @@
   "name": "header-03",
   "grp": "헤더",
   "h": 40,
-  "slots": "페이지 제목|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-텍스트",
   "key": null
  },
@@ -2677,7 +2677,7 @@
   "name": "header-10",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-로고+텍스트",
   "key": null
  },
@@ -2686,7 +2686,7 @@
   "name": "header-17",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고",
+  "slots": "",
   "old_name": "헤더-로고만",
   "key": null
  },
@@ -2695,7 +2695,7 @@
   "name": "header-04",
   "grp": "헤더",
   "h": 40,
-  "slots": "페이지 제목|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-텍스트",
   "key": null
  },
@@ -2704,7 +2704,7 @@
   "name": "header-11",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-로고+텍스트",
   "key": null
  },
@@ -2713,7 +2713,7 @@
   "name": "header-05",
   "grp": "헤더",
   "h": 40,
-  "slots": "페이지 제목|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-텍스트",
   "key": null
  },
@@ -2722,7 +2722,7 @@
   "name": "header-12",
   "grp": "헤더",
   "h": 44,
-  "slots": "로고|메뉴 아이콘",
+  "slots": "",
   "old_name": "헤더-로고+텍스트",
   "key": null
  },
@@ -2731,7 +2731,7 @@
   "name": "header-06",
   "grp": "헤더",
   "h": 37,
-  "slots": "배너 문구",
+  "slots": "",
   "old_name": "헤더-배너",
   "key": null
  },
@@ -2740,7 +2740,7 @@
   "name": "header-13",
   "grp": "헤더",
   "h": 45,
-  "slots": "로고",
+  "slots": "",
   "old_name": "헤더-로고만",
   "key": null
  },
@@ -2749,7 +2749,7 @@
   "name": "header-07",
   "grp": "헤더",
   "h": 37,
-  "slots": "배너 문구",
+  "slots": "",
   "old_name": "헤더-배너",
   "key": null
  },
@@ -2758,7 +2758,7 @@
   "name": "header-14",
   "grp": "헤더",
   "h": 45,
-  "slots": "로고",
+  "slots": "",
   "old_name": "헤더-로고만",
   "key": null
  },
@@ -2767,7 +2767,7 @@
   "name": "footer-01",
   "grp": "푸터",
   "h": 111,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2776,7 +2776,7 @@
   "name": "footer-13",
   "grp": "푸터",
   "h": 141,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2785,7 +2785,7 @@
   "name": "footer-25",
   "grp": "푸터",
   "h": 151,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -2794,7 +2794,7 @@
   "name": "footer-02",
   "grp": "푸터",
   "h": 111,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2803,7 +2803,7 @@
   "name": "footer-14",
   "grp": "푸터",
   "h": 92,
-  "slots": "SNS 아이콘|SNS 아이디",
+  "slots": "",
   "old_name": "푸터-SNS",
   "key": null
  },
@@ -2812,7 +2812,7 @@
   "name": "footer-26",
   "grp": "푸터",
   "h": 126,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2821,7 +2821,7 @@
   "name": "footer-03",
   "grp": "푸터",
   "h": 135,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -2830,7 +2830,7 @@
   "name": "footer-15",
   "grp": "푸터",
   "h": 128,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2839,7 +2839,7 @@
   "name": "footer-27",
   "grp": "푸터",
   "h": 141,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2848,7 +2848,7 @@
   "name": "footer-04",
   "grp": "푸터",
   "h": 135,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -2857,7 +2857,7 @@
   "name": "footer-16",
   "grp": "푸터",
   "h": 128,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2866,7 +2866,7 @@
   "name": "footer-28",
   "grp": "푸터",
   "h": 92,
-  "slots": "SNS 아이콘|SNS 아이디",
+  "slots": "",
   "old_name": "푸터-SNS",
   "key": null
  },
@@ -2875,7 +2875,7 @@
   "name": "footer-05",
   "grp": "푸터",
   "h": 120,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2884,7 +2884,7 @@
   "name": "footer-17",
   "grp": "푸터",
   "h": 152,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -2893,7 +2893,7 @@
   "name": "footer-29",
   "grp": "푸터",
   "h": 53,
-  "slots": "페이지 제목|아이콘",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -2902,7 +2902,7 @@
   "name": "footer-06",
   "grp": "푸터",
   "h": 135,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2911,7 +2911,7 @@
   "name": "footer-18",
   "grp": "푸터",
   "h": 152,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -2920,7 +2920,7 @@
   "name": "footer-30",
   "grp": "푸터",
   "h": 39,
-  "slots": "페이지 제목|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -2929,7 +2929,7 @@
   "name": "footer-07",
   "grp": "푸터",
   "h": 86,
-  "slots": "SNS 아이콘|SNS 아이디",
+  "slots": "",
   "old_name": "푸터-SNS",
   "key": null
  },
@@ -2938,7 +2938,7 @@
   "name": "footer-19",
   "grp": "푸터",
   "h": 127,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2947,7 +2947,7 @@
   "name": "footer-31",
   "grp": "푸터",
   "h": 52,
-  "slots": "페이지 제목|아이콘",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -2956,7 +2956,7 @@
   "name": "footer-08",
   "grp": "푸터",
   "h": 127,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2965,7 +2965,7 @@
   "name": "footer-20",
   "grp": "푸터",
   "h": 142,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -2974,7 +2974,7 @@
   "name": "footer-32",
   "grp": "푸터",
   "h": 38,
-  "slots": "페이지 제목|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -2983,7 +2983,7 @@
   "name": "footer-09",
   "grp": "푸터",
   "h": 127,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -2992,7 +2992,7 @@
   "name": "footer-21",
   "grp": "푸터",
   "h": 93,
-  "slots": "SNS 아이콘|SNS 아이디",
+  "slots": "",
   "old_name": "푸터-SNS",
   "key": null
  },
@@ -3001,7 +3001,7 @@
   "name": "footer-33",
   "grp": "푸터",
   "h": 52,
-  "slots": "페이지 제목|아이콘",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -3010,7 +3010,7 @@
   "name": "footer-10",
   "grp": "푸터",
   "h": 151,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -3019,7 +3019,7 @@
   "name": "footer-22",
   "grp": "푸터",
   "h": 127,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -3028,7 +3028,7 @@
   "name": "footer-34",
   "grp": "푸터",
   "h": 38,
-  "slots": "페이지 제목|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -3037,7 +3037,7 @@
   "name": "footer-11",
   "grp": "푸터",
   "h": 151,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -3046,7 +3046,7 @@
   "name": "footer-23",
   "grp": "푸터",
   "h": 127,
-  "slots": "로고|브랜드명",
+  "slots": "",
   "old_name": "푸터-로고+브랜드",
   "key": null
  },
@@ -3055,7 +3055,7 @@
   "name": "footer-35",
   "grp": "푸터",
   "h": 52,
-  "slots": "페이지 제목|아이콘",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
@@ -3064,7 +3064,7 @@
   "name": "footer-12",
   "grp": "푸터",
   "h": 126,
-  "slots": "SNS 아이콘|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-브랜드+카피",
   "key": null
  },
@@ -3073,7 +3073,7 @@
   "name": "footer-24",
   "grp": "푸터",
   "h": 151,
-  "slots": "로고|브랜드명|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-로고+브랜드+카피",
   "key": null
  },
@@ -3082,7 +3082,7 @@
   "name": "footer-36",
   "grp": "푸터",
   "h": 38,
-  "slots": "페이지 제목|한 줄 카피",
+  "slots": "",
   "old_name": "푸터-하단고정바",
   "key": null
  },
