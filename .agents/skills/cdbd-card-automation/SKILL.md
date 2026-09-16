@@ -1,3 +1,6 @@
+> 🚨 **스테일 사본 (2026-09-16 확인)** — 이 파일은 **2026-07-21판**이며 라이브본과 내용이 다릅니다.
+> **정본 = `.claude/skills/cdbd-card-automation/SKILL.md`.** 링크 연결 8종·2열 카드 등 2026-09 실측 정정이 이 사본에는 **반영돼 있지 않습니다.** 읽지 마세요.
+
 ---
 name: cdbd-card-automation
 description: Use when adding, deleting, duplicating, reordering, pinning, OR renaming (label) cards, uploading images, setting page theme colors, configuring reservation date/time/capacity, setting button links, or configuring a location card's map address in the CdBd editor (cdbd.in/editor/{id}) via automation — for 4단계 템플릿 제작. Drives cards/colors/images/reservations/links through React fiber handlers (onClick·onChange·onDragEnd·onDrop·onUpdateItem) and native input setters, not mouse-coordinate clicks. Covers 카드 추가/삭제/복제/순서변경/고정(핀)/라벨변경, 이미지 업로드/적용, 페이지 색상(배경·텍스트·버튼 hex), 예약 정보 모달(날짜·시간·정원·방문체크 필수), 버튼 링크(multiCard onUpdateItem; 전화=type 'call'), 위치 카드 주소 지오코딩(검색 선택 필수), the text-card focus gotcha, the 예약 카드 credit dialog, the card-label +1-shift gotcha (one-at-a-time converger), AND the board-scroll-causes-page-drift gotcha (select cards via fiber onClick, never scroll the board).
