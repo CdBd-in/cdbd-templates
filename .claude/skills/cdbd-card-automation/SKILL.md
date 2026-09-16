@@ -32,7 +32,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 | **이미지 업로드/적용** | dropzone `onDrop` 직접 호출 → 라이브러리 선택 → 적용하기 | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 | **예약 정보 설정** (날짜·시간·정원) | "예약 정보 관리" 모달 → 옵션 추가(JS click) + **방문 체크 종료 일시 필수** | 없음 (모달 닫힘=저장) |
-| **버튼 링크** (2단카드) | 패널 fiber `onUpdateItem(itemId,{linkButton})` 직접 호출 (UI는 크래시) | 없음 |
+| **버튼 링크** (2열 카드) | 패널 fiber `onUpdateItem(itemId,{linkButton})` 직접 호출 (UI는 크래시) | 없음 |
 | **카드 선택** (스크롤 없이) | board row 자식 div fiber `onClick`(`D(m.id)`) 직접 호출 — **보드 스크롤 ❌ 드리프트** | 없음 |
 | **카드 라벨(이름) 변경** | row의 title 입력(상시 존재)에 native setter+`input`+`blur()` — **한 번에 하나씩 + settle + 수렴 루프** (배치는 +1 시프트) | 없음 |
 
@@ -323,12 +323,12 @@ $B js "![...document.querySelectorAll('input')].find(e=>e.placeholder==='제목�
 - **효과**: 옵션당 픽커 클릭(캘린더 open+day + 시간 open+hour+minute ~2초) → onChange 2회(~0.2초). **옵션당 ~5초→~2초, S6 전체 ~50-60% 단축.** (구 결론의 "옵션당 ~5초 하한"은 픽커 클릭 전제라 무효화.)
 - ⚠️ input 식별 = placeholder / onChange 식별 = **소스 `isValid()`**(depth 아님). 어댑터·핸들러 모두 모달 열릴 때마다 재탐색(fiber 재생성).
 
-## 버튼 링크 — 2단카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
+## 버튼 링크 — 2열 카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
 
-2단카드 버튼/이미지 등의 **링크 연결**은 UI(레이아웃 탭 구성 버튼 행 클릭)가 **about:blank 크래시**를 유발하고, 디자인 탭 URL input은 `$B fill`·로컬 `Y(value)` onChange 모두 **블록 미반영**. → 패널 fiber의 **`onUpdateItem(itemId, {linkButton})`** 직접 호출(자동저장까지 반영).
+2열 카드 버튼/이미지 등의 **링크 연결**은 UI(레이아웃 탭 구성 버튼 행 클릭)가 **about:blank 크래시**를 유발하고, 디자인 탭 URL input은 `$B fill`·로컬 `Y(value)` onChange 모두 **블록 미반영**. → 패널 fiber의 **`onUpdateItem(itemId, {linkButton})`** 직접 호출(자동저장까지 반영).
 
 ```bash
-# 2단카드 선택(fiber onClick) 후, 패널 fiber에서 onUpdateItem 회수해 각 item 링크 설정
+# 2열 카드 선택(fiber onClick) 후, 패널 fiber에서 onUpdateItem 회수해 각 item 링크 설정
 $B js "(function(){
   var u=[...document.querySelectorAll('input')].find(e=>e.placeholder==='URL을 입력해주세요');  // 디자인 탭이 열려 있어야 함
   var f=window.__cdbd.fiberOf(u);var d=0;var oui=null;
