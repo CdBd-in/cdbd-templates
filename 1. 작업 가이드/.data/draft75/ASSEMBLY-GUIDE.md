@@ -110,12 +110,14 @@ y      = 0                 안2(에디토리얼) x_base + 480
 
 | 비율 | imageHash |
 |---|---|
-| **3:2 (가로)** | `6cc8fb0ee3b14b2d88ac5934f234e9d3529428cd` |
-| **1:1 (정사각)** | `b05b021ad9cb2e5b67508e7771555f84f26ec16c` |
+| **3:2 (가로)** | `1b6cd08c04da078418f1f1680ba67ca36f465ad4` |
+| **1:1 (정사각)** | `00f2fe370e11fffcadc0ba71e0c0ca64abadebb8` |
+
+> 🔄 2026-09-17 강남대로 373 위치로 재캡처(주소 플레이스홀더와 일치). 옛 해시(`6cc8fb0e…`·`b05b021a…` 영동대로 513판)는 폐기 — 파일 내 전수 교체 완료, 사용 ❌.
 
 적용법 — 지도 placeholder 노드(이름에 `지도`)의 fill을 교체하고 라벨 자식은 숨긴다:
 ```js
-mapNode.fills = [{type:"IMAGE", imageHash:"6cc8fb0ee3b14b2d88ac5934f234e9d3529428cd", scaleMode:"FILL"}];
+mapNode.fills = [{type:"IMAGE", imageHash:"1b6cd08c04da078418f1f1680ba67ca36f465ad4", scaleMode:"FILL"}];
 for (const c of (mapNode.children||[])) c.visible = false;   // "지도 임베드" 라벨 텍스트 숨김
 ```
 가로형이면 3:2, 1:1 모양이면 1:1 해시를 쓴다. (출처 = `조합 테스트 (A)` 페이지 `3325:70`)
