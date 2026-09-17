@@ -30,7 +30,7 @@
 - **T1 ✅** `dumpState()` 드라이버 추가 — 17/17 캡처·순서보존·읽기전용.
 - **T2 ✅** `.claude/cdbd-edit-shared.md` + `.claude/workflows/cdbd-editor-pipeline.js`(스텁+스키마).
 - **T3 ✅** `cdbd-edit-v1-textdesign` + `cdbd-edit-f1-fix` + 코어 루프(스냅샷→검증→수정→**영속화**) 증명.
-- **🔑 F1 영속화 정답**: block 참조 mutate → **`reorderCard` 라운드트립 commit**(autosave). 정렬버튼·패널 트리거는 커밋 안 됨(검증). `blockById` 드라이버 추가. 상세·부수발견(텍스트 디자인 2곳 저장): [[1-6-1. CdBd 에디터#🧪 파일럿 검증 (2026-07-06, editor 5025)]].
+- **🔑 F1 영속화 정답**: block 참조 mutate → **`reorderCard` 라운드트립 commit**(autosave). 정렬버튼·패널 트리거는 커밋 안 됨(검증). `blockById` 드라이버 추가. 상세·부수발견(텍스트 디자인 2곳 저장): [[1-6-1. CdBd 에디터#🧪 파일럿 검증 (editor 5025)]].
 - **T4~T14 ✅** 13 에이전트 전부 생성: S1~S6(생성)·V1~V5(검증)·F1·F2. V2~V5는 5025 스냅샷 라이브 테스트 통과(비텍스트 diff 20건). S1~S6·F2는 파일 완성(라이브 검증은 파일럿).
 - **T15 ✅** 오케스트레이터 완성(`.claude/workflows/cdbd-editor-pipeline.js`) — `mode`(full/verify/fix)·cardId+field 디둡·figmaFileKey. 본문 문법 검증 OK.
 - **🔑 학습(2026-07-06 2세션)**: ①**신규 에이전트는 세션 리로드 전 `agentType` 미해결** → 오케스트레이터 실행 전 리로드 필수(우회: general-purpose에 `.md` 스펙 읽힘). ②**V3↔V5 버튼 borderRadius 중복 검출** → 디둡으로 해결. ③5025 전체 검증 = 50 diff(V1 30 + 비텍스트 20).
