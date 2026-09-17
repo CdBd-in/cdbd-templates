@@ -6,7 +6,7 @@
 
 ---
 
-## 📍 행사장 (2026-08-21 변경 — 나고야 → 도쿄)
+## 📍 행사장 (변경 — 나고야 → 도쿄)
 
 구글맵에서 실제 확인한 값:
 
@@ -49,11 +49,11 @@ https://www.google.com/maps/search/?api=1&query=35.651527%2C139.737037&query_pla
 
 ```html
 <iframe
-  src="https://maps.google.com/maps?q=35.651527,139.737037&hl=ko&z=16&output=embed"
-  width="100%"
-  height="220"
-  style="border:0;"
-  allowfullscreen>
+ src="https://maps.google.com/maps?q=35.651527,139.737037&hl=ko&z=16&output=embed"
+ width="100%"
+ height="220"
+ style="border:0;"
+ allowfullscreen>
 </iframe>
 ```
 
@@ -66,13 +66,13 @@ https://www.google.com/maps/search/?api=1&query=35.651527%2C139.737037&query_pla
 
 ```html
 <div style="position:relative;width:100%;padding-bottom:66.67%;border-radius:16px;overflow:hidden;">
-  <iframe
-    src="https://maps.google.com/maps?q=35.651527,139.737037&hl=ko&z=16&output=embed"
-    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
+ <iframe
+ src="https://maps.google.com/maps?q=35.651527,139.737037&hl=ko&z=16&output=embed"
+ style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+ loading="lazy"
+ referrerpolicy="no-referrer-when-downgrade"
+ allowfullscreen>
+ </iframe>
 </div>
 ```
 

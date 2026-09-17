@@ -31,7 +31,7 @@ purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로�
 | 2-15 · 2-17 룩북 | 패션 화보 | 산업재 스펙형 |
 → **「멀티페이지 · 라인업별 1장 · 복제로 계속 늘리는 카탈로그」는 현재 0개.**
 
-## 근거가 된 실사용 관찰 (이선호 제공)
+## 근거가 된 실사용 관찰 (제공)
 - 미팅 후 남기는 **PDF 카탈로그는 열리지 않는다** — 무겁고 메일에 묻힘.
 - **상품 라인업별 카드 링크**를 남기면 담당자가 필요한 것만 클릭.
 - 한 **B2B 산업재 제조사(LED·디스플레이 계열)** 가 **6~7종 라인업을 각각 카드로** 제작해 세일즈에 활용.
@@ -60,12 +60,12 @@ purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로�
 
 - **원본**: `~/Downloads/루멘스텍 라인업 카탈로그 3안.html` (claude.ai/design 번들 · 23MB)
 - **산출물**: [Figma 페이지 「b2b-lineup-catalog 시안 3안 (HTML 반입)」](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1512-81)
-  - [시안 1a 인덱스형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-160) · [시안 1b 카탈로그 그리드형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-161) · [시안 1c 스펙시트형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-162)
-  - **3안 × 8페이지 = 24 프레임 · 카드 475장 · 텍스트 727개**
+ - [시안 1a 인덱스형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-160) · [시안 1b 카탈로그 그리드형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-161) · [시안 1c 스펙시트형](https://www.figma.com/design/qRFc2HpQ4Mp562LQMB8BX0/CdBd-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80?node-id=1520-162)
+ - **3안 × 8페이지 = 24 프레임 · 카드 475장 · 텍스트 727개**
 
 ### 반입 방법 (재사용 가능한 절차)
 1. **HTML을 headless 브라우저로 렌더**(`browse`) → DOM에서 **computed style을 스펙 JSON으로 추출**(패딩·배경·테두리·모서리·flex/grid·텍스트 속성).
-   - ⚠️ 이 HTML은 React 번들이라 **파일을 파싱해선 내용이 안 나온다** — 반드시 렌더 후 DOM에서 뽑아야 한다.
+ - ⚠️ 이 HTML은 React 번들이라 **파일을 파싱해선 내용이 안 나온다** — 반드시 렌더 후 DOM에서 뽑아야 한다.
 2. 스펙 JSON을 `use_figma` 빌더로 **오토레이아웃 프레임 트리**로 재생성.
 3. **라인업 장 P2~P7은 P2를 복제 + 텍스트만 교체**(안당 텍스트 26~32개 · 차이나는 인덱스만 diff로 주입) — 원본이 "6장 동일 구성"이라 가능.
 
@@ -88,16 +88,16 @@ purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로�
 
 ## ✅ 2026-09-15 — 시안 **1b 채택** · 이미지 44개 적용 완료
 
-- 📍 **정본 위치 (이선호가 옮김)**: [CdBd 템플릿 등록 › 사례 기획 › 시안 1b 섹션 `1767:1346`](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1767-1346)
-  - P1 `1767:1347` · P2~P7 `1767:1413 / 1479 / 1545 / 1611 / 1677 / 1743` · P8 `1767:1809`
-  - 🔴 **HTML 반입은 앞으로 이 파일·이 페이지에** → CLAUDE.md 작업 환경에 규칙 추가함
+- 📍 **정본 위치 (가 옮김)**: [CdBd 템플릿 등록 › 사례 기획 › 시안 1b 섹션 `1767:1346`](https://www.figma.com/design/oi8zIHLfy59O5zV8aysqq4/CdBd-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%93%B1%EB%A1%9D?node-id=1767-1346)
+ - P1 `1767:1347` · P2~P7 `1767:1413 / 1479 / 1545 / 1611 / 1677 / 1743` · P8 `1767:1809`
+ - 🔴 **HTML 반입은 앞으로 이 파일·이 페이지에** → CLAUDE.md 작업 환경에 규칙 추가함
 - 🖼 **이미지 44개** (gpt-image-1 medium · 약 $1.81)
-  | 슬롯 | 수 | 내용 |
-  |---|---:|---|
-  | 표지 대표 비주얼 (390×520) | 1 | 야간 도심 미디어파사드 |
-  | 라인업 대표 제품컷 (390×390) | 6 | 관제실 LED 월 / 옥외 사이니지 / 경기장 펜스보드 / 투명 필름 / 고천장 조명 / 랙 컨트롤러 |
-  | 적용 사례 갤러리 (168×126) | 36 | 라인업마다 **6컷씩 전부 다른 장면** |
-  | 지도 | 1 | 고정 지도 자산(`map-embed_3x2.jpg`) 재사용 |
+ | 슬롯 | 수 | 내용 |
+ |---|---:|---|
+ | 표지 대표 비주얼 (390×520) | 1 | 야간 도심 미디어파사드 |
+ | 라인업 대표 제품컷 (390×390) | 6 | 관제실 LED 월 / 옥외 사이니지 / 경기장 펜스보드 / 투명 필름 / 고천장 조명 / 랙 컨트롤러 |
+ | 적용 사례 갤러리 (168×126) | 36 | 라인업마다 **6컷씩 전부 다른 장면** |
+ | 지도 | 1 | 고정 지도 자산(`map-embed_3x2.jpg`) 재사용 |
 - 🎨 **톤**: 배경 `#0F1318` · 액센트 `#6ED0FF`에 맞춘 **저조도 + 시안 글로우**. 썸네일 가독성 위해 생성 후 밝기 +18%(대표컷)·+35%(갤러리) 리프트.
 - 🚫 **프롬프트 제약**: LED 화면에 **글자·숫자·로고가 절대 안 나오게** (`abstract colour gradients only`) — AI 텍스트 렌더링은 항상 깨지므로.
 
