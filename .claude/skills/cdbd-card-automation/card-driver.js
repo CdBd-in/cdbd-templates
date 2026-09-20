@@ -208,7 +208,14 @@
     // 현재 고정 여부는 핸들러 소스로 알 수 없음(소스엔 항상 unpinTitle 포함) →
     // block.fixedPosition(top/bottom/null)으로 판별.
     const blk = blockOfRow(row);
-    const pinned = !!(blk && blk.fixedPosition);
+    // 🔴 2026-09-21 수정 (결함 A1·A2) — block에 `fixedPosition`은 **존재하지 않는다**.
+    // 실측 필드(profile/image 공통): id, type, title, style, innerStyle, content,
+    //   previewText, **disabled**, **active**  (+타입별: profile, link, shape …)
+    // 옛 `isShow`·`fixedPosition`은 둘 다 없는 이름이라 항상 undefined였고,
+    // 그 결과 pinned가 **구조적으로 항상 false**였다(조용한 오답).
+    // 🔑 핀 상태는 블록에도, 행 fiber 상위 30단계에도 없다(2026-09-21 실측 · 미해결).
+    //    그래서 false로 단정하지 않고 **null(=모름)** 을 돌려 호출부가 알아채게 한다.
+    const pinned = blk && "fixedPosition" in blk ? !!blk.fixedPosition : null;
     for (const b of row.querySelectorAll("button")) {
       let n = fiberOf(b);
       for (let i = 0; i < 3 && n; i++) {
@@ -336,20 +343,60 @@
   // ── 카드 순서 변경 (dnd-kit onDragEnd 직접 호출) ───────────────────────
   // 마우스/키보드 이벤트는 dnd-kit이 무시 → DndContext의 onDragEnd 콜백을 fiber에서
   // 찾아 {active, over}로 직접 호출하면 arrayMove reorder가 즉시 동작.
-  const _sortableCtx = () => {
-    const s = document.querySelector("[aria-roledescription=sortable]");
-    if (!s) return null;
-    const fk = Object.keys(s).find((k) => k.startsWith("__reactFiber"));
-    let fiber = s[fk],
-      items = null,
-      onDragEnd = null;
-    for (let i = 0; i < 60 && fiber; i++) {
-      const p = fiber.memoizedProps;
-      if (p && p.items && !items) items = p.items;
-      if (p && typeof p.onDragEnd === "function" && !onDragEnd) onDragEnd = p.onDragEnd;
-      fiber = fiber.return;
+  // 🔴 2026-09-21 수정 (결함 A4) — 옛 구현은 document.querySelector로 **첫 번째** sortable만
+  // 집었다. 멀티페이지 문서에는 sortable 컨텍스트가 여러 개(실측 10개) 있고 그중 하나가
+  // **페이지 썸네일 레일**이라, 카드가 아니라 페이지 목록을 잡아 dumpState가 통째로 깨졌다.
+  //   증상: {total:4, captured:0, missing:[4개]}  ← 4 = 페이지 수
+  //   판별: 페이지 id는 nanoid("pPl1n-Q1nM4oh7vfaWL_M"), 카드 id는 UUID("be3c1600-…")
+  // 이제 모든 sortable을 훑어 **items가 실제 블록 id와 겹치는** 컨텍스트를 고른다.
+  const _sortableCtxAll = () => {
+    const out = [];
+    for (const s of document.querySelectorAll("[aria-roledescription=sortable]")) {
+      const fk = Object.keys(s).find((k) => k.startsWith("__reactFiber"));
+      if (!fk) continue;
+      let fiber = s[fk],
+        items = null,
+        onDragEnd = null;
+      for (let i = 0; i < 60 && fiber; i++) {
+        const p = fiber.memoizedProps;
+        if (p && p.items && !items) items = p.items;
+        if (p && typeof p.onDragEnd === "function" && !onDragEnd) onDragEnd = p.onDragEnd;
+        fiber = fiber.return;
+      }
+      if (items && onDragEnd) out.push({ items, onDragEnd });
     }
-    return items && onDragEnd ? { items, onDragEnd } : null;
+    return out;
+  };
+
+  const _sortableCtx = () => {
+    const ctxs = _sortableCtxAll();
+    if (!ctxs.length) return null;
+    // 마운트된 블록 id 집합
+    const ids = new Set();
+    for (const el of document.querySelectorAll("div")) {
+      let n = fiberOf(el),
+        d = 0;
+      while (n && d < 2) {
+        const b = n.memoizedProps && n.memoizedProps.block;
+        if (b && b.id) ids.add(b.id);
+        n = n.return;
+        d++;
+      }
+    }
+    const idOf = (it) => (typeof it === "object" && it ? it.id : it);
+    // ① items가 블록 id와 겹치는 것 우선 (겹침 수가 가장 많은 것)
+    let best = null,
+      bestHit = 0;
+    for (const c of ctxs) {
+      const hit = c.items.filter((it) => ids.has(idOf(it))).length;
+      if (hit > bestHit) {
+        bestHit = hit;
+        best = c;
+      }
+    }
+    if (best) return best;
+    // ② 못 고르면 null — 🔑 옛 구현처럼 "엉뚱한 컨텍스트로 조용히 성공"하지 않는다
+    return null;
   };
 
   // 현재 카드 순서 [{id,type}] (sortable items 기준 = 보드 표시 순서)
