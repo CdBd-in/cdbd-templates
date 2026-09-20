@@ -146,7 +146,10 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
 
 - matcher = `{type}` | `{id}` | `{index}` (openKebab과 동일).
 - ⚠️ **고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로 이동** → 위치(x)로 찾으면 실패. 드라이버는 onClick 시그니처(`unpinTitle`/`K(e.currentTarget)`)로 핀 버튼을 식별.
-- 고정 여부는 핸들러 소스로 알 수 없음(항상 `unpinTitle` 포함) → **`block.fixedPosition`**(`"top"`/`"bottom"`/`null`)으로 판별. `openPin`이 자동 처리(미고정→메뉴, 고정→확인창).
+- 🔴 **2026-09-21 정정** — ~~`block.fixedPosition`으로 판별~~ **그런 필드는 존재하지 않는다**(핀 전/후 블록 키 동일 · 실측).
+  🔑 **고정하면 그 카드가 sortable 목록에서 빠진다** — 실측: 고정 전 `boardRows 6 / sortable 6` → 고정 후 `boardRows 6 / **sortable 5**`.
+  ✅ **판별은 차집합** — `pinnedIds()` 를 쓸 것(보드 행엔 있는데 sortable items 엔 없는 id = 고정됨).
+  ⚠️ **해제하면 카드가 원위치가 아니라 맨 앞(index 0)으로 돌아온다.** 원래 자리로 돌리려면 `reorderCard()` 를 이어서 호출할 것.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
@@ -341,3 +344,42 @@ $B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location
 - 식별은 **라벨 아님, fiber `block.type`** ([[CLAUDE.md]] SVG 시그니처 원칙과 동일 취지: DOM 텍스트로 추정 금지).
 
 전체 드라이버: `card-driver.js` (window.__cdbd 메서드: openAddModal, pickCardType, confirmReservation, openKebab, menuClick, confirmSwal, count, blocks, blockOfRow).
+
+
+---
+
+## 🔧 2026-09-21 — 자동화 결함 재검증·수리 (구간 1 게이트 A단계)
+
+> 🖥 실측 환경 — `editor/6297` · 헤드리스 `gstack browse` + 본 드라이버 주입
+> 📎 전체 기록 = `design` 볼트 `CdBd 기능 녹화 영상/영상 판독 기록/구간 1.md`
+
+### 🚨 결함보다 먼저 — **인증이 16일째 만료돼 있었다**
+`~/.config/cdbd/credentials.json` 의 refresh token 만료(`refresh_token_not_found`). **자동화가 이유 없이 실패하면 제일 먼저 이걸 확인**할 것 → `[SV] _기능별 경로 가이드 §4-2「인증·세션」`
+
+### 블록의 **실제 필드** (실측)
+```
+공통  : id, type, title, style, innerStyle, content, previewText, disabled, active
+profile: + profile        image: + link, shape
+```
+🔴 **`isShow` 없음 · `fixedPosition` 없음.** 옛 지침의 두 이름은 **둘 다 존재하지 않는다.**
+
+### 결함별 결과
+
+| # | 결함 | 결과 | 핵심 |
+|---|---|:---:|---|
+| **A1** | 필드명 오류 | ✅ | `isShow`→**`disabled`**(의미 반대) · `fixedPosition`→**없음** |
+| **A2** | `pinned` 항상 false | ✅ | 핀은 **sortable 목록에서 빠지는 것**으로 표현 → `pinnedIds()` |
+| **A3** | 표시 토글 헬퍼 부재 | ✅ | `setShown(i,bool)`·`isShown(i)`·`toggleOf(i)` 신설 |
+| **A4** | `dumpState()` 붕괴 | ✅ | `_sortableCtx`가 **페이지 레일**을 잡던 문제 |
+| **A6** | `openImageUpload()` 실패 | ✅ | **빈 이미지 카드에서는 정상 동작** — 실패는 결함이 아니라 전제 문제 |
+| ~~A7~~ | `blockOfRow` null | 🔁 | **철회** — `blockOfRow(el)`는 **엘리먼트** 인자. 인덱스를 넣은 내 오용 |
+
+### ⚠️ 새로 확정된 함정 4가지
+1. **표시 ON = `disabled:false`** — 옛 `isShow`와 **의미가 반대**다. 그대로 포팅하면 전부 거꾸로 돈다.
+2. **React `onChange` 직접 호출은 실패한다** — 토글은 반드시 **`input[type=checkbox].click()`**.
+3. **핀 해제 시 카드가 맨 앞으로 간다** — 원위치 복구는 호출부 책임.
+4. **`openImageUpload`는 「빈 이미지 카드」 전용** — 이미 이미지가 든 카드는 그 버튼이 없고 **호버 편집 버튼**으로 바뀐다. 교체 경로는 **여전히 미구현**.
+
+### 🔑 A4가 가장 컸다
+`dumpState()` 는 검증 에이전트(V1~V5)·수정(F1)의 **입력 스냅샷**이다. 멀티페이지 문서에서 `{total:4, captured:0}` 으로 통째로 깨져 있었다 — **멀티 문서 자동화는 전부 잘못된 입력 위에서 돌고 있었다.**
+판별 단서: **페이지 id는 nanoid**(`pPl1n-Q1nM…`), **카드 id는 UUID**(`be3c1600-…`).

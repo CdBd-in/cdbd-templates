@@ -215,7 +215,7 @@
     // 그 결과 pinned가 **구조적으로 항상 false**였다(조용한 오답).
     // 🔑 핀 상태는 블록에도, 행 fiber 상위 30단계에도 없다(2026-09-21 실측 · 미해결).
     //    그래서 false로 단정하지 않고 **null(=모름)** 을 돌려 호출부가 알아채게 한다.
-    const pinned = blk && "fixedPosition" in blk ? !!blk.fixedPosition : null;
+    const pinned = _isPinned(blk);
     for (const b of row.querySelectorAll("button")) {
       let n = fiberOf(b);
       for (let i = 0; i < 3 && n; i++) {
@@ -397,6 +397,55 @@
     if (best) return best;
     // ② 못 고르면 null — 🔑 옛 구현처럼 "엉뚱한 컨텍스트로 조용히 성공"하지 않는다
     return null;
+  };
+
+  // 🔑 2026-09-21 신설 (결함 A2 해결) — **핀 상태는 블록 필드가 아니다.**
+  // block에 fixedPosition/isPinned 같은 필드는 **존재하지 않는다**(실측: 핀 전/후 키 동일).
+  // 고정하면 그 카드가 **sortable 목록에서 빠져** 별도 컨테이너로 이동한다.
+  //   실측: 고정 전 boardRows 6 / sortable 6 → 고정 후 boardRows 6 / sortable **5**
+  // 따라서 판별은 **차집합**이다: boardRows 에는 있는데 sortable items 에는 없으면 = 고정됨.
+  // ⚠️ 해제하면 카드가 **맨 앞(index 0)** 으로 돌아온다. 원위치가 아니다 — 필요하면 reorderCard 로 복구.
+  const pinnedIds = () => {
+    const ctx = _sortableCtx();
+    if (!ctx) return null; // 컨텍스트를 못 고르면 "모름"
+    const idOf = (it) => (typeof it === "object" && it ? it.id : it);
+    const inSortable = new Set(ctx.items.map(idOf));
+    const out = [];
+    for (const el of boardRows()) {
+      const b = blockOfRow(el);
+      if (b && b.id && !inSortable.has(b.id)) out.push(b.id);
+    }
+    return out;
+  };
+  const _isPinned = (blk) => {
+    if (!blk || !blk.id) return null;
+    const ids = pinnedIds();
+    return ids ? ids.includes(blk.id) : null;
+  };
+
+  // 🔑 2026-09-21 신설 (결함 A3 해결) — 표시 토글.
+  // 옛 SKILL.md 는 `block.isShow` 를 보라고 했으나 **그런 필드는 없다.**
+  // 실측: 카드 행의 MUI Switch(input[type=checkbox]) 를 네이티브 click 하면
+  //       checked:true → false 와 동시에 **block.disabled: false → true** 로 바뀐다.
+  //   즉 **표시 ON = disabled:false / 표시 OFF = disabled:true** (isShow 의 반대 의미)
+  // ⚠️ React onChange 직접 호출은 실패한다. **반드시 input.click()**.
+  const toggleOf = (index = 0) => {
+    const row = boardRows()[index];
+    if (!row) return null;
+    return row.querySelector("input[type=checkbox]");
+  };
+  const isShown = (index = 0) => {
+    const row = boardRows()[index];
+    if (!row) return null;
+    const b = blockOfRow(row);
+    return b ? !b.disabled : null;
+  };
+  const setShown = (index = 0, show = true) => {
+    const inp = toggleOf(index);
+    if (!inp) return `no-toggle[${index}]`;
+    if (inp.checked === !!show) return `already:${show ? "on" : "off"}`;
+    inp.click();
+    return `toggled:${show ? "on" : "off"}`;
   };
 
   // 현재 카드 순서 [{id,type}] (sortable items 기준 = 보드 표시 순서)
@@ -608,6 +657,10 @@
     confirmSwal,
     openPin,
     pinTo,
+    pinnedIds,
+    toggleOf,
+    isShown,
+    setShown,
     openImageUpload,
     uploadImage,
     applyImage,
