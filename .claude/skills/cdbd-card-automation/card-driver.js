@@ -187,6 +187,120 @@
     return "swal-confirmed";
   };
 
+  // ── 공통: matcher로 block 찾기 ────────────────────────────────────────
+  const _blockByMatcher = (matcher = {}) => {
+    const rows = boardRows();
+    if (matcher.index != null) return blockOfRow(rows[matcher.index]);
+    for (const el of rows) {
+      const b = blockOfRow(el);
+      if (!b) continue;
+      if (matcher.id && b.id === matcher.id) return b;
+      if (matcher.type && b.type === matcher.type) return b;
+    }
+    return null;
+  };
+  const _rowByMatcher = (matcher = {}) => {
+    const rows = boardRows();
+    if (matcher.index != null) return rows[matcher.index] || null;
+    for (const el of rows) {
+      const b = blockOfRow(el);
+      if (!b) continue;
+      if (matcher.id && b.id === matcher.id) return el;
+      if (matcher.type && b.type === matcher.type) return el;
+    }
+    return null;
+  };
+
+  // ── 표시 토글 (ON/OFF) ────────────────────────────────────────────────
+  // 🚨 2026-09-08 실측 정정: 토글 필드는 `isShow`가 **아니다**. 그런 필드는 없다.
+  //    실제 필드 = `block.disabled` (**반전**). disabled:true = 토글 OFF = 방문자에게 안 보임.
+  //    block이 실제로 갖는 키: id,type,style,title,active,disabled,content,previewText,
+  //                            colorPicker,backgroundImage  (🔴 9/08의 「(고정 시)fixedPosition」은 9/21 실측으로 철회 — 핀 전/후 키 동일)
+  const cardVisible = (matcher = {}) => {
+    const b = _blockByMatcher(matcher);
+    return b ? !b.disabled : null;
+  };
+  const setCardVisible = (matcher = {}, visible = true) => {
+    const row = _rowByMatcher(matcher);
+    if (!row) return "no-row";
+    const input = row.querySelector(".MuiSwitch-root input");
+    if (!input) return "no-switch";
+    if (input.checked === !!visible) return `already:${visible}`;
+    input.click();
+    return `toggled:${visible} (미검증 — sleep 후 cardVisible() 확인)`;
+  };
+
+  // ── 여백 (내부여백 / 외부여백) ────────────────────────────────────────
+  // 🚨 2026-09-08 실측으로 확정한 유일한 커밋 경로:
+  //    native value setter → **React props.onChange** → **React props.onBlur**
+  //    ❌ 안 되는 것: new Event('input'/'change') dispatch · el.blur() · Tab · 다른 필드 click
+  //       · $B fill · 슬라이더 onChange(존재 안 함) · PointerEvent 드래그
+  //    ⚠️ onBlur를 부르지 않으면 필드에 값은 보이는데 block.style에 커밋되지 않는다(리로드 시 유실).
+  //    저장 형식은 CSS shorthand — 예: margin:'0px 0px 0px 40px'(좌40), padding:'20px 40px'(상하20·좌우40)
+  const _setSpacingField = (input, val) => {
+    const k = Object.keys(input).find((x) => x.startsWith("__reactProps"));
+    const p = input[k];
+    if (!p || !p.onChange) return false;
+    const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
+    setter.call(input, String(val));
+    const ev = { target: input, currentTarget: input, stopPropagation() {}, preventDefault() {} };
+    p.onChange({ ...ev, type: "change" });
+    if (p.onBlur) p.onBlur({ ...ev, type: "blur" });
+    return true;
+  };
+
+  // 여백 아코디언(∧)을 펼치고 상/하/좌/우 input을 찾아 준다.
+  // kind: '외부여백' | '내부여백'
+  const openSpacing = (kind = "외부여백") => {
+    const lab = [...document.querySelectorAll("*")].find(
+      (e) => e.childElementCount === 0 && e.textContent.trim() === kind
+    );
+    if (!lab) return `no-label:${kind}`;
+    const btn = lab.parentElement.querySelector("button");
+    if (!btn) return `no-accordion:${kind}`;
+    btn.click();
+    return `opened:${kind}`;
+  };
+
+  const _spacingInputs = (kind = "외부여백") => {
+    const lab = [...document.querySelectorAll("*")].find(
+      (e) => e.childElementCount === 0 && e.textContent.trim() === kind
+    );
+    if (!lab) return null;
+    const wrap = lab.parentElement.parentElement;
+    const map = {};
+    [...wrap.querySelectorAll("*")]
+      .filter((e) => e.childElementCount === 0 && ["상", "하", "좌", "우"].includes(e.textContent.trim()))
+      .forEach((d) => {
+        const n = d.textContent.trim();
+        if (map[n]) return;
+        const i = d.parentElement.querySelector("input:not([type=range])");
+        if (i) map[n] = i;
+      });
+    return map;
+  };
+
+  // 카드가 이미 선택돼 있고 openSpacing(kind)로 펼친 상태에서 호출.
+  // vals 예: {좌:40, 우:40} / {상:0, 하:0, 좌:40, 우:40}
+  const setSpacing = (kind = "외부여백", vals = {}) => {
+    const map = _spacingInputs(kind);
+    if (!map) return `no-panel:${kind}`;
+    const done = [];
+    for (const [dir, v] of Object.entries(vals)) {
+      if (!map[dir]) { done.push(`${dir}:no-field`); continue; }
+      done.push(`${dir}:${_setSpacingField(map[dir], v) ? v : "fail"}`);
+    }
+    return `${kind} ${done.join(" ")} (미검증 — sleep 후 blockOfRow().style 확인)`;
+  };
+
+  const spacingValues = (kind = "외부여백") => {
+    const map = _spacingInputs(kind);
+    if (!map) return null;
+    const o = {};
+    for (const [d, i] of Object.entries(map)) o[d] = i.value;
+    return o;
+  };
+
   // ── 카드 고정 (핀) ────────────────────────────────────────────────────
   // 핀 버튼은 드래그 핸들 옆. ⚠️ 고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로
   // 이동하므로 위치(x)로 찾으면 안 됨 → onClick 소스 시그니처로 식별.
@@ -249,9 +363,30 @@
     const fn = onClickOf(it, 4);
     if (!fn) return `no-handler:${label}`;
     fn({ stopPropagation: () => {}, preventDefault: () => {} });
-    return `pinned:${position}`;
+    // ⚠️ 2026-09-08 실측: 상단/하단 자리가 이미 차 있으면 「고정 카드 교체하기」 모달이 뜨고
+    //    고정은 되지 않는다. 예전 코드는 여기서 무조건 `pinned:top`을 반환해 **거짓 성공**이었다.
+    return `pin-clicked:${position} (미검증 — sleep 후 pinVerify() 필수)`;
   };
-  // 고정: openPin(matcher) → (sleep) → pinTo('top'/'bottom')
+
+  // 「고정 카드 교체하기」 모달 확인. ⚠️ SweetAlert 아님(.swal2-popup 없음) → confirmSwal() 안 통함
+  const confirmReplace = () => {
+    const btn = [...document.querySelectorAll("button")].find(
+      (b) => b.textContent.trim() === "교체하기"
+    );
+    if (!btn) return "no-replace-modal";
+    btn.click();
+    return "replaced";
+  };
+
+  // 고정 결과 검증.
+  // 🔴 2026-09-21 정정 — 옛 구현은 `block.fixedPosition`을 봤으나 **그런 필드는 없다**(핀 전/후 블록 키 동일 · 실측).
+  //    그래서 항상 null(=고정 안 됨)을 돌려 **고정이 돼도 실패로 보였다.** → `pinnedIds()` 차집합으로 판별.
+  //    반환: true(고정됨) / false(안 됨) / null(판별 불가). ⚠️ 상단·하단 구분은 아직 못 한다(⏳).
+  const pinVerify = (matcher = {}) => {
+    const b = _blockByMatcher(matcher);
+    return b ? _isPinned(b) : null;
+  };
+  // 고정: openPin → (sleep) → pinTo → (sleep) → [교체 모달이면 confirmReplace] → pinVerify
   // 해제: openPin(matcher) → (sleep) → confirmSwal()
 
   // ── 이미지 업로드/적용 (React onDrop·onClick 직접 호출) ────────────────
@@ -343,6 +478,10 @@
   // ── 카드 순서 변경 (dnd-kit onDragEnd 직접 호출) ───────────────────────
   // 마우스/키보드 이벤트는 dnd-kit이 무시 → DndContext의 onDragEnd 콜백을 fiber에서
   // 찾아 {active, over}로 직접 호출하면 arrayMove reorder가 즉시 동작.
+  // 📜 2026-09-08 (g1) 1차 수정 — 옛 구현은 DOM 첫 번째 sortable(=페이지 사이드바)을 잡아
+  //    카드가 아니라 **페이지 순서**를 바꾸고도 `moved`를 반환했다(조용한 오작동).
+  //    g1은 `items.length === boardRows().length`로 골랐으나, 🔴 **카드를 고정하면 그 카드가 sortable에서
+  //    빠지므로(6 → 5) 길이가 어긋나 고정 카드가 있는 문서에선 항상 실패**한다 → 아래 9/21 방식(id 겹침)으로 통합.
   // 🔴 2026-09-21 수정 (결함 A4) — 옛 구현은 document.querySelector로 **첫 번째** sortable만
   // 집었다. 멀티페이지 문서에는 sortable 컨텍스트가 여러 개(실측 10개) 있고 그중 하나가
   // **페이지 썸네일 레일**이라, 카드가 아니라 페이지 목록을 잡아 dumpState가 통째로 깨졌다.
@@ -473,6 +612,7 @@
   const reorderCard = (fromIdx, toIdx) => {
     const ctx = _sortableCtx();
     if (!ctx) return "no-sortable-ctx";
+    if (!ctx.onDragEnd) return "wrong-sortable-ctx — 카드 컨텍스트를 못 찾음. 페이지 목록을 건드릴 뻔했으므로 중단";
     const items = ctx.items;
     if (fromIdx < 0 || fromIdx >= items.length || toIdx < 0 || toIdx >= items.length)
       return `out-of-range(len=${items.length})`;
@@ -641,6 +781,13 @@
   //   권장 F1 시퀀스: 참조 mutate → reorderCard(a,b) [sleep] → reorderCard(b,a) [sleep] → dumpState 검증.
 
   window.__cdbd = {
+    openSpacing,
+    setSpacing,
+    spacingValues,
+    cardVisible,
+    setCardVisible,
+    pinVerify,
+    confirmReplace,
     fiberOf,
     onClickOf,
     boardRows,

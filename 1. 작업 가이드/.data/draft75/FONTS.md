@@ -29,6 +29,6 @@ Playfair Display · Cormorant · Libre Baskerville · EB Garamond · Lora · Mar
 Inter · Montserrat · Poppins · DM Sans · Work Sans · Manrope · Outfit · Archivo ·
 Space Grotesk · Syne · Josefin Sans · Bebas Neue · Oswald · Zeyada
 
-## 웨이트 매핑 규칙 (프리셋 원본 웨이트 → 무드 폰트)
+## 웨이트 매핑 규칙 (섹션 원본 웨이트 → 무드 폰트)
 원본이 Bold/SemiBold → 그 패밀리의 가장 굵은 것 · 원본이 Regular/Medium → Regular 계열.
 가용 웨이트가 2개뿐인 폰트(Gmarket·S-Core)는 **Bold↔Light / 7↔4** 두 단계로만.

@@ -14,8 +14,8 @@
       "accent-modern": { "role": "primary", "displayName": "모던 바이올렛", "canonical": "#7F5AF0" },
       "accent-vivid": { "role": "primary", "displayName": "비비드 오렌지", "canonical": "#FF8906" },
       "accent-vintage": { "role": "primary", "displayName": "빈티지 브론즈", "canonical": "#8C7851" },
-      "accent-fun": { "role": "primary", "displayName": "펀 옐로", "canonical": "#FFD803" },
-      "accent-dreamy": { "role": "primary", "displayName": "드리미 핑크", "canonical": "#F582AE" }
+      "accent-fun": { "role": "primary", "displayName": "플레이풀 옐로", "canonical": "#FFD803" },
+      "accent-dreamy": { "role": "primary", "displayName": "감성적 핑크", "canonical": "#F582AE" }
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "페이지 최상단 타이틀·로고 타이포. 무드 디스플레이 폰트, 강제 Bold." },

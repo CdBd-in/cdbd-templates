@@ -15,7 +15,8 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 - 이전 세션 잔존 카드 일괄 삭제
 - 같은 카드(텍스트·버튼 등) 반복 복제
 
-**When NOT:** 카드 디자인 슬라이더 세부값(우측 패널) — 별도 패턴(미통합). (카드 라벨 변경은 이제 지원 — 아래 "카드 라벨(이름) 변경" 참조.)
+**When NOT:** 배경 이미지 밝기·테두리 등 일부 카드 디자인 옵션 — 미통합.
+(**여백(내부·외부)은 이제 지원** — 아래 「카드 여백」 참조 · 2026-09-08 신설. 카드 라벨 변경도 지원 — 「카드 라벨(이름) 변경」 참조.)
 
 ## Quick reference (검증: editor 4903)
 
@@ -26,12 +27,12 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 | 추가 (**예약**) | 타입 항목 onClick → **크레딧 확인 다이얼로그** 1회 더 | "예약 카드 추가하기" (⚠️ 확정은 크레딧 필요) |
 | **삭제** | kebab 열기 → '카드 삭제하기' → **SweetAlert 확인** | "삭제하시겠어요?" |
 | **복제** | kebab 열기 → '카드 복제하기' | 없음 (예약만 DB조회로 느림) |
-| **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 🚨 **표시 토글 OFF 카드는 순서 변경 불가**(영상 1-3 실측 2026-09-04). ⚠️ **핸들·핀 아이콘은 회색으로 계속 보이므로 "보이니까 되겠지"로 가정하면 조용히 실패** → 이동 전 `block.isShow`(토글 상태) 확인, OFF면 **먼저 ON으로 켜고 이동한 뒤 되돌릴 것** |
+| **순서 변경** | dnd-kit `onDragEnd` 직접 호출 (`reorderCard(from,to)`) | 🚨 **표시 토글 OFF 카드는 순서 변경 불가**(영상 1-3 실측 2026-09-04). ⚠️ **핸들·핀 아이콘은 회색으로 계속 보이므로 "보이니까 되겠지"로 가정하면 조용히 실패** → 이동 전 **`cardVisible({index})`** 확인, OFF면 **`setCardVisible({index}, true)`** 로 켜고 이동한 뒤 되돌릴 것<br>🚨 **2026-09-08 정정: `block.isShow`라는 필드는 존재하지 않는다.** 실제 필드 = **`block.disabled`(반전)** — `disabled:true` = OFF |
 | **고정 (핀)** | 핀 버튼 onClick → 위치 메뉴(상단/하단) / 해제는 확인창 | 해제 시 "고정 해제하기" |
 | **이미지 업로드/적용** | dropzone `onDrop` 직접 호출 → 라이브러리 선택 → 적용하기 | 없음 |
 | **페이지 색상** (배경·텍스트·버튼) | 색상 더보기 → 슬롯 `onChange("#hex")` 직접 호출 (swatch 클릭 ❌) | 저장 시 "페이지 테마 변경하기" |
 | **예약 정보 설정** (날짜·시간·정원) | "예약 정보 관리" 모달 → 옵션 추가(JS click) + **방문 체크 종료 일시 필수** | 없음 (모달 닫힘=저장) |
-| **버튼 링크** (2단카드) | 패널 fiber `onUpdateItem(itemId,{linkButton})` 직접 호출 (UI는 크래시) | 없음 |
+| **버튼 링크** (2열 카드) | 패널 fiber `onUpdateItem(itemId,{linkButton})` 직접 호출 (UI는 크래시) | 없음 |
 | **카드 선택** (스크롤 없이) | board row 자식 div fiber `onClick`(`D(m.id)`) 직접 호출 — **보드 스크롤 ❌ 드리프트** | 없음 |
 | **카드 라벨(이름) 변경** | row의 title 입력(상시 존재)에 native setter+`input`+`blur()` — **한 번에 하나씩 + settle + 수렴 루프** (배치는 +1 시프트) | 없음 |
 
@@ -150,7 +151,48 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
   🔑 **고정하면 그 카드가 sortable 목록에서 빠진다** — 실측: 고정 전 `boardRows 6 / sortable 6` → 고정 후 `boardRows 6 / **sortable 5**`.
   ✅ **판별은 차집합** — `pinnedIds()` 를 쓸 것(보드 행엔 있는데 sortable items 엔 없는 id = 고정됨).
   ⚠️ **해제하면 카드가 원위치가 아니라 맨 앞(index 0)으로 돌아온다.** 원래 자리로 돌리려면 `reorderCard()` 를 이어서 호출할 것.
+- 🚨 **2026-09-08 실측 — `pinTo`는 거짓 성공을 냈었다.** 상단/하단 자리가 이미 차 있으면 **「고정 카드 교체하기」 모달**이 뜨고 고정은 되지 않는데, 옛 코드는 `pinned:top`을 반환했다.
+  - 이 모달은 **SweetAlert가 아니다**(`.swal2-popup` 없음) → `confirmSwal()`로 안 닫힌다. **`confirmReplace()`** 를 쓸 것.
+  - 정식 흐름: `openPin` → sleep → `pinTo('top')` → sleep → (모달이면) `confirmReplace()` → sleep → **`pinVerify()`로 반드시 검증**(true/false/null · 9/21부터 `pinnedIds()` 기반)
+- 🚨🚨 **멀티페이지 `reorderCard` 오작동 — 2026-09-08 1차 · 2026-09-21 최종 수정.** 옛 `_sortableCtx()`는 **DOM 첫 번째** sortable(=페이지 사이드바/썸네일 레일)을 잡아 카드 대신 **페이지 순서**를 바꾸고도 `moved`를 반환했다.
+  - 9/08 수정(`items.length === boardRows().length`)은 🔴 **고정 카드가 있으면 항상 실패**(고정 카드는 sortable에서 빠진다) → 9/21에 **items가 실제 블록 id와 가장 많이 겹치는 컨텍스트**로 교체. 못 고르면 `null`(아무거나 쓰지 않음).
+  - 증상 확인법: `cardOrder()`가 `"?"` 타입으로 나오거나 길이가 이상하면 잘못된 컨텍스트를 잡은 것.
+- ✅ **`dumpState()` 멀티페이지 붕괴(`captured:0`)는 결함 A4로 해결**(2026-09-21 · 원인 = 위 `_sortableCtx`). 아래 결함표 A4 참조.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
+
+## 카드 여백 (내부·외부) — 필드 `onChange` + **`onBlur`** (2026-09-08 실측 신설)
+
+```bash
+# 1) 카드 선택 (좌표 클릭·scrollIntoView 금지 — 「보드 스크롤 = 페이지 드리프트」 참조)
+$B js "var r=window.__cdbd.boardRows()[N];var t=Array.from(r.querySelectorAll('*')).find(function(e){return /^h-\[52px\]/.test(e.className||'')});var k=Object.keys(t).find(function(k){return k.startsWith('__reactProps')});t[k].onClick({stopPropagation:function(){},preventDefault:function(){}});'sel'"; sleep 1.5
+
+# 2) 아코디언(∧) 펼치기 — 펼치지 않으면 상/하/좌/우 4칸이 없다
+$B js "window.__cdbd.openSpacing('외부여백')"; sleep 1.5     # 또는 '내부여백'
+
+# 3) 값 주입
+$B js "window.__cdbd.setSpacing('외부여백',{상:0,하:0,좌:40,우:40})"; sleep 1.5
+
+# 4) 검증 — 반환값을 믿지 말 것
+$B js "window.__cdbd.blockOfRow(window.__cdbd.boardRows()[N]).style.margin"   # → "0px 40px"
+$B js "JSON.stringify(window.__cdbd.spacingValues('외부여백'))"                # 필드 현재값
+```
+
+- **저장 위치** — 외부여백 = `block.style.margin` · 내부여백 = `block.style.padding` (CSS shorthand)
+- 🚨 **유일한 커밋 경로 = native value setter → React `props.onChange` → React `props.onBlur`.**
+  **`onBlur`를 빼면 필드엔 값이 보이는데 `block.style`에 커밋되지 않는다**(리로드 시 유실). `setSpacing`이 이걸 처리한다.
+- ❌ **전부 실패하는 방법**(2026-09-08 4가지 다 시도해 확인): `new Event('input'/'change')` dispatch · `el.blur()` · `Tab` · 다른 필드 click · `$B fill` · **슬라이더**(= `onChange` prop 자체가 없음) · PointerEvent 드래그
+- 🚨 **검증 시 `getComputedStyle(el).margin`을 보면 항상 `0px`이다.** 제품이 외부여백을 **부모 카드 슬롯의 `padding`**으로 렌더하기 때문. `block.style.margin`으로 볼 것.
+- ⚠️ 2열(multiCard)·예약 카드는 「카드 디자인」이 MuiCollapse라 `openSpacing`이 `no-label:외부여백`을 낼 수 있음 → 헤더를 먼저 펼치는 클릭 1단계 추가 (`.claude/cdbd-edit-shared.md`)
+- ⚠️ 여러 장 일괄 시 **한 장씩 + settle + 전체 재스캔 수렴 루프**. 라벨 배치에서 debounce로 +1 시프트가 났던 전례와 같은 계열.
+
+## 카드 표시 토글 (ON/OFF) — 2026-09-08 신설
+
+```bash
+$B js "window.__cdbd.cardVisible({index:2})"                 # true = ON
+$B js "window.__cdbd.setCardVisible({index:2}, false)"; sleep 1.5
+$B js "window.__cdbd.cardVisible({index:2})"                 # 검증
+```
+🚨 **`block.isShow`라는 필드는 존재하지 않는다.** 실제 필드 = **`block.disabled`(반전)** — `disabled:true` = OFF.
 
 ## 이미지 카드 업로드/적용 — React onDrop·onClick
 
@@ -284,12 +326,12 @@ $B js "![...document.querySelectorAll('input')].find(e=>e.placeholder==='제목�
 - **효과**: 옵션당 픽커 클릭(캘린더 open+day + 시간 open+hour+minute ~2초) → onChange 2회(~0.2초). **옵션당 ~5초→~2초, S6 전체 ~50-60% 단축.** (구 결론의 "옵션당 ~5초 하한"은 픽커 클릭 전제라 무효화.)
 - ⚠️ input 식별 = placeholder / onChange 식별 = **소스 `isValid()`**(depth 아님). 어댑터·핸들러 모두 모달 열릴 때마다 재탐색(fiber 재생성).
 
-## 버튼 링크 — 2단카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
+## 버튼 링크 — 2열 카드(multiCard) `onUpdateItem` (editor 4904 검증 2026-06-24)
 
-2단카드 버튼/이미지 등의 **링크 연결**은 UI(레이아웃 탭 구성 버튼 행 클릭)가 **about:blank 크래시**를 유발하고, 디자인 탭 URL input은 `$B fill`·로컬 `Y(value)` onChange 모두 **블록 미반영**. → 패널 fiber의 **`onUpdateItem(itemId, {linkButton})`** 직접 호출(자동저장까지 반영).
+2열 카드 버튼/이미지 등의 **링크 연결**은 UI(레이아웃 탭 구성 버튼 행 클릭)가 **about:blank 크래시**를 유발하고, 디자인 탭 URL input은 `$B fill`·로컬 `Y(value)` onChange 모두 **블록 미반영**. → 패널 fiber의 **`onUpdateItem(itemId, {linkButton})`** 직접 호출(자동저장까지 반영).
 
 ```bash
-# 2단카드 선택(fiber onClick) 후, 패널 fiber에서 onUpdateItem 회수해 각 item 링크 설정
+# 2열 카드 선택(fiber onClick) 후, 패널 fiber에서 onUpdateItem 회수해 각 item 링크 설정
 $B js "(function(){
   var u=[...document.querySelectorAll('input')].find(e=>e.placeholder==='URL을 입력해주세요');  // 디자인 탭이 열려 있어야 함
   var f=window.__cdbd.fiberOf(u);var d=0;var oui=null;
@@ -305,7 +347,11 @@ $B js "(function(){
 ```
 - `onUpdateItem` 소스 = `(e,t)=>{ J({...Y, items: q.map(l=> l.id!==e? l : {...l,...t}) }) }` — 특정 item만 patch, J가 블록 commit.
 - **🔑 전화 버튼 = `type:'call'`(전화하기), `type:'url'`+`tel:` 아님** (editor 4904 검증 2026-06-24). 디자인 탭 "링크 연결" 드롭다운을 **"전화하기"** 로 바꾸고 필드엔 **번호만**(`010-2345-6789`) 입력 → 내부 href는 `tel:번호` 유지·type `call`. (UI 드롭다운: `URL 열기` 버튼 클릭 → 메뉴 버튼 중 "전화하기" `.click()` → 필드 `$B fill` 번호. 또는 위 onUpdateItem로 `type:'call'` 직접 지정.)
-- **linkButton.type 6종**: `url`(URL 열기, http·tel·임의) / `call`(전화하기, 번호) / `message`(문자 보내기) / `email`(이메일 보내기) / `kakao`(카카오톡 공유하기) / `contact`(연락처 저장하기). 드롭다운 라벨↔type 매칭은 위 6개 순서.
+- 🔴 **linkButton.type = 8종** (2026-09-15 영상 실측 · 옛 「6종」은 오류). 드롭다운 **실제 순서**:
+  `페이지 이동하기` / `URL 열기`(기본) / **`선택 카드로 이동하기`** 🆕 / `전화하기` / `문자 보내기` / `이메일 보내기` / **`카카오톡 공유하기`** 🆕 / `연락처 저장하기`
+  🚨 **순서(index) 기반 선택 금지** — 옛 레시피가 *"위 6개 순서"* 로 매칭했는데 실제 메뉴는 **8개**라 인덱스가 밀린다. **반드시 라벨 텍스트로 찾아 클릭**할 것.
+  ❓ **type 문자열 2건 미확정** — 정본 `1-6-2:316`은 `sms`·`vcard`, 이 파일 옛 서술은 `message`·`contact`. **영상으로 판정 불가**이므로 자동화 전 `dumpState()`로 실제 값을 읽고 쓸 것. 확정 전까지 하드코딩 금지.
+  확정된 것: `url` · `call` · `email` · `kakao` · `page`(페이지 이동) · `card`(선택 카드 이동 · `pageId&blockId`)
 - **위치(location) 카드 "지도로 이동" 버튼 = 빌트인**, 단 **주소를 검색 드롭다운에서 선택(지오코딩)해야 동작** (아래 "위치 카드 주소" 참조).
 
 ## 위치 카드 주소 — 검색 선택(지오코딩) 필수 (editor 4904 검증 2026-06-24)
