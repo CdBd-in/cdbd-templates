@@ -4148,14 +4148,14 @@
             "label": "제품컷",
             "typeKey": "M1.45833 21H9.33333V0H1.45833C0.653333 0",
             "isPinned": false,
-            "type": "2단 카드"
+            "type": "2열 카드"
           },
           {
             "idx": 3,
             "label": "제품설명",
             "typeKey": "M1.45833 21H9.33333V0H1.45833C0.653333 0",
             "isPinned": false,
-            "type": "2단 카드"
+            "type": "2열 카드"
           },
           {
             "idx": 4,
@@ -4168,7 +4168,7 @@
         "cardCount": 5,
         "typeCount": {
           "이미지": 2,
-          "2단 카드": 2,
+          "2열 카드": 2,
           "텍스트": 1
         },
         "pinnedCount": 0

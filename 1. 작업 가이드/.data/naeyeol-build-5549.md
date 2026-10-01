@@ -38,7 +38,7 @@
 | 5408:97  | 4  | 메뉴(항목→) | all3 | sec/mixed/list/NN |
 | 5408:114 | 13 | 리뷰(★+내용+날짜) 구분선 | all3 | sec/mixed/list/NN |
 | 5408:144 | 3  | 리뷰 3텍스트 | all3 | sec/mixed/list/NN |
-| 5408:154 | 14 | 2단 카드 반복 | all3 | sec/mixed/list/NN |
+| 5408:154 | 14 | 2열 카드 반복 | all3 | sec/mixed/list/NN |
 | 5408:191 | 4  | 💡 항목+세부 | all3 | sec/mixed/list/NN |
 
 ## 빌드 대기 — 에디토리얼 간지 아래 (p6 뒤 ~ p7 앞)
