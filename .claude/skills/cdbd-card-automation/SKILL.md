@@ -147,13 +147,13 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
 
 - matcher = `{type}` | `{id}` | `{index}` (openKebab과 동일).
 - ⚠️ **고정된 카드는 드래그 핸들이 사라져 핀이 왼쪽으로 이동** → 위치(x)로 찾으면 실패. 드라이버는 onClick 시그니처(`unpinTitle`/`K(e.currentTarget)`)로 핀 버튼을 식별.
-- 🔴 **2026-09-21 정정** — ~~`block.fixedPosition`으로 판별~~ **그런 필드는 존재하지 않는다**(핀 전/후 블록 키 동일 · 실측).
-  🔑 **고정하면 그 카드가 sortable 목록에서 빠진다** — 실측: 고정 전 `boardRows 6 / sortable 6` → 고정 후 `boardRows 6 / **sortable 5**`.
-  ✅ **판별은 차집합** — `pinnedIds()` 를 쓸 것(보드 행엔 있는데 sortable items 엔 없는 id = 고정됨).
+- ✅ **고정 판별 (2026-10-01 editor 6530 실측으로 확정)** — **`block.fixedPosition`이 있다**: 고정 직후 `"top"`/`"bottom"` · 해제 후 `null` · 한 번도 고정 안 한 카드는 키 없음. (9/21 「그런 필드는 존재하지 않는다」는 **오판으로 철회**.)
+  🔑 **고정하면 그 카드가 sortable 목록에서 빠진다** — 9/21 `boardRows 6 / sortable 5` · 10/01 `rows 3 / sortable 2` 재확인. → **`pinnedIds()`(차집합)** 로도 판별된다.
+  ✅ **`pinVerify()` 반환** = `"top"`/`"bottom"`(고정) · `false`(안 됨) · `null`(판별 불가). 고정 카드가 있어도 `reorderCard`는 정상(10/01 확인).
   ⚠️ **해제하면 카드가 원위치가 아니라 맨 앞(index 0)으로 돌아온다.** 원래 자리로 돌리려면 `reorderCard()` 를 이어서 호출할 것.
 - 🚨 **2026-09-08 실측 — `pinTo`는 거짓 성공을 냈었다.** 상단/하단 자리가 이미 차 있으면 **「고정 카드 교체하기」 모달**이 뜨고 고정은 되지 않는데, 옛 코드는 `pinned:top`을 반환했다.
   - 이 모달은 **SweetAlert가 아니다**(`.swal2-popup` 없음) → `confirmSwal()`로 안 닫힌다. **`confirmReplace()`** 를 쓸 것.
-  - 정식 흐름: `openPin` → sleep → `pinTo('top')` → sleep → (모달이면) `confirmReplace()` → sleep → **`pinVerify()`로 반드시 검증**(true/false/null · 9/21부터 `pinnedIds()` 기반)
+  - 정식 흐름: `openPin` → sleep → `pinTo('top')` → sleep → (모달이면) `confirmReplace()` → sleep → **`pinVerify()`로 반드시 검증**(`"top"`/`"bottom"`이면 성공)
 - 🚨🚨 **멀티페이지 `reorderCard` 오작동 — 2026-09-08 1차 · 2026-09-21 최종 수정.** 옛 `_sortableCtx()`는 **DOM 첫 번째** sortable(=페이지 사이드바/썸네일 레일)을 잡아 카드 대신 **페이지 순서**를 바꾸고도 `moved`를 반환했다.
   - 9/08 수정(`items.length === boardRows().length`)은 🔴 **고정 카드가 있으면 항상 실패**(고정 카드는 sortable에서 빠진다) → 9/21에 **items가 실제 블록 id와 가장 많이 겹치는 컨텍스트**로 교체. 못 고르면 `null`(아무거나 쓰지 않음).
   - 증상 확인법: `cardOrder()`가 `"?"` 타입으로 나오거나 길이가 이상하면 잘못된 컨텍스트를 잡은 것.
@@ -404,17 +404,17 @@ $B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location
 
 ### 블록의 **실제 필드** (실측)
 ```
-공통  : id, type, title, style, innerStyle, content, previewText, disabled, active
+공통  : id, type, title, style, innerStyle, content, previewText, disabled, active (+ 고정한 적 있으면 fixedPosition)
 profile: + profile        image: + link, shape
 ```
-🔴 **`isShow` 없음 · `fixedPosition` 없음.** 옛 지침의 두 이름은 **둘 다 존재하지 않는다.**
+🔴 **`isShow`는 없다**(→ `disabled`). ✅ **`fixedPosition`은 고정된 카드에만 생긴다** — 9/21 「없음」은 핀 카드가 없는 문서에서 본 오판(2026-10-01 editor 6530 실측: 고정 `"top"` · 해제 `null`).
 
 ### 결함별 결과
 
 | # | 결함 | 결과 | 핵심 |
 |---|---|:---:|---|
-| **A1** | 필드명 오류 | ✅ | `isShow`→**`disabled`**(의미 반대) · `fixedPosition`→**없음** |
-| **A2** | `pinned` 항상 false | ✅ | 핀은 **sortable 목록에서 빠지는 것**으로 표현 → `pinnedIds()` |
+| **A1** | 필드명 오류 | ✅ | `isShow`→**`disabled`**(의미 반대) · `fixedPosition`은 **고정 시에만 존재**(10/01 정정) |
+| **A2** | `pinned` 항상 false | ✅ | `fixedPosition`("top"/"bottom") + **sortable 차집합** `pinnedIds()` 두 경로 · `pinVerify()` 10/01 실측 통과 |
 | **A3** | 표시 토글 헬퍼 부재 | ✅ | `setShown(i,bool)`·`isShown(i)`·`toggleOf(i)` 신설 |
 | **A4** | `dumpState()` 붕괴 | ✅ | `_sortableCtx`가 **페이지 레일**을 잡던 문제 |
 | **A6** | `openImageUpload()` 실패 | ✅ | **빈 이미지 카드에서는 정상 동작** — 실패는 결함이 아니라 전제 문제 |

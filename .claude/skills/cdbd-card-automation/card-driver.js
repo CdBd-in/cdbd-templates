@@ -215,7 +215,7 @@
   // 🚨 2026-09-08 실측 정정: 토글 필드는 `isShow`가 **아니다**. 그런 필드는 없다.
   //    실제 필드 = `block.disabled` (**반전**). disabled:true = 토글 OFF = 방문자에게 안 보임.
   //    block이 실제로 갖는 키: id,type,style,title,active,disabled,content,previewText,
-  //                            colorPicker,backgroundImage  (🔴 9/08의 「(고정 시)fixedPosition」은 9/21 실측으로 철회 — 핀 전/후 키 동일)
+  //                            colorPicker,backgroundImage,(고정 시)fixedPosition  (✅ 10/01 재확인 — 해제 후 null)
   const cardVisible = (matcher = {}) => {
     const b = _blockByMatcher(matcher);
     return b ? !b.disabled : null;
@@ -322,13 +322,10 @@
     // 현재 고정 여부는 핸들러 소스로 알 수 없음(소스엔 항상 unpinTitle 포함) →
     // block.fixedPosition(top/bottom/null)으로 판별.
     const blk = blockOfRow(row);
-    // 🔴 2026-09-21 수정 (결함 A1·A2) — block에 `fixedPosition`은 **존재하지 않는다**.
-    // 실측 필드(profile/image 공통): id, type, title, style, innerStyle, content,
-    //   previewText, **disabled**, **active**  (+타입별: profile, link, shape …)
-    // 옛 `isShow`·`fixedPosition`은 둘 다 없는 이름이라 항상 undefined였고,
-    // 그 결과 pinned가 **구조적으로 항상 false**였다(조용한 오답).
-    // 🔑 핀 상태는 블록에도, 행 fiber 상위 30단계에도 없다(2026-09-21 실측 · 미해결).
-    //    그래서 false로 단정하지 않고 **null(=모름)** 을 돌려 호출부가 알아채게 한다.
+    // ✅ 2026-10-01 실측(editor 6530) — `fixedPosition`은 **있다.** 고정 직후 `"top"`/`"bottom"`,
+    //    해제 후 `null`, 한 번도 고정 안 한 카드는 키 자체가 없다(undefined).
+    //    9/21의 「존재하지 않는다(핀 전/후 키 동일)」는 **오판** — 핀 카드가 없는 문서에서 본 것으로 보인다.
+    //    `isShow`가 없는 이름이라는 9/21 지적(→ `disabled`)은 그대로 유효.
     const pinned = _isPinned(blk);
     for (const b of row.querySelectorAll("button")) {
       let n = fiberOf(b);
@@ -378,13 +375,15 @@
     return "replaced";
   };
 
-  // 고정 결과 검증.
-  // 🔴 2026-09-21 정정 — 옛 구현은 `block.fixedPosition`을 봤으나 **그런 필드는 없다**(핀 전/후 블록 키 동일 · 실측).
-  //    그래서 항상 null(=고정 안 됨)을 돌려 **고정이 돼도 실패로 보였다.** → `pinnedIds()` 차집합으로 판별.
-  //    반환: true(고정됨) / false(안 됨) / null(판별 불가). ⚠️ 상단·하단 구분은 아직 못 한다(⏳).
+  // 고정 결과 검증 — 반환: "top" | "bottom"(고정됨) / false(안 됨) / null(판별 불가).
+  //   ① block.fixedPosition 이 있으면 그 값(상단·하단 구분 가능) ② 없으면 pinnedIds() 차집합으로 확인.
+  //   ✅ 2026-10-01 editor 6530 실측: 고정 → "top" · sortable 2/rows 3 · 해제 → fixedPosition null.
   const pinVerify = (matcher = {}) => {
     const b = _blockByMatcher(matcher);
-    return b ? _isPinned(b) : null;
+    if (!b) return null;
+    if (b.fixedPosition === "top" || b.fixedPosition === "bottom") return b.fixedPosition;
+    const p = _isPinned(b);
+    return p === null ? null : p ? "pinned" : false;
   };
   // 고정: openPin → (sleep) → pinTo → (sleep) → [교체 모달이면 confirmReplace] → pinVerify
   // 해제: openPin(matcher) → (sleep) → confirmSwal()
@@ -538,9 +537,9 @@
     return null;
   };
 
-  // 🔑 2026-09-21 신설 (결함 A2 해결) — **핀 상태는 블록 필드가 아니다.**
-  // block에 fixedPosition/isPinned 같은 필드는 **존재하지 않는다**(실측: 핀 전/후 키 동일).
-  // 고정하면 그 카드가 **sortable 목록에서 빠져** 별도 컨테이너로 이동한다.
+  // 🔑 2026-09-21 신설 (결함 A2) — 핀 판별 **두 경로**: ① `block.fixedPosition`("top"/"bottom") ② 아래 차집합.
+  // (9/21 「fixedPosition은 존재하지 않는다」는 10/01 실측으로 철회 — 고정 시 "top"이 실제로 찍힌다.)
+  // 고정하면 그 카드가 **sortable 목록에서 빠져** 별도 컨테이너로 이동한다(10/01 재확인: rows 3 / sortable 2).
   //   실측: 고정 전 boardRows 6 / sortable 6 → 고정 후 boardRows 6 / sortable **5**
   // 따라서 판별은 **차집합**이다: boardRows 에는 있는데 sortable items 에는 없으면 = 고정됨.
   // ⚠️ 해제하면 카드가 **맨 앞(index 0)** 으로 돌아온다. 원위치가 아니다 — 필요하면 reorderCard 로 복구.
