@@ -80,7 +80,7 @@ if (mode === 'full') {
   phase('토대')
   await agent(`editor ${editorId}, figma ${figmaRef}: 페이지 테마 3색·서체·버튼모양·페이지배경·제목·스크롤애니메이션·멀티페이지 설정.`,
     { agentType: 'editor-s1-foundation', label: 'S1 토대', phase: '토대' })
-  await agent(`editor ${editorId}, figma ${figmaRef}: 카드 매니페스트대로 15종 카드 추가·순서·상하고정·라벨(목적 이름).`,
+  await agent(`editor ${editorId}, figma ${figmaRef}: 카드 매니페스트대로 카드(기본 14종 + 2열 6종) 추가·순서·상하고정·라벨(목적 이름).`,
     { agentType: 'editor-s2-cards', label: 'S2 구성', phase: '토대' })
 
   phase('채움')
