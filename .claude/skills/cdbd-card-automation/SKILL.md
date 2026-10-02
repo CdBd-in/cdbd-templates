@@ -400,7 +400,7 @@ $B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location
 > 📎 전체 기록 = `design` 볼트 `CdBd 기능 녹화 영상/영상 판독 기록/구간 1.md`
 
 ### 🚨 결함보다 먼저 — **인증이 16일째 만료돼 있었다**
-`~/.config/cdbd/credentials.json` 의 refresh token 만료(`refresh_token_not_found`). **자동화가 이유 없이 실패하면 제일 먼저 이걸 확인**할 것 → `[SV] _기능별 경로 가이드 §4-2「인증·세션」`
+`~/.config/cdbd/credentials.json` 의 refresh token 만료(`refresh_token_not_found`). ✅ **2026-10-02부터 `auth.py`가 `cdbd.env`로 자동 재로그인**한다 — 그래도 실패하면 `python3 ~/.config/cdbd/auth.py`로 상태 확인 → `[SV] _기능별 경로 가이드 §4-2「인증·세션」`
 
 ### 블록의 **실제 필드** (실측)
 ```
