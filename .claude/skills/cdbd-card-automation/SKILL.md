@@ -42,7 +42,7 @@ CdBd 에디터에서 카드 **추가·삭제·복제·순서변경·고정(핀)�
 
 ```bash
 B="$HOME/.claude/skills/gstack/browse/dist/browse"   # gstack browse
-DRV=".claude/skills/cdbd-card-automation/card-driver.js"
+DRV="$HOME/.claude/skills/cdbd-card-automation/card-driver.js"   # 전역 링크(tools/cdbd-setup.sh) — 어느 폴더에서든 동작. 링크 전이면 cdbd-templates 안에서 ".claude/skills/…" 상대경로
 $B goto https://www.cdbd.in/editor/{id}; sleep 4
 $B eval "$DRV"                       # → 'installed'  (window.__cdbd 설치)
 $B js "JSON.stringify(window.__cdbd.count())"   # 마운트된 카드 수/타입 (대략치)
