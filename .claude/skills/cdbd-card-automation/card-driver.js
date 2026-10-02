@@ -745,15 +745,40 @@
         d++;
       }
     }
+    // 🔴 2026-10-02 수정 (editor 6550 멀티페이지 실측) — 옛 구현의 두 결함:
+    //   ① sortable items만 기준 → **고정 카드가 빠졌다**(고정하면 sortable에서 빠지므로 3장 중 2/2로 보고).
+    //   ② sortable이 없으면(빈 페이지) DOM 전체 블록을 반환 → 사이드바의 **숨은 페이지 썸네일**(0×0)에 렌더된
+    //      **다른 페이지 카드**를 지금 페이지 것으로 보고했다(빈 2페이지에서 1페이지 카드 3/3).
+    // → 기준을 **카드 보드에 실제로 보이는 행(boardRows)** 으로 바꾸고, sortable은 누락 대조용으로만 쓴다.
+    const idOf = (it) => (typeof it === "object" && it ? it.id : it);
     const ctx = _sortableCtx();
-    if (ctx && ctx.items && ctx.items.length) {
-      const order = ctx.items.map((it) => (typeof it === "object" ? it.id : it));
-      const ordered = order.map((id) => map.get(id)).filter(Boolean);
-      const missing = order.filter((id) => !map.has(id));
-      return { blocks: ordered, total: order.length, captured: ordered.length, missing, theme: safeTheme() };
+    const sortIds = ctx && ctx.items ? ctx.items.map(idOf) : [];
+    const seen = new Set();
+    const ordered = [];
+    for (const el of boardRows()) {
+      const b = blockOfRow(el);
+      if (b && b.id && b.type && !seen.has(b.id)) {
+        seen.add(b.id);
+        ordered.push(b);
+      }
     }
-    const ordered = [...map.values()];
-    return { blocks: ordered, total: ordered.length, captured: ordered.length, missing: [], theme: safeTheme() };
+    const missing = [];
+    for (const id of sortIds) {
+      if (seen.has(id)) continue;
+      if (map.has(id)) {
+        seen.add(id);
+        ordered.push(map.get(id));
+      } else missing.push(id);
+    }
+    const pinned = ctx ? ordered.filter((b) => !sortIds.includes(b.id)).map((b) => b.id) : [];
+    return {
+      blocks: ordered,
+      total: ordered.length + missing.length,
+      captured: ordered.length,
+      missing,
+      pinned,
+      theme: safeTheme(),
+    };
   };
 
   // id(prefix)로 block 객체를 참조 회수 (F1 수정용). 반환 객체의 style/content를 직접 mutate한 뒤

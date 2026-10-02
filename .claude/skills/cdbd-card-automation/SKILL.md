@@ -157,7 +157,7 @@ $B js "window.__cdbd.confirmSwal()"; sleep 1.5
 - 🚨🚨 **멀티페이지 `reorderCard` 오작동 — 2026-09-08 1차 · 2026-09-21 최종 수정.** 옛 `_sortableCtx()`는 **DOM 첫 번째** sortable(=페이지 사이드바/썸네일 레일)을 잡아 카드 대신 **페이지 순서**를 바꾸고도 `moved`를 반환했다.
   - 9/08 수정(`items.length === boardRows().length`)은 🔴 **고정 카드가 있으면 항상 실패**(고정 카드는 sortable에서 빠진다) → 9/21에 **items가 실제 블록 id와 가장 많이 겹치는 컨텍스트**로 교체. 못 고르면 `null`(아무거나 쓰지 않음).
   - 증상 확인법: `cardOrder()`가 `"?"` 타입으로 나오거나 길이가 이상하면 잘못된 컨텍스트를 잡은 것.
-- ✅ **`dumpState()` 멀티페이지 붕괴(`captured:0`)는 결함 A4로 해결**(2026-09-21 · 원인 = 위 `_sortableCtx`). 아래 결함표 A4 참조.
+- ✅ **`dumpState()` 멀티페이지 붕괴(`captured:0`)는 결함 A4로 해결**(2026-09-21 · 원인 = 위 `_sortableCtx`) — **2026-10-02 editor 6550(2페이지) 실측 통과.** 같은 날 결함 2건(A8 · A9) 추가 수리 → 아래 결함표.
 - 고정 카드는 페이지 상단/하단 sticky로 표시됨 (메뉴·CTA 버튼 등에 활용).
 
 ## 카드 여백 (내부·외부) — 필드 `onChange` + **`onBlur`** (2026-09-08 실측 신설)
@@ -416,7 +416,9 @@ profile: + profile        image: + link, shape
 | **A1** | 필드명 오류 | ✅ | `isShow`→**`disabled`**(의미 반대) · `fixedPosition`은 **고정 시에만 존재**(10/01 정정) |
 | **A2** | `pinned` 항상 false | ✅ | `fixedPosition`("top"/"bottom") + **sortable 차집합** `pinnedIds()` 두 경로 · `pinVerify()` 10/01 실측 통과 |
 | **A3** | 표시 토글 헬퍼 부재 | ✅ | `setShown(i,bool)`·`isShown(i)`·`toggleOf(i)` 신설 |
-| **A4** | `dumpState()` 붕괴 | ✅ | `_sortableCtx`가 **페이지 레일**을 잡던 문제 |
+| **A4** | `dumpState()` 붕괴 | ✅ | `_sortableCtx`가 **페이지 레일**을 잡던 문제 · 10/02 editor 6550 실측: DOM 첫 sortable = **페이지 2개짜리 목록**(재현 조건 확인) → 수리본은 카드 3장을 정확히 잡음 |
+| **A8** | 🆕 `dumpState()`가 **고정 카드를 누락** | ✅ | sortable 기준이라 고정 카드(sortable에서 빠짐)가 사라져 3장 중 `2/2`로 보고 → **보드 행 기준**으로 변경 · 반환에 `pinned`(고정 카드 id) 추가 (10/02) |
+| **A9** | 🆕 빈 페이지에서 **다른 페이지 카드를 보고** | ✅ | sortable이 없으면 DOM 전체를 훑었는데, 사이드바의 **숨은 페이지 썸네일**(0×0)이 다른 페이지 카드를 렌더하고 있어 빈 2페이지에서 1페이지 카드 `3/3` → 보드 행 기준으로 `0/0` (10/02) · ⚠️ **`blockById()`도 같은 DOM 전체 탐색이라 다른 페이지 블록을 잡을 수 있다(미수리)** |
 | **A6** | `openImageUpload()` 실패 | ✅ | **빈 이미지 카드에서는 정상 동작** — 실패는 결함이 아니라 전제 문제 |
 | ~~A7~~ | `blockOfRow` null | 🔁 | **철회** — `blockOfRow(el)`는 **엘리먼트** 인자. 인덱스를 넣은 내 오용 |
 
@@ -428,4 +430,4 @@ profile: + profile        image: + link, shape
 
 ### 🔑 A4가 가장 컸다
 `dumpState()` 는 검증 에이전트(V1~V5)·수정(F1)의 **입력 스냅샷**이다. 멀티페이지 문서에서 `{total:4, captured:0}` 으로 통째로 깨져 있었다 — **멀티 문서 자동화는 전부 잘못된 입력 위에서 돌고 있었다.**
-판별 단서: **페이지 id는 nanoid**(`pPl1n-Q1nM…`), **카드 id는 UUID**(`be3c1600-…`).
+판별 단서: 9/21 문서에선 **페이지 id는 nanoid**(`pPl1n-Q1nM…`), **카드 id는 UUID**(`be3c1600-…`)였다. ⚠️ 10/02 editor 6550·6530에선 **카드 id도 nanoid**(`re8lefQlYf…`)라 id 형식으로는 못 가른다 — `_sortableCtx`처럼 **보드 블록 id와 겹치는지**로 판별할 것.
