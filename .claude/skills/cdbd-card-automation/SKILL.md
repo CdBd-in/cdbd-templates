@@ -339,14 +339,16 @@ $B js "(function(){
   var r=window.__cdbd.boardRows();var blk=null;
   for(var i=0;i<r.length;i++){var b=window.__cdbd.blockOfRow(r[i]);if(b&&b.id&&b.id.indexOf('<multiCard-id8>')===0){blk=b;break;}}
   var items=blk.multiCard.items;  // items[].content 의 Lexical text로 어느 버튼인지 식별
-  oui(items[0].id,{linkButton:{link:{href:'tel:010-2345-6789',openNewTab:false},text:'버튼',type:'call'}});   // 전화: type 'call'(전화하기) — UI 필드엔 번호만, href는 tel: 유지
+  oui(items[0].id,{linkButton:{link:{href:''},type:'call',phone:{phone:'010-2345-6789'}}});   // 전화: 번호는 phone.phone · href는 빈 문자열 (2026-10-02 6468 · 09-14 6251 실측)
   oui(items[1].id,{linkButton:{link:{href:'https://pf.kakao.com/_xxxx',openNewTab:true},text:'버튼',type:'url'}}); // 외부링크
   return 'done';
 })()"
 # 검증: 리로드(goto editor; sleep 7; eval driver) 후 blockOfRow(...).multiCard.items[].linkButton.type/.link.href 확인 → 자동저장 영속
 ```
 - `onUpdateItem` 소스 = `(e,t)=>{ J({...Y, items: q.map(l=> l.id!==e? l : {...l,...t}) }) }` — 특정 item만 patch, J가 블록 commit.
-- **🔑 전화 버튼 = `type:'call'`(전화하기), `type:'url'`+`tel:` 아님** (editor 4904 검증 2026-06-24). 디자인 탭 "링크 연결" 드롭다운을 **"전화하기"** 로 바꾸고 필드엔 **번호만**(`010-2345-6789`) 입력 → 내부 href는 `tel:번호` 유지·type `call`. (UI 드롭다운: `URL 열기` 버튼 클릭 → 메뉴 버튼 중 "전화하기" `.click()` → 필드 `$B fill` 번호. 또는 위 onUpdateItem로 `type:'call'` 직접 지정.)
+- **🔑 전화 버튼 = `type:'call'`(전화하기), `type:'url'`+`tel:` 아님**. 디자인 탭 "링크 연결" 드롭다운을 **"전화하기"** 로 바꾸고 필드엔 **번호만**(`010-2345-6789`) 입력.
+  🔴 **2026-10-02 정정 — 저장 형식은 `{link:{href:''}, type:'call', phone:{phone:'번호'}}`다.** 번호는 **`phone.phone`**(하이픈 포함 입력값 그대로)에 들어가고 `href`는 빈 문자열. 옛 서술 「내부 href는 `tel:번호` 유지」(4904 · 06-24)는 **현행 형식과 다르다** — editor 6251(09-14)·6468(10-02) 실측. 정본 표 = `[SV] 룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md` 「링크 연결 = linkButton 키」. 이메일 = `{type:'email', email:'주소'}` · 페이지 이동 = `{type:'page', link:{href:'pageId=…', openNewTab:false}}`.
+  🔑 **자동화로 넣기 전에 같은 문서에서 이미 동작하는 카드의 `linkButton`을 읽어 형식을 복사할 것** — 하드코딩 금지. (UI 드롭다운: `URL 열기` 버튼 클릭 → 메뉴 버튼 중 "전화하기" `.click()` → 필드 `$B fill` 번호. 또는 위 onUpdateItem로 `type:'call'` 직접 지정.)
 - 🔴 **linkButton.type = 8종** (2026-09-15 영상 실측 · 옛 「6종」은 오류). 드롭다운 **실제 순서**:
   `페이지 이동하기` / `URL 열기`(기본) / **`선택 카드로 이동하기`** 🆕 / `전화하기` / `문자 보내기` / `이메일 보내기` / **`카카오톡 공유하기`** 🆕 / `연락처 저장하기`
   🚨 **순서(index) 기반 선택 금지** — 옛 레시피가 *"위 6개 순서"* 로 매칭했는데 실제 메뉴는 **8개**라 인덱스가 밀린다. **반드시 라벨 텍스트로 찾아 클릭**할 것.
@@ -369,6 +371,39 @@ $B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location
 ## OG 썸네일 — 자동화 불가 (수동, editor 4904 확인 2026-06-24)
 
 헤더 🌐 globe("URL 정보 편집하기") 모달의 **제목·설명은 `$B fill`/onChange로 설정 가능**하나, **썸네일(800×400)은 자동화 불가**. 썸네일 img는 cursor:auto·onClick 없음·dropzone/onDrop 없음·호버 오버레이 없음 = **transient OS 파일 다이얼로그**만 존재. 카드 이미지의 onDrop 패턴이 OG 썸네일엔 없음. → **사용자 수동 업로드**(800×400 이미지 준비해 전달). 제목/설명은 자동, 썸네일만 수동.
+
+## 멀티페이지 — 페이지 복제·전환 + 문서 상태 일괄 편집 (editor 6468 · 2026-10-02 실측)
+
+> KOSA 디렉토리(13페이지 · 참여기업 10장 일괄 생성)에서 쓴 방법. 카드를 하나씩 복제·삭제·순서변경하는 대신 **페이지 단위로 카드 배열을 통째로 바꾼다.** 10장 구성·링크 교체·숨김 카드 28장 삭제·코드 카드 13개 수정을 각 1회 커밋으로 처리했고, 매번 **리로드 후 영속 확인**.
+
+**① 페이지 ⋯ 메뉴는 `click`이 아니라 `pointerdown`으로 열린다**
+```bash
+# 썸네일 컨테이너(라벨 N의 부모)에 id 부여 → $B hover → .menu-button 의 onPointerDown
+$B js "...lab.parentElement.id='thumbNc'"; $B hover "#thumbNc"
+$B js "(function(){var mb=document.querySelector('#thumbNc .menu-button');var k=Object.keys(mb).find(k=>k.startsWith('__reactProps'));mb[k].onPointerDown({stopPropagation(){},preventDefault(){},currentTarget:mb,target:mb,button:0,ctrlKey:false,pointerType:'mouse',nativeEvent:{}});})()"
+# 메뉴 항목(복제하기/삭제하기/페이지 배경 설정/페이지 정렬 설정)도 onPointerDown — onClick은 stopPropagation만 한다
+```
+- 대상 = **호버한 썸네일** · 🔑 **⋯ 메뉴가 열리는 순간 그 썸네일이 현재 페이지가 된다**(📹 판정 142 · 2026-10-04) · 복제본은 **그 바로 뒤**에 생기고 현재 페이지도 복사본으로 옮겨간다 → 원본 하나를 여러 번 복제하면 **역순으로 쌓인다**.
+- **페이지 전환** = 썸네일 `button.block` 중심 좌표에 `MouseEvent('click')` dispatch → 패널 바깥 클릭으로 닫기. ⚠️ 버튼의 fiber `onClick` 직접 호출은 **카드가 선택된 상태에선 전환이 안 됐다**(표시만 바뀌지 않음).
+
+**② 문서 상태 = Recoil `loadable.contents.present`**
+```js
+// 보드 행 fiber에서 위로 올라가며 hook memoizedState.loadable.contents.present.pages 를 찾는다
+window.__getDoc=function(){var f=window.__cdbd.fiberOf(window.__cdbd.boardRows()[2]);for(var d=0;d<40&&f;d++){var s=f.memoizedState,i=0;while(s&&i<200){var m=s.memoizedState;if(m&&m.loadable&&m.loadable.contents&&m.loadable.contents.present&&Array.isArray(m.loadable.contents.present.pages))return m.loadable.contents.present;s=s.next;i++;}f=f.return;}};
+// doc.pages[i] = {id, order, blocks, background} · 현재 페이지 = doc.multipage_metadata.selected_page_id
+```
+
+**③ 일괄 편집 레시피 — 순서가 중요하다**
+1. **편집 대상이 아닌 페이지로 먼저 이동**(예: 인트로). 🔴 커밋하는 `onDragEnd`는 **현재 페이지 blocks를 자기 클로저의 옛 배열로 덮어쓴다** — 대상 페이지 위에서 하면 변경이 날아간다.
+2. `doc.pages = doc.pages.map(p => p.id===대상 ? {...p, blocks:새배열} : p)` — **새 배열·새 페이지 객체로 교체**. 🔴 기존 배열을 `splice`로 제자리 수정하면 memo가 갱신되지 않아 **커밋에 반영되지 않는다**(실측 실패).
+3. 아무 카드나 **fiber onClick으로 선택** → 리렌더(클로저 갱신) → `reorderCard(1,2)` · sleep · `reorderCard(2,1)` = 커밋·자동저장(**문서 전체 = 모든 페이지**가 함께 저장됨).
+4. **리로드 → 같은 값으로 재조회**해 영속 확인.
+- 새 카드 = 기존 블록 deep clone + `id = crypto.randomUUID()`(2열 카드는 `multiCard.items[].id`도 새로) · 삭제 = 배열에서 제외 · 숨김 카드 = `block.disabled === true`.
+- 텍스트 = `block.content`(Lexical JSON **문자열**) 안 text 노드의 `text` 교체 + `previewText`. 여러 줄 = `custom-paragraph`를 복제해 줄마다 하나 · 빈 줄 = `children:[]` · 굵게 = text 노드 `format |= 1`.
+- 🚨 **사용자가 같은 문서를 다른 탭에 열어두고 있으면, 그 탭의 옛 상태가 나중에 덮어쓸 수 있다** — 끝나면 「에디터 새로고침 후 수정」을 반드시 안내.
+- ⚠️ 이 경로는 **UI를 거치지 않는다** — 패널로만 영속되는 값(여백·예약·위치 지오코딩 · `cdbd-edit-shared.md`)은 여전히 패널로.
+
+**④ 코드 카드 메모** — HTML이 DOM에 그대로 들어가 **`<script>`는 실행되지 않는다**(`<style>`·CSS 애니메이션은 적용). 영상 로딩 보강은 CSS로만(썸네일 `background` + 로딩 표시). → 허브 사전 §3 「코드」
 
 ## Common mistakes
 
