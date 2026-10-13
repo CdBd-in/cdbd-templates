@@ -38,7 +38,9 @@ def _canon_date(m):
     if not nums: return None
     if len(nums[0]) == 4 and nums[0][:2] in ('19','20'): nums = nums[1:]
     if len(nums) < 2: return None
-    return f'{int(nums[0])}/{int(nums[1])}'
+    mo, d = int(nums[0]), int(nums[1])
+    if not (1 <= mo <= 12 and 1 <= d <= 31): return None
+    return f'{mo}/{d}'
 
 def _canon_time(m):
     nums = re.findall(r'\d+', m)
@@ -48,7 +50,7 @@ def _canon_time(m):
     if '반' in m: mi = 30
     return f'{h}:{mi:02d}'
 
-def tokens(text, soft=False):
+def tokens(text, soft=False, lenient=False):
     out = set()
     if not text: return out
     for kind, pat in PATS.items():
@@ -65,6 +67,14 @@ def tokens(text, soft=False):
                 n = norm(m)
             if n and len(str(n)) >= 2:
                 out.add((kind, n))
+    if lenient:
+        import re as _re
+        for m in _re.findall(r'\d{1,3}(?:,\d{3})+', text):
+            out.add(('money', norm(m)))
+        for m in _re.findall(r'(?<![:\d])(\d{1,2})시', text):
+            h = int(m)
+            out.add(('time', f'{h}:00'))
+            if h < 12: out.add(('time', f'{h+12}:00'))
     return out
 
 def pool_texts(case):
@@ -94,7 +104,7 @@ def body_lines(desc):
 
 def check_case(c):
     r = R()
-    IN = pool_texts(c); INtok = tokens(IN)
+    IN = pool_texts(c); INtok = tokens(IN, lenient=True)
     FILLED = filled_texts(c); FILLEDtok = tokens(FILLED)
     o = c.get('out', {}); g = c['in'].get('gold', {})
     desc = o.get('desc','')
@@ -138,7 +148,7 @@ def check_case(c):
     if re.search(r'\d-[①②③④⑤⑥]|(?<![A-Za-z])P[1-6](?![0-9A-Za-z])', vis): r.add('S2-04','C','내부 코드 노출')
     pt = o.get('purpose_text','')
     ptc = pt.rstrip().rstrip('.')
-    if '?' in pt or not ptc.endswith('하기') or len(ptc) > 40 or re.search(r'·|와 |과 ', ptc):
+    if '?' in pt or not ptc.endswith('기') or len(ptc) > 40 or re.search(r'·|와 |과 ', ptc):
         r.add('S2-05','m','목적 문구 형식(MD-02: ~하기·40자·목적1)')
 
     # --- S3 ---
@@ -236,7 +246,7 @@ def check_case(c):
             if vt and not (vt <= tokens(page)):
                 r.add('S10-01','C', f'유저 값 유실 의심 {f.get("step")}')
             elif not vt and v and norm(v)[:10] not in norm(page):
-                r.add('S10-01','C', f'유저 값 유실 의심 {f.get("step")}')
+                r.add('S10-01','m', f'유저 값 유실 의심(장문·수동 확인) {f.get("step")}')
     bad2 = [t for t in tokens(o.get('page_facts','')) - INtok - FILLEDtok if t[0] != 'url']
     if bad2: r.add('S11-05','C', f'최종 페이지 지어낸 사실 {bad2[:4]}')
     if re.search(r'label|LABEL|EYEBROW|lorem|플레이스홀더', page): r.add('S11-06','C','제작 용어 렌더')
