@@ -12,7 +12,7 @@ TOPICS25 = {  # 4-3 §3 (2026-10-13)
  '2-①','2-②','2-③','2-④',
  '3-①','3-②',
  '4-①','4-②','4-③','4-④','4-⑤','4-⑥',
- '5-①','5-②','5-③','5-④','5-⑤','5-⑥',
+ '5-①','5-②','5-③','5-④','5-⑤',
  '6-①','6-②','6-③','6-④',
 }
 PURPOSES = {'P1','P2','P3','P4','P5','P6'}
@@ -188,7 +188,8 @@ def check_case(c):
 
     # S6-07 확장: 범위 문자열 통짜 (시작/날짜/시간 칸에 ~ 범위)
     for st2 in o.get('state',[]):
-        if re.search(r'시작|날짜|시간|일시', str(st2.get('칸',''))) and st2.get('상태') in ('미리 채움','AI가 채워둠'):
+        kn = str(st2.get('칸',''))
+        if re.search(r'시작|날짜|시간|일시', kn) and not re.search(r'운영|영업|관람', kn) and st2.get('상태') in ('미리 채움','AI가 채워둠'):
             if re.search(r'\d\s?[~∼–]\s?\d|\d시\s?[~∼–]', str(st2.get('값',''))):
                 r.add('S6-07','M', f"{st2.get('칸')} 범위 통짜 {str(st2.get('값'))[:25]}")
     # S6-10 자료 시효: 지난·작년 표지 자료의 사실값 미리 채움 금지
@@ -230,7 +231,8 @@ def check_case(c):
     rec = o.get('record',[])
     if len(rec)>=3:
         if len({x.get('명도') for x in rec}) == 1: r.add('S9-02','M','3안 명도 동일')
-        if len({x.get('액센트계열') for x in rec}) < 2: r.add('S9-03','M','액센트 계열 1종')
+        if o.get('mood',{}).get('무드') != '프로페셔널' and len({x.get('액센트계열') for x in rec}) < 2:
+            r.add('S9-03','M','액센트 계열 1종')
         # 같은 목적 섹션 3안 동일 (name prefix = 목적)
         per = [set(x.get('섹션',[])) for x in rec]
         common = per[0] & per[1] & per[2]
