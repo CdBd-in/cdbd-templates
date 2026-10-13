@@ -33,15 +33,37 @@ def norm(s):
     s = unicodedata.normalize('NFKC', s or '')
     return re.sub(r'[\s,./\-년월일원₩:~]', '', s)
 
-def tokens(text):
+def _canon_date(m):
+    nums = re.findall(r'\d+', m)
+    if not nums: return None
+    if len(nums[0]) == 4 and nums[0][:2] in ('19','20'): nums = nums[1:]
+    if len(nums) < 2: return None
+    return f'{int(nums[0])}/{int(nums[1])}'
+
+def _canon_time(m):
+    nums = re.findall(r'\d+', m)
+    if not nums: return None
+    h = int(nums[0]); mi = int(nums[1]) if len(nums) > 1 else 0
+    if '오후' in m and h < 12: h += 12
+    if '반' in m: mi = 30
+    return f'{h}:{mi:02d}'
+
+def tokens(text, soft=False):
     out = set()
     if not text: return out
     for kind, pat in PATS.items():
         for m in re.findall(pat, text):
-            n = norm(m)
+            if kind == 'qty' and not soft:
+                continue  # 파생 가능 수량은 hard 환각 판정에서 제외 (2026-10-13 보정)
+            if kind == 'account' and re.match(r'^(19|20)\d{2}-\d{1,2}-\d{1,2}$', m.strip()):
+                continue  # ISO 날짜를 계좌로 오인 금지
             if kind == 'date':
-                n = re.sub(r'^(19|20)\d{2}', '', n)  # 연도 생략형 접기
-            if len(n) >= 2:
+                n = _canon_date(m)
+            elif kind == 'time':
+                n = _canon_time(m)
+            else:
+                n = norm(m)
+            if n and len(str(n)) >= 2:
                 out.add((kind, n))
     return out
 
@@ -115,7 +137,9 @@ def check_case(c):
     vis = ' '.join([o.get('purpose_text',''), o.get('target',''), desc] + [ch.get('문구','') for ch in o.get('chips',[])])
     if re.search(r'\d-[①②③④⑤⑥]|(?<![A-Za-z])P[1-6](?![0-9A-Za-z])', vis): r.add('S2-04','C','내부 코드 노출')
     pt = o.get('purpose_text','')
-    if '?' in pt or not pt.rstrip().endswith('요.') : r.add('S2-05','m','목적 문구 형식')
+    ptc = pt.rstrip().rstrip('.')
+    if '?' in pt or not ptc.endswith('하기') or len(ptc) > 40 or re.search(r'·|와 |과 ', ptc):
+        r.add('S2-05','m','목적 문구 형식(MD-02: ~하기·40자·목적1)')
 
     # --- S3 ---
     if o.get('type',{}).get('값') != g.get('type'): r.add('S3-02','M', f'유형 골든 불일치')
@@ -134,13 +158,16 @@ def check_case(c):
             lab = k.get('라벨','')
             if re.search(r'label|LABEL|EYEBROW|CTA|히어로|섹션', lab + step.get('주어','') + str(k.get('플레이스홀더',''))):
                 r.add('S5-05','C', f'제작 용어 노출 {lab}')
-            if not (2 <= len(lab) <= 6) or re.search(r'(하기|입력|해 주세요)$', lab):
+            FIXED_LABELS = {'이미지','메인 이미지','로고 이미지','프로필 이미지','제목 위 문구','제목','값','내용'}
+            lab_core = lab.replace(' ','')
+            if lab not in FIXED_LABELS and (not (2 <= len(lab_core) <= 6) or re.search(r'(하기|입력|해 주세요)$', lab)):
                 r.add('S5-04','M', f'라벨 형식 {lab}')
             if '필수' not in k: r.add('S5-13','M', f'필수/선택 미표기 {lab}')
 
     # --- S6 ---
     for s in o.get('state',[]):
         st = s.get('상태','')
+        if st == 'AI가 채워둠': st = '미리 채움'  # 4-12 용어 동치 (2026-10-13 보정)
         if st not in {'미리 채움','비어 있음','못 채움'}: r.add('S6-01','C', f'상태값 {st}')
         v = str(s.get('값',''))
         if st == '미리 채움':
@@ -149,6 +176,32 @@ def check_case(c):
             if re.search(r'추후 공지|문의 바랍니다|미정|TBD', v): r.add('S6-04','M', f'{s.get("칸")} 임시 문구')
             if re.match(r'^예: ', v): r.add('S6-05','m','「예: 」 유출')
 
+    # S6-07 확장: 범위 문자열 통짜 (시작/날짜/시간 칸에 ~ 범위)
+    for st2 in o.get('state',[]):
+        if re.search(r'시작|날짜|시간|일시', str(st2.get('칸',''))) and st2.get('상태') in ('미리 채움','AI가 채워둠'):
+            if re.search(r'\d\s?[~∼–]\s?\d|\d시\s?[~∼–]', str(st2.get('값',''))):
+                r.add('S6-07','M', f"{st2.get('칸')} 범위 통짜 {str(st2.get('값'))[:25]}")
+    # S6-10 자료 시효: 지난·작년 표지 자료의 사실값 미리 채움 금지
+    stale_txt = '\n'.join((m.get('parsed_text') or m.get('text') or m.get('ocr_text') or '')
+                           for m in c['in'].get('materials',[])
+                           if re.search(r'지난\s?호|지난해|작년|2025년', (m.get('name','') + (m.get('parsed_text') or m.get('text') or m.get('ocr_text') or ''))))
+    if stale_txt:
+        stok = tokens(stale_txt)
+        for st2 in o.get('state',[]):
+            if st2.get('상태') in ('미리 채움','AI가 채워둠'):
+                hit = tokens(str(st2.get('값',''))) & stok
+                hit = {t for t in hit if t[0] in ('date','money','time')}
+                if hit: r.add('S6-10','M', f"시효 지난 자료값 미리 채움 {st2.get('칸')} {sorted(hit)[:2]}")
+    # S5-19 익명 충돌: 자료가 익명을 명시하면 폼에 이름·연락처 칸 금지
+    if re.search(r'익명', IN):
+        for step in o.get('q',[]):
+            for k in step.get('칸',[]):
+                if re.search(r'^(이름|성함|연락처|전화번호)$', k.get('라벨','')):
+                    r.add('S5-19','M', f"익명 자료인데 「{k.get('라벨')}」 칸")
+    # S2-08 비실재 기능 칩: CdBd에 없는 기능 제안
+    for ch in o.get('chips',[]):
+        if re.search(r'알림 신청|알림 받기|발송|문자 발송|푸시|D-?DAY|디데이|카운트다운|실시간 채팅', ch.get('문구','')):
+            r.add('S2-08','M', f"비실재 기능 칩 「{ch.get('문구','')[:20]}」")
     # --- S7 ---
     for rc in o.get('react',[]):
         msg = rc.get('문구','')
@@ -177,7 +230,7 @@ def check_case(c):
     # --- S10/S11 ---
     page = (o.get('page_facts','') or '') + '\n' + '\n'.join(o.get('titles',[]))
     for f in c['in'].get('filled',[]):
-        if f.get('action')=='fill':
+        if f.get('action')=='fill' and not re.search(r'이미지|사진|로고|링크|URL', str(f.get('step',''))):
             v = str(f.get('value',''))
             vt = tokens(v)
             if vt and not (vt <= tokens(page)):
@@ -190,7 +243,7 @@ def check_case(c):
     for t in o.get('titles',[]):
         if re.search(r'(보기|하기|받기|주세요|나요|까요|인가요)$|\?', t) or re.search(r'(것|것들|거|데|점|분들|사람)$', t):
             r.add('S11-01','M', f'타이틀 종결 「{t}」')
-        if re.search(r'(는|면|에|이|가|고)$', t) and len(t)>3:
+        if re.search(r'(는|면|에)$', t) and len(t)>3:
             r.add('S11-01','M', f'타이틀 조사 종결 「{t}」')
     # S11-20 주제 필수 정보 (단순판: 행사/판매/모집 핵심 토큰)
     need = {'1-①':'date','1-②':'date','1-③':'date','1-④':'time',
