@@ -1,5 +1,4 @@
 #!/bin/bash
-# 정본 위치: 4-13 …/스크립트/s2run.sh (2026-10-16 첫 실행에서 검증)
 # 사용: s2run.sh <사례ID> "<설명>"   (이미 로그인된 browse 세션 전제)
 # 생성 화면 → 확인 화면들 → 첫 시안 → 내용 채우기(텍스트=다음 · 이미지=이건 없어요) → 마지막 확인 → 3안 → 시안A → 무드 → 에디터 → 프리뷰 캡처
 B="$HOME/.claude/skills/gstack/browse/dist/browse"
@@ -11,6 +10,7 @@ log(){ echo "[$(( $(date +%s)-T0 ))s] $*" | tee -a "$LOG"; }
 ref(){ $B snapshot -i 2>/dev/null | grep -E "\[button\] \"$1\"" | grep -v disabled | head -1 | grep -oE '@e[0-9]+' | head -1; }
 head2(){ $B text 2>/dev/null | sed -n '2p' | cut -c1-${1:-150}; }
 
+if [ -z "$RESUME" ]; then
 $B goto "https://cdbd-client-git-ai-makevu-s-team.vercel.app/ai/create" >/dev/null 2>&1; sleep 5
 TB=$($B snapshot -i 2>/dev/null | grep -E '\[textbox\]' | head -1 | grep -oE '@e[0-9]+' | head -1)
 [ -z "$TB" ] && { log "FAIL: 입력칸 없음 ($($B url))"; exit 1; }
@@ -39,14 +39,24 @@ $B screenshot "$AR/$ID-06-draft1.png" --viewport >/dev/null 2>&1
 $B click "$(ref '시작하기')" >/dev/null 2>&1; sleep 4
 
 # 내용 채우기
+PREV=""; REP=0
 for i in $(seq 1 25); do
   R=$(ref '확인했어요'); [ -n "$R" ] && break
   H=$(head2 140); log "Q$i: $H"
+  if [ "$H" = "$PREV" ]; then REP=$((REP+1)); else REP=0; fi; PREV="$H"
+  if [ "$REP" -ge 2 ]; then
+    D=$($B snapshot -i 2>/dev/null | grep -E '\[button\] "항목 지우기"' | head -1 | grep -oE '@e[0-9]+')
+    log "STUCK(같은 화면 3회) — 검증 오류로 진행 불가: $($B text 2>/dev/null | grep -oE '[^.]{0,30}입력해 주세요[^.]{0,10}' | head -1) → 항목 지우기 우회"
+    $B screenshot "$AR/$ID-STUCK-q$i.png" --viewport >/dev/null 2>&1
+    [ -n "$D" ] && { $B click "$D" >/dev/null 2>&1; sleep 1.5; }
+    REP=0
+  fi
   R=$(ref '다음'); [ -z "$R" ] && R=$(ref '이건 없어요')
   [ -z "$R" ] && { sleep 3; R=$(ref '다음'); [ -z "$R" ] && R=$(ref '이건 없어요'); }
   [ -z "$R" ] && { log "STOP: 채우기 버튼 없음"; break; }
   $B click "$R" >/dev/null 2>&1; sleep 3
 done
+fi  # RESUME 끝
 log "마지막 확인: $($B text 2>/dev/null | sed -n '2p' | cut -c1-600)"
 $B screenshot "$AR/$ID-08-final-check.png" --viewport >/dev/null 2>&1
 $B click "$(ref '확인했어요')" >/dev/null 2>&1
