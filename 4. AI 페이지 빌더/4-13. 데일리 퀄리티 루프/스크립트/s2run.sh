@@ -4,7 +4,7 @@
 B="$HOME/.claude/skills/gstack/browse/dist/browse"
 ID="$1"; DESC="$2"
 AR="/Users/leesunho/Documents/GitHub/design/cdbd-templates/4. AI 페이지 빌더/4-13. 데일리 퀄리티 루프/아카이브/2026-10-16/s2"
-LOG="$AR/$ID-log.txt"; : > "$LOG"
+LOG="$AR/$ID-log.txt"; [ -z "$RESUME" ] && : > "$LOG"
 T0=$(date +%s)
 log(){ echo "[$(( $(date +%s)-T0 ))s] $*" | tee -a "$LOG"; }
 ref(){ $B snapshot -i 2>/dev/null | grep -E "\[button\] \"$1\"" | grep -v disabled | head -1 | grep -oE '@e[0-9]+' | head -1; }
