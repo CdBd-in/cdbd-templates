@@ -2,7 +2,8 @@
 # 23:00 자동 측정 파이프라인 — 사례 2개(L4 채용공고 PDF 첨부+채우기 / L1b 요가 재실행) · 단계마다 콘솔 잔액 읽기 · 보고서 md 작성
 S="$(cd "$(dirname "$0")" && pwd)"; AR="$S/../아카이브/$(date +%Y-%m-%d)/credit"; mkdir -p "$AR"
 START="${START:-2300}"
-until [ "$(date +%H%M)" -ge "$START" ]; do sleep 30; done
+B="$HOME/.claude/skills/gstack/browse/dist/browse"
+until [ "$(date +%H%M)" -ge "$START" ]; do $B url >/dev/null 2>&1; sleep 30; done  # 대기 중 브라우저 서버 유휴 종료 방지
 T0=$(date -u +%Y-%m-%dT%H:%M:00Z); echo "$T0" > "$AR/T0-night.txt"
 rd(){ "$S/usage-read.sh" "$1" "$T0" | tee -a "$AR/night-reads.txt"; }
 rd n00-baseline
