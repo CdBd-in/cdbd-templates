@@ -5,7 +5,7 @@ AR="/Users/leesunho/Documents/GitHub/design/cdbd-templates/4. AI 페이지 빌�
 TAG="$1"; ST="${2:-$(date -u -v-30M +%Y-%m-%dT%H:%M:00Z)}"; EN=$(date -u -v+15M +%Y-%m-%dT%H:%M:00Z)
 ORG=c4bcf9fd-1d18-4b71-8b5a-bf98a556e54f
 H="{'accept':'application/json','anthropic-beta':'analytics-usage-cost-2026-08-24','anthropic-dangerous-direct-browser-access':'true','anthropic-version':'2023-06-01','x-organization-uuid':'$ORG'}"
-$B tab 2 >/dev/null 2>&1
+$B tab ${CONSOLE_TAB:-2} >/dev/null 2>&1
 $B js "fetch('/v1/organizations/analytics/usage?beta=true&starting_at=$ST&ending_at=$EN&time_bucket_width=1m&group_by[]=model&group_by[]=api_key_id&limit=5000',{headers:$H}).then(r=>r.text())" 2>/dev/null > "$AR/usage-$TAG.json"
 $B js "fetch('/api/organizations/$ORG/prepaid/credits').then(r=>r.text())" 2>/dev/null > "$AR/credits-$TAG.json"
 python3 - "$AR/usage-$TAG.json" "$AR/credits-$TAG.json" "$TAG" <<'PY'

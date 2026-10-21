@@ -27,7 +27,7 @@ fill_screen(){ # 빈 textbox만 채움 (스냅샷 순서 = DOM 순서 가정)
     i=$((i+1))
   done <<< "$REFS"
   sleep 1; }
-$B tab 1 >/dev/null 2>&1
+$B tab ${BUILDER_TAB:-1} >/dev/null 2>&1
 
 if [ "$STAGE" = "1" ]; then
   log "STAGE1 시작"
