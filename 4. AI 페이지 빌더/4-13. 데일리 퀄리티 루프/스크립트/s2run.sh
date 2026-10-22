@@ -3,7 +3,9 @@
 # 생성 화면 → 확인 화면들 → 첫 시안 → 내용 채우기(텍스트=다음 · 이미지=이건 없어요) → 마지막 확인 → 3안 → 시안A → 무드 → 에디터 → 프리뷰 캡처
 B="$HOME/.claude/skills/gstack/browse/dist/browse"
 ID="$1"; DESC="$2"
-AR="/Users/leesunho/Documents/GitHub/design/cdbd-templates/4. AI 페이지 빌더/4-13. 데일리 퀄리티 루프/아카이브/2026-10-16/s2"
+VAULT="${CDBD_VAULT:-/Users/designer/Documents/GitHub/design/cdbd-templates}"
+AR="${S2_AR:-$VAULT/4. AI 페이지 빌더/4-13. 데일리 퀄리티 루프/아카이브/$(date +%Y-%m-%d)/s2}"
+mkdir -p "$AR" /tmp/segcap
 LOG="$AR/$ID-log.txt"; [ -z "$RESUME" ] && : > "$LOG"
 T0=$(date +%s)
 log(){ echo "[$(( $(date +%s)-T0 ))s] $*" | tee -a "$LOG"; }
