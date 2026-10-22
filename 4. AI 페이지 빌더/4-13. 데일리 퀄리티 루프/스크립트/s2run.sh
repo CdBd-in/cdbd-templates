@@ -39,17 +39,20 @@ $B screenshot "$AR/$ID-06-draft1.png" --viewport >/dev/null 2>&1
 $B click "$(ref '시작하기')" >/dev/null 2>&1; sleep 4
 
 # 내용 채우기
-PREV=""; REP=0
+PREV=""; REP=0; STUCK=0
 for i in $(seq 1 25); do
   R=$(ref '확인했어요'); [ -n "$R" ] && break
-  H=$(head2 140); log "Q$i: $H"
+  T=$(head2 140); log "Q$i: $T"
+  # 지문 = 제목 + 화면의 버튼·입력칸 목록.
+  # ⚠️ 제목만 비교하면 한 묶음의 하위 질문들(제목 동일)을 '같은 화면'으로 오판한다 (2026-10-22 오탐 사건)
+  H=$( { printf '%s\n' "$T"; $B snapshot -i 2>/dev/null | grep -oE '\[(button|textbox|textarea|combobox|checkbox|radio)\] "[^"]*"'; } | cksum | cut -d' ' -f1 )
   if [ "$H" = "$PREV" ]; then REP=$((REP+1)); else REP=0; fi; PREV="$H"
   if [ "$REP" -ge 2 ]; then
-    D=$($B snapshot -i 2>/dev/null | grep -E '\[button\] "항목 지우기"' | head -1 | grep -oE '@e[0-9]+')
-    log "STUCK(같은 화면 3회) — 검증 오류로 진행 불가: $($B text 2>/dev/null | grep -oE '[^.]{0,30}입력해 주세요[^.]{0,10}' | head -1) → 항목 지우기 우회"
+    log "STUCK(같은 화면 3회) — 진행 불가 의심: $($B text 2>/dev/null | grep -oE '[^.]{0,30}입력해 주세요[^.]{0,10}' | head -1)"
     $B screenshot "$AR/$ID-STUCK-q$i.png" --viewport >/dev/null 2>&1
-    [ -n "$D" ] && { $B click "$D" >/dev/null 2>&1; sleep 1.5; }
-    REP=0
+    # 🚫 자동 「항목 지우기」 우회 금지 (2026-10-22) — 멀쩡한 항목을 지워 산출물을 오염시키고,
+    #    그 결과(깡통 섹션)를 제품 결함으로 오인해 개발에 전달할 뻔했다. 우회하지 말고 중단·기록만 한다.
+    STUCK=1; log "RUN ABORTED: 막다른 길 의심 — 자동 우회 안 함 · 수동 확인 필요"; break
   fi
   R=$(ref '다음'); [ -z "$R" ] && R=$(ref '이건 없어요')
   [ -z "$R" ] && { sleep 3; R=$(ref '다음'); [ -z "$R" ] && R=$(ref '이건 없어요'); }
@@ -57,6 +60,7 @@ for i in $(seq 1 25); do
   $B click "$R" >/dev/null 2>&1; sleep 3
 done
 fi  # RESUME 끝
+[ "${STUCK:-0}" = "1" ] && { log "미완료(막다른 길 의심) — 에디터 미도달 · 채점 제외"; exit 2; }
 log "마지막 확인: $($B text 2>/dev/null | sed -n '2p' | cut -c1-600)"
 $B screenshot "$AR/$ID-08-final-check.png" --viewport >/dev/null 2>&1
 $B click "$(ref '확인했어요')" >/dev/null 2>&1
