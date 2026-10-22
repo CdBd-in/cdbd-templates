@@ -29,12 +29,21 @@ log "설명 확인: $(body 160)"
 for i in $(seq 1 10); do
   guard; H=$(body 120); log "확인$i: $H"
   case "$H" in *"시안 제작 중"*|*"구성하고"*|*"채우고 있"*) break;; esac
-  [ "$(clickBtn '다음')" = "ok" ] || { log "다음 없음 → 생성 시작으로 간주"; break; }
+  # 🔁 「다음」이 잠깐 사라지는 재렌더 구간이 있다 — 바로 포기하지 말고 재시도 (2026-10-22)
+  CK=$(clickBtn '다음')
+  if [ "$CK" != "ok" ]; then
+    for rt in 1 2 3 4; do
+      sleep 4; guard
+      case "$(body 120)" in *"구성하고"*|*"채우고 있"*|*"제작 중"*) CK=gen; break;; esac
+      CK=$(clickBtn '다음'); [ "$CK" = "ok" ] && break
+    done
+  fi
+  [ "$CK" = "ok" ] || { log "다음 없음(재시도 4회) → 생성 단계로 간주 · 버튼=$(btns)"; break; }
   sleep 5
 done
 
 # 첫 시안 폴링
-OK=0; for i in $(seq 1 18); do guard
+OK=0; for i in $(seq 1 30); do guard
   case "$(btns)" in *'"시작하기"'*) OK=1; break;; esac; sleep 10; done
 [ "$OK" = 0 ] && { log "FAIL: 「시작하기」 미등장"; exit 5; }
 log "첫 시안 완료"; snap draft1; clickBtn "시작하기" >/dev/null; sleep 4
