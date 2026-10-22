@@ -13,12 +13,12 @@ LOG="$AR/$ID-log.txt"; [ -z "$RESUME" ] && : > "$LOG"
 T0=$(date +%s)
 log(){ echo "[$(( $(date +%s)-T0 ))s] $*" | tee -a "$LOG"; }
 ref(){ $B snapshot -i 2>/dev/null | grep -E "\[button\] \"$1\"" | grep -v disabled | head -1 | grep -oE '@e[0-9]+' | head -1; }
-head2(){ $B text 2>/dev/null | sed -n '2p' | cut -c1-${1:-150}; }
+head2(){ $B js "document.body.innerText.replace(/\\s+/g,' ')" 2>/dev/null | tr -d '\n' | cut -c1-${1:-150}; }
 # 세션이 CdBd 밖으로 끌려갔는지 매 단계 확인 — 아니면 즉시 중단(무효 산출물 방지)
 guard(){ case "$($B url 2>/dev/null)" in *cdbd-client-git-ai-makevu-s-team.vercel.app*) return 0;;
   *) log "ABORT(세션 이탈): $($B url 2>/dev/null) — 다른 browse 작업과 충돌. 런 무효."; exit 3;; esac; }
 
-if [ -z "$RESUME" ]; then
+if [ -z "$RESUME" ] && [ "${STAGE:-}" != "fill" ]; then
 $B goto "https://cdbd-client-git-ai-makevu-s-team.vercel.app/ai/create" >/dev/null 2>&1; sleep 5
 TB=$($B snapshot -i 2>/dev/null | grep -E '\[textbox\]' | head -1 | grep -oE '@e[0-9]+' | head -1)
 [ -z "$TB" ] && { log "FAIL: 입력칸 없음 ($($B url))"; exit 1; }
@@ -35,7 +35,7 @@ for i in $(seq 1 10); do
   case "$H" in *"원페이지"*|*"멀티페이지"*) log "유형: $(echo "$H" | cut -c1-80)";; esac
   case "$H" in *"누구에게"*) log "타겟화면: $($B snapshot -i 2>/dev/null | grep '\[button\]' | grep -vE '이전|다음' | sed 's/.*\[button\] //' | tr '\n' ' ')";; esac
   R=$(ref '다음'); [ -z "$R" ] && { sleep 3; R=$(ref '다음'); }
-  [ -z "$R" ] && { log "STOP: 다음 버튼 없음 — $H"; exit 4; }
+  [ -z "$R" ] && { log "다음 버튼 없음 → 생성 시작으로 간주, 폴링으로 전환 — $H"; break; }
   $B click "$R" >/dev/null 2>&1; sleep 5
 done
 
@@ -51,6 +51,8 @@ log "첫 시안 완료"
 $B screenshot "$AR/$ID-06-draft1.png" --viewport >/dev/null 2>&1
 $B click "$(ref '시작하기')" >/dev/null 2>&1; sleep 4
 
+fi  # STAGE=fill 진입점
+if [ -z "$RESUME" ]; then
 # 내용 채우기
 PREV=""; REP=0; STUCK=0
 for i in $(seq 1 25); do
