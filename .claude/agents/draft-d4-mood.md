@@ -59,7 +59,7 @@ cr(tx, bg) >= 3.6   &&   cr(btn, bg) >= 3.6
 `.claude/cdbd-draft-shared.md` 「🎨 3토큰 색 매핑」의 코드를 그대로 쓴다.
 
 🚨 **텍스트는 `getStyledTextSegments(['fills'])` + `setRangeFills`** — 색이 섞인 텍스트는 `fills === figma.mixed`라 `Array.isArray`가 **false** → 조용히 건너뛴다.
-🚨 **opacity 보존** — `Object.assign({}, p, {color})`. 안 하면 `{텍스트색}×55%` 보조 텍스트·`{버튼색}×8%` 틴트가 전부 100%로 죽는다.
+🚨 **opacity 보존** — `Object.assign({}, p, {color})`. 안 하면 `{텍스트색}×70%` 보조 텍스트(텍스트 투명도는 100·70 두 단계만)·`{버튼색}×8%` 틴트가 전부 100%로 죽는다.
 
 ### 🐛 미매핑 색 리포트 (필수)
 
