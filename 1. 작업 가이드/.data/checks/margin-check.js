@@ -15,6 +15,7 @@
 //  R4 배경 없는 프레임이 겹겹이 여백을 가짐(래퍼 + 카드) — 하나로 합칠 것
 //  R5 화면 끝까지 닿는 배경 박스(색 띠) — 허용 예외. 의도인지 「확인」만 (오류로 세지 않음)
 //  R6 한 섹션 안 큰 박스(폭 180↑)들의 바깥 여백이 제각각 (색 띠와 안쪽 박스 혼재 포함)
+//  R7 보이는 박스의 아래 안쪽 여백이 28↑이고 위보다 16↑ 큼 — 섹션 끝 36(바깥 여백)이 박스 안으로 샘 (4-8 ⑤)
 //
 // 입력 (셋 중 하나를 이 파일 앞에 선언)
 //   const TARGET_IDS_IN = ['5395:14113', …]   섹션 id 목록 (라이브러리 = preset-index.json의 id)
@@ -87,6 +88,10 @@ function checkSection(sec, bg) {
 
     // 배경 박스 ↔ 화면 끝
     const bands = new Set();
+    for (const { n: b } of recs.boxes) {
+      const [pt, , pb] = pad(b);
+      if (pb >= 28 && pb - pt >= 16) add(b, 'R7', `박스 안쪽 위/아래 ${pt}/${pb}`);
+    }
     for (const { n: b, parent } of recs.boxes) {
       if (parent) continue;
       const bb = b.absoluteBoundingBox, gl = bb.x - sx, gr = ex - (bb.x + bb.width);
