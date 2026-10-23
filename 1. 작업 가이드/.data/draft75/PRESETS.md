@@ -10,27 +10,27 @@
 - `5455:157` hero-minimal-01 h188 — EYEBROW|페이지 제목|카피 혹은 소개 문구
 - `5455:174` hero-minimal-03 h211 — 로고|페이지 제목|카피 혹은 소개 문구
 - `5455:164` hero-minimal-02 h233 — 로고|EYEBROW|페이지 제목|카피 혹은 소개 문구
-- `6498:7488` hero-minimal-07 h247 — 프로필 이미지|이름|한 줄 설명
 - `6560:9101` hero-mixed-03 h256 — 메인 비주얼|페이지 제목 카피 혹은 설명 문구
 - `6498:7480` hero-minimal-06 h277 — 프로필 이미지|이름|한 줄 설명
+- `6498:7488` hero-minimal-07 h277 — 프로필 이미지|이름|한 줄 설명
 - `6498:7469` hero-mixed-01 h416 — EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지
-- `6560:9095` hero-mixed-02 h460 — 메인 비주얼|EYEBROW 페이지 제목 카피
+- `6560:9095` hero-mixed-02 h496 — 메인 비주얼|EYEBROW 페이지 제목 카피
 - `5455:195` hero-minimal-05 h569 — 로고|페이지 제목|카피 혹은 소개 문구|이미지
 - `5455:182` hero-minimal-04 h611 — 로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지
 - `5455:89` hero-mixed-06 h759 — 로고|카피 혹은 소개 문구|이미지|페이지 제목|EYEBROW|일정 정보
 
 **에디토리얼** (19개)
 
-- `6498:7500` hero-editorial-10 h124 — 프로필 이미지|이름 한 줄 소개
-- `6498:7504` hero-editorial-11 h124 — 프로필 이미지|이름 한 줄 소개
+- `6498:7500` hero-editorial-10 h146 — 프로필 이미지|이름 한 줄 소개
+- `6498:7504` hero-editorial-11 h146 — 프로필 이미지|이름 한 줄 소개
 - `6498:7509` hero-editorial-12 h192 — 문장형 카피를 입력합니다|——
 - `5455:207` hero-editorial-01 h194 — EYEBROW|페이지 제목|카피 혹은 소개 문구
 - `5455:214` hero-editorial-02 h231 — 로고|EYEBROW|페이지 제목|카피 혹은 소개 문구
 - `6560:9101` hero-mixed-03 h256 — 메인 비주얼|페이지 제목 카피 혹은 설명 문구
 - `5455:224` hero-editorial-03 h289 — 로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 소개 문구
-- `6498:7524` hero-editorial-13 h363 — EYEBROW|문장형 카피를 입력합니다|LABEL 세부 정보|LABEL 세부 정보|LABEL 세부 정보
+- `6498:7524` hero-editorial-13 h366 — EYEBROW|문장형 카피를 입력합니다|LABEL 세부 정보|LABEL 세부 정보|LABEL 세부 정보
 - `6498:7469` hero-mixed-01 h416 — EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지
-- `6560:9095` hero-mixed-02 h460 — 메인 비주얼|EYEBROW 페이지 제목 카피
+- `6560:9095` hero-mixed-02 h496 — 메인 비주얼|EYEBROW 페이지 제목 카피
 - `5455:262` hero-editorial-06 h508 — 메인 이미지|페이지 제목|카피 혹은 소개 문구
 - `5455:238` hero-editorial-04 h589 — 로고|페이지 제목|카피 혹은 소개 문구|메인 이미지
 - `5455:249` hero-editorial-05 h594 — 로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|메인 이미지
@@ -45,7 +45,7 @@
 
 - `5455:454` hero-bold-08 h196 — 페이지 제목|카피 혹은 설명 문구
 - `6585:9285` hero-bold-09 h331 — 프로필 이미지|이름|한 줄 설명
-- `6560:9086` hero-bold-10 h350 — 메인 비주얼|페이지 제목 카피 혹은 설명 문구|버튼 텍스트
+- `6560:9086` hero-bold-10 h349 — 메인 비주얼|페이지 제목 카피 혹은 설명 문구|버튼 텍스트
 - `5455:346` hero-bold-02 h393 — 로고|회사명|슬로건|EYEBROW|페이지 제목|카피 혹은 설명 문구
 - `5455:439` hero-bold-07 h483 — 로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 설명 문구
 - `5455:359` hero-bold-03 h525 — 메인 비주얼|EYEBROW|페이지 제목|한 줄 카피
@@ -63,20 +63,20 @@
 
 - `5455:462` intro-mixed-01 h65 — 소개 문구
 - `6498:7721` intro-mixed-03 h68 — 소개 문구
-- `6559:7729` intro-mixed-04 h104 — 초대의 글|○○○ 드림
 - `6559:7740` intro-mixed-05 h108 — 구분선|소개 문구|구분선
+- `6559:7729` intro-mixed-04 h112 — 초대의 글|○○○ 드림
 - `5474:26616` intro-minimal-02 h225 — 프로필 이미지|이름|한 줄 설명
 - `5474:26608` intro-minimal-01 h255 — 프로필 이미지|이름|한 줄 설명
 - `5455:465` intro-mixed-02 h451 — 소개 문구|이미지
 
 **에디토리얼** (11개)
 
+- `6559:7736` intro-editorial-06 h40 — label|소개 문구
 - `5455:462` intro-mixed-01 h65 — 소개 문구
-- `6559:7736` intro-editorial-06 h68 — label|소개 문구
 - `6498:7721` intro-mixed-03 h68 — 소개 문구
-- `6559:7729` intro-mixed-04 h104 — 초대의 글|○○○ 드림
 - `5474:26654` intro-editorial-02 h108 — 프로필 이미지|이름 한 줄 소개
 - `6559:7740` intro-mixed-05 h108 — 구분선|소개 문구|구분선
+- `6559:7729` intro-mixed-04 h112 — 초대의 글|○○○ 드림
 - `5455:486` intro-editorial-01 h124 — 프로필 이미지|이름 한 줄 소개
 - `5455:490` intro-editorial-03 h257 — 프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개
 - `5455:503` intro-editorial-04 h316 — 소개 문구|이미지|이미지|이미지|이미지
@@ -87,10 +87,10 @@
 
 - `5455:462` intro-mixed-01 h65 — 소개 문구
 - `6498:7721` intro-mixed-03 h68 — 소개 문구
-- `6559:7729` intro-mixed-04 h104 — 초대의 글|○○○ 드림
 - `5474:26668` intro-bold-03 h105 — 소개 문구
 - `6498:7711` intro-bold-04 h105 — 소개 문구
 - `6559:7740` intro-mixed-05 h108 — 구분선|소개 문구|구분선
+- `6559:7729` intro-mixed-04 h112 — 초대의 글|○○○ 드림
 - `5474:26659` intro-bold-01 h255 — 프로필 이미지|이름|한 줄 설명
 - `5455:518` intro-bold-02 h323 — 프로필 이미지|이름|한 줄 소개
 - `5455:465` intro-mixed-02 h451 — 소개 문구|이미지
@@ -119,16 +119,16 @@
 
 **에디토리얼** (14개)
 
-- `6559:7895` key_info-editorial-07 h93 — label|세부 정보 추가 정보
 - `5395:14259` key_info-editorial-04 h126 — label 세부 정보|label 세부 정보
 - `6559:7819` key_info-editorial-06 h126 — label 세부 정보|label 세부 정보|label 세부 정보
 - `5395:14278` key_info-editorial-05 h134 — 00|세부 정보|00|세부 정보|00|세부 정보
 - `5395:14785` key_info-mixed-01 h149 — 00단위 label|00단위 label|00단위 label
 - `5395:14794` key_info-mixed-02 h154 — 00단위 LABEL|00단위 LABEL
+- `6559:7895` key_info-editorial-07 h158 — label|세부 정보 추가 정보
 - `6559:7872` key_info-mixed-03 h170 — label|세부 정보|label|세부 정보
 - `5395:14810` key_info-mixed-12 h176 — 아이콘|label 세부 정보|아이콘|label 세부 정보
 - `5395:14819` key_info-mixed-13 h176 — 📅|label 세부 정보|📍|label 세부 정보
-- `6560:7957` key_info-editorial-08 h205 — label|세부 정보 추가 정보|label|세부 정보 추가 정보|구분선|*부가 설명 텍스트
+- `6560:7957` key_info-editorial-08 h209 — label|세부 정보 추가 정보|label|세부 정보 추가 정보|구분선|*부가 설명 텍스트
 - `5395:14250` key_info-editorial-03 h218 — 📅|label 세부 정보|💬|label 세부 정보
 - `6559:7881` key_info-mixed-04 h222 — label|세부 정보|추가 정보|label|세부 정보|추가 정보
 - `5395:14219` key_info-editorial-01 h228 — label|세부 정보|label|세부 정보|*부가 설명 텍스트
@@ -163,7 +163,7 @@
 - `5484:27` story-mixed-02 h108 — 본문 텍스트
 - `5498:26845` story-mixed-03 h108 — 본문 텍스트
 - `5498:26874` story-mixed-05 h109 — 본문 텍스트|본문 텍스트
-- `6559:7775` story-mixed-04 h136 — “문장형 카피를 입력합니다.” —
+- `6559:7775` story-mixed-04 h139 — “문장형 카피를 입력합니다.” —
 - `6559:7748` story-minimal-03 h142 — 문장형 카피를 입력합니다|——
 
 **에디토리얼** (7개)
@@ -173,7 +173,7 @@
 - `5484:27` story-mixed-02 h108 — 본문 텍스트
 - `5498:26845` story-mixed-03 h108 — 본문 텍스트
 - `5498:26874` story-mixed-05 h109 — 본문 텍스트|본문 텍스트
-- `6559:7775` story-mixed-04 h136 — “문장형 카피를 입력합니다.” —
+- `6559:7775` story-mixed-04 h139 — “문장형 카피를 입력합니다.” —
 - `5484:40` story-editorial-02 h142 — 본문 텍스트|본문 텍스트
 
 **볼드** (6개)
@@ -181,7 +181,7 @@
 - `5455:537` story-bold-01 h73 — 한 줄 카피
 - `5484:23` story-bold-03 h108 — 본문 텍스트
 - `5498:26874` story-mixed-05 h109 — 본문 텍스트|본문 텍스트
-- `6559:7771` story-bold-04 h136 — “문장형 카피를 입력합니다.” —
+- `6559:7771` story-bold-04 h139 — “문장형 카피를 입력합니다.” —
 - `5455:544` story-bold-02 h151 — 한 줄 카피|본문 텍스트
 - `6559:7779` story-bold-05 h228 — “|문장형 카피를 입력합니다.|“
 
@@ -191,20 +191,20 @@
 
 - `5455:1195` notice-mixed-05 h92 — 안내 사항 안내 사항
 - `5486:307` notice-mixed-06 h124 — 안내 사항 안내 사항
-- `6560:8856` notice-mixed-07 h176 — Q|질문|A|답변|Q|질문
-- `6560:8870` notice-mixed-08 h193 — 질문|답변|구분선|질문|답변
+- `6560:8856` notice-mixed-07 h168 — Q|질문|A|답변|Q|질문
+- `6560:8870` notice-mixed-08 h181 — 질문|답변|구분선|질문|답변
 - `5455:1199` notice-mixed-01 h206 — 💡|안내 사항|✅|안내 사항|✔️|안내 사항
 
 **에디토리얼** (12개)
 
 - `5455:1195` notice-mixed-05 h92 — 안내 사항 안내 사항
 - `5486:307` notice-mixed-06 h124 — 안내 사항 안내 사항
-- `6560:8856` notice-mixed-07 h176 — Q|질문|A|답변|Q|질문
+- `6560:8856` notice-mixed-07 h168 — Q|질문|A|답변|Q|질문
+- `6560:8870` notice-mixed-08 h181 — 질문|답변|구분선|질문|답변
 - `5455:1214` notice-mixed-02 h184 — LABEL 안내 사항 안내 사항
-- `6560:8870` notice-mixed-08 h193 — 질문|답변|구분선|질문|답변
 - `5455:1199` notice-mixed-01 h206 — 💡|안내 사항|✅|안내 사항|✔️|안내 사항
+- `6560:8842` notice-mixed-04 h228 — 00|질문|답변|00|질문|답변
 - `5455:1235` notice-editorial-02 h234 — 01 안내 사항|02 안내 사항
-- `6560:8842` notice-mixed-04 h240 — 00|질문|답변|00|질문|답변
 - `5486:317` notice-editorial-04 h273 — 01 안내 사항|02 안내 사항|*부가 설명 텍스트
 - `5455:1218` notice-mixed-03 h273 — 01 안내 사항|02 안내 사항|*부가 설명 텍스트
 - `5486:311` notice-editorial-03 h334 — 메인 이미지|안내 사항 안내 사항
@@ -214,12 +214,12 @@
 
 - `5455:1195` notice-mixed-05 h92 — 안내 사항 안내 사항
 - `5486:307` notice-mixed-06 h124 — 안내 사항 안내 사항
-- `6560:8856` notice-mixed-07 h176 — Q|질문|A|답변|Q|질문
+- `6560:8856` notice-mixed-07 h168 — Q|질문|A|답변|Q|질문
 - `5455:1243` notice-bold-01 h180 — LABEL  ● 안내 사항 ● 안내 사항
 - `5486:326` notice-bold-02 h180 — LABEL  ● 안내 사항 ● 안내 사항
+- `6560:8870` notice-mixed-08 h181 — 질문|답변|구분선|질문|답변
 - `5455:1214` notice-mixed-02 h184 — LABEL 안내 사항 안내 사항
-- `6560:8870` notice-mixed-08 h193 — 질문|답변|구분선|질문|답변
-- `6560:8842` notice-mixed-04 h240 — 00|질문|답변|00|질문|답변
+- `6560:8842` notice-mixed-04 h228 — 00|질문|답변|00|질문|답변
 - `5486:330` notice-bold-03 h271 — 01 안내 사항|02 안내 사항|*부가 설명 텍스트
 - `5486:339` notice-bold-04 h271 — 01 안내 사항|02 안내 사항|*부가 설명 텍스트
 - `5455:1218` notice-mixed-03 h273 — 01 안내 사항|02 안내 사항|*부가 설명 텍스트
@@ -231,20 +231,20 @@
 - `6560:8913` list-mixed-26 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
 - `6560:8949` list-mixed-27 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
 - `5408:212` list-mixed-01 h132 — 항목 세부 정보x3
+- `6560:8248` list-mixed-16 h144 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
+- `6560:8379` list-mixed-18 h144 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
 - `5408:90` list-mixed-09 h147 — 항목 · 세부 정보x3
 - `6560:8746` list-mixed-24 h150 — 아이콘|label 세부 정보|아이콘|label 세부 정보
-- `6560:8248` list-mixed-16 h156 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
-- `6560:8379` list-mixed-18 h156 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
-- `6560:8787` list-minimal-09 h162 — 00 label|세부 정보|00 label|세부 정보|00 label|세부 정보
+- `6560:8787` list-minimal-09 h154 — 00 label|세부 정보|00 label|세부 정보|00 label|세부 정보
+- `6560:8286` list-mixed-17 h190 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
 - `6560:8139` list-minimal-08 h204 — YYYY.MM – YYYY.MM|회사명|소속 · 역할|YYYY.MM – YYYY.MM|회사명|소속 · 역할
 - `5408:274` list-mixed-05 h204 — 항목x3
-- `6560:8286` list-mixed-17 h205 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
+- `6560:8413` list-mixed-04 h206 — YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선
+- `6560:8193` list-mixed-03 h210 — ●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용
 - `6560:8761` list-mixed-25 h210 — label 세부 정보|→|label 세부 정보|→
-- `6560:8413` list-mixed-04 h218 — YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선
-- `6560:8193` list-mixed-03 h219 — ●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용
-- `6560:8399` list-mixed-20 h225 — hh:mm|내용|hh:mm|내용|hh:mm|내용
-- `6560:8389` list-mixed-19 h231 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
-- `6560:8660` list-mixed-21 h248 — label|항목|세부 정보|항목|세부 정보|label
+- `6560:8399` list-mixed-20 h213 — hh:mm|내용|hh:mm|내용|hh:mm|내용
+- `6560:8389` list-mixed-19 h219 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
+- `6560:8660` list-mixed-21 h250 — label|항목|세부 정보|항목|세부 정보|label
 - `6560:8696` list-mixed-23 h251 — label|항목|세부 정보|항목|세부 정보|구분선
 - `5487:23` list-minimal-04 h258 — 항목 세부 정보x3
 - `5408:97` list-mixed-10 h284 — 항목|→ x4 (링크형)
@@ -267,21 +267,21 @@
 - `6560:8913` list-mixed-26 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
 - `6560:8949` list-mixed-27 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
 - `5408:212` list-mixed-01 h132 — 항목 세부 정보x3
+- `6560:8248` list-mixed-16 h144 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
+- `6560:8379` list-mixed-18 h144 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
 - `5408:408` list-editorial-01 h147 — 세부 정보|항목|세부 정보|항목|세부 정보
 - `5408:418` list-editorial-02 h147 — 항목|세부 정보x3
 - `5487:65` list-mixed-08 h147 — 항목 · 세부 정보x3
 - `5408:90` list-mixed-09 h147 — 항목 · 세부 정보x3
 - `6560:8746` list-mixed-24 h150 — 아이콘|label 세부 정보|아이콘|label 세부 정보
-- `6560:8248` list-mixed-16 h156 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
-- `6560:8379` list-mixed-18 h156 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
-- `6560:8286` list-mixed-17 h205 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
+- `6560:8286` list-mixed-17 h190 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
+- `6560:8413` list-mixed-04 h206 — YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선
+- `6560:8193` list-mixed-03 h210 — ●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용
 - `6560:8761` list-mixed-25 h210 — label 세부 정보|→|label 세부 정보|→
-- `6560:8413` list-mixed-04 h218 — YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선
-- `6560:8193` list-mixed-03 h219 — ●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용
-- `6560:8399` list-mixed-20 h225 — hh:mm|내용|hh:mm|내용|hh:mm|내용
-- `6560:8389` list-mixed-19 h231 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
+- `6560:8399` list-mixed-20 h213 — hh:mm|내용|hh:mm|내용|hh:mm|내용
+- `6560:8389` list-mixed-19 h219 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
 - `5408:438` list-editorial-03 h233 — label|항목 세부 정보x3
-- `6560:8660` list-mixed-21 h248 — label|항목|세부 정보|항목|세부 정보|label
+- `6560:8660` list-mixed-21 h250 — label|항목|세부 정보|항목|세부 정보|label
 - `6560:8696` list-mixed-23 h251 — label|항목|세부 정보|항목|세부 정보|구분선
 - `5408:448` list-editorial-04 h258 — 01|항목 세부 정보|02|항목 세부 정보|03
 - `5487:72` list-editorial-10 h258 — 항목 세부 정보x3
@@ -295,11 +295,11 @@
 - `5408:191` list-mixed-15 h485 — 💡 항목 세부 정보 x3 (아이콘형)
 - `5408:518` list-editorial-06 h490 — 설명 문구|항목 세부 정보|버튼 텍스트|안내 문구
 - `5408:154` list-mixed-14 h604 — LABEL|label|항목|세부 정보 (표형)
-- `5408:286` list-mixed-06 h834 — 이미지|세부 정보 x2
-- `5487:135` list-editorial-12 h924 — 01|항목|이미지|세부 정보|02
+- `5408:286` list-mixed-06 h814 — 이미지|세부 정보 x2
+- `5487:135` list-editorial-12 h904 — 01|항목|이미지|세부 정보|02
 - `5408:582` list-editorial-09 h956 — 이미지|항목|세부 정보|세부 정보|이미지
 - `5408:563` list-editorial-08 h970 — 01|항목|세부 정보|이미지|02
-- `5408:539` list-editorial-07 h1010 — 01|항목|이미지|세부 정보|02
+- `5408:539` list-editorial-07 h990 — 01|항목|이미지|세부 정보|02
 - `5487:79` list-editorial-11 h1288 — 01|항목|소개 문구|세부 정보|갤러리 제목
 - `5408:461` list-editorial-05 h1289 — 01|항목|소개 문구|세부 정보|갤러리 제목
 - `5487:157` list-editorial-13 h1498 — 메인 이미지|서브 이미지|항목|설명 문구
@@ -309,22 +309,22 @@
 
 - `6560:8913` list-mixed-26 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
 - `6560:8949` list-mixed-27 h116 — 메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6
+- `6560:8248` list-mixed-16 h144 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
+- `6560:8379` list-mixed-18 h144 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
 - `5487:65` list-mixed-08 h147 — 항목 · 세부 정보x3
 - `5408:90` list-mixed-09 h147 — 항목 · 세부 정보x3
 - `6560:8746` list-mixed-24 h150 — 아이콘|label 세부 정보|아이콘|label 세부 정보
-- `6560:8248` list-mixed-16 h156 — YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용
-- `6560:8379` list-mixed-18 h156 — hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램
 - `5487:287` list-bold-10 h187 — 항목x3
+- `6560:8286` list-mixed-17 h190 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
 - `5408:274` list-mixed-05 h204 — 항목x3
-- `6560:8286` list-mixed-17 h205 — YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선
 - `6560:8761` list-mixed-25 h210 — label 세부 정보|→|label 세부 정보|→
-- `6560:8399` list-mixed-20 h225 — hh:mm|내용|hh:mm|내용|hh:mm|내용
-- `6560:8389` list-mixed-19 h231 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
-- `6560:8660` list-mixed-21 h248 — label|항목|세부 정보|항목|세부 정보|label
+- `6560:8399` list-mixed-20 h213 — hh:mm|내용|hh:mm|내용|hh:mm|내용
+- `6560:8389` list-mixed-19 h219 — hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자
+- `6560:8660` list-mixed-21 h250 — label|항목|세부 정보|항목|세부 정보|label
 - `6560:8696` list-mixed-23 h251 — label|항목|세부 정보|항목|세부 정보|구분선
+- `6560:8229` list-bold-13 h279 — YYYY|이력 내용|구분선|YYYY|이력 내용|구분선
+- `6560:8470` list-bold-14 h279 — hh:mm|프로그램|구분선|hh:mm|프로그램|구분선
 - `5408:97` list-mixed-10 h284 — 항목|→ x4 (링크형)
-- `6560:8229` list-bold-13 h291 — YYYY|이력 내용|구분선|YYYY|이력 내용|구분선
-- `6560:8470` list-bold-14 h291 — hh:mm|프로그램|구분선|hh:mm|프로그램|구분선
 - `6560:8678` list-mixed-22 h310 — label|항목|세부 정보|항목|세부 정보|label
 - `5408:603` list-bold-01 h330 — 항목 안내 문구x3
 - `5487:272` list-bold-09 h332 — 항목 안내 문구|버튼 텍스트 x2
@@ -341,8 +341,8 @@
 - `5408:623` list-bold-03 h481 — label 항목 세부 정보|안내 문구|01
 - `5408:191` list-mixed-15 h485 — 💡 항목 세부 정보 x3 (아이콘형)
 - `5408:154` list-mixed-14 h604 — LABEL|label|항목|세부 정보 (표형)
-- `5487:294` list-bold-11 h834 — 이미지|세부 정보 x2
-- `5408:286` list-mixed-06 h834 — 이미지|세부 정보 x2
+- `5487:294` list-bold-11 h814 — 이미지|세부 정보 x2
+- `5408:286` list-mixed-06 h814 — 이미지|세부 정보 x2
 - `5408:729` list-bold-07 h1324 — 01|메인 이미지|항목|설명 문구|label
 - `5408:664` list-bold-06 h1594 — 항목|소개 문구|세부 정보|갤러리 제목
 
@@ -350,10 +350,10 @@
 
 **미니멀** (16개)
 
-- `6560:8497` materials-minimal-03 h164 — 이미지|LABEL|소개 문구
-- `6560:8504` materials-minimal-04 h164 — LABEL|소개 문구|이미지
 - `5395:14052` materials-mixed-01 h264 — 소개 문구|이미지|이미지|이미지|세부 정보
 - `5543:26917` materials-mixed-11 h277 — LABEL|단위 등의 설명 문구|1|value・상세|2
+- `6560:8497` materials-minimal-03 h300 — 이미지|LABEL|소개 문구
+- `6560:8504` materials-minimal-04 h300 — LABEL|소개 문구|이미지
 - `5395:13748` materials-mixed-04 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13785` materials-mixed-05 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13857` materials-mixed-08 h325 — LABEL|단위 등의 설명 문구|label|A|B
@@ -361,8 +361,8 @@
 - `5395:13927` materials-mixed-09 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5395:13956` materials-mixed-10 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5543:26879` materials-mixed-07 h330 — LABEL|단위 등의 설명 문구|label|A|B
-- `6560:8511` materials-minimal-05 h347 — 이미지|LABEL|소개 문구
-- `6560:8535` materials-mixed-03 h384 — 이미지|LABEL 소개 문구|LABEL 소개 문구|이미지
+- `6560:8511` materials-minimal-05 h339 — 이미지|LABEL|소개 문구
+- `6560:8535` materials-mixed-03 h380 — 이미지|LABEL 소개 문구|LABEL 소개 문구|이미지
 - `5395:11851` materials-minimal-02 h581 — 01|LABEL|소개 문구|메인 이미지|00단위 label
 - `5395:11819` materials-minimal-01 h602 — 소개 문구|이미지|이미지|이미지|이미지
 - `5395:14065` materials-mixed-02 h813 — 카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지
@@ -378,7 +378,7 @@
 - `5395:13927` materials-mixed-09 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5395:13956` materials-mixed-10 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5543:26879` materials-mixed-07 h330 — LABEL|단위 등의 설명 문구|label|A|B
-- `6560:8535` materials-mixed-03 h384 — 이미지|LABEL 소개 문구|LABEL 소개 문구|이미지
+- `6560:8535` materials-mixed-03 h380 — 이미지|LABEL 소개 문구|LABEL 소개 문구|이미지
 - `5395:12188` materials-editorial-01 h482 — 소개 문구|이미지|이미지|이미지|이미지
 - `5395:12238` materials-editorial-03 h695 — 01|LABEL|소개 문구|메인 이미지|00단위 label
 - `5395:12207` materials-editorial-02 h776 — 소개 문구|메인 이미지|서브 이미지|서브 이미지|서브 이미지
