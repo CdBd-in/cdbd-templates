@@ -8,7 +8,7 @@
 """
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from audit import box, has_bg, has_fill, paras, nonempty, ptext  # noqa: E402
+from audit import box, has_bg, has_fill, panels, paras, nonempty, ptext, TH_PANEL  # noqa: E402
 
 DELETABLE = ('image', 'gallery', 'youtube')   # 자료가 없으면 빌더가 지우는 카드
 EDGE_KINDS = ('hero', 'header', 'footer')      # 페이지 맨 위·띠 안에서 시작하는 섹션
@@ -48,11 +48,6 @@ def check(p):
         # ③ 마지막 카드가 지워지면 섹션 하단 36이 사라진다 (원본만으론 못 막음 — 개발 A3 몫)
         if t in DELETABLE and k == len(bl) - 1 and k > 0 and vbot(bl[k - 1]) < 36:
             F.append(('지움-맨아래', 'm', f'마지막 {t}가 빠지면 섹션 아래 여백 {vbot(bl[k - 1]):.0f}px (<36) — 개발 A3 몫'))
-        # ④ 배경 묶음 첫 행 위 안쪽 여백 ≥20
-        prev = (bl[k - 1].get('style') or {}) if k else {}
-        st = b.get('style') or {}
-        if t in ('text', 'multiCard') and has_fill(st) and not has_fill(prev) and box(st.get('padding'))[0] < 20:
-            F.append(('면-첫행', 'm', f'카드{k + 1} 배경 묶음 첫 행 위 안쪽 여백 {box(st.get("padding"))[0]:.0f}px (<20)'))
         # ⑤ 끝에 남은 빈 줄 · 끝 줄바꿈 (본문과 2열 칸)
         cs = [('본문', b.get('content'))] + [(f'칸{j + 1}', it.get('content')) for j, it in enumerate((b.get('multiCard') or {}).get('items', []) or [])]
         for lab, c in cs:
@@ -63,6 +58,11 @@ def check(p):
             brend = 1 if ps[ne[-1]]['items'] and ps[ne[-1]]['items'][-1][0] == 'BR' else 0
             if trail or brend:
                 F.append(('빈 줄', 'M', f'카드{k + 1} {lab} 끝에 빈 줄 {trail + brend}개 「{ptext(ps[ne[-1]])[:16]}」'))
+    # ④ 배경 면(2장↑ 맞붙은 묶음) 첫 행 위 안쪽 여백 ≥12 — 행 간격(8~10)을 위 여백으로 쓰면 위가 눌려 보인다
+    for run in panels(bl):
+        f0 = bl[run[0]]; t0 = box((f0.get('style') or {}).get('padding'))[0]
+        if len(run) >= 2 and f0.get('type') in ('text', 'multiCard') and t0 < TH_PANEL:
+            F.append(('면-첫행', 'M', f'카드{run[0] + 1} 배경 면({len(run)}장) 첫 행 위 안쪽 여백 {t0:.0f}px (<{TH_PANEL}) — 리드 문장은 면 밖으로 · 첫 행 위 20'))
     return key, F
 
 

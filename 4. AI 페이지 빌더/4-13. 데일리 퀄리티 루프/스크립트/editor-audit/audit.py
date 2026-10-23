@@ -23,6 +23,7 @@ EMOJI_RE = re.compile('^[\U0001F300-\U0001FAFF☀-➿⬀-⯿①-⓿■-◿️‍
 TH_BIG, TH_LINE, TH_BOX = 9, 20, 18           # ⚙ S11-49 줄 나누기 기준 (MD-08-3 📱)
 TH_GAP = 60                                     # ⚙ S11-42 이웃 카드 보이는 여백 (섹션 사이 = 36＋20 = 56)
 TH_VAL = 8                                      # ⚙ S11-47 2열 값 칸 글자 수 (MD-08-3 길이 표)
+TH_PANEL = 12                                   # ⚙ S11-39 배경 면 첫 행 위 안쪽 여백 (원본 설계값 16은 통과 · 결함 = 8~10)
 
 
 # ── 읽기 도우미 ─────────────────────────────────────────────────────
@@ -106,6 +107,23 @@ def sig(b):
     return (b.get('type'), b.get('title'), tuple(box(st.get('padding'))), tuple(box(st.get('margin'))))
 
 
+def panels(bl):
+    """배경 면 = 같은 배경색 카드가 바깥 여백 없이 맞붙어 이어진 묶음 (카드 순번 목록)"""
+    out, cur = [], []
+    for k, b in enumerate(bl):
+        st = b.get('style') or {}
+        if has_fill(st):
+            if cur:
+                pv = bl[cur[-1]].get('style') or {}
+                if not (box(pv.get('margin'))[2] == 0 and box(st.get('margin'))[0] == 0 and str(pv.get('background')) == str(st.get('background'))):
+                    out.append(cur); cur = []
+            cur.append(k)
+        elif cur:
+            out.append(cur); cur = []
+    if cur: out.append(cur)
+    return out
+
+
 def is_title(b): return '섹션 타이틀' in str(b.get('title') or '')
 
 
@@ -165,11 +183,11 @@ def audit(ed, presets=None):
         top = box(st.get('padding'))[0] + box(st.get('margin'))[0]
         if top < 20:
             flag('S11-39', 'm', f'페이지 맨 위 카드의 위 여백 {top:.0f}px (<20)', W(0, blocks[0]), '원본')
-    for i, b in enumerate(blocks):
-        st = b.get('style') or {}
-        prev = (blocks[i - 1].get('style') or {}) if i else {}
-        if has_fill(st) and not has_fill(prev) and b.get('type') in ('text', 'multiCard') and box(st.get('padding'))[0] < 20:
-            flag('S11-39', 'm', f'배경 묶음 첫 행 위 안쪽 여백 {box(st.get("padding"))[0]:.0f}px (<20)', W(i, b), '원본')
+    for run in panels(blocks):
+        f0 = blocks[run[0]]
+        t0 = box((f0.get('style') or {}).get('padding'))[0]
+        if len(run) >= 2 and f0.get('type') in ('text', 'multiCard') and t0 < TH_PANEL:
+            flag('S11-39', 'm', f'배경 면({len(run)}장) 첫 행 위 안쪽 여백 {t0:.0f}px (<{TH_PANEL}) — 행 간격을 위 여백으로 씀', W(run[0], f0), '원본')
 
     for i, b in enumerate(blocks):
         st = b.get('style') or {}
