@@ -34,7 +34,9 @@ j "JSON.stringify(window.__ed)" > "$OUT/$ID-editor.json"
 python3 - "$OUT/$ID-editor.json" "$ID" <<'PY' || exit 2
 import json, sys
 d = json.load(open(sys.argv[1]))
-assert str(d.get('id')) == sys.argv[2], f"id 불일치 {d.get('id')}"
+if str(d.get('id')) != sys.argv[2]:
+    import os; os.remove(sys.argv[1])
+    sys.exit(f"FAIL editor {sys.argv[2]} — 열리지 않음(다른 페이지 {d.get('id')}가 열림 · 지워졌거나 권한 없음)")
 n = len(d.get('blocks') or [b for p in d.get('pages') or [] for b in p.get('blocks') or []])
 print(f"editor {d['id']} 카드 {n} → {sys.argv[1]}")
 PY
