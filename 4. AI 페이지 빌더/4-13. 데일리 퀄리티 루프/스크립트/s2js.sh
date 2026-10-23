@@ -82,3 +82,14 @@ clickBtn "시안 A" >/dev/null; sleep 2; clickBtn "다음" >/dev/null; sleep 5
 log "무드: $(body 100)"; clickBtn "다음" >/dev/null
 for i in $(seq 1 15); do sleep 10; case "$($B url)" in *editor*) break;; esac; done
 log "에디터: $($B url)"
+
+# 🔎 에디터 데이터 자동 검사 (4-9-5 S11 · editor-audit/) — 화면 채점이 놓치는 빈 줄·견본 값·여백 겹침을 데이터로 잡는다
+#    실패해도 런 결과는 그대로(미측정으로 기록)
+EID=$($B url 2>/dev/null | sed -n 's#.*/editor/\([0-9][0-9]*\).*#\1#p')
+if [ -n "$EID" ]; then
+  log "에디터 자동 검사: $EID"
+  "$(dirname "$0")/editor-audit/run.sh" "$AR" "$EID" 2>&1 | tee -a "$LOG" || log "⚠️ 에디터 자동 검사 실패 — 미측정"
+else
+  log "⚠️ 에디터 ID 없음 — 자동 검사 미측정"
+fi
+exit 0

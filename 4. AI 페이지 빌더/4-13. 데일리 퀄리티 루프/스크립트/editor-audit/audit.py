@@ -123,6 +123,7 @@ def audit(ed, presets=None):
     F = []
 
     def flag(cid, sev, msg, where='', route='빌더'):
+        # route = 고칠 곳 — 빌더(MD·생성) · 원본(섹션 원본 수정) · 개발 — 정본 = 4-9-5 §7 판별 3갈래
         F.append({'id': cid, 'sev': sev, 'msg': msg, 'where': where, 'route': route})
 
     th = ed.get('theme') or {}
@@ -163,13 +164,12 @@ def audit(ed, presets=None):
         st = blocks[0].get('style') or {}
         top = box(st.get('padding'))[0] + box(st.get('margin'))[0]
         if top < 20:
-            flag('S11-39', 'm', f'페이지 맨 위 카드의 위 여백 {top:.0f}px (<20)', W(0, blocks[0]))
+            flag('S11-39', 'm', f'페이지 맨 위 카드의 위 여백 {top:.0f}px (<20)', W(0, blocks[0]), '원본')
     for i, b in enumerate(blocks):
         st = b.get('style') or {}
         prev = (blocks[i - 1].get('style') or {}) if i else {}
         if has_fill(st) and not has_fill(prev) and b.get('type') in ('text', 'multiCard') and box(st.get('padding'))[0] < 20:
-            flag('S11-39', 'm', f'배경 묶음 첫 행 위 안쪽 여백 {box(st.get("padding"))[0]:.0f}px (<20)', W(i, b),
-                 '원본' if idx.get(sig(b)) else '빌더')
+            flag('S11-39', 'm', f'배경 묶음 첫 행 위 안쪽 여백 {box(st.get("padding"))[0]:.0f}px (<20)', W(i, b), '원본')
 
     for i, b in enumerate(blocks):
         st = b.get('style') or {}
@@ -269,8 +269,7 @@ def audit(ed, presets=None):
             sa, sc = a.get('style') or {}, c.get('style') or {}
             gap = box(sa.get('padding'))[2] + box(sa.get('margin'))[2] + box(sc.get('padding'))[0] + box(sc.get('margin'))[0]
             if gap >= TH_GAP:
-                flag('S11-42', 'M', f'이웃 카드 사이 여백 {gap:.0f}px — 빠진 카드 자리 여백이 겹침', f'카드{i + 1}→{i + 2}',
-                     '원본' if idx.get(sig(a)) and idx.get(sig(c)) else '빌더')
+                flag('S11-42', 'M', f'이웃 카드 사이 여백 {gap:.0f}px — 빠진 카드 자리 여백이 겹침', f'카드{i + 1}→{i + 2}', '원본')
 
     # S11-34 텍스트만 페이지 리듬
     imgs = sum(1 for b in blocks if b.get('type') in ('image', 'gallery', 'youtube', 'profile'))
