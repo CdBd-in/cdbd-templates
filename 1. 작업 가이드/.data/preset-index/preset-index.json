@@ -264,7 +264,7 @@
   "id": "5395:14317",
   "name": "key_info-bold-03",
   "grp": "핵심 정보-볼드",
-  "h": 172,
+  "h": 184,
   "slots": "설명 텍스트|label|세부 정보|label|세부 정보",
   "old_name": "핵심 정보-볼드",
   "key": null

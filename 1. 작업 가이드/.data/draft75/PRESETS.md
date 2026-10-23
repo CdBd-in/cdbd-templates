@@ -1,4 +1,4 @@
-# 목적 × 스타일 섹션 픽리스트 (2026-09-15 자동 생성)
+# 목적 × 스타일 섹션 픽리스트 (2026-10-23 자동 생성)
 
 > ⚠️ 손으로 고치지 말 것 — `preset-index/preset-index.json`에서 `rebuild-picklist.py`로 재생성됩니다.
 > 전체 355개 (섹션 290 · 구조 65)
@@ -143,10 +143,10 @@
 - `6559:7946` key_info-mixed-11 h132 — label 세부 정보|label 세부 정보|label 세부 정보
 - `6559:7936` key_info-mixed-08 h155 — label 세부 정보 추가 정보
 - `6560:7953` key_info-mixed-09 h155 — label 세부 정보 추가 정보
-- `5395:14317` key_info-bold-03 h172 — 설명 텍스트|label|세부 정보|label|세부 정보
 - `5395:14800` key_info-mixed-05 h176 — LABEL|세부 정보|LABEL|세부 정보
 - `5395:14810` key_info-mixed-12 h176 — 아이콘|label 세부 정보|아이콘|label 세부 정보
 - `5395:14819` key_info-mixed-13 h176 — 📅|label 세부 정보|📍|label 세부 정보
+- `5395:14317` key_info-bold-03 h184 — 설명 텍스트|label|세부 정보|label|세부 정보
 - `5534:4026` key_info-mixed-07 h214 — LABEL 상세 정보  LABEL 상세 정보
 - `5395:14379` key_info-bold-07 h250 — 01|label 세부 정보|02|label 세부 정보|03|label 세부 정보
 - `5395:14827` key_info-mixed-06 h274 — label 세부 정보|label 세부 정보|*부가 설명 텍스트
