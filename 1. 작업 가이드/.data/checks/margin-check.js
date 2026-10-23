@@ -11,7 +11,7 @@
 // 판정 (카드 = 섹션 프레임의 직계 자식)
 //  R1 배경 없는 글자·이미지·선이 화면 끝에서 20 미만 (이미지·선이 0 = 의도한 풀블리드라 통과)
 //  R2 배경 박스가 화면 끝에서 20 미만 (양쪽 다 0 = 색 띠 → R5)
-//  R3 배경 박스 안 글자가 박스 끝에서 16 미만 (화면 끝까지 닿는 띠 안은 20 미만)
+//  R3 배경 박스 안 글자가 박스 끝에서 12 미만 (권장 16~24 · 라이브러리 최소 12 · 화면 끝까지 닿는 띠 안은 20 미만)
 //  R4 배경 없는 프레임이 겹겹이 여백을 가짐(래퍼 + 카드) — 하나로 합칠 것
 //  R5 화면 끝까지 닿는 배경 박스(색 띠) — 허용 예외. 의도인지 「확인」만 (오류로 세지 않음)
 //  R6 한 섹션 안 큰 박스(폭 180↑)들의 바깥 여백이 제각각 (색 띠와 안쪽 박스 혼재 포함)
@@ -20,11 +20,13 @@
 //   const TARGET_IDS_IN = ['5395:14113', …]   섹션 id 목록 (라이브러리 = preset-index.json의 id)
 //   const CONTAINER_ID_IN = '34:23'           이 노드 안의 380폭 섹션을 전부 (라이브러리 페이지)
 //   const PAGE_IDS_IN = ['8100:23', …]        시안 페이지 프레임 — 그 직계 자식을 섹션으로 본다
+//   (선택) const BG_IN = '250,250,250@100'     페이지 배경색. 라이브러리 기본 = 디폴트 테마 #fafafa · 시안 페이지 = 페이지 프레임 채움
 
 const TARGET_IDS = typeof TARGET_IDS_IN !== 'undefined' ? TARGET_IDS_IN : [];
 const CONTAINER_ID = typeof CONTAINER_ID_IN !== 'undefined' ? CONTAINER_ID_IN : null;
 const PAGE_IDS = typeof PAGE_IDS_IN !== 'undefined' ? PAGE_IDS_IN : [];
-const PAGE_W = 380, MIN = 20, INNER_MIN = 16, TOL = 2, BIG = 180;
+const PAGE_W = 380, MIN = 20, INNER_MIN = 12, TOL = 2, BIG = 180;
+const LIB_BG = typeof BG_IN !== 'undefined' ? BG_IN : '250,250,250@100';   // 라이브러리 = 디폴트 테마 {배경색} #fafafa (섹션 프레임 채움은 색 띠일 수 있어 쓰지 않는다)
 const IMG_WORDS = /이미지|로고|영상|썸네일|비주얼|지도|사진|아이콘|프로필/;
 const BTN_WORDS = /버튼|button|btn|cta/i;
 
@@ -136,15 +138,15 @@ function checkSection(sec, bg) {
 
 async function collectSections() {
   const list = [];   // [{ sec, bg }]
-  for (const id of TARGET_IDS) { const n = await figma.getNodeByIdAsync(id); if (n) list.push({ sec: n, bg: solidKey(n) }); }
+  for (const id of TARGET_IDS) { const n = await figma.getNodeByIdAsync(id); if (n) list.push({ sec: n, bg: LIB_BG }); }
   for (const id of PAGE_IDS) {
     const pg = await figma.getNodeByIdAsync(id); if (!pg) continue;
-    for (const s of pg.children) if (isFrame(s) && s.visible !== false) list.push({ sec: s, bg: solidKey(pg) });
+    for (const s of pg.children) if (isFrame(s) && s.visible !== false) list.push({ sec: s, bg: typeof BG_IN !== 'undefined' ? BG_IN : solidKey(pg) });
   }
   if (CONTAINER_ID) {
     const root = await figma.getNodeByIdAsync(CONTAINER_ID);
     const secs = root.findAll(n => n.type === 'FRAME' && Math.round(n.width) === PAGE_W && n.parent && Math.round(n.parent.width || 0) !== PAGE_W);
-    for (const s of secs) list.push({ sec: s, bg: solidKey(s) });
+    for (const s of secs) list.push({ sec: s, bg: LIB_BG });
   }
   return list;
 }
