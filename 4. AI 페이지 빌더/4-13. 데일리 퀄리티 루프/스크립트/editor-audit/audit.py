@@ -196,12 +196,12 @@ def audit(ed, presets=None):
         st = blocks[0].get('style') or {}
         top = box(st.get('padding'))[0] + box(st.get('margin'))[0]
         if top < 20:
-            flag('S11-39', 'm', f'페이지 맨 위 카드의 위 여백 {top:.0f}px (<20)', W(0, blocks[0]), '원본')
+            flag('S11-39', 'M', f'페이지 맨 위 카드의 위 여백 {top:.0f}px (<20)', W(0, blocks[0]), '원본')
     for run in panels(blocks):
         f0 = blocks[run[0]]
         t0 = box((f0.get('style') or {}).get('padding'))[0]
         if len(run) >= 2 and f0.get('type') in ('text', 'multiCard') and t0 < TH_PANEL:
-            flag('S11-39', 'm', f'배경 면({len(run)}장) 첫 행 위 안쪽 여백 {t0:.0f}px (<{TH_PANEL}) — 행 간격을 위 여백으로 씀', W(run[0], f0), '원본')
+            flag('S11-39', 'M', f'배경 면({len(run)}장) 첫 행 위 안쪽 여백 {t0:.0f}px (<{TH_PANEL}) — 행 간격을 위 여백으로 씀', W(run[0], f0), '원본')
 
     for i, b in enumerate(blocks):
         st = b.get('style') or {}
@@ -316,7 +316,7 @@ def audit(ed, presets=None):
     bgs = sum(1 for b in blocks if b.get('type') in ('text', 'multiCard') and has_fill(b.get('style') or {}))
     divs = sum(1 for b in blocks if b.get('type') == 'divider')
     if imgs <= 2 and bgs <= 1 and divs <= 3:
-        flag('S11-34', 'm', f'글만 이어지는 페이지 — 이미지 {imgs} · 배경 카드 {bgs} · 구분선 {divs}', '페이지')
+        flag('S11-34', 'M', f'글만 이어지는 페이지 — 이미지 {imgs} · 배경 카드 {bgs} · 구분선 {divs}', '페이지')
     return F
 
 
