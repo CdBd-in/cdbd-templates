@@ -136,12 +136,13 @@ b.style.padding="<상>px <우>px <하>px <좌>px";  // Figma 구분선 프레임
 // 페이지 패널 먼저 열기(좌측 '>' 토글 fiber onClick). 그 후 설치:
 // 2026-10-23 갱신 — 옛 __gotoPage(`o()` 매처)는 이 빌드에서 no-handler. 썸네일 번호 라벨(text-xs)의 onClick 중 menu-overlay 핸들러를 호출한다
 window.__gotoPage2=function(N){
- var lbl=[...document.querySelectorAll("*")].find(e=>e.children.length===0&&e.textContent.trim()===String(N)&&e.getBoundingClientRect().width>0&&e.getBoundingClientRect().y>380&&String(e.className).includes('text-xs'));
+ // 2026-10-23 — 세로 위치(y>380)로 거르면 1번 페이지 라벨(y≈365)을 못 찾는다 → 왼쪽 페이지 패널(x<200) 안 라벨로 찾는다
+ var lbl=[...document.querySelectorAll("*")].find(e=>e.children.length===0&&e.textContent.trim()===String(N)&&e.getBoundingClientRect().width>0&&e.getBoundingClientRect().x<200&&String(e.className).includes('text-xs'));
  if(!lbl)return "no-lbl-"+N;
  var f=window.__cdbd.fiberOf(lbl),d=0;
  while(f&&d<4){var oc=f.memoizedProps&&f.memoizedProps.onClick;if(typeof oc==="function"&&/menu-overlay/.test(oc.toString())){oc({target:document.body,stopPropagation(){},preventDefault(){}});return "switched-"+N;}f=f.return;d++;}
  return "no-handler-"+N;};
-window.__gotoPage2(N);   // N=1-based 페이지 번호 (5541 p24 · p40, 5547 p20에서 검증)
+window.__gotoPage2(N);   // N=1-based 페이지 번호 (5541 p24 · p40, 5547 p20 · 10-23 원본 36개 일괄 수정 때 마스터 6곳 p1~p76에서 검증)
 // 그 후 패널 닫기: document.elementFromPoint(880,400).click()
 // 검증: boardRows()로 활성 페이지 카드 확인(기대 개수/타입과 대조).
 ```
