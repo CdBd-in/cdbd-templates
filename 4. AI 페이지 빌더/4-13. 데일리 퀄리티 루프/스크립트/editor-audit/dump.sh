@@ -22,6 +22,7 @@ fi
 ID="$1"; OUT="$2"; [ -n "$ID" ] && [ -n "$OUT" ] || { echo "사용: dump.sh <에디터ID> <출력폴더>"; exit 1; }
 mkdir -p "$OUT"
 case "$($B url 2>/dev/null)" in *"/editor/$ID"*) ;; *) $B goto "$BASE/editor/$ID" >/dev/null 2>&1;; esac
+sleep 3; case "$($B url 2>/dev/null)" in *"/login"*) echo "FAIL editor $ID — 로그인 필요($BASE)"; exit 3;; esac
 # 다 불러올 때까지 기다린다 — 같은 길이가 두 번 연속 나오면 확정(불러오는 중 덤프 방지)
 R=none; PREV=""
 for i in $(seq 1 25); do
