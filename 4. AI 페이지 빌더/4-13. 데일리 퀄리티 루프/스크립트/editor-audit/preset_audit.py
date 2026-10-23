@@ -4,7 +4,7 @@
 사용: python3 preset_audit.py presets.json [--key sec/bold/hero/01 ...] [--md out.md]
   presets.json = 프리셋 어드민 전체 목록 (dump.sh --presets 로 받음)
   --key        = 이 원본만 검사(새로 등록·수정한 것). 없으면 전체
-판정 규칙의 정본 = 4-5 「채택 관문」 ⑥ 지워져도 버티는 여백 · 4-9-5 §3 S11-39·40·42
+판정 규칙의 정본 = 4-5 「채택 관문」 ⑥ 지워져도 버티는 여백(맨 위·가운데·맨 아래·배경 면) · 4-9-5 §3 S11-39·40·42
 """
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -22,6 +22,24 @@ def vtop(b):
 def vbot(b):
     s = b.get('style') or {}
     return box(s.get('margin'))[2] + (0 if has_bg(s) else box(s.get('padding'))[2])
+
+
+def touching_band(a, b):
+    """두 카드가 같은 배경색으로 바깥 여백 없이 맞붙었나 (안쪽 여백끼리 옮겨도 보이는 모습이 같다)"""
+    sa, sb = a.get('style') or {}, b.get('style') or {}
+    return has_fill(sa) and has_fill(sb) and str(sa.get('background')) == str(sb.get('background')) \
+        and box(sa.get('margin'))[2] == 0 and box(sb.get('margin'))[0] == 0
+
+
+def movable(card, nb, side):
+    """지워질 카드(card)의 이웃(nb) 쪽 여백 중, 보이는 간격을 바꾸지 않고 이웃으로 옮길 수 있는 양
+    side = 'bottom'(맨 위 카드 → 다음 카드로) | 'top'(맨 아래 카드 → 앞 카드로)"""
+    s = card.get('style') or {}
+    i = 2 if side == 'bottom' else 0
+    m = box(s.get('margin'))[i]
+    pd = box(s.get('padding'))[i]
+    inner = pd if (not has_bg(s) or touching_band(*((card, nb) if side == 'bottom' else (nb, card)))) else 0
+    return m + inner
 
 
 def kind(p):
@@ -42,12 +60,25 @@ def check(p):
             g = vbot(bl[k - 1]) + vtop(bl[k + 1])
             if g >= 60:
                 F.append(('지움-가운데', 'M', f'카드{k + 1}({t})가 빠지면 이웃 간격 {g:.0f}px — 이미지 주변 여백을 이미지 카드로 옮길 것'))
-        # ② 맨 위 카드가 지워지면 위 여백이 0 (히어로·헤더·푸터만 — 다른 섹션은 앞 섹션 하단 36이 받아 준다)
-        if t in DELETABLE and k == 0 and len(bl) > 1 and kind(p) in EDGE_KINDS and vtop(bl[1]) < 20:
-            F.append(('지움-맨위', 'm', f'맨 위 {t}가 빠지면 위 여백 {vtop(bl[1]):.0f}px — 개발 A3(지운 카드 여백 넘기기) 전까지 위험 · 이미지 아래 여백을 글 위 여백으로 옮기면 해소'))
-        # ③ 마지막 카드가 지워지면 섹션 하단 36이 사라진다 (원본만으론 못 막음 — 개발 A3 몫)
-        if t in DELETABLE and k == len(bl) - 1 and k > 0 and vbot(bl[k - 1]) < 36:
-            F.append(('지움-맨아래', 'm', f'마지막 {t}가 빠지면 섹션 아래 여백 {vbot(bl[k - 1]):.0f}px (<36) — 개발 A3 몫'))
+        # ② 맨 위 카드가 지워지면 그 위 여백도 같이 빠진다 → 카드 아래 여백을 다음 글 카드 위 여백으로 옮겨 둔다
+        #    (보이는 간격은 그대로 · 같은 배경 면 안이면 안쪽 여백끼리 · 2026-10-23 원본 36개 반영)
+        if t in DELETABLE and k == 0 and len(bl) > 1 and bl[1].get('type') not in DELETABLE:
+            mv = movable(b, bl[1], 'bottom')
+            if mv > 0:
+                F.append(('지움-맨위', 'M', f'맨 위 {t}의 아래 여백 {mv:.0f}px를 다음 카드 위 여백으로 옮길 것 — 그대로면 {t}가 빠질 때 다음 카드 위 여백 {vtop(bl[1]):.0f}px만 남는다'))
+            else:
+                s1 = bl[1].get('style') or {}
+                # 배경 띠가 섹션 맨 위에 닿는 건 정상 → 띠 안 글의 위 안쪽 여백으로 잰다
+                top = box(s1.get('padding'))[0] + box(s1.get('margin'))[0] if has_bg(s1) else vtop(bl[1])
+                if kind(p) in EDGE_KINDS and top < 20:
+                    F.append(('지움-맨위', 'm', f'맨 위 {t}가 빠지면 위 여백 {top:.0f}px — 옮길 여백이 없어 보이는 간격을 바꾸지 않고는 못 고침'))
+        # ③ 마지막 카드가 지워지면 섹션 하단 36도 같이 빠진다 → 카드 위 여백은 앞 글 카드 아래 여백으로 옮겨 두고, 그래도 36 미만이면 기록만
+        if t in DELETABLE and k == len(bl) - 1 and k > 0 and bl[k - 1].get('type') not in DELETABLE:
+            mv = movable(b, bl[k - 1], 'top')
+            if mv > 0:
+                F.append(('지움-맨아래', 'M', f'마지막 {t}의 위 여백 {mv:.0f}px를 앞 카드 아래 여백으로 옮길 것'))
+            elif vbot(bl[k - 1]) < 36:
+                F.append(('지움-맨아래', 'm', f'마지막 {t}가 빠지면 섹션 아래 여백 {vbot(bl[k - 1]):.0f}px (<36) — 옮길 여백이 없어 보이는 간격을 바꾸지 않고는 못 고침'))
         # ⑤ 끝에 남은 빈 줄 · 끝 줄바꿈 (본문과 2열 칸)
         cs = [('본문', b.get('content'))] + [(f'칸{j + 1}', it.get('content')) for j, it in enumerate((b.get('multiCard') or {}).get('items', []) or [])]
         for lab, c in cs:
@@ -63,6 +94,13 @@ def check(p):
         f0 = bl[run[0]]; t0 = box((f0.get('style') or {}).get('padding'))[0]
         if len(run) >= 2 and f0.get('type') in ('text', 'multiCard') and t0 < TH_PANEL:
             F.append(('면-첫행', 'M', f'카드{run[0] + 1} 배경 면({len(run)}장) 첫 행 위 안쪽 여백 {t0:.0f}px (<{TH_PANEL}) — 리드 문장은 면 밖으로 · 첫 행 위 20'))
+    # ⑥ 배경 면 맨 위 카드가 지워질 카드면, 그 다음 글 카드 위 안쪽 여백이 면 첫 행 여백이 된다 → 카드 아래 안쪽 여백을 글 위로 옮겨 둔다
+    for run in panels(bl):
+        if len(run) < 2 or run[0] == 0: continue          # 섹션 맨 위는 ②가 본다
+        f0, f1 = bl[run[0]], bl[run[1]]
+        t1 = box((f1.get('style') or {}).get('padding'))[0]
+        if f0.get('type') in DELETABLE and f1.get('type') in ('text', 'multiCard') and t1 < TH_PANEL:
+            F.append(('지움-면첫행', 'M', f'카드{run[0] + 1} 배경 면 맨 위 {f0.get("type")}가 빠지면 글이 면 위쪽에 붙는다(위 안쪽 여백 {t1:.0f}px) — {f0.get("type")} 아래 안쪽 여백을 글 위로 옮길 것'))
     return key, F
 
 
