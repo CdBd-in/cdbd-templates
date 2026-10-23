@@ -6,7 +6,10 @@
   "h": 176,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/minimal/key_info/01",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14122",
@@ -15,7 +18,10 @@
   "h": 212,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/minimal/key_info/02",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14135",
@@ -24,7 +30,10 @@
   "h": 214,
   "slots": "LABEL|세부 정보|LABEL|세부 정보|*부가 설명 텍스트",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/minimal/key_info/03",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14155",
@@ -33,7 +42,10 @@
   "h": 216,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/minimal/key_info/04",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14168",
@@ -42,7 +54,12 @@
   "h": 73,
   "slots": "날짜 · 시간",
   "old_name": "텍스트",
-  "key": null
+  "key": "sec/minimal/key_info/05",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14171",
@@ -51,7 +68,10 @@
   "h": 226,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/minimal/key_info/06",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14785",
@@ -60,7 +80,12 @@
   "h": 149,
   "slots": "00단위 label|00단위 label|00단위 label",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/mixed/key_info/01",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5395:14794",
@@ -69,7 +94,12 @@
   "h": 154,
   "slots": "00단위 LABEL|00단위 LABEL",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/mixed/key_info/02",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "heavy",
+  "items_range": "2~4"
  },
  {
   "id": "6559:7872",
@@ -78,7 +108,10 @@
   "h": 170,
   "slots": "label|세부 정보|label|세부 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/03",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "6559:7881",
@@ -87,7 +120,10 @@
   "h": 222,
   "slots": "label|세부 정보|추가 정보|label|세부 정보|추가 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/04",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14800",
@@ -96,7 +132,10 @@
   "h": 176,
   "slots": "LABEL|세부 정보|LABEL|세부 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/mixed/key_info/05",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14827",
@@ -105,7 +144,10 @@
   "h": 274,
   "slots": "label 세부 정보|label 세부 정보|*부가 설명 텍스트",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/mixed/key_info/06",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "5534:4026",
@@ -114,7 +156,10 @@
   "h": 214,
   "slots": "LABEL 상세 정보  LABEL 상세 정보",
   "old_name": "핵심 정보-미니멀",
-  "key": null
+  "key": "sec/mixed/key_info/07",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "6559:7936",
@@ -123,7 +168,10 @@
   "h": 155,
   "slots": "label 세부 정보 추가 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/08",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "6560:7953",
@@ -132,7 +180,10 @@
   "h": 155,
   "slots": "label 세부 정보 추가 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/09",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "6559:7941",
@@ -141,7 +192,10 @@
   "h": 132,
   "slots": "label 세부 정보|label 세부 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/10",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "6559:7946",
@@ -150,7 +204,10 @@
   "h": 132,
   "slots": "label 세부 정보|label 세부 정보|label 세부 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/key_info/11",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "5395:14810",
@@ -159,7 +216,10 @@
   "h": 176,
   "slots": "아이콘|label 세부 정보|아이콘|label 세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/mixed/key_info/12",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14819",
@@ -168,7 +228,10 @@
   "h": 176,
   "slots": "📅|label 세부 정보|📍|label 세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/mixed/key_info/13",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14219",
@@ -177,7 +240,10 @@
   "h": 228,
   "slots": "label|세부 정보|label|세부 정보|*부가 설명 텍스트",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/editorial/key_info/01",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14201",
@@ -186,7 +252,10 @@
   "h": 276,
   "slots": "label 세부 정보|label 세부 정보|*부가 설명 텍스트",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/editorial/key_info/02",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14250",
@@ -195,7 +264,10 @@
   "h": 218,
   "slots": "📅|label 세부 정보|💬|label 세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/editorial/key_info/03",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14259",
@@ -204,7 +276,10 @@
   "h": 126,
   "slots": "label 세부 정보|label 세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/editorial/key_info/04",
+  "content": [],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5395:14278",
@@ -213,7 +288,12 @@
   "h": 134,
   "slots": "00|세부 정보|00|세부 정보|00|세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/editorial/key_info/05",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "6559:7819",
@@ -222,7 +302,10 @@
   "h": 126,
   "slots": "label 세부 정보|label 세부 정보|label 세부 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/editorial/key_info/06",
+  "content": [],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "6559:7895",
@@ -231,7 +314,10 @@
   "h": 158,
   "slots": "label|세부 정보 추가 정보",
   "old_name": "07-V2 2열(라벨 HUG) + 휴무 하위",
-  "key": null
+  "key": "sec/editorial/key_info/07",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "6560:7957",
@@ -240,7 +326,10 @@
   "h": 209,
   "slots": "label|세부 정보 추가 정보|label|세부 정보 추가 정보|구분선|*부가 설명 텍스트",
   "old_name": "07-V2 2열(라벨 HUG) + 휴무 하위",
-  "key": null
+  "key": "sec/editorial/key_info/08",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14307",
@@ -249,7 +338,10 @@
   "h": 113,
   "slots": "세부 정보1|세부 정보2",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/01",
+  "content": [],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14312",
@@ -258,7 +350,12 @@
   "h": 125,
   "slots": "00분 00초|설명 문구",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/02",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14317",
@@ -267,7 +364,10 @@
   "h": 184,
   "slots": "설명 텍스트|label|세부 정보|label|세부 정보",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/03",
+  "content": [],
+  "weight": "heavy",
+  "items_range": "1~4"
  },
  {
   "id": "5395:14352",
@@ -276,7 +376,13 @@
   "h": 424,
   "slots": "세부 정보1 세부 정보2|지도 임베드|주소 텍스트",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/04",
+  "content": [],
+  "weight": "medium",
+  "items_range": "1~4",
+  "use_when": [
+   "주소가 있을 때 — 지도 카드 포함"
+  ]
  },
  {
   "id": "5395:14361",
@@ -285,7 +391,12 @@
   "h": 117,
   "slots": "00단위 label|00단위 label|00단위 label",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/05",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5395:14366",
@@ -294,7 +405,12 @@
   "h": 280,
   "slots": "00단위 LABEL|00단위 LABEL|00단위 LABEL|00단위 LABEL",
   "old_name": "핵심 정보-볼드",
-  "key": null
+  "key": "sec/bold/key_info/06",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "5395:14379",
@@ -303,7 +419,12 @@
   "h": 250,
   "slots": "01|label 세부 정보|02|label 세부 정보|03|label 세부 정보",
   "old_name": "핵심 정보-에디토리얼",
-  "key": null
+  "key": "sec/bold/key_info/07",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "light",
+  "items_range": "1~4"
  },
  {
   "id": "5395:11819",
@@ -312,7 +433,12 @@
   "h": 602,
   "slots": "소개 문구|이미지|이미지|이미지|이미지",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/minimal/materials/01",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:11851",
@@ -321,7 +447,11 @@
   "h": 581,
   "slots": "01|LABEL|소개 문구|메인 이미지|00단위 label",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/minimal/materials/02",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "medium"
  },
  {
   "id": "6560:8497",
@@ -330,7 +460,9 @@
   "h": 300,
   "slots": "이미지|LABEL|소개 문구",
   "old_name": "05-V1 이미지 좌 + 텍스트 우",
-  "key": null
+  "key": "sec/minimal/materials/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8504",
@@ -339,7 +471,9 @@
   "h": 300,
   "slots": "LABEL|소개 문구|이미지",
   "old_name": "05-V2 텍스트 좌 + 이미지 우 (교차)",
-  "key": null
+  "key": "sec/minimal/materials/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8511",
@@ -348,7 +482,9 @@
   "h": 339,
   "slots": "이미지|LABEL|소개 문구",
   "old_name": "05-V3 이미지 위 전폭 + 텍스트 아래",
-  "key": null
+  "key": "sec/minimal/materials/05",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5395:13748",
@@ -357,7 +493,11 @@
   "h": 325,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/04",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:13785",
@@ -366,7 +506,11 @@
   "h": 325,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/05",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:13820",
@@ -375,7 +519,11 @@
   "h": 326,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/06",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5543:26879",
@@ -384,7 +532,11 @@
   "h": 330,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/mixed/materials/07",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:13857",
@@ -393,7 +545,11 @@
   "h": 325,
   "slots": "LABEL|단위 등의 설명 문구|label|A|B",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/08",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:13927",
@@ -402,7 +558,11 @@
   "h": 327,
   "slots": "LABEL|단위 등의 설명 문구|A|● value|○ value",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/09",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:13956",
@@ -411,7 +571,11 @@
   "h": 327,
   "slots": "LABEL|단위 등의 설명 문구|A|● value|○ value",
   "old_name": "자료-미니멀",
-  "key": null
+  "key": "sec/mixed/materials/10",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5543:26917",
@@ -420,7 +584,11 @@
   "h": 277,
   "slots": "LABEL|단위 등의 설명 문구|1|value・상세|2",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/mixed/materials/11",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:14052",
@@ -429,7 +597,12 @@
   "h": 264,
   "slots": "소개 문구|이미지|이미지|이미지|세부 정보",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/mixed/materials/01",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:14065",
@@ -438,7 +611,9 @@
   "h": 813,
   "slots": "카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/mixed/materials/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8535",
@@ -447,7 +622,9 @@
   "h": 380,
   "slots": "이미지|LABEL 소개 문구|LABEL 소개 문구|이미지",
   "old_name": "05-V4 썸네일 리스트 행 ×3",
-  "key": null
+  "key": "sec/mixed/materials/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5395:12188",
@@ -456,7 +633,12 @@
   "h": 482,
   "slots": "소개 문구|이미지|이미지|이미지|이미지",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/editorial/materials/01",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:12207",
@@ -465,7 +647,12 @@
   "h": 776,
   "slots": "소개 문구|메인 이미지|서브 이미지|서브 이미지|서브 이미지",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/editorial/materials/02",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:12238",
@@ -474,7 +661,11 @@
   "h": 695,
   "slots": "01|LABEL|소개 문구|메인 이미지|00단위 label",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/editorial/materials/03",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "heavy"
  },
  {
   "id": "5395:12288",
@@ -483,7 +674,9 @@
   "h": 798,
   "slots": "카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지",
   "old_name": "자료-에디토리얼",
-  "key": null
+  "key": "sec/editorial/materials/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "7938:23",
@@ -492,7 +685,15 @@
   "h": 147,
   "slots": "로고|로고|로고|로고|로고|로고",
   "old_name": "materials-editorial-05 (파트너 로고 월 · 원본 비율 + 정렬 중앙)",
-  "key": "sec/editorial/materials/05"
+  "key": "sec/editorial/materials/05",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "medium",
+  "items_range": "2~",
+  "use_when": [
+   "로고 이미지가 2개 이상"
+  ]
  },
  {
   "id": "7938:40",
@@ -501,7 +702,14 @@
   "h": 295,
   "slots": "영상|영상 제목|0:00 · 영상을 한 줄로 소개합니다",
   "old_name": "materials-editorial-06 (영상 + 캡션)",
-  "key": "sec/editorial/materials/06"
+  "key": "sec/editorial/materials/06",
+  "content": [
+   "영상"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "영상 링크가 있을 때"
+  ]
  },
  {
   "id": "5395:12610",
@@ -510,7 +718,12 @@
   "h": 438,
   "slots": "이미지|이미지|이미지|이미지|이미지",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/bold/materials/01",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:12627",
@@ -519,7 +732,12 @@
   "h": 438,
   "slots": "메인 이미지|서브 이미지|서브 이미지",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/bold/materials/02",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5395:12637",
@@ -528,7 +746,12 @@
   "h": 222,
   "slots": "이미지|이미지|이미지|세부 정보|세부 정보",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/bold/materials/03",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "2~"
  },
  {
   "id": "5395:12651",
@@ -537,7 +760,11 @@
   "h": 822,
   "slots": "01|LABEL|소개 문구|메인 이미지|00단위 label",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/bold/materials/04",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5395:12672",
@@ -546,7 +773,15 @@
   "h": 451,
   "slots": "소개 문구|이미지",
   "old_name": "자료-볼드",
-  "key": null
+  "key": "sec/bold/materials/05",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "4~15",
+  "use_when": [
+   "넘길 이미지가 4장 이상일 때"
+  ]
  },
  {
   "id": "5408:317",
@@ -555,7 +790,13 @@
   "h": 1289,
   "slots": "항목|소개 문구|세부 정보|갤러리 제목|이미지",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/01",
+  "content": [
+   "사진 모음",
+   "채널·링크"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5408:372",
@@ -564,7 +805,11 @@
   "h": 419,
   "slots": "항목 세부 정보|버튼 텍스트|안내 문구|항목 세부 정보|버튼 텍스트",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/02",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:389",
@@ -573,7 +818,12 @@
   "h": 383,
   "slots": "구성품 4개 + 사은품",
   "old_name": "나열",
-  "key": null
+  "key": "sec/minimal/list/03",
+  "content": [
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5487:23",
@@ -582,7 +832,9 @@
   "h": 258,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/04",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5487:30",
@@ -591,7 +843,9 @@
   "h": 344,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5487:45",
@@ -600,7 +854,9 @@
   "h": 302,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/06",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5487:56",
@@ -609,7 +865,9 @@
   "h": 298,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/minimal/list/07",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "6560:8139",
@@ -618,7 +876,11 @@
   "h": 204,
   "slots": "YYYY.MM – YYYY.MM|회사명|소속 · 역할|YYYY.MM – YYYY.MM|회사명|소속 · 역할",
   "old_name": "04-V1 연도 좌 고정 + 내용",
-  "key": null
+  "key": "sec/minimal/list/08",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8787",
@@ -627,7 +889,9 @@
   "h": 154,
   "slots": "00 label|세부 정보|00 label|세부 정보|00 label|세부 정보",
   "old_name": "16-V2 세로 링크 행 + →",
-  "key": null
+  "key": "sec/minimal/list/09",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:408",
@@ -636,7 +900,9 @@
   "h": 147,
   "slots": "세부 정보|항목|세부 정보|항목|세부 정보",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:418",
@@ -645,7 +911,9 @@
   "h": 147,
   "slots": "항목|세부 정보x3",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:438",
@@ -654,7 +922,9 @@
   "h": 233,
   "slots": "label|항목 세부 정보x3",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:448",
@@ -663,7 +933,11 @@
   "h": 258,
   "slots": "01|항목 세부 정보|02|항목 세부 정보|03",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/04",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:461",
@@ -672,7 +946,14 @@
   "h": 1289,
   "slots": "01|항목|소개 문구|세부 정보|갤러리 제목",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/05",
+  "content": [
+   "절차·단계",
+   "사진 모음",
+   "채널·링크"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5408:518",
@@ -681,7 +962,11 @@
   "h": 490,
   "slots": "설명 문구|항목 세부 정보|버튼 텍스트|안내 문구",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/06",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:539",
@@ -690,7 +975,11 @@
   "h": 990,
   "slots": "01|항목|이미지|세부 정보|02",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/07",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:563",
@@ -699,7 +988,11 @@
   "h": 970,
   "slots": "01|항목|세부 정보|이미지|02",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/08",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:582",
@@ -708,7 +1001,9 @@
   "h": 956,
   "slots": "이미지|항목|세부 정보|세부 정보|이미지",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/09",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5487:72",
@@ -717,7 +1012,9 @@
   "h": 258,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/10",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5487:79",
@@ -726,7 +1023,14 @@
   "h": 1288,
   "slots": "01|항목|소개 문구|세부 정보|갤러리 제목",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/11",
+  "content": [
+   "절차·단계",
+   "사진 모음",
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "items_range": "1~15"
  },
  {
   "id": "5487:135",
@@ -735,7 +1039,11 @@
   "h": 904,
   "slots": "01|항목|이미지|세부 정보|02",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/12",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5487:157",
@@ -744,7 +1052,12 @@
   "h": 1498,
   "slots": "메인 이미지|서브 이미지|항목|설명 문구",
   "old_name": "frag:B3 디자이너",
-  "key": null
+  "key": "sec/editorial/list/13",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5487:262",
@@ -753,7 +1066,11 @@
   "h": 377,
   "slots": "리뷰 3개 (별점 인라인)",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/editorial/list/14",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "light"
  },
  {
   "id": "7938:62",
@@ -762,7 +1079,11 @@
   "h": 306,
   "slots": "YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다|YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다|YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다",
   "old_name": "list-editorial-14 (최근 소식)",
-  "key": "sec/editorial/list/15"
+  "key": "sec/editorial/list/15",
+  "content": [
+   "소식·아티클"
+  ],
+  "weight": "light"
  },
  {
   "id": "8008:23",
@@ -771,7 +1092,11 @@
   "h": 256,
   "slots": "이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류|이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류|이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류",
   "old_name": "list-editorial-15 (소식 썸네일 행)",
-  "key": "sec/editorial/list/16"
+  "key": "sec/editorial/list/16",
+  "content": [
+   "소식·아티클"
+  ],
+  "weight": "medium"
  },
  {
   "id": "8185:83",
@@ -780,7 +1105,11 @@
   "h": 1203,
   "slots": "이미지|항목 이름|버튼 텍스트|이미지|항목 이름|버튼 텍스트|이미지|항목 이름|버튼 텍스트",
   "old_name": "list-editorial-16 (이미지 + 제목 + 버튼 반복)",
-  "key": "sec/editorial/list/17"
+  "key": "sec/editorial/list/17",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:603",
@@ -789,7 +1118,9 @@
   "h": 330,
   "slots": "항목 안내 문구x3",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5408:613",
@@ -798,7 +1129,9 @@
   "h": 414,
   "slots": "항목 세부 정보 안내 문구x3",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5408:623",
@@ -807,7 +1140,12 @@
   "h": 481,
   "slots": "label 항목 세부 정보|안내 문구|01",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/03",
+  "content": [
+   "절차·단계",
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:642",
@@ -816,7 +1154,11 @@
   "h": 390,
   "slots": "항목 안내 문구|버튼 텍스트 x2",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/04",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:657",
@@ -825,7 +1167,11 @@
   "h": 458,
   "slots": "항목 가격 상품 구성 버튼 x2",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/05",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:664",
@@ -834,7 +1180,17 @@
   "h": 1594,
   "slots": "항목|소개 문구|세부 정보|갤러리 제목",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/06",
+  "content": [
+   "절차·단계",
+   "사진 모음",
+   "채널·링크"
+  ],
+  "weight": "medium",
+  "items_range": "4~15",
+  "use_when": [
+   "넘길 이미지가 4장 이상일 때"
+  ]
  },
  {
   "id": "5408:729",
@@ -843,7 +1199,13 @@
   "h": 1324,
   "slots": "01|메인 이미지|항목|설명 문구|label",
   "old_name": "frag:D2 로컬 매거진",
-  "key": null
+  "key": "sec/bold/list/07",
+  "content": [
+   "절차·단계",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5408:786",
@@ -852,7 +1214,12 @@
   "h": 361,
   "slots": "구성품 4개 + 사은품",
   "old_name": "나열",
-  "key": null
+  "key": "sec/bold/list/08",
+  "content": [
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5487:272",
@@ -861,7 +1228,11 @@
   "h": 332,
   "slots": "항목 안내 문구|버튼 텍스트 x2",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/09",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5487:287",
@@ -870,7 +1241,9 @@
   "h": 187,
   "slots": "항목x3",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/10",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5487:294",
@@ -879,7 +1252,9 @@
   "h": 814,
   "slots": "이미지|세부 정보 x2",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/11",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5487:340",
@@ -888,7 +1263,11 @@
   "h": 377,
   "slots": "리뷰 3개 (별점·날짜·작성자 분리)",
   "old_name": "나열-볼드",
-  "key": null
+  "key": "sec/bold/list/12",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "medium"
  },
  {
   "id": "6560:8229",
@@ -897,7 +1276,11 @@
   "h": 279,
   "slots": "YYYY|이력 내용|구분선|YYYY|이력 내용|구분선",
   "old_name": "04-V4 큰 연도 + 구분선",
-  "key": null
+  "key": "sec/bold/list/13",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8470",
@@ -906,7 +1289,11 @@
   "h": 279,
   "slots": "hh:mm|프로그램|구분선|hh:mm|프로그램|구분선",
   "old_name": "04-V4 큰 연도 + 구분선 (시간표형)",
-  "key": null
+  "key": "sec/bold/list/14",
+  "content": [
+   "시간표·프로그램"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8487",
@@ -915,7 +1302,11 @@
   "h": 426,
   "slots": "hh:mm 프로그램 진행자|hh:mm 프로그램 진행자|hh:mm 프로그램 진행자",
   "old_name": null,
-  "key": null
+  "key": "sec/bold/list/15",
+  "content": [
+   "시간표·프로그램"
+  ],
+  "weight": "medium"
  },
  {
   "id": "7918:23",
@@ -924,7 +1315,9 @@
   "h": 500,
   "slots": "분야 이름 분야를 한두 줄로 설명합니다|이미지|분야 이름 분야를 한두 줄로 설명합니다|이미지|분야 이름 분야를 한두 줄로 설명합니다|이미지",
   "old_name": "list-bold-15 (분야 밴드 목차)",
-  "key": "sec/bold/list/16"
+  "key": "sec/bold/list/16",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "7938:49",
@@ -933,7 +1326,12 @@
   "h": 477,
   "slots": "카테고리 이름 한 줄 설명|배경 이미지 · 어둡게|카테고리 이름 한 줄 설명|배경 이미지 · 어둡게|카테고리 이름 한 줄 설명|배경 이미지 · 어둡게",
   "old_name": "list-bold-16 (카테고리 이미지 타일)",
-  "key": "sec/bold/list/17"
+  "key": "sec/bold/list/17",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "타일마다 넣을 유저 이미지가 있을 때만 — 없으면 단색 버전(list-bold-18)"
+  ]
  },
  {
   "id": "8255:23",
@@ -942,7 +1340,13 @@
   "h": 477,
   "slots": "카테고리 이름 한 줄 설명|카테고리 이름 한 줄 설명|카테고리 이름 한 줄 설명",
   "old_name": "카테고리 타일 — 단색 버전 (list-bold-17의 이미지 없는 짝 · 2026-10-23)",
-  "key": null
+  "key": null,
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "타일에 넣을 유저 이미지가 없을 때 — 이미지가 있으면 list-bold-17"
+  ],
+  "admin": "미등록"
  },
  {
   "id": "5408:212",
@@ -951,7 +1355,9 @@
   "h": 132,
   "slots": "항목 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:219",
@@ -960,7 +1366,12 @@
   "h": 1522,
   "slots": "메인 이미지|서브 이미지|항목|설명 문구",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/02",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "6560:8193",
@@ -969,7 +1380,11 @@
   "h": 210,
   "slots": "●|YYYY 이력 내용|●|YYYY 이력 내용|●|YYYY 이력 내용",
   "old_name": "04-V3 마커(●) + 연도 + 내용",
-  "key": null
+  "key": "sec/mixed/list/03",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8413",
@@ -978,7 +1393,11 @@
   "h": 206,
   "slots": "YYYY.DD|이력 내용|구분선|이력 내용|YYYY.DD|구분선",
   "old_name": "04-V2 좌측 세로선 + 스택",
-  "key": null
+  "key": "sec/mixed/list/04",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:274",
@@ -987,7 +1406,11 @@
   "h": 204,
   "slots": "항목x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/05",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:286",
@@ -996,7 +1419,9 @@
   "h": 814,
   "slots": "이미지|세부 정보 x2",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/mixed/list/06",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5408:302",
@@ -1005,7 +1430,11 @@
   "h": 333,
   "slots": "프로필+리뷰 3개",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/mixed/list/07",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5487:65",
@@ -1014,7 +1443,9 @@
   "h": 147,
   "slots": "항목 · 세부 정보x3",
   "old_name": "나열-에디토리얼",
-  "key": null
+  "key": "sec/mixed/list/08",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:90",
@@ -1023,7 +1454,9 @@
   "h": 147,
   "slots": "항목 · 세부 정보x3",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/09",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5408:97",
@@ -1032,7 +1465,11 @@
   "h": 284,
   "slots": "항목|→ x4 (링크형)",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/10",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:114",
@@ -1041,7 +1478,11 @@
   "h": 395,
   "slots": "리뷰 3개 (별점·날짜·작성자 분리)",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/11",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "light"
  },
  {
   "id": "5571:72",
@@ -1050,7 +1491,11 @@
   "h": 395,
   "slots": "리뷰 3개 (별점·날짜·작성자 분리)",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/12",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:144",
@@ -1059,7 +1504,11 @@
   "h": 385,
   "slots": "리뷰 3개 (인라인)",
   "old_name": "나열-미니멀",
-  "key": null
+  "key": "sec/mixed/list/13",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5408:154",
@@ -1068,7 +1517,11 @@
   "h": 604,
   "slots": "LABEL|label|항목|세부 정보 (표형)",
   "old_name": "나열",
-  "key": null
+  "key": "sec/mixed/list/14",
+  "content": [
+   "분류 2단"
+  ],
+  "weight": "light"
  },
  {
   "id": "5408:191",
@@ -1077,7 +1530,9 @@
   "h": 485,
   "slots": "💡 항목 세부 정보 x3 (아이콘형)",
   "old_name": "나열",
-  "key": null
+  "key": "sec/mixed/list/15",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8248",
@@ -1086,7 +1541,11 @@
   "h": 144,
   "slots": "YYYY|이력 내용|YYYY|이력 내용|YYYY|이력 내용",
   "old_name": "04-V2 좌측 세로선 + 스택",
-  "key": null
+  "key": "sec/mixed/list/16",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8286",
@@ -1095,7 +1554,11 @@
   "h": 190,
   "slots": "YYYY.DD|이력 내용|구분선|YYYY.DD|이력 내용|구분선",
   "old_name": "04-V2 좌측 세로선 + 스택",
-  "key": null
+  "key": "sec/mixed/list/17",
+  "content": [
+   "이력·경력"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8379",
@@ -1104,7 +1567,12 @@
   "h": 144,
   "slots": "hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램",
   "old_name": "11-V1 시간 좌 고정 + 순서명",
-  "key": null
+  "key": null,
+  "content": [
+   "시간표·프로그램"
+  ],
+  "weight": "light",
+  "admin": "미등록 — 어드민 sec/mixed/list/18은 list-mixed-19와 같은 섹션"
  },
  {
   "id": "6560:8389",
@@ -1113,7 +1581,11 @@
   "h": 219,
   "slots": "hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자",
   "old_name": "11-V1 시간 좌 고정 + 순서명",
-  "key": null
+  "key": "sec/mixed/list/18",
+  "content": [
+   "시간표·프로그램"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8399",
@@ -1122,7 +1594,11 @@
   "h": 213,
   "slots": "hh:mm|내용|hh:mm|내용|hh:mm|내용",
   "old_name": "11-V2 시간 위 / 순서명 아래",
-  "key": null
+  "key": "sec/mixed/list/19",
+  "content": [
+   "시간표·프로그램"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8660",
@@ -1131,7 +1607,11 @@
   "h": 250,
   "slots": "label|항목|세부 정보|항목|세부 정보|label",
   "old_name": "12-V1 그룹 헤더 + 라벨↔값",
-  "key": null
+  "key": "sec/mixed/list/20",
+  "content": [
+   "분류 2단"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8678",
@@ -1140,7 +1620,11 @@
   "h": 310,
   "slots": "label|항목|세부 정보|항목|세부 정보|label",
   "old_name": "12-V2 그룹 헤더 = 틴트 밴드",
-  "key": null
+  "key": "sec/mixed/list/21",
+  "content": [
+   "분류 2단"
+  ],
+  "weight": "medium"
  },
  {
   "id": "6560:8696",
@@ -1149,7 +1633,11 @@
   "h": 251,
   "slots": "label|항목|세부 정보|항목|세부 정보|구분선",
   "old_name": "12-V3 구분선으로 그룹 구분",
-  "key": null
+  "key": "sec/mixed/list/22",
+  "content": [
+   "분류 2단"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8746",
@@ -1158,7 +1646,9 @@
   "h": 150,
   "slots": "아이콘|label 세부 정보|아이콘|label 세부 정보",
   "old_name": "14-V2 파일 아이콘 + 제목·용량 + →",
-  "key": null
+  "key": "sec/mixed/list/23",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8761",
@@ -1167,7 +1657,11 @@
   "h": 210,
   "slots": "label 세부 정보|→|label 세부 정보|→",
   "old_name": "14-V3 틴트 카드 + 우측 링크",
-  "key": null
+  "key": "sec/mixed/list/24",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium"
  },
  {
   "id": "6560:8913",
@@ -1176,7 +1670,14 @@
   "h": 116,
   "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
   "old_name": "16-V3 2열 그리드 버튼",
-  "key": null
+  "key": "sec/mixed/list/25",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "페이지 안 이동 메뉴가 필요할 때 — 메뉴 카드는 페이지 맨 위에 고정된다"
+  ]
  },
  {
   "id": "6560:8949",
@@ -1185,7 +1686,14 @@
   "h": 116,
   "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
   "old_name": "16-V3 2열 그리드 버튼",
-  "key": null
+  "key": "sec/mixed/list/26",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "페이지 안 이동 메뉴가 필요할 때 — 메뉴 카드는 페이지 맨 위에 고정된다"
+  ]
  },
  {
   "id": "5455:1271",
@@ -1194,7 +1702,9 @@
   "h": 326,
   "slots": "지도 임베드|주소 텍스트",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/bold/location/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1277",
@@ -1203,7 +1713,9 @@
   "h": 424,
   "slots": "지도 임베드|주소 텍스트",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/bold/location/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1249",
@@ -1212,7 +1724,9 @@
   "h": 382,
   "slots": "지도 임베드|주소 텍스트|버튼 텍스트",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/mixed/location/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1256",
@@ -1221,7 +1735,9 @@
   "h": 343,
   "slots": "지도 임베드|주소 텍스트|주차 · 교통 안내",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/mixed/location/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1263",
@@ -1230,7 +1746,9 @@
   "h": 343,
   "slots": "지도 임베드|주소 텍스트|주차 · 교통 안내",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/mixed/location/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:349",
@@ -1239,7 +1757,9 @@
   "h": 426,
   "slots": "지도 임베드|주소 텍스트|버튼 텍스트",
   "old_name": "위치안내",
-  "key": null
+  "key": "sec/editorial/location/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:157",
@@ -1248,7 +1768,9 @@
   "h": 188,
   "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/minimal/hero/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:164",
@@ -1257,7 +1779,9 @@
   "h": 233,
   "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/minimal/hero/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:174",
@@ -1266,7 +1790,9 @@
   "h": 211,
   "slots": "로고|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/minimal/hero/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:182",
@@ -1275,7 +1801,9 @@
   "h": 611,
   "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/minimal/hero/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:195",
@@ -1284,7 +1812,9 @@
   "h": 569,
   "slots": "로고|페이지 제목|카피 혹은 소개 문구|이미지",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/minimal/hero/05",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7480",
@@ -1293,7 +1823,9 @@
   "h": 277,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": null,
-  "key": null
+  "key": "sec/minimal/hero/06",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7488",
@@ -1302,7 +1834,9 @@
   "h": 277,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": null,
-  "key": null
+  "key": "sec/minimal/hero/07",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:207",
@@ -1311,7 +1845,9 @@
   "h": 194,
   "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:214",
@@ -1320,7 +1856,9 @@
   "h": 231,
   "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:224",
@@ -1329,7 +1867,9 @@
   "h": 289,
   "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:238",
@@ -1338,7 +1878,12 @@
   "h": 589,
   "slots": "로고|페이지 제목|카피 혹은 소개 문구|메인 이미지",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/04",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:249",
@@ -1347,7 +1892,9 @@
   "h": 594,
   "slots": "로고|EYEBROW|페이지 제목|카피 혹은 소개 문구|메인 이미지",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/05",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:262",
@@ -1356,7 +1903,12 @@
   "h": 508,
   "slots": "메인 이미지|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/06",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:270",
@@ -1365,7 +1917,12 @@
   "h": 613,
   "slots": "메인 이미지|로고|EYEBROW|페이지 제목|카피 혹은 소개 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/07",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:283",
@@ -1374,7 +1931,12 @@
   "h": 844,
   "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/08",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:315",
@@ -1383,7 +1945,9 @@
   "h": 642,
   "slots": "한 줄 설명|페이지 제목 페이지 제목|메인 이미지|워드마크 로고|설명 문구",
   "old_name": "히어로-에디토리얼",
-  "key": null
+  "key": "sec/editorial/hero/09",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7500",
@@ -1392,7 +1956,9 @@
   "h": 146,
   "slots": "프로필 이미지|이름 한 줄 소개",
   "old_name": null,
-  "key": null
+  "key": "sec/editorial/hero/10",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7504",
@@ -1401,7 +1967,9 @@
   "h": 146,
   "slots": "프로필 이미지|이름 한 줄 소개",
   "old_name": null,
-  "key": null
+  "key": "sec/editorial/hero/11",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7509",
@@ -1410,7 +1978,9 @@
   "h": 192,
   "slots": "문장형 카피를 입력합니다|——",
   "old_name": "09-V1 eyebrow + 제목 + 카피",
-  "key": null
+  "key": "sec/editorial/hero/12",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "6498:7524",
@@ -1419,7 +1989,9 @@
   "h": 366,
   "slots": "EYEBROW|문장형 카피를 입력합니다|LABEL 세부 정보|LABEL 세부 정보|LABEL 세부 정보",
   "old_name": "09-V3 eyebrow + 제목 + 세부 3행",
-  "key": null
+  "key": "sec/editorial/hero/13",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:331",
@@ -1428,7 +2000,9 @@
   "h": 803,
   "slots": "EYEBROW|로고|회사명 혹은 브랜드명|메인 이미지|페이지 제목|서브카피",
   "old_name": "히어로-볼드",
-  "key": null
+  "key": "sec/bold/hero/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:346",
@@ -1437,7 +2011,9 @@
   "h": 393,
   "slots": "로고|회사명|슬로건|EYEBROW|페이지 제목|카피 혹은 설명 문구",
   "old_name": "히어로-볼드",
-  "key": null
+  "key": "sec/bold/hero/02",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "5455:359",
@@ -1446,7 +2022,9 @@
   "h": 525,
   "slots": "메인 비주얼|EYEBROW|페이지 제목|한 줄 카피",
   "old_name": "히어로",
-  "key": null
+  "key": "sec/bold/hero/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:369",
@@ -1455,7 +2033,9 @@
   "h": 589,
   "slots": "EYEBROW|페이지 제목|한 줄 카피|메인 비주얼",
   "old_name": "히어로",
-  "key": null
+  "key": "sec/bold/hero/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:379",
@@ -1464,7 +2044,12 @@
   "h": 981,
   "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
   "old_name": "히어로-볼드",
-  "key": null
+  "key": "sec/bold/hero/05",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:411",
@@ -1473,7 +2058,15 @@
   "h": 1005,
   "slots": "메인 이미지|프로필 이미지|주최자|소속 직책 · 주최|EYEBROW|페이지 제목",
   "old_name": "히어로-볼드",
-  "key": null
+  "key": "sec/bold/hero/06",
+  "content": [
+   "일시·기간",
+   "장소명"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:439",
@@ -1482,7 +2075,9 @@
   "h": 483,
   "slots": "로고|주최/후원처|서브 텍스트|EYEBROW|페이지 제목|카피 혹은 설명 문구",
   "old_name": "히어로-볼드",
-  "key": null
+  "key": "sec/bold/hero/07",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:454",
@@ -1491,7 +2086,9 @@
   "h": 196,
   "slots": "페이지 제목|카피 혹은 설명 문구",
   "old_name": "Frame 48097695",
-  "key": null
+  "key": "sec/bold/hero/08",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "6585:9285",
@@ -1500,7 +2097,9 @@
   "h": 331,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": null,
-  "key": null
+  "key": "sec/bold/hero/09",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:9086",
@@ -1509,7 +2108,12 @@
   "h": 349,
   "slots": "메인 비주얼|페이지 제목 카피 혹은 설명 문구|버튼 텍스트",
   "old_name": "21-V3 카드 배경 + 버튼",
-  "key": null
+  "key": "sec/bold/hero/10",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "6498:7469",
@@ -1518,7 +2122,9 @@
   "h": 416,
   "slots": "EYEBROW|페이지 제목|카피 혹은 소개 문구|이미지",
   "old_name": "08-V2 eyebrow + 이름 + 소개 + 사진",
-  "key": null
+  "key": "sec/mixed/hero/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:9095",
@@ -1527,7 +2133,12 @@
   "h": 496,
   "slots": "메인 비주얼|EYEBROW 페이지 제목 카피",
   "old_name": "21-V1 페이지 배경형",
-  "key": null
+  "key": "sec/mixed/hero/02",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "6560:9101",
@@ -1536,7 +2147,12 @@
   "h": 256,
   "slots": "메인 비주얼|페이지 제목 카피 혹은 설명 문구",
   "old_name": "21-V2 카드 배경형",
-  "key": null
+  "key": "sec/mixed/hero/03",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "6498:7424",
@@ -1545,7 +2161,11 @@
   "h": 786,
   "slots": "로고|카피 혹은 소개 문구|혜택 및 핵심 정보|문장형 카피를 입력합니다|카피 혹은 소개 문구 강조 텍스트|이미지",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/hero/04",
+  "content": [
+   "혜택·쿠폰"
+  ],
+  "weight": "heavy"
  },
  {
   "id": "6498:7441",
@@ -1554,7 +2174,12 @@
   "h": 940,
   "slots": "EYEBROW|페이지 제목|한 줄 행사 설명|메인 이미지|LABEL|세부 정보",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/hero/05",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "유저가 준 메인 이미지(포스터·대표 사진)가 있을 때만 — 없으면 이미지 없는 히어로"
+  ]
  },
  {
   "id": "5455:89",
@@ -1563,7 +2188,11 @@
   "h": 759,
   "slots": "로고|카피 혹은 소개 문구|이미지|페이지 제목|EYEBROW|일정 정보",
   "old_name": "히어로-미니멀",
-  "key": null
+  "key": "sec/mixed/hero/06",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:486",
@@ -1572,7 +2201,9 @@
   "h": 124,
   "slots": "프로필 이미지|이름 한 줄 소개",
   "old_name": "소개-에디토리얼",
-  "key": null
+  "key": "sec/editorial/intro/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5474:26654",
@@ -1581,7 +2212,9 @@
   "h": 108,
   "slots": "프로필 이미지|이름 한 줄 소개",
   "old_name": "소개-에디토리얼",
-  "key": null
+  "key": "sec/editorial/intro/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:490",
@@ -1590,7 +2223,11 @@
   "h": 257,
   "slots": "프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개|프로필 이미지|이름 한 줄 소개",
   "old_name": "소개-에디토리얼",
-  "key": null
+  "key": "sec/editorial/intro/03",
+  "content": [
+   "인물"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:503",
@@ -1599,7 +2236,12 @@
   "h": 316,
   "slots": "소개 문구|이미지|이미지|이미지|이미지",
   "old_name": "About B · 좌측 에디토리얼+그리드",
-  "key": null
+  "key": "sec/editorial/intro/04",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5486:23",
@@ -1608,7 +2250,15 @@
   "h": 451,
   "slots": "소개 문구|이미지",
   "old_name": "About A · 넘겨보기",
-  "key": null
+  "key": "sec/editorial/intro/05",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "4~15",
+  "use_when": [
+   "넘길 이미지가 4장 이상일 때"
+  ]
  },
  {
   "id": "6559:7736",
@@ -1617,7 +2267,9 @@
   "h": 40,
   "slots": "label|소개 문구",
   "old_name": "보조텍스트-리드중앙",
-  "key": null
+  "key": "sec/editorial/intro/06",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5474:26659",
@@ -1626,7 +2278,9 @@
   "h": 255,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": "소개-볼드",
-  "key": null
+  "key": "sec/bold/intro/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:518",
@@ -1635,7 +2289,9 @@
   "h": 323,
   "slots": "프로필 이미지|이름|한 줄 소개",
   "old_name": "소개-볼드",
-  "key": null
+  "key": "sec/bold/intro/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5474:26668",
@@ -1644,7 +2300,9 @@
   "h": 105,
   "slots": "소개 문구",
   "old_name": "소개-볼드",
-  "key": null
+  "key": "sec/bold/intro/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6498:7711",
@@ -1653,7 +2311,9 @@
   "h": 105,
   "slots": "소개 문구",
   "old_name": null,
-  "key": null
+  "key": "sec/bold/intro/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:462",
@@ -1662,7 +2322,9 @@
   "h": 65,
   "slots": "소개 문구",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/mixed/intro/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:465",
@@ -1671,7 +2333,15 @@
   "h": 451,
   "slots": "소개 문구|이미지",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/mixed/intro/02",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "4~15",
+  "use_when": [
+   "넘길 이미지가 4장 이상일 때"
+  ]
  },
  {
   "id": "6498:7721",
@@ -1680,7 +2350,9 @@
   "h": 68,
   "slots": "소개 문구",
   "old_name": "보조텍스트-이음말",
-  "key": null
+  "key": "sec/mixed/intro/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "6559:7729",
@@ -1689,7 +2361,9 @@
   "h": 112,
   "slots": "초대의 글|○○○ 드림",
   "old_name": "보조텍스트-맺음말서명",
-  "key": null
+  "key": "sec/mixed/intro/04",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "6559:7740",
@@ -1698,7 +2372,9 @@
   "h": 108,
   "slots": "구분선|소개 문구|구분선",
   "old_name": "보조텍스트-리드좌",
-  "key": null
+  "key": "sec/mixed/intro/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5474:26608",
@@ -1707,7 +2383,9 @@
   "h": 255,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/minimal/intro/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5474:26616",
@@ -1716,7 +2394,9 @@
   "h": 225,
   "slots": "프로필 이미지|이름|한 줄 설명",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/minimal/intro/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:537",
@@ -1725,7 +2405,9 @@
   "h": 73,
   "slots": "한 줄 카피",
   "old_name": "텍스트",
-  "key": null
+  "key": "sec/bold/story/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:544",
@@ -1734,7 +2416,9 @@
   "h": 151,
   "slots": "한 줄 카피|본문 텍스트",
   "old_name": "스토리-볼드",
-  "key": null
+  "key": "sec/bold/story/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5484:23",
@@ -1743,7 +2427,9 @@
   "h": 108,
   "slots": "본문 텍스트",
   "old_name": "스토리-볼드",
-  "key": null
+  "key": "sec/bold/story/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6559:7771",
@@ -1752,7 +2438,9 @@
   "h": 139,
   "slots": "“문장형 카피를 입력합니다.” —",
   "old_name": null,
-  "key": null
+  "key": "sec/bold/story/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6559:7779",
@@ -1761,7 +2449,9 @@
   "h": 228,
   "slots": "“|문장형 카피를 입력합니다.|“",
   "old_name": "02-V3 큰 따옴표 글리프",
-  "key": null
+  "key": "sec/bold/story/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5498:26841",
@@ -1770,7 +2460,9 @@
   "h": 68,
   "slots": "본문 텍스트",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/mixed/story/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5484:27",
@@ -1779,7 +2471,9 @@
   "h": 108,
   "slots": "본문 텍스트",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/mixed/story/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5498:26845",
@@ -1788,7 +2482,9 @@
   "h": 108,
   "slots": "본문 텍스트",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/mixed/story/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "6559:7775",
@@ -1797,7 +2493,9 @@
   "h": 139,
   "slots": "“문장형 카피를 입력합니다.” —",
   "old_name": null,
-  "key": null
+  "key": "sec/mixed/story/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5498:26874",
@@ -1806,7 +2504,9 @@
   "h": 109,
   "slots": "본문 텍스트|본문 텍스트",
   "old_name": "스토리-미니멀",
-  "key": null
+  "key": "sec/mixed/story/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5484:31",
@@ -1815,7 +2515,9 @@
   "h": 68,
   "slots": "본문 텍스트",
   "old_name": "소개-미니멀",
-  "key": null
+  "key": "sec/minimal/story/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5498:26850",
@@ -1824,7 +2526,9 @@
   "h": 104,
   "slots": "본문 텍스트|본문 텍스트",
   "old_name": "스토리-미니멀",
-  "key": null
+  "key": "sec/minimal/story/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "6559:7748",
@@ -1833,7 +2537,9 @@
   "h": 142,
   "slots": "문장형 카피를 입력합니다|——",
   "old_name": "02-V1 큰 글씨 + 하단 짧은 바",
-  "key": null
+  "key": "sec/minimal/story/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5484:35",
@@ -1842,7 +2548,9 @@
   "h": 104,
   "slots": "본문 텍스트|본문 텍스트",
   "old_name": "스토리-에디토리얼",
-  "key": null
+  "key": "sec/editorial/story/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5484:40",
@@ -1851,7 +2559,9 @@
   "h": 142,
   "slots": "본문 텍스트|본문 텍스트",
   "old_name": "스토리-에디토리얼",
-  "key": null
+  "key": "sec/editorial/story/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:724",
@@ -1860,7 +2570,12 @@
   "h": 250,
   "slots": "상품명 가격 x3|안내 문구|버튼 텍스트",
   "old_name": "구매-에디토리얼",
-  "key": null
+  "key": "sec/editorial/purchase/01",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "light"
  },
  {
   "id": "5486:68",
@@ -1869,7 +2584,14 @@
   "h": 648,
   "slots": "이미지|상품명|가격|구매하기 (그리드)",
   "old_name": "구매-에디토리얼",
-  "key": null
+  "key": "sec/editorial/purchase/02",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다"
+  ]
  },
  {
   "id": "5486:107",
@@ -1878,7 +2600,15 @@
   "h": 468,
   "slots": "이미지|상품명|가격 (그리드)",
   "old_name": "구매-에디토리얼",
-  "key": null
+  "key": "sec/editorial/purchase/03",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다"
+  ]
  },
  {
   "id": "6560:9006",
@@ -1887,7 +2617,13 @@
   "h": 202,
   "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원|→ 00,000원",
   "old_name": "18-V1 한 카드 3줄",
-  "key": null
+  "key": "sec/editorial/purchase/04",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "스펙·제원 표"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:9052",
@@ -1896,7 +2632,13 @@
   "h": 226,
   "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원|→ 00,000원|(추가할인조건 00,000원)",
   "old_name": "18-V1 한 카드 3줄 + 추가할인",
-  "key": null
+  "key": "sec/editorial/purchase/05",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "스펙·제원 표"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:9039",
@@ -1905,7 +2647,13 @@
   "h": 194,
   "slots": "00% OFF|상품명|(용량 / 원산지)|정상가 00,000원 → 00,000원|(추가할인조건 00,000원)",
   "old_name": "18-V1 한 카드 3줄 (1행형)",
-  "key": null
+  "key": "sec/editorial/purchase/06",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "스펙·제원 표"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:736",
@@ -1914,7 +2662,11 @@
   "h": 211,
   "slots": "상품명|가격|설명 문구|버튼 텍스트",
   "old_name": "구매-볼드",
-  "key": null
+  "key": "sec/bold/purchase/01",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:746",
@@ -1923,7 +2675,13 @@
   "h": 397,
   "slots": "서브 이미지x2|상품명|가격|설명 문구",
   "old_name": "구매-볼드",
-  "key": null
+  "key": "sec/bold/purchase/02",
+  "content": [
+   "가격·요금",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5455:762",
@@ -1932,7 +2690,13 @@
   "h": 402,
   "slots": "이미지x2|상품명|가격|설명 문구",
   "old_name": "구매-볼드",
-  "key": null
+  "key": "sec/bold/purchase/03",
+  "content": [
+   "가격·요금",
+   "사진 모음"
+  ],
+  "weight": "heavy",
+  "items_range": "1~15"
  },
  {
   "id": "5455:778",
@@ -1941,7 +2705,11 @@
   "h": 838,
   "slots": "상품 상세 (스펙 포함)",
   "old_name": "구매",
-  "key": null
+  "key": "sec/bold/purchase/04",
+  "content": [
+   "스펙·제원 표"
+  ],
+  "weight": "medium"
  },
  {
   "id": "7900:23",
@@ -1950,7 +2718,15 @@
   "h": 472,
   "slots": "추천|플랜명|00,000원|혜택 내용 혜택 내용 혜택 내용|플랜명|00,000원|혜택 내용|버튼 텍스트",
   "old_name": "pricing-bold-01 (이용 요금 · 플랜 비교)",
-  "key": "sec/bold/purchase/05"
+  "key": "sec/bold/purchase/05",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "요금·플랜이 2개 이상"
+  ]
  },
  {
   "id": "5455:552",
@@ -1959,7 +2735,13 @@
   "h": 919,
   "slots": "이미지x2|상품명|가격|설명 문구",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/02",
+  "content": [
+   "가격·요금",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5455:567",
@@ -1968,7 +2750,13 @@
   "h": 745,
   "slots": "메인+서브 이미지|상품명|가격",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/03",
+  "content": [
+   "가격·요금",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5455:586",
@@ -1977,7 +2765,14 @@
   "h": 1063,
   "slots": "이미지|상품명|가격|설명 문구 (상세형)",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/04",
+  "content": [
+   "가격·요금",
+   "스펙·제원 표",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5455:612",
@@ -1986,7 +2781,14 @@
   "h": 1041,
   "slots": "이미지|상품명|가격|설명 문구 (상세형)",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/05",
+  "content": [
+   "가격·요금",
+   "스펙·제원 표",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5455:639",
@@ -1995,7 +2797,12 @@
   "h": 285,
   "slots": "상품명|가격 x4 (리스트)",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/06",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:657",
@@ -2004,7 +2811,14 @@
   "h": 604,
   "slots": "이미지|상품명|가격|구매하기 (그리드)",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/07",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다"
+  ]
  },
  {
   "id": "5455:692",
@@ -2013,7 +2827,15 @@
   "h": 428,
   "slots": "이미지|상품명|가격 (그리드)",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/08",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다"
+  ]
  },
  {
   "id": "5486:34",
@@ -2022,7 +2844,13 @@
   "h": 890,
   "slots": "이미지x2|상품명|가격|설명 문구",
   "old_name": "구매-미니멀",
-  "key": null
+  "key": "sec/mixed/purchase/09",
+  "content": [
+   "가격·요금",
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "1~15"
  },
  {
   "id": "5486:49",
@@ -2031,7 +2859,12 @@
   "h": 309,
   "slots": "상품명|가격 x4 (리스트)",
   "old_name": "구매-에디토리얼",
-  "key": null
+  "key": "sec/mixed/purchase/01",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:986",
@@ -2040,7 +2873,9 @@
   "h": 101,
   "slots": "프로모션 내용",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/minimal/promo/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:142",
@@ -2049,7 +2884,9 @@
   "h": 101,
   "slots": "프로모션 내용",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/minimal/promo/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:991",
@@ -2058,7 +2895,12 @@
   "h": 322,
   "slots": "제목|상세|상품명+가격 x3",
   "old_name": "프로모션 V9 상품리스트",
-  "key": null
+  "key": "sec/editorial/promo/01",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "light"
  },
  {
   "id": "5486:153",
@@ -2067,7 +2909,10 @@
   "h": 143,
   "slots": "프로모션 내용 조건 x2",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/editorial/promo/02",
+  "content": [],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5486:161",
@@ -2076,7 +2921,13 @@
   "h": 510,
   "slots": "제목|상세|카테고리 상품명|할인율% OFF",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/editorial/promo/03",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5486:183",
@@ -2085,7 +2936,13 @@
   "h": 510,
   "slots": "제목|상세|카테고리 상품명|할인율% OFF",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/editorial/promo/04",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5486:205",
@@ -2094,7 +2951,10 @@
   "h": 154,
   "slots": "프로모션 내용 조건 x2",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/editorial/promo/05",
+  "content": [],
+  "weight": "heavy",
+  "items_range": "2~4"
  },
  {
   "id": "5455:1019",
@@ -2103,7 +2963,13 @@
   "h": 383,
   "slots": "강조 내용|카테고리 상품명|할인율% OFF",
   "old_name": "프로모션-볼드",
-  "key": null
+  "key": "sec/bold/promo/01",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:1033",
@@ -2112,7 +2978,12 @@
   "h": 286,
   "slots": "제목|00%|최대 할인|상품명|가격",
   "old_name": "프로모션-볼드",
-  "key": null
+  "key": "sec/bold/promo/02",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:894",
@@ -2121,7 +2992,12 @@
   "h": 405,
   "slots": "제목|상세|구성품 A~D|수량",
   "old_name": "프로모션 V4 세트구성",
-  "key": null
+  "key": "sec/mixed/promo/01",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:926",
@@ -2130,7 +3006,11 @@
   "h": 323,
   "slots": "제목|상세|혜택 1~3",
   "old_name": "프로모션",
-  "key": null
+  "key": "sec/mixed/promo/02",
+  "content": [
+   "혜택·쿠폰"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:946",
@@ -2139,7 +3019,9 @@
   "h": 187,
   "slots": "제목|상세|버튼",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/mixed/promo/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:954",
@@ -2148,7 +3030,11 @@
   "h": 408,
   "slots": "PROMOTION|제목|00% OFF|상세|혜택 받기",
   "old_name": "프로모션",
-  "key": null
+  "key": "sec/mixed/promo/04",
+  "content": [
+   "혜택·쿠폰"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:971",
@@ -2157,7 +3043,10 @@
   "h": 143,
   "slots": "프로모션 내용 조건 x2",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/mixed/promo/05",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "5455:976",
@@ -2166,7 +3055,10 @@
   "h": 234,
   "slots": "프로모션 내용 조건 x4",
   "old_name": "프로모션-에디토리얼",
-  "key": null
+  "key": "sec/mixed/promo/06",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~"
  },
  {
   "id": "5455:811",
@@ -2175,7 +3067,9 @@
   "h": 211,
   "slots": "제목 상세|버튼",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/mixed/promo/07",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:818",
@@ -2184,7 +3078,13 @@
   "h": 462,
   "slots": "제목|상세|카테고리 상품명|할인율% OFF",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/mixed/promo/08",
+  "content": [
+   "가격·요금",
+   "혜택·쿠폰",
+   "메뉴·품목"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:836",
@@ -2193,7 +3093,9 @@
   "h": 427,
   "slots": "이미지|제목|상세|버튼",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/mixed/promo/09",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:847",
@@ -2202,7 +3104,11 @@
   "h": 340,
   "slots": "제목|상세|쿠폰 코드|쿠폰 받기|안내",
   "old_name": "프로모션",
-  "key": null
+  "key": "sec/mixed/promo/10",
+  "content": [
+   "혜택·쿠폰"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:860",
@@ -2211,7 +3117,11 @@
   "h": 364,
   "slots": "SALE|제목|혜택 체크 x3",
   "old_name": "프로모션",
-  "key": null
+  "key": "sec/mixed/promo/11",
+  "content": [
+   "혜택·쿠폰"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:878",
@@ -2220,7 +3130,12 @@
   "h": 313,
   "slots": "SALE|제목|기간|상세|혜택 받기",
   "old_name": "프로모션",
-  "key": null
+  "key": "sec/mixed/promo/12",
+  "content": [
+   "일시·기간",
+   "혜택·쿠폰"
+  ],
+  "weight": "light"
  },
  {
   "id": "5486:146",
@@ -2229,7 +3144,9 @@
   "h": 211,
   "slots": "제목 상세|버튼",
   "old_name": "프로모션-미니멀",
-  "key": null
+  "key": "sec/mixed/promo/13",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1088",
@@ -2238,7 +3155,9 @@
   "h": 247,
   "slots": "세션 제목|안내 문구|버튼",
   "old_name": "예약-에디토리얼",
-  "key": null
+  "key": "sec/editorial/reservation/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1098",
@@ -2247,7 +3166,9 @@
   "h": 255,
   "slots": "label 세부 x2|안내 문구|버튼",
   "old_name": "예약-에디토리얼",
-  "key": null
+  "key": "sec/editorial/reservation/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:221",
@@ -2256,7 +3177,9 @@
   "h": 183,
   "slots": "세션 제목|설명|버튼",
   "old_name": "예약-에디토리얼",
-  "key": null
+  "key": "sec/editorial/reservation/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:231",
@@ -2265,7 +3188,10 @@
   "h": 195,
   "slots": "label 세부 x2|버튼",
   "old_name": "예약-에디토리얼",
-  "key": null
+  "key": "sec/editorial/reservation/04",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "5455:1109",
@@ -2274,7 +3200,11 @@
   "h": 230,
   "slots": "일시|세션 제목|설명|버튼",
   "old_name": "예약-미니멀",
-  "key": null
+  "key": "sec/bold/reservation/01",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:1123",
@@ -2283,7 +3213,11 @@
   "h": 270,
   "slots": "일시 세션 제목|설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/02",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:1132",
@@ -2292,7 +3226,9 @@
   "h": 233,
   "slots": "세션 제목 설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1139",
@@ -2301,7 +3237,9 @@
   "h": 146,
   "slots": "설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/04",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1145",
@@ -2310,7 +3248,9 @@
   "h": 190,
   "slots": "세션 제목|설명|버튼 →",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/05",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "5486:239",
@@ -2319,7 +3259,9 @@
   "h": 197,
   "slots": "세션 제목|설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/06",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:249",
@@ -2328,7 +3270,10 @@
   "h": 206,
   "slots": "label 세부 x2|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/07",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~4"
  },
  {
   "id": "5486:257",
@@ -2337,7 +3282,11 @@
   "h": 274,
   "slots": "일시 세션 제목|설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/bold/reservation/08",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "heavy"
  },
  {
   "id": "5455:1059",
@@ -2346,7 +3295,11 @@
   "h": 218,
   "slots": "MM.DD hh:mm|세션 제목|설명|버튼",
   "old_name": "예약-미니멀",
-  "key": null
+  "key": "sec/mixed/reservation/01",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:1074",
@@ -2355,7 +3308,10 @@
   "h": 189,
   "slots": "label 세부 x2|버튼",
   "old_name": "예약-에디토리얼",
-  "key": null
+  "key": "sec/mixed/reservation/02",
+  "content": [],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5455:1081",
@@ -2364,7 +3320,9 @@
   "h": 143,
   "slots": "세션 제목 설명|버튼",
   "old_name": "예약-볼드",
-  "key": null
+  "key": "sec/mixed/reservation/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1048",
@@ -2373,7 +3331,9 @@
   "h": 183,
   "slots": "세션 제목|설명|버튼",
   "old_name": "예약-미니멀",
-  "key": null
+  "key": "sec/mixed/reservation/04",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:211",
@@ -2382,7 +3342,9 @@
   "h": 190,
   "slots": "세션 제목|설명|버튼",
   "old_name": "예약-미니멀",
-  "key": null
+  "key": "sec/minimal/reservation/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1155",
@@ -2391,7 +3353,9 @@
   "h": 589,
   "slots": "폼 제목|객관식 질문|선택지 1~|제출",
   "old_name": "폼-미니멀",
-  "key": null
+  "key": "sec/mixed/form/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:266",
@@ -2400,7 +3364,9 @@
   "h": 653,
   "slots": "폼 제목|객관식 질문|선택지 1~|제출",
   "old_name": "폼-미니멀",
-  "key": null
+  "key": "sec/mixed/form/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "8185:23",
@@ -2409,7 +3375,11 @@
   "h": 556,
   "slots": "LABEL|안내 문구|버튼 텍스트|버튼 텍스트|버튼 텍스트|버튼 텍스트|폼 제목|주관식 질문|플레이스 홀더|개인정보 수집·이용에 동의하시나요?|동의합니다|제출하기",
   "old_name": "form-editorial-01 (후원 링크 버튼 + 신청서)",
-  "key": "sec/editorial/form/01"
+  "key": "sec/editorial/form/01",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:1228",
@@ -2418,7 +3388,9 @@
   "h": 350,
   "slots": "메인 이미지|안내 사항 안내 사항",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/editorial/notice/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1235",
@@ -2427,7 +3399,11 @@
   "h": 234,
   "slots": "01 안내 사항|02 안내 사항",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/editorial/notice/02",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "light"
  },
  {
   "id": "5486:311",
@@ -2436,7 +3412,9 @@
   "h": 334,
   "slots": "메인 이미지|안내 사항 안내 사항",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/editorial/notice/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:317",
@@ -2445,7 +3423,11 @@
   "h": 273,
   "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/editorial/notice/04",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:1243",
@@ -2454,7 +3436,9 @@
   "h": 180,
   "slots": "LABEL  ● 안내 사항 ● 안내 사항",
   "old_name": "안내사항-볼드",
-  "key": null
+  "key": "sec/bold/notice/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:326",
@@ -2463,7 +3447,9 @@
   "h": 180,
   "slots": "LABEL  ● 안내 사항 ● 안내 사항",
   "old_name": "안내사항-볼드",
-  "key": null
+  "key": "sec/bold/notice/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:330",
@@ -2472,7 +3458,11 @@
   "h": 271,
   "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
   "old_name": "안내사항-볼드",
-  "key": null
+  "key": "sec/bold/notice/03",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5486:339",
@@ -2481,7 +3471,11 @@
   "h": 271,
   "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
   "old_name": "안내사항-볼드",
-  "key": null
+  "key": "sec/bold/notice/04",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:1199",
@@ -2490,7 +3484,9 @@
   "h": 206,
   "slots": "💡|안내 사항|✅|안내 사항|✔️|안내 사항",
   "old_name": "안내사항-미니멀",
-  "key": null
+  "key": "sec/mixed/notice/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1214",
@@ -2499,7 +3495,9 @@
   "h": 184,
   "slots": "LABEL 안내 사항 안내 사항",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/mixed/notice/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1218",
@@ -2508,7 +3506,11 @@
   "h": 273,
   "slots": "01 안내 사항|02 안내 사항|*부가 설명 텍스트",
   "old_name": "안내사항-에디토리얼",
-  "key": null
+  "key": "sec/mixed/notice/03",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium"
  },
  {
   "id": "6560:8842",
@@ -2517,7 +3519,11 @@
   "h": 228,
   "slots": "00|질문|답변|00|질문|답변",
   "old_name": "13-V3 번호 + 틴트 답변 카드",
-  "key": null
+  "key": "sec/mixed/notice/04",
+  "content": [
+   "FAQ"
+  ],
+  "weight": "medium"
  },
  {
   "id": "5455:1195",
@@ -2526,7 +3532,9 @@
   "h": 92,
   "slots": "안내 사항 안내 사항",
   "old_name": "안내사항-미니멀",
-  "key": null
+  "key": "sec/mixed/notice/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:307",
@@ -2535,7 +3543,9 @@
   "h": 124,
   "slots": "안내 사항 안내 사항",
   "old_name": "안내사항-미니멀",
-  "key": null
+  "key": "sec/mixed/notice/06",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "6560:8856",
@@ -2544,7 +3554,11 @@
   "h": 168,
   "slots": "Q|질문|A|답변|Q|질문",
   "old_name": "13-V1 Q / A 라벨",
-  "key": null
+  "key": "sec/mixed/notice/07",
+  "content": [
+   "FAQ"
+  ],
+  "weight": "light"
  },
  {
   "id": "6560:8870",
@@ -2553,7 +3567,11 @@
   "h": 181,
   "slots": "질문|답변|구분선|질문|답변",
   "old_name": "13-V2 질문 Bold + 구분선",
-  "key": null
+  "key": "sec/mixed/notice/08",
+  "content": [
+   "FAQ"
+  ],
+  "weight": "light"
  },
  {
   "id": "5455:1285",
@@ -2562,7 +3580,9 @@
   "h": 168,
   "slots": "버튼 x2 (세로)",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1292",
@@ -2571,7 +3591,9 @@
   "h": 238,
   "slots": "버튼 x3 (세로)",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1299",
@@ -2580,7 +3602,9 @@
   "h": 168,
   "slots": "버튼 x2 (세로)",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1306",
@@ -2589,7 +3613,9 @@
   "h": 227,
   "slots": "아이콘+label 세부 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1321",
@@ -2598,7 +3624,9 @@
   "h": 208,
   "slots": "아이콘+label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/05",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5455:1332",
@@ -2607,7 +3635,9 @@
   "h": 208,
   "slots": "📞💬 label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/06",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1341",
@@ -2616,7 +3646,9 @@
   "h": 203,
   "slots": "CALL/MESSAGE/EMAIL/HOME + 연락처 저장",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/07",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5455:1350",
@@ -2625,7 +3657,9 @@
   "h": 129,
   "slots": "CALL/MESSAGE/EMAIL/HOME",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/08",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:360",
@@ -2634,7 +3668,10 @@
   "h": 94,
   "slots": "버튼 x2 (가로 2단)",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/09",
+  "content": [],
+  "weight": "light",
+  "items_range": "2~4"
  },
  {
   "id": "5486:366",
@@ -2643,7 +3680,9 @@
   "h": 208,
   "slots": "📞💬 label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/10",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:375",
@@ -2652,7 +3691,9 @@
   "h": 208,
   "slots": "📞💬 label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/11",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:384",
@@ -2661,7 +3702,9 @@
   "h": 211,
   "slots": "📞💬 label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/12",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:397",
@@ -2670,7 +3713,9 @@
   "h": 211,
   "slots": "📞💬 label 연락처 x2",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/13",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "5486:410",
@@ -2679,7 +3724,9 @@
   "h": 151,
   "slots": "CALL/MESSAGE/EMAIL/HOME",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/14",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:417",
@@ -2688,7 +3735,9 @@
   "h": 151,
   "slots": "CALL/MESSAGE/EMAIL/HOME",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/15",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "5486:424",
@@ -2697,7 +3746,9 @@
   "h": 151,
   "slots": "CALL/MESSAGE/EMAIL/HOME",
   "old_name": "문의-미니멀",
-  "key": null
+  "key": "sec/mixed/contact/16",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "7938:79",
@@ -2706,7 +3757,10 @@
   "h": 231,
   "slots": "질문 문구를 입력합니다|버튼 텍스트|버튼 텍스트|버튼 텍스트|버튼 텍스트",
   "old_name": "contact-editorial-01 (질문 + 링크 버튼)",
-  "key": "sec/editorial/contact/01"
+  "key": "sec/editorial/contact/01",
+  "content": [],
+  "weight": "medium",
+  "items_range": "2~"
  },
  {
   "id": "3311:10466",
@@ -2715,7 +3769,12 @@
   "h": 41,
   "slots": "페이지 제목|메뉴 아이콘",
   "old_name": "헤더-텍스트",
-  "key": null
+  "key": "hdr/01",
+  "content": [],
+  "weight": "medium",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4445:87",
@@ -2724,7 +3783,12 @@
   "h": 45,
   "slots": "로고|메뉴 아이콘",
   "old_name": "헤더-로고+텍스트",
-  "key": null
+  "key": "hdr/08",
+  "content": [],
+  "weight": "medium",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4460:109",
@@ -2733,7 +3797,9 @@
   "h": 44,
   "slots": "로고",
   "old_name": "헤더-로고만",
-  "key": null
+  "key": "hdr/15",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10471",
@@ -2742,7 +3808,12 @@
   "h": 41,
   "slots": "페이지 제목|메뉴 아이콘",
   "old_name": "헤더-텍스트",
-  "key": null
+  "key": "hdr/02",
+  "content": [],
+  "weight": "medium",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4445:96",
@@ -2751,7 +3822,12 @@
   "h": 45,
   "slots": "로고|메뉴 아이콘",
   "old_name": "헤더-로고+텍스트",
-  "key": null
+  "key": "hdr/09",
+  "content": [],
+  "weight": "medium",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4460:118",
@@ -2760,7 +3836,9 @@
   "h": 44,
   "slots": "로고",
   "old_name": "헤더-로고만",
-  "key": null
+  "key": "hdr/16",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10470",
@@ -2769,7 +3847,12 @@
   "h": 40,
   "slots": "페이지 제목|메뉴 아이콘",
   "old_name": "헤더-텍스트",
-  "key": null
+  "key": "hdr/03",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4445:105",
@@ -2778,7 +3861,12 @@
   "h": 44,
   "slots": "로고|메뉴 아이콘",
   "old_name": "헤더-로고+텍스트",
-  "key": null
+  "key": "hdr/10",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4460:127",
@@ -2787,7 +3875,9 @@
   "h": 44,
   "slots": "로고",
   "old_name": "헤더-로고만",
-  "key": null
+  "key": "hdr/17",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10480",
@@ -2796,7 +3886,12 @@
   "h": 40,
   "slots": "페이지 제목|메뉴 아이콘",
   "old_name": "헤더-텍스트",
-  "key": null
+  "key": "hdr/04",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4445:112",
@@ -2805,7 +3900,12 @@
   "h": 44,
   "slots": "로고|메뉴 아이콘",
   "old_name": "헤더-로고+텍스트",
-  "key": null
+  "key": "hdr/11",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "3311:10487",
@@ -2814,7 +3914,12 @@
   "h": 40,
   "slots": "페이지 제목|메뉴 아이콘",
   "old_name": "헤더-텍스트",
-  "key": null
+  "key": "hdr/05",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "4445:119",
@@ -2823,7 +3928,12 @@
   "h": 44,
   "slots": "로고|메뉴 아이콘",
   "old_name": "헤더-로고+텍스트",
-  "key": null
+  "key": "hdr/12",
+  "content": [],
+  "weight": "heavy",
+  "use_when": [
+   "멀티페이지일 때만 — 메뉴 아이콘은 목차로 돌아가는 장치(원페이지 ❌)"
+  ]
  },
  {
   "id": "3311:10494",
@@ -2832,7 +3942,9 @@
   "h": 37,
   "slots": "배너 문구",
   "old_name": "헤더-배너",
-  "key": null
+  "key": "hdr/06",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "4460:87",
@@ -2841,7 +3953,9 @@
   "h": 45,
   "slots": "로고",
   "old_name": "헤더-로고만",
-  "key": null
+  "key": "hdr/13",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:10497",
@@ -2850,7 +3964,9 @@
   "h": 37,
   "slots": "배너 문구",
   "old_name": "헤더-배너",
-  "key": null
+  "key": "hdr/07",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "4460:98",
@@ -2859,7 +3975,9 @@
   "h": 45,
   "slots": "로고",
   "old_name": "헤더-로고만",
-  "key": null
+  "key": "hdr/14",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3160:100",
@@ -2868,7 +3986,9 @@
   "h": 111,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/01",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9842",
@@ -2877,7 +3997,14 @@
   "h": 141,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/13",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10127",
@@ -2886,7 +4013,9 @@
   "h": 151,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/25",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10075",
@@ -2895,7 +4024,9 @@
   "h": 111,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/02",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9789",
@@ -2904,7 +4035,14 @@
   "h": 92,
   "slots": "SNS 아이콘|SNS 아이디",
   "old_name": "푸터-SNS",
-  "key": null
+  "key": "ftr/14",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 있을 때"
+  ]
  },
  {
   "id": "3311:10023",
@@ -2913,7 +4051,14 @@
   "h": 126,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/26",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3001:2701",
@@ -2922,7 +4067,9 @@
   "h": 135,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/03",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9892",
@@ -2931,7 +4078,9 @@
   "h": 128,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/15",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:10040",
@@ -2940,7 +4089,14 @@
   "h": 141,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/27",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10089",
@@ -2949,7 +4105,9 @@
   "h": 135,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/04",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:10081",
@@ -2958,7 +4116,9 @@
   "h": 128,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/16",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:10034",
@@ -2967,7 +4127,14 @@
   "h": 92,
   "slots": "SNS 아이콘|SNS 아이디",
   "old_name": "푸터-SNS",
-  "key": null
+  "key": "ftr/28",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 있을 때"
+  ]
  },
  {
   "id": "3311:9698",
@@ -2976,7 +4143,14 @@
   "h": 120,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/05",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:9898",
@@ -2985,7 +4159,9 @@
   "h": 152,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/17",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9857",
@@ -2994,7 +4170,9 @@
   "h": 53,
   "slots": "페이지 제목|아이콘",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/29",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9825",
@@ -3003,7 +4181,14 @@
   "h": 135,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/06",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10097",
@@ -3012,7 +4197,9 @@
   "h": 152,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/18",
+  "content": [],
+  "weight": "medium"
  },
  {
   "id": "3311:9868",
@@ -3021,7 +4208,9 @@
   "h": 39,
   "slots": "페이지 제목|한 줄 카피",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/30",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "3311:9718",
@@ -3030,7 +4219,14 @@
   "h": 86,
   "slots": "SNS 아이콘|SNS 아이디",
   "old_name": "푸터-SNS",
-  "key": null
+  "key": "ftr/07",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 있을 때"
+  ]
  },
  {
   "id": "3311:9906",
@@ -3039,7 +4235,14 @@
   "h": 127,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/19",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10060",
@@ -3048,7 +4251,9 @@
   "h": 52,
   "slots": "페이지 제목|아이콘",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/31",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9764",
@@ -3057,7 +4262,9 @@
   "h": 127,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/08",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9917",
@@ -3066,7 +4273,14 @@
   "h": 142,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/20",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10065",
@@ -3075,7 +4289,9 @@
   "h": 38,
   "slots": "페이지 제목|한 줄 카피",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/32",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10107",
@@ -3084,7 +4300,9 @@
   "h": 127,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/09",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9928",
@@ -3093,7 +4311,14 @@
   "h": 93,
   "slots": "SNS 아이콘|SNS 아이디",
   "old_name": "푸터-SNS",
-  "key": null
+  "key": "ftr/21",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "light",
+  "use_when": [
+   "SNS 계정이 있을 때"
+  ]
  },
  {
   "id": "3311:9874",
@@ -3102,7 +4327,9 @@
   "h": 52,
   "slots": "페이지 제목|아이콘",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/33",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9770",
@@ -3111,7 +4338,9 @@
   "h": 151,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/10",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10009",
@@ -3120,7 +4349,9 @@
   "h": 127,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/22",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9879",
@@ -3129,7 +4360,9 @@
   "h": 38,
   "slots": "페이지 제목|한 줄 카피",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/34",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10113",
@@ -3138,7 +4371,9 @@
   "h": 151,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/11",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:10121",
@@ -3147,7 +4382,9 @@
   "h": 127,
   "slots": "로고|브랜드명",
   "old_name": "푸터-로고+브랜드",
-  "key": null
+  "key": "ftr/23",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9883",
@@ -3156,7 +4393,9 @@
   "h": 52,
   "slots": "페이지 제목|아이콘",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/35",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9778",
@@ -3165,7 +4404,14 @@
   "h": 126,
   "slots": "SNS 아이콘|브랜드명|한 줄 카피",
   "old_name": "푸터-브랜드+카피",
-  "key": null
+  "key": "ftr/12",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "SNS 계정이 2개 이상일 때"
+  ]
  },
  {
   "id": "3311:10015",
@@ -3174,7 +4420,9 @@
   "h": 151,
   "slots": "로고|브랜드명|한 줄 카피",
   "old_name": "푸터-로고+브랜드+카피",
-  "key": null
+  "key": "ftr/24",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "3311:9888",
@@ -3183,7 +4431,9 @@
   "h": 38,
   "slots": "페이지 제목|한 줄 카피",
   "old_name": "푸터-하단고정바",
-  "key": null
+  "key": "ftr/36",
+  "content": [],
+  "weight": "heavy"
  },
  {
   "id": "4023:91",
@@ -3192,7 +4442,9 @@
   "h": 58,
   "slots": "",
   "old_name": "타이틀-1 좌22",
-  "key": null
+  "key": "title/01",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4023:96",
@@ -3201,7 +4453,9 @@
   "h": 58,
   "slots": "",
   "old_name": "타이틀-2 중앙22",
-  "key": null
+  "key": "title/02",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4023:101",
@@ -3210,7 +4464,9 @@
   "h": 54,
   "slots": "",
   "old_name": "타이틀-3 좌18",
-  "key": null
+  "key": "title/03",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4023:106",
@@ -3219,7 +4475,9 @@
   "h": 49,
   "slots": "",
   "old_name": "타이틀-4 중앙14",
-  "key": null
+  "key": "title/04",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4024:98",
@@ -3228,7 +4486,9 @@
   "h": 66,
   "slots": "",
   "old_name": "타이틀-6 좌18+긴선",
-  "key": null
+  "key": "title/05",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4024:105",
@@ -3237,7 +4497,9 @@
   "h": 63,
   "slots": "",
   "old_name": "타이틀-7 중앙14+짧은바",
-  "key": null
+  "key": "title/06",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4024:112",
@@ -3246,7 +4508,9 @@
   "h": 61,
   "slots": "",
   "old_name": "타이틀-8 pill중앙13",
-  "key": null
+  "key": "title/07",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4593:276",
@@ -3255,7 +4519,9 @@
   "h": 79,
   "slots": "",
   "old_name": "타이틀-9 상하선 포인트",
-  "key": null
+  "key": "title/08",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4593:286",
@@ -3264,7 +4530,9 @@
   "h": 79,
   "slots": "",
   "old_name": "타이틀-9 상하선 텍스트",
-  "key": null
+  "key": "title/09",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4649:127",
@@ -3273,7 +4541,9 @@
   "h": 78,
   "slots": "",
   "old_name": "타이틀-10 좌라벨13+카피22",
-  "key": null
+  "key": "title/10",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4752:1764",
@@ -3282,7 +4552,9 @@
   "h": 162,
   "slots": "",
   "old_name": "타이틀-9 상하선+본문",
-  "key": null
+  "key": "title/11",
+  "content": [],
+  "weight": "light"
  },
  {
   "id": "4752:1825",
@@ -3291,6 +4563,8 @@
   "h": 46,
   "slots": "",
   "old_name": "타이틀-9 구분자+본문",
-  "key": null
+  "key": "title/12",
+  "content": [],
+  "weight": "light"
  }
 ]
