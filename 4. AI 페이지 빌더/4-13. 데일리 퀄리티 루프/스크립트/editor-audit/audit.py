@@ -276,14 +276,14 @@ def audit(ed, presets=None):
     if presets is None and runs:
         flag('S11-43', '-', '이모지 견본 대조 미측정(섹션 원본 목록 없음)', '')
 
-    # S11-10 (테두리 버튼) 카드 모서리 = 페이지 버튼 모양
+    # S11-10 (테두리 버튼) 카드 모서리 = 페이지 버튼 모양 「계열」 — 카드 모서리엔 원형이 없다(각진 0 ↔ 0 · 둥근·원형 ↔ 둥근)
     tr = num(btn.get('borderRadius') if btn.get('borderRadius') is not None else 999, 999)
     for i, b in enumerate(blocks):
         st = b.get('style') or {}
         if b.get('type') == 'button' and has_border(st) and not has_fill(st):
             cr = num(st.get('borderRadius') or 0, 0)
-            if not (cr == tr or (cr >= 100 and tr >= 100)):
-                flag('S11-10', 'M', f'테두리 버튼 카드 모서리 {cr:.0f}px ≠ 페이지 버튼 모양 {tr:.0f}px', W(i, b))
+            if (cr > 0) != (tr > 0):
+                flag('S11-10', 'M', f'테두리 버튼 카드 모서리 {cr:.0f}px — 페이지 버튼 모양({tr:.0f}px)과 다른 계열(각진↔둥근) · 카드 모서리를 버튼 모양에 맞출 것', W(i, b))
 
     # S11-48 장식 없는 섹션 타이틀 ↔ 바로 아래 본문 정렬
     for i, b in enumerate(blocks[:-1]):
