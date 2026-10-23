@@ -150,3 +150,16 @@ window.__gotoPage2(N);   // N=1-based 페이지 번호 (5541 p24 · p40, 5547 p2
 
 ## 12. 최종 페이지 매핑 (5541, 빌드 후)
 1=간지미니 · 2~6=미니멀5 · 7=간지에디 · **8=367(/01) 9=374(/02) 10=384(/03) 11=398(/04) 12=409(/05) 13=422(/06) 14=430(/07) 15=B_4953:143(mixed/01) 16=C_3280:443(mixed/02) 17=471(/08) 18=503(/09)** · 19=간지볼드 · **20=518(bold/01) 21=533(/02) 22=556(/03) 23=588(/04) 24=643(/05)**
+
+## 13. ⚡ 빠른 길 — 카드 데이터를 한 번에 넣고 「프리셋 저장」 (2026-10-23 · 승인 10개 등록에 사용)
+> 카드를 한 장씩 추가·수정하는 대신, **목적별 마스터에 빈 페이지를 만들고 그 페이지의 카드 배열을 통째로 넣는다.** 10개 섹션(카드 50장) 등록에 약 40분. 도구 = `1. 작업 가이드/.data/preset-build/`
+1. **격리 브라우저** — `export BROWSE_STATE_FILE=/tmp/browse-presets-state.json` 후 프리뷰 도메인 로그인(다른 세션의 브라우저를 건드리지 않는다).
+2. **도우미 주입** — `card-driver.js` → `getdoc2.js`(빈 페이지에서도 문서 상태를 찾음) · `pagepanel.js`(`__openPanel`·`__addPage`·`__closePanel`) · `goto.js`(`__gotoPage2`) · `press.js` · `modal.js` · `pb.js`(카드 만들기: `text`·`multi`·`itemText`·`itemImage`·`itemButton`·`button`(테두리형 `outlined`)·`image`·`divider` — 배경 이미지 카드는 `text({bgImage:true})`).
+3. **빈 페이지 추가** — `__openPanel()` → `__addPage()` × N (맨 뒤에 붙는다).
+4. **카드 배열 만들기** — Figma 덤프(§2)대로. 바깥 여백 = `style.margin` · 안쪽 = `style.padding` · 배경 = `style.background` · 테두리 = `style.borderStyle/borderWidth/borderColor` · 2열 칸 너비 = `multiCard.ratio`(**첫 칸 %** · 2칸일 때만). 유튜브·Q&A는 그 마스터에 있는 카드를 복제해 고친다(유튜브는 UI로 한 장 추가하면 기본값이 나온다 · **비워서 등록**).
+5. **넣기 + 커밋** — 🔴 **넣을 페이지가 아닌 다른 페이지로 먼저 이동**(카드 3장 이상인 곳) → `doc.pages = doc.pages.map(새 배열)` → `reorderCard(1,2)`·`(2,1)` → **새로고침해 남아 있는지 확인** → 화면 캡처로 확인.
+6. **저장** — `savepreset.sh <페이지> <스타일> <목적> <키> <메모>`: 「지금 내용을 프리셋으로 저장」(포인터 이벤트) → 스타일 체크박스 `input.click()` → 목적 버튼 → 키 직접 입력 → **「사용 가능」일 때만** `새 초안으로 생성`(이미 있는 키면 멈춘다).
+- ⚠️ **메모 칸 = placeholder 「포팅 출처」인 textarea** — Q&A가 든 섹션은 미리보기에 다른 textarea가 있어 첫 textarea를 잡으면 메모가 비어 저장된다(form/01에서 실제 발생 · 수정됨).
+- ⚠️ **줄간격은 카드당 한 값 · 1.2~2.0 짝수 칸** — Figma 150%는 1.6으로, 크기 다른 줄이 섞이면 큰 글자 쪽 값으로.
+- ✅ 저장 뒤 `dump.sh --presets` → `preset_audit.py --key …` = 문제 0 확인.
+- 📌 **2026-10-23 등록 위치** — 5549 p72 `sec/bold/list/16` · p73 `sec/bold/list/17` · p74 `sec/editorial/list/15` · p75 `/16` · p76 `/17` · 5550 p31 `sec/editorial/materials/05` · p32 `/06` · 5701 p24 `sec/bold/purchase/05` · 5719 p18 `sec/editorial/contact/01` · 5713 p4 `sec/editorial/form/01` (전부 초안)

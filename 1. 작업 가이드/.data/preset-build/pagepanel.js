@@ -1,0 +1,4 @@
+window.__openPanel=function(){var el=[...document.querySelectorAll('div')].find(e=>{var r=e.getBoundingClientRect();return r.x<40&&r.y>120&&r.y<200&&r.width>0&&r.width<40&&String(e.className).includes('rounded-r')});if(!el)return 'no-toggle';var f=window.__cdbd.fiberOf(el),d=0;while(f&&d<6){var oc=f.memoizedProps&&f.memoizedProps.onClick;if(typeof oc==='function'){oc({stopPropagation(){},preventDefault(){},target:el,currentTarget:el});return 'opened';}f=f.return;d++;}el.click();return 'clicked';};
+window.__addPage=function(){var b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='페이지 추가'&&e.getBoundingClientRect().width>0&&e.getBoundingClientRect().width<200);if(!b)return 'no-add-btn';b.click();return 'added';};
+window.__closePanel=function(){var e=document.elementFromPoint(880,400);if(e)e.click();return 'closed';};
+'ok'
