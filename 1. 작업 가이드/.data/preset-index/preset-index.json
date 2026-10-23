@@ -486,6 +486,24 @@
   "key": null
  },
  {
+  "id": "7938:23",
+  "name": "materials-editorial-05",
+  "grp": "자료-에디토리얼",
+  "h": 147,
+  "slots": "로고|로고|로고|로고|로고|로고",
+  "old_name": "materials-editorial-05 (파트너 로고 월 · 원본 비율 + 정렬 중앙)",
+  "key": null
+ },
+ {
+  "id": "7938:40",
+  "name": "materials-editorial-06",
+  "grp": "자료-에디토리얼",
+  "h": 295,
+  "slots": "영상|영상 제목|0:00 · 영상을 한 줄로 소개합니다",
+  "old_name": "materials-editorial-06 (영상 + 캡션)",
+  "key": null
+ },
+ {
   "id": "5395:12610",
   "name": "materials-bold-01",
   "grp": "자료-볼드",
@@ -738,6 +756,33 @@
   "key": null
  },
  {
+  "id": "7938:62",
+  "name": "list-editorial-15",
+  "grp": "나열-에디토리얼",
+  "h": 306,
+  "slots": "YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다|YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다|YYYY. MM. DD|소식 제목을 입력합니다|본문 첫 문장을 한두 줄로 보여 줍니다",
+  "old_name": "list-editorial-14 (최근 소식)",
+  "key": null
+ },
+ {
+  "id": "8008:23",
+  "name": "list-editorial-16",
+  "grp": "나열-에디토리얼",
+  "h": 256,
+  "slots": "이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류|이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류|이미지|소식 제목을 입력합니다 YYYY. MM. DD · 분류",
+  "old_name": "list-editorial-15 (소식 썸네일 행)",
+  "key": null
+ },
+ {
+  "id": "8185:83",
+  "name": "list-editorial-17",
+  "grp": "나열-에디토리얼",
+  "h": 1203,
+  "slots": "이미지|항목 이름|버튼 텍스트|이미지|항목 이름|버튼 텍스트|이미지|항목 이름|버튼 텍스트",
+  "old_name": "list-editorial-16 (이미지 + 제목 + 버튼 반복)",
+  "key": null
+ },
+ {
   "id": "5408:603",
   "name": "list-bold-01",
   "grp": "나열-볼드",
@@ -870,6 +915,24 @@
   "h": 426,
   "slots": "hh:mm 프로그램 진행자|hh:mm 프로그램 진행자|hh:mm 프로그램 진행자",
   "old_name": null,
+  "key": null
+ },
+ {
+  "id": "7918:23",
+  "name": "list-bold-16",
+  "grp": "나열-볼드",
+  "h": 500,
+  "slots": "분야 이름 분야를 한두 줄로 설명합니다|이미지|분야 이름 분야를 한두 줄로 설명합니다|이미지|분야 이름 분야를 한두 줄로 설명합니다|이미지",
+  "old_name": "list-bold-15 (분야 밴드 목차)",
+  "key": null
+ },
+ {
+  "id": "7938:49",
+  "name": "list-bold-17",
+  "grp": "나열-볼드",
+  "h": 477,
+  "slots": "카테고리 이름 한 줄 설명|배경 이미지 · 어둡게|카테고리 이름 한 줄 설명|배경 이미지 · 어둡게|카테고리 이름 한 줄 설명|배경 이미지 · 어둡게",
+  "old_name": "list-bold-16 (카테고리 이미지 타일)",
   "key": null
  },
  {
@@ -1872,6 +1935,15 @@
   "key": null
  },
  {
+  "id": "7900:23",
+  "name": "purchase-bold-05",
+  "grp": "구매-볼드",
+  "h": 472,
+  "slots": "추천|플랜명|00,000원|혜택 내용 혜택 내용 혜택 내용|플랜명|00,000원|혜택 내용|버튼 텍스트",
+  "old_name": "pricing-bold-01 (이용 요금 · 플랜 비교)",
+  "key": null
+ },
+ {
   "id": "5455:552",
   "name": "purchase-mixed-02",
   "grp": "구매-미에볼",
@@ -2322,6 +2394,15 @@
   "key": null
  },
  {
+  "id": "8185:23",
+  "name": "form-editorial-01",
+  "grp": "폼-에디토리얼",
+  "h": 556,
+  "slots": "LABEL|안내 문구|버튼 텍스트|버튼 텍스트|버튼 텍스트|버튼 텍스트|폼 제목|주관식 질문|플레이스 홀더|개인정보 수집·이용에 동의하시나요?|동의합니다|제출하기",
+  "old_name": "form-editorial-01 (후원 링크 버튼 + 신청서)",
+  "key": null
+ },
+ {
   "id": "5455:1228",
   "name": "notice-editorial-01",
   "grp": "안내 사항-에디토리얼",
@@ -2607,6 +2688,15 @@
   "h": 151,
   "slots": "CALL/MESSAGE/EMAIL/HOME",
   "old_name": "문의-미니멀",
+  "key": null
+ },
+ {
+  "id": "7938:79",
+  "name": "contact-editorial-01",
+  "grp": "문의-에디토리얼",
+  "h": 231,
+  "slots": "질문 문구를 입력합니다|버튼 텍스트|버튼 텍스트|버튼 텍스트|버튼 텍스트",
+  "old_name": "contact-editorial-01 (질문 + 링크 버튼)",
   "key": null
  },
  {
