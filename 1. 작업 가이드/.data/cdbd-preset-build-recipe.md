@@ -130,17 +130,18 @@ b.style.padding="<상>px <우>px <하>px <좌>px";  // Figma 구분선 프레임
 - 저장 모달 스타일 토글은 **일반 .click() 안 먹음** → mouse이벤트 시퀀스.
 - 페이지 이동(reorderCard)은 **페이지 패널 열린 상태**에서만 첫 sortable=페이지.
 
-## 11. 페이지 전환 (검수·수정용) — window.__gotoPage(N)
+## 11. 페이지 전환 (검수·수정용) — window.__gotoPage2(N)
 후반 페이지 썸네일은 클립돼 좌표클릭 불가. 썸네일 onClick을 합성이벤트로 호출:
 ```js
 // 페이지 패널 먼저 열기(좌측 '>' 토글 fiber onClick). 그 후 설치:
-window.__gotoPage=function(N){
- var lbl=[...document.querySelectorAll("*")].find(e=>e.children.length===0&&e.textContent.trim()===String(N)&&e.getBoundingClientRect().width>0&&e.getBoundingClientRect().y>380);
+// 2026-10-23 갱신 — 옛 __gotoPage(`o()` 매처)는 이 빌드에서 no-handler. 썸네일 번호 라벨(text-xs)의 onClick 중 menu-overlay 핸들러를 호출한다
+window.__gotoPage2=function(N){
+ var lbl=[...document.querySelectorAll("*")].find(e=>e.children.length===0&&e.textContent.trim()===String(N)&&e.getBoundingClientRect().width>0&&e.getBoundingClientRect().y>380&&String(e.className).includes('text-xs'));
  if(!lbl)return "no-lbl-"+N;
- var cont=lbl.parentElement; var cands=[cont,cont.querySelector("div"),cont.previousElementSibling].filter(Boolean);
- for(var n of cands){var f=window.__cdbd.fiberOf(n);var d=0;while(f&&d<6){var oc=f.memoizedProps&&f.memoizedProps.onClick;if(typeof oc==="function"&&/o\(\)/.test(oc.toString())){oc({target:document.body});return "switched-"+N;}f=f.return;d++;}}
+ var f=window.__cdbd.fiberOf(lbl),d=0;
+ while(f&&d<4){var oc=f.memoizedProps&&f.memoizedProps.onClick;if(typeof oc==="function"&&/menu-overlay/.test(oc.toString())){oc({target:document.body,stopPropagation(){},preventDefault(){}});return "switched-"+N;}f=f.return;d++;}
  return "no-handler-"+N;};
-window.__gotoPage(N);   // N=1-based 페이지 번호
+window.__gotoPage2(N);   // N=1-based 페이지 번호 (5541 p24 · p40, 5547 p20에서 검증)
 // 그 후 패널 닫기: document.elementFromPoint(880,400).click()
 // 검증: boardRows()로 활성 페이지 카드 확인(기대 개수/타입과 대조).
 ```
