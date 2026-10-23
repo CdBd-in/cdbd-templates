@@ -8,7 +8,7 @@
 """
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from audit import box, has_bg, has_fill, panels, paras, nonempty, ptext, TH_PANEL  # noqa: E402
+from audit import box, has_bg, has_fill, height_pad, panels, paras, nonempty, ptext, TH_PANEL  # noqa: E402
 
 DELETABLE = ('image', 'gallery', 'youtube')   # 자료가 없으면 빌더가 지우는 카드
 EDGE_KINDS = ('hero', 'header', 'footer')      # 페이지 맨 위·띠 안에서 시작하는 섹션
@@ -54,7 +54,7 @@ def check(p):
             if not c: continue
             ps = paras(c); ne = nonempty(ps)
             if not ne: continue
-            trail = len(ps) - 1 - ne[-1]
+            trail = 0 if height_pad(b, ps) else len(ps) - 1 - ne[-1]
             brend = 1 if ps[ne[-1]]['items'] and ps[ne[-1]]['items'][-1][0] == 'BR' else 0
             if trail or brend:
                 F.append(('빈 줄', 'M', f'카드{k + 1} {lab} 끝에 빈 줄 {trail + brend}개 「{ptext(ps[ne[-1]])[:16]}」'))

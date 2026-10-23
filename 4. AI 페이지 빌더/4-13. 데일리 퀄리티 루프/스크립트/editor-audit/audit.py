@@ -107,6 +107,20 @@ def sig(b):
     return (b.get('type'), b.get('title'), tuple(box(st.get('padding'))), tuple(box(st.get('margin'))))
 
 
+def has_bgimage(b):
+    v = b.get('backgroundImage') or (b.get('style') or {}).get('backgroundImage')
+    if isinstance(v, dict): return bool(v.get('url')) and v.get('enabled', True) is not False
+    return bool(v) and str(v).lower() != 'none'
+
+
+def height_pad(b, ps):
+    """배경 이미지 카드의 위아래 대칭 빈 줄 = 이미지가 보이게 높이를 내는 원본 설계 → 빈 줄 검사 제외"""
+    ne = nonempty(ps)
+    if not ne or not has_bgimage(b): return False
+    lead, trail = ne[0], len(ps) - 1 - ne[-1]
+    return lead > 0 and abs(lead - trail) <= 1
+
+
 def panels(bl):
     """배경 면 = 같은 배경색 카드가 바깥 여백 없이 맞붙어 이어진 묶음 (카드 순번 목록)"""
     out, cur = [], []
@@ -196,8 +210,8 @@ def audit(ed, presets=None):
             ne = nonempty(ps)
             if not ne: continue
             t = full(ps).strip()
-            # S11-40 빈 줄 0 — 끝에 남은 빈 줄 · 끝 줄바꿈 · 사이 빈 줄(원본에 없던 것)
-            trail = len(ps) - 1 - ne[-1]
+            # S11-40 빈 줄 0 — 끝에 남은 빈 줄 · 끝 줄바꿈 · 사이 빈 줄(원본에 없던 것) · 배경 이미지 높이용 대칭 빈 줄은 제외
+            trail = 0 if height_pad(b, ps) else len(ps) - 1 - ne[-1]
             brend = 1 if ps[ne[-1]]['items'] and ps[ne[-1]]['items'][-1][0] == 'BR' else 0
             mids = [k for k in range(ne[0], ne[-1]) if k not in ne]
             if cands:
