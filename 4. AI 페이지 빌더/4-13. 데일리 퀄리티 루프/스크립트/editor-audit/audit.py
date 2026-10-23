@@ -21,7 +21,7 @@ GENERIC_MARKERS = {'✅', '✔️', '✔', '☑️', '✓', '●', '•', '·', 
 MONO_MARKERS = {'✔', '✓', '●', '•', '·', '▪', '■', '-', '—', '❶', '❷', '❸', '❹', '❺', '①', '②', '③', '④', '⑤'}
 EMOJI_RE = re.compile('^[\U0001F300-\U0001FAFF☀-➿⬀-⯿①-⓿■-◿️‍•·\\-—]+$')
 TH_BIG, TH_LINE, TH_BOX = 9, 20, 18           # ⚙ S11-49 줄 나누기 기준 (MD-08-3 📱)
-TH_GAP = 80                                     # ⚙ S11-42 이웃 카드 여백 합
+TH_GAP = 60                                     # ⚙ S11-42 이웃 카드 보이는 여백 (섹션 사이 = 36＋20 = 56)
 TH_VAL = 8                                      # ⚙ S11-47 2열 값 칸 글자 수 (MD-08-3 길이 표)
 
 
@@ -262,14 +262,22 @@ def audit(ed, presets=None):
             if ta != na and len(full(paras(nx.get('content') or '')).strip()) >= 8:
                 flag('S11-48', 'M', f'섹션 타이틀 {ta} ↔ 본문 {na} 정렬 엇갈림 (둘 다 장식 없음)', f'카드{i + 1}→{i + 2}')
 
-    # S11-42 빠진 카드 자리 여백 겹침 (이웃 카드 여백 합)
+    # S11-42 빠진 카드 자리 여백 겹침 — 이웃 카드의 「보이는」 간격(배경·테두리 카드의 안쪽 여백은 상자 안이라 제외)
+    def vbot(x):
+        s_ = x.get('style') or {}
+        return box(s_.get('margin'))[2] + (0 if has_bg(s_) else box(s_.get('padding'))[2])
+
+    def vtop(x):
+        s_ = x.get('style') or {}
+        return box(s_.get('margin'))[0] + (0 if has_bg(s_) else box(s_.get('padding'))[0])
+    FLOW = ('text', 'multiCard', 'button')
     for i in range(len(blocks) - 1):
         a, c = blocks[i], blocks[i + 1]
-        if a.get('type') == 'text' and c.get('type') == 'text':
-            sa, sc = a.get('style') or {}, c.get('style') or {}
-            gap = box(sa.get('padding'))[2] + box(sa.get('margin'))[2] + box(sc.get('padding'))[0] + box(sc.get('margin'))[0]
+        if a.get('type') in FLOW and c.get('type') in FLOW:
+            gap = vbot(a) + vtop(c)
             if gap >= TH_GAP:
-                flag('S11-42', 'M', f'이웃 카드 사이 여백 {gap:.0f}px — 빠진 카드 자리 여백이 겹침', f'카드{i + 1}→{i + 2}', '원본')
+                flag('S11-42', 'M', f'이웃 카드 사이 보이는 여백 {gap:.0f}px (섹션 사이 56보다 넓음) — 빠진 카드 자리 여백이 겹침',
+                     f'카드{i + 1}→{i + 2}', '원본·개발')
 
     # S11-34 텍스트만 페이지 리듬
     imgs = sum(1 for b in blocks if b.get('type') in ('image', 'gallery', 'youtube', 'profile'))
