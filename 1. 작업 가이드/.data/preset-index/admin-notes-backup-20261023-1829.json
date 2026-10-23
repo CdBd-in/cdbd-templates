@@ -1,0 +1,3473 @@
+{
+ "ftr/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:32.377259+00:00"
+ },
+ "ftr/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:33.854275+00:00"
+ },
+ "ftr/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:35.303194+00:00"
+ },
+ "ftr/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:36.240474+00:00"
+ },
+ "ftr/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:37.250517+00:00"
+ },
+ "ftr/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:38.252753+00:00"
+ },
+ "ftr/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:39.700129+00:00"
+ },
+ "ftr/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:40.662839+00:00"
+ },
+ "ftr/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:41.619026+00:00"
+ },
+ "ftr/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:42.569918+00:00"
+ },
+ "ftr/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:43.50304+00:00"
+ },
+ "ftr/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:44.455527+00:00"
+ },
+ "ftr/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:45.438468+00:00"
+ },
+ "ftr/14": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:46.382271+00:00"
+ },
+ "ftr/15": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:47.304651+00:00"
+ },
+ "ftr/16": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:48.253781+00:00"
+ },
+ "ftr/17": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:49.193797+00:00"
+ },
+ "ftr/18": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:50.139083+00:00"
+ },
+ "ftr/19": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:51.068006+00:00"
+ },
+ "ftr/20": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:51.999295+00:00"
+ },
+ "ftr/21": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:52.957146+00:00"
+ },
+ "ftr/22": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:53.898654+00:00"
+ },
+ "ftr/23": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:54.847274+00:00"
+ },
+ "ftr/24": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:55.77341+00:00"
+ },
+ "ftr/25": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:56.714893+00:00"
+ },
+ "ftr/26": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:57.657556+00:00"
+ },
+ "ftr/27": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:58.613243+00:00"
+ },
+ "ftr/28": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:17:59.5749+00:00"
+ },
+ "ftr/29": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:00.515856+00:00"
+ },
+ "ftr/30": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:01.472079+00:00"
+ },
+ "ftr/31": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:02.436168+00:00"
+ },
+ "ftr/32": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:03.411099+00:00"
+ },
+ "ftr/33": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:04.382537+00:00"
+ },
+ "ftr/34": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:05.334088+00:00"
+ },
+ "ftr/35": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:06.290295+00:00"
+ },
+ "ftr/36": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:07.243988+00:00"
+ },
+ "hdr/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:08.180445+00:00"
+ },
+ "hdr/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:09.130334+00:00"
+ },
+ "hdr/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:10.082503+00:00"
+ },
+ "hdr/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:11.028943+00:00"
+ },
+ "hdr/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:12.475924+00:00"
+ },
+ "hdr/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:13.404199+00:00"
+ },
+ "hdr/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:14.348361+00:00"
+ },
+ "hdr/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:15.301474+00:00"
+ },
+ "hdr/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:16.260004+00:00"
+ },
+ "hdr/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:17.197647+00:00"
+ },
+ "hdr/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:18.163335+00:00"
+ },
+ "hdr/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:19.116574+00:00"
+ },
+ "hdr/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:20.060367+00:00"
+ },
+ "hdr/14": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:21.002706+00:00"
+ },
+ "hdr/15": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:22.438462+00:00"
+ },
+ "hdr/16": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:23.455915+00:00"
+ },
+ "hdr/17": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:24.447502+00:00"
+ },
+ "sec/bold/hero/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T06:15:38.272068+00:00"
+ },
+ "sec/bold/hero/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:26.42099+00:00"
+ },
+ "sec/bold/hero/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:27.35806+00:00"
+ },
+ "sec/bold/hero/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:28.306437+00:00"
+ },
+ "sec/bold/hero/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:29.252509+00:00"
+ },
+ "sec/bold/hero/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:30.203429+00:00"
+ },
+ "sec/bold/hero/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:31.188643+00:00"
+ },
+ "sec/bold/hero/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:32.097593+00:00"
+ },
+ "sec/bold/hero/09": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:16:44.286019+00:00"
+ },
+ "sec/bold/hero/10": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:16:48.435547+00:00"
+ },
+ "sec/bold/intro/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:33.05729+00:00"
+ },
+ "sec/bold/intro/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:33.990472+00:00"
+ },
+ "sec/bold/intro/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:34.924095+00:00"
+ },
+ "sec/bold/intro/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:24:07.236505+00:00"
+ },
+ "sec/bold/key_info/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:02.148428+00:00"
+ },
+ "sec/bold/key_info/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:09.570297+00:00"
+ },
+ "sec/bold/key_info/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T06:11:59.611142+00:00"
+ },
+ "sec/bold/key_info/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:21.372331+00:00"
+ },
+ "sec/bold/key_info/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:29.019283+00:00"
+ },
+ "sec/bold/key_info/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:37.491659+00:00"
+ },
+ "sec/bold/key_info/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:48:44.327401+00:00"
+ },
+ "sec/bold/list/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:43.428241+00:00"
+ },
+ "sec/bold/list/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:44.452099+00:00"
+ },
+ "sec/bold/list/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:45.376996+00:00"
+ },
+ "sec/bold/list/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:46.826096+00:00"
+ },
+ "sec/bold/list/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:47.750314+00:00"
+ },
+ "sec/bold/list/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:48.694299+00:00"
+ },
+ "sec/bold/list/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:49.650376+00:00"
+ },
+ "sec/bold/list/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:50.578926+00:00"
+ },
+ "sec/bold/list/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:51.529468+00:00"
+ },
+ "sec/bold/list/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:52.468677+00:00"
+ },
+ "sec/bold/list/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:53.416959+00:00"
+ },
+ "sec/bold/list/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:54.405461+00:00"
+ },
+ "sec/bold/list/13": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:42:24.124247+00:00"
+ },
+ "sec/bold/list/14": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:42:28.240894+00:00"
+ },
+ "sec/bold/list/15": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:42:32.271606+00:00"
+ },
+ "sec/bold/list/16": {
+  "notes": "Figma 7918:23 · list-bold-16 「분야 밴드 목차」(근거 LPAS 건축) · 10-23 승인 · 항목마다 바탕색이 다른 밴드(버튼색·틴트·텍스트색) + 이미지",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:10.41255+00:00"
+ },
+ "sec/bold/list/17": {
+  "notes": "Figma 7938:49 · list-bold-17 「카테고리 이미지 타일」(근거 Fume·LPAS) · 10-23 승인 · 쓰는 조건: 유저 이미지가 있으면 카드 배경 이미지(어둡게), 없으면 단색 카드 배경",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:10.575485+00:00"
+ },
+ "sec/bold/location/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:55.371594+00:00"
+ },
+ "sec/bold/location/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:56.305722+00:00"
+ },
+ "sec/bold/materials/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:57.230332+00:00"
+ },
+ "sec/bold/materials/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:58.232026+00:00"
+ },
+ "sec/bold/materials/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:18:59.160854+00:00"
+ },
+ "sec/bold/materials/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:00.13148+00:00"
+ },
+ "sec/bold/materials/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:01.106131+00:00"
+ },
+ "sec/bold/notice/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:02.069889+00:00"
+ },
+ "sec/bold/notice/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:03.009055+00:00"
+ },
+ "sec/bold/notice/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:03.948695+00:00"
+ },
+ "sec/bold/notice/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:04.890783+00:00"
+ },
+ "sec/bold/promo/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:05.85731+00:00"
+ },
+ "sec/bold/promo/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:07.293485+00:00"
+ },
+ "sec/bold/purchase/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:08.232315+00:00"
+ },
+ "sec/bold/purchase/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:09.204136+00:00"
+ },
+ "sec/bold/purchase/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:10.137853+00:00"
+ },
+ "sec/bold/purchase/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:11.087683+00:00"
+ },
+ "sec/bold/purchase/05": {
+  "notes": "Figma 7900:23 · purchase-bold-05 「이용 요금(플랜 비교)」(근거 Fintech 그린) · 10-23 승인 · 추천 플랜(틴트) + 일반 플랜 + 신청 버튼 · 쓰는 조건: 요금·플랜이 2개 이상",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:10.724528+00:00"
+ },
+ "sec/bold/reservation/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:12.093061+00:00"
+ },
+ "sec/bold/reservation/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:13.03283+00:00"
+ },
+ "sec/bold/reservation/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:13.986406+00:00"
+ },
+ "sec/bold/reservation/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:14.909195+00:00"
+ },
+ "sec/bold/reservation/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:15.831046+00:00"
+ },
+ "sec/bold/reservation/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:16.803141+00:00"
+ },
+ "sec/bold/reservation/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:17.793318+00:00"
+ },
+ "sec/bold/reservation/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:18.708062+00:00"
+ },
+ "sec/bold/story/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:19.665216+00:00"
+ },
+ "sec/bold/story/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:20.598689+00:00"
+ },
+ "sec/bold/story/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:21.548434+00:00"
+ },
+ "sec/bold/story/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:33:45.696418+00:00"
+ },
+ "sec/bold/story/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:33:51.556452+00:00"
+ },
+ "sec/editorial/contact/01": {
+  "notes": "Figma 7938:79 · contact-editorial-01 「질문 + 링크 버튼」(근거 SIHA 스킨케어) · 10-23 승인 · 버튼 = 누르면 이동하는 링크(페이지·선택 카드·URL·전화) · 답을 고르는 폼 아님",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:10.845194+00:00"
+ },
+ "sec/editorial/form/01": {
+  "notes": "Figma 8185:23 · form-editorial-01 「후원 링크 버튼 + 신청서」(근거 HopeRise) · 10-23 승인 · 위 버튼 4개 = 이동 링크(금액 선택 폼 아님) · 동의 = Q&A 객관식 「동의합니다」",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:10.953301+00:00"
+ },
+ "sec/editorial/hero/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:22.54782+00:00"
+ },
+ "sec/editorial/hero/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:23.537624+00:00"
+ },
+ "sec/editorial/hero/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:24.473311+00:00"
+ },
+ "sec/editorial/hero/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:25.419934+00:00"
+ },
+ "sec/editorial/hero/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:26.339911+00:00"
+ },
+ "sec/editorial/hero/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:27.275719+00:00"
+ },
+ "sec/editorial/hero/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:28.179737+00:00"
+ },
+ "sec/editorial/hero/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:29.123119+00:00"
+ },
+ "sec/editorial/hero/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:30.066966+00:00"
+ },
+ "sec/editorial/hero/10": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:12:11.151703+00:00"
+ },
+ "sec/editorial/hero/11": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:12:14.886295+00:00"
+ },
+ "sec/editorial/hero/12": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:12:18.388227+00:00"
+ },
+ "sec/editorial/hero/13": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:12:30.596799+00:00"
+ },
+ "sec/editorial/intro/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:31.072233+00:00"
+ },
+ "sec/editorial/intro/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:32.052525+00:00"
+ },
+ "sec/editorial/intro/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:32.987472+00:00"
+ },
+ "sec/editorial/intro/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:33.924141+00:00"
+ },
+ "sec/editorial/intro/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:34.862154+00:00"
+ },
+ "sec/editorial/intro/06": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:26:21.664531+00:00"
+ },
+ "sec/editorial/key_info/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:06.416418+00:00"
+ },
+ "sec/editorial/key_info/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:13.097208+00:00"
+ },
+ "sec/editorial/key_info/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:19.045877+00:00"
+ },
+ "sec/editorial/key_info/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:25.21354+00:00"
+ },
+ "sec/editorial/key_info/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:31.161939+00:00"
+ },
+ "sec/editorial/key_info/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:38.598767+00:00"
+ },
+ "sec/editorial/key_info/07": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:45.181002+00:00"
+ },
+ "sec/editorial/key_info/08": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:46:49.304006+00:00"
+ },
+ "sec/editorial/list/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:41.594276+00:00"
+ },
+ "sec/editorial/list/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:42.521433+00:00"
+ },
+ "sec/editorial/list/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:43.478144+00:00"
+ },
+ "sec/editorial/list/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:44.454966+00:00"
+ },
+ "sec/editorial/list/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:45.398892+00:00"
+ },
+ "sec/editorial/list/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:46.358779+00:00"
+ },
+ "sec/editorial/list/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:47.29174+00:00"
+ },
+ "sec/editorial/list/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:48.253066+00:00"
+ },
+ "sec/editorial/list/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:49.175973+00:00"
+ },
+ "sec/editorial/list/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:50.119427+00:00"
+ },
+ "sec/editorial/list/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:51.101401+00:00"
+ },
+ "sec/editorial/list/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:52.061832+00:00"
+ },
+ "sec/editorial/list/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:52.998093+00:00"
+ },
+ "sec/editorial/list/14": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:53.923677+00:00"
+ },
+ "sec/editorial/list/15": {
+  "notes": "Figma 7938:62 · list-editorial-15 「최근 소식」(근거 LPAS·SIHA) · 10-23 승인 · 날짜·제목·요약 + 구분선 반복",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:11.123418+00:00"
+ },
+ "sec/editorial/list/16": {
+  "notes": "Figma 8008:23 · list-editorial-16 「소식 썸네일 행」(근거 UNION TEC) · 10-23 승인 · 썸네일 + 제목·날짜·분류",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:11.24982+00:00"
+ },
+ "sec/editorial/list/17": {
+  "notes": "Figma 8185:83 · list-editorial-17 「이미지 + 제목 + 버튼 반복」(근거 OPX Studio) · 10-23 승인 · 항목마다 이미지·이름·버튼(테두리형) 반복",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:11.385908+00:00"
+ },
+ "sec/editorial/location/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:54.858634+00:00"
+ },
+ "sec/editorial/materials/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:55.877+00:00"
+ },
+ "sec/editorial/materials/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:56.810918+00:00"
+ },
+ "sec/editorial/materials/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:57.799868+00:00"
+ },
+ "sec/editorial/materials/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:58.736782+00:00"
+ },
+ "sec/editorial/materials/05": {
+  "notes": "Figma 7938:23 · materials-editorial-05 「파트너 로고 월」(근거 Nick Ho·Spring/Summer) · 10-23 승인 · 로고 = 원본 비율 · 2열 카드 정렬 중앙 · 쓰는 조건: 로고 이미지가 2개 이상",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:11.497526+00:00"
+ },
+ "sec/editorial/materials/06": {
+  "notes": "Figma 7938:40 · materials-editorial-06 「영상 + 캡션」(근거 Oath Biome) · 10-23 승인 · 유튜브 카드(비워서 등록) + 영상 제목 + 러닝타임·한 줄 소개 · 쓰는 조건: 영상 링크가 있을 때",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T09:28:11.611921+00:00"
+ },
+ "sec/editorial/notice/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:19:59.797899+00:00"
+ },
+ "sec/editorial/notice/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:00.754272+00:00"
+ },
+ "sec/editorial/notice/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:01.727907+00:00"
+ },
+ "sec/editorial/notice/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:02.713008+00:00"
+ },
+ "sec/editorial/promo/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:03.670396+00:00"
+ },
+ "sec/editorial/promo/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:04.627312+00:00"
+ },
+ "sec/editorial/promo/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:05.552582+00:00"
+ },
+ "sec/editorial/promo/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:06.524335+00:00"
+ },
+ "sec/editorial/promo/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:07.463215+00:00"
+ },
+ "sec/editorial/purchase/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:08.39767+00:00"
+ },
+ "sec/editorial/purchase/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:09.325709+00:00"
+ },
+ "sec/editorial/purchase/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:10.263712+00:00"
+ },
+ "sec/editorial/purchase/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:31:17.567382+00:00"
+ },
+ "sec/editorial/purchase/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:31:22.100883+00:00"
+ },
+ "sec/editorial/purchase/06": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:31:25.774756+00:00"
+ },
+ "sec/editorial/reservation/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:11.198303+00:00"
+ },
+ "sec/editorial/reservation/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:12.117276+00:00"
+ },
+ "sec/editorial/reservation/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:13.521421+00:00"
+ },
+ "sec/editorial/reservation/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:14.984672+00:00"
+ },
+ "sec/editorial/story/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:15.992174+00:00"
+ },
+ "sec/editorial/story/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:16.948177+00:00"
+ },
+ "sec/minimal/hero/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:17.87181+00:00"
+ },
+ "sec/minimal/hero/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:18.805166+00:00"
+ },
+ "sec/minimal/hero/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:20.216066+00:00"
+ },
+ "sec/minimal/hero/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:21.178474+00:00"
+ },
+ "sec/minimal/hero/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:22.091624+00:00"
+ },
+ "sec/minimal/hero/06": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:05:25.635922+00:00"
+ },
+ "sec/minimal/hero/07": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:08:33.105485+00:00"
+ },
+ "sec/minimal/intro/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:23.012327+00:00"
+ },
+ "sec/minimal/intro/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:23.935715+00:00"
+ },
+ "sec/minimal/key_info/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:24.86593+00:00"
+ },
+ "sec/minimal/key_info/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:25.787791+00:00"
+ },
+ "sec/minimal/key_info/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:26.694642+00:00"
+ },
+ "sec/minimal/key_info/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:27.623073+00:00"
+ },
+ "sec/minimal/key_info/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:28.544098+00:00"
+ },
+ "sec/minimal/key_info/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:29.528828+00:00"
+ },
+ "sec/minimal/list/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:30.445042+00:00"
+ },
+ "sec/minimal/list/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:31.877039+00:00"
+ },
+ "sec/minimal/list/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:32.80693+00:00"
+ },
+ "sec/minimal/list/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:33.73808+00:00"
+ },
+ "sec/minimal/list/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:34.686848+00:00"
+ },
+ "sec/minimal/list/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:35.641233+00:00"
+ },
+ "sec/minimal/list/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:36.63256+00:00"
+ },
+ "sec/minimal/list/08": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:18:31.657402+00:00"
+ },
+ "sec/minimal/list/09": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:18:36.216792+00:00"
+ },
+ "sec/minimal/materials/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:37.54389+00:00"
+ },
+ "sec/minimal/materials/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:38.500999+00:00"
+ },
+ "sec/minimal/materials/03": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:22:03.263582+00:00"
+ },
+ "sec/minimal/materials/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:22:24.159686+00:00"
+ },
+ "sec/minimal/materials/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:20:18.452684+00:00"
+ },
+ "sec/minimal/promo/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:39.425728+00:00"
+ },
+ "sec/minimal/promo/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:40.375646+00:00"
+ },
+ "sec/minimal/reservation/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:41.305913+00:00"
+ },
+ "sec/minimal/story/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:42.246714+00:00"
+ },
+ "sec/minimal/story/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:20:43.184429+00:00"
+ },
+ "sec/minimal/story/03": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:34:58.003396+00:00"
+ },
+ "sec/mixed/contact/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:04.334207+00:00"
+ },
+ "sec/mixed/contact/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:05.921956+00:00"
+ },
+ "sec/mixed/contact/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:06.89022+00:00"
+ },
+ "sec/mixed/contact/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:07.846049+00:00"
+ },
+ "sec/mixed/contact/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:08.782667+00:00"
+ },
+ "sec/mixed/contact/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:09.739263+00:00"
+ },
+ "sec/mixed/contact/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:10.69682+00:00"
+ },
+ "sec/mixed/contact/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:11.666042+00:00"
+ },
+ "sec/mixed/contact/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:13.134209+00:00"
+ },
+ "sec/mixed/contact/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:14.088582+00:00"
+ },
+ "sec/mixed/contact/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:15.392954+00:00"
+ },
+ "sec/mixed/contact/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:16.325204+00:00"
+ },
+ "sec/mixed/contact/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:17.291741+00:00"
+ },
+ "sec/mixed/contact/14": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:18.245892+00:00"
+ },
+ "sec/mixed/contact/15": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:19.18342+00:00"
+ },
+ "sec/mixed/contact/16": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:20.133789+00:00"
+ },
+ "sec/mixed/form/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:21.083142+00:00"
+ },
+ "sec/mixed/form/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:22.032499+00:00"
+ },
+ "sec/mixed/hero/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:21:14.690213+00:00"
+ },
+ "sec/mixed/hero/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:21:22.538701+00:00"
+ },
+ "sec/mixed/hero/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:21:28.422958+00:00"
+ },
+ "sec/mixed/hero/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:22:20.768948+00:00"
+ },
+ "sec/mixed/hero/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-10-23T06:16:20.69048+00:00"
+ },
+ "sec/mixed/hero/06": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:22:33.300663+00:00"
+ },
+ "sec/mixed/intro/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:25.963347+00:00"
+ },
+ "sec/mixed/intro/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:26.929098+00:00"
+ },
+ "sec/mixed/intro/03": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:29:27.196279+00:00"
+ },
+ "sec/mixed/intro/04": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:29:30.706505+00:00"
+ },
+ "sec/mixed/intro/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:29:34.477854+00:00"
+ },
+ "sec/mixed/key_info/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:27.914555+00:00"
+ },
+ "sec/mixed/key_info/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:28.854695+00:00"
+ },
+ "sec/mixed/key_info/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:53:45.446927+00:00"
+ },
+ "sec/mixed/key_info/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:53:52.596151+00:00"
+ },
+ "sec/mixed/key_info/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:54:05.769019+00:00"
+ },
+ "sec/mixed/key_info/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:54:12.827926+00:00"
+ },
+ "sec/mixed/key_info/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:54:22.669107+00:00"
+ },
+ "sec/mixed/key_info/08": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:55:48.669924+00:00"
+ },
+ "sec/mixed/key_info/09": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:55:53.023788+00:00"
+ },
+ "sec/mixed/key_info/10": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:55:58.633096+00:00"
+ },
+ "sec/mixed/key_info/11": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:56:41.235513+00:00"
+ },
+ "sec/mixed/key_info/12": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:56:54.575719+00:00"
+ },
+ "sec/mixed/key_info/13": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:56:58.592113+00:00"
+ },
+ "sec/mixed/list/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:34.692318+00:00"
+ },
+ "sec/mixed/list/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:35.667439+00:00"
+ },
+ "sec/mixed/list/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:47:58.096132+00:00"
+ },
+ "sec/mixed/list/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:48:07.063448+00:00"
+ },
+ "sec/mixed/list/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:48:21.835696+00:00"
+ },
+ "sec/mixed/list/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:48:34.820458+00:00"
+ },
+ "sec/mixed/list/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:48:42.808196+00:00"
+ },
+ "sec/mixed/list/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:48:49.240022+00:00"
+ },
+ "sec/mixed/list/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:24.71858+00:00"
+ },
+ "sec/mixed/list/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:31.86882+00:00"
+ },
+ "sec/mixed/list/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:35.110872+00:00"
+ },
+ "sec/mixed/list/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:38.820111+00:00"
+ },
+ "sec/mixed/list/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:41.813811+00:00"
+ },
+ "sec/mixed/list/14": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:44.419398+00:00"
+ },
+ "sec/mixed/list/15": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T05:50:46.546599+00:00"
+ },
+ "sec/mixed/list/16": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:11:49.337801+00:00"
+ },
+ "sec/mixed/list/17": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:11:55.375845+00:00"
+ },
+ "sec/mixed/list/18": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:12:01.868674+00:00"
+ },
+ "sec/mixed/list/19": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:12:07.117883+00:00"
+ },
+ "sec/mixed/list/20": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:12:13.097375+00:00"
+ },
+ "sec/mixed/list/21": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:12:20.986599+00:00"
+ },
+ "sec/mixed/list/22": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:12:27.22991+00:00"
+ },
+ "sec/mixed/list/23": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:13:00.073989+00:00"
+ },
+ "sec/mixed/list/24": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:13:06.083807+00:00"
+ },
+ "sec/mixed/list/25": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:13:11.087367+00:00"
+ },
+ "sec/mixed/list/26": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:13:15.786102+00:00"
+ },
+ "sec/mixed/location/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:47.223788+00:00"
+ },
+ "sec/mixed/location/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:48.250406+00:00"
+ },
+ "sec/mixed/location/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:49.288584+00:00"
+ },
+ "sec/mixed/materials/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:50.319847+00:00"
+ },
+ "sec/mixed/materials/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:21:51.283849+00:00"
+ },
+ "sec/mixed/materials/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:24:30.418711+00:00"
+ },
+ "sec/mixed/materials/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:24:42.333091+00:00"
+ },
+ "sec/mixed/materials/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:24:50.508291+00:00"
+ },
+ "sec/mixed/materials/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:24:57.98365+00:00"
+ },
+ "sec/mixed/materials/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:25:04.211972+00:00"
+ },
+ "sec/mixed/materials/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:25:11.086225+00:00"
+ },
+ "sec/mixed/materials/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:25:18.90637+00:00"
+ },
+ "sec/mixed/materials/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:25:25.270577+00:00"
+ },
+ "sec/mixed/materials/11": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:25:30.069465+00:00"
+ },
+ "sec/mixed/notice/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:53:56.166502+00:00"
+ },
+ "sec/mixed/notice/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:01.532621+00:00"
+ },
+ "sec/mixed/notice/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:02.509001+00:00"
+ },
+ "sec/mixed/notice/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:34:50.640111+00:00"
+ },
+ "sec/mixed/notice/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:38:52.830607+00:00"
+ },
+ "sec/mixed/notice/06": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:38:54.838996+00:00"
+ },
+ "sec/mixed/notice/07": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:38:57.658933+00:00"
+ },
+ "sec/mixed/notice/08": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T06:39:01.897247+00:00"
+ },
+ "sec/mixed/promo/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:06.130019+00:00"
+ },
+ "sec/mixed/promo/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:07.200162+00:00"
+ },
+ "sec/mixed/promo/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:08.244631+00:00"
+ },
+ "sec/mixed/promo/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:09.222006+00:00"
+ },
+ "sec/mixed/promo/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:10.197158+00:00"
+ },
+ "sec/mixed/promo/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:11.17151+00:00"
+ },
+ "sec/mixed/promo/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:12.104192+00:00"
+ },
+ "sec/mixed/promo/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:13.056659+00:00"
+ },
+ "sec/mixed/promo/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:13.99739+00:00"
+ },
+ "sec/mixed/promo/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:14.945584+00:00"
+ },
+ "sec/mixed/promo/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:15.90263+00:00"
+ },
+ "sec/mixed/promo/12": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:16.885027+00:00"
+ },
+ "sec/mixed/promo/13": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:17.827277+00:00"
+ },
+ "sec/mixed/purchase/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:18.769086+00:00"
+ },
+ "sec/mixed/purchase/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:19.819869+00:00"
+ },
+ "sec/mixed/purchase/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:20.792146+00:00"
+ },
+ "sec/mixed/purchase/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:21.816828+00:00"
+ },
+ "sec/mixed/purchase/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:22.758899+00:00"
+ },
+ "sec/mixed/purchase/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:24.253706+00:00"
+ },
+ "sec/mixed/purchase/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:25.197442+00:00"
+ },
+ "sec/mixed/purchase/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:26.17761+00:00"
+ },
+ "sec/mixed/purchase/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "bold",
+   "editorial",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:27.114181+00:00"
+ },
+ "sec/mixed/reservation/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:28.058452+00:00"
+ },
+ "sec/mixed/reservation/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:28.998168+00:00"
+ },
+ "sec/mixed/reservation/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:29.933394+00:00"
+ },
+ "sec/mixed/reservation/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "editorial",
+   "bold",
+   "minimal"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:31.123262+00:00"
+ },
+ "sec/mixed/story/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:32.051345+00:00"
+ },
+ "sec/mixed/story/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:32.994262+00:00"
+ },
+ "sec/mixed/story/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-08-28T09:22:34.001205+00:00"
+ },
+ "sec/mixed/story/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal",
+   "editorial"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:35:58.628375+00:00"
+ },
+ "sec/mixed/story/05": {
+  "notes": "",
+  "status": "draft",
+  "layout_styles": [
+   "minimal",
+   "editorial",
+   "bold"
+  ],
+  "title_variant": null,
+  "updated_at": "2026-09-08T03:35:19.902903+00:00"
+ },
+ "title/01": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "좌 22",
+  "updated_at": "2026-08-11T09:52:14.514776+00:00"
+ },
+ "title/02": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "중앙 22",
+  "updated_at": "2026-08-28T09:22:35.925243+00:00"
+ },
+ "title/03": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "좌 18",
+  "updated_at": "2026-08-28T09:22:36.871239+00:00"
+ },
+ "title/04": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "중앙 14",
+  "updated_at": "2026-08-28T09:22:37.829755+00:00"
+ },
+ "title/05": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "좌 18 + 긴 선",
+  "updated_at": "2026-08-28T09:22:38.773898+00:00"
+ },
+ "title/06": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "중앙 14 + 짧은 바",
+  "updated_at": "2026-08-28T09:22:39.701684+00:00"
+ },
+ "title/07": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "pill 중앙 13",
+  "updated_at": "2026-08-28T09:22:40.662138+00:00"
+ },
+ "title/08": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "프레임 타이틀",
+  "updated_at": "2026-08-28T09:22:41.609424+00:00"
+ },
+ "title/09": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": "프레임 타이틀",
+  "updated_at": "2026-08-28T09:22:42.553218+00:00"
+ },
+ "title/10": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "minimal"
+  ],
+  "title_variant": "좌 라벨+카피",
+  "updated_at": "2026-08-28T09:22:43.513078+00:00"
+ },
+ "title/11": {
+  "notes": "",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "좌 바+헤드라인",
+  "updated_at": "2026-08-28T09:22:44.489495+00:00"
+ },
+ "title/12": {
+  "notes": "카테고리 추가 필요",
+  "status": "published",
+  "layout_styles": [
+   "common"
+  ],
+  "title_variant": "좌 바+헤드라인",
+  "updated_at": "2026-08-28T09:22:45.425244+00:00"
+ }
+}
