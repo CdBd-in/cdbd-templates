@@ -163,4 +163,4 @@ window.__gotoPage2(N);   // N=1-based 페이지 번호 (5541 p24 · p40, 5547 p2
 - ⚠️ **메모 칸 = placeholder 「포팅 출처」인 textarea** — Q&A가 든 섹션은 미리보기에 다른 textarea가 있어 첫 textarea를 잡으면 메모가 비어 저장된다(form/01에서 실제 발생 · 수정됨).
 - ⚠️ **줄간격은 카드당 한 값 · 1.2~2.0 짝수 칸** — Figma 150%는 1.6으로, 크기 다른 줄이 섞이면 큰 글자 쪽 값으로.
 - ✅ 저장 뒤 `dump.sh --presets` → `preset_audit.py --key …` = 문제 0 확인.
-- 📌 **2026-10-23 등록 위치** — 5549 p72 `sec/bold/list/16` · p73 `sec/bold/list/17` · p74 `sec/editorial/list/15` · p75 `/16` · p76 `/17` · 5550 p31 `sec/editorial/materials/05` · p32 `/06` · 5701 p24 `sec/bold/purchase/05` · 5719 p18 `sec/editorial/contact/01` · 5713 p4 `sec/editorial/form/01` (전부 초안)
+- 📌 **2026-10-23 등록 위치** — 5549 p72 `sec/bold/list/16` · p73 `sec/bold/list/17` · p74 `sec/editorial/list/15` · p75 `/16` · p76 `/17` · 5550 p31 `sec/editorial/materials/05` · p32 `/06` · 5701 p24 `sec/bold/purchase/05` · 5719 p18 `sec/editorial/contact/01` · 5713 p4 `sec/editorial/form/01` (전부 초안) · 🆕 2026-10-25 5549 **p77** `sec/mixed/list/18`(초안 · 형제 p63을 복제해 「진행자」 줄만 뺌 · 레이아웃 3개는 저장 창에서 `__setStyles(['미니멀','에디토리얼','볼드'])` · 섹션 목적은 `__mclick`으로 「나열」 — `__openPurpose`는 이 빌드에서 버튼을 못 찾는다)
