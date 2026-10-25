@@ -1567,12 +1567,11 @@
   "h": 144,
   "slots": "hh:mm|프로그램|hh:mm|프로그램|hh:mm|프로그램",
   "old_name": "11-V1 시간 좌 고정 + 순서명",
-  "key": null,
+  "key": "sec/mixed/list/18",
   "content": [
    "시간표·프로그램"
   ],
-  "weight": "light",
-  "admin": "미등록 — 어드민 sec/mixed/list/18은 list-mixed-19와 같은 섹션"
+  "weight": "light"
  },
  {
   "id": "6560:8389",
@@ -1581,7 +1580,7 @@
   "h": 219,
   "slots": "hh:mm|프로그램 진행자|hh:mm|프로그램 진행자|hh:mm|프로그램 진행자",
   "old_name": "11-V1 시간 좌 고정 + 순서명",
-  "key": "sec/mixed/list/18",
+  "key": "sec/mixed/list/19",
   "content": [
    "시간표·프로그램"
   ],
@@ -1594,7 +1593,7 @@
   "h": 213,
   "slots": "hh:mm|내용|hh:mm|내용|hh:mm|내용",
   "old_name": "11-V2 시간 위 / 순서명 아래",
-  "key": "sec/mixed/list/19",
+  "key": "sec/mixed/list/20",
   "content": [
    "시간표·프로그램"
   ],
@@ -1607,7 +1606,7 @@
   "h": 250,
   "slots": "label|항목|세부 정보|항목|세부 정보|label",
   "old_name": "12-V1 그룹 헤더 + 라벨↔값",
-  "key": "sec/mixed/list/20",
+  "key": "sec/mixed/list/21",
   "content": [
    "분류 2단"
   ],
@@ -1620,7 +1619,7 @@
   "h": 310,
   "slots": "label|항목|세부 정보|항목|세부 정보|label",
   "old_name": "12-V2 그룹 헤더 = 틴트 밴드",
-  "key": "sec/mixed/list/21",
+  "key": "sec/mixed/list/22",
   "content": [
    "분류 2단"
   ],
@@ -1633,7 +1632,7 @@
   "h": 251,
   "slots": "label|항목|세부 정보|항목|세부 정보|구분선",
   "old_name": "12-V3 구분선으로 그룹 구분",
-  "key": "sec/mixed/list/22",
+  "key": "sec/mixed/list/23",
   "content": [
    "분류 2단"
   ],
@@ -1646,7 +1645,7 @@
   "h": 150,
   "slots": "아이콘|label 세부 정보|아이콘|label 세부 정보",
   "old_name": "14-V2 파일 아이콘 + 제목·용량 + →",
-  "key": "sec/mixed/list/23",
+  "key": "sec/mixed/list/24",
   "content": [],
   "weight": "medium"
  },
@@ -1657,7 +1656,7 @@
   "h": 210,
   "slots": "label 세부 정보|→|label 세부 정보|→",
   "old_name": "14-V3 틴트 카드 + 우측 링크",
-  "key": "sec/mixed/list/24",
+  "key": "sec/mixed/list/25",
   "content": [
    "채널·링크"
   ],
@@ -1670,7 +1669,7 @@
   "h": 116,
   "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
   "old_name": "16-V3 2열 그리드 버튼",
-  "key": "sec/mixed/list/25",
+  "key": "sec/mixed/list/26",
   "content": [
    "채널·링크"
   ],
@@ -1686,7 +1685,7 @@
   "h": 116,
   "slots": "메뉴1|메뉴2|메뉴3|메뉴4|메뉴5|메뉴6",
   "old_name": "16-V3 2열 그리드 버튼",
-  "key": "sec/mixed/list/26",
+  "key": "sec/mixed/list/27",
   "content": [
    "채널·링크"
   ],
