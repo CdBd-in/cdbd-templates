@@ -1340,13 +1340,12 @@
   "h": 477,
   "slots": "카테고리 이름 한 줄 설명|카테고리 이름 한 줄 설명|카테고리 이름 한 줄 설명",
   "old_name": "카테고리 타일 — 단색 버전 (list-bold-17의 이미지 없는 짝 · 2026-10-23)",
-  "key": null,
+  "key": "sec/bold/list/18",
   "content": [],
   "weight": "heavy",
   "use_when": [
    "타일에 넣을 유저 이미지가 없을 때 — 이미지가 있으면 list-bold-17"
-  ],
-  "admin": "미등록"
+  ]
  },
  {
   "id": "5408:212",
@@ -4565,5 +4564,120 @@
   "key": "title/12",
   "content": [],
   "weight": "light"
+ },
+ {
+  "id": "7908:23",
+  "name": "purchase-editorial-07",
+  "grp": "구매-에디토리얼",
+  "h": 772,
+  "slots": "이미지|추천 상품 상품명 가격 구매하기 →|이미지|상품명|가격|구매하기 (그리드)",
+  "old_name": "purchase-editorial-07 (추천 상품 띠 + 상품 그리드) · 10-25 등록",
+  "key": "sec/editorial/purchase/07",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다",
+   "앞에 세울 추천 상품이 있을 때"
+  ]
+ },
+ {
+  "id": "8215:23",
+  "name": "purchase-editorial-08",
+  "grp": "구매-에디토리얼",
+  "h": 566,
+  "slots": "카테고리 이름|이미지|상품명|가격 (그리드)|카테고리 이름|이미지|상품명|가격 (그리드)",
+  "old_name": "purchase-editorial-08 (카테고리 진열 행) · 10-25 등록",
+  "key": "sec/editorial/purchase/08",
+  "content": [
+   "가격·요금",
+   "메뉴·품목"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "상품 구매 링크(URL)가 있을 때만 — 상품 카드는 링크로 상품을 불러온다",
+   "상품 카테고리가 2개 이상일 때"
+  ]
+ },
+ {
+  "id": "8215:71",
+  "name": "list-editorial-18",
+  "grp": "나열-에디토리얼",
+  "h": 294,
+  "slots": "항목 이름 ↗|이미지|구분선|항목 이름 ↗|이미지|구분선|항목 이름 ↗|이미지",
+  "old_name": "list-editorial-18 (링크 썸네일 행) · 10-25 등록",
+  "key": "sec/editorial/list/18",
+  "content": [
+   "채널·링크"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "항목마다 이동할 링크가 있을 때 — ↗ 가 링크 표시"
+  ]
+ },
+ {
+  "id": "8216:33",
+  "name": "list-editorial-19",
+  "grp": "나열-에디토리얼",
+  "h": 730,
+  "slots": "이미지|(1) 키워드|설명 문구|이미지|(2) 키워드|설명 문구",
+  "old_name": "list-editorial-19 (번호 키워드 항목 + 풀블리드 사진) · 10-25 등록",
+  "key": "sec/editorial/list/19",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "heavy",
+  "use_when": [
+   "항목마다 넣을 사진이 있을 때만 — 사진이 화면 폭을 꽉 채운다"
+  ]
+ },
+ {
+  "id": "8216:23",
+  "name": "notice-editorial-05",
+  "grp": "안내 사항-에디토리얼",
+  "h": 158,
+  "slots": "💡 ① 단계명|💡 ② 단계명|💡 ③ 단계명|💡 ④ 단계명",
+  "old_name": "notice-editorial-05 (이모지 단계 3~4칸) · 10-25 등록",
+  "key": "sec/editorial/notice/05",
+  "content": [
+   "절차·단계"
+  ],
+  "weight": "medium",
+  "items_range": "3~4",
+  "use_when": [
+   "단계가 3~4개이고 단계 이름이 4자 이내일 때"
+  ]
+ },
+ {
+  "id": "8216:48",
+  "name": "hero-bold-11",
+  "grp": "히어로-볼드",
+  "h": 306,
+  "slots": "브랜드명 한 줄 소개|ENGLISH TITLE|카피 혹은 소개 문구",
+  "old_name": "hero-bold-11 (초대형 영문 타이틀) · 10-25 등록",
+  "key": "sec/bold/hero/11",
+  "content": [],
+  "weight": "light",
+  "use_when": [
+   "제목을 짧은 영문(줄당 7자 이하)으로 쓸 수 있을 때 — 60px라 길면 줄이 넘친다"
+  ]
+ },
+ {
+  "id": "7898:24",
+  "name": "materials-editorial-07",
+  "grp": "자료-에디토리얼",
+  "h": 207,
+  "slots": "“|문장형 카피를 입력합니다.|”|매체명 · 작성자|매체명 매체명 매체명",
+  "old_name": "media_quote-editorial-01 (미디어 소개 · 프레스 인용) · 10-25 등록",
+  "key": "sec/editorial/materials/07",
+  "content": [
+   "후기·사례",
+   "실적·수치"
+  ],
+  "weight": "light",
+  "use_when": [
+   "언론·매체에 실린 인용이 있을 때만 — 지어내지 않는다"
+  ]
  }
 ]
