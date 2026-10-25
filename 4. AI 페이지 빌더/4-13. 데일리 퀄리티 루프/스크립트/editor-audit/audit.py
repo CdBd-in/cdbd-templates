@@ -23,7 +23,8 @@ EMOJI_RE = re.compile('^[\U0001F300-\U0001FAFF☀-➿⬀-⯿①-⓿■-◿️‍
 TH_BIG, TH_LINE, TH_BOX = 9, 20, 18           # ⚙ S11-49 줄 나누기 기준 (MD-08-3 📱)
 TH_GAP = 60                                     # ⚙ S11-42 이웃 카드 보이는 여백 (섹션 사이 = 36＋20 = 56)
 TH_VAL = 8                                      # ⚙ S11-47 2열 값 칸 글자 수 (MD-08-3 길이 표)
-TH_PANEL = 12                                   # ⚙ S11-39 배경 면 첫 행 위 안쪽 여백 (원본 설계값 16은 통과 · 결함 = 8~10)
+TH_CPL = {2: 13, 3: 8, 4: 6}                    # ⚙ S11-52 2열 칸 한 줄 글자 수(공백 포함) — 칸 수별 추정
+TH_PANEL = 12                                  # ⚙ S11-39 배경 면 첫 행 위 안쪽 여백 (원본 설계값 16은 통과 · 결함 = 8~10)
 # S11-50 섹션 타이틀 디자인·제작 용어 (MD-08-3 「섹션 제목」 금지어 · 영문은 단어 경계로만 — SPECIAL 속 CI ❌)
 DESIGN_TERMS = re.compile(r'로고|심볼|이미지|비주얼|포스터|배너|썸네일|아이콘|히어로|섹션'
                           r'|(?<![A-Za-z])(?:BI|CI|LOGO|IMAGES?|VISUAL|BANNER|THUMBNAIL|ICON|HERO|SECTION)(?![A-Za-z])', re.I)
@@ -305,6 +306,20 @@ def audit(ed, presets=None):
         if hit:
             flag('S11-50', 'M', f'섹션 타이틀 「{" ".join(t.split())}」에 디자인·제작 용어 {"·".join(hit)} — 넣은 재료 이름 말고 방문자가 보는 내용 이름으로'
                  ' (그 디자인물을 파는·알리는 페이지면 예외)', W(i, b))
+
+    # S11-52 글 칸끼리 나란한 2열 = 세로 정렬 위 — 칸마다 추정 줄 수가 다른데 가운데 정렬이면 제목 높이가 어긋난다
+    #         (짧은 칸 = 2자 이하 · 이모지·기호뿐인 칸이 끼면 제외 · 줄 수는 칸 수별 한 줄 글자 수로 추정 ⚙)
+    for i, b in enumerate(blocks):
+        mc = b.get('multiCard') or {}
+        its = mc.get('items') or []
+        if b.get('type') != 'multiCard' or str(mc.get('align') or 'center') in ('start', 'top'): continue
+        txt = [full(paras(it.get('content') or '')).strip() for it in its if it.get('type') == 'text']
+        if len(txt) < 2 or len(txt) != len(its): continue
+        if any(len(t.replace(' ', '')) <= 2 or EMOJI_RE.match(t) for t in txt): continue
+        cpl = TH_CPL.get(len(its), 6)
+        est = [sum(max(1, -(-len(ln) // cpl)) for ln in t.split('\n') if ln.strip()) for t in txt]
+        if max(est) != min(est):
+            flag('S11-52', 'M', f'2열 카드 칸마다 글 줄 수가 다름(추정 {"·".join(map(str, est))}줄)인데 세로 정렬이 가운데 — 위 정렬이어야 제목 높이가 맞는다', W(i, b), '원본')
 
     # S11-51 같은 이미지 반복 — 한 카드 안 중복 = M · 카드끼리 중복 = m (로고 카드 제외 · 배경 이미지·레이어·링크는 안 셈)
     IMG_RE = re.compile(r'^https?://\S+\.(?:png|jpe?g|webp|gif|avif)(?:[?#]\S*)?$', re.I)
