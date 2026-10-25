@@ -23,7 +23,7 @@ EMOJI_RE = re.compile('^[\U0001F300-\U0001FAFF☀-➿⬀-⯿①-⓿■-◿️‍
 TH_BIG, TH_LINE, TH_BOX = 9, 20, 18           # ⚙ S11-49 줄 나누기 기준 (MD-08-3 📱)
 TH_GAP = 60                                     # ⚙ S11-42 이웃 카드 보이는 여백 (섹션 사이 = 36＋20 = 56)
 TH_VAL = 8                                      # ⚙ S11-47 2열 값 칸 글자 수 (MD-08-3 길이 표)
-TH_CPL = {2: 13, 3: 8, 4: 6}                    # ⚙ S11-52 2열 칸 한 줄 글자 수(공백 포함) — 칸 수별 추정
+TH_ROW = 26                                     # ⚙ S11-52 2열 카드 한 행의 글자 수(공백 포함) — 칸 너비 비율로 나눠 칸별 한 줄 글자 수를 추정
 TH_PANEL = 12                                  # ⚙ S11-39 배경 면 첫 행 위 안쪽 여백 (원본 설계값 16은 통과 · 결함 = 8~10)
 # S11-50 섹션 타이틀 디자인·제작 용어 (MD-08-3 「섹션 제목」 금지어 · 영문은 단어 경계로만 — SPECIAL 속 CI ❌)
 DESIGN_TERMS = re.compile(r'로고|심볼|이미지|비주얼|포스터|배너|썸네일|아이콘|히어로|섹션'
@@ -316,8 +316,10 @@ def audit(ed, presets=None):
         txt = [full(paras(it.get('content') or '')).strip() for it in its if it.get('type') == 'text']
         if len(txt) < 2 or len(txt) != len(its): continue
         if any(len(t.replace(' ', '')) <= 2 or EMOJI_RE.match(t) for t in txt): continue
-        cpl = TH_CPL.get(len(its), 6)
-        est = [sum(max(1, -(-len(ln) // cpl)) for ln in t.split('\n') if ln.strip()) for t in txt]
+        r = num(mc.get('ratio') or 50, 50)
+        shares = [r, 100 - r] if len(its) == 2 else [100 / len(its)] * len(its)
+        cpl = [max(2, round(TH_ROW * sh / 100)) for sh in shares]
+        est = [sum(max(1, -(-len(ln) // c)) for ln in t.split('\n') if ln.strip()) for t, c in zip(txt, cpl)]
         if max(est) != min(est):
             flag('S11-52', 'M', f'2열 카드 칸마다 글 줄 수가 다름(추정 {"·".join(map(str, est))}줄)인데 세로 정렬이 가운데 — 위 정렬이어야 제목 높이가 맞는다', W(i, b), '원본')
 
