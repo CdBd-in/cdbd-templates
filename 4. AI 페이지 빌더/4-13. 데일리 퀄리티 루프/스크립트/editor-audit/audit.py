@@ -306,6 +306,33 @@ def audit(ed, presets=None):
             flag('S11-50', 'M', f'섹션 타이틀 「{" ".join(t.split())}」에 디자인·제작 용어 {"·".join(hit)} — 넣은 재료 이름 말고 방문자가 보는 내용 이름으로'
                  ' (그 디자인물을 파는·알리는 페이지면 예외)', W(i, b))
 
+    # S11-51 같은 이미지 반복 — 한 카드 안 중복 = M · 카드끼리 중복 = m (로고 카드 제외 · 배경 이미지·레이어·링크는 안 셈)
+    IMG_RE = re.compile(r'^https?://\S+\.(?:png|jpe?g|webp|gif|avif)(?:[?#]\S*)?$', re.I)
+    SKIP_KEYS = {'backgroundImage', 'layers', 'linkButton', 'link', 'links', 'style', 'innerStyle'}
+
+    def img_urls(node, out):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k not in SKIP_KEYS: img_urls(v, out)
+        elif isinstance(node, list):
+            for v in node: img_urls(v, out)
+        elif isinstance(node, str) and IMG_RE.match(node.strip()):
+            out.append(node.strip())
+        return out
+    owner = {}
+    for i, b in enumerate(blocks):
+        us = img_urls({k: v for k, v in b.items() if k != 'content'}, [])
+        dup = sorted({u for u in us if us.count(u) > 1})
+        if dup:
+            flag('S11-51', 'M', f'한 카드의 이미지 칸 {len(us)}개 중 같은 이미지가 반복됨 ({len(dup)}종) — 한 이미지 = 한 칸 · 모자라면 빈 자리', W(i, b))
+        if '로고' in str(b.get('title') or '') or 'logo' in str(b.get('title') or '').lower():
+            continue
+        for u in set(us):
+            owner.setdefault(u, []).append(i)
+    for u, idxs in owner.items():
+        if len(idxs) > 1:
+            flag('S11-51', 'm', f'같은 이미지가 카드 {len(idxs)}곳에 다시 쓰임', ' · '.join(f'카드{k + 1}' for k in idxs))
+
     # S11-42 빠진 카드 자리 여백 겹침 — 이웃 카드의 「보이는」 간격(배경·테두리 카드의 안쪽 여백은 상자 안이라 제외)
     def vbot(x):
         s_ = x.get('style') or {}
