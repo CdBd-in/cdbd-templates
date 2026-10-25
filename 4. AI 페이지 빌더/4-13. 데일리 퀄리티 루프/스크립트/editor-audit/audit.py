@@ -297,6 +297,15 @@ def audit(ed, presets=None):
             if ta != na and len(full(paras(nx.get('content') or '')).strip()) >= 8:
                 flag('S11-48', 'M', f'섹션 타이틀 {ta} ↔ 본문 {na} 정렬 엇갈림 (둘 다 장식 없음)', f'카드{i + 1}→{i + 2}')
 
+    # S11-50 섹션 타이틀에 디자인·제작 용어 — 예외(그 디자인물을 파는·알리는 페이지)는 IN이 없어 수동 확인
+    for i, b in enumerate(blocks):
+        if not is_title(b): continue
+        t = full(paras(b.get('content') or '')) or ' '.join(full(ps) for _, ps, _ in cells(b))
+        hit = list(dict.fromkeys(DESIGN_TERMS.findall(t)))
+        if hit:
+            flag('S11-50', 'M', f'섹션 타이틀 「{" ".join(t.split())}」에 디자인·제작 용어 {"·".join(hit)} — 넣은 재료 이름 말고 방문자가 보는 내용 이름으로'
+                 ' (그 디자인물을 파는·알리는 페이지면 예외)', W(i, b))
+
     # S11-42 빠진 카드 자리 여백 겹침 — 이웃 카드의 「보이는」 간격(배경·테두리 카드의 안쪽 여백은 상자 안이라 제외)
     def vbot(x):
         s_ = x.get('style') or {}
