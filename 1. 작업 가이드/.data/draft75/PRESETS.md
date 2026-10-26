@@ -1,7 +1,7 @@
-# 목적 × 스타일 섹션 픽리스트 (2026-10-25 자동 생성)
+# 목적 × 스타일 섹션 픽리스트 (2026-10-26 자동 생성)
 
 > ⚠️ 손으로 고치지 말 것 — `preset-index/preset-index.json`에서 `rebuild-picklist.py`로 재생성됩니다.
-> 전체 373개 (섹션 308 · 구조 65)
+> 전체 374개 (섹션 309 · 구조 65)
 
 ## 히어로
 
@@ -358,7 +358,7 @@
 
 ## 자료
 
-**미니멀** (16개)
+**미니멀** (17개)
 
 - `5395:14052` materials-mixed-01 h264 — 소개 문구|이미지|이미지|이미지|세부 정보
 - `5543:26917` materials-mixed-11 h277 — LABEL|단위 등의 설명 문구|1|value・상세|2
@@ -368,6 +368,7 @@
 - `5395:13785` materials-mixed-05 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13857` materials-mixed-08 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13820` materials-mixed-06 h326 — LABEL|단위 등의 설명 문구|label|A|B
+- `8296:23` materials-mixed-12 h326 — LABEL|단위 등의 설명 문구|항목명|세부 정보|세부 정보|세부 정보 (전 행 동일 위계)
 - `5395:13927` materials-mixed-09 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5395:13956` materials-mixed-10 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5543:26879` materials-mixed-07 h330 — LABEL|단위 등의 설명 문구|label|A|B
@@ -377,7 +378,7 @@
 - `5395:11819` materials-minimal-01 h602 — 소개 문구|이미지|이미지|이미지|이미지
 - `5395:14065` materials-mixed-02 h813 — 카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지
 
-**에디토리얼** (18개)
+**에디토리얼** (19개)
 
 - `7938:23` materials-editorial-05 h147 — 로고|로고|로고|로고|로고|로고
 - `7898:24` materials-editorial-07 h207 — “|문장형 카피를 입력합니다.|”|매체명 · 작성자|매체명 매체명 매체명
@@ -388,6 +389,7 @@
 - `5395:13785` materials-mixed-05 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13857` materials-mixed-08 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13820` materials-mixed-06 h326 — LABEL|단위 등의 설명 문구|label|A|B
+- `8296:23` materials-mixed-12 h326 — LABEL|단위 등의 설명 문구|항목명|세부 정보|세부 정보|세부 정보 (전 행 동일 위계)
 - `5395:13927` materials-mixed-09 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5395:13956` materials-mixed-10 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5543:26879` materials-mixed-07 h330 — LABEL|단위 등의 설명 문구|label|A|B
@@ -398,7 +400,7 @@
 - `5395:12288` materials-editorial-04 h798 — 카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지
 - `5395:14065` materials-mixed-02 h813 — 카피 문구|메인 이미지|label 설명 문구|디테일 이미지|디테일 이미지
 
-**볼드** (13개)
+**볼드** (14개)
 
 - `5395:12637` materials-bold-03 h222 — 이미지|이미지|이미지|세부 정보|세부 정보
 - `5543:26917` materials-mixed-11 h277 — LABEL|단위 등의 설명 문구|1|value・상세|2
@@ -406,6 +408,7 @@
 - `5395:13785` materials-mixed-05 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13857` materials-mixed-08 h325 — LABEL|단위 등의 설명 문구|label|A|B
 - `5395:13820` materials-mixed-06 h326 — LABEL|단위 등의 설명 문구|label|A|B
+- `8296:23` materials-mixed-12 h326 — LABEL|단위 등의 설명 문구|항목명|세부 정보|세부 정보|세부 정보 (전 행 동일 위계)
 - `5395:13927` materials-mixed-09 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5395:13956` materials-mixed-10 h327 — LABEL|단위 등의 설명 문구|A|● value|○ value
 - `5543:26879` materials-mixed-07 h330 — LABEL|단위 등의 설명 문구|label|A|B

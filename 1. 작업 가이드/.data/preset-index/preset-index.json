@@ -591,6 +591,23 @@
   "weight": "medium"
  },
  {
+  "id": "8296:23",
+  "name": "materials-mixed-12",
+  "grp": "자료-미에볼",
+  "h": 326,
+  "slots": "LABEL|단위 등의 설명 문구|항목명|세부 정보|세부 정보|세부 정보 (전 행 동일 위계)",
+  "key": "sec/mixed/materials/12",
+  "content": [
+   "실적·수치",
+   "이력·경력"
+  ],
+  "weight": "medium",
+  "items_range": null,
+  "use_when": [
+   "위계가 전부 같은 라벨+값 나열(인증·수상·연혁·자격)일 때 — 열 이름(제목행)이 필요한 스펙·제원 표에는 mixed-04~08"
+  ]
+ },
+ {
   "id": "5395:14052",
   "name": "materials-mixed-01",
   "grp": "자료-미에",
