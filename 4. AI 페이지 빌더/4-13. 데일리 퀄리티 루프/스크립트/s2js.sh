@@ -35,21 +35,35 @@ fi
 IMGUSED="/tmp/s2imgused-$ID.txt"; : > "$IMGUSED"
 
 # 현재 화면의 활성 칸: "text<TAB>라벨" / "image" / "none"
-fieldinfo(){ j "(()=>{const t=[...document.querySelectorAll('textarea,input:not([type=file])')].find(e=>e.offsetParent&&!e.readOnly);if(t){const lb=t.closest('label')?.querySelector('span')?.innerText.trim()||'';return 'text\t'+lb;}const drop=/이 곳을 클릭하거나/.test(document.body.innerText)&&!!document.querySelector('input[type=file]');return drop?'image':'none';})()"; }
+# 라벨 = label>span → aria-label → 조상 3단 안의 짧은(≤20자) span 순서로 추출
+fieldinfo(){ j "(()=>{const t=[...document.querySelectorAll('textarea,input:not([type=file])')].find(e=>e.offsetParent&&!e.readOnly);if(t){let lb=t.closest('label')?.querySelector('span')?.innerText.trim()||t.getAttribute('aria-label')||'';if(!lb){let p=t;for(let k=0;k<3&&p;k++){p=p.parentElement;const s=p?.querySelector('span');const tx=(s?.innerText||'').trim();if(tx&&tx.length<=20){lb=tx;break;}}}return 'text\t'+lb;}const drop=/이 곳을 클릭하거나/.test(document.body.innerText)&&!!document.querySelector('input[type=file]');return drop?'image':'none';})()"; }
 
-fill_text(){ # $1=라벨 · 매칭 키 = "화면 첫 90자|라벨"
+# 🔑 매칭 2단 (2026-10-26 라이브 검증에서 교정) — 화면 머리글엔 그룹의 「모든 칸 이름」이
+#    같이 나와서(상품명·가격·설명 문구…) 머리글로 매칭하면 엉뚱한 칸에 들어간다(실측: 가격→설명 문구).
+#    ① 1패스 = 패턴을 「칸 라벨」에만 매칭 (기본 — 패턴은 라벨 이름으로 쓸 것)
+#    ② 2패스 = 패턴에 \| 가 있거나(문맥 한정형: 「구독 안내.*\|제목」) 라벨이 빈 칸만 「머리글|라벨」로 매칭
+fill_text(){ # $1=라벨
   [ -z "$FILLWORK" ] && return 1
-  local key n=0 pat val
-  key="$(body 90)|$1"
-  while IFS=$'\t' read -r pat val; do
-    n=$((n+1)); [ -z "$pat" ] || [ -z "$val" ] && continue
-    printf '%s' "$key" | grep -qE "$pat" || continue
-    local v; v=$(printf '%b' "$val")
-    $B fill 'textarea' "$v" >/dev/null 2>&1 || $B fill 'input:not([type=file])' "$v" >/dev/null 2>&1
-    sed -i '' "${n}d" "$FILLWORK"   # 쓴 줄 소진
-    log "  ↳ 채움[$1]: $(printf '%s' "$v" | head -1 | cut -c1-40)"
-    return 0
-  done < "$FILLWORK"
+  local lb="$1" key n pat val pass
+  key="$(body 90)|$lb"
+  for pass in 1 2; do
+    n=0
+    while IFS=$'\t' read -r pat val; do
+      n=$((n+1)); [ -z "$pat" ] || [ -z "$val" ] && continue
+      if [ "$pass" = 1 ]; then
+        [ -n "$lb" ] || continue
+        printf '%s' "$lb" | grep -qE "$pat" || continue
+      else
+        case "$pat" in *'\|'*) :;; *) [ -z "$lb" ] || continue;; esac
+        printf '%s' "$key" | grep -qE "$pat" || continue
+      fi
+      local v; v=$(printf '%b' "$val")
+      $B fill 'textarea' "$v" >/dev/null 2>&1 || $B fill 'input:not([type=file])' "$v" >/dev/null 2>&1
+      sed -i '' "${n}d" "$FILLWORK"   # 쓴 줄 소진
+      log "  ↳ 채움[${lb:-무라벨}]: $(printf '%s' "$v" | head -1 | cut -c1-40)"
+      return 0
+    done < "$FILLWORK"
+  done
   return 1
 }
 
