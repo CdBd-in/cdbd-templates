@@ -117,6 +117,14 @@ for i in $(seq 1 30); do
   FP=$(printf '%s|%s' "$T" "$BT" | cksum | cut -d' ' -f1)
   [ "$FP" = "$PREV" ] && REP=$((REP+1)) || REP=0; PREV="$FP"
   [ "$REP" -ge 2 ] && { log "STUCK(지문 3회 동일) — 자동 우회 안 함 · 중단"; snap stuck; exit 2; }
+  # 「전부 채우기」 — 답변·이미지가 준비돼 있으면 넘어가기 전에 채운다 (없으면 기존 건너뛰기)
+  if [ -n "$FILLWORK" ] || [ -n "${S2_IMAGES:-}" ]; then
+    FI=$(fieldinfo)
+    case "$FI" in
+      text*)  fill_text "${FI#text	}" && sleep 1.5;;
+      image)  fill_image && sleep 2.5;;   # 업로드되면 「이건 없어요」가 「다음」으로 바뀐다
+    esac
+  fi
   if [ "$(clickBtn '다음')" != "ok" ]; then
     [ "$(clickBtn '이건 없어요')" != "ok" ] && { log "STOP: 진행 버튼 없음"; snap nobtn; exit 4; }
   fi
