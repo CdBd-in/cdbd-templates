@@ -16,6 +16,66 @@ clickBtn(){ j "(()=>{const n='$1';const b=[...document.querySelectorAll('button'
 body(){ j "document.body.innerText.replace(/\s+/g,' ').slice(0,${1:-160})"; }
 snap(){ $B screenshot "$FR/$(date +%s)-$1.png" --viewport >/dev/null 2>&1; }
 
+# ── 「전부 채우기」 모드 (2026-10-26 신설) ─────────────────────────────────
+# S2_ANSWERS=<TSV 파일> 이 있으면 텍스트 칸을 우리 답변으로 채우고,
+# S2_IMAGES=<폴더> 가 있으면 이미지 칸에 업로드한다. 둘 다 없으면 기존처럼 건너뛴다.
+#
+# 답변 TSV 형식: 한 줄 = `패턴<TAB>값`
+#   · 패턴 = grep -E 정규식. 매칭 대상 = "화면 첫 90자(헤딩)|칸 라벨" (예: "구독 안내.*\|제목")
+#   · 값 = 칸에 타이핑할 글. 줄바꿈은 \n 으로.
+#   · 윗줄부터 먼저 매칭되고, 쓴 줄은 소진된다(같은 라벨 여러 번 → 줄을 여러 개).
+#   · 매칭 없는 칸 = AI가 미리 채운 값 그대로 둔다(기존 동작).
+# 이미지 폴더: 파일명(숫자·구분자 뗀 줄기)이 화면 글에 들어가면 그 파일 우선,
+#   아니면 이름순으로 아직 안 쓴 파일. 다 쓰면 「이건 없어요」.
+FILLWORK=""
+if [ -n "${S2_ANSWERS:-}" ] && [ -f "$S2_ANSWERS" ]; then
+  FILLWORK="/tmp/s2answers-work-$ID.tsv"; cp "$S2_ANSWERS" "$FILLWORK"
+  log "채우기 모드: 답변 $(grep -c . "$FILLWORK")줄${S2_IMAGES:+ · 이미지 $(ls "${S2_IMAGES}" 2>/dev/null | wc -l | tr -d ' ')장}"
+fi
+IMGUSED="/tmp/s2imgused-$ID.txt"; : > "$IMGUSED"
+
+# 현재 화면의 활성 칸: "text<TAB>라벨" / "image" / "none"
+fieldinfo(){ j "(()=>{const t=[...document.querySelectorAll('textarea,input:not([type=file])')].find(e=>e.offsetParent&&!e.readOnly);if(t){const lb=t.closest('label')?.querySelector('span')?.innerText.trim()||'';return 'text\t'+lb;}const drop=/이 곳을 클릭하거나/.test(document.body.innerText)&&!!document.querySelector('input[type=file]');return drop?'image':'none';})()"; }
+
+fill_text(){ # $1=라벨 · 매칭 키 = "화면 첫 90자|라벨"
+  [ -z "$FILLWORK" ] && return 1
+  local key n=0 pat val
+  key="$(body 90)|$1"
+  while IFS=$'\t' read -r pat val; do
+    n=$((n+1)); [ -z "$pat" ] || [ -z "$val" ] && continue
+    printf '%s' "$key" | grep -qE "$pat" || continue
+    local v; v=$(printf '%b' "$val")
+    $B fill 'textarea' "$v" >/dev/null 2>&1 || $B fill 'input:not([type=file])' "$v" >/dev/null 2>&1
+    sed -i '' "${n}d" "$FILLWORK"   # 쓴 줄 소진
+    log "  ↳ 채움[$1]: $(printf '%s' "$v" | head -1 | cut -c1-40)"
+    return 0
+  done < "$FILLWORK"
+  return 1
+}
+
+fill_image(){ # 인자 없음 · 화면 글(헤딩) 키워드 → 파일명 우선, 아니면 이름순 미사용분
+  [ -n "${S2_IMAGES:-}" ] && [ -d "$S2_IMAGES" ] || return 1
+  local H f="" x bn stem
+  H=$(body 90)
+  for x in "$S2_IMAGES"/*; do
+    [ -f "$x" ] || continue; bn=$(basename "$x")
+    grep -qxF "$bn" "$IMGUSED" && continue
+    stem=$(printf '%s' "$bn" | sed 's/\.[^.]*$//; s/^[0-9 _-]*//')
+    [ -n "$stem" ] && case "$H" in *"$stem"*) f="$bn"; break;; esac
+  done
+  if [ -z "$f" ]; then
+    for x in "$S2_IMAGES"/*; do
+      [ -f "$x" ] || continue; bn=$(basename "$x")
+      grep -qxF "$bn" "$IMGUSED" || { f="$bn"; break; }
+    done
+  fi
+  [ -z "$f" ] && return 1
+  $B upload 'input[type=file]' "$S2_IMAGES/$f" >/dev/null 2>&1 || return 1
+  echo "$f" >> "$IMGUSED"; log "  ↳ 이미지 업로드: $f"
+  return 0
+}
+# ────────────────────────────────────────────────────────────────────────
+
 $B goto "https://cdbd-client-git-ai-makevu-s-team.vercel.app/ai/create" >/dev/null 2>&1; sleep 6
 guard
 $B fill 'textarea' "$DESC" >/dev/null 2>&1
