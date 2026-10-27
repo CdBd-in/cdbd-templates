@@ -1,0 +1,99 @@
+// 내용 채우기 한 단계의 「왼쪽 입력 ↔ 오른쪽 미리보기」를 한 번에 떠낸다 (S12 채점 입력)
+// 반환 = JSON 1줄. 브라우저에서 읽기만 하며 아무것도 바꾸지 않는다.
+// 셀렉터 출처: s2js.sh 의 fieldinfo()/btns() (라이브 검증본) + 좌우 분할 기하 판정
+(() => {
+  const txt = (e) => (e ? (e.innerText || '').replace(/\s+/g, ' ').trim() : '');
+  const vw = window.innerWidth;
+
+  // ── 1) 오른쪽 미리보기 패널 찾기 ────────────────────────────────
+  // 빌더 화면 = [왼쪽 질문/입력] [가운데 ‹ ›] [오른쪽 폰 미리보기]
+  // 폰 미리보기 = 화면 오른쪽 절반에 있는 "세로로 긴" 박스 중 가장 큰 것
+  const panels = [...document.querySelectorAll('div,section,main,aside')]
+    .map((e) => ({ e, r: e.getBoundingClientRect() }))
+    .filter(({ r }) => r.width > 180 && r.width < 760 && r.height > 260 &&
+                       r.left > vw * 0.45 && r.height > r.width);
+  panels.sort((a, b) => (b.r.width * b.r.height) - (a.r.width * a.r.height));
+  const pv = panels[0] ? panels[0].e : null;
+
+  // ── 2) 왼쪽 입력 영역 = 미리보기 바깥 ──────────────────────────
+  const inPreview = (el) => !!(pv && pv.contains(el));
+
+  // 활성(지금 묻는) 칸 — s2js.sh fieldinfo() 와 같은 규칙
+  const labelOf = (t) => {
+    let lb = '';
+    const l = t.closest('label');
+    if (l && l.querySelector('span')) lb = txt(l.querySelector('span'));
+    if (!lb) lb = t.getAttribute('aria-label') || '';
+    if (!lb) {
+      let p = t;
+      for (let k = 0; k < 3 && p; k++) {
+        p = p.parentElement;
+        const s = p && p.querySelector('span');
+        const tx = txt(s);
+        if (tx && tx.length <= 20) { lb = tx; break; }
+      }
+    }
+    return lb;
+  };
+
+  const fields = [...document.querySelectorAll('textarea,input:not([type=file])')]
+    .filter((t) => t.offsetParent && !t.readOnly && !inPreview(t))
+    .map((t) => {
+      const r = t.getBoundingClientRect();
+      return {
+        label: labelOf(t),
+        value: (t.value || '').trim(),
+        placeholder: (t.placeholder || '').trim(),
+        filled: !!(t.value || '').trim(),
+        y: Math.round(r.top),
+      };
+    });
+
+  // 이미지 업로드 자리
+  const hasDrop = /이 곳을 클릭하거나/.test(document.body.innerText) &&
+                  !!document.querySelector('input[type=file]');
+
+  // 접힌(이미 답한) 칸 — 체크 아이콘 줄의 라벨/값 · 「추가하기」 = 건너뛴 칸
+  const chips = [...document.querySelectorAll('div,li')]
+    .filter((e) => !inPreview(e) && e.children.length <= 4 && e.getBoundingClientRect().width > 120)
+    .map((e) => txt(e))
+    .filter((t) => t && t.length <= 60);
+
+  // ── 3) 미리보기 텍스트 (렌더 순서대로) ─────────────────────────
+  let preview = [];
+  if (pv) {
+    preview = [...pv.querySelectorAll('*')]
+      .filter((e) => !e.children.length)
+      .map((e) => {
+        const r = e.getBoundingClientRect();
+        const st = getComputedStyle(e);
+        return {
+          t: txt(e),
+          y: Math.round(r.top),
+          x: Math.round(r.left),
+          // 흐린 견본인지 진한 본문인지 — 색 불투명도로 가른다
+          op: Number(st.opacity),
+          color: st.color,
+        };
+      })
+      .filter((o) => o.t && o.t.length <= 200)
+      .sort((a, b) => (a.y - b.y) || (a.x - b.x));
+  }
+
+  // ── 4) 하단 진행 버튼 ──────────────────────────────────────────
+  const btn = [...document.querySelectorAll('button')]
+    .filter((b) => !inPreview(b) && b.offsetParent)
+    .map((b) => txt(b))
+    .find((t) => t === '다음' || t === '이건 없어요') || '';
+
+  return JSON.stringify({
+    heading: txt(document.querySelector('h1,h2')) ||
+             document.body.innerText.replace(/\s+/g, ' ').slice(0, 90),
+    fields: fields.sort((a, b) => a.y - b.y),
+    hasImageDrop: hasDrop,
+    chips: [...new Set(chips)].slice(0, 40),
+    button: btn,
+    preview,
+    previewFound: !!pv,
+  });
+})()
