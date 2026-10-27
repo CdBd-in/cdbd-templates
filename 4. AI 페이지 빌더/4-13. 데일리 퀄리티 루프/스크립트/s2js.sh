@@ -128,6 +128,8 @@ for i in $(seq 1 30); do
   guard; BT=$(btns)
   case "$BT" in *'"확인했어요"'*) break;; esac
   T=$(body 110); log "Q$i: $T"
+  # S12 채점 입력 — 「입력 칸 ↔ 그 시점 미리보기」를 넘어가기 전에 떠 둔다 (읽기 전용)
+  $B js "$(cat "$(dirname "$0")/fill-audit/snap.js")" 2>/dev/null | tail -1 >> "$AR/$ID-fill.jsonl"
   FP=$(printf '%s|%s' "$T" "$BT" | cksum | cut -d' ' -f1)
   [ "$FP" = "$PREV" ] && REP=$((REP+1)) || REP=0; PREV="$FP"
   [ "$REP" -ge 2 ] && { log "STUCK(지문 3회 동일) — 자동 우회 안 함 · 중단"; snap stuck; exit 2; }
@@ -145,6 +147,11 @@ for i in $(seq 1 30); do
   sleep 3
 done
 log "마지막 확인: $(body 500)"; snap final-check
+# S12 채점 — 내용 채우기 단계들의 입력↔미리보기 대조 (4-9-5 S12 · 결과는 리포트 결함 목록으로)
+if [ -s "$AR/$ID-fill.jsonl" ]; then
+  python3 "$(dirname "$0")/fill-audit/audit_fill.py" "$AR/$ID-fill.jsonl" 2>&1 | tee -a "$LOG" > "$AR/$ID-fill-audit.md"
+  log "S12 채점: $(head -1 "$AR/$ID-fill-audit.md")"
+fi
 clickBtn "확인했어요" >/dev/null
 
 # 3안 폴링 — 🎬 과정형 결함 대비 프레임 연속 캡처 (§0-8)
