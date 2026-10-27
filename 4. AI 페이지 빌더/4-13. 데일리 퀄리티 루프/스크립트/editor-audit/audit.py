@@ -89,6 +89,26 @@ def hsv(h):
     return colorsys.rgb_to_hsv(*(int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)))
 
 
+def _lum(h):
+    h = hexn(h).lstrip('#')
+    if len(h) != 6: return None
+    v = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+    f = lambda c: c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    return 0.2126 * f(v[0]) + 0.7152 * f(v[1]) + 0.0722 * f(v[2])
+
+
+def contrast(a, b):
+    la, lb = _lum(a), _lum(b)
+    if la is None or lb is None: return None
+    hi, lo = max(la, lb), min(la, lb)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def run_color(style, fallback=''):
+    m = re.search(r'color:\s*(#[0-9A-Fa-f]{6})', style or '')
+    return hexn(m.group(1)) if m else hexn(fallback)
+
+
 def align_of(card_or_item):
     ps = paras(card_or_item.get('content') or '')
     ne = nonempty(ps)
@@ -189,6 +209,25 @@ def audit(ed, presets=None):
     n6c = sum(raw.count(x.upper()) for x in PRESET_DEFAULT_HEX)
     if n6c and hexn(btn.get('background')) != '#6C4CFF':
         flag('S11-13', 'M', f'섹션 원본 기본 보라 #6C4CFF {n6c}곳 잔존', '카드 색')
+
+    # S11-54 어두운 배경 + 흐린 포인트 컬러 제목 (4-8 #81 · 1-3 🎯 포인트 컬러)
+    c_tx, c_bt = contrast(base.get('color'), base.get('background')), contrast(btn.get('background'), base.get('background'))
+    l_bg, l_tx = _lum(base.get('background')), _lum(base.get('color'))
+    if c_tx and c_bt and l_bg is not None and l_tx is not None and l_bg < l_tx and c_bt < 0.5 * c_tx:
+        hits = []
+        for i, b in enumerate(blocks):
+            bst = b.get('style') or {}
+            for pp in paras(b.get('content') or ''):
+                for it in pp['items']:
+                    if it[0] != 'T' or not it[1].strip(): continue
+                    fs = fs_of(it[2]) or fs_of(str(bst.get('fontSize') or '')) or num(bst.get('fontSize'), 16)
+                    if run_color(it[2], bst.get('color')) == hexn(btn.get('background')) and fs >= 15:
+                        hits.append(f'{W(i, b)} “{it[1].strip()[:14]}”')
+        if hits:
+            flag('S11-54', 'M',
+                 f'어두운 배경에서 제목을 포인트 컬러로 — 버튼색 대비 {c_bt:.1f} vs 본문 {c_tx:.1f}'
+                 f'({c_bt / c_tx:.2f}배) → 제목이 본문보다 흐리다 · {len(hits)}곳 ' + ' / '.join(hits[:3]),
+                 '카드 색', '빌더·원본')
 
     # S11-46 견본 값 잔존 (글·링크·주소 전부)
     rawl = json.dumps(blocks, ensure_ascii=False).lower()
@@ -297,7 +336,7 @@ def audit(ed, presets=None):
         t = b.get('type')
         st = b.get('style') or {}
         pad = str(st.get('padding') or '')
-        full = bool(re.search(r'\b0px\s+0px', pad)) or str(st.get('margin') or '').startswith('0px 0px')
+        fullbleed = bool(re.search(r'\b0px\s+0px', pad)) or str(st.get('margin') or '').startswith('0px 0px')
         r = None
         if t == 'image':
             r = num((b.get('image') or {}).get('borderRadius', st.get('borderRadius')), None)
@@ -307,7 +346,7 @@ def audit(ed, presets=None):
             r = num((((b.get('gallery') or {}).get('imageOption') or {}).get('style') or {}).get('borderRadius'), None)
         elif t == 'map':
             r = num((b.get('map') or {}).get('borderRadius', st.get('borderRadius')), None)
-        if r is None or full:
+        if r is None or fullbleed:
             continue
         shapes.append(('둥근' if r > 0 else '각진', f'{t} {r:.0f}px', W(i, b)))
     if shapes:
