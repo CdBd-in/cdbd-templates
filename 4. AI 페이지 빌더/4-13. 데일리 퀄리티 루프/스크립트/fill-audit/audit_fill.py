@@ -43,6 +43,9 @@ def is_periodic(labs, min_period=1):
 REPEATABLE = re.compile(r'버튼|연락처|문구|항목|제품|이미지|사진|질문|답변|회차|메뉴')
 # 한 섹션에 하나뿐이어야 하는 본문류 — 2개 이상이면 섹션 원본 통합 대상
 SINGULAR = re.compile(r'^(본문 텍스트|소개 문구|설명 문구|본문|설명)$')
+# S12-14 — 전 행이 같은 글리프인 구분점·체크 표식 (뜻 있는 이모지와 구분)
+MARKER_GLYPHS = {'●', '•', '·', '○', '■', '▪', '◆', '✓', '✔', '✔️', '✅', '☑', '☑️',
+                 '-', '—', '–', '*', '▶', '▸', '→'}
 
 
 def lum(color):
@@ -306,6 +309,37 @@ def audit(steps):
             out.append(('S12-03', i,
                         '입력 칸 순서 ≠ 미리보기 순서 — 입력 '
                         + ' → '.join(l for l, _ in pos)))
+
+    # ── S12-14 구분점 글리프가 입력 값으로 ────────────────────────
+    # 뜻 있는 이모지(🧘·⏰)는 칸을 주는 게 맞지만(MD-09-1), 전 행이 같은 구분점(●·✓)은 장식이다
+    for i, st in enumerate(steps, 1):
+        hits = []
+        for f in st.get('fields') or []:
+            v = norm(f.get('value'))
+            if v and all(ch in MARKER_GLYPHS or ch.isspace() for ch in v):
+                hits.append(f'{f.get("label") or "칸"}=“{v}”')
+        for c in st.get('chips') or []:
+            v = norm(c)
+            if v and all(ch in MARKER_GLYPHS or ch.isspace() for ch in v):
+                hits.append(f'접힌 항목 이름=“{v}”')
+        if hits:
+            out.append(('S12-14', i, '구분점 글리프가 입력 값으로 들어감 — ' + ' / '.join(dict.fromkeys(hits))[:160]
+                        + ' · 전 행이 같은 표식이면 장식이라 입력칸을 주지 않는다'))
+
+    # ── S12-15 「추가」 액션이 여러 곳 (껍데기뿐인 바깥 묶음) ───────
+    # 2단 반복인데 바깥 묶음에 자기 칸이 없으면 바깥은 껍데기 — 1단이어야 한다
+    for i, st in enumerate(steps, 1):
+        adds = st.get('addButtons') or []
+        if len(adds) < 2:
+            continue
+        inner = adds[0]
+        noun = norm(inner['t']).replace('추가하기', '').replace('추가', '').strip()
+        own = [f for f in (st.get('fields') or [])
+               if f.get('y', 10 ** 6) < inner.get('y', 0) and norm(f.get('label')) not in ('', noun)]
+        if not own:
+            out.append(('S12-15', i,
+                        f'「추가」 액션이 {len(adds)}곳({" · ".join(a["t"] for a in adds)}) — '
+                        f'바깥 묶음에 자기 칸이 없다(안쪽 「{noun}」 칸뿐) → 2단이 아니라 1단 반복으로'))
 
     # ── S12-08 이미지 모서리 계열 1종 (단계 전체 = 문서 전체) ────
     # 멀티페이지는 장마다 단계가 나뉘므로 「전 단계를 모아」 봐야 장 사이 혼재가 잡힌다

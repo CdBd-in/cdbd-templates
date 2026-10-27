@@ -113,6 +113,12 @@
     .map((l) => txt(l))
     .filter((t) => t && t.length <= 12 && !fieldLabels.has(t));
 
+  // ── 3-D) 「~ 추가」 버튼들 (S12-15 — 추가 액션이 몇 곳인가) ────
+  const addBtns = [...document.querySelectorAll('button')]
+    .filter((b) => !inPreview(b) && b.offsetParent && /추가(하기)?$/.test(txt(b).replace(/^\+\s*/, '')))
+    .map((b) => ({ t: txt(b).replace(/^\+\s*/, ''), y: Math.round(b.getBoundingClientRect().top) }))
+    .sort((a, b) => a.y - b.y);
+
   // ── 4) 하단 진행 버튼 ──────────────────────────────────────────
   const btn = [...document.querySelectorAll('button')]
     .filter((b) => !inPreview(b) && b.offsetParent)
@@ -126,6 +132,7 @@
     hasImageDrop: hasDrop,
     chips: [...new Set(chips)].slice(0, 40),
     button: btn,
+    addButtons: addBtns,
     preview,
     shapes,
     orphanLabels: [...new Set(orphanLabels)],
