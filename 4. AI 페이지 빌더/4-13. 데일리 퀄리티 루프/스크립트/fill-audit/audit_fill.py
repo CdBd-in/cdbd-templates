@@ -207,6 +207,23 @@ def audit(steps):
                             f'같은 역할 값들의 가로 위치가 제각각 — {"".join(zones)} '
                             f'({[v[:10] for v, _ in anchors][:4]}) · 항목마다 같은 자리에'))
 
+        # ── S12-11 미리보기에 시간 「범위」인데 입력은 시작만 ────
+        TIME_RANGE = re.compile(r'(\d{1,2}:\d{2})\s*[~\-–]\s*(\d{1,2}:\d{2})')
+        rng = next((TIME_RANGE.search(p['t']) for p in pv_solid if TIME_RANGE.search(p['t'])), None)
+        if rng:
+            time_fields = [f for f in fields if re.search(r'시간|시각', f.get('label') or '')]
+            vals = {norm(f.get('value') or '') for f in time_fields if f.get('value')}
+            if len(time_fields) <= 1 or norm(rng.group(2)) not in vals:
+                out.append(('S12-11', i,
+                            f'미리보기엔 시간 범위 {rng.group(0)!r} 인데 입력엔 종료 시각 칸이 없음'
+                            f'(시간 칸 {len(time_fields)}개) — 「종료일 추가」를 켜고 채울 것'))
+            # 시작 시각이 미리보기와 다르면 사실 오류
+            for f in time_fields:
+                v = norm(f.get('value') or '')
+                if v and v not in (norm(rng.group(1)), norm(rng.group(2))):
+                    out.append(('S6-02', i,
+                                f'시작 시각이 미리보기와 다름 — 입력 {f["value"]!r} vs 미리보기 {rng.group(1)!r}'))
+
         # ── S12-07 빈 줄 문단 보존 ───────────────────────────────
         # 입력에 빈 줄이 있으면 미리보기에서도 문단이 떨어져야 한다.
         # 판정 = 두 문단 첫 조각의 y 간격이 「본문 한 줄 간격」과 같으면 빈 줄이 사라진 것
