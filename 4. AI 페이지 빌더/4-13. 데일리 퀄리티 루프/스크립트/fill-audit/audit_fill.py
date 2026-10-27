@@ -24,6 +24,19 @@ def load(path):
     return steps
 
 
+def is_periodic(labs, min_period=2):
+    """라벨 배열이 길이 k(≥min_period) 묶음의 되풀이인가 — 반복 항목 판정"""
+    n = len(labs)
+    if n < min_period * 2:
+        return False
+    for k in range(min_period, n // 2 + 1):
+        if n % k:
+            continue
+        if all(labs[j] == labs[j % k] for j in range(n)):
+            return True
+    return False
+
+
 def faint(p):
     """미리보기 항목이 흐린 견본인지 — 불투명도 또는 회색 계열로 판정"""
     if p.get('op') is not None and p['op'] < 0.75:
@@ -59,18 +72,31 @@ def audit(steps):
             seen_sig[sig] = i
 
         # ── S12-01 빈 입력 ↔ 채워진 미리보기 ─────────────────────
+        # 미리보기는 한 칸의 글이 여러 줄로 쪼개져 렌더될 수 있다(제목＋설명 두 줄 등)
+        # → 완전 일치 ＋ 「조각이 칸 글 안에 들어가는지」 부분 매칭 둘 다 본다
         for f in fields:
             if f['filled']:
                 continue
             ph = norm(re.sub(r'^예:\s*', '', f.get('placeholder', '')))
-            if ph and ph in pv_text:
+            if not ph:
+                continue
+            hit = None
+            if ph in pv_text:
+                hit = ph
+            else:
+                for p in pv_solid:
+                    frag = norm(p['t'])
+                    if len(frag) >= 6 and frag in ph:
+                        hit = frag
+                        break
+            if hit:
                 out.append(('S12-01', i,
-                            f'빈 칸 {f["label"]!r} 인데 미리보기에 같은 글이 진하게 렌더 — {ph[:30]!r}'))
+                            f'빈 칸 {f["label"]!r} 인데 미리보기에 그 글이 진하게 렌더 — {hit[:30]!r}'))
 
         # ── S5-29 하단 버튼 문구 = 칸 상태 ───────────────────────
+        # hasImageDrop = 업로드 드롭존이 보인다 = 그 이미지 칸은 「비어 있음」
         btn = s.get('button', '')
-        any_filled = any(f['filled'] for f in fields) or s.get('hasImageDrop') is False
-        all_empty = fields and not any(f['filled'] for f in fields) and not s.get('hasImageDrop')
+        all_empty = (not any(f['filled'] for f in fields)) and (fields or s.get('hasImageDrop'))
         if btn == '다음' and all_empty:
             out.append(('S5-29', i, f'칸이 전부 빈 화면인데 버튼이 「다음」 — {head!r}'))
         if btn == '이건 없어요' and fields and all(f['filled'] for f in fields):
@@ -81,9 +107,14 @@ def audit(steps):
         for lb in labs:
             if FIELD_BAD_LABEL.search(lb.strip()):
                 out.append(('S5-05', i, f'내부 필드명이 칸 라벨로 노출 — {lb!r}'))
-        for lb, n in Counter(labs).items():
-            if n >= 2:
-                out.append(('S5-02', i, f'같은 라벨 {n}회 — {lb!r} (반복으로 묶이거나 섹션 원본 통합 대상)'))
+        # 반복 묶음이면 라벨이 주기적으로 되풀이된다([버튼 문구, 연락처] × N) → 정상
+        # 주기 ≥2 로 딱 떨어지면 통과 · 주기 1(같은 라벨만 연속)·불규칙이면 신호
+        if not is_periodic(labs, min_period=2):
+            for lb, n in Counter(labs).items():
+                if n >= 2:
+                    out.append(('S5-02', i,
+                                f'같은 라벨 {n}회 — {lb!r} '
+                                f'(반복으로 안 묶였거나 섹션 원본 통합 대상)'))
 
         # ── S6-15 버튼 보이는 글자 = 행동어 ──────────────────────
         for f in fields:
