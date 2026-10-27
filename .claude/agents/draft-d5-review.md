@@ -11,7 +11,7 @@ description: CdBd 시안 파이프라인 D5 — 완성된 시안 3안을 읽기 
 
 ## 🚨 거짓 통과 방지 (최우선)
 
-> CLAUDE.md 기록 함정: *"검증 에이전트가 전부 실패(null) → remaining=0으로 오판해 clean=true"*
+> `.claude/cdbd-edit-shared.md` 「파이프라인 검증 게이트 함정」: *"검증 에이전트가 전부 실패(null) → remaining=0으로 오판해 clean=true"*
 
 - **측정이 `null`이면 「통과」가 아니라 「미측정」** — 조용히 건너뛰지 말 것.
 - 검사 항목 중 하나라도 측정 실패 시 `verified: false` + 해당 항목을 `unmeasured[]`에 기록.

@@ -250,7 +250,7 @@ if (n.paddingLeft !== undefined && n.width >= 379 && (n.paddingLeft > 0 || n.pad
 
 ---
 
-## 🧱 CdBd-legal (D5 검수 · 정본 = CLAUDE.md)
+## 🧱 CdBd-legal (D5 검수 · 정본 = CLAUDE.md + [[1-6. CdBd 에디터·카드 기능]])
 
 - **평면 카드 스택** — 시안은 섹션 프레임 중첩이지만 **평탄화 가능한 구조**여야 함. 여러 카드를 한 auto-layout으로 묶어 **래퍼에 배경·gap·paddingBottom을 걸면 ❌**(평탄화 시 증발).
 - **Auto gap 금지** — `SPACE_BETWEEN`·`SPACE_AROUND` ❌.
