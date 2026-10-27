@@ -131,6 +131,10 @@ def audit(steps):
         # 반복 묶음이면 라벨이 주기적으로 되풀이된다([버튼 문구, 연락처] × N) → 정상
         # 반복이 자연스러운 라벨(버튼·연락처·항목…)은 같은 라벨만 N개여도 정상
         periodic2 = is_periodic(labs, min_period=2)
+        # 「X 추가」 버튼이 있으면 그 X 는 반복 묶음의 칸이다 — 같은 라벨이 N개여도 정상
+        add_nouns = {norm(a.get('t', '')).replace('추가하기', '').replace('추가', '').strip()
+                     for a in (s.get('addButtons') or [])}
+        add_nouns.discard('')
         for lb, n in Counter(labs).items():
             if n < 2:
                 continue
@@ -138,7 +142,7 @@ def audit(steps):
                 out.append(('S5-02', i,
                             f'같은 라벨 {n}회 — {lb!r} (한 섹션에 하나뿐이어야 하는 본문 칸 '
                             f'· 섹션 원본 통합 대상)'))
-            elif not periodic2 and not REPEATABLE.search(lb):
+            elif not periodic2 and not REPEATABLE.search(lb) and norm(lb) not in add_nouns:
                 out.append(('S5-02', i,
                             f'같은 라벨 {n}회 — {lb!r} (반복으로 안 묶였거나 구분어 필요)'))
 
