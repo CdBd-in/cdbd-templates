@@ -72,6 +72,9 @@
           y: Math.round(r.top),
           x: Math.round(r.left),
           cx: Math.round(r.left + r.width / 2),   // 정렬 비교용 중심 x (S12-06)
+          w: Math.round(r.width),
+          h: Math.round(r.height),
+          lh: Math.round(parseFloat(st.lineHeight) || parseFloat(st.fontSize) * 1.5 || 0),
           align: st.textAlign,
           // 흐린 견본인지 진한 본문인지 — 색 불투명도로 가른다
           op: Number(st.opacity),

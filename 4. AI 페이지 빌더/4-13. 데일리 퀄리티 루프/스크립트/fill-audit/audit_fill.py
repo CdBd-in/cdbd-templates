@@ -24,8 +24,10 @@ def load(path):
     return steps
 
 
-def is_periodic(labs, min_period=2):
-    """라벨 배열이 길이 k(≥min_period) 묶음의 되풀이인가 — 반복 항목 판정"""
+def is_periodic(labs, min_period=1):
+    """라벨 배열이 길이 k 묶음의 되풀이인가 — 반복 항목 판정
+    k=1(같은 라벨만 N개)도 반복으로 본다. 단 그 라벨이 「한 섹션에 하나뿐이어야 하는
+    본문류」면 호출부에서 따로 거른다(섹션 원본 통합 대상 신호)."""
     n = len(labs)
     if n < min_period * 2:
         return False
@@ -35,6 +37,12 @@ def is_periodic(labs, min_period=2):
         if all(labs[j] == labs[j % k] for j in range(n)):
             return True
     return False
+
+
+# 반복 항목으로 여러 벌 나오는 게 정상인 라벨 (버튼·연락처·항목 등)
+REPEATABLE = re.compile(r'버튼|연락처|문구|항목|제품|이미지|사진|질문|답변|회차|메뉴')
+# 한 섹션에 하나뿐이어야 하는 본문류 — 2개 이상이면 섹션 원본 통합 대상
+SINGULAR = re.compile(r'^(본문 텍스트|소개 문구|설명 문구|본문|설명)$')
 
 
 def faint(p):
@@ -139,6 +147,35 @@ def audit(steps):
             same = [p for p in pv_solid if norm(p['t']) == norm(f['value'])]
             if len(same) >= 2:
                 out.append(('S12-02', i, f'같은 값이 미리보기 두 자리에 — {f["value"][:24]!r}'))
+
+        # ── S12-09 좁은 열에서 글이 과하게 접힘 ──────────────────
+        # 다단(2~4열) 칸에 긴 글이 들어가면 두세 글자마다 줄이 꺾인다 → 그 섹션은 그 내용에 안 맞다
+        pw = s.get('previewWidth') or 0
+        if pw:
+            for p in pv_solid:
+                w, h, lh = p.get('w') or 0, p.get('h') or 0, p.get('lh') or 0
+                if not (w and h and lh):
+                    continue
+                lines = round(h / lh) if lh else 1
+                narrow = w < pw / 2.4            # 2열 이상으로 쪼개진 칸
+                if narrow and lines >= 4 and len(p['t']) >= 20:
+                    out.append(('S12-09', i,
+                                f'좁은 칸({w}px)에 긴 글이 {lines}줄로 접힘 — {p["t"][:24]!r} '
+                                f'· 다단 말고 세로 스택·전폭 행으로'))
+                    break
+
+        # ── S6-16 값 칸에 아이콘 글리프·슬롯 견본 라벨 ───────────
+        for f in fields:
+            v = f.get('value') or ''
+            if not v:
+                continue
+            if re.match(r'^[\U0001F300-\U0001FAFF☀-➿]\s*', v):
+                out.append(('S6-16', i,
+                            f'값 칸 {f["label"]!r} 맨 앞에 아이콘 글자 — {v[:24]!r} '
+                            f'(아이콘은 고른 유형을 따라 자동으로 붙는다)'))
+            elif re.match(r'^(CALL|HOMEPAGE|EMAIL|MESSAGE|HOME|SNS|TEL)\W*\S', v, re.I):
+                out.append(('S6-16', i,
+                            f'값 칸 {f["label"]!r} 에 섹션 원본의 견본 라벨이 붙음 — {v[:24]!r}'))
 
         # ── S12-07 빈 줄 문단 보존 ───────────────────────────────
         # 입력에 빈 줄이 있으면 미리보기에서도 문단이 떨어져야 한다.
