@@ -47,6 +47,24 @@
   - `{버튼모양}` 자동 적용: 메뉴 버튼·버튼·Q&A 제출·예약 버튼·위치 안내 버튼.
   - 개별 설정 필요: 이미지·갤러리·동영상·카드 자체 디자인 → `{버튼모양}`과 같은 톤으로 맞춤.
 
+## 📐 텍스트 위계·런 스타일 — S3가 처음부터, V1/F1이 검증·수정
+
+- **라벨+값 2속성 프레임 = 한 카드 2줄 + 런별 위계** — Figma 한 프레임에 작은 라벨 + 큰 값(예 `일시`/`2025.12.19`)이 있으면, 단일 텍스트 카드에 **2줄(라벨↵값)**로 채우되 **Lexical 런별로 다른 스타일**(라벨=작게·흐리게 12px·`{텍스트색}×70%` / 값=크게·진하게 18px·100%). 플레이스홀더로 남기거나 균일 스타일로 채우면 ❌. S3가 처음부터 처리(안 되면 F1/수동 런별 갱신).
+- **텍스트 위계·색은 S3에서 Figma대로 처음부터** — fontSize·color·opacity·fontFamily(헤드라인 액센트 `{버튼색}`, 보조 `{텍스트색}×70%`, 섹션 제목 크게)를 카드별로 안 넣으면 V1이 diff를 20개+ 쏟아낸다(실측 21건). 처음부터 반영 = V/F 부하 대폭↓.
+- **텍스트 색/크기 = `block.style` + Lexical `content` 런 style 양쪽** — 렌더 스타일은 `block.style`(fontSize·color·fontFamily) **그리고** `block.content` 각 런 `style` 문자열(`font-size`·`font-family`; color 없으면 block.style.color 렌더)에서 나온다. **런 style의 `font-size`가 block.style.fontSize를 오버라이드** → 크기 변경 시 반드시 둘 다 갱신. 런별 색은 런 style에 `color:` 주입.
+
+## 🎨 카드 디테일 직접수정 4기법 (`blockById` + mutate → reorder 커밋)
+
+1. **짧은 중앙 구분선**(섹션 타이틀 하단 액센트) = `block.style.padding`의 좌우값을 크게(예 `"20px 150px"` → 중앙 ~64px 라인).
+2. **카드 외부 인셋**(Q&A·위치 등 섹션 카드를 가장자리서 띄움) = `block.style.margin="0px 20px"` (⚠️ 렌더 폭 측정 시 outer row는 full-width — 실제 인셋되는 건 배경 가진 자식 요소라 시각 확인이 정확).
+3. **버튼 Outlined** = `block.innerStyle` `{background:"transparent", color:{버튼색}, borderColor:{버튼색}, borderWidth:"1.5px"}` (채움 = background={버튼색}·color={배경색}). ⚠️ **위치 안내 카드 내부 '지도 보기' 버튼은 Outlined 불가(채움 고정)**.
+4. **한글 어절 중간 끊김 방지** = 문장 경계에 명시 개행(Lexical `content`에 `{type:"linebreak",version:1}` 삽입, 런 분할). `wordBreak:"break-all"` 전역 변경 ❌(에디터 미노출 = 비재현).
+
+## 🚦 파이프라인 검증 게이트 함정
+
+- **검증 에이전트 전멸(null) → `remaining=0` → `clean=true` 오판 = 거짓 클린** — `re.filter(Boolean).flatMap(r=>r.diffs)`식으로 짜면 V-에이전트가 limit·529로 전부 죽어도 diff 0 → clean으로 착각. **검증 성공 개수가 기대치(차원 수)에 못 미치면 clean 판정 보류 → 리포트에 「검증 미완」 표기.** 완료 보고 전 성공 검증 확인 필수.
+- **weekly usage limit 도달 = 서브에이전트 전멸 + 메인 루프는 생존** — 이후 `agent()`는 실패하지만 메인 루프(직접 `$B`)는 동작 → 남은 수정은 `card-driver.js` 주입 후 `blockById` + 참조 mutate + `reorderCard` 커밋으로 직접 처리. 리셋 시각 확인 후 재개 판단.
+
 ## ⚠️ 공통 자동화 함정 (스코프 무관)
 
 > 스코프 전용 함정은 각 S/F 에이전트 체크리스트 참조. 코드 레시피: skill `cdbd-card-automation`.
@@ -58,4 +76,8 @@
 - [ ] **Reload 시 값 손실 = blur 미발생** (함정6) — input 변경 후 `blur` 강제 또는 `$B fill`(자동저장이 blur 트리거).
 - [ ] **한글 attribute CSS selector 파싱 실패** (함정7) — Figma `node.query('[name*=시안]')` ❌ → `findAll(n => n.name.includes('시안'))` predicate.
 - [ ] **모달 X 닫기 = absolute DIV**(button 아님·ESC ❌) (함정3) — `document.querySelector('div.absolute.right-\\[24px\\].top-\\[30px\\]').click()`.
+- [ ] **"last contenteditable" focus = 페이지 최하단 카드** — y sort한 last로 입력하면 의도치 않은 카드(예: 버튼 텍스트)를 덮어쓴다 → **카드 보드에서 카드 명시 선택 후 우측 패널에서 입력**(mobile preview 의존 ❌).
+- [ ] **카드 라벨 ✏️ pencil 우발 활성화 = 라벨 오염** — 보드 행 클릭 시 라벨 영역(span) 회피.
+- [ ] **카드 추가 직후 mobile preview에 즉시 마운트 안 됨** — 추가 → 보드 명시 클릭 후 작업. **카드 보드 모달 열린 채 추출 ❌**(폼 필드 섞임 — 닫고 추출).
+- [ ] **멀티페이지 에디터는 마지막에 본 페이지가 열림** — 열자마자 추출 ❌ → **명시적으로 페이지 1 클릭 후 추출**.
 - [ ] 검증된 셀렉터·패턴·자동화 가능/수동 범위: skill `cdbd-card-automation`(Common mistakes·내부 동작).
