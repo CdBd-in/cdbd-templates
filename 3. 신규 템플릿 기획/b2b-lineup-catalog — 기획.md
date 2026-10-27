@@ -1,12 +1,12 @@
 ---
 created: 2026-09-08
-updated: 2026-09-08
-purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로그 · 멀티페이지) 1단계 내부 기획 메모. claude.ai/design 붙여넣기용 문서는 별도 파일."
+updated: 2026-10-27
+purpose: "신규 템플릿 `b2b-lineup-catalog`(B2B 상품 라인업 카탈로그 · 멀티페이지) 기획 정본 — 내부 메모 + 브리프(Part B) + 시안 반입·채택 로그."
 ---
 
-# b2b-lineup-catalog — B2B 상품 라인업 카탈로그 (내부 메모)
+# b2b-lineup-catalog — B2B 상품 라인업 카탈로그
 
-> 📄 **claude.ai/design 붙여넣기용 = [[b2b-lineup-catalog — 붙여넣기용]]** (Part A 생성 계약 + Part B 브리프 + 이번 요청)
+> 📄 claude.ai/design에 전달할 때는 [[1-2. 기획 문서 템플릿]]의 **Part A(생성 계약)** + 아래 **「브리프」** 절을 합쳐 붙여넣는다 (별도 복사본을 두지 않는다 — 드리프트 방지).
 
 ## 분류
 | 항목 | 값 |
