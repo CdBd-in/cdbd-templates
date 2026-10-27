@@ -220,6 +220,7 @@ def audit(ed, presets=None):
             for pp in paras(b.get('content') or ''):
                 for it in pp['items']:
                     if it[0] != 'T' or not it[1].strip(): continue
+                    if not re.search(r'[0-9A-Za-z가-힣]', it[1]): continue   # 구분 글리프(⎯⎯ 등)는 장식 — 제목 ❌
                     fs = fs_of(it[2]) or fs_of(str(bst.get('fontSize') or '')) or num(bst.get('fontSize'), 16)
                     if run_color(it[2], bst.get('color')) == hexn(btn.get('background')) and fs >= 15:
                         hits.append(f'{W(i, b)} “{it[1].strip()[:14]}”')
