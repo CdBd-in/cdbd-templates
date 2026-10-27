@@ -422,6 +422,7 @@ window.__getDoc=function(){var f=window.__cdbd.fiberOf(window.__cdbd.boardRows()
 | 단일 '텍스트' 추가가 안 됨 | 정상. 텍스트는 포커스(selected_block_id) 의존 → **복제**로 추가 |
 | `count()`가 안 변함 | 가상화로 새 카드가 화면 밖 미마운트. 정상. 스크린샷/모달닫힘으로 판정 |
 | `openKebab` "no-kebab-button" | kebab은 hover시 보이지만 DOM엔 존재. 행 매칭 실패가 흔함 → matcher 타입/인덱스 확인. 보드 행 필터는 `x>540 && width>280 && 40<h<90` |
+| 일괄 삭제에서 일부 카드가 안 지워짐 | 높이 필터(`h-[52px]`류)만 쓰면 **갤러리·위치(120px)·프로필·여백(24/77px) 행이 빠져** 삭제 누락 → 행 필터는 높이 무관 `x>500 && width>200`(모바일 프리뷰 제외)으로. async eval ❌ → bash `sleep` 0.4 간격 개별 `$B js` |
 | 예약 카드만 누락 | `confirmReservation()` 안 부름(확인 1회 더). 또는 크레딧 부족으로 LoadingButton 멈춤 — 크레딧 있는 계정에서 실행 |
 | 삭제했는데 안 지워짐 | `confirmSwal()` 누락. 삭제는 항상 SweetAlert 확인 필요 |
 | 페이지가 대시보드로 튕김 | 모달 X버튼 셀렉터 오타로 다른 요소 클릭됨. 모달 닫기는 추가 성공 시 자동(`i(!1)`). 강제로 닫지 말 것 |
