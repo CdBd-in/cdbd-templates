@@ -290,7 +290,7 @@ def audit(ed, presets=None):
             if (cr > 0) != (tr > 0):
                 flag('S11-10', 'M', f'테두리 버튼 카드 모서리 {cr:.0f}px — 페이지 버튼 모양({tr:.0f}px)과 다른 계열(각진↔둥근) · 카드 모서리를 버튼 모양에 맞출 것', W(i, b))
 
-    # S11-49 이미지·갤러리·지도 모서리 계열 1종 (멀티면 전 장 통틀어)
+    # S11-53 이미지·갤러리·지도 모서리 계열 1종 (멀티면 전 장 통틀어)
     # 각진(0) 과 둥근(>0) 이 섞이면 fail · 풀블리드(좌우 여백 0) 박스는 모서리 0이 정상이라 제외
     shapes = []   # (계열, 설명, where)
     for i, b in enumerate(blocks):
@@ -316,7 +316,7 @@ def audit(ed, presets=None):
             minor = kinds.most_common()[-1][0]
             for k, desc, where in shapes:
                 if k == minor:
-                    flag('S11-49', 'M',
+                    flag('S11-53', 'M',
                          f'이미지 모서리가 페이지 통일값과 다름 — {desc}({k}) · 나머지는 '
                          f'{kinds.most_common()[0][0]} · 멀티면 전 장을 한 값으로', where)
 
