@@ -182,6 +182,29 @@ def audit(steps):
                 out.append(('S6-16', i,
                             f'값 칸 {f["label"]!r} 에 섹션 원본의 견본 라벨이 붙음 — {v[:24]!r}'))
 
+        # ── S12-10 반복 항목 간 시각 표현 동일 ──────────────────
+        # 같은 값이 반복 목록으로 들어간 항목들의 「제목 조각 상대 위치」를 비교한다.
+        # 항목 경계 = 입력의 반복 벌(같은 라벨 주기) · 미리보기에선 같은 라벨 값들의 y 순서
+        rep_vals = [f['value'] for f in fields if f['filled'] and len(f['value']) <= 30]
+        anchors = []
+        for v in rep_vals:
+            hit = next((p for p in pv_solid if norm(p['t']) == norm(v)), None)
+            if hit and hit.get('cx') is not None:
+                anchors.append((v, hit))
+        if len(anchors) >= 2 and pw:
+            # 같은 역할 값들의 가로 위치가 제각각이면(좌/중/우가 섞이면) 표현 불일치
+            zones = []
+            for v, h in anchors:
+                z = 'L' if h['cx'] < pw * 0.4 else ('R' if h['cx'] > pw * 0.6 else 'C')
+                zones.append(z)
+            uniq = set(zones)
+            # 규칙적 교대(LRLR…)는 원본 설계이므로 통과
+            alternating = len(zones) >= 2 and all(zones[k] != zones[k + 1] for k in range(len(zones) - 1)) and len(uniq) == 2
+            if len(uniq) >= 2 and not alternating:
+                out.append(('S12-10', i,
+                            f'같은 역할 값들의 가로 위치가 제각각 — {"".join(zones)} '
+                            f'({[v[:10] for v, _ in anchors][:4]}) · 항목마다 같은 자리에'))
+
         # ── S12-07 빈 줄 문단 보존 ───────────────────────────────
         # 입력에 빈 줄이 있으면 미리보기에서도 문단이 떨어져야 한다.
         # 판정 = 두 문단 첫 조각의 y 간격이 「본문 한 줄 간격」과 같으면 빈 줄이 사라진 것
