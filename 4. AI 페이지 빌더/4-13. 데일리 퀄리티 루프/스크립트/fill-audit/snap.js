@@ -121,5 +121,14 @@
     shapes,
     previewFound: !!pv,
     previewWidth: pv ? Math.round(pv.getBoundingClientRect().width) : 0,
+    previewBg: (() => {            // 견본/본문 판정은 배경 대비로 한다(다크 테마 대응)
+      let e = pv;
+      while (e) {
+        const c = getComputedStyle(e).backgroundColor;
+        if (c && !/rgba\(0, 0, 0, 0\)|transparent/.test(c)) return c;
+        e = e.parentElement;
+      }
+      return 'rgb(255,255,255)';
+    })(),
   });
 })()

@@ -45,19 +45,28 @@ REPEATABLE = re.compile(r'버튼|연락처|문구|항목|제품|이미지|사진
 SINGULAR = re.compile(r'^(본문 텍스트|소개 문구|설명 문구|본문|설명)$')
 
 
-def faint(p):
-    """미리보기 항목이 흐린 견본인지 — 불투명도 또는 회색 계열로 판정"""
+def lum(color):
+    """css 색 → 명도 0~1 (파싱 실패 시 None)"""
+    m = re.match(r'rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)', color or '')
+    if not m:
+        return None
+    r, g, b = (float(m.group(i)) / 255 for i in (1, 2, 3))
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def faint(p, bg=None):
+    """미리보기 항목이 흐린 견본인지 — 불투명도 ＋ 배경 대비로 판정.
+    🔑 절대 색으로 「밝은 회색 = 견본」이라 보면 다크 테마의 흰 본문을 견본으로 오판한다
+       (2026-10-27 실측 — 그 탓에 다크 페이지에서 S12 전 체크가 무력화됐다)."""
     if p.get('op') is not None and p['op'] < 0.75:
         return True
-    m = re.match(r'rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?\)', p.get('color', ''))
-    if m:
-        r, g, b = (float(m.group(i)) for i in (1, 2, 3))
-        a = float(m.group(4)) if m.group(4) else 1.0
-        if a < 0.75:
-            return True
-        # 밝은 회색 = 견본 표시
-        if abs(r - g) < 12 and abs(g - b) < 12 and min(r, g, b) > 150:
-            return True
+    m = re.match(r'rgba?\([\d.]+,\s*[\d.]+,\s*[\d.]+,\s*([\d.]+)\)', p.get('color', ''))
+    if m and float(m.group(1)) < 0.75:
+        return True
+    fg = lum(p.get('color', ''))
+    bgl = lum(bg) if bg else None
+    if fg is not None and bgl is not None:
+        return abs(fg - bgl) < 0.35        # 배경과 가까운 글자 = 흐린 견본
     return False
 
 
@@ -69,7 +78,8 @@ def audit(steps):
         head = s.get('heading', '')[:40]
         fields = s.get('fields', [])
         pv = s.get('preview', [])
-        pv_solid = [p for p in pv if not faint(p)]
+        bg = s.get('previewBg')
+        pv_solid = [p for p in pv if not faint(p, bg)]
         pv_text = {norm(p['t']) for p in pv_solid}
 
         # ── S12-05 / S5-28 단계 중복 0 ───────────────────────────
