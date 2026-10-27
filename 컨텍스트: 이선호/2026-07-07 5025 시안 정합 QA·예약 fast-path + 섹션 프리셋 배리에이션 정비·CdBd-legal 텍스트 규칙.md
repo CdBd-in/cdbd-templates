@@ -38,7 +38,7 @@ purpose: "같은 날(2026-07-07) 두 스레드를 합친 핸드오프. ① 5025 
   - `.claude/cdbd-edit-shared.md` *(영속화 표 3건 추가)*
   - `.claude/skills/cdbd-card-automation/SKILL.md` *(예약 dayjs onChange fast-path)*
   - `docs/superpowers/plans/2026-07-06-cdbd-editor-pipeline.md` + 이전 컨텍스트 *(stale Figma ref 정정)*
-- **참조:** [[1-6-1. CdBd 에디터]] · [[1-6-2. CdBd 카드 기능]] · skill `cdbd-card-automation`
+- **참조:** [[1-6. CdBd 에디터·카드 기능]] · [[1-6. CdBd 에디터·카드 기능]] · skill `cdbd-card-automation`
 
 ---
 
