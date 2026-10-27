@@ -240,6 +240,22 @@ def audit(steps):
                         f'입력칸이 딸리지 않은 라벨 — {lb!r} '
                         f'(묶음 라벨은 칸 라벨을 생략할 때만 · 둘 다 ❌)'))
 
+        # ── S12-13 대표 칸(접힌 항목 요약) = 「제목」 칸 ─────────
+        # 규칙(MD-09-1 3-2 🏷) = ① 라벨 `제목` 칸이 있으면 그것 ② 2단이면 안쪽 반복 칸 ❌
+        chips = [c for c in (s.get('chips') or []) if c]
+        title_f = next((f for f in fields
+                        if norm(f.get('label')) == '제목' and f.get('filled')), None)
+        if title_f and chips:
+            others = {norm(f['value']): f['label'] for f in fields
+                      if f.get('filled') and norm(f.get('label')) != '제목'}
+            for c in chips:
+                nc = norm(c)
+                if nc in others and norm(title_f['value']) not in nc:
+                    out.append(('S12-13', i,
+                                f'접힌 항목 요약이 {others[nc]!r} 칸 값({c[:14]!r}) — '
+                                f'「제목」 칸({title_f["value"][:14]!r})이 대표 칸이어야 한다'))
+                    break
+
         # ── S12-07 빈 줄 문단 보존 ───────────────────────────────
         # 입력에 빈 줄이 있으면 미리보기에서도 문단이 떨어져야 한다.
         # 판정 = 두 문단 첫 조각의 y 간격이 「본문 한 줄 간격」과 같으면 빈 줄이 사라진 것
