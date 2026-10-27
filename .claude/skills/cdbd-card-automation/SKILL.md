@@ -128,7 +128,7 @@ for n in $(seq 1 70); do
 done
 # 검증: 리로드(goto editor; sleep 7; eval driver) 후 firstBad()===-1 확인 → 자동저장 영속
 ```
-- 라벨링 컨벤션(목적 위주)은 [[../CLAUDE.md]] 4단계 🏷 카드 라벨 + [[1-5-1. CdBd 에디터#7. 카드 라벨 = 목적·내용 이름]]. 참고 예시: editor 4856(채용설명회) — "회사명/슬로건/여백/초대 메시지/위치 안내/출석 등록 예약" 등.
+- 라벨링 컨벤션(목적 위주 — 기본 타입명 그대로 ❌)은 [[1-6. CdBd 에디터·카드 기능#🃏 카드 타입별 라벨 패턴 사전]]. 참고 예시: editor 4856(채용설명회) — "회사명/슬로건/여백/초대 메시지/위치 안내/출석 등록 예약" 등.
 - 텍스트 카드 본문은 `block.content`(JSON **문자열**) → `JSON.parse` 후 root 재귀로 text 추출해 목적 판단. previewText는 보통 빈 값.
 
 ## 카드 고정 (핀) — 상단/하단 고정·해제
@@ -247,7 +247,7 @@ $B js "window.__cdbd.confirmThemeWarning()"; sleep 1.2   # "페이지 테마 변
 
 **⚠️ 왜 재조정 루프인가:** 슬롯당 핸들러가 2개(행+미리보기)이고, 배경은 setter `m`·텍스트/버튼은 setter `l`로 **서로 다른 theme 복사본**을 각자 stale 상태에서 rebuild한다. 그래서 여러 색을 무조건 연속 설정하면 마지막 호출이 앞 색을 덮어쓴다. **이미 맞는 슬롯은 건드리지 말고 불일치 슬롯만** 재설정하면 2패스 내 수렴(건드리면 재충돌). 단일 색 1개만 바꿀 땐 `setThemeColor` 1회로 충분(루프 불필요).
 
-> 구방식(fallback): onChange가 안 통하는 픽커는 [[CLAUDE.md]] "페이지 색상 — SketchPicker 실제클릭" 항목(색 원 `$B click` + hex `$B fill`). per-card 디자인 보드 색상도 동일 onChange 구조 추정(미검증).
+> 구방식(fallback · onChange가 안 통하는 픽커만): fiber onClick으로 색 원을 누르면 피커가 **누적·스택**되고 active 슬롯이 안 바뀜 → ① 색 원에 `el.id` 태그 후 **`$B click` 실제 클릭** ② `.sketch-picker` hex input(`className===""` & 6자리)에 id 부여 → **`$B fill <hex>` + `$B press Enter`**(합성 이벤트는 picker 로컬값만 갱신) ③ `변경사항 저장하기` → 경고 모달 → "경고 보지 않기" 체크 + `변경하기`. 서체(`서체 더보기`)·버튼 모양(원형/각진/둥근)도 변경마다 같은 경고 모달. per-card 디자인 보드 색상도 동일 onChange 구조 추정(미검증).
 
 ## ⚠️ 보드 스크롤 = 페이지 드리프트 (필수, editor 4904 검증 2026-06-24)
 
@@ -304,6 +304,12 @@ $B js "![...document.querySelectorAll('input')].find(e=>e.placeholder==='제목�
 - **검증/식별**: 저장 성공 시 우측 패널 "예약 정보"에 제목 표시 + 프리뷰 placeholder("오른쪽에서 예약 정보를…")가 **"예약하기" 버튼**으로 바뀜. 빈 카드 판별 = 모달 열어 제목 input value==='' 확인.
 - 여러 예약 카드는 **매번 fiber onClick으로 정확히 선택**(라벨/위치로 추정 ❌ — 같은 'reservation' 타입이라 헷갈림).
 - **모달 취소(저장 폐기)**: 스테이징된 변경이 있으면 "저장 없이 나가기" 확인 다이얼로그 → **"나가기"** 클릭. (테스트로 임시 옵션 추가 후 서버 데이터 보존하며 빠져나올 때 유용.)
+
+**🧾 예약 카드 실무 함정 (5067 검증)**
+- **크레딧 0 = 예약 카드 추가 자체가 완전 차단** — 카드 추가 전 크레딧 확인(당시 잔액 부족 → 27/28카드, 예약만 누락). 예약 = **건당 7C**(방문체크 여부 무관 · 차감은 예약 완료 시 · 포인트에서 차감 · 환불 ❌).
+- **과거 날짜 = 옵션 '설정하기' 버튼 disable** — 날짜 픽커가 오늘 이전엔 확정 버튼 비활성(가드). 시안 날짜가 과거면 확정 핸들러(fiber onClick) 직접 호출로 우회.
+- **호스트 이름·연락처 = 저장 필수 필드** — 비우면 저장 차단. 스펙에 없어도 **페이지 기존 데이터로 채움**(호스트=프로필 이름, 연락처=페이지 전화 버튼 번호 재사용 — 임의 번호 창작 ❌).
+- **방문체크 '시작 일시' 자동값 = 오늘로 폴백** — 행사일이 과거면 시작이 now로 채워져 종료보다 뒤일 수 있음 → 시작도 행사일로 함께 설정.
 
 ### ⚡ 날짜·시간 픽커 = dayjs onChange 직접 주입 (2026-07-07 5025 검증 — 캘린더/리스트 클릭 0번, S6 ~50-60%↓)
 
@@ -368,9 +374,12 @@ $B js "var l=window.__cdbd.blockOfRow(window.__cdbd.boardRows()[<idx>]).location
 - ⚠️ 선택 시 표시 주소가 **지오코더 POI명**으로 바뀜(예: "와우산로 94" → "…와우산로 94 학교법인홍익학원"). 텍스트를 다시 손으로 고치면 좌표가 또 날아감 → 라벨 바꾸려면 **검색해서 다른 결과 선택**으로.
 - `button:true`(지도 보기 버튼 표시) + `label:true`(주소 표시)는 카드 구성 토글. 지도 버튼은 **위치 카드 빌트인 컴포넌트**(별도 버튼 카드 ❌).
 
-## OG 썸네일 — 자동화 불가 (수동, editor 4904 확인 2026-06-24)
+## OG 썸네일 — 현 에디터 버전에선 자동화 가능 (2026-07-09 재검증 · 구 「수동만」 기록은 outdated)
 
-헤더 🌐 globe("URL 정보 편집하기") 모달의 **제목·설명은 `$B fill`/onChange로 설정 가능**하나, **썸네일(800×400)은 자동화 불가**. 썸네일 img는 cursor:auto·onClick 없음·dropzone/onDrop 없음·호버 오버레이 없음 = **transient OS 파일 다이얼로그**만 존재. 카드 이미지의 onDrop 패턴이 OG 썸네일엔 없음. → **사용자 수동 업로드**(800×400 이미지 준비해 전달). 제목/설명은 자동, 썸네일만 수동.
+헤더 🌐 globe("URL 정보 편집하기") 모달의 **제목·설명은 `$B fill`/onChange로 설정**. 썸네일은 **hover 오버레이 onClick=`L("metadata")`** → 표준 이미지 라이브러리 모달(react-dropzone) 열림 → **`onDrop` 직접 호출(파일 업로드 레시피) + 셀 fiber `onClick`(적용)**으로 완전 자동화.
+- **영속은 발행(URL 생성) 필요** · **slug 하이픈 금지**(영문·숫자·`_`·`.`만 — 예 `asera-gala`→`asera_gala`).
+- 발행 시 크레딧 확인 모달(120C/월). 💰 **크레딧 0이어도 포인트 잔액으로 발행 가능**(완전 차단 아님).
+- ⚠️ 구버전 에디터에서 안 되면: 썸네일 img에 onClick/dropzone이 없는 경우 → 사용자 수동 업로드(800×400)로 위임.
 
 ## 멀티페이지 — 페이지 복제·전환 + 문서 상태 일괄 편집 (editor 6468 · 2026-10-02 실측)
 
@@ -416,13 +425,18 @@ window.__getDoc=function(){var f=window.__cdbd.fiberOf(window.__cdbd.boardRows()
 | 예약 카드만 누락 | `confirmReservation()` 안 부름(확인 1회 더). 또는 크레딧 부족으로 LoadingButton 멈춤 — 크레딧 있는 계정에서 실행 |
 | 삭제했는데 안 지워짐 | `confirmSwal()` 누락. 삭제는 항상 SweetAlert 확인 필요 |
 | 페이지가 대시보드로 튕김 | 모달 X버튼 셀렉터 오타로 다른 요소 클릭됨. 모달 닫기는 추가 성공 시 자동(`i(!1)`). 강제로 닫지 말 것 |
+| 드라이버 주입했는데 팔레트 3개만 잡힘 | **에디터 로딩 10초 이상 대기** 후 주입할 것. 카드 타입·순서 추출도 DOM SVG 방식 ❌(오분류) → 드라이버 `count()`·`boardRows()`+`blockOfRow()` 사용 |
+| Q&A 질문 유형을 바꾸고 싶음 | **in-place 변경 불가** — kebab은 복제/삭제만. **삭제 후 신규 추가**(신규는 마지막 배치 → dnd-kit `onDragEnd`로 reorder) |
+| Q&A 복수선택 토글이 안 눌림 | MUI Switch 아님 — **사용자정의 div**(24×15 · 활성 시 `bg: var(--color-information)` + inner `translateX(9px)`) → 좌표 직접 click |
+| 로그인 버튼 `$B click` multiple match | `document.querySelectorAll('button')[3].click()` |
+| MUI DatePicker 화살표 위치 추정 실패 | `button[aria-label="Next month"]` / `"Previous month"` 직접 사용 |
 
 ## 내부 동작 (참고)
 
 - 추가: 타입 항목 onClick = `()=>{ t({id:uuid(), type:"image", style:{...theme}, ...}), i(!1) }` — `t`=블록 append setter, `i(!1)`=모달 닫기. setter `t`는 클로저라 단독 추출 불가 → 항목 onClick 호출이 유일 경로.
 - 삭제: `async()=>{ if(!(await confirm(...)).isConfirmed)return; ...blocks.filter(b=>b.id!==m.id)... }`
 - 복제: `async()=>{ let id=uuid(), clone=rK.X2(m); append({...clone,id}); }` — 예약은 Supabase 조회 추가.
-- 식별은 **라벨 아님, fiber `block.type`** ([[CLAUDE.md]] SVG 시그니처 원칙과 동일 취지: DOM 텍스트로 추정 금지).
+- 식별은 **라벨 아님, fiber `block.type`** ([[1-6. CdBd 에디터·카드 기능]] SVG 시그니처 원칙과 동일 취지: DOM 텍스트로 추정 금지).
 
 전체 드라이버: `card-driver.js` (window.__cdbd 메서드: openAddModal, pickCardType, confirmReservation, openKebab, menuClick, confirmSwal, count, blocks, blockOfRow).
 
