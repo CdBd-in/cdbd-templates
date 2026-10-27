@@ -82,6 +82,25 @@
       .sort((a, b) => (a.y - b.y) || (a.x - b.x));
   }
 
+  // ── 3-B) 미리보기 안 이미지·면의 모서리 (S12-08) ───────────────
+  // 풀블리드(패널 폭에 꽉 찬) 박스는 모서리 0이 정상이라 따로 표시해 둔다
+  let shapes = [];
+  if (pv) {
+    const pw = pv.getBoundingClientRect().width;
+    shapes = [...pv.querySelectorAll('img,[style*="background-image"]')]
+      .map((e) => {
+        const r = e.getBoundingClientRect();
+        const st = getComputedStyle(e);
+        return {
+          r: Math.round(parseFloat(st.borderRadius) || 0),
+          w: Math.round(r.width),
+          y: Math.round(r.top),
+          full: r.width >= pw - 2,
+        };
+      })
+      .filter((o) => o.w > 40);
+  }
+
   // ── 4) 하단 진행 버튼 ──────────────────────────────────────────
   const btn = [...document.querySelectorAll('button')]
     .filter((b) => !inPreview(b) && b.offsetParent)
@@ -96,6 +115,7 @@
     chips: [...new Set(chips)].slice(0, 40),
     button: btn,
     preview,
+    shapes,
     previewFound: !!pv,
     previewWidth: pv ? Math.round(pv.getBoundingClientRect().width) : 0,
   });

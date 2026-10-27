@@ -9,6 +9,7 @@
 ⚙ 표시 임계값을 바꾸면 4-9-5 ⚙ 보정 기록에도 한 줄 남긴다.
 """
 import argparse, colorsys, json, re
+from collections import Counter
 
 # ── 기준값 (정본 = 4-9-5 · MD-08-3 · MD-08-2) ─────────────────────────
 EDITOR_DEFAULT = ('#FAFAFA', '#292929', '#292929')        # 새 페이지 기본 테마
@@ -288,6 +289,36 @@ def audit(ed, presets=None):
             cr = num(st.get('borderRadius') or 0, 0)
             if (cr > 0) != (tr > 0):
                 flag('S11-10', 'M', f'테두리 버튼 카드 모서리 {cr:.0f}px — 페이지 버튼 모양({tr:.0f}px)과 다른 계열(각진↔둥근) · 카드 모서리를 버튼 모양에 맞출 것', W(i, b))
+
+    # S11-49 이미지·갤러리·지도 모서리 계열 1종 (멀티면 전 장 통틀어)
+    # 각진(0) 과 둥근(>0) 이 섞이면 fail · 풀블리드(좌우 여백 0) 박스는 모서리 0이 정상이라 제외
+    shapes = []   # (계열, 설명, where)
+    for i, b in enumerate(blocks):
+        t = b.get('type')
+        st = b.get('style') or {}
+        pad = str(st.get('padding') or '')
+        full = bool(re.search(r'\b0px\s+0px', pad)) or str(st.get('margin') or '').startswith('0px 0px')
+        r = None
+        if t == 'image':
+            r = num((b.get('image') or {}).get('borderRadius', st.get('borderRadius')), None)
+            if (b.get('image') or {}).get('shape') in ('circle', 'arch', 'diamond', 'cloud', 'flower', 'sparkle'):
+                continue        # 특수 모양은 「계열」 판정 대상이 아니다
+        elif t == 'gallery':
+            r = num((((b.get('gallery') or {}).get('imageOption') or {}).get('style') or {}).get('borderRadius'), None)
+        elif t == 'map':
+            r = num((b.get('map') or {}).get('borderRadius', st.get('borderRadius')), None)
+        if r is None or full:
+            continue
+        shapes.append(('둥근' if r > 0 else '각진', f'{t} {r:.0f}px', W(i, b)))
+    if shapes:
+        kinds = Counter(k for k, _, _ in shapes)
+        if len(kinds) >= 2:
+            minor = kinds.most_common()[-1][0]
+            for k, desc, where in shapes:
+                if k == minor:
+                    flag('S11-49', 'M',
+                         f'이미지 모서리가 페이지 통일값과 다름 — {desc}({k}) · 나머지는 '
+                         f'{kinds.most_common()[0][0]} · 멀티면 전 장을 한 값으로', where)
 
     # S11-48 장식 없는 섹션 타이틀 ↔ 바로 아래 본문 정렬
     for i, b in enumerate(blocks[:-1]):

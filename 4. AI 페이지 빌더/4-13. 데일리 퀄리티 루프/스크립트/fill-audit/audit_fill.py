@@ -191,7 +191,24 @@ def audit(steps):
                         '입력 칸 순서 ≠ 미리보기 순서 — 입력 '
                         + ' → '.join(l for l, _ in pos)))
 
-    # ── S12-02(단계 간) 한 값이 다른 단계 미리보기에 ─────────────
+    # ── S12-08 이미지 모서리 계열 1종 (단계 전체 = 문서 전체) ────
+    # 멀티페이지는 장마다 단계가 나뉘므로 「전 단계를 모아」 봐야 장 사이 혼재가 잡힌다
+    allshapes = []
+    for i, s in enumerate(steps, 1):
+        for sh in s.get('shapes') or []:
+            if sh.get('full'):
+                continue          # 풀블리드 박스는 모서리 0이 정상
+            allshapes.append((i, '둥근' if sh['r'] > 0 else '각진', sh['r']))
+    if allshapes:
+        kinds = Counter(k for _, k, _ in allshapes)
+        if len(kinds) >= 2:
+            minor = kinds.most_common()[-1][0]
+            major = kinds.most_common()[0][0]
+            where = sorted({i for i, k, _ in allshapes if k == minor})
+            out.append(('S12-08', where[0],
+                        f'이미지 모서리 혼재 — {minor} {kinds[minor]}곳(단계 {where[:6]}) vs '
+                        f'{major} {kinds[major]}곳 · 멀티면 전 장을 한 값으로'))
+
     return out
 
 
