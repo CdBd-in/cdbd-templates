@@ -116,13 +116,18 @@ def audit(steps):
             if FIELD_BAD_LABEL.search(lb.strip()):
                 out.append(('S5-05', i, f'내부 필드명이 칸 라벨로 노출 — {lb!r}'))
         # 반복 묶음이면 라벨이 주기적으로 되풀이된다([버튼 문구, 연락처] × N) → 정상
-        # 주기 ≥2 로 딱 떨어지면 통과 · 주기 1(같은 라벨만 연속)·불규칙이면 신호
-        if not is_periodic(labs, min_period=2):
-            for lb, n in Counter(labs).items():
-                if n >= 2:
-                    out.append(('S5-02', i,
-                                f'같은 라벨 {n}회 — {lb!r} '
-                                f'(반복으로 안 묶였거나 섹션 원본 통합 대상)'))
+        # 반복이 자연스러운 라벨(버튼·연락처·항목…)은 같은 라벨만 N개여도 정상
+        periodic2 = is_periodic(labs, min_period=2)
+        for lb, n in Counter(labs).items():
+            if n < 2:
+                continue
+            if SINGULAR.match(lb.strip()):
+                out.append(('S5-02', i,
+                            f'같은 라벨 {n}회 — {lb!r} (한 섹션에 하나뿐이어야 하는 본문 칸 '
+                            f'· 섹션 원본 통합 대상)'))
+            elif not periodic2 and not REPEATABLE.search(lb):
+                out.append(('S5-02', i,
+                            f'같은 라벨 {n}회 — {lb!r} (반복으로 안 묶였거나 구분어 필요)'))
 
         # ── S6-15 버튼 보이는 글자 = 행동어 ──────────────────────
         for f in fields:
