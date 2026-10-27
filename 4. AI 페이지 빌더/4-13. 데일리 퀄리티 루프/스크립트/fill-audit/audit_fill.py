@@ -191,7 +191,9 @@ def audit(steps):
             hit = next((p for p in pv_solid if norm(p['t']) == norm(v)), None)
             if hit and hit.get('cx') is not None:
                 anchors.append((v, hit))
-        if len(anchors) >= 2 and pw:
+        # ⚠️ 2항목만으로는 「교대 설계」와 「불일치」를 가를 수 없다(지그재그 2열 원본이 실재)
+        #    → 3항목 이상일 때만 판정하고, 2항목은 S12-04(원본 대조)에 맡긴다
+        if len(anchors) >= 3 and pw:
             # 같은 역할 값들의 가로 위치가 제각각이면(좌/중/우가 섞이면) 표현 불일치
             zones = []
             for v, h in anchors:
@@ -199,7 +201,7 @@ def audit(steps):
                 zones.append(z)
             uniq = set(zones)
             # 규칙적 교대(LRLR…)는 원본 설계이므로 통과
-            alternating = len(zones) >= 2 and all(zones[k] != zones[k + 1] for k in range(len(zones) - 1)) and len(uniq) == 2
+            alternating = all(zones[k] != zones[k + 1] for k in range(len(zones) - 1)) and len(uniq) == 2
             if len(uniq) >= 2 and not alternating:
                 out.append(('S12-10', i,
                             f'같은 역할 값들의 가로 위치가 제각각 — {"".join(zones)} '
