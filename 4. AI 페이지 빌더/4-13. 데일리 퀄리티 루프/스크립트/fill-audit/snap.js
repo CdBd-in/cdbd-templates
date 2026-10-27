@@ -104,6 +104,15 @@
       .filter((o) => o.w > 40);
   }
 
+  // ── 3-C) 입력칸이 딸리지 않은 라벨 (S12-12) ───────────────────
+  // 왼쪽 영역의 라벨 글자 중, 어떤 입력칸의 라벨로도 잡히지 않은 것
+  const fieldLabels = new Set(fields.map((f) => f.label).filter(Boolean));
+  const orphanLabels = [...document.querySelectorAll('label')]
+    .filter((l) => !inPreview(l) && l.offsetParent)
+    .filter((l) => !l.querySelector('input,textarea,select'))
+    .map((l) => txt(l))
+    .filter((t) => t && t.length <= 12 && !fieldLabels.has(t));
+
   // ── 4) 하단 진행 버튼 ──────────────────────────────────────────
   const btn = [...document.querySelectorAll('button')]
     .filter((b) => !inPreview(b) && b.offsetParent)
@@ -119,6 +128,7 @@
     button: btn,
     preview,
     shapes,
+    orphanLabels: [...new Set(orphanLabels)],
     previewFound: !!pv,
     previewWidth: pv ? Math.round(pv.getBoundingClientRect().width) : 0,
     previewBg: (() => {            // 견본/본문 판정은 배경 대비로 한다(다크 테마 대응)
