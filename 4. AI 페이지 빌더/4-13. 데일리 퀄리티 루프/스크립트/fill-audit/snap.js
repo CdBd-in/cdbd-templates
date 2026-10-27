@@ -71,6 +71,8 @@
           t: txt(e),
           y: Math.round(r.top),
           x: Math.round(r.left),
+          cx: Math.round(r.left + r.width / 2),   // 정렬 비교용 중심 x (S12-06)
+          align: st.textAlign,
           // 흐린 견본인지 진한 본문인지 — 색 불투명도로 가른다
           op: Number(st.opacity),
           color: st.color,
@@ -95,5 +97,6 @@
     button: btn,
     preview,
     previewFound: !!pv,
+    previewWidth: pv ? Math.round(pv.getBoundingClientRect().width) : 0,
   });
 })()

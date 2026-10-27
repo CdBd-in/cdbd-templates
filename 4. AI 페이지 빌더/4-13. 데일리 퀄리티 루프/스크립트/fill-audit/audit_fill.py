@@ -140,6 +140,44 @@ def audit(steps):
             if len(same) >= 2:
                 out.append(('S12-02', i, f'같은 값이 미리보기 두 자리에 — {f["value"][:24]!r}'))
 
+        # ── S12-07 빈 줄 문단 보존 ───────────────────────────────
+        # 입력에 빈 줄이 있으면 미리보기에서도 문단이 떨어져야 한다.
+        # 판정 = 두 문단 첫 조각의 y 간격이 「본문 한 줄 간격」과 같으면 빈 줄이 사라진 것
+        for f in fields:
+            if '\n\n' not in (f.get('value') or ''):
+                continue
+            paras = [p.strip() for p in f['value'].split('\n\n') if p.strip()]
+            ys = []
+            for para in paras:
+                head = norm(para)[:14]          # 공백 제거 후 자른다(양쪽 같은 기준)
+                hit = next((p for p in pv_solid if head and norm(p['t'])[:14] == head), None)
+                if hit:
+                    ys.append(hit['y'])
+            if len(ys) >= 2:
+                gaps = [b - a for a, b in zip(ys, ys[1:])]
+                # 같은 문단 안 줄 간격 추정 = 미리보기 조각들의 최빈 간격
+                line_gaps = [b['y'] - a['y'] for a, b in zip(pv_solid, pv_solid[1:])
+                             if 0 < b['y'] - a['y'] < 80]
+                base = min(line_gaps) if line_gaps else 0
+                if base and any(g <= base * 1.4 for g in gaps):
+                    out.append(('S12-07', i,
+                                f'빈 줄 문단이 미리보기에서 붙음 — 칸 {f["label"]!r} '
+                                f'(문단 간격 {gaps} vs 줄 간격 {base})'))
+
+        # ── S12-06 타이틀 ↔ 본문 첫 카드 정렬 통일 ───────────────
+        # 미리보기 맨 위 짧은 글(섹션 타이틀)과 그 아래 첫 본문(20자↑)의 중심 x 비교
+        if len(pv_solid) >= 2:
+            title = next((p for p in pv_solid if 0 < len(p['t']) <= 14), None)
+            if title:
+                body_p = next((p for p in pv_solid
+                               if p['y'] > title['y'] and len(p['t']) >= 20), None)
+                if body_p and title.get('cx') is not None and body_p.get('cx') is not None:
+                    width = s.get('previewWidth') or 0
+                    if width and abs(title['cx'] - body_p['cx']) > width * 0.08:
+                        out.append(('S12-06', i,
+                                    f'타이틀 {title["t"][:12]!r} 과 본문의 정렬이 다름 '
+                                    f'(중심 x {title["cx"]} vs {body_p["cx"]})'))
+
         # ── S12-03 칸 순서 = 미리보기 순서 ───────────────────────
         pos = []
         for f in fields:
