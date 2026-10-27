@@ -28,7 +28,7 @@ description: Use when running the unattended daily CdBd template build (launchd 
 ## 2. 주제 + 무드 선택
 
 - slug = `retry_queue`가 비어있지 않으면 그 첫 항목, 아니면 `queue` 첫 항목. 둘 다 비면 → 리포트에 "큐 소진" + `notify.sh` 후 종료.
-- 무드 = 9개 무드 중 `recent_moods`(최근 `params.recent_moods_window`개)에 **없는** 것에서 선택(콘텐츠 주제 적합성 우선). 색·폰트는 무드에 따라 [[1-2. 색상 팔레트]]·[[1-3. 폰트]]에서.
+- 무드 = 9개 무드 중 `recent_moods`(최근 `params.recent_moods_window`개)에 **없는** 것에서 선택(콘텐츠 주제 적합성 우선). 색·폰트는 무드에 따라 [[1-3. 색상 팔레트]]·[[1-4. 폰트]]에서.
 
 ## 3. 단계 실행 (1→5 순차, 각 단계 후 검수)
 
