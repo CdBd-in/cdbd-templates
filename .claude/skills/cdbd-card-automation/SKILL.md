@@ -101,7 +101,7 @@ $B js "JSON.stringify(window.__cdbd.cardOrder().map(c=>c.type))"   # 변경 확�
 ```
 - `cardOrder()` = 보드 표시 순서 `[{id,type}]` (dnd-kit `items` prop 기준). `reorderCard(from,to)` = from 인덱스 카드를 to 위치로.
 - 연속 이동 시 **매번 cardOrder()로 인덱스 재확인** (한 번 옮기면 인덱스 전부 밀림).
-- 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-4-1. 에디터 페이지#🥇 dnd-kit 드래그앤드롭 자동화 (2026-06-19 기록) — 카드 순서 변경]]
+- 드라이버는 **첫 sortable(카드 보드)** 의 onDragEnd를 잡는다. 갤러리·메뉴 내부에도 sortable이 있으나 카드 보드가 첫 번째라 정상 동작. 풀 원리: [[1-6. CdBd 에디터·카드 기능]] 에디터부
 
 ## 카드 라벨(이름) 변경 — title 입력 native setter (editor 4904 검증 2026-06-24)
 
@@ -213,7 +213,7 @@ $B js "window.__cdbd.applyImage('img')"; sleep 2
 
 - `uploadImage`는 `window.__cdbdImg`(base64)를 읽어 `File` → `new DataTransfer()` → dropzone `onDrop({…,dataTransfer})` 직접 호출. OS 다이얼로그 우회.
 - `applyImage(filenameMatch)`: 라이브러리 이미지(alt/src 부분일치) 셀의 onClick으로 선택 → **같은 셀 안의** "적용하기" 클릭. ⚠️ "적용하기"는 모든 이미지 셀에 있으므로 셀 범위로 좁혀야 함.
-- OG 이미지·페이지 썸네일도 같은 패턴(트리거만 다름). 풀 원리: [[1-4-1. 에디터 페이지#함정 23: 파일 업로드는 React 합성 이벤트로 onDrop 핸들러 직접 호출 (2026-06-19 기록)]]
+- OG 이미지·페이지 썸네일도 같은 패턴(트리거만 다름). 원리 = transient `<input type=file>` 후킹 ❌ → React dropzone `onDrop`에 `{preventDefault, stopPropagation, dataTransfer: dt, target, currentTarget}` 직접 호출(`dt = new DataTransfer(); dt.items.add(file)`).
 - 이미지 **생성·준비**(Thiings·OpenAI gpt-image-1·Flow·투명 PNG export)는 [[1-5. 이미지]] — 별개 단계.
 
 ## 페이지 색상 (배경·텍스트·버튼 hex) — swatch 클릭 없이
