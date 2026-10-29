@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "syncedAt": "2026-09-15",
-  "total": 316,
+  "syncedAt": "2026-10-29T16:22:17+09:00",
+  "total": 315,
   "figma": {
     "file": "24O01lprp5i2ufl7CbZXXx",
     "page": "3323:355",
@@ -1840,16 +1840,6 @@
       "btnText": "bg"
     },
     {
-      "uid": "p183",
-      "name": "Diamond Day",
-      "mood": "비비드",
-      "src": "MyMind",
-      "bg": "#FF6090",
-      "tx": "#81072C",
-      "bt": "#FEEA0D",
-      "btnText": "tx"
-    },
-    {
       "uid": "p184",
       "name": "Huemint 101",
       "mood": "비비드",
@@ -3180,5 +3170,5 @@
       "btnText": "bg"
     }
   ],
-  "note": "btnText: bg=CdBd 기본(버튼글자=배경색) / tx=예외(버튼글자=텍스트색)"
+  "note": "btnText: bg=CdBd 기본(버튼글자=배경색) / tx=예외(버튼글자=텍스트색) · 2026-10-29 p183 Diamond Day 삭제(이선호)"
 }
