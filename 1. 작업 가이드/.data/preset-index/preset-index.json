@@ -427,6 +427,23 @@
   "items_range": "1~4"
  },
  {
+  "id": "8448:196",
+  "name": "key_info-bold-08",
+  "grp": "핵심 정보-볼드",
+  "h": 228,
+  "slots": "LABEL|LABEL|LABEL|LABEL|00|00|00|00|label|세부 정보|label|세부 정보|label|세부 정보",
+  "old_name": null,
+  "key": "sec/bold/key_info/08",
+  "content": [
+   "일시·기간"
+  ],
+  "weight": "light",
+  "items_range": "1~4",
+  "use_when": [
+   "날짜가 확정된 행사이고 「그날」이 핵심일 때만"
+  ]
+ },
+ {
   "id": "5395:11819",
   "name": "materials-minimal-01",
   "grp": "자료-미니멀",
@@ -485,6 +502,22 @@
   "key": "sec/minimal/materials/05",
   "content": [],
   "weight": "medium"
+ },
+ {
+  "id": "8448:186",
+  "name": "materials-minimal-06",
+  "grp": "자료-미니멀",
+  "h": 199,
+  "slots": "0.0|★★★★★|리뷰 000개|버튼 텍스트",
+  "old_name": null,
+  "key": "sec/minimal/materials/06",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "light",
+  "use_when": [
+   "리뷰 플랫폼의 실제 평점·리뷰 수가 있을 때만 — 지어내지 않는다"
+  ]
  },
  {
   "id": "5395:13748",
@@ -1777,6 +1810,22 @@
   "weight": "medium"
  },
  {
+  "id": "8448:147",
+  "name": "location-editorial-02",
+  "grp": "위치 안내-에디토리얼",
+  "h": 517,
+  "slots": "제목|이미지|주소 텍스트|항목|세부 정보|항목|세부 정보|항목|세부 정보|길찾기",
+  "old_name": null,
+  "key": "sec/editorial/location/02",
+  "content": [
+   "운영시간"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "주소와 영업시간이 있을 때만 — 지어내지 않는다"
+  ]
+ },
+ {
   "id": "5455:157",
   "name": "hero-minimal-01",
   "grp": "히어로-미니멀",
@@ -2007,6 +2056,22 @@
   "key": "sec/editorial/hero/13",
   "content": [],
   "weight": "light"
+ },
+ {
+  "id": "8448:170",
+  "name": "hero-editorial-14",
+  "grp": "히어로-에디토리얼",
+  "h": 382,
+  "slots": "LABEL|페이지 제목을 입력합니다|카피 혹은 소개 문구를 입력합니다.|★★★★★   0.0 / 5 · 후기 00,000건|버튼 텍스트|버튼 텍스트",
+  "old_name": null,
+  "key": "sec/editorial/hero/14",
+  "content": [
+   "후기·사례"
+  ],
+  "weight": "light",
+  "use_when": [
+   "실제 평점·후기 수가 자료에 있을 때만 — 지어내지 않는다"
+  ]
  },
  {
   "id": "5455:331",
@@ -3397,6 +3462,22 @@
   "weight": "light"
  },
  {
+  "id": "8448:220",
+  "name": "form-minimal-01",
+  "grp": "폼-미니멀",
+  "h": 607,
+  "slots": "상품명|00,000원|폼 제목|주관식 질문|플레이스 홀더|주관식 질문|플레이스 홀더|주관식 질문|플레이스 홀더|개인정보 수집·이용에 동의하시나요?|동의합니다|제출하기|*안내 문구",
+  "old_name": null,
+  "key": "sec/minimal/form/01",
+  "content": [
+   "가격·요금"
+  ],
+  "weight": "light",
+  "use_when": [
+   "무엇을 얼마에 신청하는지(상품명·금액)가 정해졌을 때만 — 금액은 지어내지 않는다"
+  ]
+ },
+ {
   "id": "5455:1228",
   "name": "notice-editorial-01",
   "grp": "안내 사항-에디토리얼",
@@ -4695,6 +4776,57 @@
   "weight": "light",
   "use_when": [
    "언론·매체에 실린 인용이 있을 때만 — 지어내지 않는다"
+  ]
+ },
+ {
+  "id": "8448:68",
+  "name": "materials-editorial-08",
+  "grp": "자료-에디토리얼",
+  "h": 682,
+  "slots": "LABEL|제목|소개 문구|로고|로고|로고|로고|로고|로고",
+  "old_name": null,
+  "key": "sec/editorial/materials/08",
+  "content": [
+   "실적·수치"
+  ],
+  "weight": "medium",
+  "items_range": "2~",
+  "use_when": [
+   "실제로 소개된 언론·매체의 로고가 2개 이상 있을 때만 — 지어내지 않는다"
+  ]
+ },
+ {
+  "id": "8448:104",
+  "name": "materials-editorial-09",
+  "grp": "자료-에디토리얼",
+  "h": 379,
+  "slots": "제목|설명 문구|이미지|이미지|LABEL|LABEL|label|설명 문구",
+  "old_name": null,
+  "key": "sec/editorial/materials/09",
+  "content": [
+   "사진 모음"
+  ],
+  "weight": "medium",
+  "items_range": "2",
+  "use_when": [
+   "같은 대상의 전·후 사진이 둘 다 있을 때만"
+  ]
+ },
+ {
+  "id": "8448:123",
+  "name": "materials-editorial-10",
+  "grp": "자료-에디토리얼",
+  "h": 574,
+  "slots": "제목|설명 문구|제목|설명 문구|제목|설명 문구|제목|00단위 세부 정보|00단위 세부 정보|00단위 세부 정보",
+  "old_name": null,
+  "key": "sec/editorial/materials/10",
+  "content": [
+   "후기·사례",
+   "실적·수치"
+  ],
+  "weight": "medium",
+  "use_when": [
+   "실제 사례와 결과 수치가 자료에 있을 때만 — 지어내지 않는다"
   ]
  },
  {
